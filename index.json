@@ -1,11 +1,11 @@
 {
   "service": "canondb",
-  "updatedAt": "2026-06-23T17:13:20.406Z",
+  "updatedAt": "2026-06-23T18:51:24.745Z",
   "sources": [
     {
       "id": "llm-pricing:openrouter",
       "sourceUrl": "https://openrouter.ai/api/v1/models",
-      "fetchedAt": "2026-06-23T17:13:17.412Z",
+      "fetchedAt": "2026-06-23T18:51:20.103Z",
       "stale": false,
       "recentChanges": 50,
       "file": "sources/llm-pricing_openrouter.json",
@@ -14,7 +14,7 @@
     {
       "id": "mcp-tools:cloudflare-docs",
       "sourceUrl": "https://docs.mcp.cloudflare.com/mcp",
-      "fetchedAt": "2026-06-23T17:13:19.876Z",
+      "fetchedAt": "2026-06-23T18:51:23.818Z",
       "stale": false,
       "recentChanges": 0,
       "file": "sources/mcp-tools_cloudflare-docs.json",
@@ -23,7 +23,7 @@
     {
       "id": "mcp-tools:context7",
       "sourceUrl": "https://mcp.context7.com/mcp",
-      "fetchedAt": "2026-06-23T17:13:18.701Z",
+      "fetchedAt": "2026-06-23T18:51:22.682Z",
       "stale": false,
       "recentChanges": 0,
       "file": "sources/mcp-tools_context7.json",
@@ -32,16 +32,34 @@
     {
       "id": "mcp-tools:deepwiki",
       "sourceUrl": "https://mcp.deepwiki.com/mcp",
-      "fetchedAt": "2026-06-23T17:13:17.616Z",
+      "fetchedAt": "2026-06-23T18:51:20.373Z",
       "stale": false,
       "recentChanges": 0,
       "file": "sources/mcp-tools_deepwiki.json",
       "changesFile": "sources/mcp-tools_deepwiki.changes.json"
     },
     {
+      "id": "mcp-tools:everything",
+      "sourceUrl": "ingest://everything",
+      "fetchedAt": "2026-06-23T17:13:34.544Z",
+      "stale": false,
+      "recentChanges": 0,
+      "file": "sources/mcp-tools_everything.json",
+      "changesFile": "sources/mcp-tools_everything.changes.json"
+    },
+    {
+      "id": "mcp-tools:filesystem",
+      "sourceUrl": "ingest://filesystem",
+      "fetchedAt": "2026-06-23T17:13:46.353Z",
+      "stale": false,
+      "recentChanges": 0,
+      "file": "sources/mcp-tools_filesystem.json",
+      "changesFile": "sources/mcp-tools_filesystem.changes.json"
+    },
+    {
       "id": "mcp-tools:gitmcp",
       "sourceUrl": "https://gitmcp.io/docs",
-      "fetchedAt": "2026-06-23T17:13:19.028Z",
+      "fetchedAt": "2026-06-23T18:51:22.880Z",
       "stale": false,
       "recentChanges": 0,
       "file": "sources/mcp-tools_gitmcp.json",
@@ -50,7 +68,7 @@
     {
       "id": "mcp-tools:grep",
       "sourceUrl": "https://mcp.grep.app",
-      "fetchedAt": "2026-06-23T17:13:20.124Z",
+      "fetchedAt": "2026-06-23T18:51:24.075Z",
       "stale": false,
       "recentChanges": 0,
       "file": "sources/mcp-tools_grep.json",
@@ -59,20 +77,38 @@
     {
       "id": "mcp-tools:huggingface",
       "sourceUrl": "https://huggingface.co/mcp",
-      "fetchedAt": "2026-06-23T17:13:18.856Z",
+      "fetchedAt": "2026-06-23T18:51:22.789Z",
       "stale": false,
       "recentChanges": 0,
       "file": "sources/mcp-tools_huggingface.json",
       "changesFile": "sources/mcp-tools_huggingface.changes.json"
     },
     {
+      "id": "mcp-tools:memory",
+      "sourceUrl": "ingest://memory",
+      "fetchedAt": "2026-06-23T17:13:43.951Z",
+      "stale": false,
+      "recentChanges": 0,
+      "file": "sources/mcp-tools_memory.json",
+      "changesFile": "sources/mcp-tools_memory.changes.json"
+    },
+    {
       "id": "mcp-tools:microsoft-learn",
       "sourceUrl": "https://learn.microsoft.com/api/mcp",
-      "fetchedAt": "2026-06-23T17:13:19.981Z",
+      "fetchedAt": "2026-06-23T18:51:23.917Z",
       "stale": false,
       "recentChanges": 0,
       "file": "sources/mcp-tools_microsoft-learn.json",
       "changesFile": "sources/mcp-tools_microsoft-learn.changes.json"
+    },
+    {
+      "id": "mcp-tools:sequential-thinking",
+      "sourceUrl": "ingest://sequential-thinking",
+      "fetchedAt": "2026-06-23T17:13:46.505Z",
+      "stale": false,
+      "recentChanges": 0,
+      "file": "sources/mcp-tools_sequential-thinking.json",
+      "changesFile": "sources/mcp-tools_sequential-thinking.changes.json"
     }
   ]
 }

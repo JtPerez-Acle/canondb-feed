@@ -1,0 +1,249 @@
+{
+  "id": "mcp-tools:everything",
+  "sourceUrl": "ingest://everything",
+  "cadence": "0 */6 * * *",
+  "current": {
+    "source": "mcp-tools:everything",
+    "fetchedAt": "2026-06-23T17:13:34.544Z",
+    "stale": false,
+    "verified": true,
+    "data": {
+      "tools": {
+        "echo": {
+          "description": "Echoes back the input string",
+          "inputSchema": {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "required": [
+              "message"
+            ],
+            "properties": {
+              "message": {
+                "type": "string",
+                "description": "Message to echo"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "get-env": {
+          "description": "Returns all environment variables, helpful for debugging MCP server configuration",
+          "inputSchema": {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "properties": {}
+          }
+        },
+        "get-sum": {
+          "description": "Returns the sum of two numbers",
+          "inputSchema": {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "required": [
+              "a",
+              "b"
+            ],
+            "properties": {
+              "a": {
+                "type": "number",
+                "description": "First number"
+              },
+              "b": {
+                "type": "number",
+                "description": "Second number"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "get-tiny-image": {
+          "description": "Returns a tiny MCP logo image.",
+          "inputSchema": {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "properties": {}
+          }
+        },
+        "get-resource-links": {
+          "description": "Returns up to ten resource links that reference different types of resources",
+          "inputSchema": {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "properties": {
+              "count": {
+                "type": "number",
+                "default": 3,
+                "maximum": 10,
+                "minimum": 1,
+                "description": "Number of resource links to return (1-10)"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "get-annotated-message": {
+          "description": "Demonstrates how annotations can be used to provide metadata about content.",
+          "inputSchema": {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "required": [
+              "messageType"
+            ],
+            "properties": {
+              "messageType": {
+                "enum": [
+                  "error",
+                  "success",
+                  "debug"
+                ],
+                "type": "string",
+                "description": "Type of message to demonstrate different annotation patterns"
+              },
+              "includeImage": {
+                "type": "boolean",
+                "default": false,
+                "description": "Whether to include an example image"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "gzip-file-as-resource": {
+          "description": "Compresses a single file using gzip compression. Depending upon the selected output type, returns either the compressed data as a gzipped resource or a resource link, allowing it to be downloaded in a subsequent request during the current session.",
+          "inputSchema": {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "properties": {
+              "data": {
+                "type": "string",
+                "format": "uri",
+                "default": "https://raw.githubusercontent.com/modelcontextprotocol/servers/refs/heads/main/README.md",
+                "description": "URL or data URI of the file content to compress"
+              },
+              "name": {
+                "type": "string",
+                "default": "README.md.gz",
+                "description": "Name of the output file"
+              },
+              "outputType": {
+                "enum": [
+                  "resourceLink",
+                  "resource"
+                ],
+                "type": "string",
+                "default": "resourceLink",
+                "description": "How the resulting gzipped file should be returned. 'resourceLink' returns a link to a resource that can be read later, 'resource' returns a full resource object."
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "get-resource-reference": {
+          "description": "Returns a resource reference that can be used by MCP clients",
+          "inputSchema": {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "properties": {
+              "resourceId": {
+                "type": "number",
+                "default": 1,
+                "description": "ID of the text resource to fetch"
+              },
+              "resourceType": {
+                "enum": [
+                  "Text",
+                  "Blob"
+                ],
+                "type": "string",
+                "default": "Text"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "get-structured-content": {
+          "description": "Returns structured content along with an output schema for client data validation",
+          "inputSchema": {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "required": [
+              "location"
+            ],
+            "properties": {
+              "location": {
+                "enum": [
+                  "New York",
+                  "Chicago",
+                  "Los Angeles"
+                ],
+                "type": "string",
+                "description": "Choose city"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "simulate-research-query": {
+          "description": "Simulates a deep research operation that gathers, analyzes, and synthesizes information. Demonstrates MCP task-based operations with progress through multiple stages. If 'ambiguous' is true and client supports elicitation, sends an elicitation request for clarification.",
+          "inputSchema": {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "required": [
+              "topic"
+            ],
+            "properties": {
+              "topic": {
+                "type": "string",
+                "description": "The research topic to investigate"
+              },
+              "ambiguous": {
+                "type": "boolean",
+                "default": false,
+                "description": "Simulate an ambiguous query that requires clarification (triggers input_required status)"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "toggle-simulated-logging": {
+          "description": "Toggles simulated, random-leveled logging on or off.",
+          "inputSchema": {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "properties": {}
+          }
+        },
+        "toggle-subscriber-updates": {
+          "description": "Toggles simulated resource subscription updates on or off.",
+          "inputSchema": {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "properties": {}
+          }
+        },
+        "trigger-long-running-operation": {
+          "description": "Demonstrates a long running operation with progress updates.",
+          "inputSchema": {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "properties": {
+              "steps": {
+                "type": "number",
+                "default": 5,
+                "description": "Number of steps in the operation"
+              },
+              "duration": {
+                "type": "number",
+                "default": 10,
+                "description": "Duration of the operation in seconds"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "server": "mcp-tools:everything",
+      "endpoint": "ingest://everything"
+    }
+  }
+}
