@@ -2,6 +2,61 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "888be467-5da4-4a42-bf2a-810046acf7f7",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/minimax/minimax-m2.7",
+      "fromSnapshotId": "e3ca3e5c-355c-4905-8920-1bf6ae50e4da",
+      "toSnapshotId": "c8e09b13-5bdb-4081-97c8-aa3bdc91d1f8",
+      "detectedAt": "2026-06-23T16:59:47.277Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "models",
+              "minimax/minimax-m2.7",
+              "cacheReadPer1m"
+            ],
+            "before": 0.05
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "minimax/minimax-m2.7",
+              "inputPer1m"
+            ],
+            "after": 0.24,
+            "before": 0.25
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "minimax/minimax-m2.7",
+              "maxOutputTokens"
+            ],
+            "after": 196608,
+            "before": 131072
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "minimax/minimax-m2.7",
+              "outputPer1m"
+            ],
+            "after": 0.96,
+            "before": 1
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Model cache read price removed"
+    },
+    {
       "id": "56129f17-1221-4302-b92c-276ef12b0aa3",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/thedrummer/rocinante-12b",
@@ -1515,32 +1570,6 @@
       "confidence": 0.9,
       "classifiedBy": "llm",
       "notes": "Output token limit halved, agents may silently truncate"
-    },
-    {
-      "id": "61ffe0a3-4d83-4f1c-93e8-ea2fe254937f",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/google/gemini-3.1-flash-image",
-      "fromSnapshotId": "9b0c8ef6-eea0-485a-90e2-a3d194a953d9",
-      "toSnapshotId": "cd9e11f0-ceb7-4fa6-8bb2-7f7f45d9f40b",
-      "detectedAt": "2026-06-23T00:47:51.449Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "google/gemini-3.1-flash-image",
-              "maxOutputTokens"
-            ],
-            "after": 65536,
-            "before": 32768
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "maxOutputTokens increased, beneficial to consumers."
     }
   ]
 }

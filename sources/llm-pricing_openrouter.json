@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-06-23T15:39:08.122Z",
+    "fetchedAt": "2026-06-23T16:59:38.733Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -891,11 +891,10 @@
         "minimax/minimax-m2.7": {
           "name": "MiniMax: MiniMax M2.7",
           "currency": "USD",
-          "inputPer1m": 0.25,
-          "outputPer1m": 1,
+          "inputPer1m": 0.24,
+          "outputPer1m": 0.96,
           "contextLength": 204800,
-          "cacheReadPer1m": 0.05,
-          "maxOutputTokens": 131072
+          "maxOutputTokens": 196608
         },
         "moonshotai/kimi-k2.5": {
           "name": "MoonshotAI: Kimi K2.5",
