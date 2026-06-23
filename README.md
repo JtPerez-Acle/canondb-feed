@@ -1,2 +1,23 @@
-# canondb-feed
-canondb — public feed: current schemas + classified breaking-changes for the APIs &amp; tools AI agents call. Auto-updated.
+# canondb — public feed
+
+The canonical truth layer for the APIs & tools AI agents call: the **current
+schema** and **classified breaking-changes** (breaking for strict consumers,
+breaking for agents, or safe) for a curated set of sources.
+
+This repo is auto-generated. Last updated: **2026-06-23T03:51:34.434Z**.
+
+- Live API: `https://canondb.dev`
+- Each `current` carries `fetched_at` + a `stale` flag — we never serve stale as current.
+
+| Source | Feed | Recent changes | Status |
+|--------|------|----------------|--------|
+| `llm-pricing:openrouter` | [current](sources/llm-pricing_openrouter.json) · [changes](sources/llm-pricing_openrouter.changes.json) | 30 | ok |
+| `mcp-tools:cloudflare-docs` | [current](sources/mcp-tools_cloudflare-docs.json) · [changes](sources/mcp-tools_cloudflare-docs.changes.json) | 0 | ok |
+| `mcp-tools:context7` | [current](sources/mcp-tools_context7.json) · [changes](sources/mcp-tools_context7.changes.json) | 0 | ok |
+| `mcp-tools:deepwiki` | [current](sources/mcp-tools_deepwiki.json) · [changes](sources/mcp-tools_deepwiki.changes.json) | 0 | ok |
+| `mcp-tools:gitmcp` | [current](sources/mcp-tools_gitmcp.json) · [changes](sources/mcp-tools_gitmcp.changes.json) | 0 | ok |
+| `mcp-tools:grep` | [current](sources/mcp-tools_grep.json) · [changes](sources/mcp-tools_grep.changes.json) | 0 | ok |
+| `mcp-tools:huggingface` | [current](sources/mcp-tools_huggingface.json) · [changes](sources/mcp-tools_huggingface.changes.json) | 0 | ok |
+| `mcp-tools:microsoft-learn` | [current](sources/mcp-tools_microsoft-learn.json) · [changes](sources/mcp-tools_microsoft-learn.changes.json) | 0 | ok |
+
+See [index.json](index.json) for the machine-readable index.

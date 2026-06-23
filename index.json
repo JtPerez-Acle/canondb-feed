@@ -1,0 +1,78 @@
+{
+  "service": "canondb",
+  "updatedAt": "2026-06-23T03:51:34.434Z",
+  "sources": [
+    {
+      "id": "llm-pricing:openrouter",
+      "sourceUrl": "https://openrouter.ai/api/v1/models",
+      "fetchedAt": "2026-06-23T03:40:49.017Z",
+      "stale": false,
+      "recentChanges": 30,
+      "file": "sources/llm-pricing_openrouter.json",
+      "changesFile": "sources/llm-pricing_openrouter.changes.json"
+    },
+    {
+      "id": "mcp-tools:cloudflare-docs",
+      "sourceUrl": "https://docs.mcp.cloudflare.com/mcp",
+      "fetchedAt": "2026-06-23T03:40:50.941Z",
+      "stale": false,
+      "recentChanges": 0,
+      "file": "sources/mcp-tools_cloudflare-docs.json",
+      "changesFile": "sources/mcp-tools_cloudflare-docs.changes.json"
+    },
+    {
+      "id": "mcp-tools:context7",
+      "sourceUrl": "https://mcp.context7.com/mcp",
+      "fetchedAt": "2026-06-23T03:40:49.885Z",
+      "stale": false,
+      "recentChanges": 0,
+      "file": "sources/mcp-tools_context7.json",
+      "changesFile": "sources/mcp-tools_context7.changes.json"
+    },
+    {
+      "id": "mcp-tools:deepwiki",
+      "sourceUrl": "https://mcp.deepwiki.com/mcp",
+      "fetchedAt": "2026-06-23T03:40:49.240Z",
+      "stale": false,
+      "recentChanges": 0,
+      "file": "sources/mcp-tools_deepwiki.json",
+      "changesFile": "sources/mcp-tools_deepwiki.changes.json"
+    },
+    {
+      "id": "mcp-tools:gitmcp",
+      "sourceUrl": "https://gitmcp.io/docs",
+      "fetchedAt": "2026-06-23T03:40:50.051Z",
+      "stale": false,
+      "recentChanges": 0,
+      "file": "sources/mcp-tools_gitmcp.json",
+      "changesFile": "sources/mcp-tools_gitmcp.changes.json"
+    },
+    {
+      "id": "mcp-tools:grep",
+      "sourceUrl": "https://mcp.grep.app",
+      "fetchedAt": "2026-06-23T03:40:51.191Z",
+      "stale": false,
+      "recentChanges": 0,
+      "file": "sources/mcp-tools_grep.json",
+      "changesFile": "sources/mcp-tools_grep.changes.json"
+    },
+    {
+      "id": "mcp-tools:huggingface",
+      "sourceUrl": "https://huggingface.co/mcp",
+      "fetchedAt": "2026-06-23T03:40:49.968Z",
+      "stale": false,
+      "recentChanges": 0,
+      "file": "sources/mcp-tools_huggingface.json",
+      "changesFile": "sources/mcp-tools_huggingface.changes.json"
+    },
+    {
+      "id": "mcp-tools:microsoft-learn",
+      "sourceUrl": "https://learn.microsoft.com/api/mcp",
+      "fetchedAt": "2026-06-23T03:40:51.051Z",
+      "stale": false,
+      "recentChanges": 0,
+      "file": "sources/mcp-tools_microsoft-learn.json",
+      "changesFile": "sources/mcp-tools_microsoft-learn.changes.json"
+    }
+  ]
+}

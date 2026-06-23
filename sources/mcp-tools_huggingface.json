@@ -1,0 +1,324 @@
+{
+  "id": "mcp-tools:huggingface",
+  "sourceUrl": "https://huggingface.co/mcp",
+  "cadence": "0 */6 * * *",
+  "current": {
+    "source": "mcp-tools:huggingface",
+    "fetchedAt": "2026-06-23T03:40:49.968Z",
+    "stale": false,
+    "verified": true,
+    "data": {
+      "tools": {
+        "hf_whoami": {
+          "description": "Hugging Face tools are being used anonymously and may be rate limited. Call this tool for instructions on joining and authenticating.",
+          "inputSchema": {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "properties": {}
+          }
+        },
+        "hf_doc_fetch": {
+          "description": "Fetch a document from the Hugging Face or Gradio documentation library. For large documents, use offset to get subsequent chunks.",
+          "inputSchema": {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "required": [
+              "doc_url"
+            ],
+            "properties": {
+              "offset": {
+                "type": "number",
+                "minimum": 0,
+                "description": "Token offset for large documents (use the offset from truncation message)"
+              },
+              "doc_url": {
+                "type": "string",
+                "maxLength": 200,
+                "description": "Documentation URL (Hugging Face or Gradio)"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "paper_search": {
+          "description": "Find Machine Learning research papers on the Hugging Face hub. Include 'Link to paper' When presenting the results. Consider whether tabulating results matches user intent.",
+          "inputSchema": {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "required": [
+              "query"
+            ],
+            "properties": {
+              "query": {
+                "type": "string",
+                "maxLength": 200,
+                "minLength": 3,
+                "description": "Semantic Search query"
+              },
+              "concise_only": {
+                "type": "boolean",
+                "default": false,
+                "description": "Return a 2 sentence summary of the abstract. Use for broad search terms which may return a lot of results. Check with User if unsure."
+              },
+              "results_limit": {
+                "type": "number",
+                "default": 12,
+                "description": "Number of results to return"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "space_search": {
+          "description": "Find Hugging Face Spaces using semantic search. IMPORTANT Only MCP Servers can be used with the dynamic_space toolInclude links to the Space when presenting the results.",
+          "inputSchema": {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "required": [
+              "query"
+            ],
+            "properties": {
+              "mcp": {
+                "type": "boolean",
+                "default": false,
+                "description": "Only return MCP Server enabled Spaces"
+              },
+              "limit": {
+                "type": "number",
+                "default": 10,
+                "description": "Number of results to return"
+              },
+              "query": {
+                "type": "string",
+                "maxLength": 100,
+                "minLength": 1,
+                "description": "Semantic Search Query"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "hf_doc_search": {
+          "description": "Search and Discover Hugging Face Product and Library documentation. Send an empty query to discover structure and navigation instructions. Knowledge up-to-date as at 19 June 2026. Combine with the Product filter to focus results.",
+          "inputSchema": {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "required": [
+              "query"
+            ],
+            "properties": {
+              "query": {
+                "type": "string",
+                "maxLength": 200,
+                "description": "Start with an empty query for structure, endpoint discovery and navigation tips. Use semantic queries for targetted searches."
+              },
+              "product": {
+                "type": "string",
+                "description": "Filter by Product. Supply when known for focused results"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "hub_repo_search": {
+          "description": "Search Hugging Face repositories with a shared query interface. You can target models, datasets, spaces, or aggregate across multiple repo types in one call. Use space_search for semantic-first discovery of Spaces. Include links to repositories in your response.",
+          "inputSchema": {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "properties": {
+              "sort": {
+                "enum": [
+                  "trendingScore",
+                  "downloads",
+                  "likes",
+                  "createdAt",
+                  "lastModified"
+                ],
+                "type": "string",
+                "description": "Sort order (descending): trendingScore, downloads, likes, createdAt, lastModified"
+              },
+              "limit": {
+                "type": "number",
+                "default": 20,
+                "maximum": 100,
+                "minimum": 1,
+                "description": "Maximum number of results to return per selected repo type"
+              },
+              "query": {
+                "type": "string",
+                "description": "Search term. Leave blank and specify sort + limit to browse trending or recent repositories."
+              },
+              "author": {
+                "type": "string",
+                "description": "Organization or user namespace to filter by (e.g. 'google', 'meta-llama', 'huggingface')."
+              },
+              "filters": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Optional hub filter tags. Applied to each selected repo type (e.g. [\"text-generation\"], [\"language:en\"], [\"mcp-server\"])."
+              },
+              "repo_types": {
+                "type": "array",
+                "items": {
+                  "enum": [
+                    "model",
+                    "dataset",
+                    "space"
+                  ],
+                  "type": "string"
+                },
+                "default": [
+                  "model",
+                  "dataset"
+                ],
+                "maxItems": 3,
+                "minItems": 1,
+                "description": "Repository types to search. Defaults to [\"model\", \"dataset\"]. space uses keyword search via /api/spaces."
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "hub_repo_details": {
+          "description": "Get details for one or more Hugging Face repos (model, dataset, or space). Auto-detects type unless specified. For datasets, use operations: overview, dataset_structure, dataset_preview. Use dataset_structure first to discover configs, splits, sizes, and schema. Use dataset_preview only when config and split are known, unless the dataset has a single config/split.",
+          "inputSchema": {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "required": [
+              "repo_ids"
+            ],
+            "properties": {
+              "limit": {
+                "type": "integer",
+                "description": "Row count for dataset_preview. Defaults to 5 and is clamped to 1-100."
+              },
+              "split": {
+                "type": "string",
+                "description": "Dataset Viewer split. Required for dataset_preview when the dataset has multiple config/split options. Discover via dataset_structure."
+              },
+              "config": {
+                "type": "string",
+                "description": "Dataset Viewer config. Required for dataset_preview when the dataset has multiple config/split options. Discover via dataset_structure."
+              },
+              "offset": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "Row offset for dataset_preview. Defaults to 0."
+              },
+              "repo_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "maxItems": 10,
+                "minItems": 1,
+                "description": "Repo IDs for (models|dataset/space) - usually in author/name format (e.g. openai/gpt-oss-120b)"
+              },
+              "repo_type": {
+                "enum": [
+                  "model",
+                  "dataset",
+                  "space"
+                ],
+                "type": "string",
+                "description": "Specify lookup type; otherwise auto-detects"
+              },
+              "operations": {
+                "type": "array",
+                "items": {
+                  "enum": [
+                    "overview",
+                    "dataset_structure",
+                    "dataset_preview"
+                  ],
+                  "type": "string"
+                },
+                "description": "Details to return. Defaults to [\"overview\"]. For datasets, prefer [\"overview\", \"dataset_structure\"] first; then call [\"dataset_preview\"] with config and split."
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "gr1_z_image_turbo_generate": {
+          "description": "Generate an image using the Z-Image model based on the provided prompt and settings. This function is triggered when the user clicks the \"Generate\" button. It processes the input prompt (optionally enhancing it), configures generation parameters, and produces an image using the Z-Image diffusion transformer pipeline. Returns: tuple: (gallery_images, seed_str, seed_int), - seed_str: String representation of the seed used for generation, - seed_int: Integer representation of the seed used for generation (from mcp-tools/Z-Image-Turbo)",
+          "inputSchema": {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "properties": {
+              "seed": {
+                "type": "integer",
+                "default": 42,
+                "description": "Seed for reproducible generation"
+              },
+              "shift": {
+                "type": "number",
+                "default": 3,
+                "description": "Time shift parameter for the flow matching scheduler"
+              },
+              "steps": {
+                "type": "number",
+                "default": 8,
+                "description": "Number of inference steps for the diffusion process"
+              },
+              "prompt": {
+                "type": "string",
+                "description": "Text prompt describing the desired image content"
+              },
+              "resolution": {
+                "enum": [
+                  "1024x1024 ( 1:1 )",
+                  "1152x896 ( 9:7 )",
+                  "896x1152 ( 7:9 )",
+                  "1152x864 ( 4:3 )",
+                  "864x1152 ( 3:4 )",
+                  "1248x832 ( 3:2 )",
+                  "832x1248 ( 2:3 )",
+                  "1280x720 ( 16:9 )",
+                  "720x1280 ( 9:16 )",
+                  "1344x576 ( 21:9 )",
+                  "576x1344 ( 9:21 )",
+                  "1280x1280 ( 1:1 )",
+                  "1440x1120 ( 9:7 )",
+                  "1120x1440 ( 7:9 )",
+                  "1472x1104 ( 4:3 )",
+                  "1104x1472 ( 3:4 )",
+                  "1536x1024 ( 3:2 )",
+                  "1024x1536 ( 2:3 )",
+                  "1536x864 ( 16:9 )",
+                  "864x1536 ( 9:16 )",
+                  "1680x720 ( 21:9 )",
+                  "720x1680 ( 9:21 )",
+                  "1536x1536 ( 1:1 )",
+                  "1728x1344 ( 9:7 )",
+                  "1344x1728 ( 7:9 )",
+                  "1728x1296 ( 4:3 )",
+                  "1296x1728 ( 3:4 )",
+                  "1872x1248 ( 3:2 )",
+                  "1248x1872 ( 2:3 )",
+                  "2048x1152 ( 16:9 )",
+                  "1152x2048 ( 9:16 )",
+                  "2016x864 ( 21:9 )",
+                  "864x2016 ( 9:21 )"
+                ],
+                "type": "string",
+                "default": "1024x1024 ( 1:1 )",
+                "description": "Output resolution in format \"WIDTHxHEIGHT ( RATIO )\" (e.g., \"1024x1024 ( 1:1 )\")"
+              },
+              "random_seed": {
+                "type": "boolean",
+                "default": true,
+                "description": "Whether to generate a new random seed, if True will ignore the seed input"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "server": "mcp-tools:huggingface",
+      "endpoint": "https://huggingface.co/mcp"
+    }
+  }
+}

@@ -1,0 +1,899 @@
+{
+  "id": "llm-pricing:openrouter",
+  "changes": [
+    {
+      "id": "7f42c004-e001-478d-9725-1de21824dea4",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.1",
+      "fromSnapshotId": "9b0c8ef6-eea0-485a-90e2-a3d194a953d9",
+      "toSnapshotId": "cd9e11f0-ceb7-4fa6-8bb2-7f7f45d9f40b",
+      "detectedAt": "2026-06-23T00:49:00.046Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.1",
+              "cacheReadPer1m"
+            ],
+            "after": 0.49,
+            "before": 0.182
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.1",
+              "maxOutputTokens"
+            ],
+            "after": 65535,
+            "before": null
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Cache read price increased from 0.182 to 0.49, raising cost for agents"
+    },
+    {
+      "id": "21c586b6-cc35-458b-9783-97efd63c02c7",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3.5-9b",
+      "fromSnapshotId": "9b0c8ef6-eea0-485a-90e2-a3d194a953d9",
+      "toSnapshotId": "cd9e11f0-ceb7-4fa6-8bb2-7f7f45d9f40b",
+      "detectedAt": "2026-06-23T00:48:50.227Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.5-9b",
+              "contextLength"
+            ],
+            "after": 262144,
+            "before": 256000
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.5-9b",
+              "maxOutputTokens"
+            ],
+            "after": 262144,
+            "before": 32768
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.75,
+      "classifiedBy": "llm",
+      "notes": "maxOutputTokens increased (reduced effective limit unchanged) but contextLength increase is favorable; overall still breaking_agent due to potential misinterpretation."
+    },
+    {
+      "id": "62763e07-5fa8-422d-a603-9a40ef641b1f",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3.5-35b-a3b",
+      "fromSnapshotId": "9b0c8ef6-eea0-485a-90e2-a3d194a953d9",
+      "toSnapshotId": "cd9e11f0-ceb7-4fa6-8bb2-7f7f45d9f40b",
+      "detectedAt": "2026-06-23T00:48:44.210Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "models",
+              "qwen/qwen3.5-35b-a3b",
+              "cacheReadPer1m"
+            ],
+            "before": 0.05
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.5-35b-a3b",
+              "maxOutputTokens"
+            ],
+            "after": 262144,
+            "before": 81920
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Model removed (cacheReadPer1m) breaks strict consumers; output cap increase is safe"
+    },
+    {
+      "id": "521c7df2-e316-424e-8b23-9fb5611ff1f1",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/openai/gpt-5.2-chat",
+      "fromSnapshotId": "9b0c8ef6-eea0-485a-90e2-a3d194a953d9",
+      "toSnapshotId": "cd9e11f0-ceb7-4fa6-8bb2-7f7f45d9f40b",
+      "detectedAt": "2026-06-23T00:48:37.975Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "openai/gpt-5.2-chat",
+              "maxOutputTokens"
+            ],
+            "after": 16384,
+            "before": 32000
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "maxOutputTokens halved; agents that rely on the prior limit may get truncated outputs silently"
+    },
+    {
+      "id": "3f9aa42e-6e5f-49d2-be1e-ac392e76c047",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/openai/gpt-5.1-chat",
+      "fromSnapshotId": "9b0c8ef6-eea0-485a-90e2-a3d194a953d9",
+      "toSnapshotId": "cd9e11f0-ceb7-4fa6-8bb2-7f7f45d9f40b",
+      "detectedAt": "2026-06-23T00:48:33.792Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "openai/gpt-5.1-chat",
+              "cacheReadPer1m"
+            ],
+            "after": 0.13,
+            "before": 0.125
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "openai/gpt-5.1-chat",
+              "maxOutputTokens"
+            ],
+            "after": 32000,
+            "before": 16384
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Price increased (0.125 to 0.13) so agents will silently pay more per call."
+    },
+    {
+      "id": "fb46231a-484e-4597-8205-65982f39b96d",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/openai/gpt-5-mini",
+      "fromSnapshotId": "9b0c8ef6-eea0-485a-90e2-a3d194a953d9",
+      "toSnapshotId": "cd9e11f0-ceb7-4fa6-8bb2-7f7f45d9f40b",
+      "detectedAt": "2026-06-23T00:48:26.495Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "openai/gpt-5-mini",
+              "cacheReadPer1m"
+            ],
+            "after": 0.025,
+            "before": 0.03
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "openai/gpt-5-mini",
+              "maxOutputTokens"
+            ],
+            "after": 128000,
+            "before": null
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Price decrease is safe, but adding a max output token limit where none existed before silently truncates agent responses."
+    },
+    {
+      "id": "1a7cebd0-1335-4f63-a199-c14e4036a50a",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/openai/gpt-4o",
+      "fromSnapshotId": "9b0c8ef6-eea0-485a-90e2-a3d194a953d9",
+      "toSnapshotId": "cd9e11f0-ceb7-4fa6-8bb2-7f7f45d9f40b",
+      "detectedAt": "2026-06-23T00:48:23.277Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "models",
+              "openai/gpt-4o",
+              "cacheReadPer1m"
+            ],
+            "before": 1.25
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "REMOVED field cacheReadPer1m from gpt-4o; strict consumers referencing it will fail"
+    },
+    {
+      "id": "92f11453-615b-4af4-a37a-e3cf324a47aa",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/openai/gpt-4.1-mini",
+      "fromSnapshotId": "9b0c8ef6-eea0-485a-90e2-a3d194a953d9",
+      "toSnapshotId": "cd9e11f0-ceb7-4fa6-8bb2-7f7f45d9f40b",
+      "detectedAt": "2026-06-23T00:48:19.631Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "openai/gpt-4.1-mini",
+              "maxOutputTokens"
+            ],
+            "after": 32768,
+            "before": null
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "maxOutputTokens changed from null to 32768, which may silently truncate agent outputs that previously had no limit."
+    },
+    {
+      "id": "48e13e09-d260-455d-b4ff-e3a3fc7c4f9b",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/moonshotai/kimi-k2-thinking",
+      "fromSnapshotId": "9b0c8ef6-eea0-485a-90e2-a3d194a953d9",
+      "toSnapshotId": "cd9e11f0-ceb7-4fa6-8bb2-7f7f45d9f40b",
+      "detectedAt": "2026-06-23T00:48:14.799Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2-thinking",
+              "cacheReadPer1m"
+            ],
+            "before": 0.6
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Field removed, breaking strict API consumers relying on kimi-k2-thinking.cacheReadPer1m"
+    },
+    {
+      "id": "385ba6b8-b8d9-40fa-bfec-0ecbd9001a56",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/minimax/minimax-m3",
+      "fromSnapshotId": "9b0c8ef6-eea0-485a-90e2-a3d194a953d9",
+      "toSnapshotId": "cd9e11f0-ceb7-4fa6-8bb2-7f7f45d9f40b",
+      "detectedAt": "2026-06-23T00:48:07.427Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "minimax/minimax-m3",
+              "maxOutputTokens"
+            ],
+            "after": 512000,
+            "before": null
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Output token limit changed from unlimited to 512000, reducing capacity."
+    },
+    {
+      "id": "7cbf6cac-d8c7-4dc2-b4c9-ee041d3c364b",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/kwaipilot/kat-coder-pro-v2",
+      "fromSnapshotId": "9b0c8ef6-eea0-485a-90e2-a3d194a953d9",
+      "toSnapshotId": "cd9e11f0-ceb7-4fa6-8bb2-7f7f45d9f40b",
+      "detectedAt": "2026-06-23T00:48:02.720Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "kwaipilot/kat-coder-pro-v2",
+              "contextLength"
+            ],
+            "after": 256000,
+            "before": 262144
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "kwaipilot/kat-coder-pro-v2",
+              "maxOutputTokens"
+            ],
+            "after": 80000,
+            "before": 144000
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Context and output cap reduced; agent silently truncates."
+    },
+    {
+      "id": "d99da993-19be-49b1-869a-8da41e1bbe6f",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/google/gemma-4-31b-it:free",
+      "fromSnapshotId": "9b0c8ef6-eea0-485a-90e2-a3d194a953d9",
+      "toSnapshotId": "cd9e11f0-ceb7-4fa6-8bb2-7f7f45d9f40b",
+      "detectedAt": "2026-06-23T00:47:56.046Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "google/gemma-4-31b-it:free",
+              "maxOutputTokens"
+            ],
+            "after": 8192,
+            "before": 32768
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "maxOutputTokens reduced from 32768 to 8192, silently truncating agent responses"
+    },
+    {
+      "id": "95816f1a-4b87-4a1b-8ac0-807d536bddca",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/google/gemini-3.1-flash-image-preview",
+      "fromSnapshotId": "9b0c8ef6-eea0-485a-90e2-a3d194a953d9",
+      "toSnapshotId": "cd9e11f0-ceb7-4fa6-8bb2-7f7f45d9f40b",
+      "detectedAt": "2026-06-23T00:47:53.139Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "google/gemini-3.1-flash-image-preview",
+              "maxOutputTokens"
+            ],
+            "after": 32768,
+            "before": 65536
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Output token limit halved, agents may silently truncate"
+    },
+    {
+      "id": "61ffe0a3-4d83-4f1c-93e8-ea2fe254937f",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/google/gemini-3.1-flash-image",
+      "fromSnapshotId": "9b0c8ef6-eea0-485a-90e2-a3d194a953d9",
+      "toSnapshotId": "cd9e11f0-ceb7-4fa6-8bb2-7f7f45d9f40b",
+      "detectedAt": "2026-06-23T00:47:51.449Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "google/gemini-3.1-flash-image",
+              "maxOutputTokens"
+            ],
+            "after": 65536,
+            "before": 32768
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "maxOutputTokens increased, beneficial to consumers."
+    },
+    {
+      "id": "d61820c0-d5eb-400e-8c76-0fd288aabbc5",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/google/gemini-3-pro-image",
+      "fromSnapshotId": "9b0c8ef6-eea0-485a-90e2-a3d194a953d9",
+      "toSnapshotId": "cd9e11f0-ceb7-4fa6-8bb2-7f7f45d9f40b",
+      "detectedAt": "2026-06-23T00:47:44.296Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "google/gemini-3-pro-image",
+              "contextLength"
+            ],
+            "after": 65536,
+            "before": 131072
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "context length reduced by half, silently truncating agent outputs"
+    },
+    {
+      "id": "eef77b7a-035b-4727-8e8e-706b1d80782a",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.1",
+      "fromSnapshotId": "ebd6f1f2-e40f-4e7e-97e0-41c6730cdf9c",
+      "toSnapshotId": "9b0c8ef6-eea0-485a-90e2-a3d194a953d9",
+      "detectedAt": "2026-06-22T22:52:26.693Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.1",
+              "cacheReadPer1m"
+            ],
+            "after": 0.182,
+            "before": 0.49
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.1",
+              "maxOutputTokens"
+            ],
+            "after": null,
+            "before": 65535
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "price decreased (safe) but maxOutputTokens removed (breaking_agent)"
+    },
+    {
+      "id": "57e71208-af32-4080-ab55-de0c04ac957d",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3.5-9b",
+      "fromSnapshotId": "ebd6f1f2-e40f-4e7e-97e0-41c6730cdf9c",
+      "toSnapshotId": "9b0c8ef6-eea0-485a-90e2-a3d194a953d9",
+      "detectedAt": "2026-06-22T22:52:23.451Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.5-9b",
+              "contextLength"
+            ],
+            "after": 256000,
+            "before": 262144
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.5-9b",
+              "maxOutputTokens"
+            ],
+            "after": 32768,
+            "before": 262144
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Reduced context and output limits; agents may face truncation."
+    },
+    {
+      "id": "e23db1df-4820-4159-9a86-0b00e1c446ee",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3.5-35b-a3b",
+      "fromSnapshotId": "ebd6f1f2-e40f-4e7e-97e0-41c6730cdf9c",
+      "toSnapshotId": "9b0c8ef6-eea0-485a-90e2-a3d194a953d9",
+      "detectedAt": "2026-06-22T22:52:19.080Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "models",
+              "qwen/qwen3.5-35b-a3b",
+              "cacheReadPer1m"
+            ],
+            "after": 0.05
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.5-35b-a3b",
+              "maxOutputTokens"
+            ],
+            "after": 81920,
+            "before": 262144
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "maxOutputTokens reduced from 262144 to 81920, silently truncating longer outputs."
+    },
+    {
+      "id": "a5d8361f-79bb-4eb2-86b0-a44563bb3506",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/openai/gpt-5.2-chat",
+      "fromSnapshotId": "ebd6f1f2-e40f-4e7e-97e0-41c6730cdf9c",
+      "toSnapshotId": "9b0c8ef6-eea0-485a-90e2-a3d194a953d9",
+      "detectedAt": "2026-06-22T22:52:06.310Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "openai/gpt-5.2-chat",
+              "maxOutputTokens"
+            ],
+            "after": 32000,
+            "before": 16384
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Increased max output tokens is a capacity expansion, not a reduction."
+    },
+    {
+      "id": "68751fc1-4449-49c0-8ac9-2fd3c1c36f09",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/openai/gpt-5.1-chat",
+      "fromSnapshotId": "ebd6f1f2-e40f-4e7e-97e0-41c6730cdf9c",
+      "toSnapshotId": "9b0c8ef6-eea0-485a-90e2-a3d194a953d9",
+      "detectedAt": "2026-06-22T22:51:56.284Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "openai/gpt-5.1-chat",
+              "cacheReadPer1m"
+            ],
+            "after": 0.125,
+            "before": 0.13
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "openai/gpt-5.1-chat",
+              "maxOutputTokens"
+            ],
+            "after": 16384,
+            "before": 32000
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Output token limit reduced from 32000 to 16384, which may silently truncate agent responses."
+    },
+    {
+      "id": "34472d60-bc5b-430e-898f-3c914a27eb03",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/openai/gpt-5-mini",
+      "fromSnapshotId": "ebd6f1f2-e40f-4e7e-97e0-41c6730cdf9c",
+      "toSnapshotId": "9b0c8ef6-eea0-485a-90e2-a3d194a953d9",
+      "detectedAt": "2026-06-22T22:51:50.498Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "openai/gpt-5-mini",
+              "cacheReadPer1m"
+            ],
+            "after": 0.03,
+            "before": 0.025
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "openai/gpt-5-mini",
+              "maxOutputTokens"
+            ],
+            "after": null,
+            "before": 128000
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "cache read price increased and max output tokens removed, silently hurting callers"
+    },
+    {
+      "id": "ab97afe4-b309-41a1-818a-df459bbb493a",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/openai/gpt-4o",
+      "fromSnapshotId": "ebd6f1f2-e40f-4e7e-97e0-41c6730cdf9c",
+      "toSnapshotId": "9b0c8ef6-eea0-485a-90e2-a3d194a953d9",
+      "detectedAt": "2026-06-22T22:51:48.543Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "models",
+              "openai/gpt-4o",
+              "cacheReadPer1m"
+            ],
+            "after": 1.25
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "ADDED field for cache read price, does not break existing calls."
+    },
+    {
+      "id": "f2772867-a229-4f9f-8964-09b17d3717e5",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/openai/gpt-4.1-mini",
+      "fromSnapshotId": "ebd6f1f2-e40f-4e7e-97e0-41c6730cdf9c",
+      "toSnapshotId": "9b0c8ef6-eea0-485a-90e2-a3d194a953d9",
+      "detectedAt": "2026-06-22T22:51:40.318Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "openai/gpt-4.1-mini",
+              "maxOutputTokens"
+            ],
+            "after": null,
+            "before": 32768
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.5,
+      "classifiedBy": "rules",
+      "notes": "llm fallback (This operation was aborted); field value(s) changed"
+    },
+    {
+      "id": "a26223fc-4c3b-4bb3-b14f-f800a94c002c",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/moonshotai/kimi-k2-thinking",
+      "fromSnapshotId": "ebd6f1f2-e40f-4e7e-97e0-41c6730cdf9c",
+      "toSnapshotId": "9b0c8ef6-eea0-485a-90e2-a3d194a953d9",
+      "detectedAt": "2026-06-22T22:51:20.048Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2-thinking",
+              "cacheReadPer1m"
+            ],
+            "after": 0.6
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Added a new field (cacheReadPer1m) for an existing model. Existing model names and prices unchanged, no breakage."
+    },
+    {
+      "id": "57e428cc-f502-4b1b-9b62-2c100c93f732",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/minimax/minimax-m3",
+      "fromSnapshotId": "ebd6f1f2-e40f-4e7e-97e0-41c6730cdf9c",
+      "toSnapshotId": "9b0c8ef6-eea0-485a-90e2-a3d194a953d9",
+      "detectedAt": "2026-06-22T22:51:14.756Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "minimax/minimax-m3",
+              "maxOutputTokens"
+            ],
+            "after": null,
+            "before": 512000
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.5,
+      "classifiedBy": "rules",
+      "notes": "llm fallback (This operation was aborted); field value(s) changed"
+    },
+    {
+      "id": "7d6422fb-8dd6-4ee6-a4ee-a7e897a3eb4b",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/kwaipilot/kat-coder-pro-v2",
+      "fromSnapshotId": "ebd6f1f2-e40f-4e7e-97e0-41c6730cdf9c",
+      "toSnapshotId": "9b0c8ef6-eea0-485a-90e2-a3d194a953d9",
+      "detectedAt": "2026-06-22T22:50:54.479Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "kwaipilot/kat-coder-pro-v2",
+              "contextLength"
+            ],
+            "after": 262144,
+            "before": 256000
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "kwaipilot/kat-coder-pro-v2",
+              "maxOutputTokens"
+            ],
+            "after": 144000,
+            "before": 80000
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "contextLength and maxOutputTokens increased, both favorable changes."
+    },
+    {
+      "id": "ea5de8e8-c5ac-41a8-8eab-8bd04aabbbd1",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/google/gemma-4-31b-it:free",
+      "fromSnapshotId": "ebd6f1f2-e40f-4e7e-97e0-41c6730cdf9c",
+      "toSnapshotId": "9b0c8ef6-eea0-485a-90e2-a3d194a953d9",
+      "detectedAt": "2026-06-22T22:50:47.915Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "google/gemma-4-31b-it:free",
+              "maxOutputTokens"
+            ],
+            "after": 32768,
+            "before": 8192
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "maxOutputTokens increased (output-cap expansion), a favorable change for the consumer"
+    },
+    {
+      "id": "f6f5cbae-e504-4245-9c32-25888dbbfbe2",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/google/gemini-3.1-flash-image-preview",
+      "fromSnapshotId": "ebd6f1f2-e40f-4e7e-97e0-41c6730cdf9c",
+      "toSnapshotId": "9b0c8ef6-eea0-485a-90e2-a3d194a953d9",
+      "detectedAt": "2026-06-22T22:50:45.104Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "google/gemini-3.1-flash-image-preview",
+              "maxOutputTokens"
+            ],
+            "after": 65536,
+            "before": 32768
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Output token limit increased from 32768 to 65536, which is a favorable expansion, not a restriction."
+    },
+    {
+      "id": "a66fcbb5-f45b-4d39-957e-da46d51458cd",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/google/gemini-3.1-flash-image",
+      "fromSnapshotId": "ebd6f1f2-e40f-4e7e-97e0-41c6730cdf9c",
+      "toSnapshotId": "9b0c8ef6-eea0-485a-90e2-a3d194a953d9",
+      "detectedAt": "2026-06-22T22:50:39.964Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "google/gemini-3.1-flash-image",
+              "maxOutputTokens"
+            ],
+            "after": 32768,
+            "before": 65536
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "maxOutputTokens halved, agents may silently truncate output"
+    },
+    {
+      "id": "7bd3657f-3e26-4b41-bf67-557cb4ae4fb5",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/google/gemini-3-pro-image",
+      "fromSnapshotId": "ebd6f1f2-e40f-4e7e-97e0-41c6730cdf9c",
+      "toSnapshotId": "9b0c8ef6-eea0-485a-90e2-a3d194a953d9",
+      "detectedAt": "2026-06-22T22:50:36.958Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "google/gemini-3-pro-image",
+              "contextLength"
+            ],
+            "after": 131072,
+            "before": 65536
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "context length increased, which expands capability and is favorable to consumers"
+    }
+  ]
+}
