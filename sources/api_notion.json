@@ -1,0 +1,278 @@
+{
+  "id": "api:notion",
+  "sourceUrl": "https://api.apis.guru/v2/specs/notion.com/1.0.0/openapi.json",
+  "cadence": "0 */6 * * *",
+  "current": {
+    "source": "api:notion",
+    "fetchedAt": "2026-06-23T19:28:19.270Z",
+    "stale": false,
+    "verified": true,
+    "data": {
+      "api": "api:notion",
+      "title": "Notion API",
+      "version": "1.0.0",
+      "operations": {
+        "GET /v1/comments": {
+          "summary": "Retrieve comments",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "header",
+              "name": "Notion-Version",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "block_id",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "page_size",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "retrieveComments",
+          "requestBody": {
+            "content": [
+              "application/x-www-form-urlencoded"
+            ],
+            "required": false
+          }
+        },
+        "GET /v1/pages/{id}": {
+          "summary": "Retrieve a Page",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "header",
+              "name": "",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "header",
+              "name": "Notion-Version",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "retrieveAPage",
+          "requestBody": null
+        },
+        "GET /v1/users/{id}": {
+          "summary": "Retrieve a user",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "header",
+              "name": "Notion-Version",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "retrieveAUser",
+          "requestBody": {
+            "content": [
+              "application/x-www-form-urlencoded"
+            ],
+            "required": false
+          }
+        },
+        "GET /v1/blocks/{id}": {
+          "summary": "Retrieve a block",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "header",
+              "name": "Notion-Version",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "retrieveABlock",
+          "requestBody": null
+        },
+        "PATCH /v1/pages/{id}": {
+          "summary": "Update Page properties ",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "header",
+              "name": "Notion-Version",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "updatePageProperties",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": false
+          }
+        },
+        "PATCH /v1/blocks/{id}": {
+          "summary": "Update a block",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "header",
+              "name": "Notion-Version",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "updateABlock",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": false
+          }
+        },
+        "DELETE /v1/blocks/{id}": {
+          "summary": "Delete a block",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "header",
+              "name": "Notion-Version",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "deleteABlock",
+          "requestBody": null
+        },
+        "GET /v1/databases/{id}": {
+          "summary": "Retrieve a database",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "header",
+              "name": "Notion-Version",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "retrieveADatabase",
+          "requestBody": null
+        },
+        "PATCH /v1/databases/{id}": {
+          "summary": "Update a database",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "header",
+              "name": "Notion-Version",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "updateADatabase",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": false
+          }
+        },
+        "GET /v1/blocks/{id}/children": {
+          "summary": "Retrieve block children",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "header",
+              "name": "Notion-Version",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "page_size",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "retrieveBlockChildren",
+          "requestBody": null
+        },
+        "POST /v1/databases/{id}/query": {
+          "summary": "Query a database",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "header",
+              "name": "Notion-Version",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "queryADatabase",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": false
+          }
+        },
+        "PATCH /v1/blocks/{id}/children": {
+          "summary": "Append block children",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "header",
+              "name": "Notion-Version",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "appendBlockChildren",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": false
+          }
+        },
+        "GET /v1/pages/{page_id}/properties/{property_id}": {
+          "summary": "Retrieve a Page Property Item",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "retrieveAPagePropertyItem",
+          "requestBody": null
+        }
+      }
+    }
+  }
+}

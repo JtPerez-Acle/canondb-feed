@@ -1,0 +1,5766 @@
+{
+  "id": "api:openai",
+  "sourceUrl": "https://raw.githubusercontent.com/openai/openai-openapi/master/openapi.yaml",
+  "cadence": "0 */6 * * *",
+  "current": {
+    "source": "api:openai",
+    "fetchedAt": "2026-06-23T19:28:17.709Z",
+    "stale": false,
+    "verified": true,
+    "data": {
+      "api": "api:openai",
+      "title": "OpenAI API",
+      "version": "2.3.0",
+      "operations": {
+        "GET /evals": {
+          "summary": "List evaluations for a project.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "order",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "order_by",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "listEvals",
+          "requestBody": null
+        },
+        "GET /files": {
+          "summary": "Returns a list of files.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "order",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "purpose",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "listFiles",
+          "requestBody": null
+        },
+        "GET /models": {
+          "summary": "Lists the currently available models, and provides basic information about each one such as the owner and availability.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "listModels",
+          "requestBody": null
+        },
+        "GET /skills": {
+          "summary": "List all skills for the current project.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "order",
+              "type": null,
+              "required": false
+            }
+          ],
+          "operationId": "ListSkills",
+          "requestBody": null
+        },
+        "GET /videos": {
+          "summary": "List recently generated videos for the current project.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "order",
+              "type": null,
+              "required": false
+            }
+          ],
+          "operationId": "ListVideos",
+          "requestBody": null
+        },
+        "POST /evals": {
+          "summary": "Create the structure of an evaluation that can be used to test a model's performance.\nAn evaluation is a set of testing criteria and the config for a data source, which dictates the schema of the data used in the evaluation. After creating an evaluation, you can run it on different models and model parameters. We support several types of graders and datasources.\nFor more information, see the [Evals guide](/docs/guides/evals).\n",
+          "responses": [
+            "201"
+          ],
+          "parameters": [],
+          "operationId": "createEval",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /files": {
+          "summary": "Upload a file that can be used across various endpoints. Individual files\ncan be up to 512 MB, and each project can store up to 2.5 TB of files in\ntotal. There is no organization-wide storage limit. Uploads to this\nendpoint are rate-limited to 1,000 requests per minute per authenticated\nuser.\n\n- The Assistants API supports files up to 2 million tokens and of specific\n  file types. See the [Assistants Tools guide](/docs/assistants/tools) for\n  details.\n- The Fine-tuning API only supports `.jsonl` files. The input also has\n  certain required formats for fine-tuning\n  [chat](/docs/api-reference/fine-tuning/chat-input) or\n  [completions](/docs/api-reference/fine-tuning/completions-input) models.\n- The Batch API only supports `.jsonl` files up to 200 MB in size. The input\n  also has a specific required\n  [format](/docs/api-reference/batch/request-input).\n- For Retrieval or `file_search` ingestion, upload files here first. If\n  you need to attach multiple uploaded files to the same vector store, use\n  [`/vector_stores/{vector_store_id}/file_batches`](/docs/api-reference/vector-stores-file-batches/createBatch)\n  instead of attaching them one by one. Vector store attachment has separate\n  limits from file upload, including 2,000 attached files per minute per\n  organization.\n\nPlease [contact us](https://help.openai.com/) if you need to increase these\nstorage limits.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "createFile",
+          "requestBody": {
+            "content": [
+              "multipart/form-data"
+            ],
+            "required": true
+          }
+        },
+        "GET /batches": {
+          "summary": "List your organization's batches.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            }
+          ],
+          "operationId": "listBatches",
+          "requestBody": null
+        },
+        "POST /skills": {
+          "summary": "Create a new skill.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "CreateSkill",
+          "requestBody": {
+            "content": [
+              "application/json",
+              "multipart/form-data"
+            ],
+            "required": false
+          }
+        },
+        "POST /videos": {
+          "summary": "Create a new video generation job from a prompt and optional reference assets.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "createVideo",
+          "requestBody": {
+            "content": [
+              "application/json",
+              "multipart/form-data"
+            ],
+            "required": false
+          }
+        },
+        "POST /batches": {
+          "summary": "Creates and executes a batch from an uploaded file of requests",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "createBatch",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /threads": {
+          "summary": "Create a thread.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "createThread",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": false
+          }
+        },
+        "POST /uploads": {
+          "summary": "Creates an intermediate [Upload](/docs/api-reference/uploads/object) object\nthat you can add [Parts](/docs/api-reference/uploads/part-object) to.\nCurrently, an Upload can accept at most 8 GB in total and expires after an\nhour after you create it.\n\nOnce you complete the Upload, we will create a\n[File](/docs/api-reference/files/object) object that contains all the parts\nyou uploaded. This File is usable in the rest of our platform as a regular\nFile object.\n\nFor certain `purpose` values, the correct `mime_type` must be specified. \nPlease refer to documentation for the \n[supported MIME types for your use case](/docs/assistants/tools/file-search#supported-files).\n\nFor guidance on the proper filename extensions for each purpose, please\nfollow the documentation on [creating a\nFile](/docs/api-reference/files/create).\n\nReturns the Upload object with status `pending`.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "createUpload",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "GET /assistants": {
+          "summary": "Returns a list of assistants.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "before",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "order",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "listAssistants",
+          "requestBody": null
+        },
+        "GET /containers": {
+          "summary": "List Containers",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "name",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "order",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "ListContainers",
+          "requestBody": null
+        },
+        "POST /responses": {
+          "summary": "Creates a model response. Provide [text](/docs/guides/text) or\n[image](/docs/guides/images) inputs to generate [text](/docs/guides/text)\nor [JSON](/docs/guides/structured-outputs) outputs. Have the model call\nyour own [custom code](/docs/guides/function-calling) or use built-in\n[tools](/docs/guides/tools) like [web search](/docs/guides/tools-web-search)\nor [file search](/docs/guides/tools-file-search) to use your own data\nas input for the model's response.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "createResponse",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /assistants": {
+          "summary": "Create an assistant with a model and instructions.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "createAssistant",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /containers": {
+          "summary": "Create Container",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "CreateContainer",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": false
+          }
+        },
+        "POST /embeddings": {
+          "summary": "Creates an embedding vector representing the input text.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "createEmbedding",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /completions": {
+          "summary": "Creates a completion for the provided prompt and parameters.\n\nReturns a completion object, or a sequence of completion objects if the request is streamed.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "createCompletion",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /moderations": {
+          "summary": "Classifies if text and/or image inputs are potentially harmful. Learn\nmore in the [moderation guide](/docs/guides/moderation).\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "createModeration",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "GET /vector_stores": {
+          "summary": "Returns a list of vector stores.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "before",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "order",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "listVectorStores",
+          "requestBody": null
+        },
+        "POST /audio/speech": {
+          "summary": "Generates audio from the input text.\n\nReturns the audio file content, or a stream of audio events.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "createSpeech",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /audio/voices": {
+          "summary": "Creates a custom voice.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "createVoice",
+          "requestBody": {
+            "content": [
+              "multipart/form-data"
+            ],
+            "required": true
+          }
+        },
+        "POST /images/edits": {
+          "summary": "Creates an edited or extended image given one or more source images and a prompt. This endpoint supports GPT Image models (`gpt-image-1.5`, `gpt-image-1`, `gpt-image-1-mini`, and `chatgpt-image-latest`) and `dall-e-2`.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "createImageEdit",
+          "requestBody": {
+            "content": [
+              "application/json",
+              "multipart/form-data"
+            ],
+            "required": true
+          }
+        },
+        "POST /threads/runs": {
+          "summary": "Create a thread and run it in one request.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "createThreadAndRun",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /videos/edits": {
+          "summary": "Create a new video generation job by editing a source video or existing generated video.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "CreateVideoEdit",
+          "requestBody": {
+            "content": [
+              "application/json",
+              "multipart/form-data"
+            ],
+            "required": false
+          }
+        },
+        "GET /models/{model}": {
+          "summary": "Retrieves a model instance, providing basic information about the model such as the owner and permissioning.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "model",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "retrieveModel",
+          "requestBody": null
+        },
+        "POST /conversations": {
+          "summary": "Create a conversation.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "createConversation",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": false
+          }
+        },
+        "POST /vector_stores": {
+          "summary": "Create a vector store.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "createVectorStore",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "GET /chatkit/threads": {
+          "summary": "List ChatKit threads with optional pagination and user filters.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "before",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "order",
+              "type": null,
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "user",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "ListThreadsMethod",
+          "requestBody": null
+        },
+        "GET /evals/{eval_id}": {
+          "summary": "Get an evaluation by ID.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "eval_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "getEval",
+          "requestBody": null
+        },
+        "GET /files/{file_id}": {
+          "summary": "Returns information about a specific file.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "file_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "retrieveFile",
+          "requestBody": null
+        },
+        "POST /realtime/calls": {
+          "summary": "Create a new Realtime API call over WebRTC and receive the SDP answer needed\nto complete the peer connection.",
+          "responses": [
+            "201"
+          ],
+          "parameters": [],
+          "operationId": "create-realtime-call",
+          "requestBody": {
+            "content": [
+              "application/sdp",
+              "multipart/form-data"
+            ],
+            "required": true
+          }
+        },
+        "GET /chat/completions": {
+          "summary": "List stored Chat Completions. Only Chat Completions that have been stored\nwith the `store` parameter set to `true` will be returned.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "metadata",
+              "type": null,
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "model",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "order",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "listChatCompletions",
+          "requestBody": null
+        },
+        "GET /fine_tuning/jobs": {
+          "summary": "List your organization's fine-tuning jobs\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "metadata",
+              "type": "object",
+              "required": false
+            }
+          ],
+          "operationId": "listPaginatedFineTuningJobs",
+          "requestBody": null
+        },
+        "POST /evals/{eval_id}": {
+          "summary": "Update certain properties of an evaluation.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "eval_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "updateEval",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "DELETE /models/{model}": {
+          "summary": "Delete a fine-tuned model. You must have the Owner role in your organization to delete a model.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "model",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "deleteModel",
+          "requestBody": null
+        },
+        "GET /skills/{skill_id}": {
+          "summary": "Get a skill by its ID.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "skill_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "GetSkill",
+          "requestBody": null
+        },
+        "GET /videos/{video_id}": {
+          "summary": "Fetch the latest metadata for a generated video.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "video_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "GetVideo",
+          "requestBody": null
+        },
+        "POST /chat/completions": {
+          "summary": "**Starting a new project?** We recommend trying [Responses](/docs/api-reference/responses)\nto take advantage of the latest OpenAI platform features. Compare\n[Chat Completions with Responses](/docs/guides/responses-vs-chat-completions?api-mode=responses).\n\n---\n\nCreates a model response for the given chat conversation. Learn more in the\n[text generation](/docs/guides/text-generation), [vision](/docs/guides/vision),\nand [audio](/docs/guides/audio) guides.\n\nParameter support can differ depending on the model used to generate the\nresponse, particularly for newer reasoning models. Parameters that are only\nsupported for reasoning models are noted below. For the current state of\nunsupported parameters in reasoning models,\n[refer to the reasoning guide](/docs/guides/reasoning).\n\nReturns a chat completion object, or a streamed sequence of chat completion\nchunk objects if the request is streamed.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "createChatCompletion",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /chatkit/sessions": {
+          "summary": "Create a ChatKit session.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "CreateChatSessionMethod",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": false
+          }
+        },
+        "POST /fine_tuning/jobs": {
+          "summary": "Creates a fine-tuning job which begins the process of creating a new model from a given dataset.\n\nResponse includes details of the enqueued job including job status and the name of the fine-tuned models once complete.\n\n[Learn more about fine-tuning](/docs/guides/model-optimization)\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "createFineTuningJob",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "DELETE /evals/{eval_id}": {
+          "summary": "Delete an evaluation.\n",
+          "responses": [
+            "200",
+            "404"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "eval_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "deleteEval",
+          "requestBody": null
+        },
+        "DELETE /files/{file_id}": {
+          "summary": "Delete a file and remove it from all vector stores.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "file_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "deleteFile",
+          "requestBody": null
+        },
+        "GET /batches/{batch_id}": {
+          "summary": "Retrieves a batch.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "batch_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "retrieveBatch",
+          "requestBody": null
+        },
+        "GET /organization/costs": {
+          "summary": "Get costs details for the organization.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "query",
+              "name": "api_key_ids",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "bucket_width",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "end_time",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "group_by",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "page",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "project_ids",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "start_time",
+              "type": "integer",
+              "required": true
+            }
+          ],
+          "operationId": "usage-costs",
+          "requestBody": null
+        },
+        "GET /organization/roles": {
+          "summary": "Lists the roles configured for the organization.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "order",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "list-roles",
+          "requestBody": null
+        },
+        "GET /organization/users": {
+          "summary": "Lists all of the users in the organization.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "emails",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            }
+          ],
+          "operationId": "list-users",
+          "requestBody": null
+        },
+        "POST /images/variations": {
+          "summary": "Creates a variation of a given image. This endpoint only supports `dall-e-2`.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "createImageVariation",
+          "requestBody": {
+            "content": [
+              "multipart/form-data"
+            ],
+            "required": true
+          }
+        },
+        "POST /realtime/sessions": {
+          "summary": "Create an ephemeral API token for use in client-side applications with the\nRealtime API. Can be configured with the same session parameters as the\n`session.update` client event.\n\nIt responds with a session object, plus a `client_secret` key which contains\na usable ephemeral API token that can be used to authenticate browser clients\nfor the Realtime API.\n\nReturns the created Realtime session object, plus an ephemeral key.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "create-realtime-session",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /responses/compact": {
+          "summary": "Compact a conversation. Returns a compacted response object.\n\nLearn when and how to compact long-running conversations in the [conversation state guide](/docs/guides/conversation-state#managing-the-context-window). For ZDR-compatible compaction details, see [Compaction (advanced)](/docs/guides/conversation-state#compaction-advanced).",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "Compactconversation",
+          "requestBody": {
+            "content": [
+              "application/json",
+              "application/x-www-form-urlencoded"
+            ],
+            "required": false
+          }
+        },
+        "POST /skills/{skill_id}": {
+          "summary": "Update the default version pointer for a skill.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "skill_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "UpdateSkillDefaultVersion",
+          "requestBody": {
+            "content": [
+              "application/json",
+              "application/x-www-form-urlencoded"
+            ],
+            "required": false
+          }
+        },
+        "POST /videos/characters": {
+          "summary": "Create a character from an uploaded video.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "CreateVideoCharacter",
+          "requestBody": {
+            "content": [
+              "multipart/form-data"
+            ],
+            "required": false
+          }
+        },
+        "POST /videos/extensions": {
+          "summary": "Create an extension of a completed video.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "CreateVideoExtend",
+          "requestBody": {
+            "content": [
+              "application/json",
+              "multipart/form-data"
+            ],
+            "required": false
+          }
+        },
+        "GET /organization/groups": {
+          "summary": "Lists all groups in the organization.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "order",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "list-groups",
+          "requestBody": null
+        },
+        "GET /threads/{thread_id}": {
+          "summary": "Retrieves a thread.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "thread_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "getThread",
+          "requestBody": null
+        },
+        "POST /audio/translations": {
+          "summary": "Translates audio into English.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "createTranslation",
+          "requestBody": {
+            "content": [
+              "multipart/form-data"
+            ],
+            "required": true
+          }
+        },
+        "POST /images/generations": {
+          "summary": "Creates an image given a prompt. [Learn more](/docs/guides/images).\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "createImage",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /organization/roles": {
+          "summary": "Creates a custom role for the organization.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "create-role",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "DELETE /skills/{skill_id}": {
+          "summary": "Delete a skill by its ID.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "skill_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "DeleteSkill",
+          "requestBody": null
+        },
+        "DELETE /videos/{video_id}": {
+          "summary": "Permanently delete a completed or failed video and its stored assets.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "video_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "DeleteVideo",
+          "requestBody": null
+        },
+        "GET /audio/voice_consents": {
+          "summary": "Returns a list of voice consent recordings.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            }
+          ],
+          "operationId": "listVoiceConsents",
+          "requestBody": null
+        },
+        "GET /evals/{eval_id}/runs": {
+          "summary": "Get a list of runs for an evaluation.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "eval_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "order",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "status",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "getEvalRuns",
+          "requestBody": null
+        },
+        "GET /organization/invites": {
+          "summary": "Returns a list of invites in the organization.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            }
+          ],
+          "operationId": "list-invites",
+          "requestBody": null
+        },
+        "POST /organization/groups": {
+          "summary": "Creates a new group in the organization.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "create-group",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /threads/{thread_id}": {
+          "summary": "Modifies a thread.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "thread_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "modifyThread",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "GET /organization/projects": {
+          "summary": "Returns a list of projects.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "include_archived",
+              "type": "boolean",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            }
+          ],
+          "operationId": "list-projects",
+          "requestBody": null
+        },
+        "POST /audio/transcriptions": {
+          "summary": "Transcribes audio into the input language.\n\nReturns a transcription object in `json`, `diarized_json`, or `verbose_json`\nformat, or a stream of transcript events.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "createTranscription",
+          "requestBody": {
+            "content": [
+              "multipart/form-data"
+            ],
+            "required": true
+          }
+        },
+        "POST /audio/voice_consents": {
+          "summary": "Upload a voice consent recording.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "createVoiceConsent",
+          "requestBody": {
+            "content": [
+              "multipart/form-data"
+            ],
+            "required": true
+          }
+        },
+        "POST /evals/{eval_id}/runs": {
+          "summary": "Kicks off a new run for a given evaluation, specifying the data source, and what model configuration to use to test. The datasource will be validated against the schema specified in the config of the evaluation.\n",
+          "responses": [
+            "201",
+            "400"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "eval_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "createEvalRun",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /organization/invites": {
+          "summary": "Create an invite for a user to the organization. The invite must be accepted by the user before they have access to the organization.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "inviteUser",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "DELETE /threads/{thread_id}": {
+          "summary": "Delete a thread.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "thread_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "deleteThread",
+          "requestBody": null
+        },
+        "POST /organization/projects": {
+          "summary": "Create a new project in the organization. Projects can be created and archived, but cannot be deleted.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "create-project",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "GET /files/{file_id}/content": {
+          "summary": "Returns the contents of the specified file.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "file_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "downloadFile",
+          "requestBody": null
+        },
+        "GET /organization/audit_logs": {
+          "summary": "List user actions and configuration changes within this organization.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "query",
+              "name": "actor_emails[]",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "actor_ids[]",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "before",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "effective_at",
+              "type": "object",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "event_types[]",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "project_ids[]",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "resource_ids[]",
+              "type": "array",
+              "required": false
+            }
+          ],
+          "operationId": "list-audit-logs",
+          "requestBody": null
+        },
+        "GET /responses/{response_id}": {
+          "summary": "Retrieves a model response with the given ID.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "response_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "include",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "include_obfuscation",
+              "type": "boolean",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "starting_after",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "stream",
+              "type": "boolean",
+              "required": false
+            }
+          ],
+          "operationId": "getResponse",
+          "requestBody": null
+        },
+        "POST /responses/input_tokens": {
+          "summary": "Returns input token counts of the request.\n\nReturns an object with `object` set to `response.input_tokens` and an `input_tokens` count.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "Getinputtokencounts",
+          "requestBody": {
+            "content": [
+              "application/json",
+              "application/x-www-form-urlencoded"
+            ],
+            "required": false
+          }
+        },
+        "GET /threads/{thread_id}/runs": {
+          "summary": "Returns a list of runs belonging to a thread.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "thread_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "before",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "order",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "listRuns",
+          "requestBody": null
+        },
+        "POST /realtime/client_secrets": {
+          "summary": "Create a Realtime client secret with an associated session configuration.\n\nClient secrets are short-lived tokens that can be passed to a client app,\nsuch as a web frontend or mobile client, which grants access to the Realtime API without\nleaking your main API key. You can configure a custom TTL for each client secret.\n\nYou can also attach session configuration options to the client secret, which will be\napplied to any sessions created using that client secret, but these can also be overridden\nby the client connection.\n\n[Learn more about authentication with client secrets over WebRTC](/docs/guides/realtime-webrtc).\n\nReturns the created client secret and the effective session object. The client secret is a string that looks like `ek_1234`.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "create-realtime-client-secret",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /videos/{video_id}/remix": {
+          "summary": "Create a remix of a completed video using a refreshed prompt.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "video_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "CreateVideoRemix",
+          "requestBody": {
+            "content": [
+              "application/json",
+              "multipart/form-data"
+            ],
+            "required": false
+          }
+        },
+        "GET /assistants/{assistant_id}": {
+          "summary": "Retrieves an assistant.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "assistant_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "getAssistant",
+          "requestBody": null
+        },
+        "GET /containers/{container_id}": {
+          "summary": "Retrieve Container",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "container_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "RetrieveContainer",
+          "requestBody": null
+        },
+        "GET /organization/certificates": {
+          "summary": "List uploaded certificates for this organization.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "order",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "listOrganizationCertificates",
+          "requestBody": null
+        },
+        "GET /organization/usage/images": {
+          "summary": "Get images usage details for the organization.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "query",
+              "name": "api_key_ids",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "bucket_width",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "end_time",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "group_by",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "models",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "page",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "project_ids",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "sizes",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "sources",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "start_time",
+              "type": "integer",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "user_ids",
+              "type": "array",
+              "required": false
+            }
+          ],
+          "operationId": "usage-images",
+          "requestBody": null
+        },
+        "GET /skills/{skill_id}/content": {
+          "summary": "Download a skill zip bundle by its ID.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "skill_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "GetSkillContent",
+          "requestBody": null
+        },
+        "GET /videos/{video_id}/content": {
+          "summary": "Download the generated video bytes or a derived preview asset.\n\nStreams the rendered video content for the specified video job.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "video_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "variant",
+              "type": null,
+              "required": false
+            }
+          ],
+          "operationId": "RetrieveVideoContent",
+          "requestBody": null
+        },
+        "POST /threads/{thread_id}/runs": {
+          "summary": "Create a run.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "thread_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "include[]",
+              "type": "array",
+              "required": false
+            }
+          ],
+          "operationId": "createRun",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "DELETE /responses/{response_id}": {
+          "summary": "Deletes a model response with the given ID.\n",
+          "responses": [
+            "200",
+            "404"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "response_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "deleteResponse",
+          "requestBody": null
+        },
+        "GET /skills/{skill_id}/versions": {
+          "summary": "List skill versions for a skill.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "skill_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "order",
+              "type": null,
+              "required": false
+            }
+          ],
+          "operationId": "ListSkillVersions",
+          "requestBody": null
+        },
+        "POST /assistants/{assistant_id}": {
+          "summary": "Modifies an assistant.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "assistant_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "modifyAssistant",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /batches/{batch_id}/cancel": {
+          "summary": "Cancels an in-progress batch. The batch will be in status `cancelling` for up to 10 minutes, before changing to `cancelled`, where it will have partial results (if any) available in the output file.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "batch_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "cancelBatch",
+          "requestBody": null
+        },
+        "POST /organization/certificates": {
+          "summary": "Upload a certificate to the organization. This does **not** automatically activate the certificate.\n\nOrganizations can upload up to 50 certificates.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "uploadCertificate",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /uploads/{upload_id}/parts": {
+          "summary": "Adds a [Part](/docs/api-reference/uploads/part-object) to an [Upload](/docs/api-reference/uploads/object) object. A Part represents a chunk of bytes from the file you are trying to upload. \n\nEach Part can be at most 64 MB, and you can add Parts until you hit the Upload maximum of 8 GB.\n\nIt is possible to add multiple Parts in parallel. You can decide the intended order of the Parts when you [complete the Upload](/docs/api-reference/uploads/complete).\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "upload_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "addUploadPart",
+          "requestBody": {
+            "content": [
+              "multipart/form-data"
+            ],
+            "required": true
+          }
+        },
+        "GET /chatkit/threads/{thread_id}": {
+          "summary": "Retrieve a ChatKit thread by its identifier.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "thread_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "GetThreadMethod",
+          "requestBody": null
+        },
+        "GET /organization/admin_api_keys": {
+          "summary": "List organization API keys",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "order",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "admin-api-keys-list",
+          "requestBody": null
+        },
+        "GET /projects/{project_id}/roles": {
+          "summary": "Lists the roles configured for a project.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "project_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "order",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "list-project-roles",
+          "requestBody": null
+        },
+        "POST /skills/{skill_id}/versions": {
+          "summary": "Create a new immutable skill version.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "skill_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "CreateSkillVersion",
+          "requestBody": {
+            "content": [
+              "application/json",
+              "multipart/form-data"
+            ],
+            "required": false
+          }
+        },
+        "POST /uploads/{upload_id}/cancel": {
+          "summary": "Cancels the Upload. No Parts may be added after an Upload is cancelled.\n\nReturns the Upload object with status `cancelled`.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "upload_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "cancelUpload",
+          "requestBody": null
+        },
+        "DELETE /assistants/{assistant_id}": {
+          "summary": "Delete an assistant.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "assistant_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "deleteAssistant",
+          "requestBody": null
+        },
+        "DELETE /containers/{container_id}": {
+          "summary": "Delete Container",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "container_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "DeleteContainer",
+          "requestBody": null
+        },
+        "GET /organization/users/{user_id}": {
+          "summary": "Retrieves a user by their identifier.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "user_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "retrieve-user",
+          "requestBody": null
+        },
+        "GET /threads/{thread_id}/messages": {
+          "summary": "Returns a list of messages for a given thread.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "thread_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "before",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "order",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "run_id",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "listMessages",
+          "requestBody": null
+        },
+        "POST /organization/admin_api_keys": {
+          "summary": "Create an organization admin API key",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "admin-api-keys-create",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /projects/{project_id}/roles": {
+          "summary": "Creates a custom role for a project.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "project_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "create-project-role",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "GET /evals/{eval_id}/runs/{run_id}": {
+          "summary": "Get an evaluation run by ID.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "eval_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "run_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "getEvalRun",
+          "requestBody": null
+        },
+        "GET /organization/usage/embeddings": {
+          "summary": "Get embeddings usage details for the organization.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "query",
+              "name": "api_key_ids",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "bucket_width",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "end_time",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "group_by",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "models",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "page",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "project_ids",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "start_time",
+              "type": "integer",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "user_ids",
+              "type": "array",
+              "required": false
+            }
+          ],
+          "operationId": "usage-embeddings",
+          "requestBody": null
+        },
+        "POST /organization/roles/{role_id}": {
+          "summary": "Updates an existing organization role.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "role_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "update-role",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /organization/users/{user_id}": {
+          "summary": "Modifies a user's role in the organization.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "user_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "modify-user",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /threads/{thread_id}/messages": {
+          "summary": "Create a message.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "thread_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "createMessage",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /uploads/{upload_id}/complete": {
+          "summary": "Completes the [Upload](/docs/api-reference/uploads/object). \n\nWithin the returned Upload object, there is a nested [File](/docs/api-reference/files/object) object that is ready to use in the rest of the platform.\n\nYou can specify the order of the Parts by passing in an ordered list of the Part IDs.\n\nThe number of bytes uploaded upon completion must match the number of bytes initially specified when creating the Upload object. No Parts may be added after an Upload is completed.\nReturns the Upload object with status `completed`, including an additional `file` property containing the created usable File object.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "upload_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "completeUpload",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "DELETE /chatkit/threads/{thread_id}": {
+          "summary": "Delete a ChatKit thread along with its items and stored attachments.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "thread_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "DeleteThreadMethod",
+          "requestBody": null
+        },
+        "GET /organization/usage/completions": {
+          "summary": "Get completions usage details for the organization.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "query",
+              "name": "api_key_ids",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "batch",
+              "type": "boolean",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "bucket_width",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "end_time",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "group_by",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "models",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "page",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "project_ids",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "start_time",
+              "type": "integer",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "user_ids",
+              "type": "array",
+              "required": false
+            }
+          ],
+          "operationId": "usage-completions",
+          "requestBody": null
+        },
+        "GET /organization/usage/moderations": {
+          "summary": "Get moderations usage details for the organization.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "query",
+              "name": "api_key_ids",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "bucket_width",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "end_time",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "group_by",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "models",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "page",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "project_ids",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "start_time",
+              "type": "integer",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "user_ids",
+              "type": "array",
+              "required": false
+            }
+          ],
+          "operationId": "usage-moderations",
+          "requestBody": null
+        },
+        "POST /evals/{eval_id}/runs/{run_id}": {
+          "summary": "Cancel an ongoing evaluation run.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "eval_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "run_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "cancelEvalRun",
+          "requestBody": null
+        },
+        "POST /fine_tuning/alpha/graders/run": {
+          "summary": "Run a grader.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "runGrader",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "DELETE /organization/roles/{role_id}": {
+          "summary": "Deletes a custom role from the organization.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "role_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "delete-role",
+          "requestBody": null
+        },
+        "DELETE /organization/users/{user_id}": {
+          "summary": "Deletes a user from the organization.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "user_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "delete-user",
+          "requestBody": null
+        },
+        "GET /containers/{container_id}/files": {
+          "summary": "List Container files",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "container_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "order",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "ListContainerFiles",
+          "requestBody": null
+        },
+        "GET /conversations/{conversation_id}": {
+          "summary": "Get a conversation",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "conversation_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "getConversation",
+          "requestBody": null
+        },
+        "GET /vector_stores/{vector_store_id}": {
+          "summary": "Retrieves a vector store.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "vector_store_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "getVectorStore",
+          "requestBody": null
+        },
+        "POST /organization/groups/{group_id}": {
+          "summary": "Updates a group's information.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "group_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "update-group",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /realtime/calls/{call_id}/refer": {
+          "summary": "Transfer an active SIP call to a new destination using the SIP REFER verb.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "call_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "refer-realtime-call",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /responses/{response_id}/cancel": {
+          "summary": "Cancels a model response with the given ID. Only responses created with\nthe `background` parameter set to `true` can be cancelled. \n[Learn more](/docs/guides/background).\n",
+          "responses": [
+            "200",
+            "404"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "response_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "cancelResponse",
+          "requestBody": null
+        },
+        "DELETE /evals/{eval_id}/runs/{run_id}": {
+          "summary": "Delete an eval run.\n",
+          "responses": [
+            "200",
+            "404"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "eval_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "run_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "deleteEvalRun",
+          "requestBody": null
+        },
+        "GET /chat/completions/{completion_id}": {
+          "summary": "Get a stored chat completion. Only Chat Completions that have been created\nwith the `store` parameter set to `true` will be returned.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "completion_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "getChatCompletion",
+          "requestBody": null
+        },
+        "GET /organization/invites/{invite_id}": {
+          "summary": "Retrieves an invite.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "invite_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "retrieve-invite",
+          "requestBody": null
+        },
+        "GET /organization/usage/vector_stores": {
+          "summary": "Get vector stores usage details for the organization.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "query",
+              "name": "bucket_width",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "end_time",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "group_by",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "page",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "project_ids",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "start_time",
+              "type": "integer",
+              "required": true
+            }
+          ],
+          "operationId": "usage-vector-stores",
+          "requestBody": null
+        },
+        "GET /videos/characters/{character_id}": {
+          "summary": "Fetch a character.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "character_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "GetVideoCharacter",
+          "requestBody": null
+        },
+        "POST /containers/{container_id}/files": {
+          "summary": "Create a Container File\n\nYou can send either a multipart/form-data request with the raw file content, or a JSON request with a file ID.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "container_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "CreateContainerFile",
+          "requestBody": {
+            "content": [
+              "application/json",
+              "multipart/form-data"
+            ],
+            "required": true
+          }
+        },
+        "POST /conversations/{conversation_id}": {
+          "summary": "Update a conversation",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "conversation_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "updateConversation",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": false
+          }
+        },
+        "POST /realtime/calls/{call_id}/accept": {
+          "summary": "Accept an incoming SIP call and configure the realtime session that will\nhandle it.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "call_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "accept-realtime-call",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /realtime/calls/{call_id}/hangup": {
+          "summary": "End an active Realtime API call, whether it was initiated over SIP or\nWebRTC.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "call_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "hangup-realtime-call",
+          "requestBody": null
+        },
+        "POST /realtime/calls/{call_id}/reject": {
+          "summary": "Decline an incoming SIP call by returning a SIP status code to the caller.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "call_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "reject-realtime-call",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": false
+          }
+        },
+        "POST /realtime/transcription_sessions": {
+          "summary": "Create an ephemeral API token for use in client-side applications with the\nRealtime API specifically for realtime transcriptions. \nCan be configured with the same session parameters as the `transcription_session.update` client event.\n\nIt responds with a session object, plus a `client_secret` key which contains\na usable ephemeral API token that can be used to authenticate browser clients\nfor the Realtime API.\n\nReturns the created Realtime transcription session object, plus an ephemeral key.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "create-realtime-transcription-session",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /vector_stores/{vector_store_id}": {
+          "summary": "Modifies a vector store.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "vector_store_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "modifyVectorStore",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "DELETE /organization/groups/{group_id}": {
+          "summary": "Deletes a group from the organization.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "group_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "delete-group",
+          "requestBody": null
+        },
+        "GET /audio/voice_consents/{consent_id}": {
+          "summary": "Retrieves a voice consent recording.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "consent_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "getVoiceConsent",
+          "requestBody": null
+        },
+        "GET /chatkit/threads/{thread_id}/items": {
+          "summary": "List items that belong to a ChatKit thread.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "thread_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "before",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "order",
+              "type": null,
+              "required": false
+            }
+          ],
+          "operationId": "ListThreadItemsMethod",
+          "requestBody": null
+        },
+        "GET /organization/usage/audio_speeches": {
+          "summary": "Get audio speeches usage details for the organization.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "query",
+              "name": "api_key_ids",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "bucket_width",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "end_time",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "group_by",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "models",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "page",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "project_ids",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "start_time",
+              "type": "integer",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "user_ids",
+              "type": "array",
+              "required": false
+            }
+          ],
+          "operationId": "usage-audio-speeches",
+          "requestBody": null
+        },
+        "GET /threads/{thread_id}/runs/{run_id}": {
+          "summary": "Retrieves a run.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "run_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "thread_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "getRun",
+          "requestBody": null
+        },
+        "POST /chat/completions/{completion_id}": {
+          "summary": "Modify a stored chat completion. Only Chat Completions that have been\ncreated with the `store` parameter set to `true` can be modified. Currently,\nthe only supported modification is to update the `metadata` field.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "completion_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "updateChatCompletion",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "DELETE /conversations/{conversation_id}": {
+          "summary": "Delete a conversation. Items in the conversation will not be deleted.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "conversation_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "deleteConversation",
+          "requestBody": null
+        },
+        "DELETE /vector_stores/{vector_store_id}": {
+          "summary": "Delete a vector store.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "vector_store_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "deleteVectorStore",
+          "requestBody": null
+        },
+        "GET /organization/projects/{project_id}": {
+          "summary": "Retrieves a project.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "project_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "retrieve-project",
+          "requestBody": null
+        },
+        "GET /organization/users/{user_id}/roles": {
+          "summary": "Lists the organization roles assigned to a user within the organization.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "user_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "order",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "list-user-role-assignments",
+          "requestBody": null
+        },
+        "POST /audio/voice_consents/{consent_id}": {
+          "summary": "Updates a voice consent recording (metadata only).",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "consent_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "updateVoiceConsent",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /threads/{thread_id}/runs/{run_id}": {
+          "summary": "Modifies a run.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "run_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "thread_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "modifyRun",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "DELETE /chat/completions/{completion_id}": {
+          "summary": "Delete a stored chat completion. Only Chat Completions that have been\ncreated with the `store` parameter set to `true` can be deleted.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "completion_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "deleteChatCompletion",
+          "requestBody": null
+        },
+        "DELETE /organization/invites/{invite_id}": {
+          "summary": "Delete an invite. If the invite has already been accepted, it cannot be deleted.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "invite_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "delete-invite",
+          "requestBody": null
+        },
+        "GET /responses/{response_id}/input_items": {
+          "summary": "Returns a list of input items for a given response.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "response_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "include",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "order",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "listInputItems",
+          "requestBody": null
+        },
+        "POST /fine_tuning/alpha/graders/validate": {
+          "summary": "Validate a grader.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "validateGrader",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /organization/certificates/activate": {
+          "summary": "Activate certificates at the organization level.\n\nYou can atomically and idempotently activate up to 10 certificates at a time.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "activateOrganizationCertificates",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /organization/projects/{project_id}": {
+          "summary": "Modifies a project in the organization.",
+          "responses": [
+            "200",
+            "400"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "project_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "modify-project",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /organization/users/{user_id}/roles": {
+          "summary": "Assigns an organization role to a user within the organization.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "user_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "assign-user-role",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "DELETE /audio/voice_consents/{consent_id}": {
+          "summary": "Deletes a voice consent recording.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "consent_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "deleteVoiceConsent",
+          "requestBody": null
+        },
+        "GET /organization/admin_api_keys/{key_id}": {
+          "summary": "Retrieve a single organization API key",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "key_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "admin-api-keys-get",
+          "requestBody": null
+        },
+        "GET /organization/groups/{group_id}/roles": {
+          "summary": "Lists the organization roles assigned to a group within the organization.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "group_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "order",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "list-group-role-assignments",
+          "requestBody": null
+        },
+        "GET /organization/groups/{group_id}/users": {
+          "summary": "Lists the users assigned to a group.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "group_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "order",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "list-group-users",
+          "requestBody": null
+        },
+        "GET /skills/{skill_id}/versions/{version}": {
+          "summary": "Get a specific skill version.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "skill_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "version",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "GetSkillVersion",
+          "requestBody": null
+        },
+        "GET /conversations/{conversation_id}/items": {
+          "summary": "List all items for a conversation with the given ID.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "conversation_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "include",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "order",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "listConversationItems",
+          "requestBody": null
+        },
+        "GET /fine_tuning/jobs/{fine_tuning_job_id}": {
+          "summary": "Get info about a fine-tuning job.\n\n[Learn more about fine-tuning](/docs/guides/model-optimization)\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "fine_tuning_job_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "retrieveFineTuningJob",
+          "requestBody": null
+        },
+        "GET /vector_stores/{vector_store_id}/files": {
+          "summary": "Returns a list of vector store files.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "vector_store_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "before",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "filter",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "order",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "listVectorStoreFiles",
+          "requestBody": null
+        },
+        "POST /chatkit/sessions/{session_id}/cancel": {
+          "summary": "Cancel an active ChatKit session and return its most recent metadata.\n\nCancelling prevents new requests from using the issued client secret.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "session_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "CancelChatSessionMethod",
+          "requestBody": null
+        },
+        "POST /organization/certificates/deactivate": {
+          "summary": "Deactivate certificates at the organization level.\n\nYou can atomically and idempotently deactivate up to 10 certificates at a time.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "deactivateOrganizationCertificates",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /organization/groups/{group_id}/roles": {
+          "summary": "Assigns an organization role to a group within the organization.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "group_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "assign-group-role",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /organization/groups/{group_id}/users": {
+          "summary": "Adds a user to a group.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "group_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "add-group-user",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /realtime/translations/client_secrets": {
+          "summary": "Create a Realtime translation client secret with an associated translation session configuration.\n\nClient secrets are short-lived tokens that can be passed to a client app,\nsuch as a web frontend or mobile client, which grants access to the Realtime\nTranslation API without leaking your main API key. You can configure a custom\nTTL for each client secret.\n\nReturns the created client secret and the effective translation session object.\nThe client secret is a string that looks like `ek_1234`.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [],
+          "operationId": "create-realtime-translation-client-secret",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /conversations/{conversation_id}/items": {
+          "summary": "Create items in a conversation with the given ID.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "conversation_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "include",
+              "type": "array",
+              "required": false
+            }
+          ],
+          "operationId": "createConversationItems",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /projects/{project_id}/roles/{role_id}": {
+          "summary": "Updates an existing project role.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "project_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "role_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "update-project-role",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /vector_stores/{vector_store_id}/files": {
+          "summary": "Create a vector store file by attaching a [File](/docs/api-reference/files) to a [vector store](/docs/api-reference/vector-stores/object).",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "vector_store_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "createVectorStoreFile",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "DELETE /organization/admin_api_keys/{key_id}": {
+          "summary": "Delete an organization admin API key",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "key_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "admin-api-keys-delete",
+          "requestBody": null
+        },
+        "DELETE /skills/{skill_id}/versions/{version}": {
+          "summary": "Delete a skill version.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "skill_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "version",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "DeleteSkillVersion",
+          "requestBody": null
+        },
+        "GET /organization/usage/audio_transcriptions": {
+          "summary": "Get audio transcriptions usage details for the organization.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "query",
+              "name": "api_key_ids",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "bucket_width",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "end_time",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "group_by",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "models",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "page",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "project_ids",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "start_time",
+              "type": "integer",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "user_ids",
+              "type": "array",
+              "required": false
+            }
+          ],
+          "operationId": "usage-audio-transcriptions",
+          "requestBody": null
+        },
+        "GET /threads/{thread_id}/runs/{run_id}/steps": {
+          "summary": "Returns a list of run steps belonging to a run.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "run_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "thread_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "before",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "include[]",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "order",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "listRunSteps",
+          "requestBody": null
+        },
+        "POST /vector_stores/{vector_store_id}/search": {
+          "summary": "Search a vector store for relevant chunks based on a query and file attributes filter.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "vector_store_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "searchVectorStore",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "DELETE /projects/{project_id}/roles/{role_id}": {
+          "summary": "Deletes a custom role from a project.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "project_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "role_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "delete-project-role",
+          "requestBody": null
+        },
+        "GET /organization/projects/{project_id}/users": {
+          "summary": "Returns a list of users in the project.",
+          "responses": [
+            "200",
+            "400"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "project_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            }
+          ],
+          "operationId": "list-project-users",
+          "requestBody": null
+        },
+        "GET /chat/completions/{completion_id}/messages": {
+          "summary": "Get the messages in a stored chat completion. Only Chat Completions that\nhave been created with the `store` parameter set to `true` will be\nreturned.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "completion_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "order",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "getChatCompletionMessages",
+          "requestBody": null
+        },
+        "GET /containers/{container_id}/files/{file_id}": {
+          "summary": "Retrieve Container File",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "container_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "file_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "RetrieveContainerFile",
+          "requestBody": null
+        },
+        "GET /organization/projects/{project_id}/groups": {
+          "summary": "Lists the groups that have access to a project.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "project_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "order",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "list-project-groups",
+          "requestBody": null
+        },
+        "GET /threads/{thread_id}/messages/{message_id}": {
+          "summary": "Retrieve a message.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "message_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "thread_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "getMessage",
+          "requestBody": null
+        },
+        "POST /organization/projects/{project_id}/users": {
+          "summary": "Adds a user to the project. Users must already be members of the organization to be added to a project.",
+          "responses": [
+            "200",
+            "400"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "project_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "create-project-user",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /threads/{thread_id}/runs/{run_id}/cancel": {
+          "summary": "Cancels a run that is `in_progress`.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "run_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "thread_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "cancelRun",
+          "requestBody": null
+        },
+        "GET /evals/{eval_id}/runs/{run_id}/output_items": {
+          "summary": "Get a list of output items for an evaluation run.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "eval_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "run_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "order",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "status",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "getEvalRunOutputItems",
+          "requestBody": null
+        },
+        "GET /organization/certificates/{certificate_id}": {
+          "summary": "Get a certificate that has been uploaded to the organization.\n\nYou can get a certificate regardless of whether it is active or not.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "certificate_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "include",
+              "type": "array",
+              "required": false
+            }
+          ],
+          "operationId": "getCertificate",
+          "requestBody": null
+        },
+        "POST /organization/projects/{project_id}/groups": {
+          "summary": "Grants a group access to a project.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "project_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "add-project-group",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /threads/{thread_id}/messages/{message_id}": {
+          "summary": "Modifies a message.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "message_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "thread_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "modifyMessage",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "GET /organization/projects/{project_id}/api_keys": {
+          "summary": "Returns a list of API keys in the project.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "project_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            }
+          ],
+          "operationId": "list-project-api-keys",
+          "requestBody": null
+        },
+        "GET /projects/{project_id}/users/{user_id}/roles": {
+          "summary": "Lists the project roles assigned to a user within a project.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "project_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "user_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "order",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "list-project-user-role-assignments",
+          "requestBody": null
+        },
+        "POST /organization/certificates/{certificate_id}": {
+          "summary": "Modify a certificate. Note that only the name can be modified.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "certificate_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "modifyCertificate",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /organization/projects/{project_id}/archive": {
+          "summary": "Archives a project in the organization. Archived projects cannot be used or updated.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "project_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "archive-project",
+          "requestBody": null
+        },
+        "DELETE /containers/{container_id}/files/{file_id}": {
+          "summary": "Delete Container File",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "container_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "file_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "DeleteContainerFile",
+          "requestBody": null
+        },
+        "DELETE /threads/{thread_id}/messages/{message_id}": {
+          "summary": "Deletes a message.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "message_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "thread_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "deleteMessage",
+          "requestBody": null
+        },
+        "GET /fine_tuning/jobs/{fine_tuning_job_id}/events": {
+          "summary": "Get status updates for a fine-tuning job.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "fine_tuning_job_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            }
+          ],
+          "operationId": "listFineTuningEvents",
+          "requestBody": null
+        },
+        "GET /organization/usage/code_interpreter_sessions": {
+          "summary": "Get code interpreter sessions usage details for the organization.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "query",
+              "name": "bucket_width",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "end_time",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "group_by",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "page",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "project_ids",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "start_time",
+              "type": "integer",
+              "required": true
+            }
+          ],
+          "operationId": "usage-code-interpreter-sessions",
+          "requestBody": null
+        },
+        "GET /skills/{skill_id}/versions/{version}/content": {
+          "summary": "Download a skill version zip bundle.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "skill_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "version",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "GetSkillVersionContent",
+          "requestBody": null
+        },
+        "POST /fine_tuning/jobs/{fine_tuning_job_id}/pause": {
+          "summary": "Pause a fine-tune job.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "fine_tuning_job_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "pauseFineTuningJob",
+          "requestBody": null
+        },
+        "POST /projects/{project_id}/users/{user_id}/roles": {
+          "summary": "Assigns a project role to a user within a project.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "project_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "user_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "assign-project-user-role",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "DELETE /organization/certificates/{certificate_id}": {
+          "summary": "Delete a certificate from the organization.\n\nThe certificate must be inactive for the organization and all projects.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "certificate_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "deleteCertificate",
+          "requestBody": null
+        },
+        "GET /projects/{project_id}/groups/{group_id}/roles": {
+          "summary": "Lists the project roles assigned to a group within a project.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "group_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "project_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "order",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "list-project-group-role-assignments",
+          "requestBody": null
+        },
+        "POST /fine_tuning/jobs/{fine_tuning_job_id}/cancel": {
+          "summary": "Immediately cancel a fine-tune job.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "fine_tuning_job_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "cancelFineTuningJob",
+          "requestBody": null
+        },
+        "POST /fine_tuning/jobs/{fine_tuning_job_id}/resume": {
+          "summary": "Resume a fine-tune job.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "fine_tuning_job_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "resumeFineTuningJob",
+          "requestBody": null
+        },
+        "POST /vector_stores/{vector_store_id}/file_batches": {
+          "summary": "Create a vector store file batch.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "vector_store_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "createVectorStoreFileBatch",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "GET /organization/projects/{project_id}/rate_limits": {
+          "summary": "Returns the rate limits per model for a project.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "project_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "before",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            }
+          ],
+          "operationId": "list-project-rate-limits",
+          "requestBody": null
+        },
+        "POST /projects/{project_id}/groups/{group_id}/roles": {
+          "summary": "Assigns a project role to a group within a project.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "group_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "project_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "assign-project-group-role",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "DELETE /organization/users/{user_id}/roles/{role_id}": {
+          "summary": "Unassigns an organization role from a user within the organization.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "role_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "user_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "unassign-user-role",
+          "requestBody": null
+        },
+        "GET /conversations/{conversation_id}/items/{item_id}": {
+          "summary": "Get a single item from a conversation with the given IDs.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "conversation_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "item_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "include",
+              "type": "array",
+              "required": false
+            }
+          ],
+          "operationId": "getConversationItem",
+          "requestBody": null
+        },
+        "GET /organization/projects/{project_id}/certificates": {
+          "summary": "List certificates for this project.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "project_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "order",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "listProjectCertificates",
+          "requestBody": null
+        },
+        "GET /vector_stores/{vector_store_id}/files/{file_id}": {
+          "summary": "Retrieves a vector store file.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "file_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "vector_store_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "getVectorStoreFile",
+          "requestBody": null
+        },
+        "POST /vector_stores/{vector_store_id}/files/{file_id}": {
+          "summary": "Update attributes on a vector store file.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "file_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "vector_store_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "updateVectorStoreFileAttributes",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "DELETE /organization/groups/{group_id}/roles/{role_id}": {
+          "summary": "Unassigns an organization role from a group within the organization.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "group_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "role_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "unassign-group-role",
+          "requestBody": null
+        },
+        "DELETE /organization/groups/{group_id}/users/{user_id}": {
+          "summary": "Removes a user from a group.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "group_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "user_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "remove-group-user",
+          "requestBody": null
+        },
+        "GET /containers/{container_id}/files/{file_id}/content": {
+          "summary": "Retrieve Container File Content",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "container_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "file_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "RetrieveContainerFileContent",
+          "requestBody": null
+        },
+        "GET /fine_tuning/jobs/{fine_tuning_job_id}/checkpoints": {
+          "summary": "List checkpoints for a fine-tuning job.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "fine_tuning_job_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            }
+          ],
+          "operationId": "listFineTuningJobCheckpoints",
+          "requestBody": null
+        },
+        "GET /threads/{thread_id}/runs/{run_id}/steps/{step_id}": {
+          "summary": "Retrieves a run step.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "run_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "step_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "thread_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "include[]",
+              "type": "array",
+              "required": false
+            }
+          ],
+          "operationId": "getRunStep",
+          "requestBody": null
+        },
+        "DELETE /conversations/{conversation_id}/items/{item_id}": {
+          "summary": "Delete an item from a conversation with the given IDs.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "conversation_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "item_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "deleteConversationItem",
+          "requestBody": null
+        },
+        "DELETE /vector_stores/{vector_store_id}/files/{file_id}": {
+          "summary": "Delete a vector store file. This will remove the file from the vector store but the file itself will not be deleted. To delete the file, use the [delete file](/docs/api-reference/files/delete) endpoint.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "file_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "vector_store_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "deleteVectorStoreFile",
+          "requestBody": null
+        },
+        "GET /organization/projects/{project_id}/users/{user_id}": {
+          "summary": "Retrieves a user in the project.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "project_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "user_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "retrieve-project-user",
+          "requestBody": null
+        },
+        "GET /organization/projects/{project_id}/service_accounts": {
+          "summary": "Returns a list of service accounts in the project.",
+          "responses": [
+            "200",
+            "400"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "project_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            }
+          ],
+          "operationId": "list-project-service-accounts",
+          "requestBody": null
+        },
+        "POST /organization/projects/{project_id}/users/{user_id}": {
+          "summary": "Modifies a user's role in the project.",
+          "responses": [
+            "200",
+            "400"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "project_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "user_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "modify-project-user",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /organization/projects/{project_id}/service_accounts": {
+          "summary": "Creates a new service account in the project. This also returns an unredacted API key for the service account.",
+          "responses": [
+            "200",
+            "400"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "project_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "create-project-service-account",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "DELETE /organization/projects/{project_id}/users/{user_id}": {
+          "summary": "Deletes a user from the project.\n\nReturns confirmation of project user deletion, or an error if the project is\narchived (archived projects have no users).\n",
+          "responses": [
+            "200",
+            "400"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "project_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "user_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "delete-project-user",
+          "requestBody": null
+        },
+        "POST /threads/{thread_id}/runs/{run_id}/submit_tool_outputs": {
+          "summary": "When a run has the `status: \"requires_action\"` and `required_action.type` is `submit_tool_outputs`, this endpoint can be used to submit the outputs from the tool calls once they're all completed. All outputs must be submitted in a single request.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "run_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "thread_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "submitToolOuputsToRun",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "DELETE /organization/projects/{project_id}/groups/{group_id}": {
+          "summary": "Revokes a group's access to a project.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "group_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "project_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "remove-project-group",
+          "requestBody": null
+        },
+        "GET /vector_stores/{vector_store_id}/file_batches/{batch_id}": {
+          "summary": "Retrieves a vector store file batch.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "batch_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "vector_store_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "getVectorStoreFileBatch",
+          "requestBody": null
+        },
+        "GET /vector_stores/{vector_store_id}/files/{file_id}/content": {
+          "summary": "Retrieve the parsed contents of a vector store file.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "file_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "vector_store_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "retrieveVectorStoreFileContent",
+          "requestBody": null
+        },
+        "DELETE /projects/{project_id}/users/{user_id}/roles/{role_id}": {
+          "summary": "Unassigns a project role from a user within a project.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "project_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "role_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "user_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "unassign-project-user-role",
+          "requestBody": null
+        },
+        "GET /organization/projects/{project_id}/api_keys/{api_key_id}": {
+          "summary": "Retrieves an API key in the project.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "api_key_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "project_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "retrieve-project-api-key",
+          "requestBody": null
+        },
+        "POST /organization/projects/{project_id}/certificates/activate": {
+          "summary": "Activate certificates at the project level.\n\nYou can atomically and idempotently activate up to 10 certificates at a time.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "project_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "activateProjectCertificates",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "DELETE /projects/{project_id}/groups/{group_id}/roles/{role_id}": {
+          "summary": "Unassigns a project role from a group within a project.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "group_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "project_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "role_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "unassign-project-group-role",
+          "requestBody": null
+        },
+        "DELETE /organization/projects/{project_id}/api_keys/{api_key_id}": {
+          "summary": "Deletes an API key from the project.\n\nReturns confirmation of the key deletion, or an error if the key belonged to\na service account.\n",
+          "responses": [
+            "200",
+            "400"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "api_key_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "project_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "delete-project-api-key",
+          "requestBody": null
+        },
+        "GET /evals/{eval_id}/runs/{run_id}/output_items/{output_item_id}": {
+          "summary": "Get an evaluation run output item by ID.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "eval_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "output_item_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "run_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "getEvalRunOutputItem",
+          "requestBody": null
+        },
+        "POST /organization/projects/{project_id}/certificates/deactivate": {
+          "summary": "Deactivate certificates at the project level. You can atomically and \nidempotently deactivate up to 10 certificates at a time.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "project_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "deactivateProjectCertificates",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "GET /vector_stores/{vector_store_id}/file_batches/{batch_id}/files": {
+          "summary": "Returns a list of vector store files in a batch.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "batch_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "vector_store_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "before",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "filter",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "order",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "listFilesInVectorStoreBatch",
+          "requestBody": null
+        },
+        "POST /organization/projects/{project_id}/rate_limits/{rate_limit_id}": {
+          "summary": "Updates a project rate limit.",
+          "responses": [
+            "200",
+            "400"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "project_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "rate_limit_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "update-project-rate-limits",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "POST /vector_stores/{vector_store_id}/file_batches/{batch_id}/cancel": {
+          "summary": "Cancel a vector store file batch. This attempts to cancel the processing of files in this batch as soon as possible.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "batch_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "vector_store_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "cancelVectorStoreFileBatch",
+          "requestBody": null
+        },
+        "GET /fine_tuning/checkpoints/{fine_tuned_model_checkpoint}/permissions": {
+          "summary": "**NOTE:** This endpoint requires an [admin API key](../admin-api-keys).\n\nOrganization owners can use this endpoint to view all permissions for a fine-tuned model checkpoint.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "fine_tuned_model_checkpoint",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "order",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "project_id",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "listFineTuningCheckpointPermissions",
+          "requestBody": null
+        },
+        "POST /fine_tuning/checkpoints/{fine_tuned_model_checkpoint}/permissions": {
+          "summary": "**NOTE:** Calling this endpoint requires an [admin API key](../admin-api-keys).\n\nThis enables organization owners to share fine-tuned models with other projects in their organization.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "fine_tuned_model_checkpoint",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "createFineTuningCheckpointPermission",
+          "requestBody": {
+            "content": [
+              "application/json"
+            ],
+            "required": true
+          }
+        },
+        "GET /organization/projects/{project_id}/service_accounts/{service_account_id}": {
+          "summary": "Retrieves a service account in the project.",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "project_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "service_account_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "retrieve-project-service-account",
+          "requestBody": null
+        },
+        "DELETE /organization/projects/{project_id}/service_accounts/{service_account_id}": {
+          "summary": "Deletes a service account from the project.\n\nReturns confirmation of service account deletion, or an error if the project\nis archived (archived projects have no service accounts).\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "project_id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "service_account_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "delete-project-service-account",
+          "requestBody": null
+        },
+        "DELETE /fine_tuning/checkpoints/{fine_tuned_model_checkpoint}/permissions/{permission_id}": {
+          "summary": "**NOTE:** This endpoint requires an [admin API key](../admin-api-keys).\n\nOrganization owners can use this endpoint to delete a permission for a fine-tuned model checkpoint.\n",
+          "responses": [
+            "200"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "fine_tuned_model_checkpoint",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "path",
+              "name": "permission_id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "deleteFineTuningCheckpointPermission",
+          "requestBody": null
+        }
+      }
+    }
+  }
+}

@@ -2,6 +2,62 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "af709f25-9ed0-403d-a90f-c60e3d1c06b9",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/moonshotai/kimi-k2.7-code",
+      "fromSnapshotId": "a95fbf1f-14a7-4b32-9bd6-d34436133634",
+      "toSnapshotId": "b83e4880-3752-4760-8550-3cc7f23d8be9",
+      "detectedAt": "2026-06-23T19:28:15.273Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.7-code",
+              "cacheReadPer1m"
+            ],
+            "after": 0.15,
+            "before": 0.144
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.7-code",
+              "inputPer1m"
+            ],
+            "after": 0.74,
+            "before": 0.68
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.7-code",
+              "maxOutputTokens"
+            ],
+            "after": 16384,
+            "before": 262144
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.7-code",
+              "outputPer1m"
+            ],
+            "after": 3.5,
+            "before": 3.41
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Price increase and maxOutputTokens reduction silently harm agents."
+    },
+    {
       "id": "888be467-5da4-4a42-bf2a-810046acf7f7",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/minimax/minimax-m2.7",
@@ -1544,32 +1600,6 @@
       "confidence": 0.95,
       "classifiedBy": "llm",
       "notes": "maxOutputTokens reduced from 32768 to 8192, silently truncating agent responses"
-    },
-    {
-      "id": "95816f1a-4b87-4a1b-8ac0-807d536bddca",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/google/gemini-3.1-flash-image-preview",
-      "fromSnapshotId": "9b0c8ef6-eea0-485a-90e2-a3d194a953d9",
-      "toSnapshotId": "cd9e11f0-ceb7-4fa6-8bb2-7f7f45d9f40b",
-      "detectedAt": "2026-06-23T00:47:53.139Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "google/gemini-3.1-flash-image-preview",
-              "maxOutputTokens"
-            ],
-            "after": 32768,
-            "before": 65536
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "Output token limit halved, agents may silently truncate"
     }
   ]
 }

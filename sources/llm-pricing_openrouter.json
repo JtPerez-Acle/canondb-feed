@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-06-23T18:52:36.636Z",
+    "fetchedAt": "2026-06-23T19:28:04.121Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -1704,11 +1704,11 @@
         "moonshotai/kimi-k2.7-code": {
           "name": "MoonshotAI: Kimi K2.7 Code",
           "currency": "USD",
-          "inputPer1m": 0.68,
-          "outputPer1m": 3.41,
+          "inputPer1m": 0.74,
+          "outputPer1m": 3.5,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.144,
-          "maxOutputTokens": 262144
+          "cacheReadPer1m": 0.15,
+          "maxOutputTokens": 16384
         },
         "nousresearch/hermes-4-70b": {
           "name": "Nous: Hermes 4 70B",
