@@ -1,11 +1,11 @@
 {
   "service": "canondb",
-  "updatedAt": "2026-06-23T15:24:07.479Z",
+  "updatedAt": "2026-06-23T15:34:28.212Z",
   "sources": [
     {
       "id": "llm-pricing:openrouter",
       "sourceUrl": "https://openrouter.ai/api/v1/models",
-      "fetchedAt": "2026-06-23T15:23:37.306Z",
+      "fetchedAt": "2026-06-23T15:34:24.896Z",
       "stale": false,
       "recentChanges": 50,
       "file": "sources/llm-pricing_openrouter.json",
@@ -14,7 +14,7 @@
     {
       "id": "mcp-tools:cloudflare-docs",
       "sourceUrl": "https://docs.mcp.cloudflare.com/mcp",
-      "fetchedAt": "2026-06-23T15:24:06.707Z",
+      "fetchedAt": "2026-06-23T15:34:27.596Z",
       "stale": false,
       "recentChanges": 0,
       "file": "sources/mcp-tools_cloudflare-docs.json",
@@ -23,7 +23,7 @@
     {
       "id": "mcp-tools:context7",
       "sourceUrl": "https://mcp.context7.com/mcp",
-      "fetchedAt": "2026-06-23T15:24:05.612Z",
+      "fetchedAt": "2026-06-23T15:34:26.535Z",
       "stale": false,
       "recentChanges": 0,
       "file": "sources/mcp-tools_context7.json",
@@ -32,7 +32,7 @@
     {
       "id": "mcp-tools:deepwiki",
       "sourceUrl": "https://mcp.deepwiki.com/mcp",
-      "fetchedAt": "2026-06-23T15:24:04.747Z",
+      "fetchedAt": "2026-06-23T15:34:25.239Z",
       "stale": false,
       "recentChanges": 0,
       "file": "sources/mcp-tools_deepwiki.json",
@@ -41,7 +41,7 @@
     {
       "id": "mcp-tools:gitmcp",
       "sourceUrl": "https://gitmcp.io/docs",
-      "fetchedAt": "2026-06-23T15:24:05.847Z",
+      "fetchedAt": "2026-06-23T15:34:26.818Z",
       "stale": false,
       "recentChanges": 0,
       "file": "sources/mcp-tools_gitmcp.json",
@@ -50,7 +50,7 @@
     {
       "id": "mcp-tools:grep",
       "sourceUrl": "https://mcp.grep.app",
-      "fetchedAt": "2026-06-23T15:24:07.044Z",
+      "fetchedAt": "2026-06-23T15:34:27.902Z",
       "stale": false,
       "recentChanges": 0,
       "file": "sources/mcp-tools_grep.json",
@@ -59,7 +59,7 @@
     {
       "id": "mcp-tools:huggingface",
       "sourceUrl": "https://huggingface.co/mcp",
-      "fetchedAt": "2026-06-23T15:24:05.700Z",
+      "fetchedAt": "2026-06-23T15:34:26.643Z",
       "stale": false,
       "recentChanges": 0,
       "file": "sources/mcp-tools_huggingface.json",
@@ -68,7 +68,7 @@
     {
       "id": "mcp-tools:microsoft-learn",
       "sourceUrl": "https://learn.microsoft.com/api/mcp",
-      "fetchedAt": "2026-06-23T15:24:06.810Z",
+      "fetchedAt": "2026-06-23T15:34:27.719Z",
       "stale": false,
       "recentChanges": 0,
       "file": "sources/mcp-tools_microsoft-learn.json",
