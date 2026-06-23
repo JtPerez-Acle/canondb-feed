@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-06-23T09:56:32.920Z",
+    "fetchedAt": "2026-06-23T15:23:37.306Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -277,7 +277,7 @@
         "microsoft/phi-4": {
           "name": "Microsoft: Phi 4",
           "currency": "USD",
-          "inputPer1m": 0.065,
+          "inputPer1m": 0.07,
           "outputPer1m": 0.14,
           "contextLength": 16384,
           "maxOutputTokens": 16384
@@ -1602,10 +1602,10 @@
         "thedrummer/rocinante-12b": {
           "name": "TheDrummer: Rocinante 12B",
           "currency": "USD",
-          "inputPer1m": 0.17,
-          "outputPer1m": 0.43,
+          "inputPer1m": 0.25,
+          "outputPer1m": 0.5,
           "contextLength": 32768,
-          "maxOutputTokens": 32768
+          "maxOutputTokens": null
         },
         "undi95/remm-slerp-l2-13b": {
           "name": "ReMM SLERP 13B",
@@ -1862,14 +1862,6 @@
           "cacheReadPer1m": 0.02,
           "maxOutputTokens": 65536
         },
-        "essentialai/rnj-1-instruct": {
-          "name": "EssentialAI: Rnj 1 Instruct",
-          "currency": "USD",
-          "inputPer1m": 0.15,
-          "outputPer1m": 0.15,
-          "contextLength": 32768,
-          "maxOutputTokens": null
-        },
         "google/gemma-4-31b-it:free": {
           "name": "Google: Gemma 4 31B (free)",
           "currency": "USD",
@@ -2082,14 +2074,6 @@
           "outputPer1m": 15,
           "contextLength": 200000,
           "maxOutputTokens": 8000
-        },
-        "prime-intellect/intellect-3": {
-          "name": "Prime Intellect: INTELLECT-3",
-          "currency": "USD",
-          "inputPer1m": 0.2,
-          "outputPer1m": 1.1,
-          "contextLength": 131072,
-          "maxOutputTokens": 131072
         },
         "thedrummer/cydonia-24b-v4.1": {
           "name": "TheDrummer: Cydonia 24B V4.1",
