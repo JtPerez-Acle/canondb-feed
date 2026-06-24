@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-06-24T01:43:58.546Z",
+    "fetchedAt": "2026-06-24T07:43:58.566Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -459,6 +459,15 @@
           "cacheReadPer1m": 0.064,
           "cacheWritePer1m": 0.4,
           "maxOutputTokens": 65536
+        },
+        "sakana/fugu-ultra": {
+          "name": "Sakana: Fugu Ultra",
+          "currency": "USD",
+          "inputPer1m": 5,
+          "outputPer1m": 30,
+          "contextLength": 1000000,
+          "cacheReadPer1m": 0.5,
+          "maxOutputTokens": 128000
         },
         "writer/palmyra-x5": {
           "name": "Writer: Palmyra X5",

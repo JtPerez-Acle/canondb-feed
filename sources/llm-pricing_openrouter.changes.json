@@ -2,6 +2,38 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "5f0c1ccf-8e3e-4cda-9d65-3dd68a32cac8",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/sakana/fugu-ultra",
+      "fromSnapshotId": "77a0a3f0-2ddb-49d0-b693-ad51326a5aab",
+      "toSnapshotId": "817c2cfd-eb8a-4c5f-98c1-bbdd847ea6ea",
+      "detectedAt": "2026-06-24T07:44:06.141Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "models",
+              "sakana/fugu-ultra"
+            ],
+            "after": {
+              "name": "Sakana: Fugu Ultra",
+              "currency": "USD",
+              "inputPer1m": 5,
+              "outputPer1m": 30,
+              "contextLength": 1000000,
+              "cacheReadPer1m": 0.5,
+              "maxOutputTokens": 128000
+            }
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Added a new model entry with no removal or price increase."
+    },
+    {
       "id": "c6634a3e-ba0c-4e58-81f0-c89c59e35f1b",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -1605,32 +1637,6 @@
       "confidence": 0.95,
       "classifiedBy": "llm",
       "notes": "maxOutputTokens reduced from 32768 to 8192, silently truncating agent outputs"
-    },
-    {
-      "id": "538f75c5-4c6e-4b69-b82e-37843bfcc2bd",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/google/gemini-3.1-flash-image-preview",
-      "fromSnapshotId": "558d0d22-6634-4381-9b9e-547a0463200d",
-      "toSnapshotId": "e9b77cb0-663a-477a-b09c-3d0a7cb4c94b",
-      "detectedAt": "2026-06-23T09:56:42.398Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "google/gemini-3.1-flash-image-preview",
-              "maxOutputTokens"
-            ],
-            "after": 32768,
-            "before": 65536
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "maxOutputTokens reduced from 65536 to 32768, which may silently truncate agent outputs"
     }
   ]
 }
