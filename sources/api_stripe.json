@@ -4,13 +4,13 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "api:stripe",
-    "fetchedAt": "2026-06-23T19:43:43.780Z",
+    "fetchedAt": "2026-06-24T01:45:58.092Z",
     "stale": false,
     "verified": true,
     "data": {
       "api": "api:stripe",
       "title": "Stripe API",
-      "version": "2026-05-27.dahlia",
+      "version": "2026-06-24.dahlia",
       "operations": {
         "GET /v1/files": {
           "summary": "List all files",

@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "mcp-tools:huggingface",
-    "fetchedAt": "2026-06-23T19:43:41.442Z",
+    "fetchedAt": "2026-06-24T01:45:55.735Z",
     "stale": false,
     "verified": true,
     "data": {

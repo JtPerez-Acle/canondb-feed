@@ -1,4 +1,29 @@
 {
   "id": "api:stripe",
-  "changes": []
+  "changes": [
+    {
+      "id": "7b9e6777-d816-4378-ac3f-62bc13c5851e",
+      "sourceId": "api:stripe",
+      "entityId": "version",
+      "fromSnapshotId": "f4e96728-b316-44cf-8ad2-feb979e79234",
+      "toSnapshotId": "04193b2e-737d-4a73-af5a-2160a47c40be",
+      "detectedAt": "2026-06-24T01:46:01.203Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "version"
+            ],
+            "after": "2026-06-24.dahlia",
+            "before": "2026-05-27.dahlia"
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.7,
+      "classifiedBy": "llm",
+      "notes": "API version changed, which may alter behavior or semantics for existing callers."
+    }
+  ]
 }
