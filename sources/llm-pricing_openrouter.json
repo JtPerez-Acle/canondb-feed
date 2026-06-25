@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-06-25T07:43:58.302Z",
+    "fetchedAt": "2026-06-25T13:43:58.406Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -30,11 +30,11 @@
         "z-ai/glm-5": {
           "name": "Z.ai: GLM 5",
           "currency": "USD",
-          "inputPer1m": 0.6,
-          "outputPer1m": 1.92,
+          "inputPer1m": 0,
+          "outputPer1m": 0,
           "contextLength": 202752,
-          "cacheReadPer1m": 0.12,
-          "maxOutputTokens": null
+          "cacheReadPer1m": 0,
+          "maxOutputTokens": 128000
         },
         "openai/gpt-4": {
           "name": "OpenAI: GPT-4",
@@ -74,29 +74,28 @@
         "z-ai/glm-4.7": {
           "name": "Z.ai: GLM 4.7",
           "currency": "USD",
-          "inputPer1m": 0.4,
-          "outputPer1m": 1.75,
-          "contextLength": 202752,
-          "cacheReadPer1m": 0.08,
-          "maxOutputTokens": 131072
+          "inputPer1m": 0,
+          "outputPer1m": 0,
+          "contextLength": 200000,
+          "maxOutputTokens": 128000
         },
         "z-ai/glm-5.1": {
           "name": "Z.ai: GLM 5.1",
           "currency": "USD",
-          "inputPer1m": 0.98,
-          "outputPer1m": 3.08,
+          "inputPer1m": 0,
+          "outputPer1m": 0,
           "contextLength": 202752,
-          "cacheReadPer1m": 0.182,
-          "maxOutputTokens": null
+          "cacheReadPer1m": 0,
+          "maxOutputTokens": 128000
         },
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.95,
-          "outputPer1m": 3,
+          "inputPer1m": 0,
+          "outputPer1m": 0,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.18,
-          "maxOutputTokens": 32768
+          "cacheReadPer1m": 0,
+          "maxOutputTokens": 128000
         },
         "mancer/weaver": {
           "name": "Mancer: Weaver (alpha)",
@@ -890,11 +889,11 @@
         "minimax/minimax-m2.5": {
           "name": "MiniMax: MiniMax M2.5",
           "currency": "USD",
-          "inputPer1m": 0.15,
-          "outputPer1m": 0.9,
+          "inputPer1m": 0,
+          "outputPer1m": 0,
           "contextLength": 204800,
-          "cacheReadPer1m": 0.05,
-          "maxOutputTokens": 196608
+          "cacheReadPer1m": 0,
+          "maxOutputTokens": 128000
         },
         "minimax/minimax-m2.7": {
           "name": "MiniMax: MiniMax M2.7",
@@ -907,19 +906,20 @@
         "moonshotai/kimi-k2.5": {
           "name": "MoonshotAI: Kimi K2.5",
           "currency": "USD",
-          "inputPer1m": 0.375,
-          "outputPer1m": 2.025,
+          "inputPer1m": 0,
+          "outputPer1m": 0,
           "contextLength": 262144,
-          "maxOutputTokens": null
+          "cacheReadPer1m": 0,
+          "maxOutputTokens": 256000
         },
         "moonshotai/kimi-k2.6": {
           "name": "MoonshotAI: Kimi K2.6",
           "currency": "USD",
-          "inputPer1m": 0.66,
-          "outputPer1m": 3.41,
+          "inputPer1m": 0,
+          "outputPer1m": 0,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.144,
-          "maxOutputTokens": 262144
+          "cacheReadPer1m": 0,
+          "maxOutputTokens": 256000
         },
         "morph/morph-v3-large": {
           "name": "Morph: Morph V3 Large",
@@ -1109,11 +1109,11 @@
         "qwen/qwen3-coder-next": {
           "name": "Qwen: Qwen3 Coder Next",
           "currency": "USD",
-          "inputPer1m": 0.11,
-          "outputPer1m": 0.8,
+          "inputPer1m": 0,
+          "outputPer1m": 0,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.07,
-          "maxOutputTokens": 262144
+          "cacheReadPer1m": 0,
+          "maxOutputTokens": 64000
         },
         "qwen/qwen3-coder-plus": {
           "name": "Qwen: Qwen3 Coder Plus",
@@ -1153,17 +1153,18 @@
         "deepseek/deepseek-chat": {
           "name": "DeepSeek: DeepSeek V3",
           "currency": "USD",
-          "inputPer1m": 0.2002,
-          "outputPer1m": 0.8001,
+          "inputPer1m": 0,
+          "outputPer1m": 0,
           "contextLength": 131072,
           "maxOutputTokens": 16000
         },
         "deepseek/deepseek-v3.2": {
           "name": "DeepSeek: DeepSeek V3.2",
           "currency": "USD",
-          "inputPer1m": 0.2288,
-          "outputPer1m": 0.3432,
+          "inputPer1m": 0,
+          "outputPer1m": 0,
           "contextLength": 131072,
+          "cacheReadPer1m": 0,
           "maxOutputTokens": 64000
         },
         "google/gemma-3n-e4b-it": {
@@ -1263,10 +1264,11 @@
         "qwen/qwen3.5-397b-a17b": {
           "name": "Qwen: Qwen3.5 397B A17B",
           "currency": "USD",
-          "inputPer1m": 0.385,
-          "outputPer1m": 2.45,
+          "inputPer1m": 0,
+          "outputPer1m": 0,
           "contextLength": 256000,
-          "maxOutputTokens": null
+          "cacheReadPer1m": 0,
+          "maxOutputTokens": 64000
         },
         "stepfun/step-3.5-flash": {
           "name": "StepFun: Step 3.5 Flash",
@@ -1445,11 +1447,11 @@
         "~moonshotai/kimi-latest": {
           "name": "MoonshotAI Kimi Latest",
           "currency": "USD",
-          "inputPer1m": 0.66,
-          "outputPer1m": 3.41,
+          "inputPer1m": 0,
+          "outputPer1m": 0,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.144,
-          "maxOutputTokens": 262144
+          "cacheReadPer1m": 0,
+          "maxOutputTokens": 256000
         },
         "~openai/gpt-mini-latest": {
           "name": "OpenAI GPT Mini Latest",
@@ -1508,10 +1510,10 @@
         "deepseek/deepseek-v4-pro": {
           "name": "DeepSeek: DeepSeek V4 Pro",
           "currency": "USD",
-          "inputPer1m": 0.435,
-          "outputPer1m": 0.87,
+          "inputPer1m": 0,
+          "outputPer1m": 0,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.003625,
+          "cacheReadPer1m": 0,
           "maxOutputTokens": 384000
         },
         "meta-llama/llama-4-scout": {
@@ -1686,11 +1688,10 @@
         "deepseek/deepseek-r1-0528": {
           "name": "DeepSeek: R1 0528",
           "currency": "USD",
-          "inputPer1m": 0.5,
-          "outputPer1m": 2.15,
+          "inputPer1m": 0,
+          "outputPer1m": 0,
           "contextLength": 163840,
-          "cacheReadPer1m": 0.35,
-          "maxOutputTokens": 32768
+          "maxOutputTokens": 32000
         },
         "google/gemini-3-pro-image": {
           "name": "Google: Nano Banana Pro (Gemini 3 Pro Image)",
@@ -1864,11 +1865,11 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash",
           "currency": "USD",
-          "inputPer1m": 0.089,
-          "outputPer1m": 0.224,
+          "inputPer1m": 0,
+          "outputPer1m": 0,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.0266,
-          "maxOutputTokens": null
+          "cacheReadPer1m": 0,
+          "maxOutputTokens": 384000
         },
         "google/gemma-4-31b-it:free": {
           "name": "Google: Gemma 4 31B (free)",
@@ -1915,10 +1916,10 @@
         "kwaipilot/kat-coder-pro-v2": {
           "name": "Kwaipilot: KAT-Coder-Pro V2",
           "currency": "USD",
-          "inputPer1m": 0.3,
-          "outputPer1m": 1.2,
+          "inputPer1m": 0,
+          "outputPer1m": 0,
           "contextLength": 256000,
-          "cacheReadPer1m": 0.06,
+          "cacheReadPer1m": 0,
           "maxOutputTokens": 80000
         },
         "microsoft/wizardlm-2-8x22b": {
@@ -2494,11 +2495,10 @@
         "deepseek/deepseek-v3.1-terminus": {
           "name": "DeepSeek: DeepSeek V3.1 Terminus",
           "currency": "USD",
-          "inputPer1m": 0.27,
-          "outputPer1m": 0.95,
-          "contextLength": 163840,
-          "cacheReadPer1m": 0.13,
-          "maxOutputTokens": 32768
+          "inputPer1m": 0,
+          "outputPer1m": 0,
+          "contextLength": 131072,
+          "maxOutputTokens": 32000
         },
         "ibm-granite/granite-4.0-h-micro": {
           "name": "IBM: Granite 4.0 Micro",
@@ -2579,8 +2579,8 @@
         "qwen/qwen3-30b-a3b-instruct-2507": {
           "name": "Qwen: Qwen3 30B A3B Instruct 2507",
           "currency": "USD",
-          "inputPer1m": 0.04815,
-          "outputPer1m": 0.19305,
+          "inputPer1m": 0,
+          "outputPer1m": 0,
           "contextLength": 131072,
           "maxOutputTokens": 32000
         },

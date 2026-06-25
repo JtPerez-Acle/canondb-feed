@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "api:digitalocean",
-    "fetchedAt": "2026-06-25T07:44:04.713Z",
+    "fetchedAt": "2026-06-25T13:48:00.467Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -2420,6 +2420,20 @@
           "operationId": null,
           "requestBody": null
         },
+        "GET /v2/nfs/access_points/{access_point_id}": {
+          "summary": null,
+          "responses": [],
+          "parameters": [],
+          "operationId": null,
+          "requestBody": null
+        },
+        "GET /v2/nfs/shares/{share_id}/access_points": {
+          "summary": null,
+          "responses": [],
+          "parameters": [],
+          "operationId": null,
+          "requestBody": null
+        },
         "GET /v2/partner_network_connect/attachments": {
           "summary": null,
           "responses": [],
@@ -2532,6 +2546,13 @@
           "operationId": null,
           "requestBody": null
         },
+        "POST /v2/nfs/shares/{share_id}/access_points": {
+          "summary": null,
+          "responses": [],
+          "parameters": [],
+          "operationId": null,
+          "requestBody": null
+        },
         "POST /v2/partner_network_connect/attachments": {
           "summary": null,
           "responses": [],
@@ -2624,6 +2645,13 @@
           "requestBody": null
         },
         "DELETE /v2/functions/namespaces/{namespace_id}": {
+          "summary": null,
+          "responses": [],
+          "parameters": [],
+          "operationId": null,
+          "requestBody": null
+        },
+        "DELETE /v2/nfs/access_points/{access_point_id}": {
           "summary": null,
           "responses": [],
           "parameters": [],

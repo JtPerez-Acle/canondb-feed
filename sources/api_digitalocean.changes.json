@@ -1,4 +1,125 @@
 {
   "id": "api:digitalocean",
-  "changes": []
+  "changes": [
+    {
+      "id": "fe22ca9e-78d7-459b-b67d-1af952fb10fb",
+      "sourceId": "api:digitalocean",
+      "entityId": "operations/POST /v2/nfs/shares/{share_id}/access_points",
+      "fromSnapshotId": "dabe06f6-4769-410b-9b54-529a88d7148f",
+      "toSnapshotId": "17d5c028-df17-4459-b0fc-7c512b0d30cd",
+      "detectedAt": "2026-06-25T13:48:37.743Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "operations",
+              "POST /v2/nfs/shares/{share_id}/access_points"
+            ],
+            "after": {
+              "summary": null,
+              "responses": [],
+              "parameters": [],
+              "operationId": null,
+              "requestBody": null
+            }
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Added new operation"
+    },
+    {
+      "id": "0968da37-b451-4581-9607-deac8615720a",
+      "sourceId": "api:digitalocean",
+      "entityId": "operations/GET /v2/nfs/shares/{share_id}/access_points",
+      "fromSnapshotId": "dabe06f6-4769-410b-9b54-529a88d7148f",
+      "toSnapshotId": "17d5c028-df17-4459-b0fc-7c512b0d30cd",
+      "detectedAt": "2026-06-25T13:48:35.771Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "operations",
+              "GET /v2/nfs/shares/{share_id}/access_points"
+            ],
+            "after": {
+              "summary": null,
+              "responses": [],
+              "parameters": [],
+              "operationId": null,
+              "requestBody": null
+            }
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Added operation does not break existing callers."
+    },
+    {
+      "id": "04cb1958-af02-40d2-b1e2-d73eac461960",
+      "sourceId": "api:digitalocean",
+      "entityId": "operations/GET /v2/nfs/access_points/{access_point_id}",
+      "fromSnapshotId": "dabe06f6-4769-410b-9b54-529a88d7148f",
+      "toSnapshotId": "17d5c028-df17-4459-b0fc-7c512b0d30cd",
+      "detectedAt": "2026-06-25T13:48:29.872Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "operations",
+              "GET /v2/nfs/access_points/{access_point_id}"
+            ],
+            "after": {
+              "summary": null,
+              "responses": [],
+              "parameters": [],
+              "operationId": null,
+              "requestBody": null
+            }
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "New operation added"
+    },
+    {
+      "id": "f2d56320-c38c-4a47-9cce-5b4237f8247f",
+      "sourceId": "api:digitalocean",
+      "entityId": "operations/DELETE /v2/nfs/access_points/{access_point_id}",
+      "fromSnapshotId": "dabe06f6-4769-410b-9b54-529a88d7148f",
+      "toSnapshotId": "17d5c028-df17-4459-b0fc-7c512b0d30cd",
+      "detectedAt": "2026-06-25T13:48:13.852Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "operations",
+              "DELETE /v2/nfs/access_points/{access_point_id}"
+            ],
+            "after": {
+              "summary": null,
+              "responses": [],
+              "parameters": [],
+              "operationId": null,
+              "requestBody": null
+            }
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "New DELETE operation does not break existing callers, but the guidance says ADDED operations are safe."
+    }
+  ]
 }
