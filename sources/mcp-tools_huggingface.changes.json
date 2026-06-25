@@ -1,4 +1,31 @@
 {
   "id": "mcp-tools:huggingface",
-  "changes": []
+  "changes": [
+    {
+      "id": "c0f3264d-d587-4cdf-9a95-b6b3b8812739",
+      "sourceId": "mcp-tools:huggingface",
+      "entityId": "tools/hf_doc_search",
+      "fromSnapshotId": "50bfa80f-a6d7-4a73-b8e9-7a551e9f1649",
+      "toSnapshotId": "c900c831-20e0-4a6a-89fb-7e11f47a8d6e",
+      "detectedAt": "2026-06-25T19:47:23.024Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "hf_doc_search",
+              "description"
+            ],
+            "after": "Search and Discover Hugging Face Product and Library documentation. Send an empty query to discover structure and navigation instructions. Knowledge up-to-date as at 25 June 2026. Combine with the Product filter to focus results.",
+            "before": "Search and Discover Hugging Face Product and Library documentation. Send an empty query to discover structure and navigation instructions. Knowledge up-to-date as at 19 June 2026. Combine with the Product filter to focus results."
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Only the date stamp changed from 19 June 2026 to 25 June 2026 in the tool's description; no behavior or schema changes."
+    }
+  ]
 }
