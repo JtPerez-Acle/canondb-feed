@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-06-24T19:43:58.847Z",
+    "fetchedAt": "2026-06-25T01:43:58.901Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -1864,11 +1864,11 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash",
           "currency": "USD",
-          "inputPer1m": 0.09,
-          "outputPer1m": 0.18,
+          "inputPer1m": 0.089,
+          "outputPer1m": 0.224,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.02,
-          "maxOutputTokens": 65536
+          "cacheReadPer1m": 0.0266,
+          "maxOutputTokens": null
         },
         "google/gemma-4-31b-it:free": {
           "name": "Google: Gemma 4 31B (free)",

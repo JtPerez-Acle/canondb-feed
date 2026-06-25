@@ -2,6 +2,62 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "c3ca3e3b-9d6a-4151-99a7-c0dba25fbd53",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/deepseek/deepseek-v4-flash",
+      "fromSnapshotId": "6da1d344-e7c4-42d9-af37-8304c67feca9",
+      "toSnapshotId": "23974b81-578b-4d4e-8a84-544fee7bd9d1",
+      "detectedAt": "2026-06-25T01:44:18.447Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "deepseek/deepseek-v4-flash",
+              "cacheReadPer1m"
+            ],
+            "after": 0.0266,
+            "before": 0.02
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "deepseek/deepseek-v4-flash",
+              "inputPer1m"
+            ],
+            "after": 0.089,
+            "before": 0.09
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "deepseek/deepseek-v4-flash",
+              "maxOutputTokens"
+            ],
+            "after": null,
+            "before": 65536
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "deepseek/deepseek-v4-flash",
+              "outputPer1m"
+            ],
+            "after": 0.224,
+            "before": 0.18
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.7,
+      "classifiedBy": "llm",
+      "notes": "Cache read price increased and output price increased, while input price slightly decreased and max output tokens removed; overall the model's cost structure changed, which can silently mislead agents."
+    },
+    {
       "id": "947064d2-22d3-4ad2-8b9f-1e5f909440d1",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.1",
@@ -1579,32 +1635,6 @@
       "confidence": 1,
       "classifiedBy": "llm",
       "notes": "cacheReadPer1m field is removed, breaking any caller reading it."
-    },
-    {
-      "id": "0b00026a-5ed1-4662-82e0-5cabf0a24494",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/gpt-5.2-chat",
-      "fromSnapshotId": "558d0d22-6634-4381-9b9e-547a0463200d",
-      "toSnapshotId": "e9b77cb0-663a-477a-b09c-3d0a7cb4c94b",
-      "detectedAt": "2026-06-23T09:57:43.471Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "openai/gpt-5.2-chat",
-              "maxOutputTokens"
-            ],
-            "after": 16384,
-            "before": 32000
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "max output tokens reduced from 32000 to 16384"
     }
   ]
 }
