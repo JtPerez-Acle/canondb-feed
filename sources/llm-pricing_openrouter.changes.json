@@ -2,6 +2,52 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "bb804285-5549-47dc-b3be-54fd99d1b1d2",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/nvidia/nemotron-3-super-120b-a12b",
+      "fromSnapshotId": "1485559c-ae59-4320-a49f-1bfae7bf3fd6",
+      "toSnapshotId": "3a324b9d-aedf-45bd-9bdb-5409c38e1525",
+      "detectedAt": "2026-06-26T01:44:10.320Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "nvidia/nemotron-3-super-120b-a12b",
+              "inputPer1m"
+            ],
+            "after": 0.085,
+            "before": 0.09
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "nvidia/nemotron-3-super-120b-a12b",
+              "maxOutputTokens"
+            ],
+            "after": 16384,
+            "before": null
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "nvidia/nemotron-3-super-120b-a12b",
+              "outputPer1m"
+            ],
+            "after": 0.4,
+            "before": 0.45
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.7,
+      "classifiedBy": "llm",
+      "notes": "Added maxOutputTokens limit (16384) where previously unlimited; price decreases are safe."
+    },
+    {
       "id": "0c3e94a8-96b2-4610-9ec0-148a20b00064",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/~moonshotai/kimi-latest",
@@ -2337,38 +2383,6 @@
       "confidence": 0.9,
       "classifiedBy": "llm",
       "notes": "maxOutputTokens reduced from 32768 to 8192"
-    },
-    {
-      "id": "5f0c1ccf-8e3e-4cda-9d65-3dd68a32cac8",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/sakana/fugu-ultra",
-      "fromSnapshotId": "77a0a3f0-2ddb-49d0-b693-ad51326a5aab",
-      "toSnapshotId": "817c2cfd-eb8a-4c5f-98c1-bbdd847ea6ea",
-      "detectedAt": "2026-06-24T07:44:06.141Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "sakana/fugu-ultra"
-            ],
-            "after": {
-              "name": "Sakana: Fugu Ultra",
-              "currency": "USD",
-              "inputPer1m": 5,
-              "outputPer1m": 30,
-              "contextLength": 1000000,
-              "cacheReadPer1m": 0.5,
-              "maxOutputTokens": 128000
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Added a new model entry with no removal or price increase."
     }
   ]
 }

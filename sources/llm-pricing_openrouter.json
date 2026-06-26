@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-06-25T19:43:59.201Z",
+    "fetchedAt": "2026-06-26T01:43:59.325Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -2670,10 +2670,10 @@
         "nvidia/nemotron-3-super-120b-a12b": {
           "name": "NVIDIA: Nemotron 3 Super",
           "currency": "USD",
-          "inputPer1m": 0.09,
-          "outputPer1m": 0.45,
+          "inputPer1m": 0.085,
+          "outputPer1m": 0.4,
           "contextLength": 1000000,
-          "maxOutputTokens": null
+          "maxOutputTokens": 16384
         },
         "nvidia/nemotron-3-ultra-550b-a55b": {
           "name": "NVIDIA: Nemotron 3 Ultra",
