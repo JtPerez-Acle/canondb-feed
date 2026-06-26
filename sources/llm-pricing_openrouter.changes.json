@@ -2,6 +2,32 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "411b3b80-a356-4c6f-a71d-bf5db57706ea",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3.6-27b",
+      "fromSnapshotId": "4a7695ba-7783-42fe-a49b-ce96dae5d3d1",
+      "toSnapshotId": "a39c5044-de4f-45b8-881d-f64f216d021c",
+      "detectedAt": "2026-06-26T19:44:03.308Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.6-27b",
+              "outputPer1m"
+            ],
+            "after": 2.65,
+            "before": 3.17
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "price decreased"
+    },
+    {
       "id": "70df2fff-f875-4fe2-90ac-8143af24b8a3",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/deepseek/deepseek-v3.2",
@@ -2356,32 +2382,6 @@
       "confidence": 1,
       "classifiedBy": "llm",
       "notes": "REMOVED field for cacheReadPer1m of models.moonshotai/kimi-k2-thinking, breaks strict consumers referencing it"
-    },
-    {
-      "id": "db86d638-5965-4b90-b1c7-80dde87341d6",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/google/gemini-3.1-flash-image",
-      "fromSnapshotId": "817c2cfd-eb8a-4c5f-98c1-bbdd847ea6ea",
-      "toSnapshotId": "ad098290-dc0b-49d8-867a-32af0d348d25",
-      "detectedAt": "2026-06-24T13:44:04.076Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "google/gemini-3.1-flash-image",
-              "maxOutputTokens"
-            ],
-            "after": 65536,
-            "before": 32768
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "maxOutputTokens increased, which is a capacity expansion, not a reduction; agents benefit from larger output, no silent misdirection."
     }
   ]
 }
