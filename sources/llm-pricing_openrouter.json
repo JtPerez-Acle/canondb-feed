@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-06-26T07:43:58.688Z",
+    "fetchedAt": "2026-06-26T13:43:59.466Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -1163,6 +1163,7 @@
           "inputPer1m": 0.2288,
           "outputPer1m": 0.3432,
           "contextLength": 131072,
+          "cacheReadPer1m": 0.02288,
           "maxOutputTokens": 64000
         },
         "google/gemma-3n-e4b-it": {
