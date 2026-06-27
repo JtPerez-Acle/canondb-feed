@@ -2,6 +2,42 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "30cfddfd-b674-4a6c-9625-bf1eed209874",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3.6-27b",
+      "fromSnapshotId": "2d4c8e07-4f78-4080-b746-12c78bce2301",
+      "toSnapshotId": "bba6ba04-957c-4100-935a-adf6cb02f97e",
+      "detectedAt": "2026-06-27T19:44:03.990Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.6-27b",
+              "inputPer1m"
+            ],
+            "after": 0.2596,
+            "before": 0.2885
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.6-27b",
+              "outputPer1m"
+            ],
+            "after": 2.385,
+            "before": 2.65
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Price decreased for both input and output."
+    },
+    {
       "id": "411b3b80-a356-4c6f-a71d-bf5db57706ea",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/qwen/qwen3.6-27b",
@@ -2357,31 +2393,6 @@
       "confidence": 1,
       "classifiedBy": "llm",
       "notes": "REMOVED cacheReadPer1m field; strict consumers reading that key break."
-    },
-    {
-      "id": "63583775-4285-443d-b8fa-95208b2eb080",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/moonshotai/kimi-k2-thinking",
-      "fromSnapshotId": "817c2cfd-eb8a-4c5f-98c1-bbdd847ea6ea",
-      "toSnapshotId": "ad098290-dc0b-49d8-867a-32af0d348d25",
-      "detectedAt": "2026-06-24T13:44:07.768Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "removed",
-            "path": [
-              "models",
-              "moonshotai/kimi-k2-thinking",
-              "cacheReadPer1m"
-            ],
-            "before": 0.6
-          }
-        ]
-      },
-      "severity": "breaking_strict",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "REMOVED field for cacheReadPer1m of models.moonshotai/kimi-k2-thinking, breaks strict consumers referencing it"
     }
   ]
 }
