@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-06-28T13:43:59.588Z",
+    "fetchedAt": "2026-06-28T19:44:00.466Z",
     "stale": false,
     "verified": true,
     "data": {
