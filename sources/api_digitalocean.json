@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "api:digitalocean",
-    "fetchedAt": "2026-06-29T07:44:16.133Z",
+    "fetchedAt": "2026-06-29T13:44:25.829Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -3253,6 +3253,13 @@
           "operationId": null,
           "requestBody": null
         },
+        "GET /v2/databases/{database_cluster_uuid}/do_settings": {
+          "summary": null,
+          "responses": [],
+          "parameters": [],
+          "operationId": null,
+          "requestBody": null
+        },
         "GET /v2/dedicated-inferences/{dedicated_inference_id}": {
           "summary": null,
           "responses": [],
@@ -3303,6 +3310,13 @@
           "requestBody": null
         },
         "POST /v2/kubernetes/clusters/{cluster_id}/clusterlint": {
+          "summary": null,
+          "responses": [],
+          "parameters": [],
+          "operationId": null,
+          "requestBody": null
+        },
+        "PUT /v2/databases/{database_cluster_uuid}/do_settings": {
           "summary": null,
           "responses": [],
           "parameters": [],

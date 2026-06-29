@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-06-29T07:44:00.591Z",
+    "fetchedAt": "2026-06-29T13:44:00.614Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -551,7 +551,7 @@
           "inputPer1m": 0.57,
           "outputPer1m": 2.3,
           "contextLength": 131072,
-          "maxOutputTokens": 32768
+          "maxOutputTokens": 100352
         },
         "nex-agi/nex-n2-pro": {
           "name": "Nex AGI: Nex-N2-Pro",
@@ -1271,11 +1271,10 @@
         "stepfun/step-3.5-flash": {
           "name": "StepFun: Step 3.5 Flash",
           "currency": "USD",
-          "inputPer1m": 0.09,
+          "inputPer1m": 0.1,
           "outputPer1m": 0.3,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.02,
-          "maxOutputTokens": 16384
+          "maxOutputTokens": 65536
         },
         "stepfun/step-3.7-flash": {
           "name": "StepFun: Step 3.7 Flash",
@@ -1382,7 +1381,7 @@
           "inputPer1m": 0.6,
           "outputPer1m": 2.5,
           "contextLength": 262144,
-          "maxOutputTokens": 262144
+          "maxOutputTokens": 100352
         },
         "openai/gpt-5-image-mini": {
           "name": "OpenAI: GPT-5 Image Mini",
@@ -2366,16 +2365,6 @@
           "outputPer1m": 1.6,
           "contextLength": 32768,
           "maxOutputTokens": 32768
-        },
-        "anthropic/claude-opus-4.6-fast": {
-          "name": "Anthropic: Claude Opus 4.6 (Fast)",
-          "currency": "USD",
-          "inputPer1m": 30,
-          "outputPer1m": 150,
-          "contextLength": 1000000,
-          "cacheReadPer1m": 3,
-          "cacheWritePer1m": 37.5,
-          "maxOutputTokens": 128000
         },
         "anthropic/claude-opus-4.7-fast": {
           "name": "Anthropic: Claude Opus 4.7 (Fast)",

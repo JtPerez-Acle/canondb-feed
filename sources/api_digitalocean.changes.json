@@ -2,6 +2,66 @@
   "id": "api:digitalocean",
   "changes": [
     {
+      "id": "83212c2b-9959-4a88-8831-b1fc2759f5ea",
+      "sourceId": "api:digitalocean",
+      "entityId": "operations/PUT /v2/databases/{database_cluster_uuid}/do_settings",
+      "fromSnapshotId": "99dfc7fc-53c7-4eb6-9017-18439ff30fbc",
+      "toSnapshotId": "c86b860f-e1e8-4ec6-8bc6-f4a38141b332",
+      "detectedAt": "2026-06-29T13:44:35.528Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "operations",
+              "PUT /v2/databases/{database_cluster_uuid}/do_settings"
+            ],
+            "after": {
+              "summary": null,
+              "responses": [],
+              "parameters": [],
+              "operationId": null,
+              "requestBody": null
+            }
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Added a new PUT operation, which does not break existing consumers."
+    },
+    {
+      "id": "eaee92f0-d20c-4ce9-8357-6987b9c70fba",
+      "sourceId": "api:digitalocean",
+      "entityId": "operations/GET /v2/databases/{database_cluster_uuid}/do_settings",
+      "fromSnapshotId": "99dfc7fc-53c7-4eb6-9017-18439ff30fbc",
+      "toSnapshotId": "c86b860f-e1e8-4ec6-8bc6-f4a38141b332",
+      "detectedAt": "2026-06-29T13:44:27.991Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "operations",
+              "GET /v2/databases/{database_cluster_uuid}/do_settings"
+            ],
+            "after": {
+              "summary": null,
+              "responses": [],
+              "parameters": [],
+              "operationId": null,
+              "requestBody": null
+            }
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Added new GET operation; existing consumers unaffected."
+    },
+    {
       "id": "fe22ca9e-78d7-459b-b67d-1af952fb10fb",
       "sourceId": "api:digitalocean",
       "entityId": "operations/POST /v2/nfs/shares/{share_id}/access_points",
