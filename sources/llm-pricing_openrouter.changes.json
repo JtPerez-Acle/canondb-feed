@@ -2,6 +2,42 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "04cb549c-1f7b-43f7-8f5b-b38cce164e77",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "645d2610-813a-4629-bf98-9ad1482f7121",
+      "toSnapshotId": "a1c95749-d145-4a02-bbe2-ab1e59f98533",
+      "detectedAt": "2026-06-29T19:44:08.170Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.94,
+            "before": 0.95
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "maxOutputTokens"
+            ],
+            "after": null,
+            "before": 32768
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "price decrease and output limit removal (favorable)"
+    },
+    {
       "id": "13143711-4031-4890-a827-3d40114325d4",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/stepfun/step-3.5-flash",
@@ -2396,42 +2432,6 @@
       "confidence": 0.7,
       "classifiedBy": "llm",
       "notes": "Cache read price increased and output price increased, while input price slightly decreased and max output tokens removed; overall the model's cost structure changed, which can silently mislead agents."
-    },
-    {
-      "id": "947064d2-22d3-4ad2-8b9f-1e5f909440d1",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/z-ai/glm-5.1",
-      "fromSnapshotId": "ad098290-dc0b-49d8-867a-32af0d348d25",
-      "toSnapshotId": "6da1d344-e7c4-42d9-af37-8304c67feca9",
-      "detectedAt": "2026-06-24T19:44:28.066Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.1",
-              "cacheReadPer1m"
-            ],
-            "after": 0.182,
-            "before": 0.49
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.1",
-              "maxOutputTokens"
-            ],
-            "after": null,
-            "before": 65535
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "Price decrease and removal of output token limit are favorable changes."
     }
   ]
 }
