@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-06-29T01:44:00.435Z",
+    "fetchedAt": "2026-06-29T07:44:00.591Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -914,10 +914,10 @@
         "moonshotai/kimi-k2.6": {
           "name": "MoonshotAI: Kimi K2.6",
           "currency": "USD",
-          "inputPer1m": 0.66,
-          "outputPer1m": 3.41,
+          "inputPer1m": 0.55,
+          "outputPer1m": 3.2,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.144,
+          "cacheReadPer1m": 0.11,
           "maxOutputTokens": 262144
         },
         "morph/morph-v3-large": {
@@ -1445,10 +1445,10 @@
         "~moonshotai/kimi-latest": {
           "name": "MoonshotAI Kimi Latest",
           "currency": "USD",
-          "inputPer1m": 0.66,
-          "outputPer1m": 3.41,
+          "inputPer1m": 0.55,
+          "outputPer1m": 3.2,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.144,
+          "cacheReadPer1m": 0.11,
           "maxOutputTokens": 262144
         },
         "~openai/gpt-mini-latest": {
