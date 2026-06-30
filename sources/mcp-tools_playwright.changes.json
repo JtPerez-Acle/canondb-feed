@@ -1,4 +1,51 @@
 {
   "id": "mcp-tools:playwright",
-  "changes": []
+  "changes": [
+    {
+      "id": "4ebf1925-36fa-43dd-be0e-f3e39fe5dc3e",
+      "sourceId": "mcp-tools:playwright",
+      "entityId": "tools/browser_take_screenshot",
+      "fromSnapshotId": "ab72b868-12d4-4684-861e-07eaa8015c28",
+      "toSnapshotId": "c4d8b4b9-4d67-4261-b064-5df64717f8f6",
+      "detectedAt": "2026-06-30T00:30:25.904Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "tools",
+              "browser_take_screenshot",
+              "inputSchema",
+              "properties",
+              "scale"
+            ],
+            "after": {
+              "enum": [
+                "css",
+                "device"
+              ],
+              "type": "string",
+              "default": "css",
+              "description": "Image resolution scale. \"css\" produces a screenshot sized in CSS pixels (smaller, consistent across devices). \"device\" produces a high-resolution screenshot using device pixels (larger, accounts for the device pixel ratio). Default is css."
+            }
+          },
+          {
+            "kind": "added",
+            "path": [
+              "tools",
+              "browser_take_screenshot",
+              "inputSchema",
+              "required",
+              "1"
+            ],
+            "after": "scale"
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.85,
+      "classifiedBy": "llm",
+      "notes": "added 'scale' as a required property, existing callers will be silently misled"
+    }
+  ]
 }

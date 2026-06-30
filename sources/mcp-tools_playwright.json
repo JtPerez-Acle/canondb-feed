@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "mcp-tools:playwright",
-    "fetchedAt": "2026-06-29T13:23:42.538Z",
+    "fetchedAt": "2026-06-30T00:30:16.768Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -542,7 +542,8 @@
             "type": "object",
             "$schema": "https://json-schema.org/draft/2020-12/schema",
             "required": [
-              "type"
+              "type",
+              "scale"
             ],
             "properties": {
               "type": {
@@ -553,6 +554,15 @@
                 "type": "string",
                 "default": "png",
                 "description": "Image format for the screenshot. Default is png."
+              },
+              "scale": {
+                "enum": [
+                  "css",
+                  "device"
+                ],
+                "type": "string",
+                "default": "css",
+                "description": "Image resolution scale. \"css\" produces a screenshot sized in CSS pixels (smaller, consistent across devices). \"device\" produces a high-resolution screenshot using device pixels (larger, accounts for the device pixel ratio). Default is css."
               },
               "target": {
                 "type": "string",

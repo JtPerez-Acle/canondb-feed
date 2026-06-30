@@ -4,7 +4,7 @@ The canonical truth layer for the APIs & tools AI agents call: the **current
 schema** and **classified breaking-changes** (breaking for strict consumers,
 breaking for agents, or safe) for a curated set of sources.
 
-This repo is auto-generated. Last updated: **2026-06-29T19:44:13.426Z**.
+This repo is auto-generated. Last updated: **2026-06-30T01:44:14.199Z**.
 
 - Live API: `https://canondb.dev`
 - Each `current` carries `fetched_at` + a `stale` flag — we never serve stale as current.
@@ -28,7 +28,7 @@ This repo is auto-generated. Last updated: **2026-06-29T19:44:13.426Z**.
 | `mcp-tools:huggingface` | [current](sources/mcp-tools_huggingface.json) · [changes](sources/mcp-tools_huggingface.changes.json) | 1 | ok |
 | `mcp-tools:memory` | [current](sources/mcp-tools_memory.json) · [changes](sources/mcp-tools_memory.changes.json) | 0 | ok |
 | `mcp-tools:microsoft-learn` | [current](sources/mcp-tools_microsoft-learn.json) · [changes](sources/mcp-tools_microsoft-learn.changes.json) | 0 | ok |
-| `mcp-tools:playwright` | [current](sources/mcp-tools_playwright.json) · [changes](sources/mcp-tools_playwright.changes.json) | 0 | ok |
+| `mcp-tools:playwright` | [current](sources/mcp-tools_playwright.json) · [changes](sources/mcp-tools_playwright.changes.json) | 1 | ok |
 | `mcp-tools:sequential-thinking` | [current](sources/mcp-tools_sequential-thinking.json) · [changes](sources/mcp-tools_sequential-thinking.changes.json) | 0 | ok |
 | `mcp-tools:time` | [current](sources/mcp-tools_time.json) · [changes](sources/mcp-tools_time.changes.json) | 0 | ok |
 

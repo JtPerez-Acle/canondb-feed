@@ -2,6 +2,51 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "abd983ae-913f-4ce1-a198-6e224c6282c3",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.1",
+      "fromSnapshotId": "a1c95749-d145-4a02-bbe2-ab1e59f98533",
+      "toSnapshotId": "c8fef03e-06e8-4ce8-bf67-a66e037ac45c",
+      "detectedAt": "2026-06-30T01:44:09.191Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "models",
+              "z-ai/glm-5.1",
+              "cacheReadPer1m"
+            ],
+            "before": 0.182
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.1",
+              "inputPer1m"
+            ],
+            "after": 0.975,
+            "before": 0.98
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.1",
+              "outputPer1m"
+            ],
+            "after": 4.3,
+            "before": 3.08
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Removed cacheReadPer1m field (breaking_strict) and increased output price (breaking_agent); removal dominates."
+    },
+    {
       "id": "04cb549c-1f7b-43f7-8f5b-b38cce164e77",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -2376,62 +2421,6 @@
       "confidence": 0.95,
       "classifiedBy": "llm",
       "notes": "Price changed to zero, semantically misleading—agent still calls but pricing semantics altered."
-    },
-    {
-      "id": "c3ca3e3b-9d6a-4151-99a7-c0dba25fbd53",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/deepseek/deepseek-v4-flash",
-      "fromSnapshotId": "6da1d344-e7c4-42d9-af37-8304c67feca9",
-      "toSnapshotId": "23974b81-578b-4d4e-8a84-544fee7bd9d1",
-      "detectedAt": "2026-06-25T01:44:18.447Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "deepseek/deepseek-v4-flash",
-              "cacheReadPer1m"
-            ],
-            "after": 0.0266,
-            "before": 0.02
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "deepseek/deepseek-v4-flash",
-              "inputPer1m"
-            ],
-            "after": 0.089,
-            "before": 0.09
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "deepseek/deepseek-v4-flash",
-              "maxOutputTokens"
-            ],
-            "after": null,
-            "before": 65536
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "deepseek/deepseek-v4-flash",
-              "outputPer1m"
-            ],
-            "after": 0.224,
-            "before": 0.18
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.7,
-      "classifiedBy": "llm",
-      "notes": "Cache read price increased and output price increased, while input price slightly decreased and max output tokens removed; overall the model's cost structure changed, which can silently mislead agents."
     }
   ]
 }
