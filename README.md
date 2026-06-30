@@ -4,14 +4,14 @@ The canonical truth layer for the APIs & tools AI agents call: the **current
 schema** and **classified breaking-changes** (breaking for strict consumers,
 breaking for agents, or safe) for a curated set of sources.
 
-This repo is auto-generated. Last updated: **2026-06-30T01:44:14.199Z**.
+This repo is auto-generated. Last updated: **2026-06-30T07:44:28.409Z**.
 
 - Live API: `https://canondb.dev`
 - Each `current` carries `fetched_at` + a `stale` flag — we never serve stale as current.
 
 | Source | Feed | Recent changes | Status |
 |--------|------|----------------|--------|
-| `api:digitalocean` | [current](sources/api_digitalocean.json) · [changes](sources/api_digitalocean.changes.json) | 6 | ok |
+| `api:digitalocean` | [current](sources/api_digitalocean.json) · [changes](sources/api_digitalocean.changes.json) | 13 | ok |
 | `api:notion` | [current](sources/api_notion.json) · [changes](sources/api_notion.changes.json) | 0 | ok |
 | `api:openai` | [current](sources/api_openai.json) · [changes](sources/api_openai.changes.json) | 0 | ok |
 | `api:stripe` | [current](sources/api_stripe.json) · [changes](sources/api_stripe.changes.json) | 1 | ok |

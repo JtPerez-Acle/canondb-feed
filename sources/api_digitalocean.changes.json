@@ -2,6 +2,216 @@
   "id": "api:digitalocean",
   "changes": [
     {
+      "id": "4dea43bd-653f-4e71-8a26-f58fd7cbaf22",
+      "sourceId": "api:digitalocean",
+      "entityId": "operations/PUT /v2/security/secrets/{secret}",
+      "fromSnapshotId": "87e68203-5b51-4dae-86e2-f0221295a248",
+      "toSnapshotId": "047f5956-6640-4e7e-807a-25155adbed2b",
+      "detectedAt": "2026-06-30T07:44:28.126Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "operations",
+              "PUT /v2/security/secrets/{secret}"
+            ],
+            "after": {
+              "summary": null,
+              "responses": [],
+              "parameters": [],
+              "operationId": null,
+              "requestBody": null
+            }
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Added a new operation, which does not break existing callers."
+    },
+    {
+      "id": "9679e7c8-0859-4a44-94b6-dc609d61f011",
+      "sourceId": "api:digitalocean",
+      "entityId": "operations/POST /v2/security/secrets/{secret}/restore",
+      "fromSnapshotId": "87e68203-5b51-4dae-86e2-f0221295a248",
+      "toSnapshotId": "047f5956-6640-4e7e-807a-25155adbed2b",
+      "detectedAt": "2026-06-30T07:44:27.040Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "operations",
+              "POST /v2/security/secrets/{secret}/restore"
+            ],
+            "after": {
+              "summary": null,
+              "responses": [],
+              "parameters": [],
+              "operationId": null,
+              "requestBody": null
+            }
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Added a new operation, which does not break existing consumers."
+    },
+    {
+      "id": "2fe75d54-e4c2-4dea-9b17-f14f075c5a5c",
+      "sourceId": "api:digitalocean",
+      "entityId": "operations/POST /v2/security/secrets",
+      "fromSnapshotId": "87e68203-5b51-4dae-86e2-f0221295a248",
+      "toSnapshotId": "047f5956-6640-4e7e-807a-25155adbed2b",
+      "detectedAt": "2026-06-30T07:44:24.126Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "operations",
+              "POST /v2/security/secrets"
+            ],
+            "after": {
+              "summary": null,
+              "responses": [],
+              "parameters": [],
+              "operationId": null,
+              "requestBody": null
+            }
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Added a new operation"
+    },
+    {
+      "id": "d394bf9f-6396-4dde-8362-2d9adc1ddee3",
+      "sourceId": "api:digitalocean",
+      "entityId": "operations/GET /v2/security/secrets/{secret}/versions",
+      "fromSnapshotId": "87e68203-5b51-4dae-86e2-f0221295a248",
+      "toSnapshotId": "047f5956-6640-4e7e-807a-25155adbed2b",
+      "detectedAt": "2026-06-30T07:44:21.913Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "operations",
+              "GET /v2/security/secrets/{secret}/versions"
+            ],
+            "after": {
+              "summary": null,
+              "responses": [],
+              "parameters": [],
+              "operationId": null,
+              "requestBody": null
+            }
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Added a new operation, existing callers unaffected."
+    },
+    {
+      "id": "6fce03fb-2b2f-490a-afca-cfc6c716b5fc",
+      "sourceId": "api:digitalocean",
+      "entityId": "operations/GET /v2/security/secrets/{secret}",
+      "fromSnapshotId": "87e68203-5b51-4dae-86e2-f0221295a248",
+      "toSnapshotId": "047f5956-6640-4e7e-807a-25155adbed2b",
+      "detectedAt": "2026-06-30T07:44:18.061Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "operations",
+              "GET /v2/security/secrets/{secret}"
+            ],
+            "after": {
+              "summary": null,
+              "responses": [],
+              "parameters": [],
+              "operationId": null,
+              "requestBody": null
+            }
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Added a new operation, which does not break existing consumers."
+    },
+    {
+      "id": "af3e85e7-d070-46b8-9859-5af2a88ac00e",
+      "sourceId": "api:digitalocean",
+      "entityId": "operations/GET /v2/security/secrets",
+      "fromSnapshotId": "87e68203-5b51-4dae-86e2-f0221295a248",
+      "toSnapshotId": "047f5956-6640-4e7e-807a-25155adbed2b",
+      "detectedAt": "2026-06-30T07:44:13.818Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "operations",
+              "GET /v2/security/secrets"
+            ],
+            "after": {
+              "summary": null,
+              "responses": [],
+              "parameters": [],
+              "operationId": null,
+              "requestBody": null
+            }
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Added a new operation, which does not break existing consumers."
+    },
+    {
+      "id": "f6f8a0fd-15f9-472f-877f-4f04df15383c",
+      "sourceId": "api:digitalocean",
+      "entityId": "operations/DELETE /v2/security/secrets/{secret}",
+      "fromSnapshotId": "87e68203-5b51-4dae-86e2-f0221295a248",
+      "toSnapshotId": "047f5956-6640-4e7e-807a-25155adbed2b",
+      "detectedAt": "2026-06-30T07:44:11.274Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "operations",
+              "DELETE /v2/security/secrets/{secret}"
+            ],
+            "after": {
+              "summary": null,
+              "responses": [],
+              "parameters": [],
+              "operationId": null,
+              "requestBody": null
+            }
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Added a new DELETE operation, which is a new endpoint that does not break existing callers."
+    },
+    {
       "id": "83212c2b-9959-4a88-8831-b1fc2759f5ea",
       "sourceId": "api:digitalocean",
       "entityId": "operations/PUT /v2/databases/{database_cluster_uuid}/do_settings",

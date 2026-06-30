@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "api:digitalocean",
-    "fetchedAt": "2026-06-30T01:44:13.721Z",
+    "fetchedAt": "2026-06-30T07:44:09.307Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -656,6 +656,13 @@
           "operationId": null,
           "requestBody": null
         },
+        "GET /v2/security/secrets": {
+          "summary": null,
+          "responses": [],
+          "parameters": [],
+          "operationId": null,
+          "requestBody": null
+        },
         "GET /v2/vector-databases": {
           "summary": null,
           "responses": [],
@@ -741,6 +748,13 @@
           "requestBody": null
         },
         "POST /v2/monitoring/sinks": {
+          "summary": null,
+          "responses": [],
+          "parameters": [],
+          "operationId": null,
+          "requestBody": null
+        },
+        "POST /v2/security/secrets": {
           "summary": null,
           "responses": [],
           "parameters": [],
@@ -1454,7 +1468,21 @@
           "operationId": null,
           "requestBody": null
         },
+        "GET /v2/security/secrets/{secret}": {
+          "summary": null,
+          "responses": [],
+          "parameters": [],
+          "operationId": null,
+          "requestBody": null
+        },
         "POST /v2/registries/validate-name": {
+          "summary": null,
+          "responses": [],
+          "parameters": [],
+          "operationId": null,
+          "requestBody": null
+        },
+        "PUT /v2/security/secrets/{secret}": {
           "summary": null,
           "responses": [],
           "parameters": [],
@@ -1637,6 +1665,13 @@
           "requestBody": null
         },
         "POST /v2/projects/default/resources": {
+          "summary": null,
+          "responses": [],
+          "parameters": [],
+          "operationId": null,
+          "requestBody": null
+        },
+        "DELETE /v2/security/secrets/{secret}": {
           "summary": null,
           "responses": [],
           "parameters": [],
@@ -2344,6 +2379,20 @@
           "requestBody": null
         },
         "GET /v2/reserved_ips/{reserved_ip}/actions": {
+          "summary": null,
+          "responses": [],
+          "parameters": [],
+          "operationId": null,
+          "requestBody": null
+        },
+        "GET /v2/security/secrets/{secret}/versions": {
+          "summary": null,
+          "responses": [],
+          "parameters": [],
+          "operationId": null,
+          "requestBody": null
+        },
+        "POST /v2/security/secrets/{secret}/restore": {
           "summary": null,
           "responses": [],
           "parameters": [],
