@@ -2,6 +2,32 @@
   "id": "mcp-tools:huggingface",
   "changes": [
     {
+      "id": "0e9c8df4-879a-4de0-af68-8fb24d9b8c6a",
+      "sourceId": "mcp-tools:huggingface",
+      "entityId": "tools/hf_doc_search",
+      "fromSnapshotId": "5af23ca1-c0ed-4f8d-8eae-88ce9fbb54bb",
+      "toSnapshotId": "607d3f15-626e-4803-ac0d-dc294cb4bab2",
+      "detectedAt": "2026-06-30T13:44:10.264Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "hf_doc_search",
+              "description"
+            ],
+            "after": "Search and Discover Hugging Face Product and Library documentation. Send an empty query to discover structure and navigation instructions. Knowledge up-to-date as at 30 June 2026. Combine with the Product filter to focus results.",
+            "before": "Search and Discover Hugging Face Product and Library documentation. Send an empty query to discover structure and navigation instructions. Knowledge up-to-date as at 25 June 2026. Combine with the Product filter to focus results."
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Only a documentation date updated from '25 June 2026' to '30 June 2026' — no change to the tool's name, parameters, or behavior."
+    },
+    {
       "id": "c0f3264d-d587-4cdf-9a95-b6b3b8812739",
       "sourceId": "mcp-tools:huggingface",
       "entityId": "tools/hf_doc_search",

@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-06-30T07:44:00.990Z",
+    "fetchedAt": "2026-06-30T13:44:01.127Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -356,8 +356,8 @@
         "qwen/qwen3.6-27b": {
           "name": "Qwen: Qwen3.6 27B",
           "currency": "USD",
-          "inputPer1m": 0.2596,
-          "outputPer1m": 2.385,
+          "inputPer1m": 0.285,
+          "outputPer1m": 2.4,
           "contextLength": 262144,
           "maxOutputTokens": 262140
         },
@@ -961,14 +961,6 @@
           "contextLength": 400000,
           "cacheReadPer1m": 0.175,
           "maxOutputTokens": 128000
-        },
-        "openrouter/owl-alpha": {
-          "name": "Owl Alpha",
-          "currency": "USD",
-          "inputPer1m": 0,
-          "outputPer1m": 0,
-          "contextLength": 1048756,
-          "maxOutputTokens": 262144
         },
         "perplexity/sonar-pro": {
           "name": "Perplexity: Sonar Pro",

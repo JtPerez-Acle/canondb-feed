@@ -2,6 +2,73 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "c6bc69a3-7813-4527-bd23-6e3de2553c58",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3.6-27b",
+      "fromSnapshotId": "eb72ea0a-4fac-4eac-bdfd-32f5df4c6498",
+      "toSnapshotId": "54754ab6-538b-4645-b8d4-a2ef4847b186",
+      "detectedAt": "2026-06-30T13:44:07.384Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.6-27b",
+              "inputPer1m"
+            ],
+            "after": 0.285,
+            "before": 0.2596
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.6-27b",
+              "outputPer1m"
+            ],
+            "after": 2.4,
+            "before": 2.385
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "input and output prices increased"
+    },
+    {
+      "id": "cc64f9a9-70db-4292-ad74-9d2da199de25",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/openrouter/owl-alpha",
+      "fromSnapshotId": "eb72ea0a-4fac-4eac-bdfd-32f5df4c6498",
+      "toSnapshotId": "54754ab6-538b-4645-b8d4-a2ef4847b186",
+      "detectedAt": "2026-06-30T13:44:06.209Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "models",
+              "openrouter/owl-alpha"
+            ],
+            "before": {
+              "name": "Owl Alpha",
+              "currency": "USD",
+              "inputPer1m": 0,
+              "outputPer1m": 0,
+              "contextLength": 1048756,
+              "maxOutputTokens": 262144
+            }
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "model removed"
+    },
+    {
       "id": "abd983ae-913f-4ce1-a198-6e224c6282c3",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.1",
@@ -2330,97 +2397,6 @@
       "confidence": 1,
       "classifiedBy": "llm",
       "notes": "Removed field cacheReadPer1m."
-    },
-    {
-      "id": "672b6b3a-085c-4834-9b1a-4ff35dbdf6ce",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/deepseek/deepseek-r1-0528",
-      "fromSnapshotId": "56f3bde9-e4a3-4851-9045-ddadaaf7884a",
-      "toSnapshotId": "08229bb4-e56f-4fa1-8a72-0ccdad535156",
-      "detectedAt": "2026-06-25T13:44:30.825Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "removed",
-            "path": [
-              "models",
-              "deepseek/deepseek-r1-0528",
-              "cacheReadPer1m"
-            ],
-            "before": 0.35
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "deepseek/deepseek-r1-0528",
-              "inputPer1m"
-            ],
-            "after": 0,
-            "before": 0.5
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "deepseek/deepseek-r1-0528",
-              "maxOutputTokens"
-            ],
-            "after": 32000,
-            "before": 32768
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "deepseek/deepseek-r1-0528",
-              "outputPer1m"
-            ],
-            "after": 0,
-            "before": 2.15
-          }
-        ]
-      },
-      "severity": "breaking_strict",
-      "confidence": 0.6,
-      "classifiedBy": "rules",
-      "notes": "llm fallback (This operation was aborted); field(s) removed"
-    },
-    {
-      "id": "3c607114-b670-4971-b027-326e0a631370",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/deepseek/deepseek-chat",
-      "fromSnapshotId": "56f3bde9-e4a3-4851-9045-ddadaaf7884a",
-      "toSnapshotId": "08229bb4-e56f-4fa1-8a72-0ccdad535156",
-      "detectedAt": "2026-06-25T13:44:10.808Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "deepseek/deepseek-chat",
-              "inputPer1m"
-            ],
-            "after": 0,
-            "before": 0.2002
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "deepseek/deepseek-chat",
-              "outputPer1m"
-            ],
-            "after": 0,
-            "before": 0.8001
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "Price changed to zero, semantically misleading—agent still calls but pricing semantics altered."
     }
   ]
 }
