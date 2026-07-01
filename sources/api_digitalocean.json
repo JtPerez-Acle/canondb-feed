@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "api:digitalocean",
-    "fetchedAt": "2026-07-01T13:44:40.792Z",
+    "fetchedAt": "2026-07-01T19:44:34.789Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -2315,6 +2315,13 @@
           "operationId": null,
           "requestBody": null
         },
+        "POST /v2/gen-ai/custom_evaluation_metrics": {
+          "summary": null,
+          "responses": [],
+          "parameters": [],
+          "operationId": null,
+          "requestBody": null
+        },
         "PUT /v2/account/keys/{ssh_key_identifier}": {
           "summary": null,
           "responses": [],
@@ -3463,6 +3470,13 @@
           "operationId": null,
           "requestBody": null
         },
+        "PUT /v2/gen-ai/custom_evaluation_metrics/{metric_uuid}": {
+          "summary": null,
+          "responses": [],
+          "parameters": [],
+          "operationId": null,
+          "requestBody": null
+        },
         "DELETE /v2/gen-ai/model_evaluation_runs/{eval_run_uuid}": {
           "summary": null,
           "responses": [],
@@ -3541,6 +3555,13 @@
           "requestBody": null
         },
         "PUT /v2/gen-ai/models/api_keys/{api_key_uuid}/regenerate": {
+          "summary": null,
+          "responses": [],
+          "parameters": [],
+          "operationId": null,
+          "requestBody": null
+        },
+        "DELETE /v2/gen-ai/custom_evaluation_metrics/{metric_uuid}": {
           "summary": null,
           "responses": [],
           "parameters": [],

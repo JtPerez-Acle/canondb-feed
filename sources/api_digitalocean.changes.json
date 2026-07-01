@@ -2,6 +2,96 @@
   "id": "api:digitalocean",
   "changes": [
     {
+      "id": "d885a867-ac0c-4b90-b26c-6ff729d85bb2",
+      "sourceId": "api:digitalocean",
+      "entityId": "operations/PUT /v2/gen-ai/custom_evaluation_metrics/{metric_uuid}",
+      "fromSnapshotId": "eabcab88-4a42-4df3-98db-eeecfb01de5a",
+      "toSnapshotId": "798d53c3-a058-4f37-b6d9-03d96fbc63ab",
+      "detectedAt": "2026-07-01T19:44:44.851Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "operations",
+              "PUT /v2/gen-ai/custom_evaluation_metrics/{metric_uuid}"
+            ],
+            "after": {
+              "summary": null,
+              "responses": [],
+              "parameters": [],
+              "operationId": null,
+              "requestBody": null
+            }
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "New operation added, does not affect existing callers."
+    },
+    {
+      "id": "39bd64a3-0bfc-4fa4-b634-48ade92f0724",
+      "sourceId": "api:digitalocean",
+      "entityId": "operations/POST /v2/gen-ai/custom_evaluation_metrics",
+      "fromSnapshotId": "eabcab88-4a42-4df3-98db-eeecfb01de5a",
+      "toSnapshotId": "798d53c3-a058-4f37-b6d9-03d96fbc63ab",
+      "detectedAt": "2026-07-01T19:44:41.226Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "operations",
+              "POST /v2/gen-ai/custom_evaluation_metrics"
+            ],
+            "after": {
+              "summary": null,
+              "responses": [],
+              "parameters": [],
+              "operationId": null,
+              "requestBody": null
+            }
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "ADDED operation is always safe per domain guidance"
+    },
+    {
+      "id": "60618827-5c14-4f7b-acfa-972908c7f62c",
+      "sourceId": "api:digitalocean",
+      "entityId": "operations/DELETE /v2/gen-ai/custom_evaluation_metrics/{metric_uuid}",
+      "fromSnapshotId": "eabcab88-4a42-4df3-98db-eeecfb01de5a",
+      "toSnapshotId": "798d53c3-a058-4f37-b6d9-03d96fbc63ab",
+      "detectedAt": "2026-07-01T19:44:37.414Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "operations",
+              "DELETE /v2/gen-ai/custom_evaluation_metrics/{metric_uuid}"
+            ],
+            "after": {
+              "summary": null,
+              "responses": [],
+              "parameters": [],
+              "operationId": null,
+              "requestBody": null
+            }
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "New DELETE operation added, does not break existing callers."
+    },
+    {
       "id": "4dea43bd-653f-4e71-8a26-f58fd7cbaf22",
       "sourceId": "api:digitalocean",
       "entityId": "operations/PUT /v2/security/secrets/{secret}",
