@@ -2,6 +2,93 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "eacb3ea0-c9cc-4114-8223-d0b9b52ce216",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3-235b-a22b-thinking-2507",
+      "fromSnapshotId": "5d81812a-3de5-48c2-9ff0-ab5319d47f13",
+      "toSnapshotId": "2cfe2771-a3f1-4e20-b370-621c96594f72",
+      "detectedAt": "2026-07-01T01:44:13.152Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "models",
+              "qwen/qwen3-235b-a22b-thinking-2507",
+              "cacheReadPer1m"
+            ],
+            "before": 0.1
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-235b-a22b-thinking-2507",
+              "inputPer1m"
+            ],
+            "after": 0.1495,
+            "before": 0.1
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-235b-a22b-thinking-2507",
+              "maxOutputTokens"
+            ],
+            "after": null,
+            "before": 262144
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-235b-a22b-thinking-2507",
+              "outputPer1m"
+            ],
+            "after": 1.495,
+            "before": 0.1
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Removed cacheReadPer1m field and increased input and output prices."
+    },
+    {
+      "id": "54071e0b-7d48-4158-afbe-6579398ba194",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/microsoft/phi-4-mini-instruct",
+      "fromSnapshotId": "5d81812a-3de5-48c2-9ff0-ab5319d47f13",
+      "toSnapshotId": "2cfe2771-a3f1-4e20-b370-621c96594f72",
+      "detectedAt": "2026-07-01T01:44:04.851Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "models",
+              "microsoft/phi-4-mini-instruct"
+            ],
+            "before": {
+              "name": "Microsoft: Phi 4 Mini Instruct",
+              "currency": "USD",
+              "inputPer1m": 0.08,
+              "outputPer1m": 0.35,
+              "contextLength": 131072,
+              "cacheReadPer1m": 0.08,
+              "maxOutputTokens": 128000
+            }
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Model removed, breaking strict consumers that reference it"
+    },
+    {
       "id": "147502ed-1800-4325-8160-d2092e93961d",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/~anthropic/claude-sonnet-latest",
@@ -2230,117 +2317,6 @@
       "confidence": 0.5,
       "classifiedBy": "rules",
       "notes": "llm fallback (This operation was aborted); field value(s) changed"
-    },
-    {
-      "id": "3d6cdd3a-8fef-4aad-a7e2-26c83b180f7b",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/moonshotai/kimi-k2.5",
-      "fromSnapshotId": "56f3bde9-e4a3-4851-9045-ddadaaf7884a",
-      "toSnapshotId": "08229bb4-e56f-4fa1-8a72-0ccdad535156",
-      "detectedAt": "2026-06-25T13:45:58.242Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "moonshotai/kimi-k2.5",
-              "cacheReadPer1m"
-            ],
-            "after": 0
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "moonshotai/kimi-k2.5",
-              "inputPer1m"
-            ],
-            "after": 0,
-            "before": 0.375
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "moonshotai/kimi-k2.5",
-              "maxOutputTokens"
-            ],
-            "after": 256000,
-            "before": null
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "moonshotai/kimi-k2.5",
-              "outputPer1m"
-            ],
-            "after": 0,
-            "before": 2.025
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.5,
-      "classifiedBy": "rules",
-      "notes": "llm fallback (This operation was aborted); field value(s) changed"
-    },
-    {
-      "id": "04adea4f-bcf4-4ff8-bea6-6fd2e1bd7720",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/minimax/minimax-m2.5",
-      "fromSnapshotId": "56f3bde9-e4a3-4851-9045-ddadaaf7884a",
-      "toSnapshotId": "08229bb4-e56f-4fa1-8a72-0ccdad535156",
-      "detectedAt": "2026-06-25T13:45:38.233Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "minimax/minimax-m2.5",
-              "cacheReadPer1m"
-            ],
-            "after": 0,
-            "before": 0.05
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "minimax/minimax-m2.5",
-              "inputPer1m"
-            ],
-            "after": 0,
-            "before": 0.15
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "minimax/minimax-m2.5",
-              "maxOutputTokens"
-            ],
-            "after": 128000,
-            "before": 196608
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "minimax/minimax-m2.5",
-              "outputPer1m"
-            ],
-            "after": 0,
-            "before": 0.9
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "maxOutputTokens reduced from 196608 to 128000, silently truncating longer responses"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-06-30T19:44:01.164Z",
+    "fetchedAt": "2026-07-01T01:44:01.283Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -2315,15 +2315,6 @@
           "cacheWritePer1m": 0.375,
           "maxOutputTokens": 65536
         },
-        "microsoft/phi-4-mini-instruct": {
-          "name": "Microsoft: Phi 4 Mini Instruct",
-          "currency": "USD",
-          "inputPer1m": 0.08,
-          "outputPer1m": 0.35,
-          "contextLength": 131072,
-          "cacheReadPer1m": 0.08,
-          "maxOutputTokens": 128000
-        },
         "openai/gpt-3.5-turbo-instruct": {
           "name": "OpenAI: GPT-3.5 Turbo Instruct",
           "currency": "USD",
@@ -2711,11 +2702,10 @@
         "qwen/qwen3-235b-a22b-thinking-2507": {
           "name": "Qwen: Qwen3 235B A22B Thinking 2507",
           "currency": "USD",
-          "inputPer1m": 0.1,
-          "outputPer1m": 0.1,
+          "inputPer1m": 0.1495,
+          "outputPer1m": 1.495,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.1,
-          "maxOutputTokens": 262144
+          "maxOutputTokens": null
         },
         "google/gemini-2.5-pro-preview-05-06": {
           "name": "Google: Gemini 2.5 Pro Preview 05-06",
