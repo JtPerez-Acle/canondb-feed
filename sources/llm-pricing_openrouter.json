@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-01T07:44:00.656Z",
+    "fetchedAt": "2026-07-01T13:44:01.365Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -132,10 +132,9 @@
         "qwen/qwen3-8b": {
           "name": "Qwen: Qwen3 8B",
           "currency": "USD",
-          "inputPer1m": 0.05,
-          "outputPer1m": 0.4,
+          "inputPer1m": 0.117,
+          "outputPer1m": 0.455,
           "contextLength": 131072,
-          "cacheReadPer1m": 0.05,
           "maxOutputTokens": 8192
         },
         "x-ai/grok-4.3": {
@@ -530,10 +529,9 @@
           "name": "MiniMax: MiniMax M2",
           "currency": "USD",
           "inputPer1m": 0.255,
-          "outputPer1m": 1,
+          "outputPer1m": 1.02,
           "contextLength": 204800,
-          "cacheReadPer1m": 0.03,
-          "maxOutputTokens": 196608
+          "maxOutputTokens": 131072
         },
         "minimax/minimax-m3": {
           "name": "MiniMax: MiniMax M3",
@@ -880,11 +878,11 @@
         "minimax/minimax-m2.1": {
           "name": "MiniMax: MiniMax M2.1",
           "currency": "USD",
-          "inputPer1m": 0.29,
-          "outputPer1m": 0.95,
+          "inputPer1m": 0.3,
+          "outputPer1m": 1.2,
           "contextLength": 204800,
           "cacheReadPer1m": 0.03,
-          "maxOutputTokens": 196608
+          "maxOutputTokens": 131072
         },
         "minimax/minimax-m2.5": {
           "name": "MiniMax: MiniMax M2.5",
@@ -2073,8 +2071,8 @@
           "inputPer1m": 0.6,
           "outputPer1m": 2.5,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.6,
-          "maxOutputTokens": 262144
+          "cacheReadPer1m": 0.15,
+          "maxOutputTokens": 100352
         },
         "perplexity/sonar-pro-search": {
           "name": "Perplexity: Sonar Pro Search",
@@ -2568,11 +2566,10 @@
         "qwen/qwen3-30b-a3b-thinking-2507": {
           "name": "Qwen: Qwen3 30B A3B Thinking 2507",
           "currency": "USD",
-          "inputPer1m": 0.08,
-          "outputPer1m": 0.4,
+          "inputPer1m": 0.13,
+          "outputPer1m": 1.56,
           "contextLength": 131072,
-          "cacheReadPer1m": 0.08,
-          "maxOutputTokens": 131072
+          "maxOutputTokens": 32768
         },
         "qwen/qwen3-next-80b-a3b-instruct": {
           "name": "Qwen: Qwen3 Next 80B A3B Instruct",

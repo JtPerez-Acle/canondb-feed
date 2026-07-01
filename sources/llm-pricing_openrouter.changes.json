@@ -2,6 +2,233 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "4a4eb164-4a2d-4de7-a753-b6cebf8bf7ec",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3-8b",
+      "fromSnapshotId": "ab835de0-f34f-4686-9932-8eee643607f6",
+      "toSnapshotId": "ec9cea35-a68a-434e-b03b-2a1996f3ed84",
+      "detectedAt": "2026-07-01T13:44:36.679Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "models",
+              "qwen/qwen3-8b",
+              "cacheReadPer1m"
+            ],
+            "before": 0.05
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-8b",
+              "inputPer1m"
+            ],
+            "after": 0.117,
+            "before": 0.05
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-8b",
+              "outputPer1m"
+            ],
+            "after": 0.455,
+            "before": 0.4
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Removed models.qwen/qwen3-8b.cacheReadPer1m field"
+    },
+    {
+      "id": "cf04411c-0e0e-4018-96dc-8ed00b720f62",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3-30b-a3b-thinking-2507",
+      "fromSnapshotId": "ab835de0-f34f-4686-9932-8eee643607f6",
+      "toSnapshotId": "ec9cea35-a68a-434e-b03b-2a1996f3ed84",
+      "detectedAt": "2026-07-01T13:44:30.109Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "models",
+              "qwen/qwen3-30b-a3b-thinking-2507",
+              "cacheReadPer1m"
+            ],
+            "before": 0.08
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-30b-a3b-thinking-2507",
+              "inputPer1m"
+            ],
+            "after": 0.13,
+            "before": 0.08
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-30b-a3b-thinking-2507",
+              "maxOutputTokens"
+            ],
+            "after": 32768,
+            "before": 131072
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-30b-a3b-thinking-2507",
+              "outputPer1m"
+            ],
+            "after": 1.56,
+            "before": 0.4
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Removed cacheReadPer1m field; also increased input/output prices and reduced maxOutputTokens."
+    },
+    {
+      "id": "27e9eaf4-878c-48bb-a2f7-af70d8a05930",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/moonshotai/kimi-k2-thinking",
+      "fromSnapshotId": "ab835de0-f34f-4686-9932-8eee643607f6",
+      "toSnapshotId": "ec9cea35-a68a-434e-b03b-2a1996f3ed84",
+      "detectedAt": "2026-07-01T13:44:23.521Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2-thinking",
+              "cacheReadPer1m"
+            ],
+            "after": 0.15,
+            "before": 0.6
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2-thinking",
+              "maxOutputTokens"
+            ],
+            "after": 100352,
+            "before": 262144
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "maxOutputTokens reduced from 262144 to 100352, which may cause silent truncation for agents"
+    },
+    {
+      "id": "9f6d44a3-8743-496d-8f5a-e8060064b6e3",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/minimax/minimax-m2.1",
+      "fromSnapshotId": "ab835de0-f34f-4686-9932-8eee643607f6",
+      "toSnapshotId": "ec9cea35-a68a-434e-b03b-2a1996f3ed84",
+      "detectedAt": "2026-07-01T13:44:18.670Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "minimax/minimax-m2.1",
+              "inputPer1m"
+            ],
+            "after": 0.3,
+            "before": 0.29
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "minimax/minimax-m2.1",
+              "maxOutputTokens"
+            ],
+            "after": 131072,
+            "before": 196608
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "minimax/minimax-m2.1",
+              "outputPer1m"
+            ],
+            "after": 1.2,
+            "before": 0.95
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "price increase and output cap reduction are breaking_agent"
+    },
+    {
+      "id": "e0b55b14-72fe-4fc4-ae48-643d15def1af",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/minimax/minimax-m2",
+      "fromSnapshotId": "ab835de0-f34f-4686-9932-8eee643607f6",
+      "toSnapshotId": "ec9cea35-a68a-434e-b03b-2a1996f3ed84",
+      "detectedAt": "2026-07-01T13:44:15.820Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "models",
+              "minimax/minimax-m2",
+              "cacheReadPer1m"
+            ],
+            "before": 0.03
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "minimax/minimax-m2",
+              "maxOutputTokens"
+            ],
+            "after": 131072,
+            "before": 196608
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "minimax/minimax-m2",
+              "outputPer1m"
+            ],
+            "after": 1.02,
+            "before": 1
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "maxOutputTokens reduced from 196608 to 131072; outputPer1m increased from 1 to 1.02."
+    },
+    {
       "id": "eacb3ea0-c9cc-4114-8223-d0b9b52ce216",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/qwen/qwen3-235b-a22b-thinking-2507",
@@ -2049,274 +2276,6 @@
       "confidence": 0.95,
       "classifiedBy": "llm",
       "notes": "All prices reduced to zero and output capacity increased."
-    },
-    {
-      "id": "b41e221e-66fe-47aa-ba4f-07f96a653fca",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/z-ai/glm-4.7",
-      "fromSnapshotId": "56f3bde9-e4a3-4851-9045-ddadaaf7884a",
-      "toSnapshotId": "08229bb4-e56f-4fa1-8a72-0ccdad535156",
-      "detectedAt": "2026-06-25T13:47:09.574Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "removed",
-            "path": [
-              "models",
-              "z-ai/glm-4.7",
-              "cacheReadPer1m"
-            ],
-            "before": 0.08
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-4.7",
-              "contextLength"
-            ],
-            "after": 200000,
-            "before": 202752
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-4.7",
-              "inputPer1m"
-            ],
-            "after": 0,
-            "before": 0.4
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-4.7",
-              "maxOutputTokens"
-            ],
-            "after": 128000,
-            "before": 131072
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-4.7",
-              "outputPer1m"
-            ],
-            "after": 0,
-            "before": 1.75
-          }
-        ]
-      },
-      "severity": "breaking_strict",
-      "confidence": 0.6,
-      "classifiedBy": "rules",
-      "notes": "llm fallback (This operation was aborted); field(s) removed"
-    },
-    {
-      "id": "a32b268a-d45f-430f-8831-81b1f8439229",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/qwen/qwen3.5-397b-a17b",
-      "fromSnapshotId": "56f3bde9-e4a3-4851-9045-ddadaaf7884a",
-      "toSnapshotId": "08229bb4-e56f-4fa1-8a72-0ccdad535156",
-      "detectedAt": "2026-06-25T13:46:49.566Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "qwen/qwen3.5-397b-a17b",
-              "cacheReadPer1m"
-            ],
-            "after": 0
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3.5-397b-a17b",
-              "inputPer1m"
-            ],
-            "after": 0,
-            "before": 0.385
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3.5-397b-a17b",
-              "maxOutputTokens"
-            ],
-            "after": 64000,
-            "before": null
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3.5-397b-a17b",
-              "outputPer1m"
-            ],
-            "after": 0,
-            "before": 2.45
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.8,
-      "classifiedBy": "llm",
-      "notes": "maxOutputTokens changed from null to 64000 reduces output capacity"
-    },
-    {
-      "id": "8cf39f43-0ffc-4a42-945f-31ab9c0b9524",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/qwen/qwen3-coder-next",
-      "fromSnapshotId": "56f3bde9-e4a3-4851-9045-ddadaaf7884a",
-      "toSnapshotId": "08229bb4-e56f-4fa1-8a72-0ccdad535156",
-      "detectedAt": "2026-06-25T13:46:35.522Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3-coder-next",
-              "cacheReadPer1m"
-            ],
-            "after": 0,
-            "before": 0.07
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3-coder-next",
-              "inputPer1m"
-            ],
-            "after": 0,
-            "before": 0.11
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3-coder-next",
-              "maxOutputTokens"
-            ],
-            "after": 64000,
-            "before": 262144
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3-coder-next",
-              "outputPer1m"
-            ],
-            "after": 0,
-            "before": 0.8
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "Output token limit reduced from 262144 to 64000, which can silently truncate agent responses."
-    },
-    {
-      "id": "0f8f2956-b7c5-4d1f-bf1c-84bd4d2d8eda",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/qwen/qwen3-30b-a3b-instruct-2507",
-      "fromSnapshotId": "56f3bde9-e4a3-4851-9045-ddadaaf7884a",
-      "toSnapshotId": "08229bb4-e56f-4fa1-8a72-0ccdad535156",
-      "detectedAt": "2026-06-25T13:46:27.739Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3-30b-a3b-instruct-2507",
-              "inputPer1m"
-            ],
-            "after": 0,
-            "before": 0.04815
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3-30b-a3b-instruct-2507",
-              "outputPer1m"
-            ],
-            "after": 0,
-            "before": 0.19305
-          }
-        ]
-      },
-      "severity": "breaking_strict",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "Model pricing set to zero suggests removal or deprecation, breaking callers of this model"
-    },
-    {
-      "id": "0f925da4-11f7-4419-87a7-866829835d49",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/moonshotai/kimi-k2.6",
-      "fromSnapshotId": "56f3bde9-e4a3-4851-9045-ddadaaf7884a",
-      "toSnapshotId": "08229bb4-e56f-4fa1-8a72-0ccdad535156",
-      "detectedAt": "2026-06-25T13:46:18.250Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "moonshotai/kimi-k2.6",
-              "cacheReadPer1m"
-            ],
-            "after": 0,
-            "before": 0.144
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "moonshotai/kimi-k2.6",
-              "inputPer1m"
-            ],
-            "after": 0,
-            "before": 0.66
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "moonshotai/kimi-k2.6",
-              "maxOutputTokens"
-            ],
-            "after": 256000,
-            "before": 262144
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "moonshotai/kimi-k2.6",
-              "outputPer1m"
-            ],
-            "after": 0,
-            "before": 3.41
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.5,
-      "classifiedBy": "rules",
-      "notes": "llm fallback (This operation was aborted); field value(s) changed"
     }
   ]
 }
