@@ -2,6 +2,35 @@
   "id": "mcp-tools:huggingface",
   "changes": [
     {
+      "id": "71574c20-64f5-4b5f-9258-734aabac3da9",
+      "sourceId": "mcp-tools:huggingface",
+      "entityId": "tools/hf_fs",
+      "fromSnapshotId": "22d89f58-36b3-4c48-adfc-df1ee67de9b5",
+      "toSnapshotId": "4b1dd25c-2ffd-4d73-95db-b6bc5242dae1",
+      "detectedAt": "2026-07-02T19:44:19.799Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "uri",
+              "description"
+            ],
+            "after": "Hugging Face URI in the form hf://models|datasets|spaces|buckets/OWNER[/NAME[/PATH]]. ",
+            "before": "Hugging Face URI in the form hf://models|datasets|spaces|buckets[/OWNER[/NAME[/PATH]]]. Owner-only ls lists repos or buckets. anonymous requests must include an owner."
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Description-only edit, no semantic or structural change."
+    },
+    {
       "id": "03015452-9f4f-4f5a-88b1-749df1a64fef",
       "sourceId": "mcp-tools:huggingface",
       "entityId": "tools/hf_fs",

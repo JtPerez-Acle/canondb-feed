@@ -2,6 +2,69 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "ada6ced2-2e04-4569-9a53-ba3710f4cd12",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/poolside/laguna-xs-2.1:free",
+      "fromSnapshotId": "f57bb5c5-c3cf-4478-85f8-05afb42bb6ed",
+      "toSnapshotId": "063eb91e-2d8e-4c8a-ac13-3379f6283c8c",
+      "detectedAt": "2026-07-02T19:44:15.521Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "models",
+              "poolside/laguna-xs-2.1:free"
+            ],
+            "after": {
+              "name": "Poolside: Laguna XS 2.1 (free)",
+              "currency": "USD",
+              "inputPer1m": 0,
+              "outputPer1m": 0,
+              "contextLength": 262144,
+              "maxOutputTokens": 32768
+            }
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Added a new free model, which is safe for all consumers."
+    },
+    {
+      "id": "a5d77021-3bd3-4954-a2c5-a02880acc95a",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/poolside/laguna-xs-2.1",
+      "fromSnapshotId": "f57bb5c5-c3cf-4478-85f8-05afb42bb6ed",
+      "toSnapshotId": "063eb91e-2d8e-4c8a-ac13-3379f6283c8c",
+      "detectedAt": "2026-07-02T19:44:12.110Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "models",
+              "poolside/laguna-xs-2.1"
+            ],
+            "after": {
+              "name": "Poolside: Laguna XS 2.1",
+              "currency": "USD",
+              "inputPer1m": 0.06,
+              "outputPer1m": 0.12,
+              "contextLength": 262144,
+              "cacheReadPer1m": 0.03,
+              "maxOutputTokens": 32768
+            }
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Added new model entry; no existing consumer affected."
+    },
+    {
       "id": "402e4b32-64b8-4118-860f-eb96e0482882",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/~moonshotai/kimi-latest",
@@ -2107,116 +2170,6 @@
       "confidence": 1,
       "classifiedBy": "llm",
       "notes": "Prices increased from zero to positive and max output tokens reduced from 384k to 65k, silently increasing cost and truncating responses."
-    },
-    {
-      "id": "7f8a64eb-e609-4890-a67c-b07cca150322",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/deepseek/deepseek-v3.2",
-      "fromSnapshotId": "08229bb4-e56f-4fa1-8a72-0ccdad535156",
-      "toSnapshotId": "1485559c-ae59-4320-a49f-1bfae7bf3fd6",
-      "detectedAt": "2026-06-25T19:44:50.484Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "removed",
-            "path": [
-              "models",
-              "deepseek/deepseek-v3.2",
-              "cacheReadPer1m"
-            ],
-            "before": 0
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "deepseek/deepseek-v3.2",
-              "inputPer1m"
-            ],
-            "after": 0.2288,
-            "before": 0
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "deepseek/deepseek-v3.2",
-              "outputPer1m"
-            ],
-            "after": 0.3432,
-            "before": 0
-          }
-        ]
-      },
-      "severity": "breaking_strict",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "A read-cache field REMOVED breaks strict callers that depend on that exact key. The input/output price changes are from zero to non-zero (agent-breaking), but the stricter removal governs severity."
-    },
-    {
-      "id": "1669efa3-113c-46db-90ad-2671960c5a7b",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/deepseek/deepseek-v3.1-terminus",
-      "fromSnapshotId": "08229bb4-e56f-4fa1-8a72-0ccdad535156",
-      "toSnapshotId": "1485559c-ae59-4320-a49f-1bfae7bf3fd6",
-      "detectedAt": "2026-06-25T19:44:40.076Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "deepseek/deepseek-v3.1-terminus",
-              "cacheReadPer1m"
-            ],
-            "after": 0.13
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "deepseek/deepseek-v3.1-terminus",
-              "contextLength"
-            ],
-            "after": 163840,
-            "before": 131072
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "deepseek/deepseek-v3.1-terminus",
-              "inputPer1m"
-            ],
-            "after": 0.27,
-            "before": 0
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "deepseek/deepseek-v3.1-terminus",
-              "maxOutputTokens"
-            ],
-            "after": 32768,
-            "before": 32000
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "deepseek/deepseek-v3.1-terminus",
-              "outputPer1m"
-            ],
-            "after": 0.95,
-            "before": 0
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "Input and output prices increased from 0 to non-zero, breaking agents expecting free usage."
     }
   ]
 }

@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-02T13:44:01.794Z",
+    "fetchedAt": "2026-07-02T19:44:02.310Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -1231,6 +1231,15 @@
           "contextLength": 2000000,
           "maxOutputTokens": null
         },
+        "poolside/laguna-xs-2.1": {
+          "name": "Poolside: Laguna XS 2.1",
+          "currency": "USD",
+          "inputPer1m": 0.06,
+          "outputPer1m": 0.12,
+          "contextLength": 262144,
+          "cacheReadPer1m": 0.03,
+          "maxOutputTokens": 32768
+        },
         "qwen/qwen3-coder-flash": {
           "name": "Qwen: Qwen3 Coder Flash",
           "currency": "USD",
@@ -2081,6 +2090,14 @@
           "outputPer1m": 15,
           "contextLength": 200000,
           "maxOutputTokens": 8000
+        },
+        "poolside/laguna-xs-2.1:free": {
+          "name": "Poolside: Laguna XS 2.1 (free)",
+          "currency": "USD",
+          "inputPer1m": 0,
+          "outputPer1m": 0,
+          "contextLength": 262144,
+          "maxOutputTokens": 32768
         },
         "thedrummer/cydonia-24b-v4.1": {
           "name": "TheDrummer: Cydonia 24B V4.1",
