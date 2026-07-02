@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-02T07:44:01.745Z",
+    "fetchedAt": "2026-07-02T13:44:01.794Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -911,10 +911,10 @@
         "moonshotai/kimi-k2.6": {
           "name": "MoonshotAI: Kimi K2.6",
           "currency": "USD",
-          "inputPer1m": 0.55,
-          "outputPer1m": 3.2,
+          "inputPer1m": 0.66,
+          "outputPer1m": 3.41,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.11,
+          "cacheReadPer1m": 0.14,
           "maxOutputTokens": 262144
         },
         "morph/morph-v3-large": {
@@ -1433,10 +1433,10 @@
         "~moonshotai/kimi-latest": {
           "name": "MoonshotAI Kimi Latest",
           "currency": "USD",
-          "inputPer1m": 0.55,
-          "outputPer1m": 3.2,
+          "inputPer1m": 0.66,
+          "outputPer1m": 3.41,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.11,
+          "cacheReadPer1m": 0.14,
           "maxOutputTokens": 262144
         },
         "~openai/gpt-mini-latest": {
@@ -1785,8 +1785,8 @@
         "qwen/qwen3-vl-8b-instruct": {
           "name": "Qwen: Qwen3 VL 8B Instruct",
           "currency": "USD",
-          "inputPer1m": 0.08,
-          "outputPer1m": 0.5,
+          "inputPer1m": 0.117,
+          "outputPer1m": 0.455,
           "contextLength": 256000,
           "maxOutputTokens": 32768
         },
@@ -1862,11 +1862,11 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash",
           "currency": "USD",
-          "inputPer1m": 0.09,
+          "inputPer1m": 0.089,
           "outputPer1m": 0.18,
           "contextLength": 1048576,
           "cacheReadPer1m": 0.018,
-          "maxOutputTokens": 16384
+          "maxOutputTokens": null
         },
         "google/gemma-4-31b-it:free": {
           "name": "Google: Gemma 4 31B (free)",

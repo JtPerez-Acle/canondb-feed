@@ -4,11 +4,71 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "mcp-tools:huggingface",
-    "fetchedAt": "2026-07-02T07:44:03.309Z",
+    "fetchedAt": "2026-07-02T13:44:29.054Z",
     "stale": false,
     "verified": true,
     "data": {
       "tools": {
+        "hf_fs": {
+          "description": "List or read files from a Hugging Face repo or bucket. Anonymous requests must include an owner.",
+          "inputSchema": {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "required": [
+              "op",
+              "uri"
+            ],
+            "properties": {
+              "op": {
+                "enum": [
+                  "ls",
+                  "cat",
+                  "stat"
+                ],
+                "type": "string"
+              },
+              "uri": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Hugging Face URI in the form hf://models|datasets|spaces|buckets[/OWNER[/NAME[/PATH]]]. Owner-only ls lists repos or buckets. anonymous requests must include an owner."
+              },
+              "glob": {
+                "type": "string"
+              },
+              "limit": {
+                "type": "integer",
+                "maximum": 10000,
+                "minimum": 0,
+                "description": "ls max list size. Default 1000. 0 means the maximum allowed 10000."
+              },
+              "offset": {
+                "type": "integer",
+                "minimum": 0,
+                "description": "cat read start offset."
+              },
+              "max_bytes": {
+                "type": "integer",
+                "maximum": 80000,
+                "minimum": 0,
+                "description": "cat max read length. 0 means the maximum allowed 80000 bytes."
+              },
+              "recursive": {
+                "type": "boolean",
+                "default": false
+              },
+              "entry_type": {
+                "enum": [
+                  "file",
+                  "dir",
+                  "repo",
+                  "bucket"
+                ],
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
         "hf_whoami": {
           "description": "Hugging Face tools are being used anonymously and may be rate limited. Call this tool for instructions on joining and authenticating.",
           "inputSchema": {
@@ -99,7 +159,7 @@
           }
         },
         "hf_doc_search": {
-          "description": "Search and Discover Hugging Face Product and Library documentation. Send an empty query to discover structure and navigation instructions. Knowledge up-to-date as at 30 June 2026. Combine with the Product filter to focus results.",
+          "description": "Search and Discover Hugging Face Product and Library documentation. Send an empty query to discover structure and navigation instructions. Knowledge up-to-date as at 2 July 2026. Combine with the Product filter to focus results.",
           "inputSchema": {
             "type": "object",
             "$schema": "http://json-schema.org/draft-07/schema#",
@@ -237,80 +297,6 @@
                   "type": "string"
                 },
                 "description": "Details to return. Defaults to [\"overview\"]. For datasets, prefer [\"overview\", \"dataset_structure\"] first; then call [\"dataset_preview\"] with config and split."
-              }
-            },
-            "additionalProperties": false
-          }
-        },
-        "gr1_z_image_turbo_generate": {
-          "description": "Generate an image using the Z-Image model based on the provided prompt and settings. This function is triggered when the user clicks the \"Generate\" button. It processes the input prompt (optionally enhancing it), configures generation parameters, and produces an image using the Z-Image diffusion transformer pipeline. Returns: tuple: (gallery_images, seed_str, seed_int), - seed_str: String representation of the seed used for generation, - seed_int: Integer representation of the seed used for generation (from mcp-tools/Z-Image-Turbo)",
-          "inputSchema": {
-            "type": "object",
-            "$schema": "http://json-schema.org/draft-07/schema#",
-            "properties": {
-              "seed": {
-                "type": "integer",
-                "default": 42,
-                "description": "Seed for reproducible generation"
-              },
-              "shift": {
-                "type": "number",
-                "default": 3,
-                "description": "Time shift parameter for the flow matching scheduler"
-              },
-              "steps": {
-                "type": "number",
-                "default": 8,
-                "description": "Number of inference steps for the diffusion process"
-              },
-              "prompt": {
-                "type": "string",
-                "description": "Text prompt describing the desired image content"
-              },
-              "resolution": {
-                "enum": [
-                  "1024x1024 ( 1:1 )",
-                  "1152x896 ( 9:7 )",
-                  "896x1152 ( 7:9 )",
-                  "1152x864 ( 4:3 )",
-                  "864x1152 ( 3:4 )",
-                  "1248x832 ( 3:2 )",
-                  "832x1248 ( 2:3 )",
-                  "1280x720 ( 16:9 )",
-                  "720x1280 ( 9:16 )",
-                  "1344x576 ( 21:9 )",
-                  "576x1344 ( 9:21 )",
-                  "1280x1280 ( 1:1 )",
-                  "1440x1120 ( 9:7 )",
-                  "1120x1440 ( 7:9 )",
-                  "1472x1104 ( 4:3 )",
-                  "1104x1472 ( 3:4 )",
-                  "1536x1024 ( 3:2 )",
-                  "1024x1536 ( 2:3 )",
-                  "1536x864 ( 16:9 )",
-                  "864x1536 ( 9:16 )",
-                  "1680x720 ( 21:9 )",
-                  "720x1680 ( 9:21 )",
-                  "1536x1536 ( 1:1 )",
-                  "1728x1344 ( 9:7 )",
-                  "1344x1728 ( 7:9 )",
-                  "1728x1296 ( 4:3 )",
-                  "1296x1728 ( 3:4 )",
-                  "1872x1248 ( 3:2 )",
-                  "1248x1872 ( 2:3 )",
-                  "2048x1152 ( 16:9 )",
-                  "1152x2048 ( 9:16 )",
-                  "2016x864 ( 21:9 )",
-                  "864x2016 ( 9:21 )"
-                ],
-                "type": "string",
-                "default": "1024x1024 ( 1:1 )",
-                "description": "Output resolution in format \"WIDTHxHEIGHT ( RATIO )\" (e.g., \"1024x1024 ( 1:1 )\")"
-              },
-              "random_seed": {
-                "type": "boolean",
-                "default": true,
-                "description": "Whether to generate a new random seed, if True will ignore the seed input"
               }
             },
             "additionalProperties": false
