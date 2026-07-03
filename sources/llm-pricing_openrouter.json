@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-03T01:44:01.333Z",
+    "fetchedAt": "2026-07-03T07:44:01.460Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -83,10 +83,11 @@
         "z-ai/glm-5.1": {
           "name": "Z.ai: GLM 5.1",
           "currency": "USD",
-          "inputPer1m": 0.975,
-          "outputPer1m": 4.3,
+          "inputPer1m": 0.966,
+          "outputPer1m": 3.036,
           "contextLength": 202752,
-          "maxOutputTokens": null
+          "cacheReadPer1m": 0.1794,
+          "maxOutputTokens": 128000
         },
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
@@ -1871,11 +1872,11 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash",
           "currency": "USD",
-          "inputPer1m": 0.089,
+          "inputPer1m": 0.09,
           "outputPer1m": 0.18,
           "contextLength": 1048576,
           "cacheReadPer1m": 0.018,
-          "maxOutputTokens": null
+          "maxOutputTokens": 16384
         },
         "google/gemma-4-31b-it:free": {
           "name": "Google: Gemma 4 31B (free)",
