@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-03T07:44:01.460Z",
+    "fetchedAt": "2026-07-03T13:44:01.544Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -359,6 +359,7 @@
           "inputPer1m": 0.285,
           "outputPer1m": 2.4,
           "contextLength": 262144,
+          "cacheReadPer1m": 0.15,
           "maxOutputTokens": 262140
         },
         "qwen/qwen3.7-max": {

@@ -2,6 +2,32 @@
   "id": "mcp-tools:huggingface",
   "changes": [
     {
+      "id": "6977b8a0-2fb1-4df4-a951-5b6c828268af",
+      "sourceId": "mcp-tools:huggingface",
+      "entityId": "tools/hf_doc_search",
+      "fromSnapshotId": "23542283-6bd7-49f3-bdd1-aa39e4fbc5b7",
+      "toSnapshotId": "f6341ec5-67df-4ffe-aabb-e678faec6002",
+      "detectedAt": "2026-07-03T13:44:10.661Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "hf_doc_search",
+              "description"
+            ],
+            "after": "Search and Discover Hugging Face Product and Library documentation. Send an empty query to discover structure and navigation instructions. Knowledge up-to-date as at 3 July 2026. Combine with the Product filter to focus results.",
+            "before": "Search and Discover Hugging Face Product and Library documentation. Send an empty query to discover structure and navigation instructions. Knowledge up-to-date as at 2 July 2026. Combine with the Product filter to focus results."
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Only the knowledge cut-off date changed from 2 July to 3 July 2026; no functional or semantic impact on callers."
+    },
+    {
       "id": "71574c20-64f5-4b5f-9258-734aabac3da9",
       "sourceId": "mcp-tools:huggingface",
       "entityId": "tools/hf_fs",

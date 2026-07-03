@@ -2,6 +2,31 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "e0ecc1a2-4099-4394-8798-db8db3915900",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3.6-27b",
+      "fromSnapshotId": "4a2a3d84-910a-4fd6-a13a-045c2fd00b14",
+      "toSnapshotId": "44d2d829-bb70-4e19-9d4b-c07885067cae",
+      "detectedAt": "2026-07-03T13:44:05.109Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "models",
+              "qwen/qwen3.6-27b",
+              "cacheReadPer1m"
+            ],
+            "after": 0.15
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Added new cache read pricing field for existing model."
+    },
+    {
       "id": "1ad88638-b3b6-4698-8cf5-733c5a1dc2d6",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.1",
@@ -2113,52 +2138,6 @@
       "confidence": 0.95,
       "classifiedBy": "llm",
       "notes": "Removed cacheReadPer1m field, plus price increases on input/output."
-    },
-    {
-      "id": "f74dbdeb-202b-453f-9860-303bd45a43ff",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/kwaipilot/kat-coder-pro-v2",
-      "fromSnapshotId": "08229bb4-e56f-4fa1-8a72-0ccdad535156",
-      "toSnapshotId": "1485559c-ae59-4320-a49f-1bfae7bf3fd6",
-      "detectedAt": "2026-06-25T19:45:28.863Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "kwaipilot/kat-coder-pro-v2",
-              "cacheReadPer1m"
-            ],
-            "after": 0.06,
-            "before": 0
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "kwaipilot/kat-coder-pro-v2",
-              "inputPer1m"
-            ],
-            "after": 0.3,
-            "before": 0
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "kwaipilot/kat-coder-pro-v2",
-              "outputPer1m"
-            ],
-            "after": 1.2,
-            "before": 0
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "Price increased from zero to positive, causing higher cost for agents."
     }
   ]
 }

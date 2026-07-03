@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "mcp-tools:huggingface",
-    "fetchedAt": "2026-07-03T07:44:14.579Z",
+    "fetchedAt": "2026-07-03T13:44:06.044Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -159,7 +159,7 @@
           }
         },
         "hf_doc_search": {
-          "description": "Search and Discover Hugging Face Product and Library documentation. Send an empty query to discover structure and navigation instructions. Knowledge up-to-date as at 2 July 2026. Combine with the Product filter to focus results.",
+          "description": "Search and Discover Hugging Face Product and Library documentation. Send an empty query to discover structure and navigation instructions. Knowledge up-to-date as at 3 July 2026. Combine with the Product filter to focus results.",
           "inputSchema": {
             "type": "object",
             "$schema": "http://json-schema.org/draft-07/schema#",
