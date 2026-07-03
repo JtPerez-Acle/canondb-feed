@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "mcp-tools:gitmcp",
-    "fetchedAt": "2026-07-03T13:44:10.675Z",
+    "fetchedAt": "2026-07-03T19:44:03.640Z",
     "stale": false,
     "verified": true,
     "data": {
