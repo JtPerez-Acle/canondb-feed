@@ -2,6 +2,52 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "a424319d-e95c-468b-89d8-f1710e4a3590",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "07a68cdf-b9f6-4f73-92d3-5ce1fda6112e",
+      "toSnapshotId": "f0d421cb-4a34-46f1-9e97-03c9a507d6f5",
+      "detectedAt": "2026-07-04T13:44:08.385Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.156,
+            "before": 0.169
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.84,
+            "before": 0.91
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 2.64,
+            "before": 2.86
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Price decrease for model z-ai/glm-5.2"
+    },
+    {
       "id": "8560e82f-4a0d-49ce-9786-f7f7246ecfc5",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/nvidia/nemotron-3-super-120b-a12b",
@@ -2094,61 +2140,6 @@
       "confidence": 0.95,
       "classifiedBy": "llm",
       "notes": "Price increases for cacheRead, input, and output; output cap increased but that is favorable."
-    },
-    {
-      "id": "9d528589-75a5-4470-9ae9-24d42e02b780",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/moonshotai/kimi-k2.5",
-      "fromSnapshotId": "08229bb4-e56f-4fa1-8a72-0ccdad535156",
-      "toSnapshotId": "1485559c-ae59-4320-a49f-1bfae7bf3fd6",
-      "detectedAt": "2026-06-25T19:45:43.134Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "removed",
-            "path": [
-              "models",
-              "moonshotai/kimi-k2.5",
-              "cacheReadPer1m"
-            ],
-            "before": 0
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "moonshotai/kimi-k2.5",
-              "inputPer1m"
-            ],
-            "after": 0.375,
-            "before": 0
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "moonshotai/kimi-k2.5",
-              "maxOutputTokens"
-            ],
-            "after": null,
-            "before": 256000
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "moonshotai/kimi-k2.5",
-              "outputPer1m"
-            ],
-            "after": 2.025,
-            "before": 0
-          }
-        ]
-      },
-      "severity": "breaking_strict",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "Removed cacheReadPer1m field breaks strict consumers referencing it."
     }
   ]
 }
