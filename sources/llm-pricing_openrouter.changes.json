@@ -2,6 +2,52 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "8560e82f-4a0d-49ce-9786-f7f7246ecfc5",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/nvidia/nemotron-3-super-120b-a12b",
+      "fromSnapshotId": "0712062a-0543-4e57-a3b9-b6a3a85f498a",
+      "toSnapshotId": "07a68cdf-b9f6-4f73-92d3-5ce1fda6112e",
+      "detectedAt": "2026-07-04T07:44:13.698Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "nvidia/nemotron-3-super-120b-a12b",
+              "inputPer1m"
+            ],
+            "after": 0.08,
+            "before": 0.085
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "nvidia/nemotron-3-super-120b-a12b",
+              "maxOutputTokens"
+            ],
+            "after": null,
+            "before": 16384
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "nvidia/nemotron-3-super-120b-a12b",
+              "outputPer1m"
+            ],
+            "after": 0.45,
+            "before": 0.4
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Output price increased from 0.4 to 0.45 per 1M tokens, which silently increases cost for agents. Input price decreased and max output tokens limit removed are favorable but do not offset the breaking nature of the price increase."
+    },
+    {
       "id": "7005b25e-e190-4e61-ba5b-3fb71f581e4f",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -2103,42 +2149,6 @@
       "confidence": 0.95,
       "classifiedBy": "llm",
       "notes": "Removed cacheReadPer1m field breaks strict consumers referencing it."
-    },
-    {
-      "id": "b5a90c9c-0dc7-40df-8fb7-6a5b15f4a981",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/minimax/minimax-m2.7",
-      "fromSnapshotId": "08229bb4-e56f-4fa1-8a72-0ccdad535156",
-      "toSnapshotId": "1485559c-ae59-4320-a49f-1bfae7bf3fd6",
-      "detectedAt": "2026-06-25T19:45:41.967Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "minimax/minimax-m2.7",
-              "inputPer1m"
-            ],
-            "after": 0.18,
-            "before": 0.24
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "minimax/minimax-m2.7",
-              "outputPer1m"
-            ],
-            "after": 0.72,
-            "before": 0.96
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Price decrease, which is favorable to consumers"
     }
   ]
 }

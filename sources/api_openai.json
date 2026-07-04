@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "api:openai",
-    "fetchedAt": "2026-07-04T01:44:17.818Z",
+    "fetchedAt": "2026-07-04T07:44:15.968Z",
     "stale": false,
     "verified": true,
     "data": {
