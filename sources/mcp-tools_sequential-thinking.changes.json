@@ -1,4 +1,56 @@
 {
   "id": "mcp-tools:sequential-thinking",
-  "changes": []
+  "changes": [
+    {
+      "id": "6c76c967-ca67-442b-9a27-bc6cff6d14a7",
+      "sourceId": "mcp-tools:sequential-thinking",
+      "entityId": "tools/sequentialthinking",
+      "fromSnapshotId": "90120e70-24cc-47f7-8360-528165979613",
+      "toSnapshotId": "3e0d39cc-8e17-4500-9133-4cdd6d995dab",
+      "detectedAt": "2026-07-05T02:05:06.659Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "sequentialthinking",
+              "inputSchema",
+              "required",
+              "1"
+            ],
+            "after": "thoughtNumber",
+            "before": "nextThoughtNeeded"
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "sequentialthinking",
+              "inputSchema",
+              "required",
+              "2"
+            ],
+            "after": "totalThoughts",
+            "before": "thoughtNumber"
+          },
+          {
+            "kind": "removed",
+            "path": [
+              "tools",
+              "sequentialthinking",
+              "inputSchema",
+              "required",
+              "3"
+            ],
+            "before": "totalThoughts"
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Required parameters renamed (nextThoughtNeeded→thoughtNumber, thoughtNumber→totalThoughts) and totalThoughts removed; existing agents calling with old names will receive type errors or ignore changes."
+    }
+  ]
 }

@@ -2,6 +2,52 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "8ada225a-2839-442e-bce0-81b58e1ca10e",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "7c9b5650-6852-4964-9a02-c020ea508d1e",
+      "toSnapshotId": "f4a2575b-5d46-4c9e-9d1c-4057ad51ac54",
+      "detectedAt": "2026-07-05T07:44:05.752Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.1352,
+            "before": 0.14014
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.728,
+            "before": 0.7546
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 2.288,
+            "before": 2.3716
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "All three prices for model glm-5.2 decreased, which is a favorable change for consumers."
+    },
+    {
       "id": "aee08006-ba63-410f-8935-cabafdfe5cd7",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -2104,42 +2150,6 @@
       "confidence": 0.8,
       "classifiedBy": "llm",
       "notes": "Prices changed from free to paid (cacheRead 0→0.07, input 0→0.11, output 0→0.8), agent will now incur costs where none existed; maxOutputTokens increased is favorable but the overall semantic change is harmful."
-    },
-    {
-      "id": "535ac54d-cf37-4183-b05d-3f20fd08cc3f",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/qwen/qwen3-30b-a3b-instruct-2507",
-      "fromSnapshotId": "08229bb4-e56f-4fa1-8a72-0ccdad535156",
-      "toSnapshotId": "1485559c-ae59-4320-a49f-1bfae7bf3fd6",
-      "detectedAt": "2026-06-25T19:46:13.124Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3-30b-a3b-instruct-2507",
-              "inputPer1m"
-            ],
-            "after": 0.04815,
-            "before": 0
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3-30b-a3b-instruct-2507",
-              "outputPer1m"
-            ],
-            "after": 0.19305,
-            "before": 0
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "CHANGED: input and output prices increased from $0 to non-zero, silently raising cost for agents."
     }
   ]
 }

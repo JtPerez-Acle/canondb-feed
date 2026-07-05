@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "mcp-tools:everything",
-    "fetchedAt": "2026-07-04T13:00:02.021Z",
+    "fetchedAt": "2026-07-05T02:04:54.447Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -22,8 +22,7 @@
                 "type": "string",
                 "description": "Message to echo"
               }
-            },
-            "additionalProperties": false
+            }
           }
         },
         "get-env": {
@@ -52,8 +51,7 @@
                 "type": "number",
                 "description": "Second number"
               }
-            },
-            "additionalProperties": false
+            }
           }
         },
         "get-tiny-image": {
@@ -77,8 +75,7 @@
                 "minimum": 1,
                 "description": "Number of resource links to return (1-10)"
               }
-            },
-            "additionalProperties": false
+            }
           }
         },
         "get-annotated-message": {
@@ -104,8 +101,7 @@
                 "default": false,
                 "description": "Whether to include an example image"
               }
-            },
-            "additionalProperties": false
+            }
           }
         },
         "gzip-file-as-resource": {
@@ -134,8 +130,7 @@
                 "default": "resourceLink",
                 "description": "How the resulting gzipped file should be returned. 'resourceLink' returns a link to a resource that can be read later, 'resource' returns a full resource object."
               }
-            },
-            "additionalProperties": false
+            }
           }
         },
         "get-resource-reference": {
@@ -157,8 +152,7 @@
                 "type": "string",
                 "default": "Text"
               }
-            },
-            "additionalProperties": false
+            }
           }
         },
         "get-structured-content": {
@@ -179,8 +173,7 @@
                 "type": "string",
                 "description": "Choose city"
               }
-            },
-            "additionalProperties": false
+            }
           }
         },
         "simulate-research-query": {
@@ -201,8 +194,7 @@
                 "default": false,
                 "description": "Simulate an ambiguous query that requires clarification (triggers input_required status)"
               }
-            },
-            "additionalProperties": false
+            }
           }
         },
         "toggle-simulated-logging": {
@@ -237,8 +229,7 @@
                 "default": 10,
                 "description": "Duration of the operation in seconds"
               }
-            },
-            "additionalProperties": false
+            }
           }
         }
       },

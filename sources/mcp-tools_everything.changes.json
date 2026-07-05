@@ -1,4 +1,239 @@
 {
   "id": "mcp-tools:everything",
-  "changes": []
+  "changes": [
+    {
+      "id": "0ff2832b-d08e-451d-bd57-ce9ffff4bc0f",
+      "sourceId": "mcp-tools:everything",
+      "entityId": "tools/trigger-long-running-operation",
+      "fromSnapshotId": "070ce001-2d64-4eae-a571-505a97a2ddb3",
+      "toSnapshotId": "bf01756c-396a-4396-a5fa-17c8f5c7af59",
+      "detectedAt": "2026-07-05T02:05:58.761Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "tools",
+              "trigger-long-running-operation",
+              "inputSchema",
+              "additionalProperties"
+            ],
+            "before": false
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "REMOVED additionalProperties constraint from tool input schema"
+    },
+    {
+      "id": "2a1737e1-68b8-457a-be20-dd1ecb3b659c",
+      "sourceId": "mcp-tools:everything",
+      "entityId": "tools/simulate-research-query",
+      "fromSnapshotId": "070ce001-2d64-4eae-a571-505a97a2ddb3",
+      "toSnapshotId": "bf01756c-396a-4396-a5fa-17c8f5c7af59",
+      "detectedAt": "2026-07-05T02:05:57.095Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "tools",
+              "simulate-research-query",
+              "inputSchema",
+              "additionalProperties"
+            ],
+            "before": false
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 0.6,
+      "classifiedBy": "rules",
+      "notes": "llm fallback (This operation was aborted); field(s) removed"
+    },
+    {
+      "id": "e77b1441-af8e-461e-9291-dfed3dea0d22",
+      "sourceId": "mcp-tools:everything",
+      "entityId": "tools/gzip-file-as-resource",
+      "fromSnapshotId": "070ce001-2d64-4eae-a571-505a97a2ddb3",
+      "toSnapshotId": "bf01756c-396a-4396-a5fa-17c8f5c7af59",
+      "detectedAt": "2026-07-05T02:05:37.084Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "tools",
+              "gzip-file-as-resource",
+              "inputSchema",
+              "additionalProperties"
+            ],
+            "before": false
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.7,
+      "classifiedBy": "llm",
+      "notes": "Removing `additionalProperties: false` relaxes strict input validation; agents may now send undeclared fields silently, causing semantic drift."
+    },
+    {
+      "id": "8176e31b-7bb3-4e07-a258-cd251e98c027",
+      "sourceId": "mcp-tools:everything",
+      "entityId": "tools/get-sum",
+      "fromSnapshotId": "070ce001-2d64-4eae-a571-505a97a2ddb3",
+      "toSnapshotId": "bf01756c-396a-4396-a5fa-17c8f5c7af59",
+      "detectedAt": "2026-07-05T02:05:26.691Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "tools",
+              "get-sum",
+              "inputSchema",
+              "additionalProperties"
+            ],
+            "before": false
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "REMOVED additionalProperties:false — previously prohibited extra properties, now allowed, but removal itself may not break callers; however per strict semantics removing a constraint is breaking_strict."
+    },
+    {
+      "id": "57162b73-44f8-4851-ae5d-3cb7532e48a4",
+      "sourceId": "mcp-tools:everything",
+      "entityId": "tools/get-structured-content",
+      "fromSnapshotId": "070ce001-2d64-4eae-a571-505a97a2ddb3",
+      "toSnapshotId": "bf01756c-396a-4396-a5fa-17c8f5c7af59",
+      "detectedAt": "2026-07-05T02:05:24.445Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "tools",
+              "get-structured-content",
+              "inputSchema",
+              "additionalProperties"
+            ],
+            "before": false
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Removing additionalProperties constrains any previously allowed extra fields; strict consumers that relied on flexible input will break."
+    },
+    {
+      "id": "1411a3b7-d809-436b-87e9-e39b9798edcd",
+      "sourceId": "mcp-tools:everything",
+      "entityId": "tools/get-resource-reference",
+      "fromSnapshotId": "070ce001-2d64-4eae-a571-505a97a2ddb3",
+      "toSnapshotId": "bf01756c-396a-4396-a5fa-17c8f5c7af59",
+      "detectedAt": "2026-07-05T02:05:22.860Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "tools",
+              "get-resource-reference",
+              "inputSchema",
+              "additionalProperties"
+            ],
+            "before": false
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Removing additionalProperties: false relaxes the input schema, allowing extra properties without breaking existing callers."
+    },
+    {
+      "id": "1a9b5337-427b-44b9-9bfd-47cd873aaf17",
+      "sourceId": "mcp-tools:everything",
+      "entityId": "tools/get-resource-links",
+      "fromSnapshotId": "070ce001-2d64-4eae-a571-505a97a2ddb3",
+      "toSnapshotId": "bf01756c-396a-4396-a5fa-17c8f5c7af59",
+      "detectedAt": "2026-07-05T02:05:10.257Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "tools",
+              "get-resource-links",
+              "inputSchema",
+              "additionalProperties"
+            ],
+            "before": false
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Removed additionalProperties: false constraint, allowing extra properties; existing callers that conformed are unaffected."
+    },
+    {
+      "id": "fc6a50c9-c118-4be3-95d7-c8977d0c1d20",
+      "sourceId": "mcp-tools:everything",
+      "entityId": "tools/get-annotated-message",
+      "fromSnapshotId": "070ce001-2d64-4eae-a571-505a97a2ddb3",
+      "toSnapshotId": "bf01756c-396a-4396-a5fa-17c8f5c7af59",
+      "detectedAt": "2026-07-05T02:04:59.407Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "tools",
+              "get-annotated-message",
+              "inputSchema",
+              "additionalProperties"
+            ],
+            "before": false
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Removed additionalProperties: false constraint, which may allow extra properties that were previously rejected, breaking strict consumers."
+    },
+    {
+      "id": "16219bca-44d7-44f0-97ca-002405dc3854",
+      "sourceId": "mcp-tools:everything",
+      "entityId": "tools/echo",
+      "fromSnapshotId": "070ce001-2d64-4eae-a571-505a97a2ddb3",
+      "toSnapshotId": "bf01756c-396a-4396-a5fa-17c8f5c7af59",
+      "detectedAt": "2026-07-05T02:04:57.387Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "tools",
+              "echo",
+              "inputSchema",
+              "additionalProperties"
+            ],
+            "before": false
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Removed additionalProperties: false constraint, which may allow extra properties that were previously rejected, breaking strict consumers."
+    }
+  ]
 }
