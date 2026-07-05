@@ -2,6 +2,52 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "208f65d7-aed0-47b7-9289-2b5b7b5816f9",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "f4a2575b-5d46-4c9e-9d1c-4057ad51ac54",
+      "toSnapshotId": "5e290b3e-94c3-4dc6-b5b7-2130d0710873",
+      "detectedAt": "2026-07-05T13:44:06.558Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.1066,
+            "before": 0.1352
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.574,
+            "before": 0.728
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 1.804,
+            "before": 2.288
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Prices decreased, beneficial to consumers"
+    },
+    {
       "id": "8ada225a-2839-442e-bce0-81b58e1ca10e",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -2094,62 +2140,6 @@
       "confidence": 0.75,
       "classifiedBy": "llm",
       "notes": "Input and output prices changed from 0 to non-zero causing agents to incur unexpected costs; maxOutputTokens set to null may cause truncation."
-    },
-    {
-      "id": "218cad77-617e-42be-bfca-1c6733a7c4e8",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/qwen/qwen3-coder-next",
-      "fromSnapshotId": "08229bb4-e56f-4fa1-8a72-0ccdad535156",
-      "toSnapshotId": "1485559c-ae59-4320-a49f-1bfae7bf3fd6",
-      "detectedAt": "2026-06-25T19:46:18.847Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3-coder-next",
-              "cacheReadPer1m"
-            ],
-            "after": 0.07,
-            "before": 0
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3-coder-next",
-              "inputPer1m"
-            ],
-            "after": 0.11,
-            "before": 0
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3-coder-next",
-              "maxOutputTokens"
-            ],
-            "after": 262144,
-            "before": 64000
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3-coder-next",
-              "outputPer1m"
-            ],
-            "after": 0.8,
-            "before": 0
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.8,
-      "classifiedBy": "llm",
-      "notes": "Prices changed from free to paid (cacheRead 0→0.07, input 0→0.11, output 0→0.8), agent will now incur costs where none existed; maxOutputTokens increased is favorable but the overall semantic change is harmful."
     }
   ]
 }
