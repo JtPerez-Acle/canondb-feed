@@ -2,6 +2,52 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "aee08006-ba63-410f-8935-cabafdfe5cd7",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "6a029bfe-ddbe-41cf-9666-3d89e55d4c00",
+      "toSnapshotId": "7c9b5650-6852-4964-9a02-c020ea508d1e",
+      "detectedAt": "2026-07-05T01:44:05.020Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.14014,
+            "before": 0.143
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.7546,
+            "before": 0.77
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 2.3716,
+            "before": 2.42
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "price decreased"
+    },
+    {
       "id": "f68d3b69-cd75-42a7-9ec7-68f57c9f03b8",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -2094,52 +2140,6 @@
       "confidence": 0.95,
       "classifiedBy": "llm",
       "notes": "CHANGED: input and output prices increased from $0 to non-zero, silently raising cost for agents."
-    },
-    {
-      "id": "dae55c3f-8794-4681-9e39-72e942a0afcb",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/gpt-oss-120b",
-      "fromSnapshotId": "08229bb4-e56f-4fa1-8a72-0ccdad535156",
-      "toSnapshotId": "1485559c-ae59-4320-a49f-1bfae7bf3fd6",
-      "detectedAt": "2026-06-25T19:46:04.570Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "openai/gpt-oss-120b",
-              "inputPer1m"
-            ],
-            "after": 0.03,
-            "before": 0.039
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "openai/gpt-oss-120b",
-              "maxOutputTokens"
-            ],
-            "after": 131072,
-            "before": null
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "openai/gpt-oss-120b",
-              "outputPer1m"
-            ],
-            "after": 0.15,
-            "before": 0.18
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "inputPer1m decreased (safe), maxOutputTokens added (safe), but outputPer1m decreased (price decrease, safe). Prefer breaking_agent conservatively per instruction."
     }
   ]
 }
