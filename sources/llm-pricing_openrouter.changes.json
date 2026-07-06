@@ -2,6 +2,52 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "f5312c94-16fa-473d-a001-f4535f9df4e4",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "68d6c149-18e7-4791-ba5d-07efb54fc958",
+      "toSnapshotId": "bfa5ade2-ea28-4af8-9454-696dec9d1605",
+      "detectedAt": "2026-07-06T01:44:08.018Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.1274,
+            "before": 0.1066
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.686,
+            "before": 0.574
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 2.156,
+            "before": 1.804
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Price increase for model glm-5.2 (cacheRead, input, output per 1M tokens)"
+    },
+    {
       "id": "208f65d7-aed0-47b7-9289-2b5b7b5816f9",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -2085,61 +2131,6 @@
       "confidence": 0.95,
       "classifiedBy": "llm",
       "notes": "Price increases for inputPer1m and outputPer1m from 0 to 0.4 and 1.75 respectively."
-    },
-    {
-      "id": "bfb7c9c4-4d87-4e1b-895e-c68196e50a21",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/qwen/qwen3.5-397b-a17b",
-      "fromSnapshotId": "08229bb4-e56f-4fa1-8a72-0ccdad535156",
-      "toSnapshotId": "1485559c-ae59-4320-a49f-1bfae7bf3fd6",
-      "detectedAt": "2026-06-25T19:46:28.803Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "removed",
-            "path": [
-              "models",
-              "qwen/qwen3.5-397b-a17b",
-              "cacheReadPer1m"
-            ],
-            "before": 0
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3.5-397b-a17b",
-              "inputPer1m"
-            ],
-            "after": 0.385,
-            "before": 0
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3.5-397b-a17b",
-              "maxOutputTokens"
-            ],
-            "after": null,
-            "before": 64000
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3.5-397b-a17b",
-              "outputPer1m"
-            ],
-            "after": 2.45,
-            "before": 0
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.75,
-      "classifiedBy": "llm",
-      "notes": "Input and output prices changed from 0 to non-zero causing agents to incur unexpected costs; maxOutputTokens set to null may cause truncation."
     }
   ]
 }
