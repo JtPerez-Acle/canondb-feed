@@ -2,6 +2,52 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "e7322898-1d11-4d4e-aa77-57b5f374c3a5",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "b90dfdaf-e17a-40cf-881d-fe73f68aa6df",
+      "toSnapshotId": "ba196ed0-e488-4151-9ccd-1a88f7c36455",
+      "detectedAt": "2026-07-06T13:44:16.909Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.16874,
+            "before": 0.1274
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.9086,
+            "before": 0.686
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 2.8556,
+            "before": 2.156
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "All three prices increased, silently raising costs for existing callers."
+    },
+    {
       "id": "f5312c94-16fa-473d-a001-f4535f9df4e4",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -2066,71 +2112,6 @@
       "confidence": 0.9,
       "classifiedBy": "llm",
       "notes": "Prices increased from free to paid for input, output, and cache read; maxOutputTokens change is likely safe."
-    },
-    {
-      "id": "ea07be24-874b-40e2-a905-3602a957e9c9",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/z-ai/glm-4.7",
-      "fromSnapshotId": "08229bb4-e56f-4fa1-8a72-0ccdad535156",
-      "toSnapshotId": "1485559c-ae59-4320-a49f-1bfae7bf3fd6",
-      "detectedAt": "2026-06-25T19:46:46.570Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "z-ai/glm-4.7",
-              "cacheReadPer1m"
-            ],
-            "after": 0.08
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-4.7",
-              "contextLength"
-            ],
-            "after": 202752,
-            "before": 200000
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-4.7",
-              "inputPer1m"
-            ],
-            "after": 0.4,
-            "before": 0
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-4.7",
-              "maxOutputTokens"
-            ],
-            "after": 131072,
-            "before": 128000
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-4.7",
-              "outputPer1m"
-            ],
-            "after": 1.75,
-            "before": 0
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "Price increases for inputPer1m and outputPer1m from 0 to 0.4 and 1.75 respectively."
     }
   ]
 }

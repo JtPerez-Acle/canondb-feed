@@ -1,4 +1,34 @@
 {
   "id": "mcp-tools:context7",
-  "changes": []
+  "changes": [
+    {
+      "id": "3c8ac7d1-f189-4037-9c2a-ad2306d97f75",
+      "sourceId": "mcp-tools:context7",
+      "entityId": "tools/query-docs",
+      "fromSnapshotId": "87280393-675e-468b-92ad-41be0f8f5a83",
+      "toSnapshotId": "bf7daedd-be61-4160-9fc2-90f6bd216c82",
+      "detectedAt": "2026-07-06T13:44:21.897Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "query-docs",
+              "inputSchema",
+              "properties",
+              "query",
+              "description"
+            ],
+            "after": "The question or task you need help with, scoped to a single concept. Be specific and include relevant details, but keep each query to one topic — if the user's question spans multiple distinct concepts, make a separate call per concept instead of combining them, unless the question is about how the concepts interact. Good: 'How to set up authentication with JWT in Express.js' or 'React useEffect cleanup function examples'. Bad (too vague): 'auth' or 'hooks'. Bad (too broad): 'routing and auth and caching in Next.js'. The query is sent to the Context7 API for processing. Do not include any sensitive or confidential information such as API keys, passwords, credentials, personal data, or proprietary code in your query.",
+            "before": "The question or task you need help with. Be specific and include relevant details. Good: 'How to set up authentication with JWT in Express.js' or 'React useEffect cleanup function examples'. Bad: 'auth' or 'hooks'. The query is sent to the Context7 API for processing. Do not include any sensitive or confidential information such as API keys, passwords, credentials, personal data, or proprietary code in your query."
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Only the description of the query parameter was updated; no change to type, required status, or semantics."
+    }
+  ]
 }
