@@ -2,6 +2,52 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "c2660072-a841-44e9-8c56-4e8ab99d43f9",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/tencent/hy3",
+      "fromSnapshotId": "d3401d8f-b9e6-452f-aa7d-ae3d9ea41069",
+      "toSnapshotId": "96576176-47b6-4cde-aa07-4003bb25cf47",
+      "detectedAt": "2026-07-07T07:44:09.000Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "tencent/hy3",
+              "cacheReadPer1m"
+            ],
+            "after": 0.5,
+            "before": 0.035
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "tencent/hy3",
+              "inputPer1m"
+            ],
+            "after": 0.2,
+            "before": 0.14
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "tencent/hy3",
+              "outputPer1m"
+            ],
+            "after": 0.8,
+            "before": 0.58
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "price increase for tencent/hy3 model fields (cacheRead, input, output)"
+    },
+    {
       "id": "0fe90e55-5704-40c9-9bac-cea95be380ef",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/xiaomi/mimo-v2.5",
@@ -1971,42 +2017,6 @@
       "confidence": 1,
       "classifiedBy": "llm",
       "notes": "All three changes are price decreases on moonshotai/kimi-k2.6."
-    },
-    {
-      "id": "30cfddfd-b674-4a6c-9625-bf1eed209874",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/qwen/qwen3.6-27b",
-      "fromSnapshotId": "2d4c8e07-4f78-4080-b746-12c78bce2301",
-      "toSnapshotId": "bba6ba04-957c-4100-935a-adf6cb02f97e",
-      "detectedAt": "2026-06-27T19:44:03.990Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3.6-27b",
-              "inputPer1m"
-            ],
-            "after": 0.2596,
-            "before": 0.2885
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3.6-27b",
-              "outputPer1m"
-            ],
-            "after": 2.385,
-            "before": 2.65
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Price decreased for both input and output."
     }
   ]
 }

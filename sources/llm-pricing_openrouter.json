@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-07T01:44:03.692Z",
+    "fetchedAt": "2026-07-07T07:44:03.765Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -39,10 +39,10 @@
         "tencent/hy3": {
           "name": "Tencent: Hy3",
           "currency": "USD",
-          "inputPer1m": 0.14,
-          "outputPer1m": 0.58,
+          "inputPer1m": 0.2,
+          "outputPer1m": 0.8,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.035,
+          "cacheReadPer1m": 0.5,
           "maxOutputTokens": 131072
         },
         "openai/gpt-4": {
