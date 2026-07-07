@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-07T13:44:03.722Z",
+    "fetchedAt": "2026-07-07T19:44:03.913Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -101,11 +101,11 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.9,
-          "outputPer1m": 2.86,
+          "inputPer1m": 0.93,
+          "outputPer1m": 3,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.17,
-          "maxOutputTokens": 1048576
+          "cacheReadPer1m": 0.18,
+          "maxOutputTokens": 32768
         },
         "mancer/weaver": {
           "name": "Mancer: Weaver (alpha)",
@@ -504,14 +504,6 @@
           "cacheReadPer1m": 0.24,
           "maxOutputTokens": 131072
         },
-        "aion-labs/aion-1.0": {
-          "name": "AionLabs: Aion-1.0",
-          "currency": "USD",
-          "inputPer1m": 4,
-          "outputPer1m": 8,
-          "contextLength": 131072,
-          "maxOutputTokens": 32768
-        },
         "aion-labs/aion-2.0": {
           "name": "AionLabs: Aion-2.0",
           "currency": "USD",
@@ -519,6 +511,15 @@
           "outputPer1m": 1.6,
           "contextLength": 131072,
           "cacheReadPer1m": 0.2,
+          "maxOutputTokens": 32768
+        },
+        "aion-labs/aion-3.0": {
+          "name": "AionLabs: Aion-3.0",
+          "currency": "USD",
+          "inputPer1m": 3,
+          "outputPer1m": 6,
+          "contextLength": 131072,
+          "cacheReadPer1m": 0.75,
           "maxOutputTokens": 32768
         },
         "amazon/nova-pro-v1": {
@@ -1314,12 +1315,13 @@
           "cacheReadPer1m": 0.04,
           "maxOutputTokens": 256000
         },
-        "aion-labs/aion-1.0-mini": {
-          "name": "AionLabs: Aion-1.0-Mini",
+        "aion-labs/aion-3.0-mini": {
+          "name": "AionLabs: Aion-3.0-Mini",
           "currency": "USD",
           "inputPer1m": 0.7,
           "outputPer1m": 1.4,
           "contextLength": 131072,
+          "cacheReadPer1m": 0.18,
           "maxOutputTokens": 32768
         },
         "anthropic/claude-opus-4": {
