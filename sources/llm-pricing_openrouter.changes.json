@@ -2,6 +2,62 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "0118eefa-dbd1-4977-87bd-1dc7f13e38f9",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "96576176-47b6-4cde-aa07-4003bb25cf47",
+      "toSnapshotId": "08b7b6b3-8906-4897-8051-580bd08f5562",
+      "detectedAt": "2026-07-07T13:44:07.784Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.17,
+            "before": 0.16874
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.9,
+            "before": 0.9086
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "maxOutputTokens"
+            ],
+            "after": 1048576,
+            "before": 131072
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 2.86,
+            "before": 2.8556
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.7,
+      "classifiedBy": "llm",
+      "notes": "cacheReadPer1m and outputPer1m increased slightly, inputPer1m decreased, maxOutputTokens increased — mixed changes; net effect may mislead agents on cost."
+    },
+    {
       "id": "c2660072-a841-44e9-8c56-4e8ab99d43f9",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/tencent/hy3",
@@ -1971,52 +2027,6 @@
       "confidence": 0.95,
       "classifiedBy": "llm",
       "notes": "prices decreased"
-    },
-    {
-      "id": "200e0fad-a3b0-44ad-b174-396fccc3265e",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/moonshotai/kimi-k2.6",
-      "fromSnapshotId": "10d89415-7324-4644-a25b-f5fc65e9b265",
-      "toSnapshotId": "7efa6930-1c5f-4d03-8ef4-05532e82c7ef",
-      "detectedAt": "2026-06-29T07:44:08.362Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "moonshotai/kimi-k2.6",
-              "cacheReadPer1m"
-            ],
-            "after": 0.11,
-            "before": 0.144
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "moonshotai/kimi-k2.6",
-              "inputPer1m"
-            ],
-            "after": 0.55,
-            "before": 0.66
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "moonshotai/kimi-k2.6",
-              "outputPer1m"
-            ],
-            "after": 3.2,
-            "before": 3.41
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "All three changes are price decreases on moonshotai/kimi-k2.6."
     }
   ]
 }

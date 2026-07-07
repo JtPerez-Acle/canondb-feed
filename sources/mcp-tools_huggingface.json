@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "mcp-tools:huggingface",
-    "fetchedAt": "2026-07-07T07:44:09.840Z",
+    "fetchedAt": "2026-07-07T13:44:08.637Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -64,6 +64,142 @@
                   "bucket"
                 ],
                 "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "hf_nav": {
+          "description": "Navigate and search Hugging Face Hub entities using hf:// URIs. This first version supports Collections.",
+          "inputSchema": {
+            "type": "object",
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "required": [
+              "op",
+              "uri"
+            ],
+            "properties": {
+              "op": {
+                "enum": [
+                  "ls",
+                  "stat",
+                  "cat",
+                  "find",
+                  "search"
+                ],
+                "type": "string"
+              },
+              "uri": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Hugging Face navigation URI, e.g. hf://collections/huggingface"
+              },
+              "glob": {
+                "type": "string",
+                "description": "Simple glob filter for ls results. Matches entry name and relative path."
+              },
+              "name": {
+                "type": "string",
+                "description": "Glob matched against entry name/basename."
+              },
+              "path": {
+                "type": "string",
+                "description": "Glob matched against entry path relative to the requested URI."
+              },
+              "sort": {
+                "enum": [
+                  "trending",
+                  "upvotes",
+                  "lastModified"
+                ],
+                "type": "string",
+                "default": "trending",
+                "description": "Collection search sort order."
+              },
+              "type": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "dir",
+                      "file",
+                      "collection",
+                      "link"
+                    ],
+                    "type": "string"
+                  },
+                  {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/properties/type/anyOf/0"
+                    }
+                  }
+                ],
+                "description": "Filter by returned entry type."
+              },
+              "limit": {
+                "type": "integer",
+                "default": 100,
+                "maximum": 10000,
+                "minimum": 1
+              },
+              "query": {
+                "type": "string",
+                "description": "Search query. Mapped to the Hub API `q` parameter."
+              },
+              "cursor": {
+                "type": "string",
+                "description": "Opaque continuation cursor returned by a previous truncated response."
+              },
+              "max_depth": {
+                "type": "integer",
+                "default": 2,
+                "maximum": 5,
+                "minimum": 0,
+                "description": "Maximum recursion depth for recursive ls and find."
+              },
+              "recursive": {
+                "type": "boolean",
+                "default": false,
+                "description": "Recursively list virtual descendants. Symlink targets are not followed."
+              },
+              "repo_type": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "model",
+                      "dataset",
+                      "space"
+                    ],
+                    "type": "string"
+                  },
+                  {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/properties/repo_type/anyOf/0"
+                    }
+                  }
+                ],
+                "description": "Filter repo link entries by repo type."
+              },
+              "target_type": {
+                "anyOf": [
+                  {
+                    "enum": [
+                      "repo",
+                      "collection",
+                      "paper",
+                      "bucket"
+                    ],
+                    "type": "string"
+                  },
+                  {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/properties/target_type/anyOf/0"
+                    }
+                  }
+                ],
+                "description": "Filter link entries by target type."
               }
             },
             "additionalProperties": false
@@ -159,7 +295,7 @@
           }
         },
         "hf_doc_search": {
-          "description": "Search and Discover Hugging Face Product and Library documentation. Send an empty query to discover structure and navigation instructions. Knowledge up-to-date as at 3 July 2026. Combine with the Product filter to focus results.",
+          "description": "Search and Discover Hugging Face Product and Library documentation. Send an empty query to discover structure and navigation instructions. Knowledge up-to-date as at 7 July 2026. Combine with the Product filter to focus results.",
           "inputSchema": {
             "type": "object",
             "$schema": "http://json-schema.org/draft-07/schema#",
