@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "mcp-tools:cloudflare-docs",
-    "fetchedAt": "2026-07-06T19:44:24.710Z",
+    "fetchedAt": "2026-07-07T01:44:05.666Z",
     "stale": false,
     "verified": true,
     "data": {
