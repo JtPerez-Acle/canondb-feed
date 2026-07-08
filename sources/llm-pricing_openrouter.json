@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-07T19:44:03.913Z",
+    "fetchedAt": "2026-07-08T01:44:03.940Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -1642,8 +1642,8 @@
           "currency": "USD",
           "inputPer1m": 0.25,
           "outputPer1m": 0.5,
-          "contextLength": 32768,
-          "maxOutputTokens": null
+          "contextLength": 65536,
+          "maxOutputTokens": 65536
         },
         "undi95/remm-slerp-l2-13b": {
           "name": "ReMM SLERP 13B",
@@ -1908,7 +1908,7 @@
           "outputPer1m": 0.18,
           "contextLength": 1048576,
           "cacheReadPer1m": 0.018,
-          "maxOutputTokens": 16384
+          "maxOutputTokens": 65536
         },
         "google/gemma-4-31b-it:free": {
           "name": "Google: Gemma 4 31B (free)",

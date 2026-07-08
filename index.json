@@ -1,11 +1,11 @@
 {
   "service": "canondb",
-  "updatedAt": "2026-07-07T19:44:24.807Z",
+  "updatedAt": "2026-07-08T01:44:28.401Z",
   "sources": [
     {
       "id": "api:digitalocean",
       "sourceUrl": "https://raw.githubusercontent.com/digitalocean/openapi/main/specification/DigitalOcean-public.v2.yaml",
-      "fetchedAt": "2026-07-07T19:44:24.415Z",
+      "fetchedAt": "2026-07-08T01:44:28.014Z",
       "stale": false,
       "recentChanges": 16,
       "file": "sources/api_digitalocean.json",
@@ -14,7 +14,7 @@
     {
       "id": "api:notion",
       "sourceUrl": "https://api.apis.guru/v2/specs/notion.com/1.0.0/openapi.json",
-      "fetchedAt": "2026-07-07T19:44:24.508Z",
+      "fetchedAt": "2026-07-08T01:44:28.122Z",
       "stale": false,
       "recentChanges": 0,
       "file": "sources/api_notion.json",
@@ -23,7 +23,7 @@
     {
       "id": "api:openai",
       "sourceUrl": "https://raw.githubusercontent.com/openai/openai-openapi/master/openapi.yaml",
-      "fetchedAt": "2026-07-07T19:44:22.799Z",
+      "fetchedAt": "2026-07-08T01:44:26.356Z",
       "stale": false,
       "recentChanges": 0,
       "file": "sources/api_openai.json",
@@ -32,7 +32,7 @@
     {
       "id": "api:stripe",
       "sourceUrl": "https://raw.githubusercontent.com/stripe/openapi/master/openapi/spec3.json",
-      "fetchedAt": "2026-07-07T19:44:23.407Z",
+      "fetchedAt": "2026-07-08T01:44:26.829Z",
       "stale": false,
       "recentChanges": 1,
       "file": "sources/api_stripe.json",
@@ -41,7 +41,7 @@
     {
       "id": "llm-pricing:openrouter",
       "sourceUrl": "https://openrouter.ai/api/v1/models",
-      "fetchedAt": "2026-07-07T19:44:03.913Z",
+      "fetchedAt": "2026-07-08T01:44:03.940Z",
       "stale": false,
       "recentChanges": 50,
       "file": "sources/llm-pricing_openrouter.json",
@@ -50,7 +50,7 @@
     {
       "id": "mcp-tools:cloudflare-docs",
       "sourceUrl": "https://docs.mcp.cloudflare.com/mcp",
-      "fetchedAt": "2026-07-07T19:44:21.814Z",
+      "fetchedAt": "2026-07-08T01:44:25.194Z",
       "stale": false,
       "recentChanges": 0,
       "file": "sources/mcp-tools_cloudflare-docs.json",
@@ -59,7 +59,7 @@
     {
       "id": "mcp-tools:context7",
       "sourceUrl": "https://mcp.context7.com/mcp",
-      "fetchedAt": "2026-07-07T19:44:20.618Z",
+      "fetchedAt": "2026-07-08T01:44:12.464Z",
       "stale": false,
       "recentChanges": 1,
       "file": "sources/mcp-tools_context7.json",
@@ -68,7 +68,7 @@
     {
       "id": "mcp-tools:deepwiki",
       "sourceUrl": "https://mcp.deepwiki.com/mcp",
-      "fetchedAt": "2026-07-07T19:44:19.928Z",
+      "fetchedAt": "2026-07-08T01:44:11.728Z",
       "stale": false,
       "recentChanges": 0,
       "file": "sources/mcp-tools_deepwiki.json",
@@ -113,7 +113,7 @@
     {
       "id": "mcp-tools:gitmcp",
       "sourceUrl": "https://gitmcp.io/docs",
-      "fetchedAt": "2026-07-07T19:44:20.801Z",
+      "fetchedAt": "2026-07-08T01:44:24.315Z",
       "stale": false,
       "recentChanges": 0,
       "file": "sources/mcp-tools_gitmcp.json",
@@ -122,7 +122,7 @@
     {
       "id": "mcp-tools:grep",
       "sourceUrl": "https://mcp.grep.app",
-      "fetchedAt": "2026-07-07T19:44:22.393Z",
+      "fetchedAt": "2026-07-08T01:44:26.066Z",
       "stale": false,
       "recentChanges": 0,
       "file": "sources/mcp-tools_grep.json",
@@ -131,9 +131,9 @@
     {
       "id": "mcp-tools:huggingface",
       "sourceUrl": "https://huggingface.co/mcp",
-      "fetchedAt": "2026-07-07T19:44:20.697Z",
+      "fetchedAt": "2026-07-08T01:44:12.549Z",
       "stale": false,
-      "recentChanges": 9,
+      "recentChanges": 11,
       "file": "sources/mcp-tools_huggingface.json",
       "changesFile": "sources/mcp-tools_huggingface.changes.json"
     },
@@ -149,7 +149,7 @@
     {
       "id": "mcp-tools:microsoft-learn",
       "sourceUrl": "https://learn.microsoft.com/api/mcp",
-      "fetchedAt": "2026-07-07T19:44:21.933Z",
+      "fetchedAt": "2026-07-08T01:44:25.319Z",
       "stale": false,
       "recentChanges": 0,
       "file": "sources/mcp-tools_microsoft-learn.json",

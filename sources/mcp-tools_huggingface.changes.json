@@ -2,6 +2,337 @@
   "id": "mcp-tools:huggingface",
   "changes": [
     {
+      "id": "27862222-8634-4d18-9e3e-27c3c27fa683",
+      "sourceId": "mcp-tools:huggingface",
+      "entityId": "tools/hf_nav",
+      "fromSnapshotId": "4cb93170-3e72-437e-8791-565a04f13ebe",
+      "toSnapshotId": "848e4ed0-32a8-411f-b708-1a7b67b1d75b",
+      "detectedAt": "2026-07-08T01:44:24.299Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "tools",
+              "hf_nav"
+            ],
+            "before": {
+              "description": "Navigate and search Hugging Face Hub entities using hf:// URIs. This first version supports Collections.",
+              "inputSchema": {
+                "type": "object",
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "required": [
+                  "op",
+                  "uri"
+                ],
+                "properties": {
+                  "op": {
+                    "enum": [
+                      "ls",
+                      "stat",
+                      "cat",
+                      "find",
+                      "search"
+                    ],
+                    "type": "string"
+                  },
+                  "uri": {
+                    "type": "string",
+                    "minLength": 1,
+                    "description": "Hugging Face navigation URI, e.g. hf://collections/huggingface"
+                  },
+                  "glob": {
+                    "type": "string",
+                    "description": "Simple glob filter for ls results. Matches entry name and relative path."
+                  },
+                  "name": {
+                    "type": "string",
+                    "description": "Glob matched against entry name/basename."
+                  },
+                  "path": {
+                    "type": "string",
+                    "description": "Glob matched against entry path relative to the requested URI."
+                  },
+                  "sort": {
+                    "enum": [
+                      "trending",
+                      "upvotes",
+                      "lastModified"
+                    ],
+                    "type": "string",
+                    "default": "trending",
+                    "description": "Collection search sort order."
+                  },
+                  "type": {
+                    "anyOf": [
+                      {
+                        "enum": [
+                          "dir",
+                          "file",
+                          "collection",
+                          "link"
+                        ],
+                        "type": "string"
+                      },
+                      {
+                        "type": "array",
+                        "items": {
+                          "$ref": "#/properties/type/anyOf/0"
+                        }
+                      }
+                    ],
+                    "description": "Filter by returned entry type."
+                  },
+                  "limit": {
+                    "type": "integer",
+                    "default": 100,
+                    "maximum": 10000,
+                    "minimum": 1
+                  },
+                  "query": {
+                    "type": "string",
+                    "description": "Search query. Mapped to the Hub API `q` parameter."
+                  },
+                  "cursor": {
+                    "type": "string",
+                    "description": "Opaque continuation cursor returned by a previous truncated response."
+                  },
+                  "max_depth": {
+                    "type": "integer",
+                    "default": 2,
+                    "maximum": 5,
+                    "minimum": 0,
+                    "description": "Maximum recursion depth for recursive ls and find."
+                  },
+                  "recursive": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Recursively list virtual descendants. Symlink targets are not followed."
+                  },
+                  "repo_type": {
+                    "anyOf": [
+                      {
+                        "enum": [
+                          "model",
+                          "dataset",
+                          "space"
+                        ],
+                        "type": "string"
+                      },
+                      {
+                        "type": "array",
+                        "items": {
+                          "$ref": "#/properties/repo_type/anyOf/0"
+                        }
+                      }
+                    ],
+                    "description": "Filter repo link entries by repo type."
+                  },
+                  "target_type": {
+                    "anyOf": [
+                      {
+                        "enum": [
+                          "repo",
+                          "collection",
+                          "paper",
+                          "bucket"
+                        ],
+                        "type": "string"
+                      },
+                      {
+                        "type": "array",
+                        "items": {
+                          "$ref": "#/properties/target_type/anyOf/0"
+                        }
+                      }
+                    ],
+                    "description": "Filter link entries by target type."
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "REMOVED tool hf_nav: existing callers will fail calling this endpoint."
+    },
+    {
+      "id": "cd4f2ff9-4308-4709-995c-8a6a2a8af1d9",
+      "sourceId": "mcp-tools:huggingface",
+      "entityId": "tools/hf_fs",
+      "fromSnapshotId": "4cb93170-3e72-437e-8791-565a04f13ebe",
+      "toSnapshotId": "848e4ed0-32a8-411f-b708-1a7b67b1d75b",
+      "detectedAt": "2026-07-08T01:44:21.421Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "hf_fs",
+              "description"
+            ],
+            "after": "List, read, find, or search Hugging Face repos, buckets, files, and collections. Anonymous requests must include an owner.",
+            "before": "List or read files from a Hugging Face repo or bucket. Anonymous requests must include an owner."
+          },
+          {
+            "kind": "added",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "entry_type",
+              "enum",
+              "4"
+            ],
+            "after": "collection"
+          },
+          {
+            "kind": "added",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "entry_type",
+              "enum",
+              "5"
+            ],
+            "after": "link"
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "limit",
+              "description"
+            ],
+            "after": "ls/search max result size. ls default 1000; search default 100. 0 means the maximum allowed.",
+            "before": "ls max list size. Default 1000. 0 means the maximum allowed 10000."
+          },
+          {
+            "kind": "added",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "name"
+            ],
+            "after": {
+              "type": "string",
+              "description": "find glob matched against entry name/basename."
+            }
+          },
+          {
+            "kind": "added",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "op",
+              "enum",
+              "3"
+            ],
+            "after": "find"
+          },
+          {
+            "kind": "added",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "op",
+              "enum",
+              "4"
+            ],
+            "after": "search"
+          },
+          {
+            "kind": "added",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "path"
+            ],
+            "after": {
+              "type": "string",
+              "description": "find glob matched against entry path relative to the requested URI."
+            }
+          },
+          {
+            "kind": "added",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "query"
+            ],
+            "after": {
+              "type": "string",
+              "description": "Search query for hf://models, hf://datasets, hf://spaces, or hf://collections."
+            }
+          },
+          {
+            "kind": "added",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "sort"
+            ],
+            "after": {
+              "enum": [
+                "createdAt",
+                "downloads",
+                "likes",
+                "lastModified",
+                "likes30d",
+                "trendingScore",
+                "mainSize",
+                "id",
+                "trending",
+                "upvotes"
+              ],
+              "type": "string",
+              "description": "Search/list sort field."
+            }
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "uri",
+              "description"
+            ],
+            "after": "Hugging Face URI in the form hf://models|datasets|spaces|buckets/OWNER[/NAME[/PATH]] or hf://collections[/OWNER[/SLUG]]. ",
+            "before": "Hugging Face URI in the form hf://models|datasets|spaces|buckets/OWNER[/NAME[/PATH]]. "
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.75,
+      "classifiedBy": "llm",
+      "notes": "Existing callers pass only 'ls' op, which still works. New enum members 'find'/'search' are additive; description is expanded; optional fields added. No field removed or made required; type unchanged."
+    },
+    {
       "id": "49d9ecdf-3263-44b8-a3be-6512cf893bb0",
       "sourceId": "mcp-tools:huggingface",
       "entityId": "tools/hf_nav",
