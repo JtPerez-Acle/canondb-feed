@@ -2,6 +2,36 @@
   "id": "api:digitalocean",
   "changes": [
     {
+      "id": "e07e8975-f7e7-4c02-8ffa-498bd0a14a33",
+      "sourceId": "api:digitalocean",
+      "entityId": "operations/PATCH /v2/gen-ai/model_evaluation_runs/{eval_run_uuid}",
+      "fromSnapshotId": "c6495880-8508-4430-a238-0af06cdad0e8",
+      "toSnapshotId": "c6b33769-d518-4e05-819d-7f035c9ccaf5",
+      "detectedAt": "2026-07-08T13:44:12.833Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "operations",
+              "PATCH /v2/gen-ai/model_evaluation_runs/{eval_run_uuid}"
+            ],
+            "after": {
+              "summary": null,
+              "responses": [],
+              "parameters": [],
+              "operationId": null,
+              "requestBody": null
+            }
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Added new PATCH endpoint."
+    },
+    {
       "id": "d885a867-ac0c-4b90-b26c-6ff729d85bb2",
       "sourceId": "api:digitalocean",
       "entityId": "operations/PUT /v2/gen-ai/custom_evaluation_metrics/{metric_uuid}",

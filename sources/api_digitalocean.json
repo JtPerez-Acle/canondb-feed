@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "api:digitalocean",
-    "fetchedAt": "2026-07-08T07:44:08.263Z",
+    "fetchedAt": "2026-07-08T13:44:10.190Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -3457,6 +3457,13 @@
           "requestBody": null
         },
         "GET /v2/reserved_ips/{reserved_ip}/actions/{action_id}": {
+          "summary": null,
+          "responses": [],
+          "parameters": [],
+          "operationId": null,
+          "requestBody": null
+        },
+        "PATCH /v2/gen-ai/model_evaluation_runs/{eval_run_uuid}": {
           "summary": null,
           "responses": [],
           "parameters": [],
