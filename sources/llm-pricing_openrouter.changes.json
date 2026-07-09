@@ -2,6 +2,93 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "fa21cab8-b5b2-4cd0-9f7e-26294d857430",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "f4357970-0f4d-4700-aee0-d80a5e7ec42e",
+      "toSnapshotId": "b84f2472-ecbd-407a-9373-5f86c369057b",
+      "detectedAt": "2026-07-09T01:44:18.315Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.18,
+            "before": 0.078
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.9,
+            "before": 0.42
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "maxOutputTokens"
+            ],
+            "after": 1048576,
+            "before": 128000
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 3.08,
+            "before": 1.32
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Prices increased (cacheRead, input, output) — agent incurs higher cost silently."
+    },
+    {
+      "id": "2a36755a-4a37-444d-a92a-39b2fdec975e",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/switchpoint/router",
+      "fromSnapshotId": "f4357970-0f4d-4700-aee0-d80a5e7ec42e",
+      "toSnapshotId": "b84f2472-ecbd-407a-9373-5f86c369057b",
+      "detectedAt": "2026-07-09T01:44:07.714Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "models",
+              "switchpoint/router"
+            ],
+            "before": {
+              "name": "Switchpoint Router",
+              "currency": "USD",
+              "inputPer1m": 0.85,
+              "outputPer1m": 3.4,
+              "contextLength": 131072,
+              "maxOutputTokens": null
+            }
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "REMOVED model 'switchpoint/router' — callers referencing that model id will fail."
+    },
+    {
       "id": "a5e1eaee-d653-4d93-bfff-452b7e245868",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/~x-ai/grok-latest",
@@ -1941,94 +2028,6 @@
       "confidence": 0.95,
       "classifiedBy": "llm",
       "notes": "Removed cacheReadPer1m field and increased input and output prices."
-    },
-    {
-      "id": "54071e0b-7d48-4158-afbe-6579398ba194",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/microsoft/phi-4-mini-instruct",
-      "fromSnapshotId": "5d81812a-3de5-48c2-9ff0-ab5319d47f13",
-      "toSnapshotId": "2cfe2771-a3f1-4e20-b370-621c96594f72",
-      "detectedAt": "2026-07-01T01:44:04.851Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "removed",
-            "path": [
-              "models",
-              "microsoft/phi-4-mini-instruct"
-            ],
-            "before": {
-              "name": "Microsoft: Phi 4 Mini Instruct",
-              "currency": "USD",
-              "inputPer1m": 0.08,
-              "outputPer1m": 0.35,
-              "contextLength": 131072,
-              "cacheReadPer1m": 0.08,
-              "maxOutputTokens": 128000
-            }
-          }
-        ]
-      },
-      "severity": "breaking_strict",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Model removed, breaking strict consumers that reference it"
-    },
-    {
-      "id": "147502ed-1800-4325-8160-d2092e93961d",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/~anthropic/claude-sonnet-latest",
-      "fromSnapshotId": "54754ab6-538b-4645-b8d4-a2ef4847b186",
-      "toSnapshotId": "5d81812a-3de5-48c2-9ff0-ab5319d47f13",
-      "detectedAt": "2026-06-30T19:44:36.626Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "~anthropic/claude-sonnet-latest",
-              "cacheReadPer1m"
-            ],
-            "after": 0.2,
-            "before": 0.3
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "~anthropic/claude-sonnet-latest",
-              "cacheWritePer1m"
-            ],
-            "after": 2.5,
-            "before": 3.75
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "~anthropic/claude-sonnet-latest",
-              "inputPer1m"
-            ],
-            "after": 2,
-            "before": 3
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "~anthropic/claude-sonnet-latest",
-              "outputPer1m"
-            ],
-            "after": 10,
-            "before": 15
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "All prices decreased, which is favorable to consumers."
     }
   ]
 }
