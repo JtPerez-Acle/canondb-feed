@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-09T01:44:04.444Z",
+    "fetchedAt": "2026-07-09T07:44:04.404Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -906,14 +906,6 @@
           "outputPer1m": 0.1,
           "contextLength": 131072,
           "maxOutputTokens": 16384
-        },
-        "liquid/lfm-2-24b-a2b": {
-          "name": "LiquidAI: LFM2-24B-A2B",
-          "currency": "USD",
-          "inputPer1m": 0.03,
-          "outputPer1m": 0.12,
-          "contextLength": 128000,
-          "maxOutputTokens": null
         },
         "minimax/minimax-m2.1": {
           "name": "MiniMax: MiniMax M2.1",

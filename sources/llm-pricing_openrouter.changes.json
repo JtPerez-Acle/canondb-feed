@@ -2,6 +2,37 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "59d2cf0e-9a40-44d4-8b7f-523977e7e219",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/liquid/lfm-2-24b-a2b",
+      "fromSnapshotId": "b84f2472-ecbd-407a-9373-5f86c369057b",
+      "toSnapshotId": "84028c8c-d477-43ae-bad4-5086a6db4f2d",
+      "detectedAt": "2026-07-09T07:44:08.601Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "models",
+              "liquid/lfm-2-24b-a2b"
+            ],
+            "before": {
+              "name": "LiquidAI: LFM2-24B-A2B",
+              "currency": "USD",
+              "inputPer1m": 0.03,
+              "outputPer1m": 0.12,
+              "contextLength": 128000,
+              "maxOutputTokens": null
+            }
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Model id 'models.liquid/lfm-2-24b-a2b' removed"
+    },
+    {
       "id": "fa21cab8-b5b2-4cd0-9f7e-26294d857430",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -1973,61 +2004,6 @@
       "confidence": 0.95,
       "classifiedBy": "llm",
       "notes": "maxOutputTokens reduced from 196608 to 131072; outputPer1m increased from 1 to 1.02."
-    },
-    {
-      "id": "eacb3ea0-c9cc-4114-8223-d0b9b52ce216",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/qwen/qwen3-235b-a22b-thinking-2507",
-      "fromSnapshotId": "5d81812a-3de5-48c2-9ff0-ab5319d47f13",
-      "toSnapshotId": "2cfe2771-a3f1-4e20-b370-621c96594f72",
-      "detectedAt": "2026-07-01T01:44:13.152Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "removed",
-            "path": [
-              "models",
-              "qwen/qwen3-235b-a22b-thinking-2507",
-              "cacheReadPer1m"
-            ],
-            "before": 0.1
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3-235b-a22b-thinking-2507",
-              "inputPer1m"
-            ],
-            "after": 0.1495,
-            "before": 0.1
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3-235b-a22b-thinking-2507",
-              "maxOutputTokens"
-            ],
-            "after": null,
-            "before": 262144
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3-235b-a22b-thinking-2507",
-              "outputPer1m"
-            ],
-            "after": 1.495,
-            "before": 0.1
-          }
-        ]
-      },
-      "severity": "breaking_strict",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "Removed cacheReadPer1m field and increased input and output prices."
     }
   ]
 }
