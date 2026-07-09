@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-09T13:44:04.547Z",
+    "fetchedAt": "2026-07-09T19:44:04.793Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -101,11 +101,11 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.93,
-          "outputPer1m": 3,
+          "inputPer1m": 0.54,
+          "outputPer1m": 1.76,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.18,
-          "maxOutputTokens": 32768
+          "cacheReadPer1m": 0.1,
+          "maxOutputTokens": 101376
         },
         "mancer/weaver": {
           "name": "Mancer: Weaver (alpha)",
@@ -657,6 +657,16 @@
           "contextLength": 1050000,
           "maxOutputTokens": 128000
         },
+        "openai/gpt-5.6-sol": {
+          "name": "OpenAI: GPT-5.6 Sol",
+          "currency": "USD",
+          "inputPer1m": 5,
+          "outputPer1m": 30,
+          "contextLength": 1050000,
+          "cacheReadPer1m": 0.5,
+          "cacheWritePer1m": 6.25,
+          "maxOutputTokens": 128000
+        },
         "openai/gpt-oss-20b": {
           "name": "OpenAI: gpt-oss-20b",
           "currency": "USD",
@@ -698,6 +708,7 @@
           "outputPer1m": 30,
           "contextLength": 1050000,
           "cacheReadPer1m": 0.5,
+          "cacheWritePer1m": 6.25,
           "maxOutputTokens": 128000
         },
         "amazon/nova-lite-v1": {
@@ -797,13 +808,23 @@
           "cacheReadPer1m": 0.02,
           "maxOutputTokens": 128000
         },
+        "openai/gpt-5.6-luna": {
+          "name": "OpenAI: GPT-5.6 Luna",
+          "currency": "USD",
+          "inputPer1m": 1,
+          "outputPer1m": 6,
+          "contextLength": 1050000,
+          "cacheReadPer1m": 0.1,
+          "cacheWritePer1m": 1.25,
+          "maxOutputTokens": 128000
+        },
         "openai/gpt-oss-120b": {
           "name": "OpenAI: gpt-oss-120b",
           "currency": "USD",
-          "inputPer1m": 0.03,
-          "outputPer1m": 0.15,
+          "inputPer1m": 0.036,
+          "outputPer1m": 0.18,
           "contextLength": 131072,
-          "maxOutputTokens": 131072
+          "maxOutputTokens": null
         },
         "openai/o3-mini-high": {
           "name": "OpenAI: o3 Mini High",
@@ -919,16 +940,17 @@
         "minimax/minimax-m2.5": {
           "name": "MiniMax: MiniMax M2.5",
           "currency": "USD",
-          "inputPer1m": 0.12,
-          "outputPer1m": 0.48,
+          "inputPer1m": 0.15,
+          "outputPer1m": 0.9,
           "contextLength": 204800,
+          "cacheReadPer1m": 0.05,
           "maxOutputTokens": 196608
         },
         "minimax/minimax-m2.7": {
           "name": "MiniMax: MiniMax M2.7",
           "currency": "USD",
-          "inputPer1m": 0.18,
-          "outputPer1m": 0.72,
+          "inputPer1m": 0.24,
+          "outputPer1m": 0.96,
           "contextLength": 204800,
           "maxOutputTokens": 196608
         },
@@ -991,6 +1013,16 @@
           "outputPer1m": 14,
           "contextLength": 400000,
           "cacheReadPer1m": 0.175,
+          "maxOutputTokens": 128000
+        },
+        "openai/gpt-5.6-terra": {
+          "name": "OpenAI: GPT-5.6 Terra",
+          "currency": "USD",
+          "inputPer1m": 2.5,
+          "outputPer1m": 15,
+          "contextLength": 1050000,
+          "cacheReadPer1m": 0.25,
+          "cacheWritePer1m": 3.125,
           "maxOutputTokens": 128000
         },
         "perplexity/sonar-pro": {
@@ -1230,6 +1262,16 @@
           "cacheReadPer1m": 2,
           "maxOutputTokens": 128000
         },
+        "openai/gpt-5.6-sol-pro": {
+          "name": "OpenAI: GPT-5.6 Sol Pro",
+          "currency": "USD",
+          "inputPer1m": 5,
+          "outputPer1m": 30,
+          "contextLength": 1050000,
+          "cacheReadPer1m": 0.5,
+          "cacheWritePer1m": 6.25,
+          "maxOutputTokens": 128000
+        },
         "openai/gpt-chat-latest": {
           "name": "OpenAI: GPT Chat Latest",
           "currency": "USD",
@@ -1416,6 +1458,16 @@
           "cacheReadPer1m": 0.25,
           "maxOutputTokens": 128000
         },
+        "openai/gpt-5.6-luna-pro": {
+          "name": "OpenAI: GPT-5.6 Luna Pro",
+          "currency": "USD",
+          "inputPer1m": 1,
+          "outputPer1m": 6,
+          "contextLength": 1050000,
+          "cacheReadPer1m": 0.1,
+          "cacheWritePer1m": 1.25,
+          "maxOutputTokens": 128000
+        },
         "openai/gpt-oss-20b:free": {
           "name": "OpenAI: gpt-oss-20b (free)",
           "currency": "USD",
@@ -1597,6 +1649,16 @@
           "cacheReadPer1m": 0.125,
           "maxOutputTokens": 128000
         },
+        "openai/gpt-5.6-terra-pro": {
+          "name": "OpenAI: GPT-5.6 Terra Pro",
+          "currency": "USD",
+          "inputPer1m": 2.5,
+          "outputPer1m": 15,
+          "contextLength": 1050000,
+          "cacheReadPer1m": 0.25,
+          "cacheWritePer1m": 3.125,
+          "maxOutputTokens": 128000
+        },
         "openai/gpt-oss-120b:free": {
           "name": "OpenAI: gpt-oss-120b (free)",
           "currency": "USD",
@@ -1746,11 +1808,11 @@
         "moonshotai/kimi-k2.7-code": {
           "name": "MoonshotAI: Kimi K2.7 Code",
           "currency": "USD",
-          "inputPer1m": 0.74,
-          "outputPer1m": 3.5,
+          "inputPer1m": 0.72,
+          "outputPer1m": 3.49,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.15,
-          "maxOutputTokens": 16384
+          "cacheReadPer1m": 0.159,
+          "maxOutputTokens": 262144
         },
         "nousresearch/hermes-4-70b": {
           "name": "Nous: Hermes 4 70B",
