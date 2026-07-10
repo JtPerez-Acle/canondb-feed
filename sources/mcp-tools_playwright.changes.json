@@ -2,6 +2,47 @@
   "id": "mcp-tools:playwright",
   "changes": [
     {
+      "id": "459a2c5f-9146-4433-a08f-a87a8bb11e1d",
+      "sourceId": "mcp-tools:playwright",
+      "entityId": "tools/browser_find",
+      "fromSnapshotId": "d07f67c7-bc3f-4cbf-8f60-c80976ca049a",
+      "toSnapshotId": "fb4dc086-ccfb-4ac9-acb3-a294bb4689ae",
+      "detectedAt": "2026-07-10T01:56:37.813Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "tools",
+              "browser_find"
+            ],
+            "after": {
+              "description": "Search the accessibility snapshot of the current page for text or a regular expression. Returns matching snapshot nodes with a few lines of surrounding context (like search snippets), each shown under its path from the root of the tree, which is cheaper than capturing the whole snapshot when you only need to locate an element and its ref.",
+              "inputSchema": {
+                "type": "object",
+                "$schema": "https://json-schema.org/draft/2020-12/schema",
+                "properties": {
+                  "text": {
+                    "type": "string",
+                    "description": "Plain text to search for in the page snapshot (case-insensitive substring match). Provide either text or regex, not both."
+                  },
+                  "regex": {
+                    "type": "string",
+                    "description": "Regular expression to search for in the page snapshot. Matching is case-sensitive by default; wrap the pattern in slashes to add flags, e.g. \"/error/i\" for case-insensitive. Provide either text or regex, not both."
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Added a new tool which is backward-compatible."
+    },
+    {
       "id": "4ebf1925-36fa-43dd-be0e-f3e39fe5dc3e",
       "sourceId": "mcp-tools:playwright",
       "entityId": "tools/browser_take_screenshot",
