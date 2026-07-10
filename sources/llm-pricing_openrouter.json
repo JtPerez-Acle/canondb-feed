@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-09T19:44:04.793Z",
+    "fetchedAt": "2026-07-10T01:44:04.071Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -101,11 +101,11 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.54,
-          "outputPer1m": 1.76,
+          "inputPer1m": 0.532,
+          "outputPer1m": 1.672,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.1,
-          "maxOutputTokens": 101376
+          "cacheReadPer1m": 0.0988,
+          "maxOutputTokens": 131072
         },
         "mancer/weaver": {
           "name": "Mancer: Weaver (alpha)",
@@ -579,7 +579,7 @@
           "outputPer1m": 1.2,
           "contextLength": 1048576,
           "cacheReadPer1m": 0.06,
-          "maxOutputTokens": 512000
+          "maxOutputTokens": 131072
         },
         "moonshotai/kimi-k2": {
           "name": "MoonshotAI: Kimi K2 0711",
@@ -966,10 +966,10 @@
         "moonshotai/kimi-k2.6": {
           "name": "MoonshotAI: Kimi K2.6",
           "currency": "USD",
-          "inputPer1m": 0.65,
+          "inputPer1m": 0.66,
           "outputPer1m": 3.41,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.14,
+          "cacheReadPer1m": 0.15,
           "maxOutputTokens": 262144
         },
         "morph/morph-v3-large": {
@@ -1520,10 +1520,10 @@
         "~moonshotai/kimi-latest": {
           "name": "MoonshotAI Kimi Latest",
           "currency": "USD",
-          "inputPer1m": 0.65,
+          "inputPer1m": 0.66,
           "outputPer1m": 3.41,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.14,
+          "cacheReadPer1m": 0.15,
           "maxOutputTokens": 262144
         },
         "~openai/gpt-mini-latest": {
@@ -2990,6 +2990,14 @@
           "outputPer1m": 0,
           "contextLength": 256000,
           "maxOutputTokens": 65536
+        },
+        "cognitivecomputations/dolphin-mistral-24b-venice-edition": {
+          "name": "Venice: Uncensored",
+          "currency": "USD",
+          "inputPer1m": 0.2,
+          "outputPer1m": 0.9,
+          "contextLength": 128000,
+          "maxOutputTokens": 8192
         },
         "cognitivecomputations/dolphin-mistral-24b-venice-edition:free": {
           "name": "Venice: Uncensored (free)",
