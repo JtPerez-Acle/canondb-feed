@@ -4,7 +4,7 @@ The canonical truth layer for the APIs & tools AI agents call: the **current
 schema** and **classified breaking-changes** (breaking for strict consumers,
 breaking for agents, or safe) for a curated set of sources.
 
-This repo is auto-generated. Last updated: **2026-07-10T13:44:14.966Z**.
+This repo is auto-generated. Last updated: **2026-07-10T19:44:28.882Z**.
 
 - Live API: `https://canondb.dev`
 - Each `current` carries `fetched_at` + a `stale` flag — we never serve stale as current.
@@ -21,7 +21,7 @@ This repo is auto-generated. Last updated: **2026-07-10T13:44:14.966Z**.
 | `mcp-tools:deepwiki` | [current](sources/mcp-tools_deepwiki.json) · [changes](sources/mcp-tools_deepwiki.changes.json) | 0 | ok |
 | `mcp-tools:everything` | [current](sources/mcp-tools_everything.json) · [changes](sources/mcp-tools_everything.changes.json) | 9 | ok |
 | `mcp-tools:fetch` | [current](sources/mcp-tools_fetch.json) · [changes](sources/mcp-tools_fetch.changes.json) | 0 | ok |
-| `mcp-tools:filesystem` | [current](sources/mcp-tools_filesystem.json) · [changes](sources/mcp-tools_filesystem.changes.json) | 0 | ok |
+| `mcp-tools:filesystem` | [current](sources/mcp-tools_filesystem.json) · [changes](sources/mcp-tools_filesystem.changes.json) | 1 | ok |
 | `mcp-tools:git` | [current](sources/mcp-tools_git.json) · [changes](sources/mcp-tools_git.changes.json) | 0 | ok |
 | `mcp-tools:gitmcp` | [current](sources/mcp-tools_gitmcp.json) · [changes](sources/mcp-tools_gitmcp.changes.json) | 0 | ok |
 | `mcp-tools:grep` | [current](sources/mcp-tools_grep.json) · [changes](sources/mcp-tools_grep.changes.json) | 0 | ok |
