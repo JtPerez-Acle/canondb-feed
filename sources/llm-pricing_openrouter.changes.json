@@ -2,6 +2,62 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "c7e7b51d-3214-4e32-a195-02da0567c408",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "6d6f85a6-fab1-4188-887d-a65679ff1ac6",
+      "toSnapshotId": "fef17cf2-de1d-48ab-afdc-c2ca92fd370b",
+      "detectedAt": "2026-07-10T13:44:10.765Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.143,
+            "before": 0.18
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.77,
+            "before": 0.92
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "maxOutputTokens"
+            ],
+            "after": 131072,
+            "before": 1048576
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 2.42,
+            "before": 3
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "maxOutputTokens reduced from 1,048,576 to 131,072, a significant output cap reduction, which may silently truncate agent outputs."
+    },
+    {
       "id": "27de45e1-f668-4373-ab3a-f312e3cfff22",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -1845,52 +1901,6 @@
       "confidence": 0.95,
       "classifiedBy": "llm",
       "notes": "All three prices increased, silently raising costs for existing callers."
-    },
-    {
-      "id": "f5312c94-16fa-473d-a001-f4535f9df4e4",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/z-ai/glm-5.2",
-      "fromSnapshotId": "68d6c149-18e7-4791-ba5d-07efb54fc958",
-      "toSnapshotId": "bfa5ade2-ea28-4af8-9454-696dec9d1605",
-      "detectedAt": "2026-07-06T01:44:08.018Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "cacheReadPer1m"
-            ],
-            "after": 0.1274,
-            "before": 0.1066
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "inputPer1m"
-            ],
-            "after": 0.686,
-            "before": 0.574
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "outputPer1m"
-            ],
-            "after": 2.156,
-            "before": 1.804
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "Price increase for model glm-5.2 (cacheRead, input, output per 1M tokens)"
     }
   ]
 }
