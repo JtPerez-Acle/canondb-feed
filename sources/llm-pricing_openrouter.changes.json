@@ -2,6 +2,42 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "46288b11-4747-4d35-a84f-8fdd3b9add0a",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/moonshotai/kimi-k2.7-code",
+      "fromSnapshotId": "82e16e87-6b98-4ef6-94af-e4323a66357a",
+      "toSnapshotId": "7496330e-facc-4a23-8066-117af93b84ef",
+      "detectedAt": "2026-07-11T19:44:12.160Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.7-code",
+              "cacheReadPer1m"
+            ],
+            "after": 0.15,
+            "before": 0.159
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.7-code",
+              "outputPer1m"
+            ],
+            "after": 3.5,
+            "before": 3.49
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Output price increased from 3.49 to 3.5; cache read price decreased, but net change includes an increase that may silently raise costs."
+    },
+    {
       "id": "34c09d3c-d7fb-4862-933a-96829f27d6f8",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -1921,62 +1957,6 @@
       "confidence": 1,
       "classifiedBy": "llm",
       "notes": "model removed"
-    },
-    {
-      "id": "0118eefa-dbd1-4977-87bd-1dc7f13e38f9",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/z-ai/glm-5.2",
-      "fromSnapshotId": "96576176-47b6-4cde-aa07-4003bb25cf47",
-      "toSnapshotId": "08b7b6b3-8906-4897-8051-580bd08f5562",
-      "detectedAt": "2026-07-07T13:44:07.784Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "cacheReadPer1m"
-            ],
-            "after": 0.17,
-            "before": 0.16874
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "inputPer1m"
-            ],
-            "after": 0.9,
-            "before": 0.9086
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "maxOutputTokens"
-            ],
-            "after": 1048576,
-            "before": 131072
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "outputPer1m"
-            ],
-            "after": 2.86,
-            "before": 2.8556
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.7,
-      "classifiedBy": "llm",
-      "notes": "cacheReadPer1m and outputPer1m increased slightly, inputPer1m decreased, maxOutputTokens increased — mixed changes; net effect may mislead agents on cost."
     }
   ]
 }

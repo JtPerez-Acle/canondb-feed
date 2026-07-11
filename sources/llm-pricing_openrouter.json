@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-11T13:44:05.769Z",
+    "fetchedAt": "2026-07-11T19:44:05.404Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -1801,9 +1801,9 @@
           "name": "MoonshotAI: Kimi K2.7 Code",
           "currency": "USD",
           "inputPer1m": 0.72,
-          "outputPer1m": 3.49,
+          "outputPer1m": 3.5,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.159,
+          "cacheReadPer1m": 0.15,
           "maxOutputTokens": 262144
         },
         "nousresearch/hermes-4-70b": {
