@@ -2,6 +2,88 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "34c09d3c-d7fb-4862-933a-96829f27d6f8",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "ed94431b-5e81-449b-ad27-4e0bead185e7",
+      "toSnapshotId": "82e16e87-6b98-4ef6-94af-e4323a66357a",
+      "detectedAt": "2026-07-11T13:44:21.605Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.065,
+            "before": 0.0754
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.35,
+            "before": 0.406
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 1.1,
+            "before": 1.276
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Price decrease for cache read, input, and output."
+    },
+    {
+      "id": "3aaa6e67-2770-4269-8c1e-9d03d3054b43",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/moonshotai/kimi-k2.7-code",
+      "fromSnapshotId": "ed94431b-5e81-449b-ad27-4e0bead185e7",
+      "toSnapshotId": "82e16e87-6b98-4ef6-94af-e4323a66357a",
+      "detectedAt": "2026-07-11T13:44:14.846Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.7-code",
+              "cacheReadPer1m"
+            ],
+            "after": 0.159,
+            "before": 0.15
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.7-code",
+              "outputPer1m"
+            ],
+            "after": 3.49,
+            "before": 3.5
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "cacheReadPer1m increased (0.15 to 0.159) raising cost; outputPer1m decreased slightly (3.5 to 3.49) safe; overall small price increase."
+    },
+    {
       "id": "d9bfc1d3-467d-4c71-b497-ac4ed053cbe5",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -1895,77 +1977,6 @@
       "confidence": 0.7,
       "classifiedBy": "llm",
       "notes": "cacheReadPer1m and outputPer1m increased slightly, inputPer1m decreased, maxOutputTokens increased — mixed changes; net effect may mislead agents on cost."
-    },
-    {
-      "id": "c2660072-a841-44e9-8c56-4e8ab99d43f9",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/tencent/hy3",
-      "fromSnapshotId": "d3401d8f-b9e6-452f-aa7d-ae3d9ea41069",
-      "toSnapshotId": "96576176-47b6-4cde-aa07-4003bb25cf47",
-      "detectedAt": "2026-07-07T07:44:09.000Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "tencent/hy3",
-              "cacheReadPer1m"
-            ],
-            "after": 0.5,
-            "before": 0.035
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "tencent/hy3",
-              "inputPer1m"
-            ],
-            "after": 0.2,
-            "before": 0.14
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "tencent/hy3",
-              "outputPer1m"
-            ],
-            "after": 0.8,
-            "before": 0.58
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "price increase for tencent/hy3 model fields (cacheRead, input, output)"
-    },
-    {
-      "id": "0fe90e55-5704-40c9-9bac-cea95be380ef",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/xiaomi/mimo-v2.5",
-      "fromSnapshotId": "ba196ed0-e488-4151-9ccd-1a88f7c36455",
-      "toSnapshotId": "1818c73e-5a37-48eb-9532-6e817b7e999b",
-      "detectedAt": "2026-07-06T19:44:22.827Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "xiaomi/mimo-v2.5",
-              "cacheReadPer1m"
-            ],
-            "after": 0.028
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Added a new model field, safe for existing consumers."
     }
   ]
 }
