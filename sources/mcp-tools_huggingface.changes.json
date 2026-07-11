@@ -2,6 +2,202 @@
   "id": "mcp-tools:huggingface",
   "changes": [
     {
+      "id": "159f2410-6dcc-4a14-941f-40049d102cde",
+      "sourceId": "mcp-tools:huggingface",
+      "entityId": "tools/paper_search",
+      "fromSnapshotId": "95b4cdf5-2e85-486f-8367-64e89fd995c8",
+      "toSnapshotId": "09355060-06c3-4235-b151-19674bab50f0",
+      "detectedAt": "2026-07-11T01:44:19.514Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "tools",
+              "paper_search"
+            ],
+            "before": {
+              "description": "Find Machine Learning research papers on the Hugging Face hub. Include 'Link to paper' When presenting the results. Consider whether tabulating results matches user intent.",
+              "inputSchema": {
+                "type": "object",
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "required": [
+                  "query"
+                ],
+                "properties": {
+                  "query": {
+                    "type": "string",
+                    "maxLength": 200,
+                    "minLength": 3,
+                    "description": "Semantic Search query"
+                  },
+                  "concise_only": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Return a 2 sentence summary of the abstract. Use for broad search terms which may return a lot of results. Check with User if unsure."
+                  },
+                  "results_limit": {
+                    "type": "number",
+                    "default": 12,
+                    "description": "Number of results to return"
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Tool paper_search removed"
+    },
+    {
+      "id": "a2d92537-5747-4865-b477-255e11204475",
+      "sourceId": "mcp-tools:huggingface",
+      "entityId": "tools/hf_fs",
+      "fromSnapshotId": "95b4cdf5-2e85-486f-8367-64e89fd995c8",
+      "toSnapshotId": "09355060-06c3-4235-b151-19674bab50f0",
+      "detectedAt": "2026-07-11T01:44:17.110Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "hf_fs",
+              "description"
+            ],
+            "after": "List, read, find, or search Hugging Face repos, buckets, files, collections, and papers.",
+            "before": "List, read, find, or search Hugging Face repos, buckets, files, and collections. Anonymous requests must include an owner."
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "entry_type",
+              "enum",
+              "5"
+            ],
+            "after": "paper",
+            "before": "link"
+          },
+          {
+            "kind": "added",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "entry_type",
+              "enum",
+              "6"
+            ],
+            "after": "link"
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "limit",
+              "description"
+            ],
+            "after": "ls/search max result size. ls default 1000; ls hf://papers uses limit for its recent-paper sample (default 10, capped at 100) in addition to structural entries; paper batch and trending listings default to and are capped at 100; search default 100.",
+            "before": "ls/search max result size. ls default 1000; search default 100. 0 means the maximum allowed."
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "limit",
+              "minimum"
+            ],
+            "after": 1,
+            "before": 0
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "query",
+              "description"
+            ],
+            "after": "Search query for hf://models, hf://datasets, hf://spaces, hf://collections, or hf://papers.",
+            "before": "Search query for hf://models, hf://datasets, hf://spaces, or hf://collections."
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "sort",
+              "description"
+            ],
+            "after": "Sort for discovery listings/search. Use hf://papers/trending for the paper trending view; other sort values are provider-specific.",
+            "before": "Search/list sort field."
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "uri",
+              "description"
+            ],
+            "after": "Hugging Face URI in the form hf://models|datasets|spaces|buckets/OWNER[/NAME[/PATH]] or hf://collections[/OWNER[/SLUG]] or hf://papers[/ARXIV_ID[/PATH]].",
+            "before": "Hugging Face URI in the form hf://models|datasets|spaces|buckets/OWNER[/NAME[/PATH]] or hf://collections[/OWNER[/SLUG]]. "
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Enum value 'link' changed to 'paper' and a new 'link' added; existing callers using 'link' will get 'paper' instead, silently altering behavior."
+    },
+    {
+      "id": "99cb9947-4a72-4590-871d-bcdd20e0f4bc",
+      "sourceId": "mcp-tools:huggingface",
+      "entityId": "tools/hf_doc_search",
+      "fromSnapshotId": "95b4cdf5-2e85-486f-8367-64e89fd995c8",
+      "toSnapshotId": "09355060-06c3-4235-b151-19674bab50f0",
+      "detectedAt": "2026-07-11T01:44:11.953Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "hf_doc_search",
+              "description"
+            ],
+            "after": "Search and Discover Hugging Face Product and Library documentation. Send an empty query to discover structure and navigation instructions. Knowledge up-to-date as at 10 July 2026. Combine with the Product filter to focus results.",
+            "before": "Search and Discover Hugging Face Product and Library documentation. Send an empty query to discover structure and navigation instructions. Knowledge up-to-date as at 7 July 2026. Combine with the Product filter to focus results."
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Description-only update, no impact on API contract."
+    },
+    {
       "id": "27862222-8634-4d18-9e3e-27c3c27fa683",
       "sourceId": "mcp-tools:huggingface",
       "entityId": "tools/hf_nav",

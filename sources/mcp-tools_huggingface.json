@@ -4,13 +4,13 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "mcp-tools:huggingface",
-    "fetchedAt": "2026-07-10T19:44:24.769Z",
+    "fetchedAt": "2026-07-11T01:44:06.081Z",
     "stale": false,
     "verified": true,
     "data": {
       "tools": {
         "hf_fs": {
-          "description": "List, read, find, or search Hugging Face repos, buckets, files, and collections. Anonymous requests must include an owner.",
+          "description": "List, read, find, or search Hugging Face repos, buckets, files, collections, and papers.",
           "inputSchema": {
             "type": "object",
             "$schema": "http://json-schema.org/draft-07/schema#",
@@ -32,7 +32,7 @@
               "uri": {
                 "type": "string",
                 "minLength": 1,
-                "description": "Hugging Face URI in the form hf://models|datasets|spaces|buckets/OWNER[/NAME[/PATH]] or hf://collections[/OWNER[/SLUG]]. "
+                "description": "Hugging Face URI in the form hf://models|datasets|spaces|buckets/OWNER[/NAME[/PATH]] or hf://collections[/OWNER[/SLUG]] or hf://papers[/ARXIV_ID[/PATH]]."
               },
               "glob": {
                 "type": "string"
@@ -59,17 +59,17 @@
                   "upvotes"
                 ],
                 "type": "string",
-                "description": "Search/list sort field."
+                "description": "Sort for discovery listings/search. Use hf://papers/trending for the paper trending view; other sort values are provider-specific."
               },
               "limit": {
                 "type": "integer",
                 "maximum": 10000,
-                "minimum": 0,
-                "description": "ls/search max result size. ls default 1000; search default 100. 0 means the maximum allowed."
+                "minimum": 1,
+                "description": "ls/search max result size. ls default 1000; ls hf://papers uses limit for its recent-paper sample (default 10, capped at 100) in addition to structural entries; paper batch and trending listings default to and are capped at 100; search default 100."
               },
               "query": {
                 "type": "string",
-                "description": "Search query for hf://models, hf://datasets, hf://spaces, or hf://collections."
+                "description": "Search query for hf://models, hf://datasets, hf://spaces, hf://collections, or hf://papers."
               },
               "offset": {
                 "type": "integer",
@@ -93,6 +93,7 @@
                   "repo",
                   "bucket",
                   "collection",
+                  "paper",
                   "link"
                 ],
                 "type": "string"
@@ -132,35 +133,6 @@
             "additionalProperties": false
           }
         },
-        "paper_search": {
-          "description": "Find Machine Learning research papers on the Hugging Face hub. Include 'Link to paper' When presenting the results. Consider whether tabulating results matches user intent.",
-          "inputSchema": {
-            "type": "object",
-            "$schema": "http://json-schema.org/draft-07/schema#",
-            "required": [
-              "query"
-            ],
-            "properties": {
-              "query": {
-                "type": "string",
-                "maxLength": 200,
-                "minLength": 3,
-                "description": "Semantic Search query"
-              },
-              "concise_only": {
-                "type": "boolean",
-                "default": false,
-                "description": "Return a 2 sentence summary of the abstract. Use for broad search terms which may return a lot of results. Check with User if unsure."
-              },
-              "results_limit": {
-                "type": "number",
-                "default": 12,
-                "description": "Number of results to return"
-              }
-            },
-            "additionalProperties": false
-          }
-        },
         "space_search": {
           "description": "Find Hugging Face Spaces using semantic search. IMPORTANT Only MCP Servers can be used with the dynamic_space toolInclude links to the Space when presenting the results.",
           "inputSchema": {
@@ -191,7 +163,7 @@
           }
         },
         "hf_doc_search": {
-          "description": "Search and Discover Hugging Face Product and Library documentation. Send an empty query to discover structure and navigation instructions. Knowledge up-to-date as at 7 July 2026. Combine with the Product filter to focus results.",
+          "description": "Search and Discover Hugging Face Product and Library documentation. Send an empty query to discover structure and navigation instructions. Knowledge up-to-date as at 10 July 2026. Combine with the Product filter to focus results.",
           "inputSchema": {
             "type": "object",
             "$schema": "http://json-schema.org/draft-07/schema#",
