@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-12T01:44:05.694Z",
+    "fetchedAt": "2026-07-12T07:44:05.513Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -101,11 +101,11 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.7,
-          "outputPer1m": 2.2,
+          "inputPer1m": 0.42,
+          "outputPer1m": 1.32,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.13,
-          "maxOutputTokens": 128000
+          "cacheReadPer1m": 0.078,
+          "maxOutputTokens": 131072
         },
         "mancer/weaver": {
           "name": "Mancer: Weaver (alpha)",
@@ -2332,11 +2332,10 @@
         "qwen/qwen2.5-vl-72b-instruct": {
           "name": "Qwen: Qwen2.5 VL 72B Instruct",
           "currency": "USD",
-          "inputPer1m": 0.8,
-          "outputPer1m": 1,
+          "inputPer1m": 0.25,
+          "outputPer1m": 0.75,
           "contextLength": 131072,
-          "cacheReadPer1m": 0.4,
-          "maxOutputTokens": 128000
+          "maxOutputTokens": null
         },
         "bytedance-seed/seed-1.6-flash": {
           "name": "ByteDance Seed: Seed 1.6 Flash",

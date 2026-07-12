@@ -2,6 +2,117 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "6f957fbb-d691-4f24-a9b5-d7dd5e34e305",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "c994af7f-e134-4c68-99b8-681036085230",
+      "toSnapshotId": "588d430a-0fe3-4c16-87e1-cbc86a4ae0fd",
+      "detectedAt": "2026-07-12T07:44:25.055Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.078,
+            "before": 0.13
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.42,
+            "before": 0.7
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "maxOutputTokens"
+            ],
+            "after": 131072,
+            "before": 128000
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 1.32,
+            "before": 2.2
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "All changes are price decreases or limits increase, which are favorable."
+    },
+    {
+      "id": "a6cb9736-0b53-4e04-852d-0ae5bf264c7d",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen2.5-vl-72b-instruct",
+      "fromSnapshotId": "c994af7f-e134-4c68-99b8-681036085230",
+      "toSnapshotId": "588d430a-0fe3-4c16-87e1-cbc86a4ae0fd",
+      "detectedAt": "2026-07-12T07:44:18.949Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "models",
+              "qwen/qwen2.5-vl-72b-instruct",
+              "cacheReadPer1m"
+            ],
+            "before": 0.4
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen2.5-vl-72b-instruct",
+              "inputPer1m"
+            ],
+            "after": 0.25,
+            "before": 0.8
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen2.5-vl-72b-instruct",
+              "maxOutputTokens"
+            ],
+            "after": null,
+            "before": 128000
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen2.5-vl-72b-instruct",
+              "outputPer1m"
+            ],
+            "after": 0.75,
+            "before": 1
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Removed field cacheReadPer1m. Also price decreases for input and output, and maxOutputTokens changed to null."
+    },
+    {
       "id": "7fe23ef3-3c3d-4d37-aeeb-300cd0769c40",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -1909,69 +2020,6 @@
       "confidence": 1,
       "classifiedBy": "llm",
       "notes": "Added new model with no removal or price increase."
-    },
-    {
-      "id": "b4649534-7090-48dd-b38d-8759f8b8d101",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/aion-labs/aion-3.0",
-      "fromSnapshotId": "08b7b6b3-8906-4897-8051-580bd08f5562",
-      "toSnapshotId": "1c6adf9e-40f8-48f6-a694-22547eebfc48",
-      "detectedAt": "2026-07-07T19:44:13.680Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "aion-labs/aion-3.0"
-            ],
-            "after": {
-              "name": "AionLabs: Aion-3.0",
-              "currency": "USD",
-              "inputPer1m": 3,
-              "outputPer1m": 6,
-              "contextLength": 131072,
-              "cacheReadPer1m": 0.75,
-              "maxOutputTokens": 32768
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Added a new model entry with no removed or changed existing fields"
-    },
-    {
-      "id": "72ecbaaf-1e3e-4489-8976-618ba844aa6c",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/aion-labs/aion-1.0-mini",
-      "fromSnapshotId": "08b7b6b3-8906-4897-8051-580bd08f5562",
-      "toSnapshotId": "1c6adf9e-40f8-48f6-a694-22547eebfc48",
-      "detectedAt": "2026-07-07T19:44:10.480Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "removed",
-            "path": [
-              "models",
-              "aion-labs/aion-1.0-mini"
-            ],
-            "before": {
-              "name": "AionLabs: Aion-1.0-Mini",
-              "currency": "USD",
-              "inputPer1m": 0.7,
-              "outputPer1m": 1.4,
-              "contextLength": 131072,
-              "maxOutputTokens": 32768
-            }
-          }
-        ]
-      },
-      "severity": "breaking_strict",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Model aion-labs/aion-1.0-mini removed from catalog"
     }
   ]
 }
