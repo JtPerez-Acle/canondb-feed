@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "mcp-tools:microsoft-learn",
-    "fetchedAt": "2026-07-12T07:44:26.977Z",
+    "fetchedAt": "2026-07-12T13:44:20.528Z",
     "stale": false,
     "verified": true,
     "data": {

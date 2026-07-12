@@ -2,6 +2,114 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "9798a48e-9d7e-4c6f-9d15-783d20daa7aa",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-4.6",
+      "fromSnapshotId": "588d430a-0fe3-4c16-87e1-cbc86a4ae0fd",
+      "toSnapshotId": "8bb835cc-8459-4d18-8f41-8be806633d06",
+      "detectedAt": "2026-07-12T13:44:18.543Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-4.6",
+              "contextLength"
+            ],
+            "after": 200000,
+            "before": 202752
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-4.6",
+              "maxOutputTokens"
+            ],
+            "after": 16384,
+            "before": 131072
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-4.6",
+              "outputPer1m"
+            ],
+            "after": 1.75,
+            "before": 1.74
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "contextLength reduced and maxOutputTokens reduced, both silently mislead agents"
+    },
+    {
+      "id": "79a930a9-240b-4d57-af39-b0099390a947",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3-235b-a22b-2507",
+      "fromSnapshotId": "588d430a-0fe3-4c16-87e1-cbc86a4ae0fd",
+      "toSnapshotId": "8bb835cc-8459-4d18-8f41-8be806633d06",
+      "detectedAt": "2026-07-12T13:44:09.124Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-235b-a22b-2507",
+              "outputPer1m"
+            ],
+            "after": 0.55,
+            "before": 0.1
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Output price increased from $0.10 to $0.55 per 1M tokens"
+    },
+    {
+      "id": "26c96a24-55db-414a-a838-2494f84e8e23",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/meta-llama/llama-4-maverick",
+      "fromSnapshotId": "588d430a-0fe3-4c16-87e1-cbc86a4ae0fd",
+      "toSnapshotId": "8bb835cc-8459-4d18-8f41-8be806633d06",
+      "detectedAt": "2026-07-12T13:44:08.157Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "meta-llama/llama-4-maverick",
+              "inputPer1m"
+            ],
+            "after": 0.2,
+            "before": 0.15
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "meta-llama/llama-4-maverick",
+              "outputPer1m"
+            ],
+            "after": 0.8,
+            "before": 0.6
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "both input and output prices increased"
+    },
+    {
       "id": "6f957fbb-d691-4f24-a9b5-d7dd5e34e305",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -1906,120 +2014,6 @@
       "confidence": 0.95,
       "classifiedBy": "llm",
       "notes": "Context length increased and max output tokens added; both are favorable changes."
-    },
-    {
-      "id": "364f85f3-6e6c-4217-b239-d57edbe17305",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/deepseek/deepseek-v4-flash",
-      "fromSnapshotId": "1c6adf9e-40f8-48f6-a694-22547eebfc48",
-      "toSnapshotId": "b4e95130-a9d6-4c68-8990-c9cda8e05f5c",
-      "detectedAt": "2026-07-08T01:44:08.291Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "deepseek/deepseek-v4-flash",
-              "maxOutputTokens"
-            ],
-            "after": 65536,
-            "before": 16384
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "maxOutputTokens increased, beneficial for consumers"
-    },
-    {
-      "id": "89d95b17-830d-4da6-9827-5ff84172f349",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/z-ai/glm-5.2",
-      "fromSnapshotId": "08b7b6b3-8906-4897-8051-580bd08f5562",
-      "toSnapshotId": "1c6adf9e-40f8-48f6-a694-22547eebfc48",
-      "detectedAt": "2026-07-07T19:44:19.913Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "cacheReadPer1m"
-            ],
-            "after": 0.18,
-            "before": 0.17
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "inputPer1m"
-            ],
-            "after": 0.93,
-            "before": 0.9
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "maxOutputTokens"
-            ],
-            "after": 32768,
-            "before": 1048576
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "outputPer1m"
-            ],
-            "after": 3,
-            "before": 2.86
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "price increases and a drastic maxOutputTokens reduction silently mislead agents with higher costs and truncation"
-    },
-    {
-      "id": "bc506799-47c8-4e90-9529-6a95fa28f123",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/aion-labs/aion-3.0-mini",
-      "fromSnapshotId": "08b7b6b3-8906-4897-8051-580bd08f5562",
-      "toSnapshotId": "1c6adf9e-40f8-48f6-a694-22547eebfc48",
-      "detectedAt": "2026-07-07T19:44:18.037Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "aion-labs/aion-3.0-mini"
-            ],
-            "after": {
-              "name": "AionLabs: Aion-3.0-Mini",
-              "currency": "USD",
-              "inputPer1m": 0.7,
-              "outputPer1m": 1.4,
-              "contextLength": 131072,
-              "cacheReadPer1m": 0.18,
-              "maxOutputTokens": 32768
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Added new model with no removal or price increase."
     }
   ]
 }

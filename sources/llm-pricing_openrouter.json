@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-12T07:44:05.513Z",
+    "fetchedAt": "2026-07-12T13:44:05.712Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -75,10 +75,10 @@
           "name": "Z.ai: GLM 4.6",
           "currency": "USD",
           "inputPer1m": 0.43,
-          "outputPer1m": 1.74,
-          "contextLength": 202752,
+          "outputPer1m": 1.75,
+          "contextLength": 200000,
           "cacheReadPer1m": 0.08,
-          "maxOutputTokens": 131072
+          "maxOutputTokens": 16384
         },
         "z-ai/glm-4.7": {
           "name": "Z.ai: GLM 4.7",
@@ -1859,7 +1859,7 @@
           "name": "Qwen: Qwen3 235B A22B Instruct 2507",
           "currency": "USD",
           "inputPer1m": 0.09,
-          "outputPer1m": 0.1,
+          "outputPer1m": 0.55,
           "contextLength": 262144,
           "maxOutputTokens": 16384
         },
@@ -2123,8 +2123,8 @@
         "meta-llama/llama-4-maverick": {
           "name": "Meta: Llama 4 Maverick",
           "currency": "USD",
-          "inputPer1m": 0.15,
-          "outputPer1m": 0.6,
+          "inputPer1m": 0.2,
+          "outputPer1m": 0.8,
           "contextLength": 1048576,
           "maxOutputTokens": 16384
         },
