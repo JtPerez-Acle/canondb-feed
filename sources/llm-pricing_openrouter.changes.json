@@ -2,6 +2,52 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "7fe23ef3-3c3d-4d37-aeeb-300cd0769c40",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "7496330e-facc-4a23-8066-117af93b84ef",
+      "toSnapshotId": "c994af7f-e134-4c68-99b8-681036085230",
+      "detectedAt": "2026-07-12T01:44:09.121Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.13,
+            "before": 0.065
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.7,
+            "before": 0.35
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 2.2,
+            "before": 1.1
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Price increased for model z-ai/glm-5.2"
+    },
+    {
       "id": "46288b11-4747-4d35-a84f-8fdd3b9add0a",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/moonshotai/kimi-k2.7-code",
@@ -1926,37 +1972,6 @@
       "confidence": 1,
       "classifiedBy": "llm",
       "notes": "Model aion-labs/aion-1.0-mini removed from catalog"
-    },
-    {
-      "id": "3f210004-8d34-4ea9-b18e-d1a1d6373704",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/aion-labs/aion-1.0",
-      "fromSnapshotId": "08b7b6b3-8906-4897-8051-580bd08f5562",
-      "toSnapshotId": "1c6adf9e-40f8-48f6-a694-22547eebfc48",
-      "detectedAt": "2026-07-07T19:44:05.806Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "removed",
-            "path": [
-              "models",
-              "aion-labs/aion-1.0"
-            ],
-            "before": {
-              "name": "AionLabs: Aion-1.0",
-              "currency": "USD",
-              "inputPer1m": 4,
-              "outputPer1m": 8,
-              "contextLength": 131072,
-              "maxOutputTokens": 32768
-            }
-          }
-        ]
-      },
-      "severity": "breaking_strict",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "model removed"
     }
   ]
 }
