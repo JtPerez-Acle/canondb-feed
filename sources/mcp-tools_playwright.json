@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "mcp-tools:playwright",
-    "fetchedAt": "2026-07-13T01:50:00.370Z",
+    "fetchedAt": "2026-07-13T14:05:44.848Z",
     "stale": false,
     "verified": true,
     "data": {

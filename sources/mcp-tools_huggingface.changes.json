@@ -2,6 +2,323 @@
   "id": "mcp-tools:huggingface",
   "changes": [
     {
+      "id": "a1d050e9-e43a-4b0b-96cf-7c15955e08e1",
+      "sourceId": "mcp-tools:huggingface",
+      "entityId": "tools/hf_fs",
+      "fromSnapshotId": "ff1815af-e73d-4622-b0df-e5556887cde7",
+      "toSnapshotId": "172ffb53-6394-49b5-8a65-e86050bf782f",
+      "detectedAt": "2026-07-13T19:44:42.308Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "hf_fs",
+              "description"
+            ],
+            "after": "Navigate Hugging Face resources with ls, cat, find, stat, and search over hf:// URIs. Roots: hf://models, hf://datasets, hf://spaces, hf://buckets, hf://collections, hf://papers. For papers, ls hf://papers/ARXIV_ID to discover related resources; cat hf://papers/ARXIV_ID/paper.md or metadata.json.\n\nGrammar; each token below is one args array element:\n  ls     URI [(-R|-r|--recursive)] [--glob GLOB]\n             [(-type|--type|--entry-type) TYPE] [--sort SORT] [--limit N]\n  cat    URI [--offset N] [--max-bytes N]\n  stat   URI\n  find   URI [(-name|--name) GLOB] [(-path|--path) GLOB]\n             [(-type|--type|--entry-type) TYPE] [--limit N]\n  search URI QUERY [(-type|--type|--entry-type) TYPE] [--sort SORT] [--limit N]\n\nTYPE = file|dir|repo|bucket|collection|paper|link.\nType aliases: f=file, d=dir, l=link, model|dataset|space=repo.\nSORT = createdAt|downloads|likes|lastModified|likes30d|trendingScore|mainSize|id|trending|upvotes.\nURI starts with hf://. QUERY and GLOB are each one string token.\nSearch URI: hf://models|datasets|spaces[/OWNER], hf://collections[/OWNER], or exactly hf://papers; not hf://.\nTrending listings: ls hf://models/trending, hf://datasets/trending, or hf://spaces/trending. They return up to 20 entries.\nTrending paths imply trending order; --sort trending|trendingScore is redundant but valid.\nTrending papers: ls hf://papers/trending.\nTYPE filters mixed results; omit it when the URI already fixes the result type.\nLimits and path-specific behavior are documented at hf://README.md.\nOmit --limit and --sort unless the request asks for a cap, ordering, or exhaustive results.\nNo pipes, redirects, shell expansion, or multiple commands.",
+            "before": "List, read, find, or search Hugging Face repos, buckets, files, collections, and papers."
+          },
+          {
+            "kind": "added",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "args"
+            ],
+            "after": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Command arguments; each array item is one grammar token."
+            }
+          },
+          {
+            "kind": "added",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "cmd"
+            ],
+            "after": {
+              "enum": [
+                "ls",
+                "cat",
+                "stat",
+                "find",
+                "search"
+              ],
+              "type": "string",
+              "description": "Command to execute."
+            }
+          },
+          {
+            "kind": "removed",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "entry_type"
+            ],
+            "before": {
+              "enum": [
+                "file",
+                "dir",
+                "repo",
+                "bucket",
+                "collection",
+                "paper",
+                "link"
+              ],
+              "type": "string",
+              "description": "Optional ls/find/search result-type filter; it does not change URI interpretation."
+            }
+          },
+          {
+            "kind": "removed",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "glob"
+            ],
+            "before": {
+              "type": "string",
+              "description": "ls-only glob matched against entries in the listed directory."
+            }
+          },
+          {
+            "kind": "removed",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "limit"
+            ],
+            "before": {
+              "type": "integer",
+              "maximum": 10000,
+              "minimum": 1,
+              "description": "ls/search maximum results. Default 1000 for ls and 100 for search. Paper listings are capped at 100."
+            }
+          },
+          {
+            "kind": "removed",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "max_bytes"
+            ],
+            "before": {
+              "type": "integer",
+              "maximum": 80000,
+              "minimum": 0,
+              "description": "cat max read length. 0 means the maximum allowed 80000 bytes."
+            }
+          },
+          {
+            "kind": "removed",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "name"
+            ],
+            "before": {
+              "type": "string",
+              "description": "find-only glob matched against entry names/basenames."
+            }
+          },
+          {
+            "kind": "removed",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "offset"
+            ],
+            "before": {
+              "type": "integer",
+              "minimum": 0,
+              "description": "cat read start offset."
+            }
+          },
+          {
+            "kind": "removed",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "op"
+            ],
+            "before": {
+              "enum": [
+                "ls",
+                "cat",
+                "stat",
+                "find",
+                "search"
+              ],
+              "type": "string",
+              "description": "Operation: ls lists a directory; cat reads a text-like file; stat checks one URI; find filters entries beneath a known directory; search discovers Hub resources from a supported discovery root."
+            }
+          },
+          {
+            "kind": "removed",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "path"
+            ],
+            "before": {
+              "type": "string",
+              "description": "find-only glob matched against paths relative to the requested directory URI."
+            }
+          },
+          {
+            "kind": "removed",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "query"
+            ],
+            "before": {
+              "type": "string",
+              "description": "search-only keyword or natural-language query. Use a discovery URI: hf://models, hf://datasets, hf://spaces, hf://collections, hf://collections/OWNER, or hf://papers. Paper search is supported only at exactly hf://papers."
+            }
+          },
+          {
+            "kind": "removed",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "recursive"
+            ],
+            "before": {
+              "type": "boolean",
+              "default": false,
+              "description": "ls-only recursive traversal; unsupported on unbounded discovery roots such as hf://papers."
+            }
+          },
+          {
+            "kind": "removed",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "sort"
+            ],
+            "before": {
+              "enum": [
+                "createdAt",
+                "downloads",
+                "likes",
+                "lastModified",
+                "likes30d",
+                "trendingScore",
+                "mainSize",
+                "id",
+                "trending",
+                "upvotes"
+              ],
+              "type": "string",
+              "description": "Optional sort for supported discovery listings/search only. Do not pass sort to hf://papers or dated Daily Papers listings; use ls hf://papers/trending for trending papers."
+            }
+          },
+          {
+            "kind": "removed",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "uri"
+            ],
+            "before": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Hugging Face URI in the form hf://models|datasets|spaces|buckets/OWNER[/NAME[/PATH]] or hf://collections[/OWNER[/SLUG]] or hf://papers[/ARXIV_ID[/PATH]]."
+            }
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "required",
+              "0"
+            ],
+            "after": "cmd",
+            "before": "op"
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "required",
+              "1"
+            ],
+            "after": "args",
+            "before": "uri"
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "REMOVED multiple properties including required 'op' and 'uri'; replaced with new required 'cmd' and required 'args'; old callers break."
+    },
+    {
+      "id": "34f486d0-c964-411c-b689-34b83b94a5c2",
+      "sourceId": "mcp-tools:huggingface",
+      "entityId": "tools/hf_doc_search",
+      "fromSnapshotId": "ff1815af-e73d-4622-b0df-e5556887cde7",
+      "toSnapshotId": "172ffb53-6394-49b5-8a65-e86050bf782f",
+      "detectedAt": "2026-07-13T19:44:28.941Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "hf_doc_search",
+              "description"
+            ],
+            "after": "Search and Discover Hugging Face Product and Library documentation. Send an empty query to discover structure and navigation instructions. Knowledge up-to-date as at 13 July 2026. Combine with the Product filter to focus results.",
+            "before": "Search and Discover Hugging Face Product and Library documentation. Send an empty query to discover structure and navigation instructions. Knowledge up-to-date as at 12 July 2026. Combine with the Product filter to focus results."
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Description-only edit updating a date, no behavioral change."
+    },
+    {
       "id": "94eec86c-69d2-4ec9-8254-13cb2c6dd606",
       "sourceId": "mcp-tools:huggingface",
       "entityId": "tools/hf_fs",
