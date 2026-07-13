@@ -2,6 +2,108 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "528c9f57-fccc-43b4-b84a-3899f04a4ea7",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "a2910cbc-5cca-4504-a3c0-09d0dd28c06e",
+      "toSnapshotId": "5767ef88-5680-404e-8856-c27f42c9ba60",
+      "detectedAt": "2026-07-13T07:44:15.789Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.18,
+            "before": 0.078
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.93,
+            "before": 0.42
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "maxOutputTokens"
+            ],
+            "after": 32768,
+            "before": 131072
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 3,
+            "before": 1.32
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Price increases and output token cap reduction silently mislead agents."
+    },
+    {
+      "id": "519c43bc-7fc5-480c-aa11-14ceb3d82a2c",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/moonshotai/kimi-k2.7-code",
+      "fromSnapshotId": "a2910cbc-5cca-4504-a3c0-09d0dd28c06e",
+      "toSnapshotId": "5767ef88-5680-404e-8856-c27f42c9ba60",
+      "detectedAt": "2026-07-13T07:44:14.508Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.7-code",
+              "cacheReadPer1m"
+            ],
+            "after": 0.149,
+            "before": 0.15
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.7-code",
+              "inputPer1m"
+            ],
+            "after": 0.719,
+            "before": 0.72
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.7-code",
+              "outputPer1m"
+            ],
+            "after": 3.49,
+            "before": 3.5
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Price decrease (cacheRead, input, output all slightly reduced)"
+    },
+    {
       "id": "9798a48e-9d7e-4c6f-9d15-783d20daa7aa",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-4.6",
@@ -1952,68 +2054,6 @@
       "confidence": 0.95,
       "classifiedBy": "llm",
       "notes": "All changes are price decreases or an improvement (maxOutputTokens to null means no cap), which are favorable."
-    },
-    {
-      "id": "9de8a7d4-5f09-436f-9e3a-60e489298437",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/moonshotai/kimi-k2.6",
-      "fromSnapshotId": "df0368dd-b20d-40e0-bb09-a2f9411cbe41",
-      "toSnapshotId": "f4357970-0f4d-4700-aee0-d80a5e7ec42e",
-      "detectedAt": "2026-07-08T19:44:09.425Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "moonshotai/kimi-k2.6",
-              "inputPer1m"
-            ],
-            "after": 0.65,
-            "before": 0.66
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "price decreased from 0.66 to 0.65"
-    },
-    {
-      "id": "276a7c58-d9c2-4024-8799-e5806e86a614",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/thedrummer/rocinante-12b",
-      "fromSnapshotId": "1c6adf9e-40f8-48f6-a694-22547eebfc48",
-      "toSnapshotId": "b4e95130-a9d6-4c68-8990-c9cda8e05f5c",
-      "detectedAt": "2026-07-08T01:44:11.712Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "thedrummer/rocinante-12b",
-              "contextLength"
-            ],
-            "after": 65536,
-            "before": 32768
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "thedrummer/rocinante-12b",
-              "maxOutputTokens"
-            ],
-            "after": 65536,
-            "before": null
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "Context length increased and max output tokens added; both are favorable changes."
     }
   ]
 }

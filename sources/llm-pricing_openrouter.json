@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-13T01:44:05.869Z",
+    "fetchedAt": "2026-07-13T07:44:06.023Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -101,11 +101,11 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.42,
-          "outputPer1m": 1.32,
+          "inputPer1m": 0.93,
+          "outputPer1m": 3,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.078,
-          "maxOutputTokens": 131072
+          "cacheReadPer1m": 0.18,
+          "maxOutputTokens": 32768
         },
         "mancer/weaver": {
           "name": "Mancer: Weaver (alpha)",
@@ -1800,10 +1800,10 @@
         "moonshotai/kimi-k2.7-code": {
           "name": "MoonshotAI: Kimi K2.7 Code",
           "currency": "USD",
-          "inputPer1m": 0.72,
-          "outputPer1m": 3.5,
+          "inputPer1m": 0.719,
+          "outputPer1m": 3.49,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.15,
+          "cacheReadPer1m": 0.149,
           "maxOutputTokens": 262144
         },
         "nousresearch/hermes-4-70b": {
