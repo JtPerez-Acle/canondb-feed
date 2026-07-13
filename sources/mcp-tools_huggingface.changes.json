@@ -2,6 +2,161 @@
   "id": "mcp-tools:huggingface",
   "changes": [
     {
+      "id": "94eec86c-69d2-4ec9-8254-13cb2c6dd606",
+      "sourceId": "mcp-tools:huggingface",
+      "entityId": "tools/hf_fs",
+      "fromSnapshotId": "6a4ac4e3-e960-4cdd-98fe-45ea3f276e2f",
+      "toSnapshotId": "594fb8a7-ddb1-432b-abf8-3c17634ef0a7",
+      "detectedAt": "2026-07-13T01:44:12.679Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "entry_type",
+              "description"
+            ],
+            "after": "Optional ls/find/search result-type filter; it does not change URI interpretation."
+          },
+          {
+            "kind": "added",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "glob",
+              "description"
+            ],
+            "after": "ls-only glob matched against entries in the listed directory."
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "limit",
+              "description"
+            ],
+            "after": "ls/search maximum results. Default 1000 for ls and 100 for search. Paper listings are capped at 100.",
+            "before": "ls/search max result size. ls default 1000; ls hf://papers uses limit for its recent-paper sample (default 10, capped at 100) in addition to structural entries; paper batch and trending listings default to and are capped at 100; search default 100."
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "name",
+              "description"
+            ],
+            "after": "find-only glob matched against entry names/basenames.",
+            "before": "find glob matched against entry name/basename."
+          },
+          {
+            "kind": "added",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "op",
+              "description"
+            ],
+            "after": "Operation: ls lists a directory; cat reads a text-like file; stat checks one URI; find filters entries beneath a known directory; search discovers Hub resources from a supported discovery root."
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "path",
+              "description"
+            ],
+            "after": "find-only glob matched against paths relative to the requested directory URI.",
+            "before": "find glob matched against entry path relative to the requested URI."
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "query",
+              "description"
+            ],
+            "after": "search-only keyword or natural-language query. Use a discovery URI: hf://models, hf://datasets, hf://spaces, hf://collections, hf://collections/OWNER, or hf://papers. Paper search is supported only at exactly hf://papers.",
+            "before": "Search query for hf://models, hf://datasets, hf://spaces, hf://collections, or hf://papers."
+          },
+          {
+            "kind": "added",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "recursive",
+              "description"
+            ],
+            "after": "ls-only recursive traversal; unsupported on unbounded discovery roots such as hf://papers."
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "sort",
+              "description"
+            ],
+            "after": "Optional sort for supported discovery listings/search only. Do not pass sort to hf://papers or dated Daily Papers listings; use ls hf://papers/trending for trending papers.",
+            "before": "Sort for discovery listings/search. Use hf://papers/trending for the paper trending view; other sort values are provider-specific."
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.7,
+      "classifiedBy": "llm",
+      "notes": "Multiple CHANGED descriptions tighten semantics (e.g., limit now caps paper listings at 100, sort restricted, query narrowed to search-only) that could silently mislead agents relying on previous behavior."
+    },
+    {
+      "id": "67ff284b-9ab2-41b2-ab48-f8a3a3c73e16",
+      "sourceId": "mcp-tools:huggingface",
+      "entityId": "tools/hf_doc_search",
+      "fromSnapshotId": "6a4ac4e3-e960-4cdd-98fe-45ea3f276e2f",
+      "toSnapshotId": "594fb8a7-ddb1-432b-abf8-3c17634ef0a7",
+      "detectedAt": "2026-07-13T01:44:10.197Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "hf_doc_search",
+              "description"
+            ],
+            "after": "Search and Discover Hugging Face Product and Library documentation. Send an empty query to discover structure and navigation instructions. Knowledge up-to-date as at 12 July 2026. Combine with the Product filter to focus results.",
+            "before": "Search and Discover Hugging Face Product and Library documentation. Send an empty query to discover structure and navigation instructions. Knowledge up-to-date as at 10 July 2026. Combine with the Product filter to focus results."
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Description-only edit updating knowledge cutoff date; no impact on API contract or behavior."
+    },
+    {
       "id": "159f2410-6dcc-4a14-941f-40049d102cde",
       "sourceId": "mcp-tools:huggingface",
       "entityId": "tools/paper_search",

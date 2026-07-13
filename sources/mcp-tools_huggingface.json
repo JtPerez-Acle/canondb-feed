@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "mcp-tools:huggingface",
-    "fetchedAt": "2026-07-12T19:44:06.679Z",
+    "fetchedAt": "2026-07-13T01:44:06.861Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -27,7 +27,8 @@
                   "find",
                   "search"
                 ],
-                "type": "string"
+                "type": "string",
+                "description": "Operation: ls lists a directory; cat reads a text-like file; stat checks one URI; find filters entries beneath a known directory; search discovers Hub resources from a supported discovery root."
               },
               "uri": {
                 "type": "string",
@@ -35,15 +36,16 @@
                 "description": "Hugging Face URI in the form hf://models|datasets|spaces|buckets/OWNER[/NAME[/PATH]] or hf://collections[/OWNER[/SLUG]] or hf://papers[/ARXIV_ID[/PATH]]."
               },
               "glob": {
-                "type": "string"
+                "type": "string",
+                "description": "ls-only glob matched against entries in the listed directory."
               },
               "name": {
                 "type": "string",
-                "description": "find glob matched against entry name/basename."
+                "description": "find-only glob matched against entry names/basenames."
               },
               "path": {
                 "type": "string",
-                "description": "find glob matched against entry path relative to the requested URI."
+                "description": "find-only glob matched against paths relative to the requested directory URI."
               },
               "sort": {
                 "enum": [
@@ -59,17 +61,17 @@
                   "upvotes"
                 ],
                 "type": "string",
-                "description": "Sort for discovery listings/search. Use hf://papers/trending for the paper trending view; other sort values are provider-specific."
+                "description": "Optional sort for supported discovery listings/search only. Do not pass sort to hf://papers or dated Daily Papers listings; use ls hf://papers/trending for trending papers."
               },
               "limit": {
                 "type": "integer",
                 "maximum": 10000,
                 "minimum": 1,
-                "description": "ls/search max result size. ls default 1000; ls hf://papers uses limit for its recent-paper sample (default 10, capped at 100) in addition to structural entries; paper batch and trending listings default to and are capped at 100; search default 100."
+                "description": "ls/search maximum results. Default 1000 for ls and 100 for search. Paper listings are capped at 100."
               },
               "query": {
                 "type": "string",
-                "description": "Search query for hf://models, hf://datasets, hf://spaces, hf://collections, or hf://papers."
+                "description": "search-only keyword or natural-language query. Use a discovery URI: hf://models, hf://datasets, hf://spaces, hf://collections, hf://collections/OWNER, or hf://papers. Paper search is supported only at exactly hf://papers."
               },
               "offset": {
                 "type": "integer",
@@ -84,7 +86,8 @@
               },
               "recursive": {
                 "type": "boolean",
-                "default": false
+                "default": false,
+                "description": "ls-only recursive traversal; unsupported on unbounded discovery roots such as hf://papers."
               },
               "entry_type": {
                 "enum": [
@@ -96,7 +99,8 @@
                   "paper",
                   "link"
                 ],
-                "type": "string"
+                "type": "string",
+                "description": "Optional ls/find/search result-type filter; it does not change URI interpretation."
               }
             },
             "additionalProperties": false
@@ -163,7 +167,7 @@
           }
         },
         "hf_doc_search": {
-          "description": "Search and Discover Hugging Face Product and Library documentation. Send an empty query to discover structure and navigation instructions. Knowledge up-to-date as at 10 July 2026. Combine with the Product filter to focus results.",
+          "description": "Search and Discover Hugging Face Product and Library documentation. Send an empty query to discover structure and navigation instructions. Knowledge up-to-date as at 12 July 2026. Combine with the Product filter to focus results.",
           "inputSchema": {
             "type": "object",
             "$schema": "http://json-schema.org/draft-07/schema#",
