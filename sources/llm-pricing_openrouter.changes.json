@@ -2,6 +2,52 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "16b0ec5a-2d24-48ae-b29c-3bb84198c74d",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "ea4030c3-3ffa-42c1-b355-688635cb34e1",
+      "toSnapshotId": "d4977242-6731-44db-9637-b1b9b0150bc2",
+      "detectedAt": "2026-07-14T19:44:09.169Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.169,
+            "before": 0.1716
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.91,
+            "before": 0.924
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 2.86,
+            "before": 2.904
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Price decreased for cache read, input, and output per 1M tokens."
+    },
+    {
       "id": "6cf2eca1-4f6a-44c7-aa87-6734afc1c2ff",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -1973,39 +2019,6 @@
             ],
             "after": {
               "name": "OpenAI: GPT-5.6 Sol Pro",
-              "currency": "USD",
-              "inputPer1m": 5,
-              "outputPer1m": 30,
-              "contextLength": 1050000,
-              "cacheReadPer1m": 0.5,
-              "cacheWritePer1m": 6.25,
-              "maxOutputTokens": 128000
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "New model added, no existing consumers affected."
-    },
-    {
-      "id": "68095a0a-3fab-4064-af52-b2c635c3142a",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/gpt-5.6-sol",
-      "fromSnapshotId": "e4ea40e7-4291-444a-96d1-ca6dfb2f4953",
-      "toSnapshotId": "2e5834f5-ea7f-4364-8964-324b51f7c9ef",
-      "detectedAt": "2026-07-09T19:44:48.039Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "openai/gpt-5.6-sol"
-            ],
-            "after": {
-              "name": "OpenAI: GPT-5.6 Sol",
               "currency": "USD",
               "inputPer1m": 5,
               "outputPer1m": 30,
