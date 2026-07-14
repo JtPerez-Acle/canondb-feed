@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-13T19:44:05.461Z",
+    "fetchedAt": "2026-07-14T01:44:06.226Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -374,11 +374,10 @@
         "qwen/qwen3.6-27b": {
           "name": "Qwen: Qwen3.6 27B",
           "currency": "USD",
-          "inputPer1m": 0.285,
+          "inputPer1m": 0.289,
           "outputPer1m": 2.4,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.15,
-          "maxOutputTokens": 262140
+          "maxOutputTokens": 131072
         },
         "qwen/qwen3.7-max": {
           "name": "Qwen: Qwen3.7 Max",
@@ -821,10 +820,10 @@
         "openai/gpt-oss-120b": {
           "name": "OpenAI: gpt-oss-120b",
           "currency": "USD",
-          "inputPer1m": 0.036,
-          "outputPer1m": 0.18,
+          "inputPer1m": 0.03,
+          "outputPer1m": 0.15,
           "contextLength": 131072,
-          "maxOutputTokens": null
+          "maxOutputTokens": 131072
         },
         "openai/o3-mini-high": {
           "name": "OpenAI: o3 Mini High",
@@ -1651,14 +1650,6 @@
           "cacheWritePer1m": 3.125,
           "maxOutputTokens": 128000
         },
-        "openai/gpt-oss-120b:free": {
-          "name": "OpenAI: gpt-oss-120b (free)",
-          "currency": "USD",
-          "inputPer1m": 0,
-          "outputPer1m": 0,
-          "contextLength": 131072,
-          "maxOutputTokens": 131072
-        },
         "poolside/laguna-m.1:free": {
           "name": "Poolside: Laguna M.1 (free)",
           "currency": "USD",
@@ -1955,7 +1946,7 @@
           "inputPer1m": 0,
           "outputPer1m": 0,
           "contextLength": 262144,
-          "maxOutputTokens": 8192
+          "maxOutputTokens": 32768
         },
         "google/lyria-3-pro-preview": {
           "name": "Google: Lyria 3 Pro Preview",
