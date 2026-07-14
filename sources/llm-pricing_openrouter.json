@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-14T07:44:05.652Z",
+    "fetchedAt": "2026-07-14T13:44:06.422Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -101,10 +101,10 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.9282,
-          "outputPer1m": 2.9172,
+          "inputPer1m": 0.924,
+          "outputPer1m": 2.904,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.17238,
+          "cacheReadPer1m": 0.1716,
           "maxOutputTokens": 128000
         },
         "mancer/weaver": {
@@ -1868,14 +1868,6 @@
           "outputPer1m": 1.365,
           "contextLength": 256000,
           "maxOutputTokens": 32768
-        },
-        "sao10k/l3.1-70b-hanami-x1": {
-          "name": "Sao10K: Llama 3.1 70B Hanami x1",
-          "currency": "USD",
-          "inputPer1m": 3,
-          "outputPer1m": 3,
-          "contextLength": 16000,
-          "maxOutputTokens": null
         },
         "thedrummer/skyfall-36b-v2": {
           "name": "TheDrummer: Skyfall 36B V2",

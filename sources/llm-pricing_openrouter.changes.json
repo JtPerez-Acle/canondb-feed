@@ -2,6 +2,83 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "6cf2eca1-4f6a-44c7-aa87-6734afc1c2ff",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "94db8410-6498-4665-9366-7cb9c0ee8039",
+      "toSnapshotId": "ea4030c3-3ffa-42c1-b355-688635cb34e1",
+      "detectedAt": "2026-07-14T13:44:26.015Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.1716,
+            "before": 0.17238
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.924,
+            "before": 0.9282
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 2.904,
+            "before": 2.9172
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Price decrease for cacheRead, input, and output per 1M tokens."
+    },
+    {
+      "id": "1d8a7177-e7c3-4664-a5f2-3cfad8b7139b",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/sao10k/l3.1-70b-hanami-x1",
+      "fromSnapshotId": "94db8410-6498-4665-9366-7cb9c0ee8039",
+      "toSnapshotId": "ea4030c3-3ffa-42c1-b355-688635cb34e1",
+      "detectedAt": "2026-07-14T13:44:08.095Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "models",
+              "sao10k/l3.1-70b-hanami-x1"
+            ],
+            "before": {
+              "name": "Sao10K: Llama 3.1 70B Hanami x1",
+              "currency": "USD",
+              "inputPer1m": 3,
+              "outputPer1m": 3,
+              "contextLength": 16000,
+              "maxOutputTokens": null
+            }
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Model removed, callers referencing this model id will break"
+    },
+    {
       "id": "cdae6717-4eae-4aa0-99e3-b85b4438689d",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -1944,72 +2021,6 @@
       "confidence": 1,
       "classifiedBy": "llm",
       "notes": "New model added, no existing consumers affected."
-    },
-    {
-      "id": "79df4347-7095-4d3b-9929-d1151b3787eb",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/gpt-5.6-luna-pro",
-      "fromSnapshotId": "e4ea40e7-4291-444a-96d1-ca6dfb2f4953",
-      "toSnapshotId": "2e5834f5-ea7f-4364-8964-324b51f7c9ef",
-      "detectedAt": "2026-07-09T19:44:44.582Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "openai/gpt-5.6-luna-pro"
-            ],
-            "after": {
-              "name": "OpenAI: GPT-5.6 Luna Pro",
-              "currency": "USD",
-              "inputPer1m": 1,
-              "outputPer1m": 6,
-              "contextLength": 1050000,
-              "cacheReadPer1m": 0.1,
-              "cacheWritePer1m": 1.25,
-              "maxOutputTokens": 128000
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "New model added, no existing callers break."
-    },
-    {
-      "id": "17dd8831-7edf-4ea9-98ef-2298516179bd",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/gpt-5.6-luna",
-      "fromSnapshotId": "e4ea40e7-4291-444a-96d1-ca6dfb2f4953",
-      "toSnapshotId": "2e5834f5-ea7f-4364-8964-324b51f7c9ef",
-      "detectedAt": "2026-07-09T19:44:40.555Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "openai/gpt-5.6-luna"
-            ],
-            "after": {
-              "name": "OpenAI: GPT-5.6 Luna",
-              "currency": "USD",
-              "inputPer1m": 1,
-              "outputPer1m": 6,
-              "contextLength": 1050000,
-              "cacheReadPer1m": 0.1,
-              "cacheWritePer1m": 1.25,
-              "maxOutputTokens": 128000
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "New model added, no existing consumer affected."
     }
   ]
 }
