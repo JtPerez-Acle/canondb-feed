@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-14T01:44:06.226Z",
+    "fetchedAt": "2026-07-14T07:44:05.652Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -34,7 +34,7 @@
           "outputPer1m": 1.92,
           "contextLength": 202752,
           "cacheReadPer1m": 0.12,
-          "maxOutputTokens": null
+          "maxOutputTokens": 128000
         },
         "tencent/hy3": {
           "name": "Tencent: Hy3",
@@ -101,11 +101,11 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.93,
-          "outputPer1m": 3,
+          "inputPer1m": 0.9282,
+          "outputPer1m": 2.9172,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.18,
-          "maxOutputTokens": 32768
+          "cacheReadPer1m": 0.17238,
+          "maxOutputTokens": 128000
         },
         "mancer/weaver": {
           "name": "Mancer: Weaver (alpha)",
@@ -1127,11 +1127,10 @@
         "google/gemma-4-31b-it": {
           "name": "Google: Gemma 4 31B",
           "currency": "USD",
-          "inputPer1m": 0.12,
+          "inputPer1m": 0.06,
           "outputPer1m": 0.35,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.09,
-          "maxOutputTokens": 262144
+          "maxOutputTokens": 8192
         },
         "openai/gpt-audio-mini": {
           "name": "OpenAI: GPT Audio Mini",
@@ -2232,6 +2231,24 @@
           "cacheReadPer1m": 0.025,
           "cacheWritePer1m": 0.083333,
           "maxOutputTokens": 65536
+        },
+        "kwaipilot/kat-coder-air-v2.5": {
+          "name": "Kwaipilot: KAT-Coder-Air V2.5",
+          "currency": "USD",
+          "inputPer1m": 0.15,
+          "outputPer1m": 0.6,
+          "contextLength": 256000,
+          "cacheReadPer1m": 0.03,
+          "maxOutputTokens": 80000
+        },
+        "kwaipilot/kat-coder-pro-v2.5": {
+          "name": "Kwaipilot: KAT-Coder-Pro V2.5",
+          "currency": "USD",
+          "inputPer1m": 0.74,
+          "outputPer1m": 2.96,
+          "contextLength": 256000,
+          "cacheReadPer1m": 0.15,
+          "maxOutputTokens": 80000
         },
         "meta-llama/llama-guard-4-12b": {
           "name": "Meta: Llama Guard 4 12B",
