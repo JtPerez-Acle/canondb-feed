@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-15T07:44:07.141Z",
+    "fetchedAt": "2026-07-15T13:44:06.868Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -101,10 +101,10 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.8932,
-          "outputPer1m": 2.8072,
+          "inputPer1m": 0.868,
+          "outputPer1m": 2.728,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.16588,
+          "cacheReadPer1m": 0.1612,
           "maxOutputTokens": 131072
         },
         "mancer/weaver": {
@@ -1130,10 +1130,11 @@
         "google/gemma-4-31b-it": {
           "name": "Google: Gemma 4 31B",
           "currency": "USD",
-          "inputPer1m": 0.12,
-          "outputPer1m": 0.37,
+          "inputPer1m": 0.22,
+          "outputPer1m": 0.55,
           "contextLength": 262144,
-          "maxOutputTokens": 16384
+          "cacheReadPer1m": 0.12,
+          "maxOutputTokens": 262144
         },
         "openai/gpt-audio-mini": {
           "name": "OpenAI: GPT Audio Mini",
@@ -2608,10 +2609,10 @@
         "meta-llama/llama-3.2-3b-instruct": {
           "name": "Meta: Llama 3.2 3B Instruct",
           "currency": "USD",
-          "inputPer1m": 0.0509,
-          "outputPer1m": 0.335,
+          "inputPer1m": 0.05,
+          "outputPer1m": 0.33,
           "contextLength": 131072,
-          "maxOutputTokens": 80000
+          "maxOutputTokens": 131072
         },
         "mistralai/mixtral-8x22b-instruct": {
           "name": "Mistral: Mixtral 8x22B Instruct",
