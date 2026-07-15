@@ -2,6 +2,107 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "b592c569-47e7-44e8-98f7-3a0243bda6f9",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "d4977242-6731-44db-9637-b1b9b0150bc2",
+      "toSnapshotId": "f56a864e-ac15-4894-8359-ed4ee2103fe3",
+      "detectedAt": "2026-07-15T01:44:17.358Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.16848,
+            "before": 0.169
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.9072,
+            "before": 0.91
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "maxOutputTokens"
+            ],
+            "after": 131072,
+            "before": 128000
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 2.8512,
+            "before": 2.86
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "All changes are favorable: price decreases and output limit increase."
+    },
+    {
+      "id": "e86ac212-8b47-4f20-9b11-3a8ea6e657ab",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/google/gemma-4-31b-it",
+      "fromSnapshotId": "d4977242-6731-44db-9637-b1b9b0150bc2",
+      "toSnapshotId": "f56a864e-ac15-4894-8359-ed4ee2103fe3",
+      "detectedAt": "2026-07-15T01:44:16.018Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "models",
+              "google/gemma-4-31b-it",
+              "cacheReadPer1m"
+            ],
+            "after": 0.09
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "google/gemma-4-31b-it",
+              "inputPer1m"
+            ],
+            "after": 0.12,
+            "before": 0.06
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "google/gemma-4-31b-it",
+              "maxOutputTokens"
+            ],
+            "after": 262144,
+            "before": 8192
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Input price increased from 0.06 to 0.12 per 1M tokens; output token limit increase is safe."
+    },
+    {
       "id": "16b0ec5a-2d24-48ae-b29c-3bb84198c74d",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -1968,72 +2069,6 @@
       "confidence": 1,
       "classifiedBy": "llm",
       "notes": "New model added."
-    },
-    {
-      "id": "4ed6799e-e4c4-4cd8-8e83-4466fe1417fc",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/gpt-5.6-terra",
-      "fromSnapshotId": "e4ea40e7-4291-444a-96d1-ca6dfb2f4953",
-      "toSnapshotId": "2e5834f5-ea7f-4364-8964-324b51f7c9ef",
-      "detectedAt": "2026-07-09T19:44:52.506Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "openai/gpt-5.6-terra"
-            ],
-            "after": {
-              "name": "OpenAI: GPT-5.6 Terra",
-              "currency": "USD",
-              "inputPer1m": 2.5,
-              "outputPer1m": 15,
-              "contextLength": 1050000,
-              "cacheReadPer1m": 0.25,
-              "cacheWritePer1m": 3.125,
-              "maxOutputTokens": 128000
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "New model added, no existing callers affected."
-    },
-    {
-      "id": "1ccb4326-f90d-49e9-af45-5f4ffd2130ec",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/gpt-5.6-sol-pro",
-      "fromSnapshotId": "e4ea40e7-4291-444a-96d1-ca6dfb2f4953",
-      "toSnapshotId": "2e5834f5-ea7f-4364-8964-324b51f7c9ef",
-      "detectedAt": "2026-07-09T19:44:50.770Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "openai/gpt-5.6-sol-pro"
-            ],
-            "after": {
-              "name": "OpenAI: GPT-5.6 Sol Pro",
-              "currency": "USD",
-              "inputPer1m": 5,
-              "outputPer1m": 30,
-              "contextLength": 1050000,
-              "cacheReadPer1m": 0.5,
-              "cacheWritePer1m": 6.25,
-              "maxOutputTokens": 128000
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "New model added, no existing consumers affected."
     }
   ]
 }
