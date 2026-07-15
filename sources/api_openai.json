@@ -5,7 +5,8 @@
   "current": {
     "source": "api:openai",
     "fetchedAt": "2026-07-15T13:44:59.199Z",
-    "stale": false,
+    "stale": true,
+    "staleReason": "latest refresh failed",
     "verified": true,
     "data": {
       "api": "api:openai",

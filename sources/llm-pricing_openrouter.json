@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-15T13:44:06.868Z",
+    "fetchedAt": "2026-07-15T19:44:06.874Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -101,10 +101,10 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.868,
-          "outputPer1m": 2.728,
+          "inputPer1m": 0.8484,
+          "outputPer1m": 2.6664,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.1612,
+          "cacheReadPer1m": 0.15756,
           "maxOutputTokens": 131072
         },
         "mancer/weaver": {
@@ -384,11 +384,11 @@
         "qwen/qwen3.7-max": {
           "name": "Qwen: Qwen3.7 Max",
           "currency": "USD",
-          "inputPer1m": 1.25,
-          "outputPer1m": 3.75,
+          "inputPer1m": 1.475,
+          "outputPer1m": 4.425,
           "contextLength": 1000000,
-          "cacheReadPer1m": 0.25,
-          "cacheWritePer1m": 1.5625,
+          "cacheReadPer1m": 0.295,
+          "cacheWritePer1m": 1.84375,
           "maxOutputTokens": 65536
         },
         "rekaai/reka-edge": {
@@ -904,14 +904,6 @@
           "outputPer1m": 0.14,
           "contextLength": 128000,
           "maxOutputTokens": 5120
-        },
-        "arcee-ai/coder-large": {
-          "name": "Arcee AI: Coder Large",
-          "currency": "USD",
-          "inputPer1m": 0.5,
-          "outputPer1m": 0.8,
-          "contextLength": 32768,
-          "maxOutputTokens": null
         },
         "deepseek/deepseek-r1": {
           "name": "DeepSeek: R1",

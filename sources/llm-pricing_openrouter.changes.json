@@ -2,6 +2,139 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "1b3af686-9eb0-4842-bfe2-729165bf68f2",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "c5cffb4c-0330-4f66-818e-31656155f402",
+      "toSnapshotId": "8b7cac61-2027-4114-9d2a-187e5e749bb5",
+      "detectedAt": "2026-07-15T19:44:24.526Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.15756,
+            "before": 0.1612
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.8484,
+            "before": 0.868
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 2.6664,
+            "before": 2.728
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "All three changes are price decreases, which are clearly favorable to consumers."
+    },
+    {
+      "id": "164f99cf-28fb-49ee-9756-a422aafb4d16",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3.7-max",
+      "fromSnapshotId": "c5cffb4c-0330-4f66-818e-31656155f402",
+      "toSnapshotId": "8b7cac61-2027-4114-9d2a-187e5e749bb5",
+      "detectedAt": "2026-07-15T19:44:13.001Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.7-max",
+              "cacheReadPer1m"
+            ],
+            "after": 0.295,
+            "before": 0.25
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.7-max",
+              "cacheWritePer1m"
+            ],
+            "after": 1.84375,
+            "before": 1.5625
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.7-max",
+              "inputPer1m"
+            ],
+            "after": 1.475,
+            "before": 1.25
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.7-max",
+              "outputPer1m"
+            ],
+            "after": 4.425,
+            "before": 3.75
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "All four price fields increased, raising cost for agents without API breakage."
+    },
+    {
+      "id": "577a0376-32ba-4e4a-87d6-41e5857debe7",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/arcee-ai/coder-large",
+      "fromSnapshotId": "c5cffb4c-0330-4f66-818e-31656155f402",
+      "toSnapshotId": "8b7cac61-2027-4114-9d2a-187e5e749bb5",
+      "detectedAt": "2026-07-15T19:44:09.828Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "models",
+              "arcee-ai/coder-large"
+            ],
+            "before": {
+              "name": "Arcee AI: Coder Large",
+              "currency": "USD",
+              "inputPer1m": 0.5,
+              "outputPer1m": 0.8,
+              "contextLength": 32768,
+              "maxOutputTokens": null
+            }
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Model removed, callers referencing this model id will break"
+    },
+    {
       "id": "fc572c20-63f5-4a6b-a450-460bb96aef2d",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -2117,153 +2250,6 @@
       "confidence": 0.95,
       "classifiedBy": "llm",
       "notes": "Price increases for input and output tokens."
-    },
-    {
-      "id": "b592c569-47e7-44e8-98f7-3a0243bda6f9",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/z-ai/glm-5.2",
-      "fromSnapshotId": "d4977242-6731-44db-9637-b1b9b0150bc2",
-      "toSnapshotId": "f56a864e-ac15-4894-8359-ed4ee2103fe3",
-      "detectedAt": "2026-07-15T01:44:17.358Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "cacheReadPer1m"
-            ],
-            "after": 0.16848,
-            "before": 0.169
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "inputPer1m"
-            ],
-            "after": 0.9072,
-            "before": 0.91
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "maxOutputTokens"
-            ],
-            "after": 131072,
-            "before": 128000
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "outputPer1m"
-            ],
-            "after": 2.8512,
-            "before": 2.86
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "All changes are favorable: price decreases and output limit increase."
-    },
-    {
-      "id": "e86ac212-8b47-4f20-9b11-3a8ea6e657ab",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/google/gemma-4-31b-it",
-      "fromSnapshotId": "d4977242-6731-44db-9637-b1b9b0150bc2",
-      "toSnapshotId": "f56a864e-ac15-4894-8359-ed4ee2103fe3",
-      "detectedAt": "2026-07-15T01:44:16.018Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "google/gemma-4-31b-it",
-              "cacheReadPer1m"
-            ],
-            "after": 0.09
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "google/gemma-4-31b-it",
-              "inputPer1m"
-            ],
-            "after": 0.12,
-            "before": 0.06
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "google/gemma-4-31b-it",
-              "maxOutputTokens"
-            ],
-            "after": 262144,
-            "before": 8192
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "Input price increased from 0.06 to 0.12 per 1M tokens; output token limit increase is safe."
-    },
-    {
-      "id": "16b0ec5a-2d24-48ae-b29c-3bb84198c74d",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/z-ai/glm-5.2",
-      "fromSnapshotId": "ea4030c3-3ffa-42c1-b355-688635cb34e1",
-      "toSnapshotId": "d4977242-6731-44db-9637-b1b9b0150bc2",
-      "detectedAt": "2026-07-14T19:44:09.169Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "cacheReadPer1m"
-            ],
-            "after": 0.169,
-            "before": 0.1716
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "inputPer1m"
-            ],
-            "after": 0.91,
-            "before": 0.924
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "outputPer1m"
-            ],
-            "after": 2.86,
-            "before": 2.904
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Price decreased for cache read, input, and output per 1M tokens."
     }
   ]
 }
