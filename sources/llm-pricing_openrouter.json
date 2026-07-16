@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-16T01:44:06.310Z",
+    "fetchedAt": "2026-07-16T07:44:07.117Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -101,10 +101,10 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.9646,
-          "outputPer1m": 3.0316,
+          "inputPer1m": 0.9674,
+          "outputPer1m": 3.0404,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.17914,
+          "cacheReadPer1m": 0.17966,
           "maxOutputTokens": 131072
         },
         "mancer/weaver": {
@@ -961,11 +961,11 @@
         "moonshotai/kimi-k2.6": {
           "name": "MoonshotAI: Kimi K2.6",
           "currency": "USD",
-          "inputPer1m": 0.66,
-          "outputPer1m": 3.41,
+          "inputPer1m": 0.95,
+          "outputPer1m": 4,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.144,
-          "maxOutputTokens": 262144
+          "cacheReadPer1m": 0.16,
+          "maxOutputTokens": null
         },
         "morph/morph-v3-large": {
           "name": "Morph: Morph V3 Large",
