@@ -1,4 +1,31 @@
 {
   "id": "mcp-tools:cloudflare-docs",
-  "changes": []
+  "changes": [
+    {
+      "id": "be731004-6c9d-40b0-af03-77cdca06e84b",
+      "sourceId": "mcp-tools:cloudflare-docs",
+      "entityId": "tools/search_cloudflare_documentation",
+      "fromSnapshotId": "41775517-3eee-447f-9fa9-1e2bfbda6461",
+      "toSnapshotId": "b20cb02f-bd98-49d9-8eaa-408a21d172d0",
+      "detectedAt": "2026-07-16T19:45:09.434Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "search_cloudflare_documentation",
+              "description"
+            ],
+            "after": "Search the Cloudflare documentation.\n\n\t\tThis tool should be used to answer any question about Cloudflare products or features, including:\n\t\t- Workers, Pages, R2, Images, Stream, D1, Durable Objects, KV, Workflows, Hyperdrive, Queues\n\t\t- AI Search, Workers AI, Vectorize, AI Gateway, Browser Run\n\t\t- Zero Trust, Access, Tunnel, Gateway, Browser Isolation, WARP, DDOS, Magic Transit, Magic WAN\n\t\t- CDN, Cache, DNS, Zaraz, Argo, Rulesets, Terraform, Account and Billing\n\n\t\tResults are returned as semantically similar chunks to the query.\n\t\t",
+            "before": "Search the Cloudflare documentation.\n\n\t\tThis tool should be used to answer any question about Cloudflare products or features, including:\n\t\t- Workers, Pages, R2, Images, Stream, D1, Durable Objects, KV, Workflows, Hyperdrive, Queues\n\t\t- AI Search, Workers AI, Vectorize, AI Gateway, Browser Rendering\n\t\t- Zero Trust, Access, Tunnel, Gateway, Browser Isolation, WARP, DDOS, Magic Transit, Magic WAN\n\t\t- CDN, Cache, DNS, Zaraz, Argo, Rulesets, Terraform, Account and Billing\n\n\t\tResults are returned as semantically similar chunks to the query.\n\t\t"
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Only the description changed; no functional impact on callers."
+    }
+  ]
 }

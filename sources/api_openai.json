@@ -6,7 +6,7 @@
     "source": "api:openai",
     "fetchedAt": "2026-07-15T13:44:59.199Z",
     "stale": true,
-    "staleReason": "latest refresh failed",
+    "staleReason": "latest refresh failed; data older than 24h",
     "verified": true,
     "data": {
       "api": "api:openai",

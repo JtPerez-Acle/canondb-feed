@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-16T13:44:07.196Z",
+    "fetchedAt": "2026-07-16T19:44:07.338Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -101,10 +101,10 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.9436,
-          "outputPer1m": 2.9656,
+          "inputPer1m": 0.9142,
+          "outputPer1m": 2.8732,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.17524,
+          "cacheReadPer1m": 0.16978,
           "maxOutputTokens": 131072
         },
         "mancer/weaver": {
@@ -260,10 +260,10 @@
         "qwen/qwen3-14b": {
           "name": "Qwen: Qwen3 14B",
           "currency": "USD",
-          "inputPer1m": 0.1,
+          "inputPer1m": 0.12,
           "outputPer1m": 0.24,
           "contextLength": 131702,
-          "maxOutputTokens": 40960
+          "maxOutputTokens": 16384
         },
         "qwen/qwen3-32b": {
           "name": "Qwen: Qwen3 32B",
@@ -590,6 +590,15 @@
           "contextLength": 131072,
           "maxOutputTokens": 100352
         },
+        "moonshotai/kimi-k3": {
+          "name": "MoonshotAI: Kimi K3",
+          "currency": "USD",
+          "inputPer1m": 3,
+          "outputPer1m": 15,
+          "contextLength": 1048576,
+          "cacheReadPer1m": 0.3,
+          "maxOutputTokens": null
+        },
         "nex-agi/nex-n2-pro": {
           "name": "Nex AGI: Nex-N2-Pro",
           "currency": "USD",
@@ -697,11 +706,10 @@
         "z-ai/glm-4.7-flash": {
           "name": "Z.ai: GLM 4.7 Flash",
           "currency": "USD",
-          "inputPer1m": 0.06,
+          "inputPer1m": 0.0605,
           "outputPer1m": 0.4,
-          "contextLength": 202752,
-          "cacheReadPer1m": 0.01,
-          "maxOutputTokens": 16384
+          "contextLength": 200000,
+          "maxOutputTokens": 131072
         },
         "~openai/gpt-latest": {
           "name": "OpenAI GPT Latest",
@@ -729,6 +737,15 @@
           "contextLength": 128000,
           "cacheReadPer1m": 0.025,
           "maxOutputTokens": 50000
+        },
+        "meta/muse-spark-1.1": {
+          "name": "Meta: Muse Spark 1.1",
+          "currency": "USD",
+          "inputPer1m": 1.25,
+          "outputPer1m": 4.25,
+          "contextLength": 1048576,
+          "cacheReadPer1m": 0.15,
+          "maxOutputTokens": null
         },
         "morph/morph-v3-fast": {
           "name": "Morph: Morph V3 Fast",
@@ -1226,8 +1243,8 @@
         "mistralai/mistral-nemo": {
           "name": "Mistral: Mistral Nemo",
           "currency": "USD",
-          "inputPer1m": 0.02,
-          "outputPer1m": 0.04,
+          "inputPer1m": 0.019,
+          "outputPer1m": 0.03,
           "contextLength": 131072,
           "maxOutputTokens": 16384
         },
@@ -1507,11 +1524,11 @@
         "~moonshotai/kimi-latest": {
           "name": "MoonshotAI Kimi Latest",
           "currency": "USD",
-          "inputPer1m": 0.66,
-          "outputPer1m": 3.41,
-          "contextLength": 262144,
-          "cacheReadPer1m": 0.15,
-          "maxOutputTokens": 262144
+          "inputPer1m": 3,
+          "outputPer1m": 15,
+          "contextLength": 1048576,
+          "cacheReadPer1m": 0.3,
+          "maxOutputTokens": null
         },
         "~openai/gpt-mini-latest": {
           "name": "OpenAI GPT Mini Latest",
@@ -1787,10 +1804,10 @@
         "moonshotai/kimi-k2.7-code": {
           "name": "MoonshotAI: Kimi K2.7 Code",
           "currency": "USD",
-          "inputPer1m": 0.719,
-          "outputPer1m": 3.49,
+          "inputPer1m": 0.75,
+          "outputPer1m": 3.5,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.149,
+          "cacheReadPer1m": 0.16,
           "maxOutputTokens": 262144
         },
         "nousresearch/hermes-4-70b": {
@@ -2602,10 +2619,10 @@
         "meta-llama/llama-3.2-3b-instruct": {
           "name": "Meta: Llama 3.2 3B Instruct",
           "currency": "USD",
-          "inputPer1m": 0.05,
-          "outputPer1m": 0.33,
+          "inputPer1m": 0.0509,
+          "outputPer1m": 0.335,
           "contextLength": 131072,
-          "maxOutputTokens": 131072
+          "maxOutputTokens": 80000
         },
         "mistralai/mixtral-8x22b-instruct": {
           "name": "Mistral: Mixtral 8x22B Instruct",
