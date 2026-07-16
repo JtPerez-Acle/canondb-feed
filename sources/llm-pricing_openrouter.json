@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-15T19:44:06.874Z",
+    "fetchedAt": "2026-07-16T01:44:06.310Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -101,10 +101,10 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.8484,
-          "outputPer1m": 2.6664,
+          "inputPer1m": 0.9646,
+          "outputPer1m": 3.0316,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.15756,
+          "cacheReadPer1m": 0.17914,
           "maxOutputTokens": 131072
         },
         "mancer/weaver": {
@@ -260,10 +260,10 @@
         "qwen/qwen3-14b": {
           "name": "Qwen: Qwen3 14B",
           "currency": "USD",
-          "inputPer1m": 0.1,
+          "inputPer1m": 0.12,
           "outputPer1m": 0.24,
           "contextLength": 131702,
-          "maxOutputTokens": 40960
+          "maxOutputTokens": 16384
         },
         "qwen/qwen3-32b": {
           "name": "Qwen: Qwen3 32B",
@@ -697,10 +697,11 @@
         "z-ai/glm-4.7-flash": {
           "name": "Z.ai: GLM 4.7 Flash",
           "currency": "USD",
-          "inputPer1m": 0.0605,
+          "inputPer1m": 0.06,
           "outputPer1m": 0.4,
-          "contextLength": 200000,
-          "maxOutputTokens": 131072
+          "contextLength": 202752,
+          "cacheReadPer1m": 0.01,
+          "maxOutputTokens": 16384
         },
         "~openai/gpt-latest": {
           "name": "OpenAI GPT Latest",
@@ -1139,7 +1140,7 @@
         "qwen/qwen3-coder-next": {
           "name": "Qwen: Qwen3 Coder Next",
           "currency": "USD",
-          "inputPer1m": 0.12,
+          "inputPer1m": 0.11,
           "outputPer1m": 0.8,
           "contextLength": 262144,
           "cacheReadPer1m": 0.07,
@@ -2748,7 +2749,7 @@
           "inputPer1m": 0.25,
           "outputPer1m": 1.5,
           "contextLength": 65536,
-          "maxOutputTokens": 66000
+          "maxOutputTokens": 65536
         },
         "qwen/qwen-plus-2025-07-28:thinking": {
           "name": "Qwen: Qwen Plus 0728 (thinking)",
