@@ -2,6 +2,153 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "2d2f745b-f694-4715-b80e-d62285596e09",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "d4d424b7-07c3-4982-b09b-d28e23ba4e17",
+      "toSnapshotId": "c1d809ae-e152-4a4d-8f9c-68d9589b98fc",
+      "detectedAt": "2026-07-18T13:44:55.266Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.05486,
+            "before": 0.06344
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.2954,
+            "before": 0.3416
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 0.9284,
+            "before": 1.0736
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "All three prices decreased, which is favorable to consumers."
+    },
+    {
+      "id": "ab267054-7b99-4191-898c-37ebd19eb070",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3-14b",
+      "fromSnapshotId": "d4d424b7-07c3-4982-b09b-d28e23ba4e17",
+      "toSnapshotId": "c1d809ae-e152-4a4d-8f9c-68d9589b98fc",
+      "detectedAt": "2026-07-18T13:44:48.148Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-14b",
+              "inputPer1m"
+            ],
+            "after": 0.2275,
+            "before": 0.12
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-14b",
+              "maxOutputTokens"
+            ],
+            "after": 8192,
+            "before": 16384
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-14b",
+              "outputPer1m"
+            ],
+            "after": 0.91,
+            "before": 0.24
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.5,
+      "classifiedBy": "rules",
+      "notes": "llm fallback (This operation was aborted); field value(s) changed"
+    },
+    {
+      "id": "1cf724e4-6148-471f-b15e-0cfaad2ed204",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/google/gemma-4-31b-it",
+      "fromSnapshotId": "d4d424b7-07c3-4982-b09b-d28e23ba4e17",
+      "toSnapshotId": "c1d809ae-e152-4a4d-8f9c-68d9589b98fc",
+      "detectedAt": "2026-07-18T13:44:28.129Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "models",
+              "google/gemma-4-31b-it",
+              "cacheReadPer1m"
+            ],
+            "before": 0.12
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "google/gemma-4-31b-it",
+              "inputPer1m"
+            ],
+            "after": 0.12,
+            "before": 0.22
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "google/gemma-4-31b-it",
+              "maxOutputTokens"
+            ],
+            "after": 16384,
+            "before": 262144
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "google/gemma-4-31b-it",
+              "outputPer1m"
+            ],
+            "after": 0.37,
+            "before": 0.55
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 0.6,
+      "classifiedBy": "rules",
+      "notes": "llm fallback (This operation was aborted); field(s) removed"
+    },
+    {
       "id": "63b55871-2071-42bf-9b5e-e1f4402d0449",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -1887,144 +2034,6 @@
       "confidence": 1,
       "classifiedBy": "llm",
       "notes": "All three prices decreased."
-    },
-    {
-      "id": "700c78b7-3428-4206-9489-982f02e05272",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/qwen/qwen3-14b",
-      "fromSnapshotId": "f13831b3-4da3-4393-854c-cbcaa20637b6",
-      "toSnapshotId": "4d9caca5-f8bb-4b4f-847b-676f391f1c16",
-      "detectedAt": "2026-07-16T13:44:11.528Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3-14b",
-              "inputPer1m"
-            ],
-            "after": 0.1,
-            "before": 0.12
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3-14b",
-              "maxOutputTokens"
-            ],
-            "after": 40960,
-            "before": 16384
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "Price decreased and output limit increased, both favorable."
-    },
-    {
-      "id": "ca6187e7-1157-432c-be6e-3e41271d4b5f",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/z-ai/glm-5.2",
-      "fromSnapshotId": "65617619-668e-41ca-a2eb-e52430eed993",
-      "toSnapshotId": "f13831b3-4da3-4393-854c-cbcaa20637b6",
-      "detectedAt": "2026-07-16T07:44:11.795Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "cacheReadPer1m"
-            ],
-            "after": 0.17966,
-            "before": 0.17914
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "inputPer1m"
-            ],
-            "after": 0.9674,
-            "before": 0.9646
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "outputPer1m"
-            ],
-            "after": 3.0404,
-            "before": 3.0316
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "Price increase for model z-ai/glm-5.2"
-    },
-    {
-      "id": "14333bff-2f3c-42b3-b838-bcd36b323ce3",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/moonshotai/kimi-k2.6",
-      "fromSnapshotId": "65617619-668e-41ca-a2eb-e52430eed993",
-      "toSnapshotId": "f13831b3-4da3-4393-854c-cbcaa20637b6",
-      "detectedAt": "2026-07-16T07:44:08.874Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "moonshotai/kimi-k2.6",
-              "cacheReadPer1m"
-            ],
-            "after": 0.16,
-            "before": 0.144
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "moonshotai/kimi-k2.6",
-              "inputPer1m"
-            ],
-            "after": 0.95,
-            "before": 0.66
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "moonshotai/kimi-k2.6",
-              "maxOutputTokens"
-            ],
-            "after": null,
-            "before": 262144
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "moonshotai/kimi-k2.6",
-              "outputPer1m"
-            ],
-            "after": 4,
-            "before": 3.41
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "Price increases and maxOutputTokens removal silently mislead agents with higher cost and potential truncation."
     }
   ]
 }
