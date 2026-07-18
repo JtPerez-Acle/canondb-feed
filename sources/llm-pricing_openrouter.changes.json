@@ -2,6 +2,52 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "63b55871-2071-42bf-9b5e-e1f4402d0449",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "479a54c1-09f3-4654-81c5-8bc00cef6a0c",
+      "toSnapshotId": "d4d424b7-07c3-4982-b09b-d28e23ba4e17",
+      "detectedAt": "2026-07-18T07:44:12.235Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.06344,
+            "before": 0.078
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.3416,
+            "before": 0.42
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 1.0736,
+            "before": 1.32
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "All three prices decreased (cacheRead, input, output), which is favorable to consumers."
+    },
+    {
       "id": "53bbbef8-dd34-4874-bcd0-fab406bf347a",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -1979,52 +2025,6 @@
       "confidence": 0.9,
       "classifiedBy": "llm",
       "notes": "Price increases and maxOutputTokens removal silently mislead agents with higher cost and potential truncation."
-    },
-    {
-      "id": "a1e46bf0-56bc-4d98-a269-c8bb5176922d",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/z-ai/glm-5.2",
-      "fromSnapshotId": "8b7cac61-2027-4114-9d2a-187e5e749bb5",
-      "toSnapshotId": "65617619-668e-41ca-a2eb-e52430eed993",
-      "detectedAt": "2026-07-16T01:44:16.976Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "cacheReadPer1m"
-            ],
-            "after": 0.17914,
-            "before": 0.15756
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "inputPer1m"
-            ],
-            "after": 0.9646,
-            "before": 0.8484
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "outputPer1m"
-            ],
-            "after": 3.0316,
-            "before": 2.6664
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "price increase for cacheRead, input, and output"
     }
   ]
 }
