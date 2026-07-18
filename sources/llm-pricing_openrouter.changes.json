@@ -2,6 +2,52 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "e035b129-195b-4d2d-931f-bdeb64fb4d61",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "c1d809ae-e152-4a4d-8f9c-68d9589b98fc",
+      "toSnapshotId": "41e44698-9e10-499a-b8ee-5fdee22a6add",
+      "detectedAt": "2026-07-18T19:44:11.800Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.05122,
+            "before": 0.05486
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.2758,
+            "before": 0.2954
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 0.8668,
+            "before": 0.9284
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "all prices decreased, favorable to consumers"
+    },
+    {
       "id": "2d2f745b-f694-4715-b80e-d62285596e09",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -1988,52 +2034,6 @@
       "confidence": 0.95,
       "classifiedBy": "llm",
       "notes": "Price increase and output token cap reduction for llama-3.2-3b-instruct"
-    },
-    {
-      "id": "91c3ca7f-2b39-4a44-8405-d1b0640da08d",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/z-ai/glm-5.2",
-      "fromSnapshotId": "f13831b3-4da3-4393-854c-cbcaa20637b6",
-      "toSnapshotId": "4d9caca5-f8bb-4b4f-847b-676f391f1c16",
-      "detectedAt": "2026-07-16T13:44:27.402Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "cacheReadPer1m"
-            ],
-            "after": 0.17524,
-            "before": 0.17966
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "inputPer1m"
-            ],
-            "after": 0.9436,
-            "before": 0.9674
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "outputPer1m"
-            ],
-            "after": 2.9656,
-            "before": 3.0404
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "All three prices decreased."
     }
   ]
 }
