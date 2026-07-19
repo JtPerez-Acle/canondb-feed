@@ -2,6 +2,52 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "6b54f7a3-51b4-4b5e-9d1f-b1a27ac686d9",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "4fee0c99-aaec-4e96-938c-4207b75d7b1e",
+      "toSnapshotId": "fb906408-0058-4136-bf6e-f2c488e4c0d4",
+      "detectedAt": "2026-07-19T07:44:11.459Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.05122,
+            "before": 0.0481
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.2758,
+            "before": 0.259
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 0.8668,
+            "before": 0.814
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Price increase for cache read, input, and output tokens."
+    },
+    {
       "id": "4eb6de17-63e3-41cc-a88c-46fe60991f43",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/~x-ai/grok-latest",
@@ -1985,72 +2031,6 @@
       "confidence": 0.95,
       "classifiedBy": "llm",
       "notes": "price decreased, favorable to consumers"
-    },
-    {
-      "id": "541bac12-a1da-4d50-8baf-e80103c16ee6",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/~moonshotai/kimi-latest",
-      "fromSnapshotId": "4d9caca5-f8bb-4b4f-847b-676f391f1c16",
-      "toSnapshotId": "459d3c1d-da67-4b22-bee9-4ce1b0522065",
-      "detectedAt": "2026-07-16T19:45:05.157Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "~moonshotai/kimi-latest",
-              "cacheReadPer1m"
-            ],
-            "after": 0.3,
-            "before": 0.15
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "~moonshotai/kimi-latest",
-              "contextLength"
-            ],
-            "after": 1048576,
-            "before": 262144
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "~moonshotai/kimi-latest",
-              "inputPer1m"
-            ],
-            "after": 3,
-            "before": 0.66
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "~moonshotai/kimi-latest",
-              "maxOutputTokens"
-            ],
-            "after": null,
-            "before": 262144
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "~moonshotai/kimi-latest",
-              "outputPer1m"
-            ],
-            "after": 15,
-            "before": 3.41
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "Multiple price increases (input, output, cache read) change semantics silently"
     }
   ]
 }
