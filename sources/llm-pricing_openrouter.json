@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-18T19:44:08.091Z",
+    "fetchedAt": "2026-07-19T01:44:07.457Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -101,10 +101,10 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.2758,
-          "outputPer1m": 0.8668,
+          "inputPer1m": 0.259,
+          "outputPer1m": 0.814,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.05122,
+          "cacheReadPer1m": 0.0481,
           "maxOutputTokens": 131072
         },
         "mancer/weaver": {
@@ -163,7 +163,7 @@
           "inputPer1m": 2,
           "outputPer1m": 6,
           "contextLength": 500000,
-          "cacheReadPer1m": 0.5,
+          "cacheReadPer1m": 0.3,
           "maxOutputTokens": null
         },
         "z-ai/glm-4.5v": {
@@ -520,7 +520,7 @@
           "inputPer1m": 2,
           "outputPer1m": 6,
           "contextLength": 500000,
-          "cacheReadPer1m": 0.5,
+          "cacheReadPer1m": 0.3,
           "maxOutputTokens": null
         },
         "aion-labs/aion-2.0": {
@@ -568,9 +568,10 @@
         "minimax/minimax-m2": {
           "name": "MiniMax: MiniMax M2",
           "currency": "USD",
-          "inputPer1m": 0.255,
-          "outputPer1m": 1.02,
+          "inputPer1m": 0.3,
+          "outputPer1m": 1.2,
           "contextLength": 204800,
+          "cacheReadPer1m": 0.03,
           "maxOutputTokens": 131072
         },
         "minimax/minimax-m3": {
@@ -978,11 +979,11 @@
         "moonshotai/kimi-k2.6": {
           "name": "MoonshotAI: Kimi K2.6",
           "currency": "USD",
-          "inputPer1m": 0.95,
-          "outputPer1m": 4,
+          "inputPer1m": 0.684,
+          "outputPer1m": 3.42,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.16,
-          "maxOutputTokens": null
+          "cacheReadPer1m": 0.144,
+          "maxOutputTokens": 262144
         },
         "morph/morph-v3-large": {
           "name": "Morph: Morph V3 Large",
@@ -1147,10 +1148,11 @@
         "google/gemma-4-31b-it": {
           "name": "Google: Gemma 4 31B",
           "currency": "USD",
-          "inputPer1m": 0.12,
-          "outputPer1m": 0.37,
+          "inputPer1m": 0.22,
+          "outputPer1m": 0.55,
           "contextLength": 262144,
-          "maxOutputTokens": 16384
+          "cacheReadPer1m": 0.12,
+          "maxOutputTokens": 262144
         },
         "openai/gpt-audio-mini": {
           "name": "OpenAI: GPT Audio Mini",
@@ -1810,18 +1812,18 @@
         "google/gemma-4-26b-a4b-it": {
           "name": "Google: Gemma 4 26B A4B ",
           "currency": "USD",
-          "inputPer1m": 0.1,
-          "outputPer1m": 0.3,
+          "inputPer1m": 0.07,
+          "outputPer1m": 0.34,
           "contextLength": 262144,
-          "maxOutputTokens": 256000
+          "maxOutputTokens": 16384
         },
         "moonshotai/kimi-k2.7-code": {
           "name": "MoonshotAI: Kimi K2.7 Code",
           "currency": "USD",
-          "inputPer1m": 1,
-          "outputPer1m": 4.4,
+          "inputPer1m": 0.85,
+          "outputPer1m": 3.8,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.2,
+          "cacheReadPer1m": 0.17,
           "maxOutputTokens": 262144
         },
         "nousresearch/hermes-4-70b": {
