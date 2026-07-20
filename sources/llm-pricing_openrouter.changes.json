@@ -2,6 +2,52 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "7ded7a65-4779-49ad-8880-2e3416d0aae8",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "e16b72b7-bbe4-4de6-bb99-191a17105f93",
+      "toSnapshotId": "f68ba7bd-08b5-40e8-9658-01042535a81b",
+      "detectedAt": "2026-07-20T13:44:18.162Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.17992,
+            "before": 0.17862
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.9688,
+            "before": 0.9618
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 3.0448,
+            "before": 3.0228
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Price increases for cacheRead, input, and output per 1M tokens."
+    },
+    {
       "id": "bd874681-af7b-48eb-9b1f-ddb53d70771a",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -2046,32 +2092,6 @@
       "confidence": 0.9,
       "classifiedBy": "llm",
       "notes": "REMOVED cacheReadPer1m field breaks strict consumers; maxOutputTokens reduced is breaking_agent but highest severity is breaking_strict"
-    },
-    {
-      "id": "be1c16a4-7b36-49fd-8d48-b9e041676448",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/deepseek/deepseek-v4-flash",
-      "fromSnapshotId": "aacb3150-9c31-49a8-b41c-fc6697ee0cf7",
-      "toSnapshotId": "798b74c8-7408-487a-aacc-7b94ed6cb601",
-      "detectedAt": "2026-07-17T19:44:08.845Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "deepseek/deepseek-v4-flash",
-              "cacheReadPer1m"
-            ],
-            "after": 0.02,
-            "before": 0.0196
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "cache read price increased from 0.0196 to 0.02"
     }
   ]
 }
