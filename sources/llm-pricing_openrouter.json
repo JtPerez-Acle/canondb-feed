@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-19T19:44:08.462Z",
+    "fetchedAt": "2026-07-20T01:44:08.553Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -31,10 +31,10 @@
           "name": "Z.ai: GLM 5",
           "currency": "USD",
           "inputPer1m": 0.95,
-          "outputPer1m": 3.15,
-          "contextLength": 202752,
-          "cacheReadPer1m": 0.19,
-          "maxOutputTokens": 202752
+          "outputPer1m": 2.55,
+          "contextLength": 204800,
+          "cacheReadPer1m": 0.2,
+          "maxOutputTokens": 131072
         },
         "tencent/hy3": {
           "name": "Tencent: Hy3",
@@ -101,10 +101,10 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.2338,
-          "outputPer1m": 0.7348,
+          "inputPer1m": 0.2716,
+          "outputPer1m": 0.8536,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.04342,
+          "cacheReadPer1m": 0.05044,
           "maxOutputTokens": 131072
         },
         "mancer/weaver": {
@@ -1148,10 +1148,11 @@
         "google/gemma-4-31b-it": {
           "name": "Google: Gemma 4 31B",
           "currency": "USD",
-          "inputPer1m": 0.12,
-          "outputPer1m": 0.37,
+          "inputPer1m": 0.22,
+          "outputPer1m": 0.55,
           "contextLength": 262144,
-          "maxOutputTokens": 16384
+          "cacheReadPer1m": 0.12,
+          "maxOutputTokens": 262144
         },
         "openai/gpt-audio-mini": {
           "name": "OpenAI: GPT Audio Mini",
@@ -2787,10 +2788,10 @@
         "qwen/qwen3-235b-a22b-thinking-2507": {
           "name": "Qwen: Qwen3 235B A22B Thinking 2507",
           "currency": "USD",
-          "inputPer1m": 0.1495,
-          "outputPer1m": 1.495,
+          "inputPer1m": 0.3,
+          "outputPer1m": 3,
           "contextLength": 262144,
-          "maxOutputTokens": null
+          "maxOutputTokens": 32768
         },
         "google/gemini-2.5-pro-preview-05-06": {
           "name": "Google: Gemini 2.5 Pro Preview 05-06",
