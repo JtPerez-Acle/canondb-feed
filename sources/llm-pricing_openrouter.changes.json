@@ -2,6 +2,130 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "e8f132fd-b93d-47f5-9a24-556d407f9ee7",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "f68ba7bd-08b5-40e8-9658-01042535a81b",
+      "toSnapshotId": "2bf09cf7-c4bc-442e-b740-5dc7ec658e50",
+      "detectedAt": "2026-07-20T19:44:19.186Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.17524,
+            "before": 0.17992
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.9436,
+            "before": 0.9688
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 2.9656,
+            "before": 3.0448
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Price decrease for cache read, input, and output."
+    },
+    {
+      "id": "83cd62c3-24be-461d-a310-95ecd15db10b",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/moonshotai/kimi-k2.7-code",
+      "fromSnapshotId": "f68ba7bd-08b5-40e8-9658-01042535a81b",
+      "toSnapshotId": "2bf09cf7-c4bc-442e-b740-5dc7ec658e50",
+      "detectedAt": "2026-07-20T19:44:14.097Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.7-code",
+              "cacheReadPer1m"
+            ],
+            "after": 0.16,
+            "before": 0.17
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.7-code",
+              "inputPer1m"
+            ],
+            "after": 0.82,
+            "before": 0.85
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.7-code",
+              "outputPer1m"
+            ],
+            "after": 3.75,
+            "before": 3.8
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Price decreased for cacheRead, input, and output."
+    },
+    {
+      "id": "05619922-39a1-486a-9b6a-b8c7e61c5a08",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/meituan/longcat-2.0",
+      "fromSnapshotId": "f68ba7bd-08b5-40e8-9658-01042535a81b",
+      "toSnapshotId": "2bf09cf7-c4bc-442e-b740-5dc7ec658e50",
+      "detectedAt": "2026-07-20T19:44:11.456Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "models",
+              "meituan/longcat-2.0"
+            ],
+            "after": {
+              "name": "Meituan: LongCat 2.0",
+              "currency": "USD",
+              "inputPer1m": 0.3,
+              "outputPer1m": 1.2,
+              "contextLength": 1048756,
+              "cacheReadPer1m": 0.006,
+              "maxOutputTokens": 262144
+            }
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "New model added, no breaking change."
+    },
+    {
       "id": "7ded7a65-4779-49ad-8880-2e3416d0aae8",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -1970,128 +2094,6 @@
       "confidence": 1,
       "classifiedBy": "llm",
       "notes": "Added new model."
-    },
-    {
-      "id": "83e88808-b954-46db-a098-8018f9a990ff",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/mistralai/mistral-nemo",
-      "fromSnapshotId": "aacb3150-9c31-49a8-b41c-fc6697ee0cf7",
-      "toSnapshotId": "798b74c8-7408-487a-aacc-7b94ed6cb601",
-      "detectedAt": "2026-07-17T19:44:13.460Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "mistralai/mistral-nemo",
-              "inputPer1m"
-            ],
-            "after": 0.02,
-            "before": 0.019
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "mistralai/mistral-nemo",
-              "outputPer1m"
-            ],
-            "after": 0.04,
-            "before": 0.03
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "price increase for input and output tokens"
-    },
-    {
-      "id": "898b851f-8f0b-412d-9abb-8fdfc21c2ba1",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/meta-llama/llama-3.2-11b-vision-instruct",
-      "fromSnapshotId": "aacb3150-9c31-49a8-b41c-fc6697ee0cf7",
-      "toSnapshotId": "798b74c8-7408-487a-aacc-7b94ed6cb601",
-      "detectedAt": "2026-07-17T19:44:12.910Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "meta-llama/llama-3.2-11b-vision-instruct"
-            ],
-            "after": {
-              "name": "Meta: Llama 3.2 11B Vision Instruct",
-              "currency": "USD",
-              "inputPer1m": 0.345,
-              "outputPer1m": 0.345,
-              "contextLength": 131072,
-              "maxOutputTokens": 16384
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "New model added, no breaking changes."
-    },
-    {
-      "id": "077e8eea-b185-4f11-a496-925837f3d51a",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/google/gemma-4-31b-it",
-      "fromSnapshotId": "aacb3150-9c31-49a8-b41c-fc6697ee0cf7",
-      "toSnapshotId": "798b74c8-7408-487a-aacc-7b94ed6cb601",
-      "detectedAt": "2026-07-17T19:44:10.476Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "removed",
-            "path": [
-              "models",
-              "google/gemma-4-31b-it",
-              "cacheReadPer1m"
-            ],
-            "before": 0.12
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "google/gemma-4-31b-it",
-              "inputPer1m"
-            ],
-            "after": 0.12,
-            "before": 0.22
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "google/gemma-4-31b-it",
-              "maxOutputTokens"
-            ],
-            "after": 16384,
-            "before": 262144
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "google/gemma-4-31b-it",
-              "outputPer1m"
-            ],
-            "after": 0.37,
-            "before": 0.55
-          }
-        ]
-      },
-      "severity": "breaking_strict",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "REMOVED cacheReadPer1m field breaks strict consumers; maxOutputTokens reduced is breaking_agent but highest severity is breaking_strict"
     }
   ]
 }

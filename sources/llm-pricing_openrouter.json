@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-20T13:44:08.772Z",
+    "fetchedAt": "2026-07-20T19:44:08.736Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -101,10 +101,10 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.9688,
-          "outputPer1m": 3.0448,
+          "inputPer1m": 0.9436,
+          "outputPer1m": 2.9656,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.17992,
+          "cacheReadPer1m": 0.17524,
           "maxOutputTokens": 131072
         },
         "mancer/weaver": {
@@ -738,6 +738,15 @@
           "contextLength": 128000,
           "cacheReadPer1m": 0.025,
           "maxOutputTokens": 50000
+        },
+        "meituan/longcat-2.0": {
+          "name": "Meituan: LongCat 2.0",
+          "currency": "USD",
+          "inputPer1m": 0.3,
+          "outputPer1m": 1.2,
+          "contextLength": 1048756,
+          "cacheReadPer1m": 0.006,
+          "maxOutputTokens": 262144
         },
         "meta/muse-spark-1.1": {
           "name": "Meta: Muse Spark 1.1",
@@ -1812,10 +1821,10 @@
         "moonshotai/kimi-k2.7-code": {
           "name": "MoonshotAI: Kimi K2.7 Code",
           "currency": "USD",
-          "inputPer1m": 0.85,
-          "outputPer1m": 3.8,
+          "inputPer1m": 0.82,
+          "outputPer1m": 3.75,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.17,
+          "cacheReadPer1m": 0.16,
           "maxOutputTokens": 262144
         },
         "nousresearch/hermes-4-70b": {
