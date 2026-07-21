@@ -2,6 +2,32 @@
   "id": "mcp-tools:huggingface",
   "changes": [
     {
+      "id": "adc5e42a-f087-401d-afee-b8ff651c251f",
+      "sourceId": "mcp-tools:huggingface",
+      "entityId": "tools/hf_fs",
+      "fromSnapshotId": "b230a181-873d-4304-a26e-bca6881aaf3b",
+      "toSnapshotId": "6d409590-74cf-49d6-9019-a68d122eb82e",
+      "detectedAt": "2026-07-21T13:44:23.968Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "hf_fs",
+              "description"
+            ],
+            "after": "Use to access the Hugging Face Hub. Navigate resources with ls, cat, find, stat, and search over hf:// URIs. Roots: hf://models, hf://datasets, hf://spaces, hf://buckets, hf://collections, hf://papers, hf://docs. For papers, ls hf://papers/ARXIV_ID to discover related resources; cat hf://papers/ARXIV_ID/paper.md or metadata.json. Documentation paths include the current version from each product's llms.txt manifest.\n\nGrammar; each token below is one args array element:\n  ls     URI [(-R|-r|-lR|-laR|--recursive)] [(-l|-a|-la|-al|--long)] [--glob GLOB]\n             [(-type|--type|--entry-type) TYPE] [--sort SORT] [(-limit|--limit) N]\n  cat    URI [RELATIVE_PATH] [(-offset|--offset) N] [(-max-bytes|--max-bytes) N]\n  stat   URI [RELATIVE_PATH]\n  find   URI [(-R|-r|--recursive)] [(-name|--name|--glob) GLOB] [(-path|--path) GLOB]\n             [(-type|--type|--entry-type) TYPE] [(-limit|--limit) N]\n  search URI [QUERY...] [(-type|--type|--entry-type) TYPE] [--sort SORT]\n                        [--tag TAG] [--kind mcp] [(-limit|--limit) N]\n\nTYPE = file|dir|repo|bucket|collection|paper|link.\nType aliases: f=file, d=dir, l=link, model|dataset|space=repo.\nSORT = createdAt|downloads|likes|lastModified|likes30d|trendingScore|mainSize|id|trending|upvotes.\nURI starts with hf://. QUERY and GLOB are each one string token.\nSearch URI: hf://models|datasets|spaces[/OWNER], hf://collections[/OWNER], any hf://docs scope, or exactly hf://papers; not hf://.\nRepository and collection searches may omit QUERY to browse or filter; documentation and paper searches require it.\nSearch joins multiple positional QUERY tokens with spaces. Cat and stat join one RELATIVE_PATH token to URI.\nLong-list flags are accepted for compatibility; hf_fs listings are already structured, so they do not alter output.\nFind is already recursive, so recursive flags are accepted without altering behavior.\nSpace search: hf://spaces uses semantic search; repeat --tag to require tags, or use --kind mcp for --tag mcp-server. hf://spaces/OWNER uses owner-scoped keyword search.\nDocumentation: ls hf://docs for products; search any docs scope; use returned hf:// URIs verbatim.\nTrending listings: ls hf://models/trending, hf://datasets/trending, or hf://spaces/trending. They return up to 20 entries.\nTrending paths imply trending order; --sort trending|trendingScore is redundant but valid.\nTrending papers: ls hf://papers/trending.\nTYPE filters mixed results; omit it when the URI already fixes the result type.\nLimits and path-specific behavior are documented at hf://README.md.\nOmit --limit and --sort unless the request asks for a cap, ordering, or exhaustive results.\nNo pipes, redirects, shell expansion, or multiple commands.",
+            "before": "Use to access the Hugging Face Hub. Navigate resources with ls, cat, find, stat, and search over hf:// URIs. Roots: hf://models, hf://datasets, hf://spaces, hf://buckets, hf://collections, hf://papers, hf://docs. For papers, ls hf://papers/ARXIV_ID to discover related resources; cat hf://papers/ARXIV_ID/paper.md or metadata.json. Documentation paths include the current version from each product's llms.txt manifest.\n\nGrammar; each token below is one args array element:\n  ls     URI [(-R|-r|--recursive)] [(-l|-a|-la|-al|--long)] [--glob GLOB]\n             [(-type|--type|--entry-type) TYPE] [--sort SORT] [(-limit|--limit) N]\n  cat    URI [RELATIVE_PATH] [(-offset|--offset) N] [(-max-bytes|--max-bytes) N]\n  stat   URI\n  find   URI [(-name|--name|--glob) GLOB] [(-path|--path) GLOB]\n             [(-type|--type|--entry-type) TYPE] [(-limit|--limit) N]\n  search URI [QUERY...] [(-type|--type|--entry-type) TYPE] [--sort SORT]\n                        [--tag TAG] [--kind mcp] [(-limit|--limit) N]\n\nTYPE = file|dir|repo|bucket|collection|paper|link.\nType aliases: f=file, d=dir, l=link, model|dataset|space=repo.\nSORT = createdAt|downloads|likes|lastModified|likes30d|trendingScore|mainSize|id|trending|upvotes.\nURI starts with hf://. QUERY and GLOB are each one string token.\nSearch URI: hf://models|datasets|spaces[/OWNER], hf://collections[/OWNER], any hf://docs scope, or exactly hf://papers; not hf://.\nRepository and collection searches may omit QUERY to browse or filter; documentation and paper searches require it.\nSearch joins multiple positional QUERY tokens with spaces. Cat joins one RELATIVE_PATH token to URI.\nLong-list flags are accepted for compatibility; hf_fs listings are already structured, so they do not alter output.\nSpace search: hf://spaces uses semantic search; repeat --tag to require tags, or use --kind mcp for --tag mcp-server. hf://spaces/OWNER uses owner-scoped keyword search.\nDocumentation: ls hf://docs for products; search any docs scope; use returned hf:// URIs verbatim.\nTrending listings: ls hf://models/trending, hf://datasets/trending, or hf://spaces/trending. They return up to 20 entries.\nTrending paths imply trending order; --sort trending|trendingScore is redundant but valid.\nTrending papers: ls hf://papers/trending.\nTYPE filters mixed results; omit it when the URI already fixes the result type.\nLimits and path-specific behavior are documented at hf://README.md.\nOmit --limit and --sort unless the request asks for a cap, ordering, or exhaustive results.\nNo pipes, redirects, shell expansion, or multiple commands."
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "description-only edit"
+    },
+    {
       "id": "86b1cd5c-3377-40bd-80c3-cb92ea17ac2e",
       "sourceId": "mcp-tools:huggingface",
       "entityId": "tools/hf_fs",

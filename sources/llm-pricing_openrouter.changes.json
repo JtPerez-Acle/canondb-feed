@@ -2,6 +2,52 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "58c6d59b-7276-49ba-a4bc-f1c966e13e30",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "8f569eaa-86e0-49a5-8692-e05cdc8b0fcf",
+      "toSnapshotId": "ad4609a5-57bf-45c4-9450-a9b143b83667",
+      "detectedAt": "2026-07-21T13:44:13.960Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.1521,
+            "before": 0.17576
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.819,
+            "before": 0.9464
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 2.574,
+            "before": 2.9744
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Price decrease for cacheRead, input, and output per 1M tokens."
+    },
+    {
       "id": "e1c2e185-c802-476e-bfdc-12598629f988",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -2143,41 +2189,6 @@
       "confidence": 0.95,
       "classifiedBy": "llm",
       "notes": "Price increase for all three rates (cacheRead, input, output) of model kimi-k2.7-code."
-    },
-    {
-      "id": "595ee2ad-d5e9-4703-808c-f5d99ebe31fd",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/moonshotai/kimi-k2-thinking",
-      "fromSnapshotId": "798b74c8-7408-487a-aacc-7b94ed6cb601",
-      "toSnapshotId": "479a54c1-09f3-4654-81c5-8bc00cef6a0c",
-      "detectedAt": "2026-07-18T01:44:23.990Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "moonshotai/kimi-k2-thinking",
-              "cacheReadPer1m"
-            ],
-            "after": 0.15
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "moonshotai/kimi-k2-thinking",
-              "maxOutputTokens"
-            ],
-            "after": 100352,
-            "before": 262144
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "maxOutputTokens reduced from 262144 to 100352, risking silent truncation for agents expecting the larger limit"
     }
   ]
 }
