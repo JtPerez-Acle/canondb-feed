@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-21T01:44:09.002Z",
+    "fetchedAt": "2026-07-21T07:44:08.912Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -39,11 +39,11 @@
         "tencent/hy3": {
           "name": "Tencent: Hy3",
           "currency": "USD",
-          "inputPer1m": 0.2,
-          "outputPer1m": 0.8,
+          "inputPer1m": 0.14,
+          "outputPer1m": 0.58,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.05,
-          "maxOutputTokens": 131072
+          "cacheReadPer1m": 0.035,
+          "maxOutputTokens": 262144
         },
         "openai/gpt-4": {
           "name": "OpenAI: GPT-4",
@@ -101,10 +101,10 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.973,
-          "outputPer1m": 3.058,
+          "inputPer1m": 0.9464,
+          "outputPer1m": 2.9744,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.1807,
+          "cacheReadPer1m": 0.17576,
           "maxOutputTokens": 131072
         },
         "mancer/weaver": {
@@ -2737,10 +2737,10 @@
         "nvidia/nemotron-3-super-120b-a12b": {
           "name": "NVIDIA: Nemotron 3 Super",
           "currency": "USD",
-          "inputPer1m": 0.085,
-          "outputPer1m": 0.4,
+          "inputPer1m": 0.08,
+          "outputPer1m": 0.45,
           "contextLength": 1000000,
-          "maxOutputTokens": 16384
+          "maxOutputTokens": null
         },
         "nvidia/nemotron-3-ultra-550b-a55b": {
           "name": "NVIDIA: Nemotron 3 Ultra",

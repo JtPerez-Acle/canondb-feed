@@ -2,6 +2,154 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "e1c2e185-c802-476e-bfdc-12598629f988",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "bccc2a95-0bed-41c4-8295-6fd6a4c82190",
+      "toSnapshotId": "8f569eaa-86e0-49a5-8692-e05cdc8b0fcf",
+      "detectedAt": "2026-07-21T07:44:53.464Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.17576,
+            "before": 0.1807
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.9464,
+            "before": 0.973
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 2.9744,
+            "before": 3.058
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.5,
+      "classifiedBy": "rules",
+      "notes": "llm fallback (This operation was aborted); field value(s) changed"
+    },
+    {
+      "id": "d5f16691-ed8c-4d6f-9a13-9fcdef805bb0",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/tencent/hy3",
+      "fromSnapshotId": "bccc2a95-0bed-41c4-8295-6fd6a4c82190",
+      "toSnapshotId": "8f569eaa-86e0-49a5-8692-e05cdc8b0fcf",
+      "detectedAt": "2026-07-21T07:44:33.453Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "tencent/hy3",
+              "cacheReadPer1m"
+            ],
+            "after": 0.035,
+            "before": 0.05
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "tencent/hy3",
+              "inputPer1m"
+            ],
+            "after": 0.14,
+            "before": 0.2
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "tencent/hy3",
+              "maxOutputTokens"
+            ],
+            "after": 262144,
+            "before": 131072
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "tencent/hy3",
+              "outputPer1m"
+            ],
+            "after": 0.58,
+            "before": 0.8
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "All changes are price decreases or capacity increases, which are safe for consumers."
+    },
+    {
+      "id": "4b973efa-b2e3-464d-b19d-5b0462e5e9c4",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/nvidia/nemotron-3-super-120b-a12b",
+      "fromSnapshotId": "bccc2a95-0bed-41c4-8295-6fd6a4c82190",
+      "toSnapshotId": "8f569eaa-86e0-49a5-8692-e05cdc8b0fcf",
+      "detectedAt": "2026-07-21T07:44:18.996Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "nvidia/nemotron-3-super-120b-a12b",
+              "inputPer1m"
+            ],
+            "after": 0.08,
+            "before": 0.085
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "nvidia/nemotron-3-super-120b-a12b",
+              "maxOutputTokens"
+            ],
+            "after": null,
+            "before": 16384
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "nvidia/nemotron-3-super-120b-a12b",
+              "outputPer1m"
+            ],
+            "after": 0.45,
+            "before": 0.4
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "output price increased from 0.4 to 0.45 per 1M tokens"
+    },
+    {
       "id": "9977ccce-67b4-494d-86d4-1e882f3d5d2d",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -2030,109 +2178,6 @@
       "confidence": 0.9,
       "classifiedBy": "llm",
       "notes": "maxOutputTokens reduced from 262144 to 100352, risking silent truncation for agents expecting the larger limit"
-    },
-    {
-      "id": "1767f5d1-bda6-41cd-b58f-2ab8914f5062",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/mistralai/mistral-nemo",
-      "fromSnapshotId": "798b74c8-7408-487a-aacc-7b94ed6cb601",
-      "toSnapshotId": "479a54c1-09f3-4654-81c5-8bc00cef6a0c",
-      "detectedAt": "2026-07-18T01:44:19.405Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "mistralai/mistral-nemo",
-              "inputPer1m"
-            ],
-            "after": 0.019,
-            "before": 0.02
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "mistralai/mistral-nemo",
-              "outputPer1m"
-            ],
-            "after": 0.03,
-            "before": 0.04
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "价格下降，对消费者有利"
-    },
-    {
-      "id": "6d96d3dd-7acc-4a0f-b947-5f670f32cb9e",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/meta-llama/llama-3.2-11b-vision-instruct",
-      "fromSnapshotId": "798b74c8-7408-487a-aacc-7b94ed6cb601",
-      "toSnapshotId": "479a54c1-09f3-4654-81c5-8bc00cef6a0c",
-      "detectedAt": "2026-07-18T01:44:17.288Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "removed",
-            "path": [
-              "models",
-              "meta-llama/llama-3.2-11b-vision-instruct"
-            ],
-            "before": {
-              "name": "Meta: Llama 3.2 11B Vision Instruct",
-              "currency": "USD",
-              "inputPer1m": 0.345,
-              "outputPer1m": 0.345,
-              "contextLength": 131072,
-              "maxOutputTokens": 16384
-            }
-          }
-        ]
-      },
-      "severity": "breaking_strict",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Model removed; callers of this id break."
-    },
-    {
-      "id": "f841b2dc-acd6-45e1-a10c-d3773d989bc8",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/mancer/weaver",
-      "fromSnapshotId": "798b74c8-7408-487a-aacc-7b94ed6cb601",
-      "toSnapshotId": "479a54c1-09f3-4654-81c5-8bc00cef6a0c",
-      "detectedAt": "2026-07-18T01:44:14.309Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "mancer/weaver",
-              "inputPer1m"
-            ],
-            "after": 0.5,
-            "before": 0.75
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "mancer/weaver",
-              "outputPer1m"
-            ],
-            "after": 0.75,
-            "before": 1
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Price decreased for models.mancer/weaver"
     }
   ]
 }
