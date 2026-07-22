@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-22T07:44:09.455Z",
+    "fetchedAt": "2026-07-22T13:44:08.740Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -101,10 +101,10 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.8036,
-          "outputPer1m": 2.5256,
+          "inputPer1m": 0.819,
+          "outputPer1m": 2.574,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.14924,
+          "cacheReadPer1m": 0.1521,
           "maxOutputTokens": 131072
         },
         "mancer/weaver": {
@@ -2274,7 +2274,7 @@
           "maxOutputTokens": 65536
         },
         "google/gemini-3.5-flash-lite": {
-          "name": "Google: Gemini 3.5 Flash-Lite",
+          "name": "Google: Gemini 3.5 Flash Lite",
           "currency": "USD",
           "inputPer1m": 0.3,
           "outputPer1m": 2.5,
