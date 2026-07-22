@@ -2,6 +2,97 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "295fabc5-13ca-467c-a2e9-0bb3aadaf4ab",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "c4d6e600-4101-40de-9eca-f8b841586154",
+      "toSnapshotId": "e2e7b191-9682-47eb-b40b-477e84306aeb",
+      "detectedAt": "2026-07-22T19:44:31.583Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.1469,
+            "before": 0.1521
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.791,
+            "before": 0.819
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 2.486,
+            "before": 2.574
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.5,
+      "classifiedBy": "rules",
+      "notes": "llm fallback (This operation was aborted); field value(s) changed"
+    },
+    {
+      "id": "8e12b988-3534-40fb-ba1e-8c57a462f9ca",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/google/gemma-4-31b-it",
+      "fromSnapshotId": "c4d6e600-4101-40de-9eca-f8b841586154",
+      "toSnapshotId": "e2e7b191-9682-47eb-b40b-477e84306aeb",
+      "detectedAt": "2026-07-22T19:44:11.560Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "models",
+              "google/gemma-4-31b-it",
+              "cacheReadPer1m"
+            ],
+            "after": 0.09
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "google/gemma-4-31b-it",
+              "maxOutputTokens"
+            ],
+            "after": 262144,
+            "before": 16384
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "google/gemma-4-31b-it",
+              "outputPer1m"
+            ],
+            "after": 0.35,
+            "before": 0.37
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "ADDED cacheReadPer1m is safe; maxOutputTokens increased is favorable; outputPer1m decreased is favorable."
+    },
+    {
       "id": "e003d6fb-2aa5-49eb-ac1d-c8c4fd9ee445",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -1402,58 +1493,6 @@
       "confidence": 0.95,
       "classifiedBy": "llm",
       "notes": "context length increased, beneficial change"
-    },
-    {
-      "id": "802f13d7-26ac-46c2-a908-2a80113108f9",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/deepseek/deepseek-r1-distill-llama-70b",
-      "fromSnapshotId": "ad4609a5-57bf-45c4-9450-a9b143b83667",
-      "toSnapshotId": "cc2ae075-f7de-43d9-821f-d204e22b58a7",
-      "detectedAt": "2026-07-21T19:44:20.394Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "deepseek/deepseek-r1-distill-llama-70b",
-              "contextLength"
-            ],
-            "after": 8192,
-            "before": 128000
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "context length reduced from 128k to 8k, causing silent truncation"
-    },
-    {
-      "id": "e8370855-403e-4bb7-b047-3c9af02a2c13",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/deepseek/deepseek-chat",
-      "fromSnapshotId": "ad4609a5-57bf-45c4-9450-a9b143b83667",
-      "toSnapshotId": "cc2ae075-f7de-43d9-821f-d204e22b58a7",
-      "detectedAt": "2026-07-21T19:44:17.901Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "deepseek/deepseek-chat",
-              "contextLength"
-            ],
-            "after": 163840,
-            "before": 131072
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "context length increased, beneficial to consumers"
     }
   ]
 }
