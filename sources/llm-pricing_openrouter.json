@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-23T07:44:09.645Z",
+    "fetchedAt": "2026-07-23T19:44:10.102Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -31,10 +31,10 @@
           "name": "Z.ai: GLM 5",
           "currency": "USD",
           "inputPer1m": 0.95,
-          "outputPer1m": 3.15,
+          "outputPer1m": 2.55,
           "contextLength": 204800,
-          "cacheReadPer1m": 0.19,
-          "maxOutputTokens": 202752
+          "cacheReadPer1m": 0.2,
+          "maxOutputTokens": 131072
         },
         "tencent/hy3": {
           "name": "Tencent: Hy3",
@@ -368,10 +368,10 @@
         "qwen/qwen3.5-27b": {
           "name": "Qwen: Qwen3.5-27B",
           "currency": "USD",
-          "inputPer1m": 0.26,
-          "outputPer1m": 2.6,
+          "inputPer1m": 0.195,
+          "outputPer1m": 1.56,
           "contextLength": 262144,
-          "maxOutputTokens": 81920
+          "maxOutputTokens": 65536
         },
         "qwen/qwen3.6-27b": {
           "name": "Qwen: Qwen3.6 27B",
@@ -561,10 +561,9 @@
         "minimax/minimax-m2": {
           "name": "MiniMax: MiniMax M2",
           "currency": "USD",
-          "inputPer1m": 0.3,
-          "outputPer1m": 1.2,
+          "inputPer1m": 0.255,
+          "outputPer1m": 1.02,
           "contextLength": 204800,
-          "cacheReadPer1m": 0.03,
           "maxOutputTokens": 131072
         },
         "minimax/minimax-m3": {
@@ -1143,10 +1142,11 @@
         "google/gemma-3-27b-it": {
           "name": "Google: Gemma 3 27B",
           "currency": "USD",
-          "inputPer1m": 0.1,
-          "outputPer1m": 0.3,
+          "inputPer1m": 0.08,
+          "outputPer1m": 0.45,
           "contextLength": 262144,
-          "maxOutputTokens": null
+          "cacheReadPer1m": 0.04,
+          "maxOutputTokens": 131072
         },
         "google/gemma-4-31b-it": {
           "name": "Google: Gemma 4 31B",
@@ -1722,7 +1722,7 @@
           "currency": "USD",
           "inputPer1m": 1,
           "outputPer1m": 4.05,
-          "contextLength": 524288,
+          "contextLength": 1048576,
           "cacheReadPer1m": 0.17,
           "maxOutputTokens": null
         },
@@ -2630,6 +2630,14 @@
           "outputPer1m": 0.112,
           "contextLength": 131000,
           "maxOutputTokens": 131000
+        },
+        "inclusionai/ling-3.0-flash:free": {
+          "name": "Ling-3.0-flash (free)",
+          "currency": "USD",
+          "inputPer1m": 0,
+          "outputPer1m": 0,
+          "contextLength": 262144,
+          "maxOutputTokens": 32768
         },
         "nvidia/nemotron-nano-9b-v2:free": {
           "name": "NVIDIA: Nemotron Nano 9B V2 (free)",
