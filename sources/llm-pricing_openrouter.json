@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-23T01:44:08.868Z",
+    "fetchedAt": "2026-07-23T07:44:09.645Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -31,10 +31,10 @@
           "name": "Z.ai: GLM 5",
           "currency": "USD",
           "inputPer1m": 0.95,
-          "outputPer1m": 2.55,
+          "outputPer1m": 3.15,
           "contextLength": 204800,
-          "cacheReadPer1m": 0.2,
-          "maxOutputTokens": 131072
+          "cacheReadPer1m": 0.19,
+          "maxOutputTokens": 202752
         },
         "tencent/hy3": {
           "name": "Tencent: Hy3",
@@ -101,10 +101,10 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.7644,
-          "outputPer1m": 2.4024,
+          "inputPer1m": 0.812,
+          "outputPer1m": 2.552,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.14196,
+          "cacheReadPer1m": 0.1508,
           "maxOutputTokens": 131072
         },
         "mancer/weaver": {

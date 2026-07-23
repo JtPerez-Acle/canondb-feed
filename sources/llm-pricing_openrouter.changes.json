@@ -2,6 +2,98 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "f1cf441c-5d9b-4a79-ab17-e7892ece4da3",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "c55195af-555f-4119-9fc3-819d068c4e7f",
+      "toSnapshotId": "1df1aaec-69c1-4d18-a052-191f1f997117",
+      "detectedAt": "2026-07-23T07:44:16.896Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.1508,
+            "before": 0.14196
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.812,
+            "before": 0.7644
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 2.552,
+            "before": 2.4024
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Price increase for model z-ai/glm-5.2 on all three metrics (cacheRead, input, output) raises cost for agents."
+    },
+    {
+      "id": "e7f89370-2079-46ba-8b73-8e558283daa5",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5",
+      "fromSnapshotId": "c55195af-555f-4119-9fc3-819d068c4e7f",
+      "toSnapshotId": "1df1aaec-69c1-4d18-a052-191f1f997117",
+      "detectedAt": "2026-07-23T07:44:11.747Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5",
+              "cacheReadPer1m"
+            ],
+            "after": 0.19,
+            "before": 0.2
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5",
+              "maxOutputTokens"
+            ],
+            "after": 202752,
+            "before": 131072
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5",
+              "outputPer1m"
+            ],
+            "after": 3.15,
+            "before": 2.55
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Output price increased from 2.55 to 3.15, silently raising cost for agents."
+    },
+    {
       "id": "4db99b86-fa44-4b52-853f-ad0379c84d29",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -1633,58 +1725,6 @@
       "confidence": 0.9,
       "classifiedBy": "llm",
       "notes": "Context length reduced by 1 token, potentially causing truncation for agents using the previous limit."
-    },
-    {
-      "id": "6db6dbf3-79c7-463a-9e98-34c9172c7038",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/meta-llama/llama-guard-4-12b",
-      "fromSnapshotId": "ad4609a5-57bf-45c4-9450-a9b143b83667",
-      "toSnapshotId": "cc2ae075-f7de-43d9-821f-d204e22b58a7",
-      "detectedAt": "2026-07-21T19:44:59.904Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "meta-llama/llama-guard-4-12b",
-              "contextLength"
-            ],
-            "after": 1048576,
-            "before": 163840
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "contextLength increased from 163840 to 1048576, which is a favorable change for agents (more context), but the change is not a price decrease or new model; however, per domain guidance, a context increase is not explicitly listed as breaking_agent, but since it's a CHANGED value that could silently affect behavior (e.g., agents may now send larger contexts), and providers under-report breakage, I classify as breaking_agent with high confidence."
-    },
-    {
-      "id": "87875f7f-adbe-4bc8-8621-ab0500f687ae",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/meta-llama/llama-4-scout",
-      "fromSnapshotId": "ad4609a5-57bf-45c4-9450-a9b143b83667",
-      "toSnapshotId": "cc2ae075-f7de-43d9-821f-d204e22b58a7",
-      "detectedAt": "2026-07-21T19:44:56.713Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "meta-llama/llama-4-scout",
-              "contextLength"
-            ],
-            "after": 1310720,
-            "before": 10000000
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "context length reduced from 10M to ~1.3M tokens"
     }
   ]
 }

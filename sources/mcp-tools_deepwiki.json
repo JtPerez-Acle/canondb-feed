@@ -4,13 +4,13 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "mcp-tools:deepwiki",
-    "fetchedAt": "2026-07-23T01:45:07.835Z",
+    "fetchedAt": "2026-07-23T07:44:16.908Z",
     "stale": false,
     "verified": true,
     "data": {
       "tools": {
         "ask_question": {
-          "description": "Ask any question about a GitHub repository and get an AI-powered, context-grounded response.\n\nArgs:\n    repoName: GitHub repository or list of repositories (max 10) in owner/repo format\n    question: The question to ask about the repository",
+          "description": "Ask any question about a GitHub repository and get an AI-powered, context-grounded response.",
           "inputSchema": {
             "type": "object",
             "required": [
@@ -19,7 +19,8 @@
             ],
             "properties": {
               "question": {
-                "type": "string"
+                "type": "string",
+                "description": "The question to ask about the repository."
               },
               "repoName": {
                 "anyOf": [
@@ -32,13 +33,14 @@
                       "type": "string"
                     }
                   }
-                ]
+                ],
+                "description": "GitHub repository or list of repositories (max 10) in owner/repo format."
               }
             }
           }
         },
         "read_wiki_contents": {
-          "description": "View documentation about a GitHub repository.\n\nArgs:\n    repoName: GitHub repository in owner/repo format (e.g. \"facebook/react\")",
+          "description": "View documentation about a GitHub repository.",
           "inputSchema": {
             "type": "object",
             "required": [
@@ -46,13 +48,14 @@
             ],
             "properties": {
               "repoName": {
-                "type": "string"
+                "type": "string",
+                "description": "GitHub repository in owner/repo format (e.g. \"facebook/react\")."
               }
             }
           }
         },
         "read_wiki_structure": {
-          "description": "Get a list of documentation topics for a GitHub repository.\n\nArgs:\n    repoName: GitHub repository in owner/repo format (e.g. \"facebook/react\")",
+          "description": "Get a list of documentation topics for a GitHub repository.",
           "inputSchema": {
             "type": "object",
             "required": [
@@ -60,7 +63,8 @@
             ],
             "properties": {
               "repoName": {
-                "type": "string"
+                "type": "string",
+                "description": "GitHub repository in owner/repo format (e.g. \"facebook/react\")."
               }
             }
           }

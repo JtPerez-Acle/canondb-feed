@@ -1,4 +1,131 @@
 {
   "id": "mcp-tools:deepwiki",
-  "changes": []
+  "changes": [
+    {
+      "id": "54940a44-fda7-41e6-a1d2-311c64828e0d",
+      "sourceId": "mcp-tools:deepwiki",
+      "entityId": "tools/read_wiki_structure",
+      "fromSnapshotId": "e76689ac-c616-4eaa-ba40-6e6aaba3760d",
+      "toSnapshotId": "ec222d92-76ef-4a28-a6db-104b90a76495",
+      "detectedAt": "2026-07-23T07:44:31.872Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "read_wiki_structure",
+              "description"
+            ],
+            "after": "Get a list of documentation topics for a GitHub repository.",
+            "before": "Get a list of documentation topics for a GitHub repository.\n\nArgs:\n    repoName: GitHub repository in owner/repo format (e.g. \"facebook/react\")"
+          },
+          {
+            "kind": "added",
+            "path": [
+              "tools",
+              "read_wiki_structure",
+              "inputSchema",
+              "properties",
+              "repoName",
+              "description"
+            ],
+            "after": "GitHub repository in owner/repo format (e.g. \"facebook/react\")."
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Description-only edit; the Args note was moved to the new property description, no interface change."
+    },
+    {
+      "id": "bd02635a-afd3-4df5-9f62-5c554a3e918d",
+      "sourceId": "mcp-tools:deepwiki",
+      "entityId": "tools/read_wiki_contents",
+      "fromSnapshotId": "e76689ac-c616-4eaa-ba40-6e6aaba3760d",
+      "toSnapshotId": "ec222d92-76ef-4a28-a6db-104b90a76495",
+      "detectedAt": "2026-07-23T07:44:25.593Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "read_wiki_contents",
+              "description"
+            ],
+            "after": "View documentation about a GitHub repository.",
+            "before": "View documentation about a GitHub repository.\n\nArgs:\n    repoName: GitHub repository in owner/repo format (e.g. \"facebook/react\")"
+          },
+          {
+            "kind": "added",
+            "path": [
+              "tools",
+              "read_wiki_contents",
+              "inputSchema",
+              "properties",
+              "repoName",
+              "description"
+            ],
+            "after": "GitHub repository in owner/repo format (e.g. \"facebook/react\")."
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Description moved to parameter schema; no behavioral change."
+    },
+    {
+      "id": "62c84927-6387-49bb-a6fb-572c98ef58da",
+      "sourceId": "mcp-tools:deepwiki",
+      "entityId": "tools/ask_question",
+      "fromSnapshotId": "e76689ac-c616-4eaa-ba40-6e6aaba3760d",
+      "toSnapshotId": "ec222d92-76ef-4a28-a6db-104b90a76495",
+      "detectedAt": "2026-07-23T07:44:20.419Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "ask_question",
+              "description"
+            ],
+            "after": "Ask any question about a GitHub repository and get an AI-powered, context-grounded response.",
+            "before": "Ask any question about a GitHub repository and get an AI-powered, context-grounded response.\n\nArgs:\n    repoName: GitHub repository or list of repositories (max 10) in owner/repo format\n    question: The question to ask about the repository"
+          },
+          {
+            "kind": "added",
+            "path": [
+              "tools",
+              "ask_question",
+              "inputSchema",
+              "properties",
+              "question",
+              "description"
+            ],
+            "after": "The question to ask about the repository."
+          },
+          {
+            "kind": "added",
+            "path": [
+              "tools",
+              "ask_question",
+              "inputSchema",
+              "properties",
+              "repoName",
+              "description"
+            ],
+            "after": "GitHub repository or list of repositories (max 10) in owner/repo format."
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Description-only changes; no breaking changes."
+    }
+  ]
 }
