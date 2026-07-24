@@ -2,6 +2,198 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "1bf78212-e538-455a-ab86-81264bf34b66",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "2e3f6b77-8967-429e-a3b3-2d9af0e626ac",
+      "toSnapshotId": "415b5c90-048b-4fca-9dcb-39e1294f1316",
+      "detectedAt": "2026-07-24T13:44:21.972Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.15054,
+            "before": 0.14144
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.8106,
+            "before": 0.7616
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 2.5476,
+            "before": 2.3936
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "prices increased for cacheRead, input, and output"
+    },
+    {
+      "id": "4d39f07f-ac17-4402-bc6a-c2b0329cc88b",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3-coder",
+      "fromSnapshotId": "2e3f6b77-8967-429e-a3b3-2d9af0e626ac",
+      "toSnapshotId": "415b5c90-048b-4fca-9dcb-39e1294f1316",
+      "detectedAt": "2026-07-24T13:44:20.875Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "models",
+              "qwen/qwen3-coder",
+              "cacheReadPer1m"
+            ],
+            "after": 0.1
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-coder",
+              "inputPer1m"
+            ],
+            "after": 0.3,
+            "before": 0.38
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-coder",
+              "outputPer1m"
+            ],
+            "after": 1,
+            "before": 1.55
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "outputPer1m price decreased (safe), but inputPer1m price decreased (safe); cacheReadPer1m added (safe). No breaking changes."
+    },
+    {
+      "id": "fca85e41-db2c-466a-b732-219a53771bb1",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/minimax/minimax-m2.7",
+      "fromSnapshotId": "2e3f6b77-8967-429e-a3b3-2d9af0e626ac",
+      "toSnapshotId": "415b5c90-048b-4fca-9dcb-39e1294f1316",
+      "detectedAt": "2026-07-24T13:44:19.576Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "minimax/minimax-m2.7",
+              "cacheReadPer1m"
+            ],
+            "after": 0.05,
+            "before": 0.06
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "minimax/minimax-m2.7",
+              "inputPer1m"
+            ],
+            "after": 0.25,
+            "before": 0.3
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "minimax/minimax-m2.7",
+              "outputPer1m"
+            ],
+            "after": 1,
+            "before": 1.2
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "All three changes are price decreases, which are safe per domain guidance."
+    },
+    {
+      "id": "761fe397-2108-497f-ae19-bf7c597d626b",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/google/gemma-4-31b-it",
+      "fromSnapshotId": "2e3f6b77-8967-429e-a3b3-2d9af0e626ac",
+      "toSnapshotId": "415b5c90-048b-4fca-9dcb-39e1294f1316",
+      "detectedAt": "2026-07-24T13:44:16.928Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "models",
+              "google/gemma-4-31b-it",
+              "cacheReadPer1m"
+            ],
+            "before": 0.1
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "google/gemma-4-31b-it",
+              "inputPer1m"
+            ],
+            "after": 0.14,
+            "before": 0.1
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "google/gemma-4-31b-it",
+              "maxOutputTokens"
+            ],
+            "after": 262144,
+            "before": 8192
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "google/gemma-4-31b-it",
+              "outputPer1m"
+            ],
+            "after": 0.4,
+            "before": 0.35
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 0.8,
+      "classifiedBy": "llm",
+      "notes": "Removed field breaks strict consumers; price increases also break agents."
+    },
+    {
       "id": "e8fccc0f-3b61-45d1-bad2-8fa89a01ca62",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -1988,110 +2180,6 @@
       "confidence": 0.7,
       "classifiedBy": "llm",
       "notes": "context length increased, which is favorable but could silently change behavior for agents relying on exact limit"
-    },
-    {
-      "id": "b15d22b2-65d6-474d-8e05-8106578247db",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/xiaomi/mimo-v2.5-pro",
-      "fromSnapshotId": "ad4609a5-57bf-45c4-9450-a9b143b83667",
-      "toSnapshotId": "cc2ae075-f7de-43d9-821f-d204e22b58a7",
-      "detectedAt": "2026-07-21T19:46:36.752Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "xiaomi/mimo-v2.5-pro",
-              "contextLength"
-            ],
-            "after": 1050000,
-            "before": 1048576
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.7,
-      "classifiedBy": "llm",
-      "notes": "contextLength increased"
-    },
-    {
-      "id": "eddffff4-35ea-4039-bccd-c980f53d2b15",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/xiaomi/mimo-v2.5",
-      "fromSnapshotId": "ad4609a5-57bf-45c4-9450-a9b143b83667",
-      "toSnapshotId": "cc2ae075-f7de-43d9-821f-d204e22b58a7",
-      "detectedAt": "2026-07-21T19:46:35.860Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "xiaomi/mimo-v2.5",
-              "contextLength"
-            ],
-            "after": 1050000,
-            "before": 1048576
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "contextLength increased, favorable change"
-    },
-    {
-      "id": "7f1b13b6-44da-432d-8bd4-a8e58af5fa8f",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/thinkingmachines/inkling",
-      "fromSnapshotId": "ad4609a5-57bf-45c4-9450-a9b143b83667",
-      "toSnapshotId": "cc2ae075-f7de-43d9-821f-d204e22b58a7",
-      "detectedAt": "2026-07-21T19:46:31.485Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "thinkingmachines/inkling",
-              "contextLength"
-            ],
-            "after": 524288,
-            "before": 1048576
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "Context length halved; agents may silently truncate."
-    },
-    {
-      "id": "df791857-ce95-4f8a-9fc7-e8b5ded441b0",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/stepfun/step-3.7-flash",
-      "fromSnapshotId": "ad4609a5-57bf-45c4-9450-a9b143b83667",
-      "toSnapshotId": "cc2ae075-f7de-43d9-821f-d204e22b58a7",
-      "detectedAt": "2026-07-21T19:46:29.066Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "stepfun/step-3.7-flash",
-              "contextLength"
-            ],
-            "after": 262144,
-            "before": 256000
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "Context length increased, which is favorable to consumers."
     }
   ]
 }
