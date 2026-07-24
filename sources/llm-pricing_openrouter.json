@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-24T01:44:09.947Z",
+    "fetchedAt": "2026-07-24T07:44:10.187Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -39,11 +39,11 @@
         "tencent/hy3": {
           "name": "Tencent: Hy3",
           "currency": "USD",
-          "inputPer1m": 0.14,
-          "outputPer1m": 0.58,
+          "inputPer1m": 0.132,
+          "outputPer1m": 0.528,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.035,
-          "maxOutputTokens": 262144
+          "cacheReadPer1m": 0.033,
+          "maxOutputTokens": 128000
         },
         "openai/gpt-4": {
           "name": "OpenAI: GPT-4",
@@ -101,10 +101,10 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.7826,
-          "outputPer1m": 2.4596,
+          "inputPer1m": 0.7616,
+          "outputPer1m": 2.3936,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.14534,
+          "cacheReadPer1m": 0.14144,
           "maxOutputTokens": 131072
         },
         "mancer/weaver": {
@@ -559,10 +559,9 @@
         "minimax/minimax-m2": {
           "name": "MiniMax: MiniMax M2",
           "currency": "USD",
-          "inputPer1m": 0.3,
-          "outputPer1m": 1.2,
+          "inputPer1m": 0.255,
+          "outputPer1m": 1.02,
           "contextLength": 204800,
-          "cacheReadPer1m": 0.03,
           "maxOutputTokens": 131072
         },
         "minimax/minimax-m3": {
@@ -1833,10 +1832,10 @@
         "moonshotai/kimi-k2.7-code": {
           "name": "MoonshotAI: Kimi K2.7 Code",
           "currency": "USD",
-          "inputPer1m": 0.82,
-          "outputPer1m": 3.75,
+          "inputPer1m": 0.71,
+          "outputPer1m": 3.49,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.16,
+          "cacheReadPer1m": 0.15,
           "maxOutputTokens": 262144
         },
         "nousresearch/hermes-4-70b": {

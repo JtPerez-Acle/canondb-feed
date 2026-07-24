@@ -2,6 +2,199 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "e8fccc0f-3b61-45d1-bad2-8fa89a01ca62",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "b5338cd9-3ede-47ba-84d6-d67470300bd4",
+      "toSnapshotId": "2e3f6b77-8967-429e-a3b3-2d9af0e626ac",
+      "detectedAt": "2026-07-24T07:44:41.969Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.14144,
+            "before": 0.14534
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.7616,
+            "before": 0.7826
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 2.3936,
+            "before": 2.4596
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "All three prices decreased, which is favorable and safe for consumers."
+    },
+    {
+      "id": "b3215a9a-9213-4be3-a074-741c6f6d1898",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/tencent/hy3",
+      "fromSnapshotId": "b5338cd9-3ede-47ba-84d6-d67470300bd4",
+      "toSnapshotId": "2e3f6b77-8967-429e-a3b3-2d9af0e626ac",
+      "detectedAt": "2026-07-24T07:44:37.031Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "tencent/hy3",
+              "cacheReadPer1m"
+            ],
+            "after": 0.033,
+            "before": 0.035
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "tencent/hy3",
+              "inputPer1m"
+            ],
+            "after": 0.132,
+            "before": 0.14
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "tencent/hy3",
+              "maxOutputTokens"
+            ],
+            "after": 128000,
+            "before": 262144
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "tencent/hy3",
+              "outputPer1m"
+            ],
+            "after": 0.528,
+            "before": 0.58
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.5,
+      "classifiedBy": "rules",
+      "notes": "llm fallback (This operation was aborted); field value(s) changed"
+    },
+    {
+      "id": "23460535-9348-4f4b-95f7-06880010362a",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/moonshotai/kimi-k2.7-code",
+      "fromSnapshotId": "b5338cd9-3ede-47ba-84d6-d67470300bd4",
+      "toSnapshotId": "2e3f6b77-8967-429e-a3b3-2d9af0e626ac",
+      "detectedAt": "2026-07-24T07:44:17.023Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.7-code",
+              "cacheReadPer1m"
+            ],
+            "after": 0.15,
+            "before": 0.16
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.7-code",
+              "inputPer1m"
+            ],
+            "after": 0.71,
+            "before": 0.82
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.7-code",
+              "outputPer1m"
+            ],
+            "after": 3.49,
+            "before": 3.75
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Price decreases only; no breaking change."
+    },
+    {
+      "id": "a8f9fee5-a42a-4c7a-966d-e10f9693eed5",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/minimax/minimax-m2",
+      "fromSnapshotId": "b5338cd9-3ede-47ba-84d6-d67470300bd4",
+      "toSnapshotId": "2e3f6b77-8967-429e-a3b3-2d9af0e626ac",
+      "detectedAt": "2026-07-24T07:44:11.574Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "models",
+              "minimax/minimax-m2",
+              "cacheReadPer1m"
+            ],
+            "before": 0.03
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "minimax/minimax-m2",
+              "inputPer1m"
+            ],
+            "after": 0.255,
+            "before": 0.3
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "minimax/minimax-m2",
+              "outputPer1m"
+            ],
+            "after": 1.02,
+            "before": 1.2
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "REMOVED cacheReadPer1m field breaks strict consumers expecting it"
+    },
+    {
       "id": "07663f5e-4fab-4f11-8c6a-dc2d32041cd3",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -1899,110 +2092,6 @@
       "confidence": 0.95,
       "classifiedBy": "llm",
       "notes": "Context length increased, which is favorable to consumers."
-    },
-    {
-      "id": "dc7a35f7-782b-4314-a729-d5b8f51f6066",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/qwen/qwen3-vl-8b-thinking",
-      "fromSnapshotId": "ad4609a5-57bf-45c4-9450-a9b143b83667",
-      "toSnapshotId": "cc2ae075-f7de-43d9-821f-d204e22b58a7",
-      "detectedAt": "2026-07-21T19:46:18.595Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3-vl-8b-thinking",
-              "contextLength"
-            ],
-            "after": 131072,
-            "before": 256000
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "Context length reduced from 256000 to 131072, which may silently truncate agent outputs."
-    },
-    {
-      "id": "23c8eeee-b636-41f5-ae03-777f8b5b49fe",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/qwen/qwen3-vl-8b-instruct",
-      "fromSnapshotId": "ad4609a5-57bf-45c4-9450-a9b143b83667",
-      "toSnapshotId": "cc2ae075-f7de-43d9-821f-d204e22b58a7",
-      "detectedAt": "2026-07-21T19:46:14.355Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3-vl-8b-instruct",
-              "contextLength"
-            ],
-            "after": 262144,
-            "before": 256000
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.7,
-      "classifiedBy": "llm",
-      "notes": "context length increased, which is favorable but could silently change behavior for agents relying on exact limits"
-    },
-    {
-      "id": "587d23da-cb65-4852-8f1c-510f68a7c4d2",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/qwen/qwen3-vl-32b-instruct",
-      "fromSnapshotId": "ad4609a5-57bf-45c4-9450-a9b143b83667",
-      "toSnapshotId": "cc2ae075-f7de-43d9-821f-d204e22b58a7",
-      "detectedAt": "2026-07-21T19:46:09.544Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3-vl-32b-instruct",
-              "contextLength"
-            ],
-            "after": 131072,
-            "before": 262144
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "context length reduced from 262144 to 131072"
-    },
-    {
-      "id": "19fa4143-0752-4d29-b1d8-a9e6a4f4484a",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/qwen/qwen3-vl-30b-a3b-thinking",
-      "fromSnapshotId": "ad4609a5-57bf-45c4-9450-a9b143b83667",
-      "toSnapshotId": "cc2ae075-f7de-43d9-821f-d204e22b58a7",
-      "detectedAt": "2026-07-21T19:46:03.581Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3-vl-30b-a3b-thinking",
-              "contextLength"
-            ],
-            "after": 262144,
-            "before": 131072
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "context length increased, which is favorable to consumers"
     }
   ]
 }
