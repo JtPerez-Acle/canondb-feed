@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-24T13:44:10.500Z",
+    "fetchedAt": "2026-07-24T19:44:10.597Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -101,10 +101,10 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.8106,
-          "outputPer1m": 2.5476,
+          "inputPer1m": 0.7798,
+          "outputPer1m": 2.4508,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.15054,
+          "cacheReadPer1m": 0.14482,
           "maxOutputTokens": 131072
         },
         "mancer/weaver": {
@@ -376,10 +376,10 @@
         "qwen/qwen3.6-27b": {
           "name": "Qwen: Qwen3.6 27B",
           "currency": "USD",
-          "inputPer1m": 0.288,
+          "inputPer1m": 0.289,
           "outputPer1m": 2.4,
           "contextLength": 262144,
-          "maxOutputTokens": null
+          "maxOutputTokens": 131072
         },
         "qwen/qwen3.7-max": {
           "name": "Qwen: Qwen3.7 Max",
@@ -672,10 +672,11 @@
         "openai/gpt-oss-20b": {
           "name": "OpenAI: gpt-oss-20b",
           "currency": "USD",
-          "inputPer1m": 0.029,
-          "outputPer1m": 0.14,
+          "inputPer1m": 0.03,
+          "outputPer1m": 0.13,
           "contextLength": 131072,
-          "maxOutputTokens": null
+          "cacheReadPer1m": 0.03,
+          "maxOutputTokens": 131072
         },
         "qwen/qwen3-30b-a3b": {
           "name": "Qwen: Qwen3 30B A3B",
@@ -1381,6 +1382,16 @@
           "cacheWritePer1m": 18.75,
           "maxOutputTokens": 32000
         },
+        "anthropic/claude-opus-5": {
+          "name": "Claude Opus 5",
+          "currency": "USD",
+          "inputPer1m": 5,
+          "outputPer1m": 25,
+          "contextLength": 1000000,
+          "cacheReadPer1m": 0.5,
+          "cacheWritePer1m": 6.25,
+          "maxOutputTokens": 128000
+        },
         "arcee-ai/virtuoso-large": {
           "name": "Arcee AI: Virtuoso Large",
           "currency": "USD",
@@ -1832,8 +1843,8 @@
         "moonshotai/kimi-k2.7-code": {
           "name": "MoonshotAI: Kimi K2.7 Code",
           "currency": "USD",
-          "inputPer1m": 0.71,
-          "outputPer1m": 3.49,
+          "inputPer1m": 0.82,
+          "outputPer1m": 3.75,
           "contextLength": 262144,
           "cacheReadPer1m": 0.15,
           "maxOutputTokens": 262144
@@ -2229,6 +2240,16 @@
           "outputPer1m": 5,
           "contextLength": 16384,
           "maxOutputTokens": 2048
+        },
+        "anthropic/claude-opus-5-fast": {
+          "name": "Claude Opus 5 (Fast)",
+          "currency": "USD",
+          "inputPer1m": 10,
+          "outputPer1m": 50,
+          "contextLength": 1000000,
+          "cacheReadPer1m": 1,
+          "cacheWritePer1m": 12.5,
+          "maxOutputTokens": 128000
         },
         "baidu/ernie-4.5-vl-424b-a47b": {
           "name": "Baidu: ERNIE 4.5 VL 424B A47B ",
@@ -2724,9 +2745,10 @@
         "qwen/qwen3-next-80b-a3b-instruct": {
           "name": "Qwen: Qwen3 Next 80B A3B Instruct",
           "currency": "USD",
-          "inputPer1m": 0.15,
-          "outputPer1m": 1.2,
+          "inputPer1m": 0.1,
+          "outputPer1m": 1.1,
           "contextLength": 262144,
+          "cacheReadPer1m": 0.07,
           "maxOutputTokens": 262144
         },
         "qwen/qwen3-next-80b-a3b-thinking": {
@@ -2783,10 +2805,10 @@
         "nvidia/nemotron-3-super-120b-a12b": {
           "name": "NVIDIA: Nemotron 3 Super",
           "currency": "USD",
-          "inputPer1m": 0.08,
-          "outputPer1m": 0.45,
+          "inputPer1m": 0.085,
+          "outputPer1m": 0.4,
           "contextLength": 1000000,
-          "maxOutputTokens": null
+          "maxOutputTokens": 16384
         },
         "nvidia/nemotron-3-ultra-550b-a55b": {
           "name": "NVIDIA: Nemotron 3 Ultra",
