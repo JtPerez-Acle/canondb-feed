@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-23T19:44:10.102Z",
+    "fetchedAt": "2026-07-24T01:44:09.947Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -101,10 +101,10 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.812,
-          "outputPer1m": 2.552,
+          "inputPer1m": 0.7826,
+          "outputPer1m": 2.4596,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.1508,
+          "cacheReadPer1m": 0.14534,
           "maxOutputTokens": 131072
         },
         "mancer/weaver": {
@@ -359,10 +359,9 @@
         "qwen/qwen3-coder": {
           "name": "Qwen: Qwen3 Coder 480B A35B",
           "currency": "USD",
-          "inputPer1m": 0.3,
-          "outputPer1m": 1,
+          "inputPer1m": 0.38,
+          "outputPer1m": 1.55,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.1,
           "maxOutputTokens": 65536
         },
         "qwen/qwen3.5-27b": {
@@ -376,11 +375,10 @@
         "qwen/qwen3.6-27b": {
           "name": "Qwen: Qwen3.6 27B",
           "currency": "USD",
-          "inputPer1m": 0.6,
-          "outputPer1m": 3.6,
+          "inputPer1m": 0.288,
+          "outputPer1m": 2.4,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.12,
-          "maxOutputTokens": 262144
+          "maxOutputTokens": null
         },
         "qwen/qwen3.7-max": {
           "name": "Qwen: Qwen3.7 Max",
@@ -561,9 +559,10 @@
         "minimax/minimax-m2": {
           "name": "MiniMax: MiniMax M2",
           "currency": "USD",
-          "inputPer1m": 0.255,
-          "outputPer1m": 1.02,
+          "inputPer1m": 0.3,
+          "outputPer1m": 1.2,
           "contextLength": 204800,
+          "cacheReadPer1m": 0.03,
           "maxOutputTokens": 131072
         },
         "minimax/minimax-m3": {
@@ -673,11 +672,10 @@
         "openai/gpt-oss-20b": {
           "name": "OpenAI: gpt-oss-20b",
           "currency": "USD",
-          "inputPer1m": 0.03,
-          "outputPer1m": 0.13,
+          "inputPer1m": 0.029,
+          "outputPer1m": 0.14,
           "contextLength": 131072,
-          "cacheReadPer1m": 0.03,
-          "maxOutputTokens": 131072
+          "maxOutputTokens": null
         },
         "qwen/qwen3-30b-a3b": {
           "name": "Qwen: Qwen3 30B A3B",
@@ -963,10 +961,10 @@
         "minimax/minimax-m2.7": {
           "name": "MiniMax: MiniMax M2.7",
           "currency": "USD",
-          "inputPer1m": 0.25,
-          "outputPer1m": 1,
+          "inputPer1m": 0.3,
+          "outputPer1m": 1.2,
           "contextLength": 204800,
-          "cacheReadPer1m": 0.05,
+          "cacheReadPer1m": 0.06,
           "maxOutputTokens": 131072
         },
         "moonshotai/kimi-k2.5": {
@@ -1151,11 +1149,11 @@
         "google/gemma-4-31b-it": {
           "name": "Google: Gemma 4 31B",
           "currency": "USD",
-          "inputPer1m": 0.12,
+          "inputPer1m": 0.1,
           "outputPer1m": 0.35,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.09,
-          "maxOutputTokens": 262144
+          "cacheReadPer1m": 0.1,
+          "maxOutputTokens": 8192
         },
         "openai/gpt-audio-mini": {
           "name": "OpenAI: GPT Audio Mini",
