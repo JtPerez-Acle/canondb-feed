@@ -2,6 +2,98 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "2e48c36e-14fe-4335-ad71-aa60736a8bfd",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "e910d1cb-f88c-4b34-8201-4b9383f6e1ad",
+      "toSnapshotId": "0227be94-0d0e-465a-832f-5aa7f80c897c",
+      "detectedAt": "2026-07-25T13:44:24.461Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.13338,
+            "before": 0.13988
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.7182,
+            "before": 0.7532
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 2.2572,
+            "before": 2.3672
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "All three prices decreased (cacheRead, input, output), which is favorable to consumers."
+    },
+    {
+      "id": "1b717900-62c0-4f68-908d-80b59584bd16",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/arcee-ai/trinity-large-thinking",
+      "fromSnapshotId": "e910d1cb-f88c-4b34-8201-4b9383f6e1ad",
+      "toSnapshotId": "0227be94-0d0e-465a-832f-5aa7f80c897c",
+      "detectedAt": "2026-07-25T13:44:17.468Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "arcee-ai/trinity-large-thinking",
+              "inputPer1m"
+            ],
+            "after": 0.22,
+            "before": 0.25
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "arcee-ai/trinity-large-thinking",
+              "maxOutputTokens"
+            ],
+            "after": 262144,
+            "before": 80000
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "arcee-ai/trinity-large-thinking",
+              "outputPer1m"
+            ],
+            "after": 0.85,
+            "before": 0.8
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Output price increased from 0.8 to 0.85, which may silently increase costs for agents."
+    },
+    {
       "id": "6298c9dd-e7f4-4ad6-bde4-fe6ed872d220",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -2202,78 +2294,6 @@
       "confidence": 0.95,
       "classifiedBy": "llm",
       "notes": "Price increases for inputPer1m and outputPer1m are breaking for agents; addition of cacheRead and increase in maxOutputTokens are safe."
-    },
-    {
-      "id": "aa6365a8-d93b-43f7-b553-5c4b5c19651a",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/google/gemini-3.1-flash-lite-image",
-      "fromSnapshotId": "e2e7b191-9682-47eb-b40b-477e84306aeb",
-      "toSnapshotId": "c55195af-555f-4119-9fc3-819d068c4e7f",
-      "detectedAt": "2026-07-23T01:44:13.305Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "google/gemini-3.1-flash-lite-image",
-              "maxOutputTokens"
-            ],
-            "after": 66000,
-            "before": 65536
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "Increased max output tokens, allowing more content."
-    },
-    {
-      "id": "295fabc5-13ca-467c-a2e9-0bb3aadaf4ab",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/z-ai/glm-5.2",
-      "fromSnapshotId": "c4d6e600-4101-40de-9eca-f8b841586154",
-      "toSnapshotId": "e2e7b191-9682-47eb-b40b-477e84306aeb",
-      "detectedAt": "2026-07-22T19:44:31.583Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "cacheReadPer1m"
-            ],
-            "after": 0.1469,
-            "before": 0.1521
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "inputPer1m"
-            ],
-            "after": 0.791,
-            "before": 0.819
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "outputPer1m"
-            ],
-            "after": 2.486,
-            "before": 2.574
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.5,
-      "classifiedBy": "rules",
-      "notes": "llm fallback (This operation was aborted); field value(s) changed"
     }
   ]
 }
