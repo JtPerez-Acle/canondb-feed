@@ -2,6 +2,98 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "50128bd7-e231-47b4-be8e-4bfb2c80e7af",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "0227be94-0d0e-465a-832f-5aa7f80c897c",
+      "toSnapshotId": "c15856f6-844b-4901-843f-b2b467f541da",
+      "detectedAt": "2026-07-25T19:44:19.779Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.14144,
+            "before": 0.13338
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.7616,
+            "before": 0.7182
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 2.3936,
+            "before": 2.2572
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "price increased for cacheReadPer1m, inputPer1m, and outputPer1m"
+    },
+    {
+      "id": "0f2de65d-71db-4ecd-ba06-0eafa678265e",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3-30b-a3b-instruct-2507",
+      "fromSnapshotId": "0227be94-0d0e-465a-832f-5aa7f80c897c",
+      "toSnapshotId": "c15856f6-844b-4901-843f-b2b467f541da",
+      "detectedAt": "2026-07-25T19:44:17.680Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-30b-a3b-instruct-2507",
+              "inputPer1m"
+            ],
+            "after": 0.04815,
+            "before": 0.1
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-30b-a3b-instruct-2507",
+              "maxOutputTokens"
+            ],
+            "after": 32000,
+            "before": null
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-30b-a3b-instruct-2507",
+              "outputPer1m"
+            ],
+            "after": 0.19305,
+            "before": 0.3
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.8,
+      "classifiedBy": "llm",
+      "notes": "Input and output prices decreased, but maxOutputTokens changed from null to 32000, reducing output capacity."
+    },
+    {
       "id": "2e48c36e-14fe-4335-ad71-aa60736a8bfd",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -2193,107 +2285,6 @@
       "confidence": 1,
       "classifiedBy": "llm",
       "notes": "All changes are price decreases or an added output limit, which are favorable to consumers."
-    },
-    {
-      "id": "170ca8ff-4565-4f97-b778-5d7354f9d01f",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/meta-llama/llama-3.2-3b-instruct",
-      "fromSnapshotId": "e2e7b191-9682-47eb-b40b-477e84306aeb",
-      "toSnapshotId": "c55195af-555f-4119-9fc3-819d068c4e7f",
-      "detectedAt": "2026-07-23T01:44:27.744Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "meta-llama/llama-3.2-3b-instruct",
-              "inputPer1m"
-            ],
-            "after": 0.05,
-            "before": 0.0509
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "meta-llama/llama-3.2-3b-instruct",
-              "maxOutputTokens"
-            ],
-            "after": 131072,
-            "before": 80000
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "meta-llama/llama-3.2-3b-instruct",
-              "outputPer1m"
-            ],
-            "after": 0.33,
-            "before": 0.335
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Price decreases and output token limit increase for meta-llama/llama-3.2-3b-instruct."
-    },
-    {
-      "id": "f896136b-7939-4ee3-96ed-1080fd702417",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/google/gemma-4-26b-a4b-it",
-      "fromSnapshotId": "e2e7b191-9682-47eb-b40b-477e84306aeb",
-      "toSnapshotId": "c55195af-555f-4119-9fc3-819d068c4e7f",
-      "detectedAt": "2026-07-23T01:44:22.831Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "google/gemma-4-26b-a4b-it",
-              "cacheReadPer1m"
-            ],
-            "after": 0.05
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "google/gemma-4-26b-a4b-it",
-              "inputPer1m"
-            ],
-            "after": 0.12,
-            "before": 0.07
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "google/gemma-4-26b-a4b-it",
-              "maxOutputTokens"
-            ],
-            "after": 262144,
-            "before": 16384
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "google/gemma-4-26b-a4b-it",
-              "outputPer1m"
-            ],
-            "after": 0.35,
-            "before": 0.34
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "Price increases for inputPer1m and outputPer1m are breaking for agents; addition of cacheRead and increase in maxOutputTokens are safe."
     }
   ]
 }
