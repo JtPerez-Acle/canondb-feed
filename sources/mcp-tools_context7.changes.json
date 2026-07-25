@@ -2,6 +2,64 @@
   "id": "mcp-tools:context7",
   "changes": [
     {
+      "id": "10abdcc3-854f-40f0-9e29-52d43dc85029",
+      "sourceId": "mcp-tools:context7",
+      "entityId": "tools/resolve-library-id",
+      "fromSnapshotId": "937453a4-de57-4437-ade0-43d02cdf0746",
+      "toSnapshotId": "bfbaadb6-f008-4c64-8c1b-2227db9c7321",
+      "detectedAt": "2026-07-25T07:44:30.362Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "resolve-library-id",
+              "inputSchema",
+              "properties",
+              "query",
+              "description"
+            ],
+            "after": "What to look up in the library's documentation. This is used to rank library results by relevance to what the user is trying to accomplish. The query is sent to the Context7 API for processing. Do not include any sensitive or confidential information such as API keys, passwords, credentials, personal data, or proprietary code in your query.",
+            "before": "The question or task you need help with. This is used to rank library results by relevance to what the user is trying to accomplish. The query is sent to the Context7 API for processing. Do not include any sensitive or confidential information such as API keys, passwords, credentials, personal data, or proprietary code in your query."
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.6,
+      "classifiedBy": "llm",
+      "notes": "Description shifted from 'question or task' to 'look up in library docs', narrowing perceived use."
+    },
+    {
+      "id": "31907ab9-18bb-4424-9956-5aea7850387b",
+      "sourceId": "mcp-tools:context7",
+      "entityId": "tools/query-docs",
+      "fromSnapshotId": "937453a4-de57-4437-ade0-43d02cdf0746",
+      "toSnapshotId": "bfbaadb6-f008-4c64-8c1b-2227db9c7321",
+      "detectedAt": "2026-07-25T07:44:23.652Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "query-docs",
+              "inputSchema",
+              "properties",
+              "query",
+              "description"
+            ],
+            "after": "What to look up in the library's documentation, scoped to a single concept. Be specific and include relevant details, but keep each query to one topic — if the user's question spans multiple distinct concepts, make a separate call per concept instead of combining them, unless the question is about how the concepts interact. Good: 'How to set up authentication with JWT in Express.js' or 'React useEffect cleanup function examples'. Bad (too vague): 'auth' or 'hooks'. Bad (too broad): 'routing and auth and caching in Next.js'. The query is sent to the Context7 API for processing. Do not include any sensitive or confidential information such as API keys, passwords, credentials, personal data, or proprietary code in your query.",
+            "before": "The question or task you need help with, scoped to a single concept. Be specific and include relevant details, but keep each query to one topic — if the user's question spans multiple distinct concepts, make a separate call per concept instead of combining them, unless the question is about how the concepts interact. Good: 'How to set up authentication with JWT in Express.js' or 'React useEffect cleanup function examples'. Bad (too vague): 'auth' or 'hooks'. Bad (too broad): 'routing and auth and caching in Next.js'. The query is sent to the Context7 API for processing. Do not include any sensitive or confidential information such as API keys, passwords, credentials, personal data, or proprietary code in your query."
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Description-only edit, no semantic or structural change."
+    },
+    {
       "id": "3c8ac7d1-f189-4037-9c2a-ad2306d97f75",
       "sourceId": "mcp-tools:context7",
       "entityId": "tools/query-docs",

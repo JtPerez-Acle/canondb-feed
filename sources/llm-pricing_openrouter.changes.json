@@ -2,6 +2,98 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "6298c9dd-e7f4-4ad6-bde4-fe6ed872d220",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "b924a312-9f70-47d9-b095-a50e5b25ecab",
+      "toSnapshotId": "e910d1cb-f88c-4b34-8201-4b9383f6e1ad",
+      "detectedAt": "2026-07-25T07:44:17.841Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.13988,
+            "before": 0.14742
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.7532,
+            "before": 0.7938
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 2.3672,
+            "before": 2.4948
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "All three prices (cache read, input, output) decreased."
+    },
+    {
+      "id": "022289c1-b59e-4df0-bbbf-c9b1344cde07",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/moonshotai/kimi-k2.6",
+      "fromSnapshotId": "b924a312-9f70-47d9-b095-a50e5b25ecab",
+      "toSnapshotId": "e910d1cb-f88c-4b34-8201-4b9383f6e1ad",
+      "detectedAt": "2026-07-25T07:44:14.196Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.6",
+              "cacheReadPer1m"
+            ],
+            "after": 0.1088,
+            "before": 0.144
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.6",
+              "inputPer1m"
+            ],
+            "after": 0.646,
+            "before": 0.684
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.6",
+              "outputPer1m"
+            ],
+            "after": 2.72,
+            "before": 3.42
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Price decreases for cacheRead, input, and output are favorable."
+    },
+    {
       "id": "911f9366-28f6-4b50-b703-2b3f0935e1f5",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -2182,97 +2274,6 @@
       "confidence": 0.5,
       "classifiedBy": "rules",
       "notes": "llm fallback (This operation was aborted); field value(s) changed"
-    },
-    {
-      "id": "8e12b988-3534-40fb-ba1e-8c57a462f9ca",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/google/gemma-4-31b-it",
-      "fromSnapshotId": "c4d6e600-4101-40de-9eca-f8b841586154",
-      "toSnapshotId": "e2e7b191-9682-47eb-b40b-477e84306aeb",
-      "detectedAt": "2026-07-22T19:44:11.560Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "google/gemma-4-31b-it",
-              "cacheReadPer1m"
-            ],
-            "after": 0.09
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "google/gemma-4-31b-it",
-              "maxOutputTokens"
-            ],
-            "after": 262144,
-            "before": 16384
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "google/gemma-4-31b-it",
-              "outputPer1m"
-            ],
-            "after": 0.35,
-            "before": 0.37
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "ADDED cacheReadPer1m is safe; maxOutputTokens increased is favorable; outputPer1m decreased is favorable."
-    },
-    {
-      "id": "e003d6fb-2aa5-49eb-ac1d-c8c4fd9ee445",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/z-ai/glm-5.2",
-      "fromSnapshotId": "35a1d6d3-3f64-46e8-b454-ffc8f84fc4bd",
-      "toSnapshotId": "c4d6e600-4101-40de-9eca-f8b841586154",
-      "detectedAt": "2026-07-22T13:44:16.591Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "cacheReadPer1m"
-            ],
-            "after": 0.1521,
-            "before": 0.14924
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "inputPer1m"
-            ],
-            "after": 0.819,
-            "before": 0.8036
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "outputPer1m"
-            ],
-            "after": 2.574,
-            "before": 2.5256
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "price increase for cacheRead, input, and output per 1M tokens"
     }
   ]
 }
