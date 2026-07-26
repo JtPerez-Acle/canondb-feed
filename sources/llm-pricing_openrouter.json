@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-25T19:44:09.899Z",
+    "fetchedAt": "2026-07-26T01:44:10.006Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -101,10 +101,10 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.7616,
-          "outputPer1m": 2.3936,
+          "inputPer1m": 0.7196,
+          "outputPer1m": 2.2616,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.14144,
+          "cacheReadPer1m": 0.13364,
           "maxOutputTokens": 131072
         },
         "mancer/weaver": {
@@ -376,10 +376,11 @@
         "qwen/qwen3.6-27b": {
           "name": "Qwen: Qwen3.6 27B",
           "currency": "USD",
-          "inputPer1m": 0.289,
-          "outputPer1m": 2.4,
+          "inputPer1m": 0.3,
+          "outputPer1m": 2,
           "contextLength": 262144,
-          "maxOutputTokens": 131072
+          "cacheReadPer1m": 0.15,
+          "maxOutputTokens": 65536
         },
         "qwen/qwen3.7-max": {
           "name": "Qwen: Qwen3.7 Max",
@@ -673,9 +674,8 @@
           "name": "OpenAI: gpt-oss-20b",
           "currency": "USD",
           "inputPer1m": 0.03,
-          "outputPer1m": 0.13,
+          "outputPer1m": 0.14,
           "contextLength": 131072,
-          "cacheReadPer1m": 0.03,
           "maxOutputTokens": 131072
         },
         "qwen/qwen3-30b-a3b": {
@@ -1978,11 +1978,11 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash",
           "currency": "USD",
-          "inputPer1m": 0.0938,
-          "outputPer1m": 0.1876,
+          "inputPer1m": 0.14,
+          "outputPer1m": 0.28,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.01876,
-          "maxOutputTokens": null
+          "cacheReadPer1m": 0.028,
+          "maxOutputTokens": 393216
         },
         "google/gemma-4-31b-it:free": {
           "name": "Google: Gemma 4 31B (free)",
