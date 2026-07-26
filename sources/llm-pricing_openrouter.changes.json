@@ -2,6 +2,52 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "506d0ce8-ba8a-40e6-acee-71bcf766ab1e",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "9e8be261-9fe1-4147-acb1-3dc62d4bc98f",
+      "toSnapshotId": "df299a44-4909-4017-bf6e-5c310c953d80",
+      "detectedAt": "2026-07-26T13:44:15.192Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.1248,
+            "before": 0.13104
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.672,
+            "before": 0.7056
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 2.112,
+            "before": 2.2176
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "All three prices for glm-5.2 decreased, which is favorable to consumers."
+    },
+    {
       "id": "6c17f171-30bc-4c4f-b757-fcb84b763132",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -2210,52 +2256,6 @@
       "confidence": 0.95,
       "classifiedBy": "llm",
       "notes": "Price increase for model z-ai/glm-5.2 on all three metrics (cacheRead, input, output) raises cost for agents."
-    },
-    {
-      "id": "e7f89370-2079-46ba-8b73-8e558283daa5",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/z-ai/glm-5",
-      "fromSnapshotId": "c55195af-555f-4119-9fc3-819d068c4e7f",
-      "toSnapshotId": "1df1aaec-69c1-4d18-a052-191f1f997117",
-      "detectedAt": "2026-07-23T07:44:11.747Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5",
-              "cacheReadPer1m"
-            ],
-            "after": 0.19,
-            "before": 0.2
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5",
-              "maxOutputTokens"
-            ],
-            "after": 202752,
-            "before": 131072
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5",
-              "outputPer1m"
-            ],
-            "after": 3.15,
-            "before": 2.55
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "Output price increased from 2.55 to 3.15, silently raising cost for agents."
     }
   ]
 }
