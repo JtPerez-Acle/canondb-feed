@@ -4,7 +4,7 @@ The canonical truth layer for the APIs & tools AI agents call: the **current
 schema** and **classified breaking-changes** (breaking for strict consumers,
 breaking for agents, or safe) for a curated set of sources.
 
-This repo is auto-generated. Last updated: **2026-07-26T13:44:20.329Z**.
+This repo is auto-generated. Last updated: **2026-07-26T19:44:30.584Z**.
 
 - Live API: `https://canondb.dev`
 - Each `current` carries `fetched_at` + a `stale` flag — we never serve stale as current.
