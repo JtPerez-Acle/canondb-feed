@@ -2,6 +2,52 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "01623b9c-8020-46f2-90db-14da9a6a9c6e",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "310b9042-ce60-43c9-8185-68b4573e6014",
+      "toSnapshotId": "1fda4ea5-f9a2-4c6d-89df-f61d71bd4ce3",
+      "detectedAt": "2026-07-27T13:44:15.846Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.14664,
+            "before": 0.15184
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.7896,
+            "before": 0.8176
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 2.4816,
+            "before": 2.5696
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "All three pricing metrics decreased, which is a favorable change for consumers."
+    },
+    {
       "id": "b6c0c8b2-da63-43a0-bc4f-1eedd17b434e",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -2133,51 +2179,6 @@
       "confidence": 0.9,
       "classifiedBy": "llm",
       "notes": "Price increases for cacheRead, input, and output per 1M tokens silently raise costs for agents."
-    },
-    {
-      "id": "0a77ebd9-cf4d-4295-8a1b-babf83c7c002",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/minimax/minimax-m2",
-      "fromSnapshotId": "f3966e75-79b2-4051-bfbe-be36acd5ae03",
-      "toSnapshotId": "b5338cd9-3ede-47ba-84d6-d67470300bd4",
-      "detectedAt": "2026-07-24T01:44:29.960Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "minimax/minimax-m2",
-              "cacheReadPer1m"
-            ],
-            "after": 0.03
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "minimax/minimax-m2",
-              "inputPer1m"
-            ],
-            "after": 0.3,
-            "before": 0.255
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "minimax/minimax-m2",
-              "outputPer1m"
-            ],
-            "after": 1.2,
-            "before": 1.02
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "Input and output price increases for minimax-m2"
     }
   ]
 }
