@@ -2,6 +2,190 @@
   "id": "mcp-tools:huggingface",
   "changes": [
     {
+      "id": "95d4e12d-0783-474f-9376-bbf34f756daa",
+      "sourceId": "mcp-tools:huggingface",
+      "entityId": "tools/hub_repo_search",
+      "fromSnapshotId": "60c82c13-373b-493b-8ca0-26a6e56f1d6d",
+      "toSnapshotId": "c503c3a5-0131-4aec-ae9b-58cbaca2d66f",
+      "detectedAt": "2026-07-27T07:44:50.837Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "hub_repo_search",
+              "description"
+            ],
+            "after": "Search Hugging Face repositories with a shared query interface. You can target models, datasets, spaces, or aggregate across multiple repo types in one call. Include links to repositories in your response.",
+            "before": "Search Hugging Face repositories with a shared query interface. You can target models, datasets, spaces, or aggregate across multiple repo types in one call. Use space_search for semantic-first discovery of Spaces. Include links to repositories in your response."
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "hub_repo_search",
+              "inputSchema",
+              "$schema"
+            ],
+            "after": "https://json-schema.org/draft/2020-12/schema",
+            "before": "http://json-schema.org/draft-07/schema#"
+          },
+          {
+            "kind": "removed",
+            "path": [
+              "tools",
+              "hub_repo_search",
+              "inputSchema",
+              "additionalProperties"
+            ],
+            "before": false
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.7,
+      "classifiedBy": "llm",
+      "notes": "Schema version changed and additionalProperties removed, which may silently alter validation behavior for agents."
+    },
+    {
+      "id": "641b79f4-78f1-4087-bb84-78c31b6f9faf",
+      "sourceId": "mcp-tools:huggingface",
+      "entityId": "tools/hub_repo_details",
+      "fromSnapshotId": "60c82c13-373b-493b-8ca0-26a6e56f1d6d",
+      "toSnapshotId": "c503c3a5-0131-4aec-ae9b-58cbaca2d66f",
+      "detectedAt": "2026-07-27T07:44:49.294Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "hub_repo_details",
+              "inputSchema",
+              "$schema"
+            ],
+            "after": "https://json-schema.org/draft/2020-12/schema",
+            "before": "http://json-schema.org/draft-07/schema#"
+          },
+          {
+            "kind": "removed",
+            "path": [
+              "tools",
+              "hub_repo_details",
+              "inputSchema",
+              "additionalProperties"
+            ],
+            "before": false
+          },
+          {
+            "kind": "added",
+            "path": [
+              "tools",
+              "hub_repo_details",
+              "inputSchema",
+              "properties",
+              "limit",
+              "maximum"
+            ],
+            "after": 9007199254740991
+          },
+          {
+            "kind": "added",
+            "path": [
+              "tools",
+              "hub_repo_details",
+              "inputSchema",
+              "properties",
+              "limit",
+              "minimum"
+            ],
+            "after": -9007199254740991
+          },
+          {
+            "kind": "added",
+            "path": [
+              "tools",
+              "hub_repo_details",
+              "inputSchema",
+              "properties",
+              "offset",
+              "maximum"
+            ],
+            "after": 9007199254740991
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 0.6,
+      "classifiedBy": "rules",
+      "notes": "llm fallback (This operation was aborted); field(s) removed"
+    },
+    {
+      "id": "b8de81d3-da7c-4598-b81e-aa1f0af74440",
+      "sourceId": "mcp-tools:huggingface",
+      "entityId": "tools/hf_whoami",
+      "fromSnapshotId": "60c82c13-373b-493b-8ca0-26a6e56f1d6d",
+      "toSnapshotId": "c503c3a5-0131-4aec-ae9b-58cbaca2d66f",
+      "detectedAt": "2026-07-27T07:44:29.286Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "hf_whoami",
+              "inputSchema",
+              "$schema"
+            ],
+            "after": "https://json-schema.org/draft/2020-12/schema",
+            "before": "http://json-schema.org/draft-07/schema#"
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.6,
+      "classifiedBy": "llm",
+      "notes": "Changed $schema URI, potentially altering validation behavior for strict consumers."
+    },
+    {
+      "id": "eaba5abb-f2da-4cdf-a797-50c7fd1e8282",
+      "sourceId": "mcp-tools:huggingface",
+      "entityId": "tools/hf_fs",
+      "fromSnapshotId": "60c82c13-373b-493b-8ca0-26a6e56f1d6d",
+      "toSnapshotId": "c503c3a5-0131-4aec-ae9b-58cbaca2d66f",
+      "detectedAt": "2026-07-27T07:44:23.542Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "$schema"
+            ],
+            "after": "https://json-schema.org/draft/2020-12/schema",
+            "before": "http://json-schema.org/draft-07/schema#"
+          },
+          {
+            "kind": "removed",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "additionalProperties"
+            ],
+            "before": false
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "REMOVED additionalProperties constraint may break strict consumers that relied on it"
+    },
+    {
       "id": "adc5e42a-f087-401d-afee-b8ff651c251f",
       "sourceId": "mcp-tools:huggingface",
       "entityId": "tools/hf_fs",

@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-27T01:44:11.087Z",
+    "fetchedAt": "2026-07-27T07:44:11.263Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -101,10 +101,10 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.6692,
-          "outputPer1m": 2.1032,
+          "inputPer1m": 0.8176,
+          "outputPer1m": 2.5696,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.12428,
+          "cacheReadPer1m": 0.15184,
           "maxOutputTokens": 131072
         },
         "mancer/weaver": {
@@ -2805,18 +2805,10 @@
         "nvidia/nemotron-3-ultra-550b-a55b": {
           "name": "NVIDIA: Nemotron 3 Ultra",
           "currency": "USD",
-          "inputPer1m": 0.6,
-          "outputPer1m": 3.6,
+          "inputPer1m": 0.5,
+          "outputPer1m": 2.2,
           "contextLength": 512288,
-          "cacheReadPer1m": 0.2,
-          "maxOutputTokens": null
-        },
-        "openai/gpt-4o-mini-search-preview": {
-          "name": "OpenAI: GPT-4o-mini Search Preview",
-          "currency": "USD",
-          "inputPer1m": 0.15,
-          "outputPer1m": 0.6,
-          "contextLength": 128000,
+          "cacheReadPer1m": 0.1,
           "maxOutputTokens": 16384
         },
         "qwen/qwen3-coder-30b-a3b-instruct": {
@@ -2909,7 +2901,7 @@
           "currency": "USD",
           "inputPer1m": 0.5,
           "outputPer1m": 3,
-          "contextLength": 131072,
+          "contextLength": 65536,
           "maxOutputTokens": 65536
         },
         "deepseek/deepseek-r1-distill-llama-70b": {
