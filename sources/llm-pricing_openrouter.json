@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-28T01:44:10.773Z",
+    "fetchedAt": "2026-07-28T07:44:11.649Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -101,10 +101,10 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.7322,
-          "outputPer1m": 2.3012,
+          "inputPer1m": 0.7686,
+          "outputPer1m": 2.4156,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.13598,
+          "cacheReadPer1m": 0.14274,
           "maxOutputTokens": 131072
         },
         "mancer/weaver": {
@@ -1067,10 +1067,9 @@
         "qwen/qwen3.5-35b-a3b": {
           "name": "Qwen: Qwen3.5-35B-A3B",
           "currency": "USD",
-          "inputPer1m": 0.15,
+          "inputPer1m": 0.14,
           "outputPer1m": 1,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.05,
           "maxOutputTokens": 262144
         },
         "qwen/qwen3.6-35b-a3b": {
@@ -1559,7 +1558,7 @@
           "outputPer1m": 15,
           "contextLength": 1048576,
           "cacheReadPer1m": 0.3,
-          "maxOutputTokens": 1048576
+          "maxOutputTokens": 262144
         },
         "~openai/gpt-mini-latest": {
           "name": "OpenAI GPT Mini Latest",
@@ -1836,11 +1835,10 @@
         "google/gemma-4-26b-a4b-it": {
           "name": "Google: Gemma 4 26B A4B ",
           "currency": "USD",
-          "inputPer1m": 0.14,
-          "outputPer1m": 0.42,
+          "inputPer1m": 0.07,
+          "outputPer1m": 0.34,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.05,
-          "maxOutputTokens": 262144
+          "maxOutputTokens": 16384
         },
         "moonshotai/kimi-k2.7-code": {
           "name": "MoonshotAI: Kimi K2.7 Code",
