@@ -2,6 +2,60 @@
   "id": "mcp-tools:cloudflare-docs",
   "changes": [
     {
+      "id": "e81cb6d8-ce50-4354-8b19-df3484137009",
+      "sourceId": "mcp-tools:cloudflare-docs",
+      "entityId": "tools/search_cloudflare_documentation",
+      "fromSnapshotId": "02d63e5d-0758-444e-91c8-07aeacf6bf51",
+      "toSnapshotId": "3663fca0-1ec2-4d84-87e8-3385feb2eee3",
+      "detectedAt": "2026-07-28T19:46:16.975Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "search_cloudflare_documentation",
+              "inputSchema",
+              "$schema"
+            ],
+            "after": "https://json-schema.org/draft/2020-12/schema",
+            "before": "http://json-schema.org/draft-07/schema#"
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.7,
+      "classifiedBy": "llm",
+      "notes": "Changed JSON Schema draft version may alter validation semantics for agents that rely on draft-specific features."
+    },
+    {
+      "id": "3e5c137f-8e44-4e09-9a5e-347612c23c80",
+      "sourceId": "mcp-tools:cloudflare-docs",
+      "entityId": "tools/migrate_pages_to_workers_guide",
+      "fromSnapshotId": "02d63e5d-0758-444e-91c8-07aeacf6bf51",
+      "toSnapshotId": "3663fca0-1ec2-4d84-87e8-3385feb2eee3",
+      "detectedAt": "2026-07-28T19:46:03.946Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "migrate_pages_to_workers_guide",
+              "inputSchema",
+              "$schema"
+            ],
+            "after": "https://json-schema.org/draft/2020-12/schema",
+            "before": "http://json-schema.org/draft-07/schema#"
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.7,
+      "classifiedBy": "llm",
+      "notes": "Changed JSON Schema version URI may alter validation semantics for agents."
+    },
+    {
       "id": "be731004-6c9d-40b0-af03-77cdca06e84b",
       "sourceId": "mcp-tools:cloudflare-docs",
       "entityId": "tools/search_cloudflare_documentation",
