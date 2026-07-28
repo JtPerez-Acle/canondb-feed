@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-28T07:44:11.649Z",
+    "fetchedAt": "2026-07-28T13:44:11.773Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -866,15 +866,6 @@
           "cacheReadPer1m": 0.275,
           "maxOutputTokens": 100000
         },
-        "poolside/laguna-m.1": {
-          "name": "Poolside: Laguna M.1",
-          "currency": "USD",
-          "inputPer1m": 0.2,
-          "outputPer1m": 0.4,
-          "contextLength": 262144,
-          "cacheReadPer1m": 0.1,
-          "maxOutputTokens": 32768
-        },
         "rekaai/reka-flash-3": {
           "name": "Reka Flash 3",
           "currency": "USD",
@@ -1176,11 +1167,11 @@
         "qwen/qwen3-coder-next": {
           "name": "Qwen: Qwen3 Coder Next",
           "currency": "USD",
-          "inputPer1m": 0.11,
-          "outputPer1m": 0.8,
+          "inputPer1m": 0.18,
+          "outputPer1m": 0.9,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.07,
-          "maxOutputTokens": 262144
+          "cacheReadPer1m": 0.036,
+          "maxOutputTokens": 64000
         },
         "qwen/qwen3-coder-plus": {
           "name": "Qwen: Qwen3 Coder Plus",
@@ -1693,14 +1684,6 @@
           "cacheWritePer1m": 1.5625,
           "maxOutputTokens": 128000
         },
-        "poolside/laguna-m.1:free": {
-          "name": "Poolside: Laguna M.1 (free)",
-          "currency": "USD",
-          "inputPer1m": 0,
-          "outputPer1m": 0,
-          "contextLength": 262144,
-          "maxOutputTokens": 32768
-        },
         "qwen/qwen3.5-flash-02-23": {
           "name": "Qwen: Qwen3.5-Flash",
           "currency": "USD",
@@ -1835,10 +1818,11 @@
         "google/gemma-4-26b-a4b-it": {
           "name": "Google: Gemma 4 26B A4B ",
           "currency": "USD",
-          "inputPer1m": 0.07,
-          "outputPer1m": 0.34,
+          "inputPer1m": 0.15,
+          "outputPer1m": 0.45,
           "contextLength": 262144,
-          "maxOutputTokens": 16384
+          "cacheReadPer1m": 0.05,
+          "maxOutputTokens": 262144
         },
         "moonshotai/kimi-k2.7-code": {
           "name": "MoonshotAI: Kimi K2.7 Code",
@@ -2797,11 +2781,11 @@
         "nvidia/nemotron-3-ultra-550b-a55b": {
           "name": "NVIDIA: Nemotron 3 Ultra",
           "currency": "USD",
-          "inputPer1m": 0.6,
-          "outputPer1m": 3.6,
+          "inputPer1m": 0.5,
+          "outputPer1m": 2.2,
           "contextLength": 512288,
-          "cacheReadPer1m": 0.2,
-          "maxOutputTokens": null
+          "cacheReadPer1m": 0.1,
+          "maxOutputTokens": 16384
         },
         "qwen/qwen3-coder-30b-a3b-instruct": {
           "name": "Qwen: Qwen3 Coder 30B A3B Instruct",
