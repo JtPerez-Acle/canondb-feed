@@ -4,13 +4,13 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "api:stripe",
-    "fetchedAt": "2026-07-29T13:44:57.849Z",
+    "fetchedAt": "2026-07-29T19:44:26.814Z",
     "stale": false,
     "verified": true,
     "data": {
       "api": "api:stripe",
       "title": "Stripe API",
-      "version": "2026-06-24.dahlia",
+      "version": "2026-07-29.dahlia",
       "operations": {
         "GET /v1/files": {
           "summary": "List all files",
@@ -819,7 +819,7 @@
           }
         },
         "POST /v1/tokens": {
-          "summary": "Create a CVC update token",
+          "summary": "Create a bank account token",
           "responses": [
             "200",
             "default"
@@ -1105,7 +1105,7 @@
           }
         },
         "POST /v1/charges": {
-          "summary": null,
+          "summary": "Create a charge",
           "responses": [
             "200",
             "default"
@@ -1150,7 +1150,7 @@
           }
         },
         "POST /v1/refunds": {
-          "summary": "Create customer balance refund",
+          "summary": "Create a refund",
           "responses": [
             "200",
             "default"
@@ -1165,7 +1165,7 @@
           }
         },
         "POST /v1/sources": {
-          "summary": "Shares a source",
+          "summary": "Create a source",
           "responses": [
             "200",
             "default"
@@ -1409,7 +1409,7 @@
           }
         },
         "POST /v1/accounts": {
-          "summary": null,
+          "summary": "Create an account",
           "responses": [
             "200",
             "default"
@@ -3330,6 +3330,58 @@
             "required": false
           }
         },
+        "GET /v1/payment_records": {
+          "summary": "List Payment Records",
+          "responses": [
+            "200",
+            "default"
+          ],
+          "parameters": [
+            {
+              "in": "query",
+              "name": "created_after",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "created_before",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "ending_before",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "expand",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "starting_after",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "GetPaymentRecords",
+          "requestBody": {
+            "content": [
+              "application/x-www-form-urlencoded"
+            ],
+            "required": false
+          }
+        },
         "GET /v1/products/search": {
           "summary": "Search products",
           "responses": [
@@ -4139,7 +4191,7 @@
           }
         },
         "POST /v1/payment_methods": {
-          "summary": "Shares a PaymentMethod",
+          "summary": "Create a PaymentMethod",
           "responses": [
             "200",
             "default"
@@ -7123,7 +7175,7 @@
           }
         },
         "POST /v1/external_accounts/{id}": {
-          "summary": null,
+          "summary": "Update a bank account",
           "responses": [
             "200",
             "default"
@@ -8267,7 +8319,7 @@
           }
         },
         "POST /v1/charges/{charge}/capture": {
-          "summary": "Capture a payment",
+          "summary": "Capture a charge",
           "responses": [
             "200",
             "default"
@@ -8311,7 +8363,7 @@
           }
         },
         "POST /v1/charges/{charge}/refunds": {
-          "summary": "Create customer balance refund",
+          "summary": "Create a refund",
           "responses": [
             "200",
             "default"
@@ -9943,6 +9995,28 @@
             }
           ],
           "operationId": "GetTreasuryTransactionEntries",
+          "requestBody": {
+            "content": [
+              "application/x-www-form-urlencoded"
+            ],
+            "required": false
+          }
+        },
+        "POST /v1/accounts/{account}/unreject": {
+          "summary": "Unreject an account",
+          "responses": [
+            "200",
+            "default"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "account",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "PostAccountsAccountUnreject",
           "requestBody": {
             "content": [
               "application/x-www-form-urlencoded"
@@ -11759,7 +11833,7 @@
           }
         },
         "POST /v1/customers/{customer}/cards/{id}": {
-          "summary": null,
+          "summary": "Update a card",
           "responses": [
             "200",
             "default"
@@ -12643,7 +12717,7 @@
           }
         },
         "POST /v1/customers/{customer}/sources/{id}": {
-          "summary": null,
+          "summary": "Update a card",
           "responses": [
             "200",
             "default"
@@ -13986,7 +14060,7 @@
           }
         },
         "POST /v1/accounts/{account}/bank_accounts/{id}": {
-          "summary": null,
+          "summary": "Update a bank account",
           "responses": [
             "200",
             "default"
@@ -14458,7 +14532,7 @@
           }
         },
         "POST /v1/customers/{customer}/bank_accounts/{id}": {
-          "summary": null,
+          "summary": "Update a card",
           "responses": [
             "200",
             "default"
@@ -15113,7 +15187,7 @@
           }
         },
         "POST /v1/accounts/{account}/external_accounts/{id}": {
-          "summary": null,
+          "summary": "Update a bank account",
           "responses": [
             "200",
             "default"

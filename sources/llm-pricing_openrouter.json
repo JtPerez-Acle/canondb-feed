@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-29T13:44:11.346Z",
+    "fetchedAt": "2026-07-29T19:44:11.433Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -101,10 +101,10 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.728,
-          "outputPer1m": 2.288,
+          "inputPer1m": 0.6916,
+          "outputPer1m": 2.1736,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.1352,
+          "cacheReadPer1m": 0.12844,
           "maxOutputTokens": 131072
         },
         "mancer/weaver": {
@@ -2696,10 +2696,10 @@
         "qwen/qwen3-vl-30b-a3b-instruct": {
           "name": "Qwen: Qwen3 VL 30B A3B Instruct",
           "currency": "USD",
-          "inputPer1m": 0.15,
-          "outputPer1m": 0.6,
+          "inputPer1m": 0.13,
+          "outputPer1m": 0.52,
           "contextLength": 262144,
-          "maxOutputTokens": 16384
+          "maxOutputTokens": 32768
         },
         "qwen/qwen3-vl-30b-a3b-thinking": {
           "name": "Qwen: Qwen3 VL 30B A3B Thinking",

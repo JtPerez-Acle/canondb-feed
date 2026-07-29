@@ -2,6 +2,98 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "af442f27-3ae7-4e23-a9fe-3b1cbf7816b4",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "22dcc534-425e-44e4-97a3-0581eb79a9e3",
+      "toSnapshotId": "ddfd7808-ba40-4103-8dd3-0f0f0ae24ce6",
+      "detectedAt": "2026-07-29T19:44:23.587Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.12844,
+            "before": 0.1352
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.6916,
+            "before": 0.728
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 2.1736,
+            "before": 2.288
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "price decrease"
+    },
+    {
+      "id": "a27a4574-34db-4b62-8696-22f9f6d534d8",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3-vl-30b-a3b-instruct",
+      "fromSnapshotId": "22dcc534-425e-44e4-97a3-0581eb79a9e3",
+      "toSnapshotId": "ddfd7808-ba40-4103-8dd3-0f0f0ae24ce6",
+      "detectedAt": "2026-07-29T19:44:20.252Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-vl-30b-a3b-instruct",
+              "inputPer1m"
+            ],
+            "after": 0.13,
+            "before": 0.15
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-vl-30b-a3b-instruct",
+              "maxOutputTokens"
+            ],
+            "after": 32768,
+            "before": 16384
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-vl-30b-a3b-instruct",
+              "outputPer1m"
+            ],
+            "after": 0.52,
+            "before": 0.6
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Price decreases and output cap increase are favorable changes."
+    },
+    {
       "id": "c250a010-ea6b-49e6-a212-0f11984b5405",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -1755,72 +1847,6 @@
       "confidence": 1,
       "classifiedBy": "llm",
       "notes": "New model added, no existing consumers affected."
-    },
-    {
-      "id": "0020e7aa-cb50-4e25-b31a-84b3c1f49023",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/anthropic/claude-opus-5:batch",
-      "fromSnapshotId": "ec71d6b1-9842-4d55-9586-b5ff8fcd4ab6",
-      "toSnapshotId": "98b265eb-9df5-4602-95ad-e2ea8dd0a0fb",
-      "detectedAt": "2026-07-28T19:44:42.978Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "anthropic/claude-opus-5:batch"
-            ],
-            "after": {
-              "name": "Claude Opus 5 (batch)",
-              "currency": "USD",
-              "inputPer1m": 2.5,
-              "outputPer1m": 12.5,
-              "contextLength": 1000000,
-              "cacheReadPer1m": 0.25,
-              "cacheWritePer1m": 3.125,
-              "maxOutputTokens": 128000
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Added new model, no existing consumers affected."
-    },
-    {
-      "id": "a4bfb18f-3f68-4d25-a82d-ad447e16de7c",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/anthropic/claude-opus-4.8:batch",
-      "fromSnapshotId": "ec71d6b1-9842-4d55-9586-b5ff8fcd4ab6",
-      "toSnapshotId": "98b265eb-9df5-4602-95ad-e2ea8dd0a0fb",
-      "detectedAt": "2026-07-28T19:44:36.637Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "anthropic/claude-opus-4.8:batch"
-            ],
-            "after": {
-              "name": "Anthropic: Claude Opus 4.8 (batch)",
-              "currency": "USD",
-              "inputPer1m": 2.5,
-              "outputPer1m": 12.5,
-              "contextLength": 1000000,
-              "cacheReadPer1m": 0.25,
-              "cacheWritePer1m": 3.125,
-              "maxOutputTokens": 128000
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Added new model"
     }
   ]
 }

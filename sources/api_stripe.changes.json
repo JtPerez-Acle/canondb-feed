@@ -2,6 +2,514 @@
   "id": "api:stripe",
   "changes": [
     {
+      "id": "46d0a614-fa21-4e37-a4e6-007df04bd7ed",
+      "sourceId": "api:stripe",
+      "entityId": "version",
+      "fromSnapshotId": "4d62e0bc-045b-4fa5-b7ea-1ff21d619688",
+      "toSnapshotId": "d8a5063b-6a55-43f4-9dfd-2004e20322fe",
+      "detectedAt": "2026-07-29T19:45:46.349Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "version"
+            ],
+            "after": "2026-07-29.dahlia",
+            "before": "2026-06-24.dahlia"
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.7,
+      "classifiedBy": "llm",
+      "notes": "API version changed, which may alter behavior or semantics for existing callers."
+    },
+    {
+      "id": "91939095-4af5-44a4-97ea-0629578173c3",
+      "sourceId": "api:stripe",
+      "entityId": "operations/POST /v1/tokens",
+      "fromSnapshotId": "4d62e0bc-045b-4fa5-b7ea-1ff21d619688",
+      "toSnapshotId": "d8a5063b-6a55-43f4-9dfd-2004e20322fe",
+      "detectedAt": "2026-07-29T19:45:45.097Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "operations",
+              "POST /v1/tokens",
+              "summary"
+            ],
+            "after": "Create a bank account token",
+            "before": "Create a CVC update token"
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "The summary text change is cosmetic and does not affect the API contract, parameters, or responses."
+    },
+    {
+      "id": "f71526a2-a008-4415-8e74-08cb2b116eb3",
+      "sourceId": "api:stripe",
+      "entityId": "operations/POST /v1/sources",
+      "fromSnapshotId": "4d62e0bc-045b-4fa5-b7ea-1ff21d619688",
+      "toSnapshotId": "d8a5063b-6a55-43f4-9dfd-2004e20322fe",
+      "detectedAt": "2026-07-29T19:45:35.625Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "operations",
+              "POST /v1/sources",
+              "summary"
+            ],
+            "after": "Create a source",
+            "before": "Shares a source"
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Operation description changed from 'Shares a source' to 'Create a source', altering semantic meaning for agents."
+    },
+    {
+      "id": "859090c7-3e59-4dd0-8660-e7570db1ed06",
+      "sourceId": "api:stripe",
+      "entityId": "operations/POST /v1/refunds",
+      "fromSnapshotId": "4d62e0bc-045b-4fa5-b7ea-1ff21d619688",
+      "toSnapshotId": "d8a5063b-6a55-43f4-9dfd-2004e20322fe",
+      "detectedAt": "2026-07-29T19:45:34.740Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "operations",
+              "POST /v1/refunds",
+              "summary"
+            ],
+            "after": "Create a refund",
+            "before": "Create customer balance refund"
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Summary updated, no change to API contract."
+    },
+    {
+      "id": "629f7b19-0930-4070-aaf1-13a005829e45",
+      "sourceId": "api:stripe",
+      "entityId": "operations/POST /v1/payment_methods",
+      "fromSnapshotId": "4d62e0bc-045b-4fa5-b7ea-1ff21d619688",
+      "toSnapshotId": "d8a5063b-6a55-43f4-9dfd-2004e20322fe",
+      "detectedAt": "2026-07-29T19:45:30.522Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "operations",
+              "POST /v1/payment_methods",
+              "summary"
+            ],
+            "after": "Create a PaymentMethod",
+            "before": "Shares a PaymentMethod"
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "The summary/description of an operation is changed; no functional impact."
+    },
+    {
+      "id": "ac527b2a-af17-4239-8f6b-a77e8383094a",
+      "sourceId": "api:stripe",
+      "entityId": "operations/POST /v1/external_accounts/{id}",
+      "fromSnapshotId": "4d62e0bc-045b-4fa5-b7ea-1ff21d619688",
+      "toSnapshotId": "d8a5063b-6a55-43f4-9dfd-2004e20322fe",
+      "detectedAt": "2026-07-29T19:45:26.020Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "operations",
+              "POST /v1/external_accounts/{id}",
+              "summary"
+            ],
+            "after": "Update a bank account",
+            "before": null
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Only the summary description changed; no functional impact on API consumers."
+    },
+    {
+      "id": "23af9256-7629-4d4d-b792-8db9de218a90",
+      "sourceId": "api:stripe",
+      "entityId": "operations/POST /v1/customers/{customer}/sources/{id}",
+      "fromSnapshotId": "4d62e0bc-045b-4fa5-b7ea-1ff21d619688",
+      "toSnapshotId": "d8a5063b-6a55-43f4-9dfd-2004e20322fe",
+      "detectedAt": "2026-07-29T19:45:19.448Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "operations",
+              "POST /v1/customers/{customer}/sources/{id}",
+              "summary"
+            ],
+            "after": "Update a card",
+            "before": null
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Change to operation summary is cosmetic; does not affect API contract."
+    },
+    {
+      "id": "bc4b0fa4-a35f-4c6a-838d-7f7dbeb13fd4",
+      "sourceId": "api:stripe",
+      "entityId": "operations/POST /v1/customers/{customer}/cards/{id}",
+      "fromSnapshotId": "4d62e0bc-045b-4fa5-b7ea-1ff21d619688",
+      "toSnapshotId": "d8a5063b-6a55-43f4-9dfd-2004e20322fe",
+      "detectedAt": "2026-07-29T19:45:16.495Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "operations",
+              "POST /v1/customers/{customer}/cards/{id}",
+              "summary"
+            ],
+            "after": "Update a card",
+            "before": null
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Only the operation summary was added; no functional change."
+    },
+    {
+      "id": "84fe1dc2-2908-407f-8266-e9aa1a44664b",
+      "sourceId": "api:stripe",
+      "entityId": "operations/POST /v1/customers/{customer}/bank_accounts/{id}",
+      "fromSnapshotId": "4d62e0bc-045b-4fa5-b7ea-1ff21d619688",
+      "toSnapshotId": "d8a5063b-6a55-43f4-9dfd-2004e20322fe",
+      "detectedAt": "2026-07-29T19:45:12.361Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "operations",
+              "POST /v1/customers/{customer}/bank_accounts/{id}",
+              "summary"
+            ],
+            "after": "Update a card",
+            "before": null
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Summary change is cosmetic, does not affect API contract."
+    },
+    {
+      "id": "5c812fa5-5609-46f9-b5ad-ab238d7a0cb2",
+      "sourceId": "api:stripe",
+      "entityId": "operations/POST /v1/charges/{charge}/refunds",
+      "fromSnapshotId": "4d62e0bc-045b-4fa5-b7ea-1ff21d619688",
+      "toSnapshotId": "d8a5063b-6a55-43f4-9dfd-2004e20322fe",
+      "detectedAt": "2026-07-29T19:45:06.315Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "operations",
+              "POST /v1/charges/{charge}/refunds",
+              "summary"
+            ],
+            "after": "Create a refund",
+            "before": "Create customer balance refund"
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.6,
+      "classifiedBy": "llm",
+      "notes": "Summary changed from specific to generic, could mislead agents about operation semantics."
+    },
+    {
+      "id": "bba738bc-b982-4695-82b2-14726e615204",
+      "sourceId": "api:stripe",
+      "entityId": "operations/POST /v1/charges/{charge}/capture",
+      "fromSnapshotId": "4d62e0bc-045b-4fa5-b7ea-1ff21d619688",
+      "toSnapshotId": "d8a5063b-6a55-43f4-9dfd-2004e20322fe",
+      "detectedAt": "2026-07-29T19:45:00.032Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "operations",
+              "POST /v1/charges/{charge}/capture",
+              "summary"
+            ],
+            "after": "Capture a charge",
+            "before": "Capture a payment"
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Summary text changed, no impact on API contract."
+    },
+    {
+      "id": "c590ea01-1e1a-4dad-a5a0-33d791dcc525",
+      "sourceId": "api:stripe",
+      "entityId": "operations/POST /v1/charges",
+      "fromSnapshotId": "4d62e0bc-045b-4fa5-b7ea-1ff21d619688",
+      "toSnapshotId": "d8a5063b-6a55-43f4-9dfd-2004e20322fe",
+      "detectedAt": "2026-07-29T19:44:54.234Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "operations",
+              "POST /v1/charges",
+              "summary"
+            ],
+            "after": "Create a charge",
+            "before": null
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Added operation summary"
+    },
+    {
+      "id": "728c74d6-afc0-48cc-963d-59fc1716f6ab",
+      "sourceId": "api:stripe",
+      "entityId": "operations/POST /v1/accounts/{account}/unreject",
+      "fromSnapshotId": "4d62e0bc-045b-4fa5-b7ea-1ff21d619688",
+      "toSnapshotId": "d8a5063b-6a55-43f4-9dfd-2004e20322fe",
+      "detectedAt": "2026-07-29T19:44:49.561Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "operations",
+              "POST /v1/accounts/{account}/unreject"
+            ],
+            "after": {
+              "summary": "Unreject an account",
+              "responses": [
+                "200",
+                "default"
+              ],
+              "parameters": [
+                {
+                  "in": "path",
+                  "name": "account",
+                  "type": "string",
+                  "required": true
+                }
+              ],
+              "operationId": "PostAccountsAccountUnreject",
+              "requestBody": {
+                "content": [
+                  "application/x-www-form-urlencoded"
+                ],
+                "required": false
+              }
+            }
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "ADDED operation is safe for existing consumers."
+    },
+    {
+      "id": "6ce296e3-6cbd-402b-91c3-2ad45e6d0c69",
+      "sourceId": "api:stripe",
+      "entityId": "operations/POST /v1/accounts/{account}/external_accounts/{id}",
+      "fromSnapshotId": "4d62e0bc-045b-4fa5-b7ea-1ff21d619688",
+      "toSnapshotId": "d8a5063b-6a55-43f4-9dfd-2004e20322fe",
+      "detectedAt": "2026-07-29T19:44:46.698Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "operations",
+              "POST /v1/accounts/{account}/external_accounts/{id}",
+              "summary"
+            ],
+            "after": "Update a bank account",
+            "before": null
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "summary field changed from null to a description; cosmetic only, no impact on API contract."
+    },
+    {
+      "id": "b862f4f8-5a19-411b-8e5e-0d68f5330f5c",
+      "sourceId": "api:stripe",
+      "entityId": "operations/POST /v1/accounts/{account}/bank_accounts/{id}",
+      "fromSnapshotId": "4d62e0bc-045b-4fa5-b7ea-1ff21d619688",
+      "toSnapshotId": "d8a5063b-6a55-43f4-9dfd-2004e20322fe",
+      "detectedAt": "2026-07-29T19:44:42.732Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "operations",
+              "POST /v1/accounts/{account}/bank_accounts/{id}",
+              "summary"
+            ],
+            "after": "Update a bank account",
+            "before": null
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Adding a summary to an operation is cosmetic and does not break consumers."
+    },
+    {
+      "id": "b35caf07-b1b7-4c9c-bb3b-268960a7dc77",
+      "sourceId": "api:stripe",
+      "entityId": "operations/POST /v1/accounts",
+      "fromSnapshotId": "4d62e0bc-045b-4fa5-b7ea-1ff21d619688",
+      "toSnapshotId": "d8a5063b-6a55-43f4-9dfd-2004e20322fe",
+      "detectedAt": "2026-07-29T19:44:38.510Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "operations",
+              "POST /v1/accounts",
+              "summary"
+            ],
+            "after": "Create an account",
+            "before": null
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Description added to existing operation; no change to API contract."
+    },
+    {
+      "id": "c29dbd5a-9fe0-4cd2-888c-a28c77436200",
+      "sourceId": "api:stripe",
+      "entityId": "operations/GET /v1/payment_records",
+      "fromSnapshotId": "4d62e0bc-045b-4fa5-b7ea-1ff21d619688",
+      "toSnapshotId": "d8a5063b-6a55-43f4-9dfd-2004e20322fe",
+      "detectedAt": "2026-07-29T19:44:28.916Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "operations",
+              "GET /v1/payment_records"
+            ],
+            "after": {
+              "summary": "List Payment Records",
+              "responses": [
+                "200",
+                "default"
+              ],
+              "parameters": [
+                {
+                  "in": "query",
+                  "name": "created_after",
+                  "type": "integer",
+                  "required": false
+                },
+                {
+                  "in": "query",
+                  "name": "created_before",
+                  "type": "integer",
+                  "required": false
+                },
+                {
+                  "in": "query",
+                  "name": "ending_before",
+                  "type": "string",
+                  "required": false
+                },
+                {
+                  "in": "query",
+                  "name": "expand",
+                  "type": "array",
+                  "required": false
+                },
+                {
+                  "in": "query",
+                  "name": "limit",
+                  "type": "integer",
+                  "required": false
+                },
+                {
+                  "in": "query",
+                  "name": "starting_after",
+                  "type": "string",
+                  "required": false
+                }
+              ],
+              "operationId": "GetPaymentRecords",
+              "requestBody": {
+                "content": [
+                  "application/x-www-form-urlencoded"
+                ],
+                "required": false
+              }
+            }
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "ADDED operation is safe for existing consumers"
+    },
+    {
       "id": "7b9e6777-d816-4378-ac3f-62bc13c5851e",
       "sourceId": "api:stripe",
       "entityId": "version",
