@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-28T19:44:11.740Z",
+    "fetchedAt": "2026-07-29T01:44:11.141Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -101,10 +101,10 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.7686,
-          "outputPer1m": 2.4156,
+          "inputPer1m": 0.7616,
+          "outputPer1m": 2.3936,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.14274,
+          "cacheReadPer1m": 0.14144,
           "maxOutputTokens": 131072
         },
         "mancer/weaver": {
@@ -281,7 +281,7 @@
           "contextLength": 262144,
           "cacheReadPer1m": 0.156,
           "cacheWritePer1m": 0.975,
-          "maxOutputTokens": 32768
+          "maxOutputTokens": 65536
         },
         "x-ai/grok-4.20": {
           "name": "xAI: Grok 4.20",
@@ -385,11 +385,11 @@
         "qwen/qwen3.7-max": {
           "name": "Qwen: Qwen3.7 Max",
           "currency": "USD",
-          "inputPer1m": 1.475,
-          "outputPer1m": 4.425,
+          "inputPer1m": 1.25,
+          "outputPer1m": 3.75,
           "contextLength": 1000000,
-          "cacheReadPer1m": 0.295,
-          "cacheWritePer1m": 1.84375,
+          "cacheReadPer1m": 0.25,
+          "cacheWritePer1m": 1.5625,
           "maxOutputTokens": 65536
         },
         "rekaai/reka-edge": {
@@ -674,8 +674,9 @@
           "name": "OpenAI: gpt-oss-20b",
           "currency": "USD",
           "inputPer1m": 0.03,
-          "outputPer1m": 0.14,
+          "outputPer1m": 0.13,
           "contextLength": 131072,
+          "cacheReadPer1m": 0.03,
           "maxOutputTokens": 131072
         },
         "qwen/qwen3-30b-a3b": {
@@ -1103,9 +1104,10 @@
         "qwen/qwen3.5-35b-a3b": {
           "name": "Qwen: Qwen3.5-35B-A3B",
           "currency": "USD",
-          "inputPer1m": 0.14,
+          "inputPer1m": 0.15,
           "outputPer1m": 1,
           "contextLength": 262144,
+          "cacheReadPer1m": 0.05,
           "maxOutputTokens": 262144
         },
         "qwen/qwen3.6-35b-a3b": {
@@ -1187,9 +1189,10 @@
         "google/gemma-4-31b-it": {
           "name": "Google: Gemma 4 31B",
           "currency": "USD",
-          "inputPer1m": 0.14,
-          "outputPer1m": 0.4,
+          "inputPer1m": 0.1,
+          "outputPer1m": 0.34,
           "contextLength": 262144,
+          "cacheReadPer1m": 0.1,
           "maxOutputTokens": 262144
         },
         "openai/gpt-audio-mini": {
@@ -1579,7 +1582,7 @@
           "inputPer1m": 0.78,
           "outputPer1m": 3.9,
           "contextLength": 262144,
-          "maxOutputTokens": 32768
+          "maxOutputTokens": 65536
         },
         "qwen/qwen3.5-plus-02-15": {
           "name": "Qwen: Qwen3.5 Plus 2026-02-15",
@@ -1612,7 +1615,7 @@
           "outputPer1m": 15,
           "contextLength": 1048576,
           "cacheReadPer1m": 0.3,
-          "maxOutputTokens": 262144
+          "maxOutputTokens": null
         },
         "~openai/gpt-mini-latest": {
           "name": "OpenAI GPT Mini Latest",
@@ -1891,9 +1894,8 @@
           "name": "Google: Gemma 4 26B A4B ",
           "currency": "USD",
           "inputPer1m": 0.15,
-          "outputPer1m": 0.45,
+          "outputPer1m": 0.6,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.05,
           "maxOutputTokens": 262144
         },
         "moonshotai/kimi-k2.7-code": {
@@ -1991,8 +1993,8 @@
         "qwen/qwen3-vl-8b-thinking": {
           "name": "Qwen: Qwen3 VL 8B Thinking",
           "currency": "USD",
-          "inputPer1m": 0.117,
-          "outputPer1m": 1.365,
+          "inputPer1m": 0.18,
+          "outputPer1m": 2.1,
           "contextLength": 131072,
           "maxOutputTokens": 32768
         },
@@ -2486,16 +2488,6 @@
           "cacheReadPer1m": 0.4,
           "maxOutputTokens": 128000
         },
-        "anthropic/claude-opus-5:batch": {
-          "name": "Claude Opus 5 (batch)",
-          "currency": "USD",
-          "inputPer1m": 2.5,
-          "outputPer1m": 12.5,
-          "contextLength": 1000000,
-          "cacheReadPer1m": 0.25,
-          "cacheWritePer1m": 3.125,
-          "maxOutputTokens": 128000
-        },
         "bytedance-seed/seed-1.6-flash": {
           "name": "ByteDance Seed: Seed 1.6 Flash",
           "currency": "USD",
@@ -2684,6 +2676,7 @@
           "inputPer1m": 0.05,
           "outputPer1m": 0.2,
           "contextLength": 262144,
+          "cacheReadPer1m": 0.025,
           "maxOutputTokens": 228000
         },
         "perplexity/sonar-deep-research": {
@@ -2713,8 +2706,8 @@
         "qwen/qwen3-vl-30b-a3b-thinking": {
           "name": "Qwen: Qwen3 VL 30B A3B Thinking",
           "currency": "USD",
-          "inputPer1m": 0.13,
-          "outputPer1m": 1.56,
+          "inputPer1m": 0.2,
+          "outputPer1m": 2.4,
           "contextLength": 262144,
           "maxOutputTokens": 32768
         },
@@ -2922,8 +2915,8 @@
         "qwen/qwen3-30b-a3b-thinking-2507": {
           "name": "Qwen: Qwen3 30B A3B Thinking 2507",
           "currency": "USD",
-          "inputPer1m": 0.13,
-          "outputPer1m": 1.56,
+          "inputPer1m": 0.2,
+          "outputPer1m": 2.4,
           "contextLength": 81920,
           "maxOutputTokens": 32768
         },
@@ -2939,8 +2932,8 @@
         "qwen/qwen3-next-80b-a3b-thinking": {
           "name": "Qwen: Qwen3 Next 80B A3B Thinking",
           "currency": "USD",
-          "inputPer1m": 0.0975,
-          "outputPer1m": 0.78,
+          "inputPer1m": 0.15,
+          "outputPer1m": 1.2,
           "contextLength": 262144,
           "maxOutputTokens": 32768
         },
@@ -2956,8 +2949,8 @@
         "qwen/qwen3-vl-235b-a22b-thinking": {
           "name": "Qwen: Qwen3 VL 235B A22B Thinking",
           "currency": "USD",
-          "inputPer1m": 0.26,
-          "outputPer1m": 2.6,
+          "inputPer1m": 0.4,
+          "outputPer1m": 4,
           "contextLength": 131072,
           "maxOutputTokens": 32768
         },
@@ -3060,10 +3053,10 @@
         "qwen/qwen-plus-2025-07-28:thinking": {
           "name": "Qwen: Qwen Plus 0728 (thinking)",
           "currency": "USD",
-          "inputPer1m": 0.26,
-          "outputPer1m": 0.78,
+          "inputPer1m": 0.4,
+          "outputPer1m": 1.2,
           "contextLength": 1000000,
-          "cacheWritePer1m": 0.325,
+          "cacheWritePer1m": 0.5,
           "maxOutputTokens": 32768
         },
         "qwen/qwen3-235b-a22b-thinking-2507": {
