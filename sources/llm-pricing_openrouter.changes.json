@@ -2,6 +2,154 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "c250a010-ea6b-49e6-a212-0f11984b5405",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "ff34260b-f3f5-405c-a1eb-d3abfadf0a03",
+      "toSnapshotId": "22dcc534-425e-44e4-97a3-0581eb79a9e3",
+      "detectedAt": "2026-07-29T13:44:54.980Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.1352,
+            "before": 0.13988
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.728,
+            "before": 0.7532
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 2.288,
+            "before": 2.3672
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.5,
+      "classifiedBy": "rules",
+      "notes": "llm fallback (This operation was aborted); field value(s) changed"
+    },
+    {
+      "id": "ebd63f40-fc8b-48ae-b970-c4dc695bc909",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3-vl-30b-a3b-instruct",
+      "fromSnapshotId": "ff34260b-f3f5-405c-a1eb-d3abfadf0a03",
+      "toSnapshotId": "22dcc534-425e-44e4-97a3-0581eb79a9e3",
+      "detectedAt": "2026-07-29T13:44:34.972Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-vl-30b-a3b-instruct",
+              "inputPer1m"
+            ],
+            "after": 0.15,
+            "before": 0.13
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-vl-30b-a3b-instruct",
+              "maxOutputTokens"
+            ],
+            "after": 16384,
+            "before": 32768
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-vl-30b-a3b-instruct",
+              "outputPer1m"
+            ],
+            "after": 0.6,
+            "before": 0.52
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Price increase and output token cap reduction silently increase cost and truncate responses."
+    },
+    {
+      "id": "d318203c-67aa-446a-a418-24cca0ae367a",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3-coder-next",
+      "fromSnapshotId": "ff34260b-f3f5-405c-a1eb-d3abfadf0a03",
+      "toSnapshotId": "22dcc534-425e-44e4-97a3-0581eb79a9e3",
+      "detectedAt": "2026-07-29T13:44:31.536Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-coder-next",
+              "cacheReadPer1m"
+            ],
+            "after": 0.07,
+            "before": 0.036
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-coder-next",
+              "inputPer1m"
+            ],
+            "after": 0.12,
+            "before": 0.18
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-coder-next",
+              "maxOutputTokens"
+            ],
+            "after": 262144,
+            "before": 64000
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-coder-next",
+              "outputPer1m"
+            ],
+            "after": 0.8,
+            "before": 0.9
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.5,
+      "classifiedBy": "rules",
+      "notes": "llm fallback (This operation was aborted); field value(s) changed"
+    },
+    {
       "id": "dc410d75-6877-4fa3-94a7-9e8c974fd709",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -1673,105 +1821,6 @@
       "confidence": 1,
       "classifiedBy": "llm",
       "notes": "Added new model"
-    },
-    {
-      "id": "c65c7e2d-e7d8-4198-a134-b330832913c7",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/anthropic/claude-opus-4.7:batch",
-      "fromSnapshotId": "ec71d6b1-9842-4d55-9586-b5ff8fcd4ab6",
-      "toSnapshotId": "98b265eb-9df5-4602-95ad-e2ea8dd0a0fb",
-      "detectedAt": "2026-07-28T19:44:32.880Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "anthropic/claude-opus-4.7:batch"
-            ],
-            "after": {
-              "name": "Anthropic: Claude Opus 4.7 (batch)",
-              "currency": "USD",
-              "inputPer1m": 2.5,
-              "outputPer1m": 12.5,
-              "contextLength": 1000000,
-              "cacheReadPer1m": 0.25,
-              "cacheWritePer1m": 3.125,
-              "maxOutputTokens": 128000
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Added new model entry"
-    },
-    {
-      "id": "52a3c383-b25d-4605-82ed-be11b70b36de",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/anthropic/claude-opus-4.6:batch",
-      "fromSnapshotId": "ec71d6b1-9842-4d55-9586-b5ff8fcd4ab6",
-      "toSnapshotId": "98b265eb-9df5-4602-95ad-e2ea8dd0a0fb",
-      "detectedAt": "2026-07-28T19:44:30.465Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "anthropic/claude-opus-4.6:batch"
-            ],
-            "after": {
-              "name": "Anthropic: Claude Opus 4.6 (batch)",
-              "currency": "USD",
-              "inputPer1m": 2.5,
-              "outputPer1m": 12.5,
-              "contextLength": 1000000,
-              "cacheReadPer1m": 0.25,
-              "cacheWritePer1m": 3.125,
-              "maxOutputTokens": 128000
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "New model added"
-    },
-    {
-      "id": "055b1241-655e-44ab-bec2-b3e8455be3ab",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/anthropic/claude-opus-4.5:batch",
-      "fromSnapshotId": "ec71d6b1-9842-4d55-9586-b5ff8fcd4ab6",
-      "toSnapshotId": "98b265eb-9df5-4602-95ad-e2ea8dd0a0fb",
-      "detectedAt": "2026-07-28T19:44:26.458Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "anthropic/claude-opus-4.5:batch"
-            ],
-            "after": {
-              "name": "Anthropic: Claude Opus 4.5 (batch)",
-              "currency": "USD",
-              "inputPer1m": 2.5,
-              "outputPer1m": 12.5,
-              "contextLength": 200000,
-              "cacheReadPer1m": 0.25,
-              "cacheWritePer1m": 3.125,
-              "maxOutputTokens": 64000
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Added new model endpoint."
     }
   ]
 }
