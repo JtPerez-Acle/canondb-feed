@@ -2,6 +2,444 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "29c34ca4-fc84-4143-875d-b7d1f215b4e4",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/~moonshotai/kimi-latest",
+      "fromSnapshotId": "f3f4fb0e-e9f8-427a-8e67-27556ee52b2f",
+      "toSnapshotId": "ccc6f0e2-08f7-4673-8d20-3b64a25de960",
+      "detectedAt": "2026-07-30T19:44:47.356Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "~moonshotai/kimi-latest",
+              "outputPer1m"
+            ],
+            "after": 14,
+            "before": 15
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Output price decreased from 15 to 14 USD per 1M tokens"
+    },
+    {
+      "id": "f554efb2-a6c0-444f-aa50-66805d347314",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "f3f4fb0e-e9f8-427a-8e67-27556ee52b2f",
+      "toSnapshotId": "ccc6f0e2-08f7-4673-8d20-3b64a25de960",
+      "detectedAt": "2026-07-30T19:44:43.996Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.1794,
+            "before": 0.11401
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.966,
+            "before": 0.6139
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 3.036,
+            "before": 1.9294
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Price increase for model z-ai/glm-5.2"
+    },
+    {
+      "id": "bfa96d3e-e7ac-445c-9ff0-ff59ad3ee2c4",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/openai/o4-mini-deep-research",
+      "fromSnapshotId": "f3f4fb0e-e9f8-427a-8e67-27556ee52b2f",
+      "toSnapshotId": "ccc6f0e2-08f7-4673-8d20-3b64a25de960",
+      "detectedAt": "2026-07-30T19:44:38.812Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "models",
+              "openai/o4-mini-deep-research"
+            ],
+            "before": {
+              "name": "OpenAI: o4 Mini Deep Research",
+              "currency": "USD",
+              "inputPer1m": 2,
+              "outputPer1m": 8,
+              "contextLength": 200000,
+              "cacheReadPer1m": 0.5,
+              "maxOutputTokens": 100000
+            }
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Model removed, callers referencing this model id will fail."
+    },
+    {
+      "id": "1564e7f8-94bc-4711-a4ae-41cdecd087a5",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/openai/o3-deep-research",
+      "fromSnapshotId": "f3f4fb0e-e9f8-427a-8e67-27556ee52b2f",
+      "toSnapshotId": "ccc6f0e2-08f7-4673-8d20-3b64a25de960",
+      "detectedAt": "2026-07-30T19:44:34.942Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "models",
+              "openai/o3-deep-research"
+            ],
+            "before": {
+              "name": "OpenAI: o3 Deep Research",
+              "currency": "USD",
+              "inputPer1m": 10,
+              "outputPer1m": 40,
+              "contextLength": 200000,
+              "cacheReadPer1m": 2.5,
+              "maxOutputTokens": 100000
+            }
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Model removed"
+    },
+    {
+      "id": "4a8d9570-9843-4738-a6cb-263b0680255d",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/openai/gpt-5.6-terra-pro",
+      "fromSnapshotId": "f3f4fb0e-e9f8-427a-8e67-27556ee52b2f",
+      "toSnapshotId": "ccc6f0e2-08f7-4673-8d20-3b64a25de960",
+      "detectedAt": "2026-07-30T19:44:31.622Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "openai/gpt-5.6-terra-pro",
+              "cacheReadPer1m"
+            ],
+            "after": 0.1,
+            "before": 0.125
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "openai/gpt-5.6-terra-pro",
+              "cacheWritePer1m"
+            ],
+            "after": 1.25,
+            "before": 1.5625
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "openai/gpt-5.6-terra-pro",
+              "inputPer1m"
+            ],
+            "after": 1,
+            "before": 1.25
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "openai/gpt-5.6-terra-pro",
+              "outputPer1m"
+            ],
+            "after": 6,
+            "before": 7.5
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "All prices for model gpt-5.6-terra-pro decreased (cache reads, writes, input, output)."
+    },
+    {
+      "id": "9d03ef1c-8610-4e2f-9f13-acf21e0e8361",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/openai/gpt-5.6-terra",
+      "fromSnapshotId": "f3f4fb0e-e9f8-427a-8e67-27556ee52b2f",
+      "toSnapshotId": "ccc6f0e2-08f7-4673-8d20-3b64a25de960",
+      "detectedAt": "2026-07-30T19:44:28.514Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "openai/gpt-5.6-terra",
+              "cacheReadPer1m"
+            ],
+            "after": 0.1,
+            "before": 0.125
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "openai/gpt-5.6-terra",
+              "cacheWritePer1m"
+            ],
+            "after": 1.25,
+            "before": 1.5625
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "openai/gpt-5.6-terra",
+              "inputPer1m"
+            ],
+            "after": 1,
+            "before": 1.25
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "openai/gpt-5.6-terra",
+              "outputPer1m"
+            ],
+            "after": 6,
+            "before": 7.5
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "All prices decreased, which is favorable to consumers."
+    },
+    {
+      "id": "4ce7f801-1bb6-4d8b-96cf-70dfd44b5e3b",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/openai/gpt-5.6-luna-pro",
+      "fromSnapshotId": "f3f4fb0e-e9f8-427a-8e67-27556ee52b2f",
+      "toSnapshotId": "ccc6f0e2-08f7-4673-8d20-3b64a25de960",
+      "detectedAt": "2026-07-30T19:44:27.553Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "openai/gpt-5.6-luna-pro",
+              "cacheReadPer1m"
+            ],
+            "after": 0.01,
+            "before": 0.05
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "openai/gpt-5.6-luna-pro",
+              "cacheWritePer1m"
+            ],
+            "after": 0.125,
+            "before": 0.625
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "openai/gpt-5.6-luna-pro",
+              "inputPer1m"
+            ],
+            "after": 0.1,
+            "before": 0.5
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "openai/gpt-5.6-luna-pro",
+              "outputPer1m"
+            ],
+            "after": 0.6,
+            "before": 3
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "All changes are price decreases for the same model."
+    },
+    {
+      "id": "8efffb0c-e444-42e8-8bdd-eb4921b12146",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/openai/gpt-5.6-luna",
+      "fromSnapshotId": "f3f4fb0e-e9f8-427a-8e67-27556ee52b2f",
+      "toSnapshotId": "ccc6f0e2-08f7-4673-8d20-3b64a25de960",
+      "detectedAt": "2026-07-30T19:44:25.780Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "openai/gpt-5.6-luna",
+              "cacheReadPer1m"
+            ],
+            "after": 0.01,
+            "before": 0.05
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "openai/gpt-5.6-luna",
+              "cacheWritePer1m"
+            ],
+            "after": 0.125,
+            "before": 0.625
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "openai/gpt-5.6-luna",
+              "inputPer1m"
+            ],
+            "after": 0.1,
+            "before": 0.5
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "openai/gpt-5.6-luna",
+              "outputPer1m"
+            ],
+            "after": 0.6,
+            "before": 3
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "All prices decreased, which is favorable to consumers."
+    },
+    {
+      "id": "396059cc-4698-48f4-b6fd-50304cdab492",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/openai/gpt-5-codex",
+      "fromSnapshotId": "f3f4fb0e-e9f8-427a-8e67-27556ee52b2f",
+      "toSnapshotId": "ccc6f0e2-08f7-4673-8d20-3b64a25de960",
+      "detectedAt": "2026-07-30T19:44:24.109Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "models",
+              "openai/gpt-5-codex"
+            ],
+            "before": {
+              "name": "OpenAI: GPT-5 Codex",
+              "currency": "USD",
+              "inputPer1m": 1.25,
+              "outputPer1m": 10,
+              "contextLength": 400000,
+              "cacheReadPer1m": 0.125,
+              "maxOutputTokens": 128000
+            }
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Model removed, breaking consumers that reference this model."
+    },
+    {
+      "id": "de4e0d82-9c84-440c-aa72-65d23f79fa52",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/moonshotai/kimi-k2.6",
+      "fromSnapshotId": "f3f4fb0e-e9f8-427a-8e67-27556ee52b2f",
+      "toSnapshotId": "ccc6f0e2-08f7-4673-8d20-3b64a25de960",
+      "detectedAt": "2026-07-30T19:44:20.802Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.6",
+              "cacheReadPer1m"
+            ],
+            "after": 0.16,
+            "before": 0.1088
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.6",
+              "inputPer1m"
+            ],
+            "after": 0.95,
+            "before": 0.646
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.6",
+              "outputPer1m"
+            ],
+            "after": 4,
+            "before": 2.72
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Price increased for cache read, input, and output per 1M tokens."
+    },
+    {
       "id": "315c3b10-ea79-4c34-ade8-d05db097a3ce",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -1637,327 +2075,6 @@
               "contextLength": 400000,
               "cacheReadPer1m": 0.0625,
               "maxOutputTokens": 128000
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Added new model entry"
-    },
-    {
-      "id": "be2d1ce1-ac0b-4e9b-94d2-a92f9cec1f1d",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/gpt-5.5:batch",
-      "fromSnapshotId": "ec71d6b1-9842-4d55-9586-b5ff8fcd4ab6",
-      "toSnapshotId": "98b265eb-9df5-4602-95ad-e2ea8dd0a0fb",
-      "detectedAt": "2026-07-28T19:45:52.197Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "openai/gpt-5.5:batch"
-            ],
-            "after": {
-              "name": "OpenAI: GPT-5.5 (batch)",
-              "currency": "USD",
-              "inputPer1m": 2.5,
-              "outputPer1m": 15,
-              "contextLength": 1050000,
-              "cacheReadPer1m": 0.25,
-              "maxOutputTokens": 128000
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "New model added, no existing consumers affected."
-    },
-    {
-      "id": "48d53fae-f1c5-4248-bd03-f80bcc50d43b",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/gpt-5.4:batch",
-      "fromSnapshotId": "ec71d6b1-9842-4d55-9586-b5ff8fcd4ab6",
-      "toSnapshotId": "98b265eb-9df5-4602-95ad-e2ea8dd0a0fb",
-      "detectedAt": "2026-07-28T19:45:46.076Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "openai/gpt-5.4:batch"
-            ],
-            "after": {
-              "name": "OpenAI: GPT-5.4 (batch)",
-              "currency": "USD",
-              "inputPer1m": 1.25,
-              "outputPer1m": 7.5,
-              "contextLength": 1050000,
-              "cacheReadPer1m": 0.125,
-              "maxOutputTokens": 128000
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "New model added."
-    },
-    {
-      "id": "8d159fb5-19ee-453d-9ff2-3b3a2970546e",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/gpt-5.4-nano:batch",
-      "fromSnapshotId": "ec71d6b1-9842-4d55-9586-b5ff8fcd4ab6",
-      "toSnapshotId": "98b265eb-9df5-4602-95ad-e2ea8dd0a0fb",
-      "detectedAt": "2026-07-28T19:45:40.246Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "openai/gpt-5.4-nano:batch"
-            ],
-            "after": {
-              "name": "OpenAI: GPT-5.4 Nano (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.1,
-              "outputPer1m": 0.625,
-              "contextLength": 400000,
-              "cacheReadPer1m": 0.01,
-              "maxOutputTokens": 128000
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "New model added"
-    },
-    {
-      "id": "2be54e40-057e-4cec-a55a-d007b09498a0",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/gpt-5.4-mini:batch",
-      "fromSnapshotId": "ec71d6b1-9842-4d55-9586-b5ff8fcd4ab6",
-      "toSnapshotId": "98b265eb-9df5-4602-95ad-e2ea8dd0a0fb",
-      "detectedAt": "2026-07-28T19:45:36.634Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "openai/gpt-5.4-mini:batch"
-            ],
-            "after": {
-              "name": "OpenAI: GPT-5.4 Mini (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.375,
-              "outputPer1m": 2.25,
-              "contextLength": 400000,
-              "cacheReadPer1m": 0.0375,
-              "maxOutputTokens": 128000
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "新模型添加，对现有消费者无害"
-    },
-    {
-      "id": "702a10fa-47eb-4304-b17c-08162711c74b",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/gpt-5.2:batch",
-      "fromSnapshotId": "ec71d6b1-9842-4d55-9586-b5ff8fcd4ab6",
-      "toSnapshotId": "98b265eb-9df5-4602-95ad-e2ea8dd0a0fb",
-      "detectedAt": "2026-07-28T19:45:35.125Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "openai/gpt-5.2:batch"
-            ],
-            "after": {
-              "name": "OpenAI: GPT-5.2 (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.875,
-              "outputPer1m": 7,
-              "contextLength": 400000,
-              "cacheReadPer1m": 0.0875,
-              "maxOutputTokens": 128000
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Added new model entry, no existing consumer affected."
-    },
-    {
-      "id": "d16e8dc1-95bc-415f-80fb-0f062136fc85",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/gpt-5.1:batch",
-      "fromSnapshotId": "ec71d6b1-9842-4d55-9586-b5ff8fcd4ab6",
-      "toSnapshotId": "98b265eb-9df5-4602-95ad-e2ea8dd0a0fb",
-      "detectedAt": "2026-07-28T19:45:23.655Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "openai/gpt-5.1:batch"
-            ],
-            "after": {
-              "name": "OpenAI: GPT-5.1 (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.625,
-              "outputPer1m": 5,
-              "contextLength": 400000,
-              "cacheReadPer1m": 0.0625,
-              "maxOutputTokens": 128000
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "New model added, no existing consumers affected."
-    },
-    {
-      "id": "9b332227-32b1-4e6d-8a51-5540fadd4e81",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/gpt-5-nano:batch",
-      "fromSnapshotId": "ec71d6b1-9842-4d55-9586-b5ff8fcd4ab6",
-      "toSnapshotId": "98b265eb-9df5-4602-95ad-e2ea8dd0a0fb",
-      "detectedAt": "2026-07-28T19:45:18.150Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "openai/gpt-5-nano:batch"
-            ],
-            "after": {
-              "name": "OpenAI: GPT-5 Nano (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.025,
-              "outputPer1m": 0.2,
-              "contextLength": 400000,
-              "cacheReadPer1m": 0.0025,
-              "maxOutputTokens": 128000
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "New model added, no existing consumers affected."
-    },
-    {
-      "id": "4d3a726a-5c33-4539-a93b-5ee84af0dbb7",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/gpt-5-mini:batch",
-      "fromSnapshotId": "ec71d6b1-9842-4d55-9586-b5ff8fcd4ab6",
-      "toSnapshotId": "98b265eb-9df5-4602-95ad-e2ea8dd0a0fb",
-      "detectedAt": "2026-07-28T19:45:15.333Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "openai/gpt-5-mini:batch"
-            ],
-            "after": {
-              "name": "OpenAI: GPT-5 Mini (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.125,
-              "outputPer1m": 1,
-              "contextLength": 400000,
-              "cacheReadPer1m": 0.0125,
-              "maxOutputTokens": 128000
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "New model added."
-    },
-    {
-      "id": "db3351c3-dafa-41a2-9faa-68d586b198d1",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/minimax/minimax-m3:batch",
-      "fromSnapshotId": "ec71d6b1-9842-4d55-9586-b5ff8fcd4ab6",
-      "toSnapshotId": "98b265eb-9df5-4602-95ad-e2ea8dd0a0fb",
-      "detectedAt": "2026-07-28T19:45:12.673Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "minimax/minimax-m3:batch"
-            ],
-            "after": {
-              "name": "MiniMax: MiniMax M3 (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.15,
-              "outputPer1m": 0.6,
-              "contextLength": 524288,
-              "cacheReadPer1m": 0.03,
-              "maxOutputTokens": null
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Added new model entry, no existing consumer affected."
-    },
-    {
-      "id": "e04348b5-7a20-45f5-9cf5-2d8b669c5c0f",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/google/gemini-3.6-flash:batch",
-      "fromSnapshotId": "ec71d6b1-9842-4d55-9586-b5ff8fcd4ab6",
-      "toSnapshotId": "98b265eb-9df5-4602-95ad-e2ea8dd0a0fb",
-      "detectedAt": "2026-07-28T19:45:11.743Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "google/gemini-3.6-flash:batch"
-            ],
-            "after": {
-              "name": "Google: Gemini 3.6 Flash (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.75,
-              "outputPer1m": 3.75,
-              "contextLength": 1048576,
-              "cacheReadPer1m": 0.075,
-              "cacheWritePer1m": 0.083333,
-              "maxOutputTokens": 65536
             }
           }
         ]

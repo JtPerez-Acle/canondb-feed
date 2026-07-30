@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-30T13:44:11.820Z",
+    "fetchedAt": "2026-07-30T19:44:11.852Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -101,10 +101,10 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.6139,
-          "outputPer1m": 1.9294,
+          "inputPer1m": 0.966,
+          "outputPer1m": 3.036,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.11401,
+          "cacheReadPer1m": 0.1794,
           "maxOutputTokens": 128000
         },
         "mancer/weaver": {
@@ -609,15 +609,6 @@
           "cacheReadPer1m": 0.075,
           "maxOutputTokens": 16384
         },
-        "openai/gpt-5-codex": {
-          "name": "OpenAI: GPT-5 Codex",
-          "currency": "USD",
-          "inputPer1m": 1.25,
-          "outputPer1m": 10,
-          "contextLength": 400000,
-          "cacheReadPer1m": 0.125,
-          "maxOutputTokens": 128000
-        },
         "openai/gpt-5-image": {
           "name": "OpenAI: GPT-5 Image",
           "currency": "USD",
@@ -843,11 +834,11 @@
         "openai/gpt-5.6-luna": {
           "name": "OpenAI: GPT-5.6 Luna",
           "currency": "USD",
-          "inputPer1m": 0.5,
-          "outputPer1m": 3,
+          "inputPer1m": 0.1,
+          "outputPer1m": 0.6,
           "contextLength": 1050000,
-          "cacheReadPer1m": 0.05,
-          "cacheWritePer1m": 0.625,
+          "cacheReadPer1m": 0.01,
+          "cacheWritePer1m": 0.125,
           "maxOutputTokens": 128000
         },
         "openai/gpt-oss-120b": {
@@ -982,10 +973,10 @@
         "moonshotai/kimi-k2.6": {
           "name": "MoonshotAI: Kimi K2.6",
           "currency": "USD",
-          "inputPer1m": 0.646,
-          "outputPer1m": 2.72,
+          "inputPer1m": 0.95,
+          "outputPer1m": 4,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.1088,
+          "cacheReadPer1m": 0.16,
           "maxOutputTokens": 262144
         },
         "morph/morph-v3-large": {
@@ -1070,11 +1061,11 @@
         "openai/gpt-5.6-terra": {
           "name": "OpenAI: GPT-5.6 Terra",
           "currency": "USD",
-          "inputPer1m": 1.25,
-          "outputPer1m": 7.5,
+          "inputPer1m": 1,
+          "outputPer1m": 6,
           "contextLength": 1050000,
-          "cacheReadPer1m": 0.125,
-          "cacheWritePer1m": 1.5625,
+          "cacheReadPer1m": 0.1,
+          "cacheWritePer1m": 1.25,
           "maxOutputTokens": 128000
         },
         "openrouter/auto-beta": {
@@ -1551,11 +1542,11 @@
         "openai/gpt-5.6-luna-pro": {
           "name": "OpenAI: GPT-5.6 Luna Pro",
           "currency": "USD",
-          "inputPer1m": 0.5,
-          "outputPer1m": 3,
+          "inputPer1m": 0.1,
+          "outputPer1m": 0.6,
           "contextLength": 1050000,
-          "cacheReadPer1m": 0.05,
-          "cacheWritePer1m": 0.625,
+          "cacheReadPer1m": 0.01,
+          "cacheWritePer1m": 0.125,
           "maxOutputTokens": 128000
         },
         "openai/gpt-oss-20b:free": {
@@ -1565,15 +1556,6 @@
           "outputPer1m": 0,
           "contextLength": 131072,
           "maxOutputTokens": 32768
-        },
-        "openai/o3-deep-research": {
-          "name": "OpenAI: o3 Deep Research",
-          "currency": "USD",
-          "inputPer1m": 10,
-          "outputPer1m": 40,
-          "contextLength": 200000,
-          "cacheReadPer1m": 2.5,
-          "maxOutputTokens": 100000
         },
         "qwen/qwen3-max-thinking": {
           "name": "Qwen: Qwen3 Max Thinking",
@@ -1611,7 +1593,7 @@
           "name": "MoonshotAI Kimi Latest",
           "currency": "USD",
           "inputPer1m": 2.9,
-          "outputPer1m": 15,
+          "outputPer1m": 14,
           "contextLength": 1048576,
           "cacheReadPer1m": 0.29,
           "maxOutputTokens": 1048576
@@ -1751,11 +1733,11 @@
         "openai/gpt-5.6-terra-pro": {
           "name": "OpenAI: GPT-5.6 Terra Pro",
           "currency": "USD",
-          "inputPer1m": 1.25,
-          "outputPer1m": 7.5,
+          "inputPer1m": 1,
+          "outputPer1m": 6,
           "contextLength": 1050000,
-          "cacheReadPer1m": 0.125,
-          "cacheWritePer1m": 1.5625,
+          "cacheReadPer1m": 0.1,
+          "cacheWritePer1m": 1.25,
           "maxOutputTokens": 128000
         },
         "qwen/qwen3.5-flash-02-23": {
@@ -2468,15 +2450,6 @@
           "contextLength": 131072,
           "cacheReadPer1m": 0.0375,
           "maxOutputTokens": 65536
-        },
-        "openai/o4-mini-deep-research": {
-          "name": "OpenAI: o4 Mini Deep Research",
-          "currency": "USD",
-          "inputPer1m": 2,
-          "outputPer1m": 8,
-          "contextLength": 200000,
-          "cacheReadPer1m": 0.5,
-          "maxOutputTokens": 100000
         },
         "qwen/qwen2.5-vl-72b-instruct": {
           "name": "Qwen: Qwen2.5 VL 72B Instruct",
