@@ -2,6 +2,108 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "315c3b10-ea79-4c34-ade8-d05db097a3ce",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "c7747a2d-e289-4a98-8281-84b48ce59014",
+      "toSnapshotId": "f3f4fb0e-e9f8-427a-8e67-27556ee52b2f",
+      "detectedAt": "2026-07-30T13:44:30.810Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.11401,
+            "before": 0.12987
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.6139,
+            "before": 0.6993
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 1.9294,
+            "before": 2.1978
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "All three prices (cacheRead, input, output) decreased for model z-ai/glm-5.2, which is a favorable change."
+    },
+    {
+      "id": "bb651362-9881-440b-8ba3-9a0db9f5ebb5",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/nvidia/nemotron-3-ultra-550b-a55b",
+      "fromSnapshotId": "c7747a2d-e289-4a98-8281-84b48ce59014",
+      "toSnapshotId": "f3f4fb0e-e9f8-427a-8e67-27556ee52b2f",
+      "detectedAt": "2026-07-30T13:44:28.118Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "nvidia/nemotron-3-ultra-550b-a55b",
+              "cacheReadPer1m"
+            ],
+            "after": 0.2,
+            "before": 0.1
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "nvidia/nemotron-3-ultra-550b-a55b",
+              "inputPer1m"
+            ],
+            "after": 0.6,
+            "before": 0.5
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "nvidia/nemotron-3-ultra-550b-a55b",
+              "maxOutputTokens"
+            ],
+            "after": null,
+            "before": 16384
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "nvidia/nemotron-3-ultra-550b-a55b",
+              "outputPer1m"
+            ],
+            "after": 3.6,
+            "before": 2.2
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.85,
+      "classifiedBy": "llm",
+      "notes": "Three price increases (cacheRead, input, output) silently raise costs; maxOutputTokens change to null is safe (increases capacity). Overall breaking_agent."
+    },
+    {
       "id": "b72cab93-6229-4526-9f19-d1ced4d43b7f",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/~moonshotai/kimi-latest",
@@ -1864,70 +1966,6 @@
       "confidence": 1,
       "classifiedBy": "llm",
       "notes": "Added new model entry"
-    },
-    {
-      "id": "117c0c40-9ead-427e-bb88-4d602f6bad85",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/google/gemini-3.5-flash:batch",
-      "fromSnapshotId": "ec71d6b1-9842-4d55-9586-b5ff8fcd4ab6",
-      "toSnapshotId": "98b265eb-9df5-4602-95ad-e2ea8dd0a0fb",
-      "detectedAt": "2026-07-28T19:45:10.792Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "google/gemini-3.5-flash:batch"
-            ],
-            "after": {
-              "name": "Google: Gemini 3.5 Flash (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.75,
-              "outputPer1m": 4.5,
-              "contextLength": 1048576,
-              "cacheReadPer1m": 0.075,
-              "maxOutputTokens": 65536
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "Added new model"
-    },
-    {
-      "id": "616e7fcc-9cdf-40f8-bfdd-ddf116c84a8a",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/google/gemini-3.5-flash-lite:batch",
-      "fromSnapshotId": "ec71d6b1-9842-4d55-9586-b5ff8fcd4ab6",
-      "toSnapshotId": "98b265eb-9df5-4602-95ad-e2ea8dd0a0fb",
-      "detectedAt": "2026-07-28T19:45:09.146Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "google/gemini-3.5-flash-lite:batch"
-            ],
-            "after": {
-              "name": "Google: Gemini 3.5 Flash Lite (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.15,
-              "outputPer1m": 1.25,
-              "contextLength": 1048576,
-              "cacheReadPer1m": 0.015,
-              "maxOutputTokens": 65536
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "New model added, no breaking change."
     }
   ]
 }

@@ -2,6 +2,66 @@
   "id": "api:digitalocean",
   "changes": [
     {
+      "id": "80ba4842-4bed-4da8-ace1-15afee988536",
+      "sourceId": "api:digitalocean",
+      "entityId": "operations/POST /v2/organizations/team",
+      "fromSnapshotId": "b2de203d-0d1b-4c2b-857f-229dbba05737",
+      "toSnapshotId": "90900500-2411-4d5b-b6b5-b6eee1482d2f",
+      "detectedAt": "2026-07-30T13:44:46.136Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "operations",
+              "POST /v2/organizations/team"
+            ],
+            "after": {
+              "summary": null,
+              "responses": [],
+              "parameters": [],
+              "operationId": null,
+              "requestBody": null
+            }
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Added new operation, no existing callers affected."
+    },
+    {
+      "id": "be34003b-8b1f-4c1c-9bfa-503dfce6ce8e",
+      "sourceId": "api:digitalocean",
+      "entityId": "operations/GET /v2/organizations/teams",
+      "fromSnapshotId": "b2de203d-0d1b-4c2b-857f-229dbba05737",
+      "toSnapshotId": "90900500-2411-4d5b-b6b5-b6eee1482d2f",
+      "detectedAt": "2026-07-30T13:44:41.586Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "operations",
+              "GET /v2/organizations/teams"
+            ],
+            "after": {
+              "summary": null,
+              "responses": [],
+              "parameters": [],
+              "operationId": null,
+              "requestBody": null
+            }
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Added a new operation, which does not break existing callers."
+    },
+    {
       "id": "e07e8975-f7e7-4c02-8ffa-498bd0a14a33",
       "sourceId": "api:digitalocean",
       "entityId": "operations/PATCH /v2/gen-ai/model_evaluation_runs/{eval_run_uuid}",
