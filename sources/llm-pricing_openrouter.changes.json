@@ -2,6 +2,114 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "8e7d42a5-e713-47a7-afbb-19e9c0a18241",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/thedrummer/unslopnemo-12b",
+      "fromSnapshotId": "ccc6f0e2-08f7-4673-8d20-3b64a25de960",
+      "toSnapshotId": "4da093d5-85e8-4538-b7e8-03e7dd7767b0",
+      "detectedAt": "2026-07-31T01:44:26.675Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "thedrummer/unslopnemo-12b",
+              "contextLength"
+            ],
+            "after": 1024000,
+            "before": 32768
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Context length increased from 32K to 1M tokens, which is favorable to consumers."
+    },
+    {
+      "id": "3704c272-3aff-4b10-b4a2-36c9dacebca1",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/poolside/laguna-s-2.1",
+      "fromSnapshotId": "ccc6f0e2-08f7-4673-8d20-3b64a25de960",
+      "toSnapshotId": "4da093d5-85e8-4538-b7e8-03e7dd7767b0",
+      "detectedAt": "2026-07-31T01:44:21.325Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "poolside/laguna-s-2.1",
+              "cacheReadPer1m"
+            ],
+            "after": 0.009,
+            "before": 0.01
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "poolside/laguna-s-2.1",
+              "inputPer1m"
+            ],
+            "after": 0.09,
+            "before": 0.1
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "poolside/laguna-s-2.1",
+              "outputPer1m"
+            ],
+            "after": 0.18,
+            "before": 0.2
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Price decrease for cacheRead, input, and output."
+    },
+    {
+      "id": "3629ff1a-502a-4c22-a682-c00e04f18940",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/nvidia/nemotron-3-nano-30b-a3b",
+      "fromSnapshotId": "ccc6f0e2-08f7-4673-8d20-3b64a25de960",
+      "toSnapshotId": "4da093d5-85e8-4538-b7e8-03e7dd7767b0",
+      "detectedAt": "2026-07-31T01:44:17.730Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "nvidia/nemotron-3-nano-30b-a3b",
+              "cacheReadPer1m"
+            ],
+            "after": 0.03,
+            "before": 0.025
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "nvidia/nemotron-3-nano-30b-a3b",
+              "maxOutputTokens"
+            ],
+            "after": 262144,
+            "before": 228000
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "cacheReadPer1m price increased from 0.025 to 0.03 USD, silently raising costs; maxOutputTokens increased, which is beneficial."
+    },
+    {
       "id": "29c34ca4-fc84-4143-875d-b7d1f215b4e4",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/~moonshotai/kimi-latest",
@@ -1983,106 +2091,6 @@
       "confidence": 1,
       "classifiedBy": "llm",
       "notes": "Price decreases and addition of cache read field are favorable changes."
-    },
-    {
-      "id": "488805e2-3e10-43cc-83f2-c2a3b7cb7320",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/google/gemma-4-26b-a4b-it",
-      "fromSnapshotId": "98b265eb-9df5-4602-95ad-e2ea8dd0a0fb",
-      "toSnapshotId": "bd85500f-1f03-4681-be19-3a9e53c801ea",
-      "detectedAt": "2026-07-29T01:44:18.631Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "removed",
-            "path": [
-              "models",
-              "google/gemma-4-26b-a4b-it",
-              "cacheReadPer1m"
-            ],
-            "before": 0.05
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "google/gemma-4-26b-a4b-it",
-              "outputPer1m"
-            ],
-            "after": 0.6,
-            "before": 0.45
-          }
-        ]
-      },
-      "severity": "breaking_strict",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "REMOVED field cacheReadPer1m breaks strict consumers referencing it"
-    },
-    {
-      "id": "fad8c303-a765-4b9e-8450-b4b475a8772f",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/anthropic/claude-opus-5:batch",
-      "fromSnapshotId": "98b265eb-9df5-4602-95ad-e2ea8dd0a0fb",
-      "toSnapshotId": "bd85500f-1f03-4681-be19-3a9e53c801ea",
-      "detectedAt": "2026-07-29T01:44:14.484Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "removed",
-            "path": [
-              "models",
-              "anthropic/claude-opus-5:batch"
-            ],
-            "before": {
-              "name": "Claude Opus 5 (batch)",
-              "currency": "USD",
-              "inputPer1m": 2.5,
-              "outputPer1m": 12.5,
-              "contextLength": 1000000,
-              "cacheReadPer1m": 0.25,
-              "cacheWritePer1m": 3.125,
-              "maxOutputTokens": 128000
-            }
-          }
-        ]
-      },
-      "severity": "breaking_strict",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Model removed"
-    },
-    {
-      "id": "c3dafbe5-d4c6-4607-9008-f5bd9a871c1f",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/gpt-5:batch",
-      "fromSnapshotId": "ec71d6b1-9842-4d55-9586-b5ff8fcd4ab6",
-      "toSnapshotId": "98b265eb-9df5-4602-95ad-e2ea8dd0a0fb",
-      "detectedAt": "2026-07-28T19:45:54.909Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "openai/gpt-5:batch"
-            ],
-            "after": {
-              "name": "OpenAI: GPT-5 (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.625,
-              "outputPer1m": 5,
-              "contextLength": 400000,
-              "cacheReadPer1m": 0.0625,
-              "maxOutputTokens": 128000
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Added new model entry"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-30T19:44:11.852Z",
+    "fetchedAt": "2026-07-31T01:44:12.618Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -1196,10 +1196,10 @@
         "poolside/laguna-s-2.1": {
           "name": "Poolside: Laguna S 2.1",
           "currency": "USD",
-          "inputPer1m": 0.1,
-          "outputPer1m": 0.2,
+          "inputPer1m": 0.09,
+          "outputPer1m": 0.18,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.01,
+          "cacheReadPer1m": 0.009,
           "maxOutputTokens": 131072
         },
         "qwen/qwen3-coder-next": {
@@ -1993,7 +1993,7 @@
           "currency": "USD",
           "inputPer1m": 0.4,
           "outputPer1m": 0.4,
-          "contextLength": 32768,
+          "contextLength": 1024000,
           "maxOutputTokens": 32768
         },
         "~google/gemini-pro-latest": {
@@ -2648,8 +2648,8 @@
           "inputPer1m": 0.05,
           "outputPer1m": 0.2,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.025,
-          "maxOutputTokens": 228000
+          "cacheReadPer1m": 0.03,
+          "maxOutputTokens": 262144
         },
         "perplexity/sonar-deep-research": {
           "name": "Perplexity: Sonar Deep Research",
