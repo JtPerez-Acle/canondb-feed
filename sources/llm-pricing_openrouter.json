@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-31T07:44:12.801Z",
+    "fetchedAt": "2026-07-31T13:44:12.147Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -101,10 +101,10 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 1.19,
-          "outputPer1m": 3.74,
+          "inputPer1m": 1.12,
+          "outputPer1m": 3.52,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.221,
+          "cacheReadPer1m": 0.208,
           "maxOutputTokens": 128000
         },
         "mancer/weaver": {
@@ -390,7 +390,7 @@
           "contextLength": 1000000,
           "cacheReadPer1m": 0.295,
           "cacheWritePer1m": 1.84375,
-          "maxOutputTokens": 65536
+          "maxOutputTokens": 131072
         },
         "rekaai/reka-edge": {
           "name": "Reka Edge",
@@ -470,7 +470,7 @@
           "contextLength": 1000000,
           "cacheReadPer1m": 0.064,
           "cacheWritePer1m": 0.4,
-          "maxOutputTokens": 65536
+          "maxOutputTokens": 131072
         },
         "sakana/fugu-ultra": {
           "name": "Sakana: Fugu Ultra",
@@ -665,9 +665,8 @@
           "name": "OpenAI: gpt-oss-20b",
           "currency": "USD",
           "inputPer1m": 0.03,
-          "outputPer1m": 0.13,
+          "outputPer1m": 0.14,
           "contextLength": 131072,
-          "cacheReadPer1m": 0.03,
           "maxOutputTokens": 131072
         },
         "qwen/qwen3-30b-a3b": {
@@ -1485,15 +1484,6 @@
           "contextLength": 262144,
           "cacheReadPer1m": 0.015,
           "maxOutputTokens": 65536
-        },
-        "mistralai/devstral-2512": {
-          "name": "Mistral: Devstral 2 2512",
-          "currency": "USD",
-          "inputPer1m": 0.4,
-          "outputPer1m": 2,
-          "contextLength": 262144,
-          "cacheReadPer1m": 0.04,
-          "maxOutputTokens": null
         },
         "mistralai/mistral-large": {
           "name": "Mistral Large",
@@ -2670,10 +2660,10 @@
         "qwen/qwen3-vl-30b-a3b-instruct": {
           "name": "Qwen: Qwen3 VL 30B A3B Instruct",
           "currency": "USD",
-          "inputPer1m": 0.15,
-          "outputPer1m": 0.6,
+          "inputPer1m": 0.13,
+          "outputPer1m": 0.52,
           "contextLength": 262144,
-          "maxOutputTokens": 16384
+          "maxOutputTokens": 32768
         },
         "qwen/qwen3-vl-30b-a3b-thinking": {
           "name": "Qwen: Qwen3 VL 30B A3B Thinking",
@@ -2780,6 +2770,15 @@
           "contextLength": 163840,
           "cacheReadPer1m": 0.135,
           "maxOutputTokens": 32768
+        },
+        "deepseek/deepseek-v4-flash-0731": {
+          "name": "DeepSeek: DeepSeek V4 Flash 0731",
+          "currency": "USD",
+          "inputPer1m": 0.14,
+          "outputPer1m": 0.28,
+          "contextLength": 1048576,
+          "cacheReadPer1m": 0.0028,
+          "maxOutputTokens": 384000
         },
         "ibm-granite/granite-4.0-h-micro": {
           "name": "IBM: Granite 4.0 Micro",
@@ -3158,11 +3157,10 @@
         "mistralai/mistral-small-3.2-24b-instruct": {
           "name": "Mistral: Mistral Small 3.2 24B",
           "currency": "USD",
-          "inputPer1m": 0.1,
-          "outputPer1m": 0.3,
+          "inputPer1m": 0.075,
+          "outputPer1m": 0.2,
           "contextLength": 256000,
-          "cacheReadPer1m": 0.01,
-          "maxOutputTokens": null
+          "maxOutputTokens": 16384
         },
         "google/gemini-3.1-pro-preview-customtools": {
           "name": "Google: Gemini 3.1 Pro Preview Custom Tools",
