@@ -2,6 +2,98 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "360f53da-40d2-4a77-b1c7-8f0770718ea3",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "4da093d5-85e8-4538-b7e8-03e7dd7767b0",
+      "toSnapshotId": "9ff68883-c528-4d3d-bdcb-ba49d5579045",
+      "detectedAt": "2026-07-31T07:44:25.843Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.221,
+            "before": 0.1794
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 1.19,
+            "before": 0.966
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 3.74,
+            "before": 3.036
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Price increase for model z-ai/glm-5.2"
+    },
+    {
+      "id": "b8a272d3-9ac5-4ab3-bda6-3721703530a4",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3-235b-a22b-thinking-2507",
+      "fromSnapshotId": "4da093d5-85e8-4538-b7e8-03e7dd7767b0",
+      "toSnapshotId": "9ff68883-c528-4d3d-bdcb-ba49d5579045",
+      "detectedAt": "2026-07-31T07:44:22.771Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-235b-a22b-thinking-2507",
+              "inputPer1m"
+            ],
+            "after": 0.23,
+            "before": 0.3
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-235b-a22b-thinking-2507",
+              "maxOutputTokens"
+            ],
+            "after": null,
+            "before": 32768
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-235b-a22b-thinking-2507",
+              "outputPer1m"
+            ],
+            "after": 2.3,
+            "before": 3
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "All changes are favorable: price decreases and removal of output cap."
+    },
+    {
       "id": "8e7d42a5-e713-47a7-afbb-19e9c0a18241",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/thedrummer/unslopnemo-12b",
@@ -2021,76 +2113,6 @@
       "confidence": 0.9,
       "classifiedBy": "llm",
       "notes": "Added new model and decreased output price"
-    },
-    {
-      "id": "02728c20-b606-4f3c-b605-670c44f8ce01",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/nvidia/nemotron-3-nano-30b-a3b",
-      "fromSnapshotId": "98b265eb-9df5-4602-95ad-e2ea8dd0a0fb",
-      "toSnapshotId": "bd85500f-1f03-4681-be19-3a9e53c801ea",
-      "detectedAt": "2026-07-29T01:44:34.761Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "nvidia/nemotron-3-nano-30b-a3b",
-              "cacheReadPer1m"
-            ],
-            "after": 0.025
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Added a new field for a model's cache read price, which does not break existing consumers."
-    },
-    {
-      "id": "0dc82b50-40b2-408b-98ec-83ff62e9e2dd",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/google/gemma-4-31b-it",
-      "fromSnapshotId": "98b265eb-9df5-4602-95ad-e2ea8dd0a0fb",
-      "toSnapshotId": "bd85500f-1f03-4681-be19-3a9e53c801ea",
-      "detectedAt": "2026-07-29T01:44:27.677Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "google/gemma-4-31b-it",
-              "cacheReadPer1m"
-            ],
-            "after": 0.1
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "google/gemma-4-31b-it",
-              "inputPer1m"
-            ],
-            "after": 0.1,
-            "before": 0.14
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "google/gemma-4-31b-it",
-              "outputPer1m"
-            ],
-            "after": 0.34,
-            "before": 0.4
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Price decreases and addition of cache read field are favorable changes."
     }
   ]
 }
