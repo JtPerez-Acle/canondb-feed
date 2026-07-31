@@ -2,6 +2,216 @@
   "id": "api:digitalocean",
   "changes": [
     {
+      "id": "05afbbdc-9f79-446b-a425-6633af2895ed",
+      "sourceId": "api:digitalocean",
+      "entityId": "operations/PUT /v2/security/secrets/{secret}",
+      "fromSnapshotId": "62545eb6-7d52-47c7-b142-bf6b3ffa0f99",
+      "toSnapshotId": "a7618eea-d5ed-4cbd-866e-ad8ef634afb9",
+      "detectedAt": "2026-07-31T19:46:07.843Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "operations",
+              "PUT /v2/security/secrets/{secret}"
+            ],
+            "before": {
+              "summary": null,
+              "responses": [],
+              "parameters": [],
+              "operationId": null,
+              "requestBody": null
+            }
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Operation removed"
+    },
+    {
+      "id": "9e1a8547-2fee-4188-b95a-9610c2c1ac92",
+      "sourceId": "api:digitalocean",
+      "entityId": "operations/POST /v2/security/secrets/{secret}/restore",
+      "fromSnapshotId": "62545eb6-7d52-47c7-b142-bf6b3ffa0f99",
+      "toSnapshotId": "a7618eea-d5ed-4cbd-866e-ad8ef634afb9",
+      "detectedAt": "2026-07-31T19:46:05.137Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "operations",
+              "POST /v2/security/secrets/{secret}/restore"
+            ],
+            "before": {
+              "summary": null,
+              "responses": [],
+              "parameters": [],
+              "operationId": null,
+              "requestBody": null
+            }
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Operation removed, existing callers will fail"
+    },
+    {
+      "id": "c67ee605-feef-41c7-a027-58ba662c5023",
+      "sourceId": "api:digitalocean",
+      "entityId": "operations/POST /v2/security/secrets",
+      "fromSnapshotId": "62545eb6-7d52-47c7-b142-bf6b3ffa0f99",
+      "toSnapshotId": "a7618eea-d5ed-4cbd-866e-ad8ef634afb9",
+      "detectedAt": "2026-07-31T19:46:03.124Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "operations",
+              "POST /v2/security/secrets"
+            ],
+            "before": {
+              "summary": null,
+              "responses": [],
+              "parameters": [],
+              "operationId": null,
+              "requestBody": null
+            }
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Operation removed"
+    },
+    {
+      "id": "676e98c2-c95c-4228-ab16-ed6a98c38d1e",
+      "sourceId": "api:digitalocean",
+      "entityId": "operations/GET /v2/security/secrets/{secret}/versions",
+      "fromSnapshotId": "62545eb6-7d52-47c7-b142-bf6b3ffa0f99",
+      "toSnapshotId": "a7618eea-d5ed-4cbd-866e-ad8ef634afb9",
+      "detectedAt": "2026-07-31T19:45:58.543Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "operations",
+              "GET /v2/security/secrets/{secret}/versions"
+            ],
+            "before": {
+              "summary": null,
+              "responses": [],
+              "parameters": [],
+              "operationId": null,
+              "requestBody": null
+            }
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Removed operation GET /v2/security/secrets/{secret}/versions"
+    },
+    {
+      "id": "2da29e1e-30c6-484f-ad55-2c955e309770",
+      "sourceId": "api:digitalocean",
+      "entityId": "operations/GET /v2/security/secrets/{secret}",
+      "fromSnapshotId": "62545eb6-7d52-47c7-b142-bf6b3ffa0f99",
+      "toSnapshotId": "a7618eea-d5ed-4cbd-866e-ad8ef634afb9",
+      "detectedAt": "2026-07-31T19:45:55.446Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "operations",
+              "GET /v2/security/secrets/{secret}"
+            ],
+            "before": {
+              "summary": null,
+              "responses": [],
+              "parameters": [],
+              "operationId": null,
+              "requestBody": null
+            }
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Operation /v2/security/secrets/{secret} removed"
+    },
+    {
+      "id": "11927d52-6527-4f0a-9db3-c163b3e40c6a",
+      "sourceId": "api:digitalocean",
+      "entityId": "operations/GET /v2/security/secrets",
+      "fromSnapshotId": "62545eb6-7d52-47c7-b142-bf6b3ffa0f99",
+      "toSnapshotId": "a7618eea-d5ed-4cbd-866e-ad8ef634afb9",
+      "detectedAt": "2026-07-31T19:45:52.861Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "operations",
+              "GET /v2/security/secrets"
+            ],
+            "before": {
+              "summary": null,
+              "responses": [],
+              "parameters": [],
+              "operationId": null,
+              "requestBody": null
+            }
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Operation removed"
+    },
+    {
+      "id": "07e83aab-aa4d-4c7a-8fe3-c2f713622bb4",
+      "sourceId": "api:digitalocean",
+      "entityId": "operations/DELETE /v2/security/secrets/{secret}",
+      "fromSnapshotId": "62545eb6-7d52-47c7-b142-bf6b3ffa0f99",
+      "toSnapshotId": "a7618eea-d5ed-4cbd-866e-ad8ef634afb9",
+      "detectedAt": "2026-07-31T19:45:50.624Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "operations",
+              "DELETE /v2/security/secrets/{secret}"
+            ],
+            "before": {
+              "summary": null,
+              "responses": [],
+              "parameters": [],
+              "operationId": null,
+              "requestBody": null
+            }
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Operation removed"
+    },
+    {
       "id": "80ba4842-4bed-4da8-ace1-15afee988536",
       "sourceId": "api:digitalocean",
       "entityId": "operations/POST /v2/organizations/team",

@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-31T13:44:12.147Z",
+    "fetchedAt": "2026-07-31T19:44:12.869Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -652,15 +652,6 @@
           "cacheWritePer1m": 6.25,
           "maxOutputTokens": 128000
         },
-        "openai/gpt-5:batch": {
-          "name": "OpenAI: GPT-5 (batch)",
-          "currency": "USD",
-          "inputPer1m": 0.625,
-          "outputPer1m": 5,
-          "contextLength": 400000,
-          "cacheReadPer1m": 0.0625,
-          "maxOutputTokens": 128000
-        },
         "openai/gpt-oss-20b": {
           "name": "OpenAI: gpt-oss-20b",
           "currency": "USD",
@@ -784,15 +775,6 @@
           "contextLength": 1047576,
           "cacheReadPer1m": 0.025,
           "maxOutputTokens": 32768
-        },
-        "openai/gpt-5.1-chat": {
-          "name": "OpenAI: GPT-5.1 Chat",
-          "currency": "USD",
-          "inputPer1m": 1.25,
-          "outputPer1m": 10,
-          "contextLength": 128000,
-          "cacheReadPer1m": 0.13,
-          "maxOutputTokens": 32000
         },
         "openai/gpt-5.2-chat": {
           "name": "OpenAI: GPT-5.2 Chat",
@@ -972,10 +954,10 @@
         "moonshotai/kimi-k2.6": {
           "name": "MoonshotAI: Kimi K2.6",
           "currency": "USD",
-          "inputPer1m": 0.95,
-          "outputPer1m": 4,
+          "inputPer1m": 0.589,
+          "outputPer1m": 2.48,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.16,
+          "cacheReadPer1m": 0.0992,
           "maxOutputTokens": 262144
         },
         "morph/morph-v3-large": {
@@ -1003,15 +985,6 @@
           "cacheReadPer1m": 0.13,
           "maxOutputTokens": 128000
         },
-        "openai/gpt-5.1:batch": {
-          "name": "OpenAI: GPT-5.1 (batch)",
-          "currency": "USD",
-          "inputPer1m": 0.625,
-          "outputPer1m": 5,
-          "contextLength": 400000,
-          "cacheReadPer1m": 0.0625,
-          "maxOutputTokens": 128000
-        },
         "openai/gpt-5.2-codex": {
           "name": "OpenAI: GPT-5.2-Codex",
           "currency": "USD",
@@ -1021,15 +994,6 @@
           "cacheReadPer1m": 0.175,
           "maxOutputTokens": 128000
         },
-        "openai/gpt-5.2:batch": {
-          "name": "OpenAI: GPT-5.2 (batch)",
-          "currency": "USD",
-          "inputPer1m": 0.875,
-          "outputPer1m": 7,
-          "contextLength": 400000,
-          "cacheReadPer1m": 0.0875,
-          "maxOutputTokens": 128000
-        },
         "openai/gpt-5.3-codex": {
           "name": "OpenAI: GPT-5.3-Codex",
           "currency": "USD",
@@ -1037,24 +1001,6 @@
           "outputPer1m": 14,
           "contextLength": 400000,
           "cacheReadPer1m": 0.175,
-          "maxOutputTokens": 128000
-        },
-        "openai/gpt-5.4:batch": {
-          "name": "OpenAI: GPT-5.4 (batch)",
-          "currency": "USD",
-          "inputPer1m": 1.25,
-          "outputPer1m": 7.5,
-          "contextLength": 1050000,
-          "cacheReadPer1m": 0.125,
-          "maxOutputTokens": 128000
-        },
-        "openai/gpt-5.5:batch": {
-          "name": "OpenAI: GPT-5.5 (batch)",
-          "currency": "USD",
-          "inputPer1m": 2.5,
-          "outputPer1m": 15,
-          "contextLength": 1050000,
-          "cacheReadPer1m": 0.25,
           "maxOutputTokens": 128000
         },
         "openai/gpt-5.6-terra": {
@@ -1511,24 +1457,6 @@
           "cacheReadPer1m": 0.25,
           "maxOutputTokens": 128000
         },
-        "openai/gpt-5-mini:batch": {
-          "name": "OpenAI: GPT-5 Mini (batch)",
-          "currency": "USD",
-          "inputPer1m": 0.125,
-          "outputPer1m": 1,
-          "contextLength": 400000,
-          "cacheReadPer1m": 0.0125,
-          "maxOutputTokens": 128000
-        },
-        "openai/gpt-5-nano:batch": {
-          "name": "OpenAI: GPT-5 Nano (batch)",
-          "currency": "USD",
-          "inputPer1m": 0.025,
-          "outputPer1m": 0.2,
-          "contextLength": 400000,
-          "cacheReadPer1m": 0.0025,
-          "maxOutputTokens": 128000
-        },
         "openai/gpt-5.6-luna-pro": {
           "name": "OpenAI: GPT-5.6 Luna Pro",
           "currency": "USD",
@@ -1658,15 +1586,6 @@
           "outputPer1m": 0.3,
           "contextLength": 1310720,
           "maxOutputTokens": 16384
-        },
-        "minimax/minimax-m3:batch": {
-          "name": "MiniMax: MiniMax M3 (batch)",
-          "currency": "USD",
-          "inputPer1m": 0.15,
-          "outputPer1m": 0.6,
-          "contextLength": 524288,
-          "cacheReadPer1m": 0.03,
-          "maxOutputTokens": null
         },
         "mistralai/codestral-2508": {
           "name": "Mistral: Codestral 2508",
@@ -1901,24 +1820,6 @@
           "outputPer1m": 2,
           "contextLength": 400000,
           "cacheReadPer1m": 0.03,
-          "maxOutputTokens": 128000
-        },
-        "openai/gpt-5.4-mini:batch": {
-          "name": "OpenAI: GPT-5.4 Mini (batch)",
-          "currency": "USD",
-          "inputPer1m": 0.375,
-          "outputPer1m": 2.25,
-          "contextLength": 400000,
-          "cacheReadPer1m": 0.0375,
-          "maxOutputTokens": 128000
-        },
-        "openai/gpt-5.4-nano:batch": {
-          "name": "OpenAI: GPT-5.4 Nano (batch)",
-          "currency": "USD",
-          "inputPer1m": 0.1,
-          "outputPer1m": 0.625,
-          "contextLength": 400000,
-          "cacheReadPer1m": 0.01,
           "maxOutputTokens": 128000
         },
         "perceptron/perceptron-mk1": {
@@ -2194,15 +2095,6 @@
           "cacheReadPer1m": 0.13,
           "maxOutputTokens": 32768
         },
-        "google/gemini-2.5-pro:batch": {
-          "name": "Google: Gemini 2.5 Pro (batch)",
-          "currency": "USD",
-          "inputPer1m": 0.625,
-          "outputPer1m": 5,
-          "contextLength": 1048576,
-          "cacheReadPer1m": 0.125,
-          "maxOutputTokens": 65536
-        },
         "google/lyria-3-clip-preview": {
           "name": "Google: Lyria 3 Clip Preview",
           "currency": "USD",
@@ -2476,15 +2368,6 @@
           "cacheWritePer1m": 0.083333,
           "maxOutputTokens": 8192
         },
-        "google/gemini-2.5-flash:batch": {
-          "name": "Google: Gemini 2.5 Flash (batch)",
-          "currency": "USD",
-          "inputPer1m": 0.15,
-          "outputPer1m": 1.25,
-          "contextLength": 1048576,
-          "cacheReadPer1m": 0.03,
-          "maxOutputTokens": 65535
-        },
         "google/gemini-2.5-pro-preview": {
           "name": "Google: Gemini 2.5 Pro Preview 06-05",
           "currency": "USD",
@@ -2521,25 +2404,6 @@
           "contextLength": 1048576,
           "cacheReadPer1m": 0.2,
           "cacheWritePer1m": 0.375,
-          "maxOutputTokens": 65536
-        },
-        "google/gemini-3.5-flash:batch": {
-          "name": "Google: Gemini 3.5 Flash (batch)",
-          "currency": "USD",
-          "inputPer1m": 0.75,
-          "outputPer1m": 4.5,
-          "contextLength": 1048576,
-          "cacheReadPer1m": 0.075,
-          "maxOutputTokens": 65536
-        },
-        "google/gemini-3.6-flash:batch": {
-          "name": "Google: Gemini 3.6 Flash (batch)",
-          "currency": "USD",
-          "inputPer1m": 0.75,
-          "outputPer1m": 3.75,
-          "contextLength": 1048576,
-          "cacheReadPer1m": 0.075,
-          "cacheWritePer1m": 0.083333,
           "maxOutputTokens": 65536
         },
         "openai/gpt-3.5-turbo-instruct": {
@@ -2584,16 +2448,6 @@
           "outputPer1m": 1.6,
           "contextLength": 32768,
           "maxOutputTokens": 32768
-        },
-        "anthropic/claude-fable-5:batch": {
-          "name": "Anthropic: Claude Fable 5 (batch)",
-          "currency": "USD",
-          "inputPer1m": 5,
-          "outputPer1m": 25,
-          "contextLength": 1000000,
-          "cacheReadPer1m": 0.5,
-          "cacheWritePer1m": 6.25,
-          "maxOutputTokens": 128000
         },
         "anthropic/claude-opus-4.7-fast": {
           "name": "Anthropic: Claude Opus 4.7 (Fast)",
@@ -2673,6 +2527,15 @@
           "contextLength": 262144,
           "maxOutputTokens": 32768
         },
+        "thinkingmachines/inkling-small": {
+          "name": "Thinking Machines: Inkling Small",
+          "currency": "USD",
+          "inputPer1m": 0.58,
+          "outputPer1m": 1.44,
+          "contextLength": 524288,
+          "cacheReadPer1m": 0.116,
+          "maxOutputTokens": 262144
+        },
         "~anthropic/claude-fable-latest": {
           "name": "Anthropic: Claude Fable Latest",
           "currency": "USD",
@@ -2692,66 +2555,6 @@
           "cacheReadPer1m": 0.1,
           "cacheWritePer1m": 1.25,
           "maxOutputTokens": 64000
-        },
-        "anthropic/claude-opus-4.1:batch": {
-          "name": "Anthropic: Claude Opus 4.1 (batch)",
-          "currency": "USD",
-          "inputPer1m": 7.5,
-          "outputPer1m": 37.5,
-          "contextLength": 200000,
-          "cacheReadPer1m": 0.75,
-          "cacheWritePer1m": 9.375,
-          "maxOutputTokens": 32000
-        },
-        "anthropic/claude-opus-4.5:batch": {
-          "name": "Anthropic: Claude Opus 4.5 (batch)",
-          "currency": "USD",
-          "inputPer1m": 2.5,
-          "outputPer1m": 12.5,
-          "contextLength": 200000,
-          "cacheReadPer1m": 0.25,
-          "cacheWritePer1m": 3.125,
-          "maxOutputTokens": 64000
-        },
-        "anthropic/claude-opus-4.6:batch": {
-          "name": "Anthropic: Claude Opus 4.6 (batch)",
-          "currency": "USD",
-          "inputPer1m": 2.5,
-          "outputPer1m": 12.5,
-          "contextLength": 1000000,
-          "cacheReadPer1m": 0.25,
-          "cacheWritePer1m": 3.125,
-          "maxOutputTokens": 128000
-        },
-        "anthropic/claude-opus-4.7:batch": {
-          "name": "Anthropic: Claude Opus 4.7 (batch)",
-          "currency": "USD",
-          "inputPer1m": 2.5,
-          "outputPer1m": 12.5,
-          "contextLength": 1000000,
-          "cacheReadPer1m": 0.25,
-          "cacheWritePer1m": 3.125,
-          "maxOutputTokens": 128000
-        },
-        "anthropic/claude-opus-4.8:batch": {
-          "name": "Anthropic: Claude Opus 4.8 (batch)",
-          "currency": "USD",
-          "inputPer1m": 2.5,
-          "outputPer1m": 12.5,
-          "contextLength": 1000000,
-          "cacheReadPer1m": 0.25,
-          "cacheWritePer1m": 3.125,
-          "maxOutputTokens": 128000
-        },
-        "anthropic/claude-sonnet-5:batch": {
-          "name": "Anthropic: Claude Sonnet 5 (batch)",
-          "currency": "USD",
-          "inputPer1m": 1,
-          "outputPer1m": 5,
-          "contextLength": 1000000,
-          "cacheReadPer1m": 0.1,
-          "cacheWritePer1m": 1.25,
-          "maxOutputTokens": 128000
         },
         "arcee-ai/trinity-large-thinking": {
           "name": "Arcee AI: Trinity Large Thinking",
@@ -2813,16 +2616,6 @@
           "cacheReadPer1m": 0.2,
           "cacheWritePer1m": 2.5,
           "maxOutputTokens": 128000
-        },
-        "anthropic/claude-haiku-4.5:batch": {
-          "name": "Anthropic: Claude Haiku 4.5 (batch)",
-          "currency": "USD",
-          "inputPer1m": 0.5,
-          "outputPer1m": 2.5,
-          "contextLength": 200000,
-          "cacheReadPer1m": 0.05,
-          "cacheWritePer1m": 0.625,
-          "maxOutputTokens": 64000
         },
         "meta-llama/llama-3.1-8b-instruct": {
           "name": "Meta: Llama 3.1 8B Instruct",
@@ -2925,16 +2718,6 @@
           "contextLength": 131072,
           "maxOutputTokens": 32768
         },
-        "anthropic/claude-sonnet-4.5:batch": {
-          "name": "Anthropic: Claude Sonnet 4.5 (batch)",
-          "currency": "USD",
-          "inputPer1m": 1.5,
-          "outputPer1m": 7.5,
-          "contextLength": 1000000,
-          "cacheReadPer1m": 0.15,
-          "cacheWritePer1m": 1.875,
-          "maxOutputTokens": 64000
-        },
         "google/gemini-3-pro-image-preview": {
           "name": "Google: Nano Banana Pro (Gemini 3 Pro Image Preview)",
           "currency": "USD",
@@ -2986,39 +2769,12 @@
           "contextLength": 262144,
           "maxOutputTokens": 32768
         },
-        "google/gemini-2.5-flash-lite:batch": {
-          "name": "Google: Gemini 2.5 Flash Lite (batch)",
-          "currency": "USD",
-          "inputPer1m": 0.05,
-          "outputPer1m": 0.2,
-          "contextLength": 1048576,
-          "cacheReadPer1m": 0.01,
-          "maxOutputTokens": 65535
-        },
         "google/gemini-3.1-flash-lite-image": {
           "name": "Google: Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image)",
           "currency": "USD",
           "inputPer1m": 0.25,
           "outputPer1m": 1.5,
           "contextLength": 65536,
-          "maxOutputTokens": 65536
-        },
-        "google/gemini-3.1-flash-lite:batch": {
-          "name": "Google: Gemini 3.1 Flash Lite (batch)",
-          "currency": "USD",
-          "inputPer1m": 0.125,
-          "outputPer1m": 0.75,
-          "contextLength": 1048576,
-          "cacheReadPer1m": 0.0125,
-          "maxOutputTokens": 65536
-        },
-        "google/gemini-3.5-flash-lite:batch": {
-          "name": "Google: Gemini 3.5 Flash Lite (batch)",
-          "currency": "USD",
-          "inputPer1m": 0.15,
-          "outputPer1m": 1.25,
-          "contextLength": 1048576,
-          "cacheReadPer1m": 0.015,
           "maxOutputTokens": 65536
         },
         "qwen/qwen-plus-2025-07-28:thinking": {
@@ -3047,22 +2803,6 @@
           "cacheReadPer1m": 0.125,
           "cacheWritePer1m": 0.375,
           "maxOutputTokens": 65535
-        },
-        "google/gemini-3-flash-preview:batch": {
-          "name": "Google: Gemini 3 Flash Preview (batch)",
-          "currency": "USD",
-          "inputPer1m": 0.25,
-          "outputPer1m": 1.5,
-          "contextLength": 1048576,
-          "maxOutputTokens": 65535
-        },
-        "google/gemini-3.1-pro-preview:batch": {
-          "name": "Google: Gemini 3.1 Pro Preview (batch)",
-          "currency": "USD",
-          "inputPer1m": 1,
-          "outputPer1m": 6,
-          "contextLength": 1048576,
-          "maxOutputTokens": 65536
         },
         "nousresearch/hermes-3-llama-3.1-70b": {
           "name": "Nous: Hermes 3 70B Instruct",
