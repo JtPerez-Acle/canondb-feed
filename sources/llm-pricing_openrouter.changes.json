@@ -2,6 +2,62 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "1b6d176e-875c-4f5a-9788-f079ccd0e946",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/nvidia/nemotron-3-ultra-550b-a55b",
+      "fromSnapshotId": "e652283c-4ac3-4d6c-bebf-be22f2e1691e",
+      "toSnapshotId": "1773cfbb-d1a4-4bfb-92c1-5534b0cafe94",
+      "detectedAt": "2026-08-01T13:44:16.944Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "nvidia/nemotron-3-ultra-550b-a55b",
+              "cacheReadPer1m"
+            ],
+            "after": 0.1,
+            "before": 0.2
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "nvidia/nemotron-3-ultra-550b-a55b",
+              "inputPer1m"
+            ],
+            "after": 0.5,
+            "before": 0.6
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "nvidia/nemotron-3-ultra-550b-a55b",
+              "maxOutputTokens"
+            ],
+            "after": 16384,
+            "before": null
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "nvidia/nemotron-3-ultra-550b-a55b",
+              "outputPer1m"
+            ],
+            "after": 2.2,
+            "before": 3.6
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "maxOutputTokens changed from null to 16384, reducing output capacity."
+    },
+    {
       "id": "2aa493c6-a874-4477-8f81-02ccf8c4d904",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -1731,32 +1787,6 @@
       "confidence": 0.95,
       "classifiedBy": "llm",
       "notes": "cacheReadPer1m price increased from 0.025 to 0.03 USD, silently raising costs; maxOutputTokens increased, which is beneficial."
-    },
-    {
-      "id": "29c34ca4-fc84-4143-875d-b7d1f215b4e4",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/~moonshotai/kimi-latest",
-      "fromSnapshotId": "f3f4fb0e-e9f8-427a-8e67-27556ee52b2f",
-      "toSnapshotId": "ccc6f0e2-08f7-4673-8d20-3b64a25de960",
-      "detectedAt": "2026-07-30T19:44:47.356Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "~moonshotai/kimi-latest",
-              "outputPer1m"
-            ],
-            "after": 14,
-            "before": 15
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "Output price decreased from 15 to 14 USD per 1M tokens"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-01T07:44:13.059Z",
+    "fetchedAt": "2026-08-01T13:44:13.227Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -2756,11 +2756,11 @@
         "nvidia/nemotron-3-ultra-550b-a55b": {
           "name": "NVIDIA: Nemotron 3 Ultra",
           "currency": "USD",
-          "inputPer1m": 0.6,
-          "outputPer1m": 3.6,
+          "inputPer1m": 0.5,
+          "outputPer1m": 2.2,
           "contextLength": 512288,
-          "cacheReadPer1m": 0.2,
-          "maxOutputTokens": null
+          "cacheReadPer1m": 0.1,
+          "maxOutputTokens": 16384
         },
         "qwen/qwen3-coder-30b-a3b-instruct": {
           "name": "Qwen: Qwen3 Coder 30B A3B Instruct",
