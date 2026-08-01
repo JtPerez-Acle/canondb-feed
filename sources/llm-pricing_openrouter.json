@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-01T01:44:13.382Z",
+    "fetchedAt": "2026-08-01T07:44:13.059Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -101,10 +101,10 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 1.12,
-          "outputPer1m": 3.52,
+          "inputPer1m": 0.76006,
+          "outputPer1m": 2.38876,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.208,
+          "cacheReadPer1m": 0.141154,
           "maxOutputTokens": 128000
         },
         "mancer/weaver": {
@@ -656,8 +656,9 @@
           "name": "OpenAI: gpt-oss-20b",
           "currency": "USD",
           "inputPer1m": 0.03,
-          "outputPer1m": 0.14,
+          "outputPer1m": 0.13,
           "contextLength": 131072,
+          "cacheReadPer1m": 0.03,
           "maxOutputTokens": 131072
         },
         "qwen/qwen3-30b-a3b": {

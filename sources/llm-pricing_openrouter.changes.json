@@ -2,6 +2,87 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "2aa493c6-a874-4477-8f81-02ccf8c4d904",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "c61db83d-06ed-4b2c-8aec-ddcf7493d560",
+      "toSnapshotId": "e652283c-4ac3-4d6c-bebf-be22f2e1691e",
+      "detectedAt": "2026-08-01T07:44:24.462Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.141154,
+            "before": 0.208
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.76006,
+            "before": 1.12
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 2.38876,
+            "before": 3.52
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "All prices decreased, which is favorable."
+    },
+    {
+      "id": "e7c0b4d0-8ccf-4af0-b38d-c918df410e94",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/openai/gpt-oss-20b",
+      "fromSnapshotId": "c61db83d-06ed-4b2c-8aec-ddcf7493d560",
+      "toSnapshotId": "e652283c-4ac3-4d6c-bebf-be22f2e1691e",
+      "detectedAt": "2026-08-01T07:44:22.602Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "models",
+              "openai/gpt-oss-20b",
+              "cacheReadPer1m"
+            ],
+            "after": 0.03
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "openai/gpt-oss-20b",
+              "outputPer1m"
+            ],
+            "after": 0.13,
+            "before": 0.14
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Added a new field and decreased output price, both favorable to consumers."
+    },
+    {
       "id": "83c06a62-65c2-4cc9-89be-88fe94243cf5",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/thinkingmachines/inkling-small",
@@ -1676,84 +1757,6 @@
       "confidence": 0.95,
       "classifiedBy": "llm",
       "notes": "Output price decreased from 15 to 14 USD per 1M tokens"
-    },
-    {
-      "id": "f554efb2-a6c0-444f-aa50-66805d347314",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/z-ai/glm-5.2",
-      "fromSnapshotId": "f3f4fb0e-e9f8-427a-8e67-27556ee52b2f",
-      "toSnapshotId": "ccc6f0e2-08f7-4673-8d20-3b64a25de960",
-      "detectedAt": "2026-07-30T19:44:43.996Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "cacheReadPer1m"
-            ],
-            "after": 0.1794,
-            "before": 0.11401
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "inputPer1m"
-            ],
-            "after": 0.966,
-            "before": 0.6139
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "outputPer1m"
-            ],
-            "after": 3.036,
-            "before": 1.9294
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Price increase for model z-ai/glm-5.2"
-    },
-    {
-      "id": "bfa96d3e-e7ac-445c-9ff0-ff59ad3ee2c4",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/o4-mini-deep-research",
-      "fromSnapshotId": "f3f4fb0e-e9f8-427a-8e67-27556ee52b2f",
-      "toSnapshotId": "ccc6f0e2-08f7-4673-8d20-3b64a25de960",
-      "detectedAt": "2026-07-30T19:44:38.812Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "removed",
-            "path": [
-              "models",
-              "openai/o4-mini-deep-research"
-            ],
-            "before": {
-              "name": "OpenAI: o4 Mini Deep Research",
-              "currency": "USD",
-              "inputPer1m": 2,
-              "outputPer1m": 8,
-              "contextLength": 200000,
-              "cacheReadPer1m": 0.5,
-              "maxOutputTokens": 100000
-            }
-          }
-        ]
-      },
-      "severity": "breaking_strict",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Model removed, callers referencing this model id will fail."
     }
   ]
 }
