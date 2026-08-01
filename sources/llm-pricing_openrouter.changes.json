@@ -2,6 +2,144 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "83c06a62-65c2-4cc9-89be-88fe94243cf5",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/thinkingmachines/inkling-small",
+      "fromSnapshotId": "3f31ce92-f38b-41eb-b38a-4a80fb000b0d",
+      "toSnapshotId": "c61db83d-06ed-4b2c-8aec-ddcf7493d560",
+      "detectedAt": "2026-08-01T01:44:50.286Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "thinkingmachines/inkling-small",
+              "cacheReadPer1m"
+            ],
+            "after": 0.1,
+            "before": 0.116
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "thinkingmachines/inkling-small",
+              "inputPer1m"
+            ],
+            "after": 0.5,
+            "before": 0.58
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "thinkingmachines/inkling-small",
+              "maxOutputTokens"
+            ],
+            "after": null,
+            "before": 262144
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "thinkingmachines/inkling-small",
+              "outputPer1m"
+            ],
+            "after": 1.2,
+            "before": 1.44
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.5,
+      "classifiedBy": "rules",
+      "notes": "llm fallback (This operation was aborted); field value(s) changed"
+    },
+    {
+      "id": "4891c23c-6c67-494c-829b-130a2ffa1796",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3-coder-30b-a3b-instruct",
+      "fromSnapshotId": "3f31ce92-f38b-41eb-b38a-4a80fb000b0d",
+      "toSnapshotId": "c61db83d-06ed-4b2c-8aec-ddcf7493d560",
+      "detectedAt": "2026-08-01T01:44:30.273Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-coder-30b-a3b-instruct",
+              "maxOutputTokens"
+            ],
+            "after": 262144,
+            "before": 32768
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-coder-30b-a3b-instruct",
+              "outputPer1m"
+            ],
+            "after": 0.28,
+            "before": 0.27
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Price increased from 0.27 to 0.28 per 1M output tokens (breaking_agent); output token limit increased from 32768 to 262144 (safe). Overall, the price increase is a semantic change that silently increases cost for agents."
+    },
+    {
+      "id": "fabf8494-aae5-4709-9976-8df225e5d857",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/moonshotai/kimi-k2.6",
+      "fromSnapshotId": "3f31ce92-f38b-41eb-b38a-4a80fb000b0d",
+      "toSnapshotId": "c61db83d-06ed-4b2c-8aec-ddcf7493d560",
+      "detectedAt": "2026-08-01T01:44:17.168Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.6",
+              "cacheReadPer1m"
+            ],
+            "after": 0.2,
+            "before": 0.0992
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.6",
+              "inputPer1m"
+            ],
+            "after": 0.6,
+            "before": 0.589
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.6",
+              "outputPer1m"
+            ],
+            "after": 3.41,
+            "before": 2.48
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Prices for cache read, input, and output all increased for kimi-k2.6 model."
+    },
+    {
       "id": "8595ace2-e893-479d-97c5-671b12c5f60f",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/thinkingmachines/inkling-small",
@@ -1616,150 +1754,6 @@
       "confidence": 1,
       "classifiedBy": "llm",
       "notes": "Model removed, callers referencing this model id will fail."
-    },
-    {
-      "id": "1564e7f8-94bc-4711-a4ae-41cdecd087a5",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/o3-deep-research",
-      "fromSnapshotId": "f3f4fb0e-e9f8-427a-8e67-27556ee52b2f",
-      "toSnapshotId": "ccc6f0e2-08f7-4673-8d20-3b64a25de960",
-      "detectedAt": "2026-07-30T19:44:34.942Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "removed",
-            "path": [
-              "models",
-              "openai/o3-deep-research"
-            ],
-            "before": {
-              "name": "OpenAI: o3 Deep Research",
-              "currency": "USD",
-              "inputPer1m": 10,
-              "outputPer1m": 40,
-              "contextLength": 200000,
-              "cacheReadPer1m": 2.5,
-              "maxOutputTokens": 100000
-            }
-          }
-        ]
-      },
-      "severity": "breaking_strict",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Model removed"
-    },
-    {
-      "id": "4a8d9570-9843-4738-a6cb-263b0680255d",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/gpt-5.6-terra-pro",
-      "fromSnapshotId": "f3f4fb0e-e9f8-427a-8e67-27556ee52b2f",
-      "toSnapshotId": "ccc6f0e2-08f7-4673-8d20-3b64a25de960",
-      "detectedAt": "2026-07-30T19:44:31.622Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "openai/gpt-5.6-terra-pro",
-              "cacheReadPer1m"
-            ],
-            "after": 0.1,
-            "before": 0.125
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "openai/gpt-5.6-terra-pro",
-              "cacheWritePer1m"
-            ],
-            "after": 1.25,
-            "before": 1.5625
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "openai/gpt-5.6-terra-pro",
-              "inputPer1m"
-            ],
-            "after": 1,
-            "before": 1.25
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "openai/gpt-5.6-terra-pro",
-              "outputPer1m"
-            ],
-            "after": 6,
-            "before": 7.5
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "All prices for model gpt-5.6-terra-pro decreased (cache reads, writes, input, output)."
-    },
-    {
-      "id": "9d03ef1c-8610-4e2f-9f13-acf21e0e8361",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/gpt-5.6-terra",
-      "fromSnapshotId": "f3f4fb0e-e9f8-427a-8e67-27556ee52b2f",
-      "toSnapshotId": "ccc6f0e2-08f7-4673-8d20-3b64a25de960",
-      "detectedAt": "2026-07-30T19:44:28.514Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "openai/gpt-5.6-terra",
-              "cacheReadPer1m"
-            ],
-            "after": 0.1,
-            "before": 0.125
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "openai/gpt-5.6-terra",
-              "cacheWritePer1m"
-            ],
-            "after": 1.25,
-            "before": 1.5625
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "openai/gpt-5.6-terra",
-              "inputPer1m"
-            ],
-            "after": 1,
-            "before": 1.25
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "openai/gpt-5.6-terra",
-              "outputPer1m"
-            ],
-            "after": 6,
-            "before": 7.5
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "All prices decreased, which is favorable to consumers."
     }
   ]
 }

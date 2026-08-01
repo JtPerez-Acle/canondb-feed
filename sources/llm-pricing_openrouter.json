@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-07-31T19:44:12.869Z",
+    "fetchedAt": "2026-08-01T01:44:13.382Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -954,10 +954,10 @@
         "moonshotai/kimi-k2.6": {
           "name": "MoonshotAI: Kimi K2.6",
           "currency": "USD",
-          "inputPer1m": 0.589,
-          "outputPer1m": 2.48,
+          "inputPer1m": 0.6,
+          "outputPer1m": 3.41,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.0992,
+          "cacheReadPer1m": 0.2,
           "maxOutputTokens": 262144
         },
         "morph/morph-v3-large": {
@@ -2530,11 +2530,11 @@
         "thinkingmachines/inkling-small": {
           "name": "Thinking Machines: Inkling Small",
           "currency": "USD",
-          "inputPer1m": 0.58,
-          "outputPer1m": 1.44,
+          "inputPer1m": 0.5,
+          "outputPer1m": 1.2,
           "contextLength": 524288,
-          "cacheReadPer1m": 0.116,
-          "maxOutputTokens": 262144
+          "cacheReadPer1m": 0.1,
+          "maxOutputTokens": null
         },
         "~anthropic/claude-fable-latest": {
           "name": "Anthropic: Claude Fable Latest",
@@ -2765,9 +2765,9 @@
           "name": "Qwen: Qwen3 Coder 30B A3B Instruct",
           "currency": "USD",
           "inputPer1m": 0.07,
-          "outputPer1m": 0.27,
+          "outputPer1m": 0.28,
           "contextLength": 262144,
-          "maxOutputTokens": 32768
+          "maxOutputTokens": 262144
         },
         "google/gemini-3.1-flash-lite-image": {
           "name": "Google: Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image)",
