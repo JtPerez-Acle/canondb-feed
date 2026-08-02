@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-02T07:44:13.529Z",
+    "fetchedAt": "2026-08-02T13:44:15.590Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -101,10 +101,10 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.3262,
-          "outputPer1m": 1.0252,
+          "inputPer1m": 0.2842,
+          "outputPer1m": 0.8932,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.06058,
+          "cacheReadPer1m": 0.05278,
           "maxOutputTokens": 131072
         },
         "mancer/weaver": {

@@ -2,6 +2,52 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "3126cad7-7e1c-456a-8ad0-c4a0a8b4ef67",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "585599d9-61dc-4f9b-b1f9-a9d8b491b2ab",
+      "toSnapshotId": "3ad4aeb5-3192-40ec-bae6-0a4ee27c4acd",
+      "detectedAt": "2026-08-02T13:44:18.505Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.05278,
+            "before": 0.06058
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.2842,
+            "before": 0.3262
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 0.8932,
+            "before": 1.0252
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "All three prices decreased."
+    },
+    {
       "id": "e69b9ac6-2a3b-4c53-9301-fd6bb39f5bee",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -1815,38 +1861,6 @@
       "confidence": 0.6,
       "classifiedBy": "rules",
       "notes": "llm fallback (This operation was aborted); field(s) removed"
-    },
-    {
-      "id": "67806fbf-f46c-42f0-a0bb-f2041ad2d015",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/mistralai/devstral-2512",
-      "fromSnapshotId": "9ff68883-c528-4d3d-bdcb-ba49d5579045",
-      "toSnapshotId": "edbc801f-1dd8-4285-bf59-afc5f33bab5c",
-      "detectedAt": "2026-07-31T13:44:20.133Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "removed",
-            "path": [
-              "models",
-              "mistralai/devstral-2512"
-            ],
-            "before": {
-              "name": "Mistral: Devstral 2 2512",
-              "currency": "USD",
-              "inputPer1m": 0.4,
-              "outputPer1m": 2,
-              "contextLength": 262144,
-              "cacheReadPer1m": 0.04,
-              "maxOutputTokens": null
-            }
-          }
-        ]
-      },
-      "severity": "breaking_strict",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Model removed, breaks callers of that model id."
     }
   ]
 }
