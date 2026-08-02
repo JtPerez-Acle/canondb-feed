@@ -2,6 +2,62 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "150943b4-73b2-457e-85aa-3ba4291c64ed",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "4324b5ac-7146-4cc1-b4e3-10ca8c0c2728",
+      "toSnapshotId": "a346670e-9833-4dcb-bacd-36a16f68d754",
+      "detectedAt": "2026-08-02T01:44:18.098Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.07774,
+            "before": 0.078
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.4186,
+            "before": 0.42
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "maxOutputTokens"
+            ],
+            "after": 131072,
+            "before": 128000
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 1.3156,
+            "before": 1.32
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "All changes are price decreases or output limit increases, which are favorable to consumers."
+    },
+    {
       "id": "b0ff60f0-c797-4834-8b9d-50b9b9d6178e",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/~deepseek/deepseek-v4-flash-latest",
@@ -1777,52 +1833,6 @@
       "confidence": 1,
       "classifiedBy": "llm",
       "notes": "New model added."
-    },
-    {
-      "id": "360f53da-40d2-4a77-b1c7-8f0770718ea3",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/z-ai/glm-5.2",
-      "fromSnapshotId": "4da093d5-85e8-4538-b7e8-03e7dd7767b0",
-      "toSnapshotId": "9ff68883-c528-4d3d-bdcb-ba49d5579045",
-      "detectedAt": "2026-07-31T07:44:25.843Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "cacheReadPer1m"
-            ],
-            "after": 0.221,
-            "before": 0.1794
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "inputPer1m"
-            ],
-            "after": 1.19,
-            "before": 0.966
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "outputPer1m"
-            ],
-            "after": 3.74,
-            "before": 3.036
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "Price increase for model z-ai/glm-5.2"
     }
   ]
 }
