@@ -2,6 +2,52 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "e69b9ac6-2a3b-4c53-9301-fd6bb39f5bee",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "a346670e-9833-4dcb-bacd-36a16f68d754",
+      "toSnapshotId": "585599d9-61dc-4f9b-b1f9-a9d8b491b2ab",
+      "detectedAt": "2026-08-02T07:44:16.638Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.06058,
+            "before": 0.07774
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.3262,
+            "before": 0.4186
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 1.0252,
+            "before": 1.3156
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Price decrease, favorable for consumers."
+    },
+    {
       "id": "150943b4-73b2-457e-85aa-3ba4291c64ed",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -1801,38 +1847,6 @@
       "confidence": 1,
       "classifiedBy": "llm",
       "notes": "Model removed, breaks callers of that model id."
-    },
-    {
-      "id": "35ed750c-c26d-4df5-8d4b-6c80d1ebe1fc",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/deepseek/deepseek-v4-flash-0731",
-      "fromSnapshotId": "9ff68883-c528-4d3d-bdcb-ba49d5579045",
-      "toSnapshotId": "edbc801f-1dd8-4285-bf59-afc5f33bab5c",
-      "detectedAt": "2026-07-31T13:44:15.659Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "deepseek/deepseek-v4-flash-0731"
-            ],
-            "after": {
-              "name": "DeepSeek: DeepSeek V4 Flash 0731",
-              "currency": "USD",
-              "inputPer1m": 0.14,
-              "outputPer1m": 0.28,
-              "contextLength": 1048576,
-              "cacheReadPer1m": 0.0028,
-              "maxOutputTokens": 384000
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "New model added."
     }
   ]
 }
