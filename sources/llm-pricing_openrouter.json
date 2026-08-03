@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-03T13:44:14.357Z",
+    "fetchedAt": "2026-08-03T19:44:14.019Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -101,10 +101,10 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.7014,
-          "outputPer1m": 2.2044,
+          "inputPer1m": 0.6286,
+          "outputPer1m": 1.9756,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.13026,
+          "cacheReadPer1m": 0.11674,
           "maxOutputTokens": 131072
         },
         "mancer/weaver": {
@@ -389,6 +389,16 @@
           "contextLength": 1000000,
           "cacheReadPer1m": 0.295,
           "cacheWritePer1m": 1.84375,
+          "maxOutputTokens": 131072
+        },
+        "qwen/qwen3.8-max": {
+          "name": "Qwen: Qwen3.8 Max",
+          "currency": "USD",
+          "inputPer1m": 2,
+          "outputPer1m": 6,
+          "contextLength": 1000000,
+          "cacheReadPer1m": 0.25,
+          "cacheWritePer1m": 2.5,
           "maxOutputTokens": 131072
         },
         "rekaai/reka-edge": {
@@ -1308,8 +1318,8 @@
         "qwen/qwen3.5-122b-a10b": {
           "name": "Qwen: Qwen3.5-122B-A10B",
           "currency": "USD",
-          "inputPer1m": 0.4,
-          "outputPer1m": 3.2,
+          "inputPer1m": 0.26,
+          "outputPer1m": 2.08,
           "contextLength": 262144,
           "maxOutputTokens": 65536
         },
@@ -2765,9 +2775,9 @@
           "name": "Qwen: Qwen3 Coder 30B A3B Instruct",
           "currency": "USD",
           "inputPer1m": 0.07,
-          "outputPer1m": 0.28,
+          "outputPer1m": 0.27,
           "contextLength": 262144,
-          "maxOutputTokens": 262144
+          "maxOutputTokens": 32768
         },
         "google/gemini-3.1-flash-lite-image": {
           "name": "Google: Nano Banana 2 Lite (Gemini 3.1 Flash Lite Image)",
