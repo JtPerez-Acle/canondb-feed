@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-02T19:44:13.771Z",
+    "fetchedAt": "2026-08-03T01:44:13.816Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -101,11 +101,11 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.2842,
-          "outputPer1m": 0.8932,
+          "inputPer1m": 1.19,
+          "outputPer1m": 3.74,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.05278,
-          "maxOutputTokens": 131072
+          "cacheReadPer1m": 0.221,
+          "maxOutputTokens": 262144
         },
         "mancer/weaver": {
           "name": "Mancer: Weaver (alpha)",
@@ -1309,8 +1309,8 @@
         "qwen/qwen3.5-122b-a10b": {
           "name": "Qwen: Qwen3.5-122B-A10B",
           "currency": "USD",
-          "inputPer1m": 0.26,
-          "outputPer1m": 2.08,
+          "inputPer1m": 0.4,
+          "outputPer1m": 3.2,
           "contextLength": 262144,
           "maxOutputTokens": 65536
         },
@@ -1850,10 +1850,10 @@
         "qwen/qwen3-235b-a22b-2507": {
           "name": "Qwen: Qwen3 235B A22B Instruct 2507",
           "currency": "USD",
-          "inputPer1m": 0.09,
-          "outputPer1m": 0.55,
+          "inputPer1m": 0.1495,
+          "outputPer1m": 0.598,
           "contextLength": 262144,
-          "maxOutputTokens": 16384
+          "maxOutputTokens": 32768
         },
         "qwen/qwen3-vl-8b-instruct": {
           "name": "Qwen: Qwen3 VL 8B Instruct",
@@ -1886,7 +1886,7 @@
           "inputPer1m": 0.4,
           "outputPer1m": 0.4,
           "contextLength": 1024000,
-          "maxOutputTokens": 32768
+          "maxOutputTokens": 1024000
         },
         "~google/gemini-pro-latest": {
           "name": "Google Gemini Pro Latest",
@@ -2714,8 +2714,8 @@
         "qwen/qwen3-vl-235b-a22b-thinking": {
           "name": "Qwen: Qwen3 VL 235B A22B Thinking",
           "currency": "USD",
-          "inputPer1m": 0.4,
-          "outputPer1m": 4,
+          "inputPer1m": 0.98,
+          "outputPer1m": 3.95,
           "contextLength": 131072,
           "maxOutputTokens": 32768
         },
