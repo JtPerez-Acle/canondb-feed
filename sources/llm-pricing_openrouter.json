@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-03T07:44:14.288Z",
+    "fetchedAt": "2026-08-03T13:44:14.357Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -101,11 +101,11 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 1.19,
-          "outputPer1m": 3.74,
+          "inputPer1m": 0.7014,
+          "outputPer1m": 2.2044,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.221,
-          "maxOutputTokens": 262144
+          "cacheReadPer1m": 0.13026,
+          "maxOutputTokens": 131072
         },
         "mancer/weaver": {
           "name": "Mancer: Weaver (alpha)",
@@ -376,11 +376,10 @@
         "qwen/qwen3.6-27b": {
           "name": "Qwen: Qwen3.6 27B",
           "currency": "USD",
-          "inputPer1m": 0.3,
-          "outputPer1m": 2,
+          "inputPer1m": 0.289,
+          "outputPer1m": 2.4,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.15,
-          "maxOutputTokens": 65536
+          "maxOutputTokens": 131072
         },
         "qwen/qwen3.7-max": {
           "name": "Qwen: Qwen3.7 Max",

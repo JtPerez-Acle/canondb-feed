@@ -2,6 +2,117 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "d3a46655-f5b2-452e-809a-d126b2aaf0e8",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "6c3fc1a4-50a8-4371-8b6c-a7fee6ace9fc",
+      "toSnapshotId": "2eb410b6-6452-42c4-bcd4-f67298c96e0f",
+      "detectedAt": "2026-08-03T13:44:41.878Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.13026,
+            "before": 0.221
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.7014,
+            "before": 1.19
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "maxOutputTokens"
+            ],
+            "after": 131072,
+            "before": 262144
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 2.2044,
+            "before": 3.74
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "maxOutputTokens reduced from 262144 to 131072, causing potential truncation for agents expecting larger outputs."
+    },
+    {
+      "id": "c8d2f447-6420-4355-b77a-3a1877af1446",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3.6-27b",
+      "fromSnapshotId": "6c3fc1a4-50a8-4371-8b6c-a7fee6ace9fc",
+      "toSnapshotId": "2eb410b6-6452-42c4-bcd4-f67298c96e0f",
+      "detectedAt": "2026-08-03T13:44:34.563Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "models",
+              "qwen/qwen3.6-27b",
+              "cacheReadPer1m"
+            ],
+            "before": 0.15
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.6-27b",
+              "inputPer1m"
+            ],
+            "after": 0.289,
+            "before": 0.3
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.6-27b",
+              "maxOutputTokens"
+            ],
+            "after": 131072,
+            "before": 65536
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.6-27b",
+              "outputPer1m"
+            ],
+            "after": 2.4,
+            "before": 2
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 0.6,
+      "classifiedBy": "rules",
+      "notes": "llm fallback (This operation was aborted); field(s) removed"
+    },
+    {
       "id": "53ace965-8741-4498-b5e7-3d5c6faa8298",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -1794,85 +1905,6 @@
       "confidence": 1,
       "classifiedBy": "llm",
       "notes": "Model removed, breaking callers using that model id."
-    },
-    {
-      "id": "34a65c86-aa1a-4360-9e65-6f26a36dfb66",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/anthropic/claude-fable-5:batch",
-      "fromSnapshotId": "edbc801f-1dd8-4285-bf59-afc5f33bab5c",
-      "toSnapshotId": "3f31ce92-f38b-41eb-b38a-4a80fb000b0d",
-      "detectedAt": "2026-07-31T19:44:13.974Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "removed",
-            "path": [
-              "models",
-              "anthropic/claude-fable-5:batch"
-            ],
-            "before": {
-              "name": "Anthropic: Claude Fable 5 (batch)",
-              "currency": "USD",
-              "inputPer1m": 5,
-              "outputPer1m": 25,
-              "contextLength": 1000000,
-              "cacheReadPer1m": 0.5,
-              "cacheWritePer1m": 6.25,
-              "maxOutputTokens": 128000
-            }
-          }
-        ]
-      },
-      "severity": "breaking_strict",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Model removed, breaking strict consumers that call it."
-    },
-    {
-      "id": "f0550062-27df-4a1e-bf91-74c02abd3fb5",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/z-ai/glm-5.2",
-      "fromSnapshotId": "9ff68883-c528-4d3d-bdcb-ba49d5579045",
-      "toSnapshotId": "edbc801f-1dd8-4285-bf59-afc5f33bab5c",
-      "detectedAt": "2026-07-31T13:45:09.104Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "cacheReadPer1m"
-            ],
-            "after": 0.208,
-            "before": 0.221
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "inputPer1m"
-            ],
-            "after": 1.12,
-            "before": 1.19
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "outputPer1m"
-            ],
-            "after": 3.52,
-            "before": 3.74
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Price decreases for cacheRead, input, and output per 1M tokens."
     }
   ]
 }
