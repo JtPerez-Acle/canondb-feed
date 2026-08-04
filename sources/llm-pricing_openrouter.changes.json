@@ -2,6 +2,61 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "ee13df45-4b87-4b65-8d58-3c2c88a11ed7",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen2.5-vl-72b-instruct",
+      "fromSnapshotId": "786ff3d4-604b-4732-b2d9-75c9abe3ad0f",
+      "toSnapshotId": "447ada8a-409d-4595-9b76-07b47b064973",
+      "detectedAt": "2026-08-04T13:44:27.582Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "models",
+              "qwen/qwen2.5-vl-72b-instruct",
+              "cacheReadPer1m"
+            ],
+            "before": 0.4
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen2.5-vl-72b-instruct",
+              "inputPer1m"
+            ],
+            "after": 0.25,
+            "before": 0.8
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen2.5-vl-72b-instruct",
+              "maxOutputTokens"
+            ],
+            "after": null,
+            "before": 128000
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen2.5-vl-72b-instruct",
+              "outputPer1m"
+            ],
+            "after": 0.75,
+            "before": 1
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Removed cacheReadPer1m field for qwen2.5-vl-72b-instruct; consumers relying on that field break."
+    },
+    {
       "id": "5df5908e-6f7c-40cd-b342-11c304e57a21",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/qwen/qwen3-vl-30b-a3b-instruct",
@@ -1960,38 +2015,6 @@
       "confidence": 1,
       "classifiedBy": "llm",
       "notes": "Model removed, breaking any caller referencing that ID."
-    },
-    {
-      "id": "35340171-7a9c-41fd-b348-256ce097830c",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/google/gemini-3.1-flash-lite:batch",
-      "fromSnapshotId": "edbc801f-1dd8-4285-bf59-afc5f33bab5c",
-      "toSnapshotId": "3f31ce92-f38b-41eb-b38a-4a80fb000b0d",
-      "detectedAt": "2026-07-31T19:45:00.138Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "removed",
-            "path": [
-              "models",
-              "google/gemini-3.1-flash-lite:batch"
-            ],
-            "before": {
-              "name": "Google: Gemini 3.1 Flash Lite (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.125,
-              "outputPer1m": 0.75,
-              "contextLength": 1048576,
-              "cacheReadPer1m": 0.0125,
-              "maxOutputTokens": 65536
-            }
-          }
-        ]
-      },
-      "severity": "breaking_strict",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Model removed, breaking any caller referencing that model id"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-04T07:44:14.377Z",
+    "fetchedAt": "2026-08-04T13:44:14.796Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -2346,11 +2346,10 @@
         "qwen/qwen2.5-vl-72b-instruct": {
           "name": "Qwen: Qwen2.5 VL 72B Instruct",
           "currency": "USD",
-          "inputPer1m": 0.8,
-          "outputPer1m": 1,
+          "inputPer1m": 0.25,
+          "outputPer1m": 0.75,
           "contextLength": 128000,
-          "cacheReadPer1m": 0.4,
-          "maxOutputTokens": 128000
+          "maxOutputTokens": null
         },
         "bytedance-seed/seed-1.6-flash": {
           "name": "ByteDance Seed: Seed 1.6 Flash",
