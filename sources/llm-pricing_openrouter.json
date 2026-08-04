@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-03T19:44:14.019Z",
+    "fetchedAt": "2026-08-04T01:44:14.369Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -101,11 +101,11 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.6286,
-          "outputPer1m": 1.9756,
+          "inputPer1m": 0.76,
+          "outputPer1m": 2.42,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.11674,
-          "maxOutputTokens": 131072
+          "cacheReadPer1m": 0.14,
+          "maxOutputTokens": 262144
         },
         "mancer/weaver": {
           "name": "Mancer: Weaver (alpha)",
@@ -964,10 +964,10 @@
         "moonshotai/kimi-k2.6": {
           "name": "MoonshotAI: Kimi K2.6",
           "currency": "USD",
-          "inputPer1m": 0.6,
-          "outputPer1m": 3.41,
+          "inputPer1m": 0.589,
+          "outputPer1m": 2.48,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.2,
+          "cacheReadPer1m": 0.0992,
           "maxOutputTokens": 262144
         },
         "morph/morph-v3-large": {
@@ -1221,8 +1221,8 @@
         "gryphe/mythomax-l2-13b": {
           "name": "MythoMax 13B",
           "currency": "USD",
-          "inputPer1m": 0.06,
-          "outputPer1m": 0.06,
+          "inputPer1m": 0.08,
+          "outputPer1m": 0.11,
           "contextLength": 8192,
           "maxOutputTokens": 4096
         },
@@ -1934,7 +1934,7 @@
           "maxOutputTokens": 65536
         },
         "deepseek/deepseek-v4-flash": {
-          "name": "DeepSeek: DeepSeek V4 Flash",
+          "name": "DeepSeek: DeepSeek V4 Flash 0423",
           "currency": "USD",
           "inputPer1m": 0.14,
           "outputPer1m": 0.28,
@@ -2697,11 +2697,10 @@
         "qwen/qwen3-next-80b-a3b-instruct": {
           "name": "Qwen: Qwen3 Next 80B A3B Instruct",
           "currency": "USD",
-          "inputPer1m": 0.1,
+          "inputPer1m": 0.09,
           "outputPer1m": 1.1,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.07,
-          "maxOutputTokens": 262144
+          "maxOutputTokens": 16384
         },
         "qwen/qwen3-next-80b-a3b-thinking": {
           "name": "Qwen: Qwen3 Next 80B A3B Thinking",
@@ -2709,7 +2708,7 @@
           "inputPer1m": 0.15,
           "outputPer1m": 1.2,
           "contextLength": 262144,
-          "maxOutputTokens": 32768
+          "maxOutputTokens": null
         },
         "qwen/qwen3-vl-235b-a22b-instruct": {
           "name": "Qwen: Qwen3 VL 235B A22B Instruct",
@@ -2749,10 +2748,10 @@
         "meta-llama/llama-3.3-70b-instruct": {
           "name": "Meta: Llama 3.3 70B Instruct",
           "currency": "USD",
-          "inputPer1m": 0.13,
-          "outputPer1m": 0.4,
+          "inputPer1m": 0.1,
+          "outputPer1m": 0.32,
           "contextLength": 131072,
-          "maxOutputTokens": 128000
+          "maxOutputTokens": 16384
         },
         "nvidia/nemotron-3-super-120b-a12b": {
           "name": "NVIDIA: Nemotron 3 Super",
