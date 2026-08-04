@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-04T13:44:14.796Z",
+    "fetchedAt": "2026-08-04T19:44:13.758Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -149,7 +149,7 @@
           "maxOutputTokens": 8192
         },
         "x-ai/grok-4.3": {
-          "name": "xAI: Grok 4.3",
+          "name": "SpaceXAI: Grok 4.3",
           "currency": "USD",
           "inputPer1m": 1.25,
           "outputPer1m": 2.5,
@@ -158,7 +158,7 @@
           "maxOutputTokens": null
         },
         "x-ai/grok-4.5": {
-          "name": "xAI: Grok 4.5",
+          "name": "SpaceXAI: Grok 4.5",
           "currency": "USD",
           "inputPer1m": 2,
           "outputPer1m": 6,
@@ -284,7 +284,7 @@
           "maxOutputTokens": 65536
         },
         "x-ai/grok-4.20": {
-          "name": "xAI: Grok 4.20",
+          "name": "SpaceXAI: Grok 4.20",
           "currency": "USD",
           "inputPer1m": 1.25,
           "outputPer1m": 2.5,
@@ -885,7 +885,7 @@
           "maxOutputTokens": null
         },
         "x-ai/grok-build-0.1": {
-          "name": "xAI: Grok Build 0.1",
+          "name": "SpaceXAI: Grok Build 0.1",
           "currency": "USD",
           "inputPer1m": 1,
           "outputPer1m": 2,
@@ -946,10 +946,10 @@
         "minimax/minimax-m2.7": {
           "name": "MiniMax: MiniMax M2.7",
           "currency": "USD",
-          "inputPer1m": 0.25,
-          "outputPer1m": 1,
+          "inputPer1m": 0.27,
+          "outputPer1m": 1.08,
           "contextLength": 204800,
-          "cacheReadPer1m": 0.05,
+          "cacheReadPer1m": 0.054,
           "maxOutputTokens": 131072
         },
         "moonshotai/kimi-k2.5": {
@@ -2052,7 +2052,7 @@
           "maxOutputTokens": 65536
         },
         "x-ai/grok-4.20-multi-agent": {
-          "name": "xAI: Grok 4.20 Multi-Agent",
+          "name": "SpaceXAI: Grok 4.20 Multi-Agent",
           "currency": "USD",
           "inputPer1m": 1.25,
           "outputPer1m": 2.5,
@@ -2914,8 +2914,8 @@
         "mistralai/mistral-small-3.2-24b-instruct": {
           "name": "Mistral: Mistral Small 3.2 24B",
           "currency": "USD",
-          "inputPer1m": 0.075,
-          "outputPer1m": 0.2,
+          "inputPer1m": 0.09375,
+          "outputPer1m": 0.25,
           "contextLength": 256000,
           "maxOutputTokens": 16384
         },

@@ -2,6 +2,218 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "39a2f9a8-f171-4d21-a316-9b7cb5c33328",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/x-ai/grok-build-0.1",
+      "fromSnapshotId": "447ada8a-409d-4595-9b76-07b47b064973",
+      "toSnapshotId": "5076b9d4-833a-49e6-9c0b-f298c8c623da",
+      "detectedAt": "2026-08-04T19:44:56.318Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "x-ai/grok-build-0.1",
+              "name"
+            ],
+            "after": "SpaceXAI: Grok Build 0.1",
+            "before": "xAI: Grok Build 0.1"
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.6,
+      "classifiedBy": "llm",
+      "notes": "The model name changed, which may mislead agents relying on the old name, though the ID remains stable."
+    },
+    {
+      "id": "8c1845ac-da14-4ed6-9584-14e9cfcc07d2",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/x-ai/grok-4.5",
+      "fromSnapshotId": "447ada8a-409d-4595-9b76-07b47b064973",
+      "toSnapshotId": "5076b9d4-833a-49e6-9c0b-f298c8c623da",
+      "detectedAt": "2026-08-04T19:44:53.145Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "x-ai/grok-4.5",
+              "name"
+            ],
+            "after": "SpaceXAI: Grok 4.5",
+            "before": "xAI: Grok 4.5"
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Display name changed from 'xAI: Grok 4.5' to 'SpaceXAI: Grok 4.5'; model id unchanged, no API-breaking effect."
+    },
+    {
+      "id": "8e1d681e-e94e-49c1-86dd-b183dad121ef",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/x-ai/grok-4.3",
+      "fromSnapshotId": "447ada8a-409d-4595-9b76-07b47b064973",
+      "toSnapshotId": "5076b9d4-833a-49e6-9c0b-f298c8c623da",
+      "detectedAt": "2026-08-04T19:44:46.028Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "x-ai/grok-4.3",
+              "name"
+            ],
+            "after": "SpaceXAI: Grok 4.3",
+            "before": "xAI: Grok 4.3"
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.8,
+      "classifiedBy": "llm",
+      "notes": "Model display name changed; agents relying on it for identification may be misled."
+    },
+    {
+      "id": "04c49c36-65e2-40cc-b1c4-b201fd0d3fe8",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/x-ai/grok-4.20-multi-agent",
+      "fromSnapshotId": "447ada8a-409d-4595-9b76-07b47b064973",
+      "toSnapshotId": "5076b9d4-833a-49e6-9c0b-f298c8c623da",
+      "detectedAt": "2026-08-04T19:44:40.146Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "x-ai/grok-4.20-multi-agent",
+              "name"
+            ],
+            "after": "SpaceXAI: Grok 4.20 Multi-Agent",
+            "before": "xAI: Grok 4.20 Multi-Agent"
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Model display name changed from 'xAI: Grok 4.20 Multi-Agent' to 'SpaceXAI: Grok 4.20 Multi-Agent', which may mislead agents relying on the name."
+    },
+    {
+      "id": "414e5821-a899-4402-92a0-fee9a7c9fc20",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/x-ai/grok-4.20",
+      "fromSnapshotId": "447ada8a-409d-4595-9b76-07b47b064973",
+      "toSnapshotId": "5076b9d4-833a-49e6-9c0b-f298c8c623da",
+      "detectedAt": "2026-08-04T19:44:29.860Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "x-ai/grok-4.20",
+              "name"
+            ],
+            "after": "SpaceXAI: Grok 4.20",
+            "before": "xAI: Grok 4.20"
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 0.7,
+      "classifiedBy": "llm",
+      "notes": "Model display name changed, potentially breaking consumers that rely on the name string."
+    },
+    {
+      "id": "b94ae219-7b58-4537-9b57-6bfec8ae37e1",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/mistralai/mistral-small-3.2-24b-instruct",
+      "fromSnapshotId": "447ada8a-409d-4595-9b76-07b47b064973",
+      "toSnapshotId": "5076b9d4-833a-49e6-9c0b-f298c8c623da",
+      "detectedAt": "2026-08-04T19:44:19.837Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "mistralai/mistral-small-3.2-24b-instruct",
+              "inputPer1m"
+            ],
+            "after": 0.09375,
+            "before": 0.075
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "mistralai/mistral-small-3.2-24b-instruct",
+              "outputPer1m"
+            ],
+            "after": 0.25,
+            "before": 0.2
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "price increases for both input and output"
+    },
+    {
+      "id": "d489eb9d-e501-492d-b6d7-da2a487f5e00",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/minimax/minimax-m2.7",
+      "fromSnapshotId": "447ada8a-409d-4595-9b76-07b47b064973",
+      "toSnapshotId": "5076b9d4-833a-49e6-9c0b-f298c8c623da",
+      "detectedAt": "2026-08-04T19:44:17.904Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "minimax/minimax-m2.7",
+              "cacheReadPer1m"
+            ],
+            "after": 0.054,
+            "before": 0.05
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "minimax/minimax-m2.7",
+              "inputPer1m"
+            ],
+            "after": 0.27,
+            "before": 0.25
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "minimax/minimax-m2.7",
+              "outputPer1m"
+            ],
+            "after": 1.08,
+            "before": 1
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Price increases for input, output, and cache read for minimax-m2.7"
+    },
+    {
       "id": "ee13df45-4b87-4b65-8d58-3c2c88a11ed7",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/qwen/qwen2.5-vl-72b-instruct",
@@ -1777,244 +1989,6 @@
       "confidence": 1,
       "classifiedBy": "llm",
       "notes": "REMOVED model endpoint breaks callers referencing it"
-    },
-    {
-      "id": "4d9aa31c-7c75-4e85-a5d6-a4f35d38810e",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/gpt-5-mini:batch",
-      "fromSnapshotId": "edbc801f-1dd8-4285-bf59-afc5f33bab5c",
-      "toSnapshotId": "3f31ce92-f38b-41eb-b38a-4a80fb000b0d",
-      "detectedAt": "2026-07-31T19:45:14.544Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "removed",
-            "path": [
-              "models",
-              "openai/gpt-5-mini:batch"
-            ],
-            "before": {
-              "name": "OpenAI: GPT-5 Mini (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.125,
-              "outputPer1m": 1,
-              "contextLength": 400000,
-              "cacheReadPer1m": 0.0125,
-              "maxOutputTokens": 128000
-            }
-          }
-        ]
-      },
-      "severity": "breaking_strict",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Model removed, callers referencing this model id will break."
-    },
-    {
-      "id": "97273351-5139-4227-a197-07513a005fa9",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/moonshotai/kimi-k2.6",
-      "fromSnapshotId": "edbc801f-1dd8-4285-bf59-afc5f33bab5c",
-      "toSnapshotId": "3f31ce92-f38b-41eb-b38a-4a80fb000b0d",
-      "detectedAt": "2026-07-31T19:45:13.004Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "moonshotai/kimi-k2.6",
-              "cacheReadPer1m"
-            ],
-            "after": 0.0992,
-            "before": 0.16
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "moonshotai/kimi-k2.6",
-              "inputPer1m"
-            ],
-            "after": 0.589,
-            "before": 0.95
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "moonshotai/kimi-k2.6",
-              "outputPer1m"
-            ],
-            "after": 2.48,
-            "before": 4
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "All three changes are price decreases, which are safe per domain guidance."
-    },
-    {
-      "id": "4f8e929c-d4fe-48d6-872d-5872061972f3",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/minimax/minimax-m3:batch",
-      "fromSnapshotId": "edbc801f-1dd8-4285-bf59-afc5f33bab5c",
-      "toSnapshotId": "3f31ce92-f38b-41eb-b38a-4a80fb000b0d",
-      "detectedAt": "2026-07-31T19:45:12.183Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "removed",
-            "path": [
-              "models",
-              "minimax/minimax-m3:batch"
-            ],
-            "before": {
-              "name": "MiniMax: MiniMax M3 (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.15,
-              "outputPer1m": 0.6,
-              "contextLength": 524288,
-              "cacheReadPer1m": 0.03,
-              "maxOutputTokens": null
-            }
-          }
-        ]
-      },
-      "severity": "breaking_strict",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "REMOVED model endpoint breaks callers referencing it"
-    },
-    {
-      "id": "341415d6-04cd-46cb-8011-b12374f7b82c",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/google/gemini-3.6-flash:batch",
-      "fromSnapshotId": "edbc801f-1dd8-4285-bf59-afc5f33bab5c",
-      "toSnapshotId": "3f31ce92-f38b-41eb-b38a-4a80fb000b0d",
-      "detectedAt": "2026-07-31T19:45:08.536Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "removed",
-            "path": [
-              "models",
-              "google/gemini-3.6-flash:batch"
-            ],
-            "before": {
-              "name": "Google: Gemini 3.6 Flash (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.75,
-              "outputPer1m": 3.75,
-              "contextLength": 1048576,
-              "cacheReadPer1m": 0.075,
-              "cacheWritePer1m": 0.083333,
-              "maxOutputTokens": 65536
-            }
-          }
-        ]
-      },
-      "severity": "breaking_strict",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Model removed, callers of this model id will break."
-    },
-    {
-      "id": "e38dde2f-b4e9-408e-b822-01bce7ac138c",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/google/gemini-3.5-flash:batch",
-      "fromSnapshotId": "edbc801f-1dd8-4285-bf59-afc5f33bab5c",
-      "toSnapshotId": "3f31ce92-f38b-41eb-b38a-4a80fb000b0d",
-      "detectedAt": "2026-07-31T19:45:05.886Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "removed",
-            "path": [
-              "models",
-              "google/gemini-3.5-flash:batch"
-            ],
-            "before": {
-              "name": "Google: Gemini 3.5 Flash (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.75,
-              "outputPer1m": 4.5,
-              "contextLength": 1048576,
-              "cacheReadPer1m": 0.075,
-              "maxOutputTokens": 65536
-            }
-          }
-        ]
-      },
-      "severity": "breaking_strict",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Model removed"
-    },
-    {
-      "id": "f26d788d-d33b-498e-b808-142f66f6b23e",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/google/gemini-3.5-flash-lite:batch",
-      "fromSnapshotId": "edbc801f-1dd8-4285-bf59-afc5f33bab5c",
-      "toSnapshotId": "3f31ce92-f38b-41eb-b38a-4a80fb000b0d",
-      "detectedAt": "2026-07-31T19:45:02.526Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "removed",
-            "path": [
-              "models",
-              "google/gemini-3.5-flash-lite:batch"
-            ],
-            "before": {
-              "name": "Google: Gemini 3.5 Flash Lite (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.15,
-              "outputPer1m": 1.25,
-              "contextLength": 1048576,
-              "cacheReadPer1m": 0.015,
-              "maxOutputTokens": 65536
-            }
-          }
-        ]
-      },
-      "severity": "breaking_strict",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Model removed, callers referencing this model ID will break."
-    },
-    {
-      "id": "4893d895-0f98-4f36-9b4e-de9d711422aa",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/google/gemini-3.1-pro-preview:batch",
-      "fromSnapshotId": "edbc801f-1dd8-4285-bf59-afc5f33bab5c",
-      "toSnapshotId": "3f31ce92-f38b-41eb-b38a-4a80fb000b0d",
-      "detectedAt": "2026-07-31T19:45:01.473Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "removed",
-            "path": [
-              "models",
-              "google/gemini-3.1-pro-preview:batch"
-            ],
-            "before": {
-              "name": "Google: Gemini 3.1 Pro Preview (batch)",
-              "currency": "USD",
-              "inputPer1m": 1,
-              "outputPer1m": 6,
-              "contextLength": 1048576,
-              "maxOutputTokens": 65536
-            }
-          }
-        ]
-      },
-      "severity": "breaking_strict",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Model removed, breaking any caller referencing that ID."
     }
   ]
 }
