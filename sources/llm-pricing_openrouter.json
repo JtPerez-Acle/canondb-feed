@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-05T07:44:14.708Z",
+    "fetchedAt": "2026-08-05T13:44:14.068Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -2721,8 +2721,8 @@
         "qwen/qwen3-vl-235b-a22b-thinking": {
           "name": "Qwen: Qwen3 VL 235B A22B Thinking",
           "currency": "USD",
-          "inputPer1m": 0.98,
-          "outputPer1m": 3.95,
+          "inputPer1m": 0.4,
+          "outputPer1m": 4,
           "contextLength": 131072,
           "maxOutputTokens": 32768
         },

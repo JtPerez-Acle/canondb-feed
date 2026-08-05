@@ -2,6 +2,42 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "804ea8eb-220c-49cc-b7f4-75f3efae5a7e",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3-vl-235b-a22b-thinking",
+      "fromSnapshotId": "47af452a-e740-49ff-a47f-1d81d1719c3b",
+      "toSnapshotId": "dcc61994-3425-491d-807d-50c401648fa4",
+      "detectedAt": "2026-08-05T13:44:21.254Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-vl-235b-a22b-thinking",
+              "inputPer1m"
+            ],
+            "after": 0.4,
+            "before": 0.98
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-vl-235b-a22b-thinking",
+              "outputPer1m"
+            ],
+            "after": 4,
+            "before": 3.95
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Output price increased from 3.95 to 4, a price increase that silently increases cost for agents."
+    },
+    {
       "id": "39a2f9a8-f171-4d21-a316-9b7cb5c33328",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/x-ai/grok-build-0.1",
@@ -1957,38 +1993,6 @@
       "confidence": 1,
       "classifiedBy": "llm",
       "notes": "Model removed"
-    },
-    {
-      "id": "c6e1bd3e-3507-4a06-af13-d88a92ea0940",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/gpt-5-nano:batch",
-      "fromSnapshotId": "edbc801f-1dd8-4285-bf59-afc5f33bab5c",
-      "toSnapshotId": "3f31ce92-f38b-41eb-b38a-4a80fb000b0d",
-      "detectedAt": "2026-07-31T19:45:20.853Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "removed",
-            "path": [
-              "models",
-              "openai/gpt-5-nano:batch"
-            ],
-            "before": {
-              "name": "OpenAI: GPT-5 Nano (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.025,
-              "outputPer1m": 0.2,
-              "contextLength": 400000,
-              "cacheReadPer1m": 0.0025,
-              "maxOutputTokens": 128000
-            }
-          }
-        ]
-      },
-      "severity": "breaking_strict",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "REMOVED model endpoint breaks callers referencing it"
     }
   ]
 }
