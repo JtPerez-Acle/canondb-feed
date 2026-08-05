@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-05T13:44:14.068Z",
+    "fetchedAt": "2026-08-05T19:44:15.227Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -92,11 +92,11 @@
         "z-ai/glm-5.1": {
           "name": "Z.ai: GLM 5.1",
           "currency": "USD",
-          "inputPer1m": 0.966,
-          "outputPer1m": 3.036,
+          "inputPer1m": 0.952,
+          "outputPer1m": 2.992,
           "contextLength": 204800,
-          "cacheReadPer1m": 0.1794,
-          "maxOutputTokens": 128000
+          "cacheReadPer1m": 0.1768,
+          "maxOutputTokens": 131072
         },
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
@@ -880,9 +880,9 @@
           "currency": "USD",
           "inputPer1m": 0.15,
           "outputPer1m": 0.6,
-          "contextLength": 128000,
+          "contextLength": 131072,
           "cacheReadPer1m": 0.015,
-          "maxOutputTokens": null
+          "maxOutputTokens": 131072
         },
         "x-ai/grok-build-0.1": {
           "name": "SpaceXAI: Grok Build 0.1",
@@ -937,7 +937,7 @@
         "minimax/minimax-m2.5": {
           "name": "MiniMax: MiniMax M2.5",
           "currency": "USD",
-          "inputPer1m": 0.15,
+          "inputPer1m": 0.22,
           "outputPer1m": 0.9,
           "contextLength": 204800,
           "cacheReadPer1m": 0.05,
@@ -1801,7 +1801,7 @@
         "moonshotai/kimi-k2.7-code": {
           "name": "MoonshotAI: Kimi K2.7 Code",
           "currency": "USD",
-          "inputPer1m": 0.73,
+          "inputPer1m": 0.7,
           "outputPer1m": 3.5,
           "contextLength": 262144,
           "cacheReadPer1m": 0.15,
@@ -1859,10 +1859,10 @@
         "qwen/qwen3-235b-a22b-2507": {
           "name": "Qwen: Qwen3 235B A22B Instruct 2507",
           "currency": "USD",
-          "inputPer1m": 0.1495,
-          "outputPer1m": 0.598,
+          "inputPer1m": 0.09,
+          "outputPer1m": 0.55,
           "contextLength": 262144,
-          "maxOutputTokens": 32768
+          "maxOutputTokens": 16384
         },
         "qwen/qwen3-vl-8b-instruct": {
           "name": "Qwen: Qwen3 VL 8B Instruct",
