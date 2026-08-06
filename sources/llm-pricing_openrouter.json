@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-06T01:44:14.969Z",
+    "fetchedAt": "2026-08-06T07:44:15.086Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -376,10 +376,11 @@
         "qwen/qwen3.6-27b": {
           "name": "Qwen: Qwen3.6 27B",
           "currency": "USD",
-          "inputPer1m": 0.289,
-          "outputPer1m": 2.4,
+          "inputPer1m": 0.6,
+          "outputPer1m": 3.6,
           "contextLength": 262144,
-          "maxOutputTokens": 131072
+          "cacheReadPer1m": 0.12,
+          "maxOutputTokens": 262144
         },
         "qwen/qwen3.7-max": {
           "name": "Qwen: Qwen3.7 Max",

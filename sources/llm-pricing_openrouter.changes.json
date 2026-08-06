@@ -2,6 +2,61 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "50d7a74b-8076-41c4-9317-771954a8e1a0",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3.6-27b",
+      "fromSnapshotId": "1c457f2b-4e64-4ca4-b1d5-ebfe785782e8",
+      "toSnapshotId": "215b3f3c-2388-4aec-95cb-fbe49dd765c4",
+      "detectedAt": "2026-08-06T07:44:35.272Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "models",
+              "qwen/qwen3.6-27b",
+              "cacheReadPer1m"
+            ],
+            "after": 0.12
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.6-27b",
+              "inputPer1m"
+            ],
+            "after": 0.6,
+            "before": 0.289
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.6-27b",
+              "maxOutputTokens"
+            ],
+            "after": 262144,
+            "before": 131072
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.6-27b",
+              "outputPer1m"
+            ],
+            "after": 3.6,
+            "before": 2.4
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.5,
+      "classifiedBy": "rules",
+      "notes": "llm fallback (This operation was aborted); field value(s) changed"
+    },
+    {
       "id": "8eb940ba-69ab-465a-b58f-968a8385e05a",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/qwen/qwen3-vl-235b-a22b-thinking",
@@ -2005,52 +2060,6 @@
       "confidence": 0.95,
       "classifiedBy": "llm",
       "notes": "Price increased from 0.27 to 0.28 per 1M output tokens (breaking_agent); output token limit increased from 32768 to 262144 (safe). Overall, the price increase is a semantic change that silently increases cost for agents."
-    },
-    {
-      "id": "fabf8494-aae5-4709-9976-8df225e5d857",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/moonshotai/kimi-k2.6",
-      "fromSnapshotId": "3f31ce92-f38b-41eb-b38a-4a80fb000b0d",
-      "toSnapshotId": "c61db83d-06ed-4b2c-8aec-ddcf7493d560",
-      "detectedAt": "2026-08-01T01:44:17.168Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "moonshotai/kimi-k2.6",
-              "cacheReadPer1m"
-            ],
-            "after": 0.2,
-            "before": 0.0992
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "moonshotai/kimi-k2.6",
-              "inputPer1m"
-            ],
-            "after": 0.6,
-            "before": 0.589
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "moonshotai/kimi-k2.6",
-              "outputPer1m"
-            ],
-            "after": 3.41,
-            "before": 2.48
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "Prices for cache read, input, and output all increased for kimi-k2.6 model."
     }
   ]
 }
