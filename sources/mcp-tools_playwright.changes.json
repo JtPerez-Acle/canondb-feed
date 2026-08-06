@@ -2,6 +2,96 @@
   "id": "mcp-tools:playwright",
   "changes": [
     {
+      "id": "14043f35-fcf1-4886-a64e-3d3f76a53f7e",
+      "sourceId": "mcp-tools:playwright",
+      "entityId": "tools/browser_take_screenshot",
+      "fromSnapshotId": "ffe8d5ed-61b7-44bf-ab07-12d172c204a6",
+      "toSnapshotId": "2d53528d-e87b-4639-a24a-14189ab36b17",
+      "detectedAt": "2026-08-06T01:30:28.746Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "browser_take_screenshot",
+              "inputSchema",
+              "properties",
+              "filename",
+              "description"
+            ],
+            "after": "File name to save the screenshot to. Defaults to `page-{timestamp}.{png|jpeg|webp}` if not specified. Prefer relative file names to stay within the output directory.",
+            "before": "File name to save the screenshot to. Defaults to `page-{timestamp}.{png|jpeg}` if not specified. Prefer relative file names to stay within the output directory."
+          },
+          {
+            "kind": "removed",
+            "path": [
+              "tools",
+              "browser_take_screenshot",
+              "inputSchema",
+              "properties",
+              "type",
+              "default"
+            ],
+            "before": "png"
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "browser_take_screenshot",
+              "inputSchema",
+              "properties",
+              "type",
+              "description"
+            ],
+            "after": "Image format for the screenshot. If unset, inferred from the filename extension, otherwise png.",
+            "before": "Image format for the screenshot. Default is png."
+          },
+          {
+            "kind": "added",
+            "path": [
+              "tools",
+              "browser_take_screenshot",
+              "inputSchema",
+              "properties",
+              "type",
+              "enum",
+              "2"
+            ],
+            "after": "webp"
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "browser_take_screenshot",
+              "inputSchema",
+              "required",
+              "0"
+            ],
+            "after": "scale",
+            "before": "type"
+          },
+          {
+            "kind": "removed",
+            "path": [
+              "tools",
+              "browser_take_screenshot",
+              "inputSchema",
+              "required",
+              "1"
+            ],
+            "before": "scale"
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.8,
+      "classifiedBy": "llm",
+      "notes": "Removed default for 'type' and changed semantics: default now inferred from filename extension instead of always png. This may silently change output format for callers relying on default."
+    },
+    {
       "id": "459a2c5f-9146-4433-a08f-a87a8bb11e1d",
       "sourceId": "mcp-tools:playwright",
       "entityId": "tools/browser_find",
