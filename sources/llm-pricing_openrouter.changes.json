@@ -2,6 +2,227 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "c130d7cb-407b-4f4b-bb13-866b54ee0b50",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "6c68f92c-64cb-4f42-8668-bb1d7d346a48",
+      "toSnapshotId": "81032d8b-bd5c-4e40-9d3b-8f1bbf2f1592",
+      "detectedAt": "2026-08-06T19:45:03.710Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.1014,
+            "before": 0.104
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.546,
+            "before": 0.56
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "maxOutputTokens"
+            ],
+            "after": 131072,
+            "before": 128000
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 1.716,
+            "before": 1.76
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "All changes are price decreases or output-cap increase, which are favorable to consumers."
+    },
+    {
+      "id": "c7c4d613-bdf4-4632-a581-80beb26a112b",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3.6-35b-a3b",
+      "fromSnapshotId": "6c68f92c-64cb-4f42-8668-bb1d7d346a48",
+      "toSnapshotId": "81032d8b-bd5c-4e40-9d3b-8f1bbf2f1592",
+      "detectedAt": "2026-08-06T19:45:02.766Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "models",
+              "qwen/qwen3.6-35b-a3b",
+              "cacheReadPer1m"
+            ],
+            "after": 0.05
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.7,
+      "classifiedBy": "rules",
+      "notes": "llm fallback (This operation was aborted); additions only"
+    },
+    {
+      "id": "5c77d6d0-131d-4ade-9a3e-3b16eb7bd45a",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/inclusionai/ling-3.0-tiny:free",
+      "fromSnapshotId": "6c68f92c-64cb-4f42-8668-bb1d7d346a48",
+      "toSnapshotId": "81032d8b-bd5c-4e40-9d3b-8f1bbf2f1592",
+      "detectedAt": "2026-08-06T19:44:42.757Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "models",
+              "inclusionai/ling-3.0-tiny:free"
+            ],
+            "after": {
+              "name": "inclusionAI: Ling 3.0 Tiny (free)",
+              "currency": "USD",
+              "inputPer1m": 0,
+              "outputPer1m": 0,
+              "contextLength": 262144,
+              "maxOutputTokens": 32768
+            }
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "ADDED new model with free pricing; no breaking change to existing callers."
+    },
+    {
+      "id": "3310a4ce-5cd8-430c-b298-1fca9a8e6b33",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/inclusionai/ling-3.0-flash:free",
+      "fromSnapshotId": "6c68f92c-64cb-4f42-8668-bb1d7d346a48",
+      "toSnapshotId": "81032d8b-bd5c-4e40-9d3b-8f1bbf2f1592",
+      "detectedAt": "2026-08-06T19:44:28.366Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "models",
+              "inclusionai/ling-3.0-flash:free"
+            ],
+            "before": {
+              "name": "Ling-3.0-flash (free)",
+              "currency": "USD",
+              "inputPer1m": 0,
+              "outputPer1m": 0,
+              "contextLength": 262144,
+              "maxOutputTokens": 32768
+            }
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "model removed"
+    },
+    {
+      "id": "17716f1e-5698-477d-9b53-9e8f8ab0225d",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/inclusionai/ling-3.0-flash",
+      "fromSnapshotId": "6c68f92c-64cb-4f42-8668-bb1d7d346a48",
+      "toSnapshotId": "81032d8b-bd5c-4e40-9d3b-8f1bbf2f1592",
+      "detectedAt": "2026-08-06T19:44:26.947Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "inclusionai/ling-3.0-flash",
+              "contextLength"
+            ],
+            "after": 262144,
+            "before": 131072
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "The context length increased, which is a favorable change (no truncation risk) and does not break callers."
+    },
+    {
+      "id": "9555b0d7-9f3f-419c-b027-60bed4b8ead0",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/google/gemini-3-flash-preview:batch",
+      "fromSnapshotId": "6c68f92c-64cb-4f42-8668-bb1d7d346a48",
+      "toSnapshotId": "81032d8b-bd5c-4e40-9d3b-8f1bbf2f1592",
+      "detectedAt": "2026-08-06T19:44:23.354Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "google/gemini-3-flash-preview:batch",
+              "maxOutputTokens"
+            ],
+            "after": 65536,
+            "before": 65535
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "输出token上限增加，对用户有利"
+    },
+    {
+      "id": "3d06fff9-4e3a-49a9-9b36-b0cfe5da23a0",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/google/gemini-3-flash-preview",
+      "fromSnapshotId": "6c68f92c-64cb-4f42-8668-bb1d7d346a48",
+      "toSnapshotId": "81032d8b-bd5c-4e40-9d3b-8f1bbf2f1592",
+      "detectedAt": "2026-08-06T19:44:21.025Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "google/gemini-3-flash-preview",
+              "maxOutputTokens"
+            ],
+            "after": 65536,
+            "before": 65535
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Output token limit increased from 65535 to 65536, which is a favorable change."
+    },
+    {
       "id": "a059dd6e-4552-4d70-83c5-a4f78e266434",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2:batch",
@@ -1400,229 +1621,6 @@
       "confidence": 1,
       "classifiedBy": "llm",
       "notes": "maxOutputTokens increased"
-    },
-    {
-      "id": "a6df0a1c-b3de-44b1-8c8c-53706ab503f2",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/google/gemini-3.6-flash:batch",
-      "fromSnapshotId": "215b3f3c-2388-4aec-95cb-fbe49dd765c4",
-      "toSnapshotId": "6c68f92c-64cb-4f42-8668-bb1d7d346a48",
-      "detectedAt": "2026-08-06T13:45:10.154Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "google/gemini-3.6-flash:batch"
-            ],
-            "after": {
-              "name": "Google: Gemini 3.6 Flash (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.75,
-              "outputPer1m": 3.75,
-              "contextLength": 1048576,
-              "cacheReadPer1m": 0.075,
-              "cacheWritePer1m": 0.083333,
-              "maxOutputTokens": 65536
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "New model added"
-    },
-    {
-      "id": "0169f7f3-af66-4005-994f-94fdacd25bd0",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/google/gemini-3.5-flash:batch",
-      "fromSnapshotId": "215b3f3c-2388-4aec-95cb-fbe49dd765c4",
-      "toSnapshotId": "6c68f92c-64cb-4f42-8668-bb1d7d346a48",
-      "detectedAt": "2026-08-06T13:45:07.000Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "google/gemini-3.5-flash:batch"
-            ],
-            "after": {
-              "name": "Google: Gemini 3.5 Flash (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.75,
-              "outputPer1m": 4.5,
-              "contextLength": 1048576,
-              "cacheReadPer1m": 0.075,
-              "maxOutputTokens": 65536
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "New model added: Google Gemini 3.5 Flash (batch). No existing consumers affected."
-    },
-    {
-      "id": "d7f6d375-4f73-4a55-8111-6e68d6f25276",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/google/gemini-3.5-flash-lite:batch",
-      "fromSnapshotId": "215b3f3c-2388-4aec-95cb-fbe49dd765c4",
-      "toSnapshotId": "6c68f92c-64cb-4f42-8668-bb1d7d346a48",
-      "detectedAt": "2026-08-06T13:45:04.931Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "google/gemini-3.5-flash-lite:batch"
-            ],
-            "after": {
-              "name": "Google: Gemini 3.5 Flash Lite (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.15,
-              "outputPer1m": 1.25,
-              "contextLength": 1048576,
-              "cacheReadPer1m": 0.015,
-              "maxOutputTokens": 65536
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "New model added."
-    },
-    {
-      "id": "021364cb-ae6d-4538-868a-732586b78688",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/google/gemini-3.1-pro-preview:batch",
-      "fromSnapshotId": "215b3f3c-2388-4aec-95cb-fbe49dd765c4",
-      "toSnapshotId": "6c68f92c-64cb-4f42-8668-bb1d7d346a48",
-      "detectedAt": "2026-08-06T13:45:01.512Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "google/gemini-3.1-pro-preview:batch"
-            ],
-            "after": {
-              "name": "Google: Gemini 3.1 Pro Preview (batch)",
-              "currency": "USD",
-              "inputPer1m": 1,
-              "outputPer1m": 6,
-              "contextLength": 1048576,
-              "maxOutputTokens": 65536
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "new batch model added, no existing consumers broken"
-    },
-    {
-      "id": "64cd853a-94f5-469c-9e55-782b44efc71c",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/google/gemini-3.1-flash-lite:batch",
-      "fromSnapshotId": "215b3f3c-2388-4aec-95cb-fbe49dd765c4",
-      "toSnapshotId": "6c68f92c-64cb-4f42-8668-bb1d7d346a48",
-      "detectedAt": "2026-08-06T13:44:59.335Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "google/gemini-3.1-flash-lite:batch"
-            ],
-            "after": {
-              "name": "Google: Gemini 3.1 Flash Lite (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.125,
-              "outputPer1m": 0.75,
-              "contextLength": 1048576,
-              "cacheReadPer1m": 0.0125,
-              "maxOutputTokens": 65536
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Added new model"
-    },
-    {
-      "id": "e73fdc9e-d14f-432a-a240-a589b7349f20",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/google/gemini-3-flash-preview:batch",
-      "fromSnapshotId": "215b3f3c-2388-4aec-95cb-fbe49dd765c4",
-      "toSnapshotId": "6c68f92c-64cb-4f42-8668-bb1d7d346a48",
-      "detectedAt": "2026-08-06T13:44:57.162Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "google/gemini-3-flash-preview:batch"
-            ],
-            "after": {
-              "name": "Google: Gemini 3 Flash Preview (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.25,
-              "outputPer1m": 1.5,
-              "contextLength": 1048576,
-              "maxOutputTokens": 65535
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Added a new model entry; no existing model removed or changed."
-    },
-    {
-      "id": "7f5ea2bd-b5f3-4ebb-9d02-11b867704004",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/google/gemini-2.5-pro:batch",
-      "fromSnapshotId": "215b3f3c-2388-4aec-95cb-fbe49dd765c4",
-      "toSnapshotId": "6c68f92c-64cb-4f42-8668-bb1d7d346a48",
-      "detectedAt": "2026-08-06T13:44:54.384Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "google/gemini-2.5-pro:batch"
-            ],
-            "after": {
-              "name": "Google: Gemini 2.5 Pro (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.625,
-              "outputPer1m": 5,
-              "contextLength": 1048576,
-              "cacheReadPer1m": 0.125,
-              "maxOutputTokens": 65536
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "New model added"
     }
   ]
 }
