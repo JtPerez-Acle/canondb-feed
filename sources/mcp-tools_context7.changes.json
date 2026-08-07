@@ -2,6 +2,60 @@
   "id": "mcp-tools:context7",
   "changes": [
     {
+      "id": "4fcd51ec-be1e-44b6-b0dc-e095f91a4e64",
+      "sourceId": "mcp-tools:context7",
+      "entityId": "tools/resolve-library-id",
+      "fromSnapshotId": "0e26724f-17b4-44c8-b32e-ece8002e6953",
+      "toSnapshotId": "f431972d-42a9-4fa8-9826-fc1aade7e0ee",
+      "detectedAt": "2026-08-07T13:44:38.567Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "resolve-library-id",
+              "inputSchema",
+              "$schema"
+            ],
+            "after": "https://json-schema.org/draft/2020-12/schema",
+            "before": "http://json-schema.org/draft-07/schema#"
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "The $schema URL update is a metadata change; no actual constraints or fields altered."
+    },
+    {
+      "id": "bdda6358-1ef7-4543-977a-31b1c071b97c",
+      "sourceId": "mcp-tools:context7",
+      "entityId": "tools/query-docs",
+      "fromSnapshotId": "0e26724f-17b4-44c8-b32e-ece8002e6953",
+      "toSnapshotId": "f431972d-42a9-4fa8-9826-fc1aade7e0ee",
+      "detectedAt": "2026-08-07T13:44:33.265Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "query-docs",
+              "inputSchema",
+              "$schema"
+            ],
+            "after": "https://json-schema.org/draft/2020-12/schema",
+            "before": "http://json-schema.org/draft-07/schema#"
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.7,
+      "classifiedBy": "llm",
+      "notes": "Changed JSON Schema draft version may alter validation semantics."
+    },
+    {
       "id": "10abdcc3-854f-40f0-9e29-52d43dc85029",
       "sourceId": "mcp-tools:context7",
       "entityId": "tools/resolve-library-id",

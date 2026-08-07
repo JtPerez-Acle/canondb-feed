@@ -2,6 +2,62 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "985d1715-447e-4445-8819-f6e3141b7403",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "a34e58f4-7e90-452e-b129-df7e7aa88adf",
+      "toSnapshotId": "a5927a97-b9fb-4e62-9f5b-84a5f1261bb4",
+      "detectedAt": "2026-08-07T13:44:22.277Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.14,
+            "before": 0.12662
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.76,
+            "before": 0.6818
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "maxOutputTokens"
+            ],
+            "after": 262144,
+            "before": 131072
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 2.42,
+            "before": 2.1428
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Price increases for cacheRead, input, and output per 1M tokens silently raise costs for agents."
+    },
+    {
       "id": "7fcaf66b-935b-4fd2-bfdf-81f24e4847dd",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/~moonshotai/kimi-latest",
@@ -1655,38 +1711,6 @@
       "confidence": 1,
       "classifiedBy": "llm",
       "notes": "Added new model."
-    },
-    {
-      "id": "83e48cf1-9019-42cd-aec4-f8fcc4605574",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/gpt-4.1-nano:batch",
-      "fromSnapshotId": "215b3f3c-2388-4aec-95cb-fbe49dd765c4",
-      "toSnapshotId": "6c68f92c-64cb-4f42-8668-bb1d7d346a48",
-      "detectedAt": "2026-08-06T13:45:51.573Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "openai/gpt-4.1-nano:batch"
-            ],
-            "after": {
-              "name": "OpenAI: GPT-4.1 Nano (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.05,
-              "outputPer1m": 0.2,
-              "contextLength": 1047576,
-              "cacheReadPer1m": 0.0125,
-              "maxOutputTokens": 32768
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "ADDED new model entry"
     }
   ]
 }

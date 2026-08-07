@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "mcp-tools:huggingface",
-    "fetchedAt": "2026-08-07T07:44:31.314Z",
+    "fetchedAt": "2026-08-07T13:44:38.579Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -41,7 +41,7 @@
           }
         },
         "hf_whoami": {
-          "description": "Hugging Face tools are being used anonymously and may be rate limited. Call this tool for instructions on joining and authenticating.",
+          "description": "Inspect the current Hugging Face authentication context, including the account, visible organization memberships, and credential access details. Read-only and never returns credential values.",
           "inputSchema": {
             "type": "object",
             "$schema": "https://json-schema.org/draft/2020-12/schema",

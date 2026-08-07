@@ -2,6 +2,32 @@
   "id": "mcp-tools:huggingface",
   "changes": [
     {
+      "id": "ce40cc34-3240-4f28-9b8f-494fd779ab78",
+      "sourceId": "mcp-tools:huggingface",
+      "entityId": "tools/hf_whoami",
+      "fromSnapshotId": "880f4f54-6e37-4e72-86c8-f064e524fbb7",
+      "toSnapshotId": "dfc1600b-c70d-4a2e-af2b-fde4687b9bae",
+      "detectedAt": "2026-08-07T13:44:43.911Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "hf_whoami",
+              "description"
+            ],
+            "after": "Inspect the current Hugging Face authentication context, including the account, visible organization memberships, and credential access details. Read-only and never returns credential values.",
+            "before": "Hugging Face tools are being used anonymously and may be rate limited. Call this tool for instructions on joining and authenticating."
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Description-only update, no change to API contract."
+    },
+    {
       "id": "aba50332-a938-4c79-943c-33248e65804b",
       "sourceId": "mcp-tools:huggingface",
       "entityId": "tools/hf_fs",
