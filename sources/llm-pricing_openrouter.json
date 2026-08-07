@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-06T19:44:15.266Z",
+    "fetchedAt": "2026-08-07T01:44:15.273Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -1461,10 +1461,10 @@
         "qwen/qwen3.5-122b-a10b": {
           "name": "Qwen: Qwen3.5-122B-A10B",
           "currency": "USD",
-          "inputPer1m": 0.26,
-          "outputPer1m": 2.08,
+          "inputPer1m": 0.29,
+          "outputPer1m": 2.4,
           "contextLength": 262144,
-          "maxOutputTokens": 65536
+          "maxOutputTokens": 81920
         },
         "qwen/qwen3.5-397b-a17b": {
           "name": "Qwen: Qwen3.5 397B A17B",
@@ -2271,10 +2271,10 @@
         "inclusionai/ling-3.0-flash": {
           "name": "Ling-3.0-flash",
           "currency": "USD",
-          "inputPer1m": 0.075,
-          "outputPer1m": 0.22,
+          "inputPer1m": 0.021,
+          "outputPer1m": 0.063,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.015,
+          "cacheReadPer1m": 0.0042,
           "maxOutputTokens": 32768
         },
         "kwaipilot/kat-coder-pro-v2": {
@@ -3211,8 +3211,8 @@
         "qwen/qwen3-vl-235b-a22b-thinking": {
           "name": "Qwen: Qwen3 VL 235B A22B Thinking",
           "currency": "USD",
-          "inputPer1m": 0.98,
-          "outputPer1m": 3.95,
+          "inputPer1m": 0.4,
+          "outputPer1m": 4,
           "contextLength": 131072,
           "maxOutputTokens": 32768
         },
@@ -3265,10 +3265,10 @@
         "nvidia/nemotron-3-super-120b-a12b": {
           "name": "NVIDIA: Nemotron 3 Super",
           "currency": "USD",
-          "inputPer1m": 0.085,
-          "outputPer1m": 0.4,
+          "inputPer1m": 0.3,
+          "outputPer1m": 0.9,
           "contextLength": 1000000,
-          "maxOutputTokens": 16384
+          "maxOutputTokens": null
         },
         "nvidia/nemotron-3-ultra-550b-a55b": {
           "name": "NVIDIA: Nemotron 3 Ultra",
