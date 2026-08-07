@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-07T13:44:15.455Z",
+    "fetchedAt": "2026-08-07T19:44:15.781Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -101,11 +101,11 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.76,
-          "outputPer1m": 2.42,
+          "inputPer1m": 0.5166,
+          "outputPer1m": 1.6236,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.14,
-          "maxOutputTokens": 262144
+          "cacheReadPer1m": 0.09594,
+          "maxOutputTokens": 131072
         },
         "mancer/weaver": {
           "name": "Mancer: Weaver (alpha)",
@@ -113,7 +113,7 @@
           "inputPer1m": 0.5,
           "outputPer1m": 0.75,
           "contextLength": 8000,
-          "maxOutputTokens": 2000
+          "maxOutputTokens": 6000
         },
         "openai/gpt-4o": {
           "name": "OpenAI: GPT-4o",
@@ -1035,10 +1035,10 @@
         "moonshotai/kimi-k2.6": {
           "name": "MoonshotAI: Kimi K2.6",
           "currency": "USD",
-          "inputPer1m": 0.589,
-          "outputPer1m": 2.48,
+          "inputPer1m": 0.5795,
+          "outputPer1m": 2.44,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.0992,
+          "cacheReadPer1m": 0.0976,
           "maxOutputTokens": 262144
         },
         "morph/morph-v3-large": {
@@ -1928,7 +1928,7 @@
           "inputPer1m": 0.45,
           "outputPer1m": 0.65,
           "contextLength": 6144,
-          "maxOutputTokens": 2048
+          "maxOutputTokens": 6144
         },
         "anthropic/claude-opus-4.1": {
           "name": "Anthropic: Claude Opus 4.1",
@@ -2228,11 +2228,11 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash 0423",
           "currency": "USD",
-          "inputPer1m": 0.0882,
-          "outputPer1m": 0.1764,
+          "inputPer1m": 0.14,
+          "outputPer1m": 0.28,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.01764,
-          "maxOutputTokens": 131072
+          "cacheReadPer1m": 0.028,
+          "maxOutputTokens": 393216
         },
         "google/gemma-4-31b-it:free": {
           "name": "Google: Gemma 4 31B (free)",
@@ -3197,7 +3197,7 @@
           "inputPer1m": 0.15,
           "outputPer1m": 1.2,
           "contextLength": 262144,
-          "maxOutputTokens": null
+          "maxOutputTokens": 262144
         },
         "qwen/qwen3-vl-235b-a22b-instruct": {
           "name": "Qwen: Qwen3 VL 235B A22B Instruct",
@@ -3265,10 +3265,10 @@
         "nvidia/nemotron-3-super-120b-a12b": {
           "name": "NVIDIA: Nemotron 3 Super",
           "currency": "USD",
-          "inputPer1m": 0.3,
-          "outputPer1m": 0.9,
+          "inputPer1m": 0.085,
+          "outputPer1m": 0.4,
           "contextLength": 1000000,
-          "maxOutputTokens": null
+          "maxOutputTokens": 16384
         },
         "nvidia/nemotron-3-ultra-550b-a55b": {
           "name": "NVIDIA: Nemotron 3 Ultra",
