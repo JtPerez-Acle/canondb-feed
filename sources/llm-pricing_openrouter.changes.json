@@ -2,6 +2,160 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "7fcaf66b-935b-4fd2-bfdf-81f24e4847dd",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/~moonshotai/kimi-latest",
+      "fromSnapshotId": "0fec8a6a-ad49-496c-b9dc-b896a45e8424",
+      "toSnapshotId": "a34e58f4-7e90-452e-b129-df7e7aa88adf",
+      "detectedAt": "2026-08-07T07:44:30.521Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "~moonshotai/kimi-latest",
+              "inputPer1m"
+            ],
+            "after": 2.5,
+            "before": 2.9
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Price decreased from 2.9 to 2.5 per 1M input tokens."
+    },
+    {
+      "id": "a29aea45-2998-46a8-9fb3-3839a9fc655b",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "0fec8a6a-ad49-496c-b9dc-b896a45e8424",
+      "toSnapshotId": "a34e58f4-7e90-452e-b129-df7e7aa88adf",
+      "detectedAt": "2026-08-07T07:44:26.969Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.12662,
+            "before": 0.1014
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.6818,
+            "before": 0.546
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 2.1428,
+            "before": 1.716
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Price increase for model glm-5.2"
+    },
+    {
+      "id": "864e0051-a880-4050-b121-a2789e396011",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/thinkingmachines/inkling-small",
+      "fromSnapshotId": "0fec8a6a-ad49-496c-b9dc-b896a45e8424",
+      "toSnapshotId": "a34e58f4-7e90-452e-b129-df7e7aa88adf",
+      "detectedAt": "2026-08-07T07:44:24.576Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "thinkingmachines/inkling-small",
+              "inputPer1m"
+            ],
+            "after": 0.45,
+            "before": 0.5
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "thinkingmachines/inkling-small",
+              "maxOutputTokens"
+            ],
+            "after": 262144,
+            "before": null
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Price decrease for inkling-small; maxOutputTokens added from null is favorable"
+    },
+    {
+      "id": "7159a62b-ae2a-4712-b14f-d0f799881d88",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/moonshotai/kimi-k2.6",
+      "fromSnapshotId": "0fec8a6a-ad49-496c-b9dc-b896a45e8424",
+      "toSnapshotId": "a34e58f4-7e90-452e-b129-df7e7aa88adf",
+      "detectedAt": "2026-08-07T07:44:19.698Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.6",
+              "cacheReadPer1m"
+            ],
+            "after": 0.0992,
+            "before": 0.096
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.6",
+              "inputPer1m"
+            ],
+            "after": 0.589,
+            "before": 0.57
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.6",
+              "outputPer1m"
+            ],
+            "after": 2.48,
+            "before": 2.4
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Price increases for cache read, input, and output tokens for kimi-k2.6 model."
+    },
+    {
       "id": "e8473958-c808-413e-ba0d-8f298c2f36c2",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/qwen/qwen3.5-122b-a10b",
@@ -1533,132 +1687,6 @@
       "confidence": 1,
       "classifiedBy": "llm",
       "notes": "ADDED new model entry"
-    },
-    {
-      "id": "6a91617d-97f3-41b9-a1ee-a8a6ecb342b6",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/gpt-4.1-mini:batch",
-      "fromSnapshotId": "215b3f3c-2388-4aec-95cb-fbe49dd765c4",
-      "toSnapshotId": "6c68f92c-64cb-4f42-8668-bb1d7d346a48",
-      "detectedAt": "2026-08-06T13:45:46.075Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "openai/gpt-4.1-mini:batch"
-            ],
-            "after": {
-              "name": "OpenAI: GPT-4.1 Mini (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.2,
-              "outputPer1m": 0.8,
-              "contextLength": 1047576,
-              "cacheReadPer1m": 0.05,
-              "maxOutputTokens": 32768
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "ADDED new model/pricing entry, no existing callers affected."
-    },
-    {
-      "id": "45ea95db-cf4b-4350-9064-45fef1f42db7",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/gpt-4-turbo:batch",
-      "fromSnapshotId": "215b3f3c-2388-4aec-95cb-fbe49dd765c4",
-      "toSnapshotId": "6c68f92c-64cb-4f42-8668-bb1d7d346a48",
-      "detectedAt": "2026-08-06T13:45:40.074Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "openai/gpt-4-turbo:batch"
-            ],
-            "after": {
-              "name": "OpenAI: GPT-4 Turbo (batch)",
-              "currency": "USD",
-              "inputPer1m": 5,
-              "outputPer1m": 15,
-              "contextLength": 128000,
-              "maxOutputTokens": 4096
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Added a new model entry."
-    },
-    {
-      "id": "4f3bc316-8467-4a5f-ab58-bed2fbd7bb3b",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/gpt-3.5-turbo:batch",
-      "fromSnapshotId": "215b3f3c-2388-4aec-95cb-fbe49dd765c4",
-      "toSnapshotId": "6c68f92c-64cb-4f42-8668-bb1d7d346a48",
-      "detectedAt": "2026-08-06T13:45:36.924Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "openai/gpt-3.5-turbo:batch"
-            ],
-            "after": {
-              "name": "OpenAI: GPT-3.5 Turbo (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.25,
-              "outputPer1m": 0.75,
-              "contextLength": 16385,
-              "maxOutputTokens": 4096
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Added new model entry, no existing consumer affected."
-    },
-    {
-      "id": "13c43bb2-0064-40a1-8001-ab31bb14743c",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/nvidia/nemotron-3-ultra-550b-a55b:batch",
-      "fromSnapshotId": "215b3f3c-2388-4aec-95cb-fbe49dd765c4",
-      "toSnapshotId": "6c68f92c-64cb-4f42-8668-bb1d7d346a48",
-      "detectedAt": "2026-08-06T13:45:35.256Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "nvidia/nemotron-3-ultra-550b-a55b:batch"
-            ],
-            "after": {
-              "name": "NVIDIA: Nemotron 3 Ultra (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.3,
-              "outputPer1m": 1.8,
-              "contextLength": 512288,
-              "cacheReadPer1m": 0.1,
-              "maxOutputTokens": null
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "ADDED new model entry, no removal or price increase."
     }
   ]
 }

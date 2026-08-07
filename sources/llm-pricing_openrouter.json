@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-07T01:44:15.273Z",
+    "fetchedAt": "2026-08-07T07:44:15.811Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -101,10 +101,10 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.546,
-          "outputPer1m": 1.716,
+          "inputPer1m": 0.6818,
+          "outputPer1m": 2.1428,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.1014,
+          "cacheReadPer1m": 0.12662,
           "maxOutputTokens": 131072
         },
         "mancer/weaver": {
@@ -1035,10 +1035,10 @@
         "moonshotai/kimi-k2.6": {
           "name": "MoonshotAI: Kimi K2.6",
           "currency": "USD",
-          "inputPer1m": 0.57,
-          "outputPer1m": 2.4,
+          "inputPer1m": 0.589,
+          "outputPer1m": 2.48,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.096,
+          "cacheReadPer1m": 0.0992,
           "maxOutputTokens": 262144
         },
         "morph/morph-v3-large": {
@@ -1681,7 +1681,7 @@
         "~moonshotai/kimi-latest": {
           "name": "MoonshotAI Kimi Latest",
           "currency": "USD",
-          "inputPer1m": 2.9,
+          "inputPer1m": 2.5,
           "outputPer1m": 14,
           "contextLength": 1048576,
           "cacheReadPer1m": 0.29,
@@ -2949,11 +2949,11 @@
         "thinkingmachines/inkling-small": {
           "name": "Thinking Machines: Inkling Small",
           "currency": "USD",
-          "inputPer1m": 0.5,
+          "inputPer1m": 0.45,
           "outputPer1m": 1.2,
           "contextLength": 524288,
           "cacheReadPer1m": 0.1,
-          "maxOutputTokens": null
+          "maxOutputTokens": 262144
         },
         "thinkingmachines/inkling:batch": {
           "name": "Thinking Machines: Inkling (batch)",
