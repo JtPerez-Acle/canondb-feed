@@ -2,6 +2,154 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "789284f5-4282-4b28-8570-2ca89da02758",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "8291de0e-689b-4011-9a3b-72e94b3b5e39",
+      "toSnapshotId": "d2dc6823-cee4-4a0c-9d0c-753eddaf5019",
+      "detectedAt": "2026-08-08T01:44:24.307Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.08034,
+            "before": 0.09594
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.4326,
+            "before": 0.5166
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 1.3596,
+            "before": 1.6236
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Price decrease on all three fields for an existing model."
+    },
+    {
+      "id": "928bf8e9-99d1-4a51-a7d3-256648fc33a5",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/thinkingmachines/inkling",
+      "fromSnapshotId": "8291de0e-689b-4011-9a3b-72e94b3b5e39",
+      "toSnapshotId": "d2dc6823-cee4-4a0c-9d0c-753eddaf5019",
+      "detectedAt": "2026-08-08T01:44:20.215Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "thinkingmachines/inkling",
+              "cacheReadPer1m"
+            ],
+            "after": 0.16,
+            "before": 0.17
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "thinkingmachines/inkling",
+              "inputPer1m"
+            ],
+            "after": 0.95,
+            "before": 1
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "thinkingmachines/inkling",
+              "maxOutputTokens"
+            ],
+            "after": 262144,
+            "before": null
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Price decreases and an added output limit (previously null) are favorable changes."
+    },
+    {
+      "id": "784d1373-80ae-49d5-ac0a-523904c87657",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/deepseek/deepseek-v3.2",
+      "fromSnapshotId": "8291de0e-689b-4011-9a3b-72e94b3b5e39",
+      "toSnapshotId": "d2dc6823-cee4-4a0c-9d0c-753eddaf5019",
+      "detectedAt": "2026-08-08T01:44:18.327Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "deepseek/deepseek-v3.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.13,
+            "before": 0.1345
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "deepseek/deepseek-v3.2",
+              "inputPer1m"
+            ],
+            "after": 0.26,
+            "before": 0.269
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "deepseek/deepseek-v3.2",
+              "maxOutputTokens"
+            ],
+            "after": 163840,
+            "before": 65536
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "deepseek/deepseek-v3.2",
+              "outputPer1m"
+            ],
+            "after": 0.38,
+            "before": 0.4
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Prices decreased (safe) but maxOutputTokens increased (safe); no breaking changes."
+    },
+    {
       "id": "5fd8da02-ed1a-4d3f-b01e-2fd2135f0049",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -1675,101 +1823,6 @@
       "confidence": 1,
       "classifiedBy": "llm",
       "notes": "New model added"
-    },
-    {
-      "id": "195791b8-d053-49ec-98a2-4ea89728d057",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/gpt-5.2:batch",
-      "fromSnapshotId": "215b3f3c-2388-4aec-95cb-fbe49dd765c4",
-      "toSnapshotId": "6c68f92c-64cb-4f42-8668-bb1d7d346a48",
-      "detectedAt": "2026-08-06T13:46:23.012Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "openai/gpt-5.2:batch"
-            ],
-            "after": {
-              "name": "OpenAI: GPT-5.2 (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.875,
-              "outputPer1m": 7,
-              "contextLength": 400000,
-              "cacheReadPer1m": 0.0875,
-              "maxOutputTokens": 128000
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 0.5,
-      "classifiedBy": "llm",
-      "notes": "Added a new model entry; no existing consumers affected."
-    },
-    {
-      "id": "c3cd8e8f-9ca8-40aa-bdb5-a7c35afef43c",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/gpt-5.2-pro:batch",
-      "fromSnapshotId": "215b3f3c-2388-4aec-95cb-fbe49dd765c4",
-      "toSnapshotId": "6c68f92c-64cb-4f42-8668-bb1d7d346a48",
-      "detectedAt": "2026-08-06T13:46:15.501Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "openai/gpt-5.2-pro:batch"
-            ],
-            "after": {
-              "name": "OpenAI: GPT-5.2 Pro (batch)",
-              "currency": "USD",
-              "inputPer1m": 10.5,
-              "outputPer1m": 84,
-              "contextLength": 400000,
-              "maxOutputTokens": 128000
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Added new model gpt-5.2-pro:batch"
-    },
-    {
-      "id": "89324d71-eedf-4e18-98f7-e8c5caec7178",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/gpt-5.1:batch",
-      "fromSnapshotId": "215b3f3c-2388-4aec-95cb-fbe49dd765c4",
-      "toSnapshotId": "6c68f92c-64cb-4f42-8668-bb1d7d346a48",
-      "detectedAt": "2026-08-06T13:46:12.087Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "openai/gpt-5.1:batch"
-            ],
-            "after": {
-              "name": "OpenAI: GPT-5.1 (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.625,
-              "outputPer1m": 5,
-              "contextLength": 400000,
-              "cacheReadPer1m": 0.0625,
-              "maxOutputTokens": 128000
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Added new model entry, no existing consumer affected."
     }
   ]
 }

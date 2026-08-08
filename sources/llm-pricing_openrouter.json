@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-07T19:44:15.781Z",
+    "fetchedAt": "2026-08-08T01:44:15.864Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -101,10 +101,10 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.5166,
-          "outputPer1m": 1.6236,
+          "inputPer1m": 0.4326,
+          "outputPer1m": 1.3596,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.09594,
+          "cacheReadPer1m": 0.08034,
           "maxOutputTokens": 131072
         },
         "mancer/weaver": {
@@ -1339,11 +1339,11 @@
         "deepseek/deepseek-v3.2": {
           "name": "DeepSeek: DeepSeek V3.2",
           "currency": "USD",
-          "inputPer1m": 0.269,
-          "outputPer1m": 0.4,
+          "inputPer1m": 0.26,
+          "outputPer1m": 0.38,
           "contextLength": 163840,
-          "cacheReadPer1m": 0.1345,
-          "maxOutputTokens": 65536
+          "cacheReadPer1m": 0.13,
+          "maxOutputTokens": 163840
         },
         "google/gemma-3n-e4b-it": {
           "name": "Google: Gemma 3n 4B",
@@ -1916,11 +1916,11 @@
         "thinkingmachines/inkling": {
           "name": "Thinking Machines: Inkling",
           "currency": "USD",
-          "inputPer1m": 1,
+          "inputPer1m": 0.95,
           "outputPer1m": 4.05,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.17,
-          "maxOutputTokens": null
+          "cacheReadPer1m": 0.16,
+          "maxOutputTokens": 262144
         },
         "undi95/remm-slerp-l2-13b": {
           "name": "ReMM SLERP 13B",
