@@ -2,6 +2,114 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "f1c8b851-69dd-44cb-83fd-4aa07351290d",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/~deepseek/deepseek-v4-flash-latest",
+      "fromSnapshotId": "d2dc6823-cee4-4a0c-9d0c-753eddaf5019",
+      "toSnapshotId": "75decb55-c181-41fc-bc7e-c4bdb83a0276",
+      "detectedAt": "2026-08-08T07:44:24.826Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "~deepseek/deepseek-v4-flash-latest",
+              "maxOutputTokens"
+            ],
+            "after": 384000,
+            "before": 65536
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "maxOutputTokens increased, which expands capacity and is favorable."
+    },
+    {
+      "id": "2a8330fd-7249-4fbb-8501-0015db98a701",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "d2dc6823-cee4-4a0c-9d0c-753eddaf5019",
+      "toSnapshotId": "75decb55-c181-41fc-bc7e-c4bdb83a0276",
+      "detectedAt": "2026-08-08T07:44:23.557Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.05148,
+            "before": 0.08034
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.2772,
+            "before": 0.4326
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "maxOutputTokens"
+            ],
+            "after": 128000,
+            "before": 131072
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 0.8712,
+            "before": 1.3596
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "All changes are CHANGED: cache read and input/output prices decreased (favorable, safe), but maxOutputTokens reduced from 131072 to 128000 (agent could have truncation). Net effect includes a limiting change."
+    },
+    {
+      "id": "44a64651-a260-4929-9e6b-3eed32a1618c",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/deepseek/deepseek-v4-flash-0731",
+      "fromSnapshotId": "d2dc6823-cee4-4a0c-9d0c-753eddaf5019",
+      "toSnapshotId": "75decb55-c181-41fc-bc7e-c4bdb83a0276",
+      "detectedAt": "2026-08-08T07:44:20.772Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "deepseek/deepseek-v4-flash-0731",
+              "maxOutputTokens"
+            ],
+            "after": 384000,
+            "before": 65536
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "max output tokens increased, which is favorable for agents"
+    },
+    {
       "id": "789284f5-4282-4b28-8570-2ca89da02758",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -1728,101 +1836,6 @@
       "confidence": 1,
       "classifiedBy": "llm",
       "notes": "Added a new model endpoint; existing consumers unaffected."
-    },
-    {
-      "id": "a95eeb70-0ad2-431a-9ce0-211b7f6dca46",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/gpt-5.4-pro:batch",
-      "fromSnapshotId": "215b3f3c-2388-4aec-95cb-fbe49dd765c4",
-      "toSnapshotId": "6c68f92c-64cb-4f42-8668-bb1d7d346a48",
-      "detectedAt": "2026-08-06T13:46:32.624Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "openai/gpt-5.4-pro:batch"
-            ],
-            "after": {
-              "name": "OpenAI: GPT-5.4 Pro (batch)",
-              "currency": "USD",
-              "inputPer1m": 15,
-              "outputPer1m": 90,
-              "contextLength": 1050000,
-              "maxOutputTokens": 128000
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "New model added"
-    },
-    {
-      "id": "ce703548-4663-4906-ac98-633b0f385109",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/gpt-5.4-nano:batch",
-      "fromSnapshotId": "215b3f3c-2388-4aec-95cb-fbe49dd765c4",
-      "toSnapshotId": "6c68f92c-64cb-4f42-8668-bb1d7d346a48",
-      "detectedAt": "2026-08-06T13:46:28.814Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "openai/gpt-5.4-nano:batch"
-            ],
-            "after": {
-              "name": "OpenAI: GPT-5.4 Nano (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.1,
-              "outputPer1m": 0.625,
-              "contextLength": 400000,
-              "cacheReadPer1m": 0.01,
-              "maxOutputTokens": 128000
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "New model addition is safe."
-    },
-    {
-      "id": "f77c263d-d381-4ca5-99a7-77b328ae7f63",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/gpt-5.4-mini:batch",
-      "fromSnapshotId": "215b3f3c-2388-4aec-95cb-fbe49dd765c4",
-      "toSnapshotId": "6c68f92c-64cb-4f42-8668-bb1d7d346a48",
-      "detectedAt": "2026-08-06T13:46:25.858Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "openai/gpt-5.4-mini:batch"
-            ],
-            "after": {
-              "name": "OpenAI: GPT-5.4 Mini (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.375,
-              "outputPer1m": 2.25,
-              "contextLength": 400000,
-              "cacheReadPer1m": 0.0375,
-              "maxOutputTokens": 128000
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "New model added"
     }
   ]
 }

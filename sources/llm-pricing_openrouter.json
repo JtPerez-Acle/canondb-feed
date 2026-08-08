@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-08T01:44:15.864Z",
+    "fetchedAt": "2026-08-08T07:44:15.110Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -101,11 +101,11 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.4326,
-          "outputPer1m": 1.3596,
+          "inputPer1m": 0.2772,
+          "outputPer1m": 0.8712,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.08034,
-          "maxOutputTokens": 131072
+          "cacheReadPer1m": 0.05148,
+          "maxOutputTokens": 128000
         },
         "mancer/weaver": {
           "name": "Mancer: Weaver (alpha)",
@@ -3069,7 +3069,7 @@
           "outputPer1m": 0.18,
           "contextLength": 1048576,
           "cacheReadPer1m": 0.018,
-          "maxOutputTokens": 65536
+          "maxOutputTokens": 384000
         },
         "ibm-granite/granite-4.0-h-micro": {
           "name": "IBM: Granite 4.0 Micro",
@@ -3346,7 +3346,7 @@
           "outputPer1m": 0.18,
           "contextLength": 1048576,
           "cacheReadPer1m": 0.018,
-          "maxOutputTokens": 65536
+          "maxOutputTokens": 384000
         },
         "google/gemini-2.5-pro-preview-05-06": {
           "name": "Google: Gemini 2.5 Pro Preview 05-06",
