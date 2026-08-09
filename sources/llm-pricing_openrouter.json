@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-09T13:44:16.202Z",
+    "fetchedAt": "2026-08-09T19:44:16.759Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -1469,10 +1469,11 @@
         "qwen/qwen3.5-397b-a17b": {
           "name": "Qwen: Qwen3.5 397B A17B",
           "currency": "USD",
-          "inputPer1m": 0.39,
-          "outputPer1m": 2.34,
+          "inputPer1m": 0.5,
+          "outputPer1m": 3.6,
           "contextLength": 262144,
-          "maxOutputTokens": 65536
+          "cacheReadPer1m": 0.3,
+          "maxOutputTokens": 262144
         },
         "stepfun/step-3.5-flash": {
           "name": "StepFun: Step 3.5 Flash",

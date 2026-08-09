@@ -2,6 +2,61 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "5dc5a785-8a19-4b80-a0cf-5c8daa25717d",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3.5-397b-a17b",
+      "fromSnapshotId": "a91bd086-a236-421a-a09f-0e1674a3f8ea",
+      "toSnapshotId": "7b2b60a2-32a5-4440-87b3-fab8d5078ed0",
+      "detectedAt": "2026-08-09T19:44:25.290Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "models",
+              "qwen/qwen3.5-397b-a17b",
+              "cacheReadPer1m"
+            ],
+            "after": 0.3
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.5-397b-a17b",
+              "inputPer1m"
+            ],
+            "after": 0.5,
+            "before": 0.39
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.5-397b-a17b",
+              "maxOutputTokens"
+            ],
+            "after": 262144,
+            "before": 65536
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.5-397b-a17b",
+              "outputPer1m"
+            ],
+            "after": 3.6,
+            "before": 2.34
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Input and output prices for qwen3.5-397b-a17b increased, so consumers will silently pay more."
+    },
+    {
       "id": "b1522651-e93a-4ff1-a4d2-a6a161c2ec4c",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -2083,38 +2138,6 @@
       "confidence": 0.95,
       "classifiedBy": "llm",
       "notes": "新增模型，安全变更"
-    },
-    {
-      "id": "a7761da0-6145-4e60-a2a3-f16372581ed8",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/o4-mini:batch",
-      "fromSnapshotId": "215b3f3c-2388-4aec-95cb-fbe49dd765c4",
-      "toSnapshotId": "6c68f92c-64cb-4f42-8668-bb1d7d346a48",
-      "detectedAt": "2026-08-06T13:47:34.998Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "openai/o4-mini:batch"
-            ],
-            "after": {
-              "name": "OpenAI: o4 Mini (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.55,
-              "outputPer1m": 2.2,
-              "contextLength": 200000,
-              "cacheReadPer1m": 0.1375,
-              "maxOutputTokens": 100000
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Added a new model entry; no existing consumers are affected."
     }
   ]
 }
