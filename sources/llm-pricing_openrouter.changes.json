@@ -2,6 +2,98 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "b1522651-e93a-4ff1-a4d2-a6a161c2ec4c",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "ceb00429-614c-4573-8b31-eeabea794f5a",
+      "toSnapshotId": "a91bd086-a236-421a-a09f-0e1674a3f8ea",
+      "detectedAt": "2026-08-09T13:44:34.552Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.013,
+            "before": 0.01508
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.07,
+            "before": 0.0812
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "maxOutputTokens"
+            ],
+            "after": 128000,
+            "before": 131072
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 0.22,
+            "before": 0.2552
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Prices decreased (safe) but maxOutputTokens reduced from 131072 to 128000, which is a context/output-cap reduction that silently breaks agents expecting the larger limit."
+    },
+    {
+      "id": "950182ca-213b-48e5-a8bf-0cf8465adfb8",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/gryphe/mythomax-l2-13b",
+      "fromSnapshotId": "ceb00429-614c-4573-8b31-eeabea794f5a",
+      "toSnapshotId": "a91bd086-a236-421a-a09f-0e1674a3f8ea",
+      "detectedAt": "2026-08-09T13:44:19.254Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "gryphe/mythomax-l2-13b",
+              "inputPer1m"
+            ],
+            "after": 0.06,
+            "before": 0.08
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "gryphe/mythomax-l2-13b",
+              "outputPer1m"
+            ],
+            "after": 0.06,
+            "before": 0.11
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Price decrease, favorable to consumers"
+    },
+    {
       "id": "492266a5-320c-4bbb-9f42-4a403c3b6989",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -2023,70 +2115,6 @@
       "confidence": 1,
       "classifiedBy": "llm",
       "notes": "Added a new model entry; no existing consumers are affected."
-    },
-    {
-      "id": "3a740444-3a0a-4560-9b9f-8118eea99e7c",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/o4-mini-high:batch",
-      "fromSnapshotId": "215b3f3c-2388-4aec-95cb-fbe49dd765c4",
-      "toSnapshotId": "6c68f92c-64cb-4f42-8668-bb1d7d346a48",
-      "detectedAt": "2026-08-06T13:47:34.310Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "openai/o4-mini-high:batch"
-            ],
-            "after": {
-              "name": "OpenAI: o4 Mini High (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.55,
-              "outputPer1m": 2.2,
-              "contextLength": 200000,
-              "cacheReadPer1m": 0.1375,
-              "maxOutputTokens": 100000
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "New model added."
-    },
-    {
-      "id": "68393a99-1f6e-47dd-ae4d-028f99ef0dce",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/o3:batch",
-      "fromSnapshotId": "215b3f3c-2388-4aec-95cb-fbe49dd765c4",
-      "toSnapshotId": "6c68f92c-64cb-4f42-8668-bb1d7d346a48",
-      "detectedAt": "2026-08-06T13:47:30.131Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "openai/o3:batch"
-            ],
-            "after": {
-              "name": "OpenAI: o3 (batch)",
-              "currency": "USD",
-              "inputPer1m": 1,
-              "outputPer1m": 4,
-              "contextLength": 200000,
-              "cacheReadPer1m": 0.25,
-              "maxOutputTokens": 100000
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Added new model entry"
     }
   ]
 }
