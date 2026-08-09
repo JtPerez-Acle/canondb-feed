@@ -2,6 +2,173 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "492266a5-320c-4bbb-9f42-4a403c3b6989",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "fbb7902d-f993-4086-a2ca-4ba907a066bc",
+      "toSnapshotId": "ceb00429-614c-4573-8b31-eeabea794f5a",
+      "detectedAt": "2026-08-09T07:44:33.491Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.01508,
+            "before": 0.0182
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.0812,
+            "before": 0.098
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "maxOutputTokens"
+            ],
+            "after": 131072,
+            "before": 128000
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 0.2552,
+            "before": 0.308
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "All changes are price decreases or output limit increase, all favorable."
+    },
+    {
+      "id": "1f2e1f6e-9938-4e52-bff1-6abaf8f6e8ec",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3.5-397b-a17b",
+      "fromSnapshotId": "fbb7902d-f993-4086-a2ca-4ba907a066bc",
+      "toSnapshotId": "ceb00429-614c-4573-8b31-eeabea794f5a",
+      "detectedAt": "2026-08-09T07:44:28.063Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "models",
+              "qwen/qwen3.5-397b-a17b",
+              "cacheReadPer1m"
+            ],
+            "before": 0.3
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.5-397b-a17b",
+              "inputPer1m"
+            ],
+            "after": 0.39,
+            "before": 0.5
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.5-397b-a17b",
+              "maxOutputTokens"
+            ],
+            "after": 65536,
+            "before": 262144
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.5-397b-a17b",
+              "outputPer1m"
+            ],
+            "after": 2.34,
+            "before": 3.6
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Field cacheReadPer1m removed, maxOutputTokens reduced from 262144 to 65536"
+    },
+    {
+      "id": "a9b2c8bc-b47f-4234-8033-afe9ef81b749",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/deepseek/deepseek-v3.2",
+      "fromSnapshotId": "fbb7902d-f993-4086-a2ca-4ba907a066bc",
+      "toSnapshotId": "ceb00429-614c-4573-8b31-eeabea794f5a",
+      "detectedAt": "2026-08-09T07:44:21.580Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "deepseek/deepseek-v3.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.1345,
+            "before": 0.13
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "deepseek/deepseek-v3.2",
+              "inputPer1m"
+            ],
+            "after": 0.269,
+            "before": 0.26
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "deepseek/deepseek-v3.2",
+              "maxOutputTokens"
+            ],
+            "after": 65536,
+            "before": 163840
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "deepseek/deepseek-v3.2",
+              "outputPer1m"
+            ],
+            "after": 0.4,
+            "before": 0.38
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Price increases (cacheRead, input, output) and reduced maxOutputTokens for deepseek-v3.2"
+    },
+    {
       "id": "45eee6eb-8439-4a44-b55c-9dad6b4a1d2d",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/~deepseek/deepseek-v4-flash-latest",
@@ -1920,101 +2087,6 @@
       "confidence": 1,
       "classifiedBy": "llm",
       "notes": "Added new model entry"
-    },
-    {
-      "id": "1ef6ad45-49e6-472c-8b86-da602941ec1e",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/o3-pro:batch",
-      "fromSnapshotId": "215b3f3c-2388-4aec-95cb-fbe49dd765c4",
-      "toSnapshotId": "6c68f92c-64cb-4f42-8668-bb1d7d346a48",
-      "detectedAt": "2026-08-06T13:47:27.402Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "openai/o3-pro:batch"
-            ],
-            "after": {
-              "name": "OpenAI: o3 Pro (batch)",
-              "currency": "USD",
-              "inputPer1m": 10,
-              "outputPer1m": 40,
-              "contextLength": 200000,
-              "maxOutputTokens": 100000
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Added a new model entry; no existing consumers affected."
-    },
-    {
-      "id": "8abf60de-a122-4f89-87e6-c2d0f9b549d1",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/o3-mini:batch",
-      "fromSnapshotId": "215b3f3c-2388-4aec-95cb-fbe49dd765c4",
-      "toSnapshotId": "6c68f92c-64cb-4f42-8668-bb1d7d346a48",
-      "detectedAt": "2026-08-06T13:47:23.082Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "openai/o3-mini:batch"
-            ],
-            "after": {
-              "name": "OpenAI: o3 Mini (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.55,
-              "outputPer1m": 2.2,
-              "contextLength": 200000,
-              "cacheReadPer1m": 0.275,
-              "maxOutputTokens": 100000
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Added a new model entry; no existing consumers are affected."
-    },
-    {
-      "id": "726d513c-0de8-41ce-b647-b69ef1357a71",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/openai/o3-mini-high:batch",
-      "fromSnapshotId": "215b3f3c-2388-4aec-95cb-fbe49dd765c4",
-      "toSnapshotId": "6c68f92c-64cb-4f42-8668-bb1d7d346a48",
-      "detectedAt": "2026-08-06T13:47:13.684Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "openai/o3-mini-high:batch"
-            ],
-            "after": {
-              "name": "OpenAI: o3 Mini High (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.55,
-              "outputPer1m": 2.2,
-              "contextLength": 200000,
-              "cacheReadPer1m": 0.275,
-              "maxOutputTokens": 100000
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Added a new model entry; no existing consumers affected."
     }
   ]
 }
