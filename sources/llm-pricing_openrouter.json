@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-10T07:44:16.971Z",
+    "fetchedAt": "2026-08-10T13:44:16.675Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -848,16 +848,7 @@
           "outputPer1m": 14,
           "contextLength": 128000,
           "cacheReadPer1m": 0.175,
-          "maxOutputTokens": 16384
-        },
-        "openai/gpt-5.3-chat": {
-          "name": "OpenAI: GPT-5.3 Chat",
-          "currency": "USD",
-          "inputPer1m": 1.75,
-          "outputPer1m": 14,
-          "contextLength": 128000,
-          "cacheReadPer1m": 0.175,
-          "maxOutputTokens": 16384
+          "maxOutputTokens": 32000
         },
         "openai/gpt-5.4-mini": {
           "name": "OpenAI: GPT-5.4 Mini",

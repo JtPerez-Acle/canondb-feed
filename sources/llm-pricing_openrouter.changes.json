@@ -2,6 +2,64 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "34467de3-a7a1-49a0-851a-d441f146a833",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/openai/gpt-5.3-chat",
+      "fromSnapshotId": "b6a09216-89c3-4d2d-962d-fd12d992f79d",
+      "toSnapshotId": "077d76a9-008f-4ca3-b953-529879c35a81",
+      "detectedAt": "2026-08-10T13:44:27.382Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "models",
+              "openai/gpt-5.3-chat"
+            ],
+            "before": {
+              "name": "OpenAI: GPT-5.3 Chat",
+              "currency": "USD",
+              "inputPer1m": 1.75,
+              "outputPer1m": 14,
+              "contextLength": 128000,
+              "cacheReadPer1m": 0.175,
+              "maxOutputTokens": 16384
+            }
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Model removed, breaks callers using that model ID."
+    },
+    {
+      "id": "1c4e3407-4ac1-4a3a-8886-19d85b43a993",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/openai/gpt-5.2-chat",
+      "fromSnapshotId": "b6a09216-89c3-4d2d-962d-fd12d992f79d",
+      "toSnapshotId": "077d76a9-008f-4ca3-b953-529879c35a81",
+      "detectedAt": "2026-08-10T13:44:20.820Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "openai/gpt-5.2-chat",
+              "maxOutputTokens"
+            ],
+            "after": 32000,
+            "before": 16384
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "maxOutputTokens increased from 16384 to 32000"
+    },
+    {
       "id": "1372b30d-a463-4807-8d30-e2db8441e9cd",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -2153,88 +2211,6 @@
       "confidence": 0.5,
       "classifiedBy": "rules",
       "notes": "llm fallback (This operation was aborted); field value(s) changed"
-    },
-    {
-      "id": "8784b35f-0e7f-400d-b586-fa0520218f58",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/qwen/qwen3-vl-235b-a22b-thinking",
-      "fromSnapshotId": "81032d8b-bd5c-4e40-9d3b-8f1bbf2f1592",
-      "toSnapshotId": "0fec8a6a-ad49-496c-b9dc-b896a45e8424",
-      "detectedAt": "2026-08-07T01:44:26.142Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3-vl-235b-a22b-thinking",
-              "inputPer1m"
-            ],
-            "after": 0.4,
-            "before": 0.98
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3-vl-235b-a22b-thinking",
-              "outputPer1m"
-            ],
-            "after": 4,
-            "before": 3.95
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "Output price increased from 3.95 to 4, breaking agents; input price decrease is safe."
-    },
-    {
-      "id": "354f30a7-a80a-4cc5-95b7-512d940b21eb",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/nvidia/nemotron-3-super-120b-a12b",
-      "fromSnapshotId": "81032d8b-bd5c-4e40-9d3b-8f1bbf2f1592",
-      "toSnapshotId": "0fec8a6a-ad49-496c-b9dc-b896a45e8424",
-      "detectedAt": "2026-08-07T01:44:21.546Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "nvidia/nemotron-3-super-120b-a12b",
-              "inputPer1m"
-            ],
-            "after": 0.3,
-            "before": 0.085
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "nvidia/nemotron-3-super-120b-a12b",
-              "maxOutputTokens"
-            ],
-            "after": null,
-            "before": 16384
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "nvidia/nemotron-3-super-120b-a12b",
-              "outputPer1m"
-            ],
-            "after": 0.9,
-            "before": 0.4
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "Price increase and output cap removal silently mislead agents with higher cost and potential truncation change"
     }
   ]
 }
