@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-10T01:44:16.489Z",
+    "fetchedAt": "2026-08-10T07:44:16.971Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -92,20 +92,20 @@
         "z-ai/glm-5.1": {
           "name": "Z.ai: GLM 5.1",
           "currency": "USD",
-          "inputPer1m": 0.952,
-          "outputPer1m": 2.992,
+          "inputPer1m": 1.4,
+          "outputPer1m": 4.4,
           "contextLength": 204800,
-          "cacheReadPer1m": 0.1768,
+          "cacheReadPer1m": 0.26,
           "maxOutputTokens": 131072
         },
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.07,
-          "outputPer1m": 0.22,
+          "inputPer1m": 0.76,
+          "outputPer1m": 2.42,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.013,
-          "maxOutputTokens": 128000
+          "cacheReadPer1m": 0.14,
+          "maxOutputTokens": 262144
         },
         "mancer/weaver": {
           "name": "Mancer: Weaver (alpha)",
@@ -1035,10 +1035,10 @@
         "moonshotai/kimi-k2.6": {
           "name": "MoonshotAI: Kimi K2.6",
           "currency": "USD",
-          "inputPer1m": 0.5795,
-          "outputPer1m": 2.44,
+          "inputPer1m": 0.95,
+          "outputPer1m": 4,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.0976,
+          "cacheReadPer1m": 0.16,
           "maxOutputTokens": 262144
         },
         "morph/morph-v3-large": {
@@ -3066,10 +3066,10 @@
         "deepseek/deepseek-v4-flash-0731": {
           "name": "DeepSeek: DeepSeek V4 Flash 0731",
           "currency": "USD",
-          "inputPer1m": 0.09,
+          "inputPer1m": 0.08,
           "outputPer1m": 0.18,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.018,
+          "cacheReadPer1m": 0.016,
           "maxOutputTokens": 384000
         },
         "ibm-granite/granite-4.0-h-micro": {
