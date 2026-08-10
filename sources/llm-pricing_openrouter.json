@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-09T19:44:16.759Z",
+    "fetchedAt": "2026-08-10T01:44:16.489Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -260,10 +260,10 @@
         "qwen/qwen3-14b": {
           "name": "Qwen: Qwen3 14B",
           "currency": "USD",
-          "inputPer1m": 0.2275,
-          "outputPer1m": 0.91,
+          "inputPer1m": 0.12,
+          "outputPer1m": 0.24,
           "contextLength": 131072,
-          "maxOutputTokens": 8192
+          "maxOutputTokens": 16384
         },
         "qwen/qwen3-32b": {
           "name": "Qwen: Qwen3 32B",
@@ -1469,11 +1469,10 @@
         "qwen/qwen3.5-397b-a17b": {
           "name": "Qwen: Qwen3.5 397B A17B",
           "currency": "USD",
-          "inputPer1m": 0.5,
-          "outputPer1m": 3.6,
+          "inputPer1m": 0.39,
+          "outputPer1m": 2.34,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.3,
-          "maxOutputTokens": 262144
+          "maxOutputTokens": 65536
         },
         "stepfun/step-3.5-flash": {
           "name": "StepFun: Step 3.5 Flash",
@@ -2023,10 +2022,11 @@
         "google/gemma-4-26b-a4b-it": {
           "name": "Google: Gemma 4 26B A4B ",
           "currency": "USD",
-          "inputPer1m": 0.07,
-          "outputPer1m": 0.34,
+          "inputPer1m": 0.12,
+          "outputPer1m": 0.4,
           "contextLength": 262144,
-          "maxOutputTokens": 16384
+          "cacheReadPer1m": 0.05,
+          "maxOutputTokens": 262144
         },
         "moonshotai/kimi-k2.7-code": {
           "name": "MoonshotAI: Kimi K2.7 Code",
@@ -2445,9 +2445,9 @@
           "name": "Meta: Llama 4 Maverick",
           "currency": "USD",
           "inputPer1m": 0.2,
-          "outputPer1m": 0.8,
+          "outputPer1m": 0.696,
           "contextLength": 1048576,
-          "maxOutputTokens": 16384
+          "maxOutputTokens": null
         },
         "mistralai/ministral-3b-2512": {
           "name": "Mistral: Ministral 3 3B 2512",
@@ -2903,8 +2903,8 @@
           "inputPer1m": 0.05,
           "outputPer1m": 0.2,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.03,
-          "maxOutputTokens": 262144
+          "cacheReadPer1m": 0.025,
+          "maxOutputTokens": 228000
         },
         "openai/gpt-5.6-terra-pro:batch": {
           "name": "OpenAI: GPT-5.6 Terra Pro (batch)",
@@ -3198,7 +3198,7 @@
           "inputPer1m": 0.15,
           "outputPer1m": 1.2,
           "contextLength": 262144,
-          "maxOutputTokens": 262144
+          "maxOutputTokens": 32768
         },
         "qwen/qwen3-vl-235b-a22b-instruct": {
           "name": "Qwen: Qwen3 VL 235B A22B Instruct",
@@ -3266,10 +3266,10 @@
         "nvidia/nemotron-3-super-120b-a12b": {
           "name": "NVIDIA: Nemotron 3 Super",
           "currency": "USD",
-          "inputPer1m": 0.3,
-          "outputPer1m": 0.9,
+          "inputPer1m": 0.085,
+          "outputPer1m": 0.4,
           "contextLength": 1000000,
-          "maxOutputTokens": null
+          "maxOutputTokens": 16384
         },
         "nvidia/nemotron-3-ultra-550b-a55b": {
           "name": "NVIDIA: Nemotron 3 Ultra",
