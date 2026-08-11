@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-10T19:44:17.190Z",
+    "fetchedAt": "2026-08-11T01:44:16.831Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -92,20 +92,20 @@
         "z-ai/glm-5.1": {
           "name": "Z.ai: GLM 5.1",
           "currency": "USD",
-          "inputPer1m": 0.952,
-          "outputPer1m": 2.992,
+          "inputPer1m": 1.4,
+          "outputPer1m": 4.4,
           "contextLength": 204800,
-          "cacheReadPer1m": 0.1768,
+          "cacheReadPer1m": 0.26,
           "maxOutputTokens": 131072
         },
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.5306,
-          "outputPer1m": 1.6676,
+          "inputPer1m": 0.76,
+          "outputPer1m": 2.42,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.09854,
-          "maxOutputTokens": 131072
+          "cacheReadPer1m": 0.14,
+          "maxOutputTokens": 262144
         },
         "mancer/weaver": {
           "name": "Mancer: Weaver (alpha)",
@@ -725,6 +725,15 @@
           "cacheWritePer1m": 0.038,
           "maxOutputTokens": 65536
         },
+        "upstage/solar-pro4": {
+          "name": "Upstage: Solar Pro 4",
+          "currency": "USD",
+          "inputPer1m": 0.03,
+          "outputPer1m": 0.12,
+          "contextLength": 524288,
+          "cacheReadPer1m": 0.006,
+          "maxOutputTokens": 131072
+        },
         "z-ai/glm-4.7-flash": {
           "name": "Z.ai: GLM 4.7 Flash",
           "currency": "USD",
@@ -1026,10 +1035,10 @@
         "moonshotai/kimi-k2.6": {
           "name": "MoonshotAI: Kimi K2.6",
           "currency": "USD",
-          "inputPer1m": 0.5795,
-          "outputPer1m": 2.44,
+          "inputPer1m": 0.95,
+          "outputPer1m": 4,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.0976,
+          "cacheReadPer1m": 0.16,
           "maxOutputTokens": 262144
         },
         "morph/morph-v3-large": {
@@ -1266,6 +1275,15 @@
           "cacheReadPer1m": 0.1,
           "maxOutputTokens": 262144
         },
+        "meta/muse-glimmer-30b": {
+          "name": "Meta: Muse Glimmer 30B",
+          "currency": "USD",
+          "inputPer1m": 0.35,
+          "outputPer1m": 1.5,
+          "contextLength": 131072,
+          "cacheReadPer1m": 0.04,
+          "maxOutputTokens": null
+        },
         "openai/gpt-audio-mini": {
           "name": "OpenAI: GPT Audio Mini",
           "currency": "USD",
@@ -1460,10 +1478,11 @@
         "qwen/qwen3.5-397b-a17b": {
           "name": "Qwen: Qwen3.5 397B A17B",
           "currency": "USD",
-          "inputPer1m": 0.39,
-          "outputPer1m": 2.34,
+          "inputPer1m": 0.5,
+          "outputPer1m": 3.6,
           "contextLength": 262144,
-          "maxOutputTokens": 65536
+          "cacheReadPer1m": 0.3,
+          "maxOutputTokens": 262144
         },
         "stepfun/step-3.5-flash": {
           "name": "StepFun: Step 3.5 Flash",
@@ -1735,11 +1754,11 @@
         "deepseek/deepseek-v4-pro": {
           "name": "DeepSeek: DeepSeek V4 Pro",
           "currency": "USD",
-          "inputPer1m": 0.435,
-          "outputPer1m": 0.87,
+          "inputPer1m": 0.64432,
+          "outputPer1m": 1.28864,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.003625,
-          "maxOutputTokens": 384000
+          "cacheReadPer1m": 0.054364,
+          "maxOutputTokens": 393216
         },
         "meta-llama/llama-4-scout": {
           "name": "Meta: Llama 4 Scout",
@@ -3189,7 +3208,7 @@
           "inputPer1m": 0.15,
           "outputPer1m": 1.2,
           "contextLength": 262144,
-          "maxOutputTokens": 32768
+          "maxOutputTokens": 262144
         },
         "qwen/qwen3-vl-235b-a22b-instruct": {
           "name": "Qwen: Qwen3 VL 235B A22B Instruct",
