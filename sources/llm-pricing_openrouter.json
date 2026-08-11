@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-11T13:44:17.028Z",
+    "fetchedAt": "2026-08-11T19:44:17.215Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -74,10 +74,10 @@
         "z-ai/glm-4.6": {
           "name": "Z.ai: GLM 4.6",
           "currency": "USD",
-          "inputPer1m": 0.55,
-          "outputPer1m": 2.2,
+          "inputPer1m": 0.5,
+          "outputPer1m": 2,
           "contextLength": 204800,
-          "cacheReadPer1m": 0.11,
+          "cacheReadPer1m": 0.1,
           "maxOutputTokens": 131072
         },
         "z-ai/glm-4.7": {
@@ -101,11 +101,11 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.76,
-          "outputPer1m": 2.42,
+          "inputPer1m": 0.4886,
+          "outputPer1m": 1.5356,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.14,
-          "maxOutputTokens": 262144
+          "cacheReadPer1m": 0.09074,
+          "maxOutputTokens": 131072
         },
         "mancer/weaver": {
           "name": "Mancer: Weaver (alpha)",
@@ -2556,6 +2556,14 @@
           "contextLength": 123000,
           "maxOutputTokens": 16000
         },
+        "bytedance-seed/seed-2.0-code": {
+          "name": "ByteDance Seed: Seed-2.0-Code",
+          "currency": "USD",
+          "inputPer1m": 0.5,
+          "outputPer1m": 3,
+          "contextLength": 262144,
+          "maxOutputTokens": 131072
+        },
         "bytedance-seed/seed-2.0-lite": {
           "name": "ByteDance Seed: Seed-2.0-Lite",
           "currency": "USD",
@@ -2808,6 +2816,15 @@
           "cacheReadPer1m": 0.075,
           "cacheWritePer1m": 0.083333,
           "maxOutputTokens": 65536
+        },
+        "nvidia/nemotron-3.5-lightning": {
+          "name": "NVIDIA: Nemotron 3.5 Lightning",
+          "currency": "USD",
+          "inputPer1m": 0.1,
+          "outputPer1m": 0.25,
+          "contextLength": 262144,
+          "cacheReadPer1m": 0.05,
+          "maxOutputTokens": 262144
         },
         "openai/gpt-3.5-turbo-instruct": {
           "name": "OpenAI: GPT-3.5 Turbo Instruct",
@@ -3370,11 +3387,11 @@
         "~deepseek/deepseek-v4-flash-latest": {
           "name": "DeepSeek V4 Flash Latest",
           "currency": "USD",
-          "inputPer1m": 0.0798,
-          "outputPer1m": 0.1596,
+          "inputPer1m": 0.072,
+          "outputPer1m": 0.144,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.01596,
-          "maxOutputTokens": 131072
+          "cacheReadPer1m": 0.0144,
+          "maxOutputTokens": 262144
         },
         "google/gemini-2.5-pro-preview-05-06": {
           "name": "Google: Gemini 2.5 Pro Preview 05-06",
