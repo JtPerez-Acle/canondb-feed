@@ -2,6 +2,108 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "f9dfcbec-b511-4e26-be14-1ab5468ac65f",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/~deepseek/deepseek-v4-flash-latest",
+      "fromSnapshotId": "f8fc8a7e-3c59-4aa1-9400-32a87db01a58",
+      "toSnapshotId": "1925c037-1dd6-45f1-bdb4-443264e20075",
+      "detectedAt": "2026-08-12T07:44:30.520Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "~deepseek/deepseek-v4-flash-latest",
+              "cacheReadPer1m"
+            ],
+            "after": 0.0252,
+            "before": 0.0144
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "~deepseek/deepseek-v4-flash-latest",
+              "inputPer1m"
+            ],
+            "after": 0.079996,
+            "before": 0.072
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "~deepseek/deepseek-v4-flash-latest",
+              "maxOutputTokens"
+            ],
+            "after": null,
+            "before": 262144
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "~deepseek/deepseek-v4-flash-latest",
+              "outputPer1m"
+            ],
+            "after": 0.252,
+            "before": 0.144
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Price increases and output token limit removal silently mislead agents with higher costs and potential truncation."
+    },
+    {
+      "id": "73c39765-4a69-4abb-8795-f16f4c33abd1",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "f8fc8a7e-3c59-4aa1-9400-32a87db01a58",
+      "toSnapshotId": "1925c037-1dd6-45f1-bdb4-443264e20075",
+      "detectedAt": "2026-08-12T07:44:29.601Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.1,
+            "before": 0.10374
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.5,
+            "before": 0.5586
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 3.15,
+            "before": 1.7556
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Output price increased from 1.7556 to 3.15, a price increase that silently raises cost for agents."
+    },
+    {
       "id": "55add3de-177c-4049-b072-18c5644dbf91",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-5.2",
@@ -2097,98 +2199,6 @@
       "confidence": 0.9,
       "classifiedBy": "llm",
       "notes": "Input and output prices for qwen3.5-397b-a17b increased, so consumers will silently pay more."
-    },
-    {
-      "id": "b1522651-e93a-4ff1-a4d2-a6a161c2ec4c",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/z-ai/glm-5.2",
-      "fromSnapshotId": "ceb00429-614c-4573-8b31-eeabea794f5a",
-      "toSnapshotId": "a91bd086-a236-421a-a09f-0e1674a3f8ea",
-      "detectedAt": "2026-08-09T13:44:34.552Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "cacheReadPer1m"
-            ],
-            "after": 0.013,
-            "before": 0.01508
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "inputPer1m"
-            ],
-            "after": 0.07,
-            "before": 0.0812
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "maxOutputTokens"
-            ],
-            "after": 128000,
-            "before": 131072
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "outputPer1m"
-            ],
-            "after": 0.22,
-            "before": 0.2552
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "Prices decreased (safe) but maxOutputTokens reduced from 131072 to 128000, which is a context/output-cap reduction that silently breaks agents expecting the larger limit."
-    },
-    {
-      "id": "950182ca-213b-48e5-a8bf-0cf8465adfb8",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/gryphe/mythomax-l2-13b",
-      "fromSnapshotId": "ceb00429-614c-4573-8b31-eeabea794f5a",
-      "toSnapshotId": "a91bd086-a236-421a-a09f-0e1674a3f8ea",
-      "detectedAt": "2026-08-09T13:44:19.254Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "gryphe/mythomax-l2-13b",
-              "inputPer1m"
-            ],
-            "after": 0.06,
-            "before": 0.08
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "gryphe/mythomax-l2-13b",
-              "outputPer1m"
-            ],
-            "after": 0.06,
-            "before": 0.11
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Price decrease, favorable to consumers"
     }
   ]
 }
