@@ -2,6 +2,287 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "cfd6bc56-8299-43bc-969a-875963bf8d2f",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/~x-ai/grok-latest",
+      "fromSnapshotId": "f7b72a9c-dd39-4d7e-81ef-9e1b35573351",
+      "toSnapshotId": "cc3276a8-1015-4dd3-85f3-1842e35355a0",
+      "detectedAt": "2026-08-12T19:44:35.555Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "~x-ai/grok-latest",
+              "cacheReadPer1m"
+            ],
+            "after": 0.5,
+            "before": 0.3
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Price increased from 0.3 to 0.5 per 1M tokens."
+    },
+    {
+      "id": "92ed453d-d646-48aa-a810-d074839940bd",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/z-ai/glm-5.2",
+      "fromSnapshotId": "f7b72a9c-dd39-4d7e-81ef-9e1b35573351",
+      "toSnapshotId": "cc3276a8-1015-4dd3-85f3-1842e35355a0",
+      "detectedAt": "2026-08-12T19:44:30.945Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "cacheReadPer1m"
+            ],
+            "after": 0.091,
+            "before": 0.1
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "inputPer1m"
+            ],
+            "after": 0.49,
+            "before": 0.5
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "z-ai/glm-5.2",
+              "outputPer1m"
+            ],
+            "after": 1.54,
+            "before": 3.15
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "All three changes are price decreases, which are favorable to consumers."
+    },
+    {
+      "id": "67d10f8b-ef09-4514-87ee-3733a967de0c",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/x-ai/grok-4.6",
+      "fromSnapshotId": "f7b72a9c-dd39-4d7e-81ef-9e1b35573351",
+      "toSnapshotId": "cc3276a8-1015-4dd3-85f3-1842e35355a0",
+      "detectedAt": "2026-08-12T19:44:29.467Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "models",
+              "x-ai/grok-4.6"
+            ],
+            "after": {
+              "name": "SpaceXAI: Grok 4.6",
+              "currency": "USD",
+              "inputPer1m": 2,
+              "outputPer1m": 6,
+              "contextLength": 500000,
+              "cacheReadPer1m": 0.5,
+              "maxOutputTokens": null
+            }
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "New model added, no existing consumers affected."
+    },
+    {
+      "id": "1ac31b57-7a88-4e05-83ac-1e59795b670a",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3.8-2.4t-a95b",
+      "fromSnapshotId": "f7b72a9c-dd39-4d7e-81ef-9e1b35573351",
+      "toSnapshotId": "cc3276a8-1015-4dd3-85f3-1842e35355a0",
+      "detectedAt": "2026-08-12T19:44:26.560Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "models",
+              "qwen/qwen3.8-2.4t-a95b"
+            ],
+            "after": {
+              "name": "Qwen: Qwen3.8 2.4T A95B",
+              "currency": "USD",
+              "inputPer1m": 2,
+              "outputPer1m": 6,
+              "contextLength": 262144,
+              "cacheReadPer1m": 0.2,
+              "maxOutputTokens": 52429
+            }
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Added a new model entry"
+    },
+    {
+      "id": "8babdfef-000a-482c-a279-1720f0d095c6",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/moonshotai/kimi-k2.7-code",
+      "fromSnapshotId": "f7b72a9c-dd39-4d7e-81ef-9e1b35573351",
+      "toSnapshotId": "cc3276a8-1015-4dd3-85f3-1842e35355a0",
+      "detectedAt": "2026-08-12T19:44:25.145Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.7-code",
+              "inputPer1m"
+            ],
+            "after": 0.67,
+            "before": 0.7
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.7-code",
+              "outputPer1m"
+            ],
+            "after": 3.4,
+            "before": 3.5
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Price decreased for both input and output, which is favorable to consumers."
+    },
+    {
+      "id": "a82f1835-62ce-4018-8549-c3091d1dfbfe",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/moonshotai/kimi-k2.6",
+      "fromSnapshotId": "f7b72a9c-dd39-4d7e-81ef-9e1b35573351",
+      "toSnapshotId": "cc3276a8-1015-4dd3-85f3-1842e35355a0",
+      "detectedAt": "2026-08-12T19:44:23.487Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.6",
+              "cacheReadPer1m"
+            ],
+            "after": 0.0976,
+            "before": 0.16
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.6",
+              "inputPer1m"
+            ],
+            "after": 0.5795,
+            "before": 0.95
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.6",
+              "outputPer1m"
+            ],
+            "after": 2.44,
+            "before": 4
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "All three changes are price decreases."
+    },
+    {
+      "id": "6d32f99d-aa11-446a-a8e8-1d2d9e3bcad7",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/deepseek/deepseek-v4-pro-0813",
+      "fromSnapshotId": "f7b72a9c-dd39-4d7e-81ef-9e1b35573351",
+      "toSnapshotId": "cc3276a8-1015-4dd3-85f3-1842e35355a0",
+      "detectedAt": "2026-08-12T19:44:22.434Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "models",
+              "deepseek/deepseek-v4-pro-0813"
+            ],
+            "after": {
+              "name": "DeepSeek: DeepSeek V4 Pro 0813",
+              "currency": "USD",
+              "inputPer1m": 0.435,
+              "outputPer1m": 0.87,
+              "contextLength": 1048576,
+              "cacheReadPer1m": 0.003625,
+              "maxOutputTokens": 384000
+            }
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "New model added, no existing consumers affected."
+    },
+    {
+      "id": "e773d535-35ee-4f46-96ec-85e485a0dbd7",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/bytedance-seed/seed-2-1-turbo",
+      "fromSnapshotId": "f7b72a9c-dd39-4d7e-81ef-9e1b35573351",
+      "toSnapshotId": "cc3276a8-1015-4dd3-85f3-1842e35355a0",
+      "detectedAt": "2026-08-12T19:44:19.057Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "models",
+              "bytedance-seed/seed-2-1-turbo"
+            ],
+            "after": {
+              "name": "ByteDance Seed: Seed 2.1 Turbo",
+              "currency": "USD",
+              "inputPer1m": 0.5,
+              "outputPer1m": 2.5,
+              "contextLength": 262144,
+              "maxOutputTokens": 262144
+            }
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Added a new model entry, which does not break existing consumers."
+    },
+    {
       "id": "b5104ddf-4612-4661-ab22-36563efad2c6",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/deepseek/deepseek-v4-pro",
@@ -1854,342 +2135,6 @@
       "confidence": 1,
       "classifiedBy": "llm",
       "notes": "All three prices (cacheReadPer1m, inputPer1m, outputPer1m) increased, which silently raises costs for agents calling the same model."
-    },
-    {
-      "id": "a77467d6-c2fb-4c22-bfa2-df6d44331aaa",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/deepseek/deepseek-v4-flash-0731",
-      "fromSnapshotId": "ad29983b-6815-4a09-b024-99b17e551a24",
-      "toSnapshotId": "b6a09216-89c3-4d2d-962d-fd12d992f79d",
-      "detectedAt": "2026-08-10T07:44:19.078Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "deepseek/deepseek-v4-flash-0731",
-              "cacheReadPer1m"
-            ],
-            "after": 0.016,
-            "before": 0.018
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "deepseek/deepseek-v4-flash-0731",
-              "inputPer1m"
-            ],
-            "after": 0.08,
-            "before": 0.09
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "Both cache read and input prices decreased, which is favorable to consumers."
-    },
-    {
-      "id": "49bcca05-cb6b-4dc8-84cd-b10e1b8f84f1",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/qwen/qwen3.5-397b-a17b",
-      "fromSnapshotId": "7b2b60a2-32a5-4440-87b3-fab8d5078ed0",
-      "toSnapshotId": "ad29983b-6815-4a09-b024-99b17e551a24",
-      "detectedAt": "2026-08-10T01:45:12.013Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "removed",
-            "path": [
-              "models",
-              "qwen/qwen3.5-397b-a17b",
-              "cacheReadPer1m"
-            ],
-            "before": 0.3
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3.5-397b-a17b",
-              "inputPer1m"
-            ],
-            "after": 0.39,
-            "before": 0.5
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3.5-397b-a17b",
-              "maxOutputTokens"
-            ],
-            "after": 65536,
-            "before": 262144
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3.5-397b-a17b",
-              "outputPer1m"
-            ],
-            "after": 2.34,
-            "before": 3.6
-          }
-        ]
-      },
-      "severity": "breaking_strict",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "REMOVED cacheReadPer1m field breaks strict consumers; maxOutputTokens reduced from 262144 to 65536 is breaking_agent but removal is stricter"
-    },
-    {
-      "id": "617e35c5-3a0b-49d9-ad5a-3818236f45a5",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/qwen/qwen3-next-80b-a3b-thinking",
-      "fromSnapshotId": "7b2b60a2-32a5-4440-87b3-fab8d5078ed0",
-      "toSnapshotId": "ad29983b-6815-4a09-b024-99b17e551a24",
-      "detectedAt": "2026-08-10T01:45:10.826Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3-next-80b-a3b-thinking",
-              "maxOutputTokens"
-            ],
-            "after": 32768,
-            "before": 262144
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "max output tokens reduced from 262144 to 32768"
-    },
-    {
-      "id": "a664a5b0-3186-4b4a-a8a2-a751f27a1bfe",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/qwen/qwen3-14b",
-      "fromSnapshotId": "7b2b60a2-32a5-4440-87b3-fab8d5078ed0",
-      "toSnapshotId": "ad29983b-6815-4a09-b024-99b17e551a24",
-      "detectedAt": "2026-08-10T01:45:04.443Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3-14b",
-              "inputPer1m"
-            ],
-            "after": 0.12,
-            "before": 0.2275
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3-14b",
-              "maxOutputTokens"
-            ],
-            "after": 16384,
-            "before": 8192
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3-14b",
-              "outputPer1m"
-            ],
-            "after": 0.24,
-            "before": 0.91
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Price decreases and output limit increase are favorable changes."
-    },
-    {
-      "id": "f82d1a0b-3d3d-4f04-ba9a-a1c16dd73a08",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/nvidia/nemotron-3-super-120b-a12b",
-      "fromSnapshotId": "7b2b60a2-32a5-4440-87b3-fab8d5078ed0",
-      "toSnapshotId": "ad29983b-6815-4a09-b024-99b17e551a24",
-      "detectedAt": "2026-08-10T01:44:59.607Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "nvidia/nemotron-3-super-120b-a12b",
-              "inputPer1m"
-            ],
-            "after": 0.085,
-            "before": 0.3
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "nvidia/nemotron-3-super-120b-a12b",
-              "maxOutputTokens"
-            ],
-            "after": 16384,
-            "before": null
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "nvidia/nemotron-3-super-120b-a12b",
-              "outputPer1m"
-            ],
-            "after": 0.4,
-            "before": 0.9
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "price decreased on input and output, but maxOutputTokens changed from null to 16384 which imposes a new hard limit; agents expecting unlimited truncation may break."
-    },
-    {
-      "id": "f840feca-f35c-4519-aa35-2575adbfd84d",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/nvidia/nemotron-3-nano-30b-a3b",
-      "fromSnapshotId": "7b2b60a2-32a5-4440-87b3-fab8d5078ed0",
-      "toSnapshotId": "ad29983b-6815-4a09-b024-99b17e551a24",
-      "detectedAt": "2026-08-10T01:44:43.856Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "nvidia/nemotron-3-nano-30b-a3b",
-              "cacheReadPer1m"
-            ],
-            "after": 0.025,
-            "before": 0.03
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "nvidia/nemotron-3-nano-30b-a3b",
-              "maxOutputTokens"
-            ],
-            "after": 228000,
-            "before": 262144
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "price decrease but max output tokens reduced"
-    },
-    {
-      "id": "de58210c-0587-4249-b8fa-4726b443b54c",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/meta-llama/llama-4-maverick",
-      "fromSnapshotId": "7b2b60a2-32a5-4440-87b3-fab8d5078ed0",
-      "toSnapshotId": "ad29983b-6815-4a09-b024-99b17e551a24",
-      "detectedAt": "2026-08-10T01:44:38.534Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "meta-llama/llama-4-maverick",
-              "maxOutputTokens"
-            ],
-            "after": null,
-            "before": 16384
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "meta-llama/llama-4-maverick",
-              "outputPer1m"
-            ],
-            "after": 0.696,
-            "before": 0.8
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "Output token limit removed (null replaces a limit) may cause silent truncation, and price decreased but consumer cannot rely on max length"
-    },
-    {
-      "id": "bcea7f4e-89ec-43c5-b34a-a2002ceb2c8a",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/google/gemma-4-26b-a4b-it",
-      "fromSnapshotId": "7b2b60a2-32a5-4440-87b3-fab8d5078ed0",
-      "toSnapshotId": "ad29983b-6815-4a09-b024-99b17e551a24",
-      "detectedAt": "2026-08-10T01:44:24.690Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "google/gemma-4-26b-a4b-it",
-              "cacheReadPer1m"
-            ],
-            "after": 0.05
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "google/gemma-4-26b-a4b-it",
-              "inputPer1m"
-            ],
-            "after": 0.12,
-            "before": 0.07
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "google/gemma-4-26b-a4b-it",
-              "maxOutputTokens"
-            ],
-            "after": 262144,
-            "before": 16384
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "google/gemma-4-26b-a4b-it",
-              "outputPer1m"
-            ],
-            "after": 0.4,
-            "before": 0.34
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.8,
-      "classifiedBy": "llm",
-      "notes": "Input price increased from 0.07 to 0.12, output price increased from 0.34 to 0.4 (breaking_agent); cache read added and max output tokens increased (safe)."
     }
   ]
 }
