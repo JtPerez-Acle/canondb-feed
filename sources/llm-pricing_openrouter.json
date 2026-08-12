@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-12T07:44:17.540Z",
+    "fetchedAt": "2026-08-12T13:44:17.852Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -1764,10 +1764,10 @@
         "deepseek/deepseek-v4-pro": {
           "name": "DeepSeek: DeepSeek V4 Pro",
           "currency": "USD",
-          "inputPer1m": 0.63168,
-          "outputPer1m": 1.26336,
+          "inputPer1m": 1.168,
+          "outputPer1m": 2.336,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.053298,
+          "cacheReadPer1m": 0.09855,
           "maxOutputTokens": 393216
         },
         "liquid/lfm-2.5-2.6b:free": {

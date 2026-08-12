@@ -2,6 +2,52 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "b5104ddf-4612-4661-ab22-36563efad2c6",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/deepseek/deepseek-v4-pro",
+      "fromSnapshotId": "1925c037-1dd6-45f1-bdb4-443264e20075",
+      "toSnapshotId": "f7b72a9c-dd39-4d7e-81ef-9e1b35573351",
+      "detectedAt": "2026-08-12T13:44:19.783Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "deepseek/deepseek-v4-pro",
+              "cacheReadPer1m"
+            ],
+            "after": 0.09855,
+            "before": 0.053298
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "deepseek/deepseek-v4-pro",
+              "inputPer1m"
+            ],
+            "after": 1.168,
+            "before": 0.63168
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "deepseek/deepseek-v4-pro",
+              "outputPer1m"
+            ],
+            "after": 2.336,
+            "before": 1.26336
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "All three prices for deepseek-v4-pro increased (cacheRead, input, output), which silently raises costs for agents."
+    },
+    {
       "id": "f9dfcbec-b511-4e26-be14-1ab5468ac65f",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/~deepseek/deepseek-v4-flash-latest",
@@ -2144,61 +2190,6 @@
       "confidence": 0.8,
       "classifiedBy": "llm",
       "notes": "Input price increased from 0.07 to 0.12, output price increased from 0.34 to 0.4 (breaking_agent); cache read added and max output tokens increased (safe)."
-    },
-    {
-      "id": "5dc5a785-8a19-4b80-a0cf-5c8daa25717d",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/qwen/qwen3.5-397b-a17b",
-      "fromSnapshotId": "a91bd086-a236-421a-a09f-0e1674a3f8ea",
-      "toSnapshotId": "7b2b60a2-32a5-4440-87b3-fab8d5078ed0",
-      "detectedAt": "2026-08-09T19:44:25.290Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "qwen/qwen3.5-397b-a17b",
-              "cacheReadPer1m"
-            ],
-            "after": 0.3
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3.5-397b-a17b",
-              "inputPer1m"
-            ],
-            "after": 0.5,
-            "before": 0.39
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3.5-397b-a17b",
-              "maxOutputTokens"
-            ],
-            "after": 262144,
-            "before": 65536
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3.5-397b-a17b",
-              "outputPer1m"
-            ],
-            "after": 3.6,
-            "before": 2.34
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "Input and output prices for qwen3.5-397b-a17b increased, so consumers will silently pay more."
     }
   ]
 }
