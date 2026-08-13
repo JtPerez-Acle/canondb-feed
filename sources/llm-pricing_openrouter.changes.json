@@ -2,6 +2,113 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "d0630fcd-799c-4094-94fc-9c007c6fa165",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3.8-2.4t-a95b",
+      "fromSnapshotId": "95f940e0-3aeb-4b21-9d50-8ed3ede374d0",
+      "toSnapshotId": "b3672bfb-f498-4fcd-b44e-8f9b52881ce9",
+      "detectedAt": "2026-08-13T13:44:49.659Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.8-2.4t-a95b",
+              "cacheReadPer1m"
+            ],
+            "after": 0.25,
+            "before": 0.2
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.8-2.4t-a95b",
+              "maxOutputTokens"
+            ],
+            "after": 262144,
+            "before": 52429
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "cache read price increased and max output tokens increased (favorable), but price increase breaks agents with silent higher cost"
+    },
+    {
+      "id": "1b669a3d-473e-468d-8152-5160c1edcd64",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3-next-80b-a3b-thinking",
+      "fromSnapshotId": "95f940e0-3aeb-4b21-9d50-8ed3ede374d0",
+      "toSnapshotId": "b3672bfb-f498-4fcd-b44e-8f9b52881ce9",
+      "detectedAt": "2026-08-13T13:44:37.853Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-next-80b-a3b-thinking",
+              "maxOutputTokens"
+            ],
+            "after": 32768,
+            "before": 262144
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "max output tokens reduced from 262144 to 32768, which may silently truncate agent outputs."
+    },
+    {
+      "id": "6bb724ae-02db-4bc3-a781-5dc34abd97d3",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3-next-80b-a3b-instruct",
+      "fromSnapshotId": "95f940e0-3aeb-4b21-9d50-8ed3ede374d0",
+      "toSnapshotId": "b3672bfb-f498-4fcd-b44e-8f9b52881ce9",
+      "detectedAt": "2026-08-13T13:44:33.386Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "models",
+              "qwen/qwen3-next-80b-a3b-instruct",
+              "cacheReadPer1m"
+            ],
+            "after": 0.07
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-next-80b-a3b-instruct",
+              "inputPer1m"
+            ],
+            "after": 0.1,
+            "before": 0.09
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-next-80b-a3b-instruct",
+              "maxOutputTokens"
+            ],
+            "after": 262144,
+            "before": 16384
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "inputPer1m price increased from 0.09 to 0.1"
+    },
+    {
       "id": "b425cdf9-8157-45ee-a54d-dd9a30c4be3c",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/qwen/qwen3.8-2.4t-a95b",
@@ -1969,110 +2076,6 @@
       "confidence": 0.9,
       "classifiedBy": "llm",
       "notes": "input and output prices increased, silently raising costs for agents"
-    },
-    {
-      "id": "02361107-efd0-46a6-873f-15f08c9c0c27",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/qwen/qwen3-next-80b-a3b-thinking",
-      "fromSnapshotId": "fc04ee4e-4d48-47ee-9079-a098d1a1ef6b",
-      "toSnapshotId": "d453ccb0-a308-4078-a1c9-e52143680c2a",
-      "detectedAt": "2026-08-11T01:44:32.757Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3-next-80b-a3b-thinking",
-              "maxOutputTokens"
-            ],
-            "after": 262144,
-            "before": 32768
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "maxOutputTokens increased, which is favorable to consumers; no breakage."
-    },
-    {
-      "id": "828075c9-0133-4ff1-8012-1880f43c6365",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/moonshotai/kimi-k2.6",
-      "fromSnapshotId": "fc04ee4e-4d48-47ee-9079-a098d1a1ef6b",
-      "toSnapshotId": "d453ccb0-a308-4078-a1c9-e52143680c2a",
-      "detectedAt": "2026-08-11T01:44:28.818Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "moonshotai/kimi-k2.6",
-              "cacheReadPer1m"
-            ],
-            "after": 0.16,
-            "before": 0.0976
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "moonshotai/kimi-k2.6",
-              "inputPer1m"
-            ],
-            "after": 0.95,
-            "before": 0.5795
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "moonshotai/kimi-k2.6",
-              "outputPer1m"
-            ],
-            "after": 4,
-            "before": 2.44
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "All three prices increased (cacheRead, input, output), silently raising costs for agents."
-    },
-    {
-      "id": "4e8bd499-bf51-46fe-a3ee-8896e56e1a3a",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/meta/muse-glimmer-30b",
-      "fromSnapshotId": "fc04ee4e-4d48-47ee-9079-a098d1a1ef6b",
-      "toSnapshotId": "d453ccb0-a308-4078-a1c9-e52143680c2a",
-      "detectedAt": "2026-08-11T01:44:26.703Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "meta/muse-glimmer-30b"
-            ],
-            "after": {
-              "name": "Meta: Muse Glimmer 30B",
-              "currency": "USD",
-              "inputPer1m": 0.35,
-              "outputPer1m": 1.5,
-              "contextLength": 131072,
-              "cacheReadPer1m": 0.04,
-              "maxOutputTokens": null
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Added new model meta/muse-glimmer-30b with pricing details."
     }
   ]
 }

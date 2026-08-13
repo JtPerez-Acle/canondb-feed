@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-13T07:44:17.822Z",
+    "fetchedAt": "2026-08-13T13:44:18.244Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -1510,8 +1510,8 @@
           "inputPer1m": 2,
           "outputPer1m": 6,
           "contextLength": 1000000,
-          "cacheReadPer1m": 0.2,
-          "maxOutputTokens": 52429
+          "cacheReadPer1m": 0.25,
+          "maxOutputTokens": 262144
         },
         "stepfun/step-3.5-flash": {
           "name": "StepFun: Step 3.5 Flash",
@@ -3260,10 +3260,11 @@
         "qwen/qwen3-next-80b-a3b-instruct": {
           "name": "Qwen: Qwen3 Next 80B A3B Instruct",
           "currency": "USD",
-          "inputPer1m": 0.09,
+          "inputPer1m": 0.1,
           "outputPer1m": 1.1,
           "contextLength": 262144,
-          "maxOutputTokens": 16384
+          "cacheReadPer1m": 0.07,
+          "maxOutputTokens": 262144
         },
         "qwen/qwen3-next-80b-a3b-thinking": {
           "name": "Qwen: Qwen3 Next 80B A3B Thinking",
@@ -3271,7 +3272,7 @@
           "inputPer1m": 0.15,
           "outputPer1m": 1.2,
           "contextLength": 262144,
-          "maxOutputTokens": 262144
+          "maxOutputTokens": 32768
         },
         "qwen/qwen3-vl-235b-a22b-instruct": {
           "name": "Qwen: Qwen3 VL 235B A22B Instruct",
