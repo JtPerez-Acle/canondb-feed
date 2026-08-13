@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-13T13:44:18.244Z",
+    "fetchedAt": "2026-08-13T19:44:17.862Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -92,19 +92,19 @@
         "z-ai/glm-5.1": {
           "name": "Z.ai: GLM 5.1",
           "currency": "USD",
-          "inputPer1m": 1.4,
-          "outputPer1m": 4.4,
+          "inputPer1m": 0.952,
+          "outputPer1m": 2.992,
           "contextLength": 204800,
-          "cacheReadPer1m": 0.26,
+          "cacheReadPer1m": 0.1768,
           "maxOutputTokens": 131072
         },
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.5,
-          "outputPer1m": 3.15,
+          "inputPer1m": 0.392,
+          "outputPer1m": 1.232,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.1,
+          "cacheReadPer1m": 0.0728,
           "maxOutputTokens": 131072
         },
         "mancer/weaver": {
@@ -995,7 +995,7 @@
           "currency": "USD",
           "inputPer1m": 0.7,
           "outputPer1m": 2.5,
-          "contextLength": 163840,
+          "contextLength": 64000,
           "maxOutputTokens": 16000
         },
         "google/gemma-3-4b-it": {
@@ -1045,10 +1045,10 @@
         "moonshotai/kimi-k2.6": {
           "name": "MoonshotAI: Kimi K2.6",
           "currency": "USD",
-          "inputPer1m": 0.95,
-          "outputPer1m": 4,
+          "inputPer1m": 0.5605,
+          "outputPer1m": 2.36,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.16,
+          "cacheReadPer1m": 0.0944,
           "maxOutputTokens": 262144
         },
         "morph/morph-v3-large": {
@@ -1598,11 +1598,21 @@
         "google/gemini-3.6-flash": {
           "name": "Google: Gemini 3.6 Flash",
           "currency": "USD",
-          "inputPer1m": 1.5,
-          "outputPer1m": 7.5,
+          "inputPer1m": 0.75,
+          "outputPer1m": 3.75,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.15,
-          "cacheWritePer1m": 0.083333,
+          "cacheReadPer1m": 0.075,
+          "cacheWritePer1m": 0.041667,
+          "maxOutputTokens": 65536
+        },
+        "google/gemini-3.7-flash": {
+          "name": "Google: Gemini 3.7 Flash",
+          "currency": "USD",
+          "inputPer1m": 0.375,
+          "outputPer1m": 1.875,
+          "contextLength": 1048576,
+          "cacheReadPer1m": 0.0375,
+          "cacheWritePer1m": 0.020833,
           "maxOutputTokens": 65536
         },
         "inclusionai/ling-2.6-1t": {
@@ -1720,11 +1730,11 @@
         "~moonshotai/kimi-latest": {
           "name": "MoonshotAI Kimi Latest",
           "currency": "USD",
-          "inputPer1m": 2.8,
-          "outputPer1m": 14,
+          "inputPer1m": 2.4,
+          "outputPer1m": 12,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.29,
-          "maxOutputTokens": 1048576
+          "cacheReadPer1m": 0.24,
+          "maxOutputTokens": 974842
         },
         "~openai/gpt-mini-latest": {
           "name": "OpenAI GPT Mini Latest",
@@ -2551,11 +2561,11 @@
         "~google/gemini-flash-latest": {
           "name": "Google Gemini Flash Latest",
           "currency": "USD",
-          "inputPer1m": 1.5,
-          "outputPer1m": 7.5,
+          "inputPer1m": 0.375,
+          "outputPer1m": 1.875,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.15,
-          "cacheWritePer1m": 0.083333,
+          "cacheReadPer1m": 0.0375,
+          "cacheWritePer1m": 0.020833,
           "maxOutputTokens": 65536
         },
         "anthracite-org/magnum-v4-72b": {
@@ -2855,11 +2865,21 @@
         "google/gemini-3.6-flash:batch": {
           "name": "Google: Gemini 3.6 Flash (batch)",
           "currency": "USD",
-          "inputPer1m": 0.75,
-          "outputPer1m": 3.75,
+          "inputPer1m": 0.375,
+          "outputPer1m": 1.875,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.075,
-          "cacheWritePer1m": 0.083333,
+          "cacheReadPer1m": 0.0375,
+          "cacheWritePer1m": 0.041667,
+          "maxOutputTokens": 65536
+        },
+        "google/gemini-3.7-flash:batch": {
+          "name": "Google: Gemini 3.7 Flash (batch)",
+          "currency": "USD",
+          "inputPer1m": 0.1875,
+          "outputPer1m": 0.9375,
+          "contextLength": 1048576,
+          "cacheReadPer1m": 0.01875,
+          "cacheWritePer1m": 0.020833,
           "maxOutputTokens": 65536
         },
         "nvidia/nemotron-3.5-lightning": {
@@ -3424,11 +3444,11 @@
         "~deepseek/deepseek-v4-flash-latest": {
           "name": "DeepSeek V4 Flash Latest",
           "currency": "USD",
-          "inputPer1m": 0.079996,
-          "outputPer1m": 0.252,
+          "inputPer1m": 0.072,
+          "outputPer1m": 0.144,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.0252,
-          "maxOutputTokens": null
+          "cacheReadPer1m": 0.016,
+          "maxOutputTokens": 262144
         },
         "google/gemini-2.5-pro-preview-05-06": {
           "name": "Google: Gemini 2.5 Pro Preview 05-06",
