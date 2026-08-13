@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-13T01:44:17.640Z",
+    "fetchedAt": "2026-08-13T07:44:17.822Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -1498,18 +1498,18 @@
         "qwen/qwen3.5-397b-a17b": {
           "name": "Qwen: Qwen3.5 397B A17B",
           "currency": "USD",
-          "inputPer1m": 0.45,
-          "outputPer1m": 3,
+          "inputPer1m": 0.5,
+          "outputPer1m": 3.6,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.045,
-          "maxOutputTokens": 65536
+          "cacheReadPer1m": 0.3,
+          "maxOutputTokens": 262144
         },
         "qwen/qwen3.8-2.4t-a95b": {
           "name": "Qwen: Qwen3.8 2.4T A95B",
           "currency": "USD",
           "inputPer1m": 2,
           "outputPer1m": 6,
-          "contextLength": 262144,
+          "contextLength": 1000000,
           "cacheReadPer1m": 0.2,
           "maxOutputTokens": 52429
         },
@@ -2563,8 +2563,8 @@
           "currency": "USD",
           "inputPer1m": 3,
           "outputPer1m": 5,
-          "contextLength": 16384,
-          "maxOutputTokens": 2048
+          "contextLength": 32768,
+          "maxOutputTokens": 4096
         },
         "anthropic/claude-opus-5-fast": {
           "name": "Claude Opus 5 (Fast)",
@@ -2867,7 +2867,7 @@
           "currency": "USD",
           "inputPer1m": 0.1,
           "outputPer1m": 0.25,
-          "contextLength": 1000000,
+          "contextLength": 1048576,
           "cacheReadPer1m": 0.05,
           "maxOutputTokens": 262144
         },
@@ -2964,14 +2964,6 @@
         },
         "google/gemma-4-26b-a4b-it:free": {
           "name": "Google: Gemma 4 26B A4B  (free)",
-          "currency": "USD",
-          "inputPer1m": 0,
-          "outputPer1m": 0,
-          "contextLength": 262144,
-          "maxOutputTokens": 32768
-        },
-        "inclusionai/ling-3.0-tiny:free": {
-          "name": "inclusionAI: Ling 3.0 Tiny (free)",
           "currency": "USD",
           "inputPer1m": 0,
           "outputPer1m": 0,
