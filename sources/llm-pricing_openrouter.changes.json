@@ -2,6 +2,134 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "e09df014-0ec4-4eb0-966c-ec6a057fb885",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3.5-35b-a3b",
+      "fromSnapshotId": "0ef370ec-367a-40d5-b31d-9e9e608a836d",
+      "toSnapshotId": "ec9cae3e-5b1c-41c0-9253-c6c50626294f",
+      "detectedAt": "2026-08-14T13:44:35.790Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.5-35b-a3b",
+              "cacheReadPer1m"
+            ],
+            "after": 0.225,
+            "before": 0.25
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.5-35b-a3b",
+              "inputPer1m"
+            ],
+            "after": 0.225,
+            "before": 0.25
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.5-35b-a3b",
+              "maxOutputTokens"
+            ],
+            "after": 65536,
+            "before": 262144
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.5-35b-a3b",
+              "outputPer1m"
+            ],
+            "after": 1.8,
+            "before": 1.25
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Output price increased from 1.25 to 1.8 and max output tokens reduced from 262144 to 65536."
+    },
+    {
+      "id": "3de7fe5d-699e-4b09-9447-107a83d375d4",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/moonshotai/kimi-k2.7-code",
+      "fromSnapshotId": "0ef370ec-367a-40d5-b31d-9e9e608a836d",
+      "toSnapshotId": "ec9cae3e-5b1c-41c0-9253-c6c50626294f",
+      "detectedAt": "2026-08-14T13:44:28.462Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.7-code",
+              "inputPer1m"
+            ],
+            "after": 0.71,
+            "before": 0.67
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.7-code",
+              "outputPer1m"
+            ],
+            "after": 3.5,
+            "before": 3.4
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Price increase for input and output tokens silently raises cost for existing callers."
+    },
+    {
+      "id": "00a76aa9-a2a7-4099-b584-8b2ccb177edd",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/meta-llama/llama-4-maverick",
+      "fromSnapshotId": "0ef370ec-367a-40d5-b31d-9e9e608a836d",
+      "toSnapshotId": "ec9cae3e-5b1c-41c0-9253-c6c50626294f",
+      "detectedAt": "2026-08-14T13:44:26.072Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "meta-llama/llama-4-maverick",
+              "maxOutputTokens"
+            ],
+            "after": 16384,
+            "before": null
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "meta-llama/llama-4-maverick",
+              "outputPer1m"
+            ],
+            "after": 0.8,
+            "before": 0.696
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Price per 1M output tokens increased from 0.696 to 0.8, and maxOutputTokens changed from null to 16384, imposing a stricter output cap. Both are semantically adverse changes that silently affect agents."
+    },
+    {
       "id": "2d5cdcc3-50da-4c4c-b81b-7a814f8f09b6",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-4.6",
@@ -1942,154 +2070,6 @@
       "confidence": 1,
       "classifiedBy": "llm",
       "notes": "All three prices for deepseek-v4-pro increased (cacheRead, input, output), which silently raises costs for agents."
-    },
-    {
-      "id": "f9dfcbec-b511-4e26-be14-1ab5468ac65f",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/~deepseek/deepseek-v4-flash-latest",
-      "fromSnapshotId": "f8fc8a7e-3c59-4aa1-9400-32a87db01a58",
-      "toSnapshotId": "1925c037-1dd6-45f1-bdb4-443264e20075",
-      "detectedAt": "2026-08-12T07:44:30.520Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "~deepseek/deepseek-v4-flash-latest",
-              "cacheReadPer1m"
-            ],
-            "after": 0.0252,
-            "before": 0.0144
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "~deepseek/deepseek-v4-flash-latest",
-              "inputPer1m"
-            ],
-            "after": 0.079996,
-            "before": 0.072
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "~deepseek/deepseek-v4-flash-latest",
-              "maxOutputTokens"
-            ],
-            "after": null,
-            "before": 262144
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "~deepseek/deepseek-v4-flash-latest",
-              "outputPer1m"
-            ],
-            "after": 0.252,
-            "before": 0.144
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "Price increases and output token limit removal silently mislead agents with higher costs and potential truncation."
-    },
-    {
-      "id": "73c39765-4a69-4abb-8795-f16f4c33abd1",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/z-ai/glm-5.2",
-      "fromSnapshotId": "f8fc8a7e-3c59-4aa1-9400-32a87db01a58",
-      "toSnapshotId": "1925c037-1dd6-45f1-bdb4-443264e20075",
-      "detectedAt": "2026-08-12T07:44:29.601Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "cacheReadPer1m"
-            ],
-            "after": 0.1,
-            "before": 0.10374
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "inputPer1m"
-            ],
-            "after": 0.5,
-            "before": 0.5586
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "outputPer1m"
-            ],
-            "after": 3.15,
-            "before": 1.7556
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "Output price increased from 1.7556 to 3.15, a price increase that silently raises cost for agents."
-    },
-    {
-      "id": "55add3de-177c-4049-b072-18c5644dbf91",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/z-ai/glm-5.2",
-      "fromSnapshotId": "55a59c0c-989f-4a03-8d11-58d34cc0e682",
-      "toSnapshotId": "f8fc8a7e-3c59-4aa1-9400-32a87db01a58",
-      "detectedAt": "2026-08-12T01:44:50.324Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "cacheReadPer1m"
-            ],
-            "after": 0.10374,
-            "before": 0.09074
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "inputPer1m"
-            ],
-            "after": 0.5586,
-            "before": 0.4886
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "z-ai/glm-5.2",
-              "outputPer1m"
-            ],
-            "after": 1.7556,
-            "before": 1.5356
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Price increase for model z-ai/glm-5.2"
     }
   ]
 }

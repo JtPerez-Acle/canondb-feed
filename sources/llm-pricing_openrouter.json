@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-14T07:44:18.142Z",
+    "fetchedAt": "2026-08-14T13:44:18.593Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -1194,11 +1194,11 @@
         "qwen/qwen3.5-35b-a3b": {
           "name": "Qwen: Qwen3.5-35B-A3B",
           "currency": "USD",
-          "inputPer1m": 0.25,
-          "outputPer1m": 1.25,
+          "inputPer1m": 0.225,
+          "outputPer1m": 1.8,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.25,
-          "maxOutputTokens": 262144
+          "cacheReadPer1m": 0.225,
+          "maxOutputTokens": 65536
         },
         "qwen/qwen3.6-35b-a3b": {
           "name": "Qwen: Qwen3.6 35B A3B",
@@ -2088,8 +2088,8 @@
         "moonshotai/kimi-k2.7-code": {
           "name": "MoonshotAI: Kimi K2.7 Code",
           "currency": "USD",
-          "inputPer1m": 0.67,
-          "outputPer1m": 3.4,
+          "inputPer1m": 0.71,
+          "outputPer1m": 3.5,
           "contextLength": 262144,
           "cacheReadPer1m": 0.15,
           "maxOutputTokens": 262144
@@ -2502,9 +2502,9 @@
           "name": "Meta: Llama 4 Maverick",
           "currency": "USD",
           "inputPer1m": 0.2,
-          "outputPer1m": 0.696,
+          "outputPer1m": 0.8,
           "contextLength": 1048576,
-          "maxOutputTokens": null
+          "maxOutputTokens": 16384
         },
         "mistralai/ministral-3b-2512": {
           "name": "Mistral: Ministral 3 3B 2512",
