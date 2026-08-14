@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-14T01:44:18.405Z",
+    "fetchedAt": "2026-08-14T07:44:18.142Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -74,10 +74,10 @@
         "z-ai/glm-4.6": {
           "name": "Z.ai: GLM 4.6",
           "currency": "USD",
-          "inputPer1m": 0.55,
-          "outputPer1m": 2.2,
+          "inputPer1m": 0.5,
+          "outputPer1m": 2,
           "contextLength": 204800,
-          "cacheReadPer1m": 0.11,
+          "cacheReadPer1m": 0.1,
           "maxOutputTokens": 131072
         },
         "z-ai/glm-4.7": {
@@ -1805,7 +1805,7 @@
           "inputPer1m": 0,
           "outputPer1m": 0,
           "contextLength": 128000,
-          "maxOutputTokens": 32768
+          "maxOutputTokens": 8192
         },
         "meta-llama/llama-4-scout": {
           "name": "Meta: Llama 4 Scout",
