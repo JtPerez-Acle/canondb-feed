@@ -2,6 +2,62 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "9ea0feb8-20fb-44aa-baa0-1cb4d45457c2",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/~deepseek/deepseek-v4-flash-latest",
+      "fromSnapshotId": "8727a39d-ed64-4b1c-a168-6185dc312aba",
+      "toSnapshotId": "16ba5e40-7751-4b58-be5d-85172d400b4f",
+      "detectedAt": "2026-08-15T19:44:28.781Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "~deepseek/deepseek-v4-flash-latest",
+              "cacheReadPer1m"
+            ],
+            "after": 0.0135,
+            "before": 0.013692
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "~deepseek/deepseek-v4-flash-latest",
+              "inputPer1m"
+            ],
+            "after": 0.0675,
+            "before": 0.06846
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "~deepseek/deepseek-v4-flash-latest",
+              "maxOutputTokens"
+            ],
+            "after": 262144,
+            "before": 384000
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "~deepseek/deepseek-v4-flash-latest",
+              "outputPer1m"
+            ],
+            "after": 0.135,
+            "before": 0.13692
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.7,
+      "classifiedBy": "llm",
+      "notes": "price decreased (safe) but maxOutputTokens reduced (breaking_agent)"
+    },
+    {
       "id": "d8a6f46a-f0b1-42cd-963c-c9d5730e2ca6",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/~deepseek/deepseek-v4-flash-latest",
@@ -2236,32 +2292,6 @@
       "confidence": 0.9,
       "classifiedBy": "llm",
       "notes": "cache read price increased and max output tokens increased (favorable), but price increase breaks agents with silent higher cost"
-    },
-    {
-      "id": "1b669a3d-473e-468d-8152-5160c1edcd64",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/qwen/qwen3-next-80b-a3b-thinking",
-      "fromSnapshotId": "95f940e0-3aeb-4b21-9d50-8ed3ede374d0",
-      "toSnapshotId": "b3672bfb-f498-4fcd-b44e-8f9b52881ce9",
-      "detectedAt": "2026-08-13T13:44:37.853Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3-next-80b-a3b-thinking",
-              "maxOutputTokens"
-            ],
-            "after": 32768,
-            "before": 262144
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "max output tokens reduced from 262144 to 32768, which may silently truncate agent outputs."
     }
   ]
 }
