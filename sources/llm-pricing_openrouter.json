@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-16T01:44:18.725Z",
+    "fetchedAt": "2026-08-16T07:44:19.271Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -101,11 +101,11 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.462,
-          "outputPer1m": 1.452,
+          "inputPer1m": 0.308,
+          "outputPer1m": 0.968,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.0858,
-          "maxOutputTokens": 131072
+          "cacheReadPer1m": 0.0572,
+          "maxOutputTokens": 128000
         },
         "mancer/weaver": {
           "name": "Mancer: Weaver (alpha)",
@@ -718,10 +718,10 @@
         "qwen/qwen3-30b-a3b": {
           "name": "Qwen: Qwen3 30B A3B",
           "currency": "USD",
-          "inputPer1m": 0.12,
-          "outputPer1m": 0.5,
+          "inputPer1m": 0.13,
+          "outputPer1m": 0.52,
           "contextLength": 131072,
-          "maxOutputTokens": 16384
+          "maxOutputTokens": 8192
         },
         "qwen/qwen3.6-flash": {
           "name": "Qwen: Qwen3.6 Flash",
@@ -1053,10 +1053,10 @@
         "moonshotai/kimi-k2.6": {
           "name": "MoonshotAI: Kimi K2.6",
           "currency": "USD",
-          "inputPer1m": 0.65,
-          "outputPer1m": 3.41,
+          "inputPer1m": 0.5415,
+          "outputPer1m": 2.28,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.15,
+          "cacheReadPer1m": 0.0912,
           "maxOutputTokens": 262144
         },
         "morph/morph-v3-large": {
@@ -2293,10 +2293,10 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash 0423",
           "currency": "USD",
-          "inputPer1m": 0.06426,
-          "outputPer1m": 0.12852,
+          "inputPer1m": 0.06146,
+          "outputPer1m": 0.12292,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.012852,
+          "cacheReadPer1m": 0.012292,
           "maxOutputTokens": 384000
         },
         "google/gemma-4-31b-it:free": {
@@ -3450,11 +3450,11 @@
         "~deepseek/deepseek-v4-flash-latest": {
           "name": "DeepSeek V4 Flash Latest",
           "currency": "USD",
-          "inputPer1m": 0.0675,
-          "outputPer1m": 0.135,
+          "inputPer1m": 0.06706,
+          "outputPer1m": 0.13412,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.0135,
-          "maxOutputTokens": 262144
+          "cacheReadPer1m": 0.013412,
+          "maxOutputTokens": 384000
         },
         "google/gemini-2.5-pro-preview-05-06": {
           "name": "Google: Gemini 2.5 Pro Preview 05-06",
