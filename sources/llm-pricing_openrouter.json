@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-15T19:44:18.570Z",
+    "fetchedAt": "2026-08-16T01:44:18.725Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -403,11 +403,11 @@
         "qwen/qwen3.6-27b": {
           "name": "Qwen: Qwen3.6 27B",
           "currency": "USD",
-          "inputPer1m": 0.6,
-          "outputPer1m": 3.6,
+          "inputPer1m": 0.3,
+          "outputPer1m": 2,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.12,
-          "maxOutputTokens": 262144
+          "cacheReadPer1m": 0.03,
+          "maxOutputTokens": 65536
         },
         "qwen/qwen3.7-max": {
           "name": "Qwen: Qwen3.7 Max",
@@ -1053,10 +1053,10 @@
         "moonshotai/kimi-k2.6": {
           "name": "MoonshotAI: Kimi K2.6",
           "currency": "USD",
-          "inputPer1m": 0.5415,
-          "outputPer1m": 2.28,
+          "inputPer1m": 0.65,
+          "outputPer1m": 3.41,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.0912,
+          "cacheReadPer1m": 0.15,
           "maxOutputTokens": 262144
         },
         "morph/morph-v3-large": {

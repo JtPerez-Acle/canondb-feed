@@ -2,6 +2,108 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "7dc02853-e0ad-4c79-be0e-6dba74611e3b",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3.6-27b",
+      "fromSnapshotId": "16ba5e40-7751-4b58-be5d-85172d400b4f",
+      "toSnapshotId": "0adcf667-b236-42c0-a0c2-87c4bfd7b2bd",
+      "detectedAt": "2026-08-16T01:44:26.245Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.6-27b",
+              "cacheReadPer1m"
+            ],
+            "after": 0.03,
+            "before": 0.12
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.6-27b",
+              "inputPer1m"
+            ],
+            "after": 0.3,
+            "before": 0.6
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.6-27b",
+              "maxOutputTokens"
+            ],
+            "after": 65536,
+            "before": 262144
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.6-27b",
+              "outputPer1m"
+            ],
+            "after": 2,
+            "before": 3.6
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Output token cap reduced from 262144 to 65536, which may silently truncate agent outputs."
+    },
+    {
+      "id": "7a8b7f14-83b7-4d43-8582-cf4596dcef3d",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/moonshotai/kimi-k2.6",
+      "fromSnapshotId": "16ba5e40-7751-4b58-be5d-85172d400b4f",
+      "toSnapshotId": "0adcf667-b236-42c0-a0c2-87c4bfd7b2bd",
+      "detectedAt": "2026-08-16T01:44:21.397Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.6",
+              "cacheReadPer1m"
+            ],
+            "after": 0.15,
+            "before": 0.0912
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.6",
+              "inputPer1m"
+            ],
+            "after": 0.65,
+            "before": 0.5415
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "moonshotai/kimi-k2.6",
+              "outputPer1m"
+            ],
+            "after": 3.41,
+            "before": 2.28
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Price increases for cache read, input, and output tokens silently raise costs for existing callers."
+    },
+    {
       "id": "9ea0feb8-20fb-44aa-baa0-1cb4d45457c2",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/~deepseek/deepseek-v4-flash-latest",
@@ -2230,68 +2332,6 @@
       "confidence": 1,
       "classifiedBy": "llm",
       "notes": "All prices decreased, which is favorable and safe for consumers."
-    },
-    {
-      "id": "d8caceae-6b05-4069-a41f-5d80bb5f5c63",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/deepseek/deepseek-r1",
-      "fromSnapshotId": "b3672bfb-f498-4fcd-b44e-8f9b52881ce9",
-      "toSnapshotId": "6eaded38-64b3-4aea-84c0-929b072fd1f3",
-      "detectedAt": "2026-08-13T19:44:20.477Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "deepseek/deepseek-r1",
-              "contextLength"
-            ],
-            "after": 64000,
-            "before": 163840
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "Context length reduced from 163840 to 64000, agents may silently truncate."
-    },
-    {
-      "id": "d0630fcd-799c-4094-94fc-9c007c6fa165",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/qwen/qwen3.8-2.4t-a95b",
-      "fromSnapshotId": "95f940e0-3aeb-4b21-9d50-8ed3ede374d0",
-      "toSnapshotId": "b3672bfb-f498-4fcd-b44e-8f9b52881ce9",
-      "detectedAt": "2026-08-13T13:44:49.659Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3.8-2.4t-a95b",
-              "cacheReadPer1m"
-            ],
-            "after": 0.25,
-            "before": 0.2
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3.8-2.4t-a95b",
-              "maxOutputTokens"
-            ],
-            "after": 262144,
-            "before": 52429
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "cache read price increased and max output tokens increased (favorable), but price increase breaks agents with silent higher cost"
     }
   ]
 }
