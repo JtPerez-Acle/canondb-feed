@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-16T07:44:19.271Z",
+    "fetchedAt": "2026-08-16T13:44:18.918Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -403,11 +403,11 @@
         "qwen/qwen3.6-27b": {
           "name": "Qwen: Qwen3.6 27B",
           "currency": "USD",
-          "inputPer1m": 0.3,
-          "outputPer1m": 2,
+          "inputPer1m": 0.6,
+          "outputPer1m": 3.6,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.03,
-          "maxOutputTokens": 65536
+          "cacheReadPer1m": 0.12,
+          "maxOutputTokens": 262144
         },
         "qwen/qwen3.7-max": {
           "name": "Qwen: Qwen3.7 Max",
@@ -3450,10 +3450,10 @@
         "~deepseek/deepseek-v4-flash-latest": {
           "name": "DeepSeek V4 Flash Latest",
           "currency": "USD",
-          "inputPer1m": 0.06706,
-          "outputPer1m": 0.13412,
+          "inputPer1m": 0.06146,
+          "outputPer1m": 0.12292,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.013412,
+          "cacheReadPer1m": 0.012292,
           "maxOutputTokens": 384000
         },
         "google/gemini-2.5-pro-preview-05-06": {
