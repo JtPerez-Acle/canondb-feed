@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-18T01:44:19.553Z",
+    "fetchedAt": "2026-08-18T07:44:19.533Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -101,10 +101,10 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.5,
-          "outputPer1m": 3.15,
+          "inputPer1m": 0.4886,
+          "outputPer1m": 1.5356,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.115,
+          "cacheReadPer1m": 0.09074,
           "maxOutputTokens": 131072
         },
         "mancer/weaver": {
@@ -1062,10 +1062,10 @@
         "moonshotai/kimi-k2.6": {
           "name": "MoonshotAI: Kimi K2.6",
           "currency": "USD",
-          "inputPer1m": 0.95,
-          "outputPer1m": 4,
+          "inputPer1m": 0.5605,
+          "outputPer1m": 2.36,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.16,
+          "cacheReadPer1m": 0.0944,
           "maxOutputTokens": 262144
         },
         "morph/morph-v3-large": {
@@ -1453,11 +1453,11 @@
         "openai/gpt-5.6-sol-pro": {
           "name": "OpenAI: GPT-5.6 Sol Pro",
           "currency": "USD",
-          "inputPer1m": 2.5,
-          "outputPer1m": 15,
+          "inputPer1m": 5,
+          "outputPer1m": 30,
           "contextLength": 1050000,
-          "cacheReadPer1m": 0.25,
-          "cacheWritePer1m": 3.125,
+          "cacheReadPer1m": 0.5,
+          "cacheWritePer1m": 6.25,
           "maxOutputTokens": 128000
         },
         "openai/gpt-chat-latest": {
@@ -1507,10 +1507,10 @@
         "qwen/qwen3.5-122b-a10b": {
           "name": "Qwen: Qwen3.5-122B-A10B",
           "currency": "USD",
-          "inputPer1m": 0.26,
-          "outputPer1m": 2.08,
+          "inputPer1m": 0.29,
+          "outputPer1m": 2.4,
           "contextLength": 262144,
-          "maxOutputTokens": 262144
+          "maxOutputTokens": 81920
         },
         "qwen/qwen3.5-397b-a17b": {
           "name": "Qwen: Qwen3.5 397B A17B",
@@ -1809,10 +1809,10 @@
         "deepseek/deepseek-v4-pro": {
           "name": "DeepSeek: DeepSeek V4 Pro 0423",
           "currency": "USD",
-          "inputPer1m": 1.32,
-          "outputPer1m": 3.96,
+          "inputPer1m": 0.66,
+          "outputPer1m": 1.98,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.044,
+          "cacheReadPer1m": 0.022,
           "maxOutputTokens": 384000
         },
         "liquid/lfm-2.5-2.6b:free": {
@@ -1945,10 +1945,10 @@
         "openai/gpt-5.6-sol:batch": {
           "name": "OpenAI: GPT-5.6 Sol (batch)",
           "currency": "USD",
-          "inputPer1m": 1.25,
-          "outputPer1m": 7.5,
+          "inputPer1m": 2.5,
+          "outputPer1m": 15,
           "contextLength": 1050000,
-          "cacheReadPer1m": 0.125,
+          "cacheReadPer1m": 0.25,
           "maxOutputTokens": 128000
         },
         "openai/gpt-5.6-terra-pro": {
@@ -2301,10 +2301,10 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash 0423",
           "currency": "USD",
-          "inputPer1m": 0.0826,
-          "outputPer1m": 0.1652,
+          "inputPer1m": 0.0798,
+          "outputPer1m": 0.1596,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.01652,
+          "cacheReadPer1m": 0.01596,
           "maxOutputTokens": 384000
         },
         "google/gemma-4-31b-it:free": {
@@ -2745,10 +2745,10 @@
         "openai/gpt-5.6-sol-pro:batch": {
           "name": "OpenAI: GPT-5.6 Sol Pro (batch)",
           "currency": "USD",
-          "inputPer1m": 1.25,
-          "outputPer1m": 7.5,
+          "inputPer1m": 2.5,
+          "outputPer1m": 15,
           "contextLength": 1050000,
-          "cacheReadPer1m": 0.125,
+          "cacheReadPer1m": 0.25,
           "maxOutputTokens": 128000
         },
         "openai/gpt-oss-safeguard-20b": {
@@ -2806,10 +2806,10 @@
         "deepseek/deepseek-v4-pro-0813": {
           "name": "DeepSeek: DeepSeek V4 Pro 0813",
           "currency": "USD",
-          "inputPer1m": 1.32,
-          "outputPer1m": 3.96,
+          "inputPer1m": 0.66,
+          "outputPer1m": 1.98,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.044,
+          "cacheReadPer1m": 0.022,
           "maxOutputTokens": 384000
         },
         "google/gemini-2.5-flash-image": {
