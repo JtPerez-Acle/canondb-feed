@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "api:notion",
-    "fetchedAt": "2026-08-18T13:45:41.174Z",
+    "fetchedAt": "2026-08-18T19:44:53.271Z",
     "stale": false,
     "verified": true,
     "data": {
