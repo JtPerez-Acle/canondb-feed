@@ -4,9 +4,8 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "mcp-tools:fetch",
-    "fetchedAt": "2026-07-28T13:30:15.271Z",
-    "stale": true,
-    "staleReason": "data older than 24h",
+    "fetchedAt": "2026-08-19T00:38:53.139Z",
+    "stale": false,
     "verified": true,
     "data": {
       "tools": {
