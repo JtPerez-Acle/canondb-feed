@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-19T07:44:19.338Z",
+    "fetchedAt": "2026-08-19T13:44:20.188Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -1220,11 +1220,11 @@
         "qwen/qwen3.5-35b-a3b": {
           "name": "Qwen: Qwen3.5-35B-A3B",
           "currency": "USD",
-          "inputPer1m": 0.225,
-          "outputPer1m": 1.8,
+          "inputPer1m": 0.25,
+          "outputPer1m": 1.25,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.225,
-          "maxOutputTokens": 65536
+          "cacheReadPer1m": 0.25,
+          "maxOutputTokens": 262144
         },
         "qwen/qwen3.6-35b-a3b": {
           "name": "Qwen: Qwen3.6 35B A3B",
@@ -1818,11 +1818,11 @@
         "deepseek/deepseek-v4-pro": {
           "name": "DeepSeek: DeepSeek V4 Pro 0423",
           "currency": "USD",
-          "inputPer1m": 1.32,
-          "outputPer1m": 3.96,
+          "inputPer1m": 1.44,
+          "outputPer1m": 2.88,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.044,
-          "maxOutputTokens": 384000
+          "cacheReadPer1m": 0.1215,
+          "maxOutputTokens": 393216
         },
         "liquid/lfm-2.5-2.6b:free": {
           "name": "LiquidAI: LFM2.5-2.6B (free)",
@@ -2815,10 +2815,10 @@
         "deepseek/deepseek-v4-pro-0813": {
           "name": "DeepSeek: DeepSeek V4 Pro 0813",
           "currency": "USD",
-          "inputPer1m": 1.32,
-          "outputPer1m": 3.96,
+          "inputPer1m": 0.66,
+          "outputPer1m": 1.98,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.044,
+          "cacheReadPer1m": 0.022,
           "maxOutputTokens": 384000
         },
         "google/gemini-2.5-flash-image": {
@@ -3001,11 +3001,10 @@
         "deepseek/deepseek-chat-v3-0324": {
           "name": "DeepSeek: DeepSeek V3 0324",
           "currency": "USD",
-          "inputPer1m": 0.27,
-          "outputPer1m": 1.12,
+          "inputPer1m": 0.25,
+          "outputPer1m": 1,
           "contextLength": 163840,
-          "cacheReadPer1m": 0.135,
-          "maxOutputTokens": 65536
+          "maxOutputTokens": 163840
         },
         "google/gemma-4-26b-a4b-it:free": {
           "name": "Google: Gemma 4 26B A4B  (free)",
