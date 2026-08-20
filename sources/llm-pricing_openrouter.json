@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-20T07:44:20.485Z",
+    "fetchedAt": "2026-08-20T13:44:19.827Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -974,6 +974,14 @@
           "contextLength": 65536,
           "maxOutputTokens": 65536
         },
+        "tencent/hy-mt2-1.8b": {
+          "name": "Tencent: Hy-MT2-1.8B",
+          "currency": "USD",
+          "inputPer1m": 0.044,
+          "outputPer1m": 0.177,
+          "contextLength": 8192,
+          "maxOutputTokens": 4096
+        },
         "tencent/hy3-preview": {
           "name": "Tencent: Hy3 preview",
           "currency": "USD",
@@ -1064,10 +1072,10 @@
         "moonshotai/kimi-k2.6": {
           "name": "MoonshotAI: Kimi K2.6",
           "currency": "USD",
-          "inputPer1m": 0.95,
-          "outputPer1m": 4,
+          "inputPer1m": 0.5795,
+          "outputPer1m": 2.44,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.16,
+          "cacheReadPer1m": 0.0976,
           "maxOutputTokens": 262144
         },
         "morph/morph-v3-large": {
@@ -1547,6 +1555,14 @@
           "contextLength": 262144,
           "cacheReadPer1m": 0.04,
           "maxOutputTokens": 256000
+        },
+        "tencent/hy-mt2-30b-a3b": {
+          "name": "Tencent: Hy-MT2-30B-A3B",
+          "currency": "USD",
+          "inputPer1m": 0.074,
+          "outputPer1m": 0.295,
+          "contextLength": 8192,
+          "maxOutputTokens": 4096
         },
         "aion-labs/aion-3.0-mini": {
           "name": "AionLabs: Aion-3.0-Mini",
@@ -2303,10 +2319,10 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash 0423",
           "currency": "USD",
-          "inputPer1m": 0.088606,
-          "outputPer1m": 0.177212,
+          "inputPer1m": 0.0868,
+          "outputPer1m": 0.1736,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.017721,
+          "cacheReadPer1m": 0.01736,
           "maxOutputTokens": 384000
         },
         "google/gemma-4-31b-it:free": {
@@ -2905,7 +2921,7 @@
           "currency": "USD",
           "inputPer1m": 0.08,
           "outputPer1m": 0.2,
-          "contextLength": 1000000,
+          "contextLength": 262144,
           "cacheReadPer1m": 0.04,
           "maxOutputTokens": 131072
         },
