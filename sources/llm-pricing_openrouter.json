@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-20T13:44:19.827Z",
+    "fetchedAt": "2026-08-20T19:44:19.910Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -1072,10 +1072,10 @@
         "moonshotai/kimi-k2.6": {
           "name": "MoonshotAI: Kimi K2.6",
           "currency": "USD",
-          "inputPer1m": 0.5795,
-          "outputPer1m": 2.44,
+          "inputPer1m": 0.5605,
+          "outputPer1m": 2.36,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.0976,
+          "cacheReadPer1m": 0.0944,
           "maxOutputTokens": 262144
         },
         "morph/morph-v3-large": {
@@ -1425,6 +1425,14 @@
           "contextLength": 65536,
           "cacheReadPer1m": 0.03,
           "maxOutputTokens": 2048
+        },
+        "mistralai/ministral-8b": {
+          "name": "Mistral: Ministral 8B",
+          "currency": "USD",
+          "inputPer1m": 0.11,
+          "outputPer1m": 0.11,
+          "contextLength": 128000,
+          "maxOutputTokens": null
         },
         "mistralai/mistral-nemo": {
           "name": "Mistral: Mistral Nemo",
@@ -2319,10 +2327,10 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash 0423",
           "currency": "USD",
-          "inputPer1m": 0.0868,
-          "outputPer1m": 0.1736,
+          "inputPer1m": 0.0784,
+          "outputPer1m": 0.1568,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.01736,
+          "cacheReadPer1m": 0.01568,
           "maxOutputTokens": 384000
         },
         "google/gemma-4-31b-it:free": {
@@ -3078,7 +3086,7 @@
           "currency": "USD",
           "inputPer1m": 0.45,
           "outputPer1m": 1.2,
-          "contextLength": 524288,
+          "contextLength": 1048576,
           "cacheReadPer1m": 0.1,
           "maxOutputTokens": 262144
         },
@@ -3186,7 +3194,8 @@
           "inputPer1m": 0.27,
           "outputPer1m": 1,
           "contextLength": 163840,
-          "maxOutputTokens": 163840
+          "cacheReadPer1m": 0.135,
+          "maxOutputTokens": 32768
         },
         "deepseek/deepseek-v4-flash-0731": {
           "name": "DeepSeek: DeepSeek V4 Flash 0731",
