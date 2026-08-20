@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-19T19:44:20.269Z",
+    "fetchedAt": "2026-08-20T01:44:20.314Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -115,14 +115,6 @@
           "contextLength": 1048576,
           "cacheReadPer1m": 0.26,
           "maxOutputTokens": 131072
-        },
-        "mancer/weaver": {
-          "name": "Mancer: Weaver (alpha)",
-          "currency": "USD",
-          "inputPer1m": 0.5,
-          "outputPer1m": 0.75,
-          "contextLength": 8000,
-          "maxOutputTokens": 6000
         },
         "openai/gpt-4o": {
           "name": "OpenAI: GPT-4o",
@@ -1072,10 +1064,10 @@
         "moonshotai/kimi-k2.6": {
           "name": "MoonshotAI: Kimi K2.6",
           "currency": "USD",
-          "inputPer1m": 0.5415,
-          "outputPer1m": 2.28,
+          "inputPer1m": 0.95,
+          "outputPer1m": 4,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.0912,
+          "cacheReadPer1m": 0.16,
           "maxOutputTokens": 262144
         },
         "morph/morph-v3-large": {
@@ -1425,6 +1417,14 @@
           "contextLength": 65536,
           "cacheReadPer1m": 0.03,
           "maxOutputTokens": 2048
+        },
+        "mistralai/ministral-8b": {
+          "name": "Mistral: Ministral 8B",
+          "currency": "USD",
+          "inputPer1m": 0.11,
+          "outputPer1m": 0.11,
+          "contextLength": 128000,
+          "maxOutputTokens": null
         },
         "mistralai/mistral-nemo": {
           "name": "Mistral: Mistral Nemo",
@@ -2311,10 +2311,10 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash 0423",
           "currency": "USD",
-          "inputPer1m": 0.0798,
-          "outputPer1m": 0.1596,
+          "inputPer1m": 0.0826,
+          "outputPer1m": 0.1652,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.01596,
+          "cacheReadPer1m": 0.01652,
           "maxOutputTokens": 384000
         },
         "google/gemma-4-31b-it:free": {
@@ -2816,11 +2816,11 @@
         "deepseek/deepseek-v4-pro-0813": {
           "name": "DeepSeek: DeepSeek V4 Pro 0813",
           "currency": "USD",
-          "inputPer1m": 0.66,
-          "outputPer1m": 1.98,
+          "inputPer1m": 1.188,
+          "outputPer1m": 3.564,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.022,
-          "maxOutputTokens": 384000
+          "cacheReadPer1m": 0.0396,
+          "maxOutputTokens": null
         },
         "google/gemini-2.5-flash-image": {
           "name": "Google: Nano Banana (Gemini 2.5 Flash Image)",
@@ -3467,11 +3467,11 @@
         "~deepseek/deepseek-v4-flash-latest": {
           "name": "DeepSeek V4 Flash Latest",
           "currency": "USD",
-          "inputPer1m": 0.0765,
-          "outputPer1m": 0.153,
+          "inputPer1m": 0.065,
+          "outputPer1m": 0.18,
           "contextLength": 1310720,
-          "cacheReadPer1m": 0.0153,
-          "maxOutputTokens": 262144
+          "cacheReadPer1m": 0.02,
+          "maxOutputTokens": 1048576
         },
         "google/gemini-2.5-pro-preview-05-06": {
           "name": "Google: Gemini 2.5 Pro Preview 05-06",
