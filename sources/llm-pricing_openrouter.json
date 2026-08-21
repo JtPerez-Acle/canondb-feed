@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-21T13:44:21.325Z",
+    "fetchedAt": "2026-08-21T19:44:21.466Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -1088,10 +1088,10 @@
         "moonshotai/kimi-k2.6": {
           "name": "MoonshotAI: Kimi K2.6",
           "currency": "USD",
-          "inputPer1m": 0.9405,
-          "outputPer1m": 3.96,
+          "inputPer1m": 0.5795,
+          "outputPer1m": 2.44,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.1584,
+          "cacheReadPer1m": 0.0976,
           "maxOutputTokens": 262144
         },
         "morph/morph-v3-large": {
@@ -1544,7 +1544,7 @@
           "inputPer1m": 0.26,
           "outputPer1m": 2.08,
           "contextLength": 262144,
-          "maxOutputTokens": 65536
+          "maxOutputTokens": 262144
         },
         "qwen/qwen3.5-397b-a17b": {
           "name": "Qwen: Qwen3.5 397B A17B",
@@ -1561,7 +1561,7 @@
           "outputPer1m": 6,
           "contextLength": 1048576,
           "cacheReadPer1m": 0.25,
-          "maxOutputTokens": 262144
+          "maxOutputTokens": 131072
         },
         "stepfun/step-3.5-flash": {
           "name": "StepFun: Step 3.5 Flash",
@@ -2343,10 +2343,10 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash 0423",
           "currency": "USD",
-          "inputPer1m": 0.0798,
-          "outputPer1m": 0.1596,
+          "inputPer1m": 0.08106,
+          "outputPer1m": 0.16212,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.01596,
+          "cacheReadPer1m": 0.016212,
           "maxOutputTokens": 384000
         },
         "google/gemma-4-31b-it:free": {
@@ -2983,6 +2983,14 @@
           "contextLength": 131072,
           "maxOutputTokens": 131072
         },
+        "thinkingmachines/inkling:free": {
+          "name": "Thinking Machines: Inkling (free)",
+          "currency": "USD",
+          "inputPer1m": 0,
+          "outputPer1m": 0,
+          "contextLength": 262144,
+          "maxOutputTokens": 262144
+        },
         "~anthropic/claude-opus-latest": {
           "name": "Anthropic: Claude Opus Latest",
           "currency": "USD",
@@ -3555,6 +3563,14 @@
           "outputPer1m": 0,
           "contextLength": 128000,
           "maxOutputTokens": 128000
+        },
+        "thinkingmachines/inkling-small:free": {
+          "name": "Thinking Machines: Inkling Small (free)",
+          "currency": "USD",
+          "inputPer1m": 0,
+          "outputPer1m": 0,
+          "contextLength": 262144,
+          "maxOutputTokens": 262144
         },
         "dots-studio/dots-3-note-preview:free": {
           "name": "Dots Studio: Dots3-Note Preview (free)",
