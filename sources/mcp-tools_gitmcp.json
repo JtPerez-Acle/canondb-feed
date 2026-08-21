@@ -5,7 +5,8 @@
   "current": {
     "source": "mcp-tools:gitmcp",
     "fetchedAt": "2026-08-20T19:44:35.482Z",
-    "stale": false,
+    "stale": true,
+    "staleReason": "latest refresh failed",
     "verified": true,
     "data": {
       "tools": {

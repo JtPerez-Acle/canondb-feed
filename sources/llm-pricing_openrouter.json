@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-20T19:44:19.910Z",
+    "fetchedAt": "2026-08-21T01:44:20.675Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -115,6 +115,14 @@
           "contextLength": 1048576,
           "cacheReadPer1m": 0.26,
           "maxOutputTokens": 131072
+        },
+        "mancer/weaver": {
+          "name": "Mancer: Weaver (alpha)",
+          "currency": "USD",
+          "inputPer1m": 0.5,
+          "outputPer1m": 0.75,
+          "contextLength": 8000,
+          "maxOutputTokens": 6000
         },
         "openai/gpt-4o": {
           "name": "OpenAI: GPT-4o",
@@ -446,6 +454,14 @@
           "outputPer1m": 0.1,
           "contextLength": 16384,
           "maxOutputTokens": 16384
+        },
+        "stealth/ox-alpha": {
+          "name": "Ox Alpha",
+          "currency": "USD",
+          "inputPer1m": 0,
+          "outputPer1m": 0,
+          "contextLength": 1048576,
+          "maxOutputTokens": 131072
         },
         "xiaomi/mimo-v2.5": {
           "name": "Xiaomi: MiMo-V2.5",
@@ -784,7 +800,7 @@
           "currency": "USD",
           "inputPer1m": 1.4,
           "outputPer1m": 4.4,
-          "contextLength": 512000,
+          "contextLength": 1048575,
           "cacheReadPer1m": 0.26,
           "maxOutputTokens": null
         },
@@ -1072,10 +1088,10 @@
         "moonshotai/kimi-k2.6": {
           "name": "MoonshotAI: Kimi K2.6",
           "currency": "USD",
-          "inputPer1m": 0.5605,
-          "outputPer1m": 2.36,
+          "inputPer1m": 0.95,
+          "outputPer1m": 4,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.0944,
+          "cacheReadPer1m": 0.16,
           "maxOutputTokens": 262144
         },
         "morph/morph-v3-large": {
@@ -1316,20 +1332,20 @@
         "google/gemma-4-31b-it": {
           "name": "Google: Gemma 4 31B",
           "currency": "USD",
-          "inputPer1m": 0.09,
+          "inputPer1m": 0.1,
           "outputPer1m": 0.34,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.05,
-          "maxOutputTokens": 16384
+          "cacheReadPer1m": 0.1,
+          "maxOutputTokens": 262144
         },
         "meta/muse-glimmer-30b": {
           "name": "Meta: Muse Glimmer 30B",
           "currency": "USD",
-          "inputPer1m": 0.35,
-          "outputPer1m": 1.5,
+          "inputPer1m": 0.3,
+          "outputPer1m": 1.1,
           "contextLength": 131072,
           "cacheReadPer1m": 0.04,
-          "maxOutputTokens": null
+          "maxOutputTokens": 131072
         },
         "openai/gpt-audio-mini": {
           "name": "OpenAI: GPT Audio Mini",
@@ -1528,7 +1544,7 @@
           "inputPer1m": 0.26,
           "outputPer1m": 2.08,
           "contextLength": 262144,
-          "maxOutputTokens": 262144
+          "maxOutputTokens": 65536
         },
         "qwen/qwen3.5-397b-a17b": {
           "name": "Qwen: Qwen3.5 397B A17B",
@@ -2129,10 +2145,10 @@
         "moonshotai/kimi-k2.7-code": {
           "name": "MoonshotAI: Kimi K2.7 Code",
           "currency": "USD",
-          "inputPer1m": 0.71,
-          "outputPer1m": 3.5,
+          "inputPer1m": 0.67,
+          "outputPer1m": 3.4,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.15,
+          "cacheReadPer1m": 0.17,
           "maxOutputTokens": 262144
         },
         "nousresearch/hermes-4-70b": {
@@ -2327,10 +2343,10 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash 0423",
           "currency": "USD",
-          "inputPer1m": 0.0784,
-          "outputPer1m": 0.1568,
+          "inputPer1m": 0.0826,
+          "outputPer1m": 0.1652,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.01568,
+          "cacheReadPer1m": 0.01652,
           "maxOutputTokens": 384000
         },
         "google/gemma-4-31b-it:free": {
