@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-22T13:44:21.201Z",
+    "fetchedAt": "2026-08-22T19:44:21.437Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -942,10 +942,9 @@
         "openai/gpt-oss-120b": {
           "name": "OpenAI: gpt-oss-120b",
           "currency": "USD",
-          "inputPer1m": 0.03,
+          "inputPer1m": 0.037,
           "outputPer1m": 0.17,
           "contextLength": 131072,
-          "cacheReadPer1m": 0.03,
           "maxOutputTokens": 131072
         },
         "openai/o1-pro:batch": {
@@ -1341,11 +1340,11 @@
         "meta/muse-glimmer-30b": {
           "name": "Meta: Muse Glimmer 30B",
           "currency": "USD",
-          "inputPer1m": 0.3,
-          "outputPer1m": 1.1,
+          "inputPer1m": 0.35,
+          "outputPer1m": 1.5,
           "contextLength": 131072,
           "cacheReadPer1m": 0.04,
-          "maxOutputTokens": 131072
+          "maxOutputTokens": null
         },
         "openai/gpt-audio-mini": {
           "name": "OpenAI: GPT Audio Mini",
@@ -2336,10 +2335,10 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash 0423",
           "currency": "USD",
-          "inputPer1m": 0.06286,
-          "outputPer1m": 0.12572,
+          "inputPer1m": 0.06006,
+          "outputPer1m": 0.12012,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.012572,
+          "cacheReadPer1m": 0.012012,
           "maxOutputTokens": 384000
         },
         "google/gemma-4-31b-it:free": {
