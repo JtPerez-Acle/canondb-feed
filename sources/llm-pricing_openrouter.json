@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-22T01:44:21.135Z",
+    "fetchedAt": "2026-08-22T07:44:21.281Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -1088,10 +1088,10 @@
         "moonshotai/kimi-k2.6": {
           "name": "MoonshotAI: Kimi K2.6",
           "currency": "USD",
-          "inputPer1m": 0.5605,
-          "outputPer1m": 2.36,
+          "inputPer1m": 0.5415,
+          "outputPer1m": 2.28,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.0944,
+          "cacheReadPer1m": 0.0912,
           "maxOutputTokens": 262144
         },
         "morph/morph-v3-large": {
@@ -1843,10 +1843,10 @@
         "deepseek/deepseek-v4-pro": {
           "name": "DeepSeek: DeepSeek V4 Pro 0423",
           "currency": "USD",
-          "inputPer1m": 0.532092,
-          "outputPer1m": 1.064184,
+          "inputPer1m": 0.447528,
+          "outputPer1m": 0.895056,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.044341,
+          "cacheReadPer1m": 0.037294,
           "maxOutputTokens": 384000
         },
         "liquid/lfm-2.5-2.6b:free": {
@@ -2336,10 +2336,10 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash 0423",
           "currency": "USD",
-          "inputPer1m": 0.07686,
-          "outputPer1m": 0.15372,
+          "inputPer1m": 0.07126,
+          "outputPer1m": 0.14252,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.015372,
+          "cacheReadPer1m": 0.014252,
           "maxOutputTokens": 384000
         },
         "google/gemma-4-31b-it:free": {
@@ -3340,10 +3340,11 @@
         "qwen/qwen3-next-80b-a3b-instruct": {
           "name": "Qwen: Qwen3 Next 80B A3B Instruct",
           "currency": "USD",
-          "inputPer1m": 0.09,
+          "inputPer1m": 0.1,
           "outputPer1m": 1.1,
           "contextLength": 262144,
-          "maxOutputTokens": 16384
+          "cacheReadPer1m": 0.07,
+          "maxOutputTokens": 262144
         },
         "qwen/qwen3-next-80b-a3b-thinking": {
           "name": "Qwen: Qwen3 Next 80B A3B Thinking",

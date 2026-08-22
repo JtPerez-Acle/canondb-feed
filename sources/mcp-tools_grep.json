@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "mcp-tools:grep",
-    "fetchedAt": "2026-08-22T01:46:00.423Z",
+    "fetchedAt": "2026-08-22T07:44:41.841Z",
     "stale": false,
     "verified": true,
     "data": {
