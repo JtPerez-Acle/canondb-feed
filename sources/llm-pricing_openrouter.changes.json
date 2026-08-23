@@ -2,6 +2,108 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "84cbcd3c-ec93-4a38-a767-026488eb3851",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/minimax/minimax-m2.7",
+      "fromSnapshotId": "5c0fa04e-3616-4461-8bbf-719a714fe57b",
+      "toSnapshotId": "591538e2-b1ed-4a68-8c77-4bbcf2b51515",
+      "detectedAt": "2026-08-23T13:44:36.892Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "minimax/minimax-m2.7",
+              "cacheReadPer1m"
+            ],
+            "after": 0.048,
+            "before": 0.06
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "minimax/minimax-m2.7",
+              "inputPer1m"
+            ],
+            "after": 0.24,
+            "before": 0.3
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "minimax/minimax-m2.7",
+              "maxOutputTokens"
+            ],
+            "after": null,
+            "before": 131072
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "minimax/minimax-m2.7",
+              "outputPer1m"
+            ],
+            "after": 0.96,
+            "before": 1.2
+          }
+        ]
+      },
+      "severity": "breaking_strict",
+      "confidence": 0.8,
+      "classifiedBy": "llm",
+      "notes": "maxOutputTokens changed from numeric to null, breaking strict consumers; price decreases are safe"
+    },
+    {
+      "id": "dffc9530-7d70-44a7-aece-b7fee72bfde9",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/deepseek/deepseek-v4-flash",
+      "fromSnapshotId": "5c0fa04e-3616-4461-8bbf-719a714fe57b",
+      "toSnapshotId": "591538e2-b1ed-4a68-8c77-4bbcf2b51515",
+      "detectedAt": "2026-08-23T13:44:23.409Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "deepseek/deepseek-v4-flash",
+              "cacheReadPer1m"
+            ],
+            "after": 0.009772,
+            "before": 0.010332
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "deepseek/deepseek-v4-flash",
+              "inputPer1m"
+            ],
+            "after": 0.04886,
+            "before": 0.05166
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "deepseek/deepseek-v4-flash",
+              "outputPer1m"
+            ],
+            "after": 0.09772,
+            "before": 0.10332
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "All three prices decreased."
+    },
+    {
       "id": "1de467fc-fd4b-4e84-9076-1b5af20b943f",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/~deepseek/deepseek-v4-flash-latest",
@@ -2111,98 +2213,6 @@
       "confidence": 0.9,
       "classifiedBy": "llm",
       "notes": "maxOutputTokens decreased from 393216 to 384000, a reduction in output capacity that may silently truncate agent outputs."
-    },
-    {
-      "id": "0a7e54e6-ded2-432b-af91-6d8702ba4fe5",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/deepseek/deepseek-v4-flash",
-      "fromSnapshotId": "ac58219d-6abe-4666-93a4-a18c29f25b86",
-      "toSnapshotId": "13bf5baf-6dd0-4ffb-9587-3b92e4fdb475",
-      "detectedAt": "2026-08-21T13:44:27.846Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "deepseek/deepseek-v4-flash",
-              "cacheReadPer1m"
-            ],
-            "after": 0.01596,
-            "before": 0.01652
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "deepseek/deepseek-v4-flash",
-              "inputPer1m"
-            ],
-            "after": 0.0798,
-            "before": 0.0826
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "deepseek/deepseek-v4-flash",
-              "outputPer1m"
-            ],
-            "after": 0.1596,
-            "before": 0.1652
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Price decrease for deepseek/deepseek-v4-flash"
-    },
-    {
-      "id": "eae9315c-a7d3-4114-b861-debb3280cfd9",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/~deepseek/deepseek-v4-flash-latest",
-      "fromSnapshotId": "4da51bca-092d-4517-ab80-e1d9ec522b1d",
-      "toSnapshotId": "ac58219d-6abe-4666-93a4-a18c29f25b86",
-      "detectedAt": "2026-08-21T07:44:26.624Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "~deepseek/deepseek-v4-flash-latest",
-              "cacheReadPer1m"
-            ],
-            "after": 0.02,
-            "before": 0.014
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "~deepseek/deepseek-v4-flash-latest",
-              "maxOutputTokens"
-            ],
-            "after": 1048576,
-            "before": 262144
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "~deepseek/deepseek-v4-flash-latest",
-              "outputPer1m"
-            ],
-            "after": 0.18,
-            "before": 0.14
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "Cache read price increased from 0.014 to 0.02, output price increased from 0.14 to 0.18; agents incur higher cost silently."
     }
   ]
 }

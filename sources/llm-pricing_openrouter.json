@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-23T07:44:21.423Z",
+    "fetchedAt": "2026-08-23T13:44:20.902Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -1077,11 +1077,11 @@
         "minimax/minimax-m2.7": {
           "name": "MiniMax: MiniMax M2.7",
           "currency": "USD",
-          "inputPer1m": 0.3,
-          "outputPer1m": 1.2,
+          "inputPer1m": 0.24,
+          "outputPer1m": 0.96,
           "contextLength": 204800,
-          "cacheReadPer1m": 0.06,
-          "maxOutputTokens": 131072
+          "cacheReadPer1m": 0.048,
+          "maxOutputTokens": null
         },
         "moonshotai/kimi-k2.5": {
           "name": "MoonshotAI: Kimi K2.5",
@@ -2343,10 +2343,10 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash 0423",
           "currency": "USD",
-          "inputPer1m": 0.05166,
-          "outputPer1m": 0.10332,
+          "inputPer1m": 0.04886,
+          "outputPer1m": 0.09772,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.010332,
+          "cacheReadPer1m": 0.009772,
           "maxOutputTokens": 384000
         },
         "google/gemma-4-31b-it:free": {
