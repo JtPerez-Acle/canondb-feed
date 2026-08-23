@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-23T13:44:20.902Z",
+    "fetchedAt": "2026-08-23T19:44:21.679Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -1551,7 +1551,7 @@
           "inputPer1m": 0.26,
           "outputPer1m": 2.08,
           "contextLength": 262144,
-          "maxOutputTokens": 262144
+          "maxOutputTokens": 65536
         },
         "qwen/qwen3.5-397b-a17b": {
           "name": "Qwen: Qwen3.5 397B A17B",
@@ -2031,11 +2031,11 @@
         "thinkingmachines/inkling": {
           "name": "Thinking Machines: Inkling",
           "currency": "USD",
-          "inputPer1m": 1,
+          "inputPer1m": 0.95,
           "outputPer1m": 4.05,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.17,
-          "maxOutputTokens": null
+          "cacheReadPer1m": 0.16,
+          "maxOutputTokens": 262144
         },
         "undi95/remm-slerp-l2-13b": {
           "name": "ReMM SLERP 13B",
@@ -3512,10 +3512,10 @@
           "name": "DeepSeek V4 Flash Latest",
           "currency": "USD",
           "inputPer1m": 0.04,
-          "outputPer1m": 0.13,
+          "outputPer1m": 0.08,
           "contextLength": 1310720,
-          "cacheReadPer1m": 0.01,
-          "maxOutputTokens": 262144
+          "cacheReadPer1m": 0.008,
+          "maxOutputTokens": 1048576
         },
         "google/gemini-2.5-pro-preview-05-06": {
           "name": "Google: Gemini 2.5 Pro Preview 05-06",
