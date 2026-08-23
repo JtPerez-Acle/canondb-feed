@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-22T19:44:21.437Z",
+    "fetchedAt": "2026-08-23T01:44:21.832Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -431,8 +431,8 @@
         "qwen/qwen3.8-27b": {
           "name": "Qwen: Qwen3.8 27B",
           "currency": "USD",
-          "inputPer1m": 0.45,
-          "outputPer1m": 3.2,
+          "inputPer1m": 0.4,
+          "outputPer1m": 3,
           "contextLength": 1000000,
           "cacheReadPer1m": 0.05,
           "maxOutputTokens": 131072
@@ -552,6 +552,14 @@
           "contextLength": 1000000,
           "cacheReadPer1m": 0.5,
           "maxOutputTokens": 128000
+        },
+        "tencent/hy-mt2-7b": {
+          "name": "Tencent: Hy-MT2-7B",
+          "currency": "USD",
+          "inputPer1m": 0.074,
+          "outputPer1m": 0.295,
+          "contextLength": 8192,
+          "maxOutputTokens": 4096
         },
         "writer/palmyra-x5": {
           "name": "Writer: Palmyra X5",
@@ -753,10 +761,10 @@
         "qwen/qwen3-30b-a3b": {
           "name": "Qwen: Qwen3 30B A3B",
           "currency": "USD",
-          "inputPer1m": 0.13,
-          "outputPer1m": 0.52,
+          "inputPer1m": 0.12,
+          "outputPer1m": 0.5,
           "contextLength": 131072,
-          "maxOutputTokens": 8192
+          "maxOutputTokens": 16384
         },
         "qwen/qwen3.6-flash": {
           "name": "Qwen: Qwen3.6 Flash",
@@ -1087,11 +1095,11 @@
         "moonshotai/kimi-k2.6": {
           "name": "MoonshotAI: Kimi K2.6",
           "currency": "USD",
-          "inputPer1m": 0.5415,
-          "outputPer1m": 2.28,
+          "inputPer1m": 0.95,
+          "outputPer1m": 4,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.0912,
-          "maxOutputTokens": 262144
+          "cacheReadPer1m": 0.16,
+          "maxOutputTokens": null
         },
         "morph/morph-v3-large": {
           "name": "Morph: Morph V3 Large",
@@ -1543,7 +1551,7 @@
           "inputPer1m": 0.26,
           "outputPer1m": 2.08,
           "contextLength": 262144,
-          "maxOutputTokens": 65536
+          "maxOutputTokens": 262144
         },
         "qwen/qwen3.5-397b-a17b": {
           "name": "Qwen: Qwen3.5 397B A17B",
@@ -2023,11 +2031,11 @@
         "thinkingmachines/inkling": {
           "name": "Thinking Machines: Inkling",
           "currency": "USD",
-          "inputPer1m": 0.95,
+          "inputPer1m": 1,
           "outputPer1m": 4.05,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.16,
-          "maxOutputTokens": 262144
+          "cacheReadPer1m": 0.17,
+          "maxOutputTokens": null
         },
         "undi95/remm-slerp-l2-13b": {
           "name": "ReMM SLERP 13B",
@@ -2335,10 +2343,10 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash 0423",
           "currency": "USD",
-          "inputPer1m": 0.06006,
-          "outputPer1m": 0.12012,
+          "inputPer1m": 0.05446,
+          "outputPer1m": 0.10892,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.012012,
+          "cacheReadPer1m": 0.010892,
           "maxOutputTokens": 384000
         },
         "google/gemma-4-31b-it:free": {
@@ -2833,10 +2841,10 @@
         "deepseek/deepseek-v4-pro-0813": {
           "name": "DeepSeek: DeepSeek V4 Pro 0813",
           "currency": "USD",
-          "inputPer1m": 1.188,
-          "outputPer1m": 3.564,
+          "inputPer1m": 1.122,
+          "outputPer1m": 3.366,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.0396,
+          "cacheReadPer1m": 0.0374,
           "maxOutputTokens": null
         },
         "google/gemini-2.5-flash-image": {
@@ -3503,11 +3511,11 @@
         "~deepseek/deepseek-v4-flash-latest": {
           "name": "DeepSeek V4 Flash Latest",
           "currency": "USD",
-          "inputPer1m": 0.065,
-          "outputPer1m": 0.18,
+          "inputPer1m": 0.0639,
+          "outputPer1m": 0.1278,
           "contextLength": 1310720,
-          "cacheReadPer1m": 0.02,
-          "maxOutputTokens": 1048576
+          "cacheReadPer1m": 0.01278,
+          "maxOutputTokens": 262144
         },
         "google/gemini-2.5-pro-preview-05-06": {
           "name": "Google: Gemini 2.5 Pro Preview 05-06",
