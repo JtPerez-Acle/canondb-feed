@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-23T19:44:21.679Z",
+    "fetchedAt": "2026-08-24T01:44:21.928Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -412,11 +412,10 @@
         "qwen/qwen3.6-27b": {
           "name": "Qwen: Qwen3.6 27B",
           "currency": "USD",
-          "inputPer1m": 0.6,
-          "outputPer1m": 3.6,
+          "inputPer1m": 0.32,
+          "outputPer1m": 3.2,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.12,
-          "maxOutputTokens": 262144
+          "maxOutputTokens": 81920
         },
         "qwen/qwen3.7-max": {
           "name": "Qwen: Qwen3.7 Max",
@@ -669,7 +668,7 @@
           "outputPer1m": 15,
           "contextLength": 1048576,
           "cacheReadPer1m": 0.3,
-          "maxOutputTokens": null
+          "maxOutputTokens": 1048576
         },
         "nex-agi/nex-n2-pro": {
           "name": "Nex AGI: Nex-N2-Pro",
@@ -1551,15 +1550,16 @@
           "inputPer1m": 0.26,
           "outputPer1m": 2.08,
           "contextLength": 262144,
-          "maxOutputTokens": 65536
+          "maxOutputTokens": 262144
         },
         "qwen/qwen3.5-397b-a17b": {
           "name": "Qwen: Qwen3.5 397B A17B",
           "currency": "USD",
-          "inputPer1m": 0.39,
-          "outputPer1m": 2.34,
+          "inputPer1m": 0.5,
+          "outputPer1m": 3.6,
           "contextLength": 262144,
-          "maxOutputTokens": 65536
+          "cacheReadPer1m": 0.3,
+          "maxOutputTokens": 262144
         },
         "qwen/qwen3.8-2.4t-a95b": {
           "name": "Qwen: Qwen3.8 2.4T A95B",
@@ -1850,10 +1850,10 @@
         "deepseek/deepseek-v4-pro": {
           "name": "DeepSeek: DeepSeek V4 Pro 0423",
           "currency": "USD",
-          "inputPer1m": 0.396894,
-          "outputPer1m": 0.793788,
+          "inputPer1m": 0.519216,
+          "outputPer1m": 1.038432,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.033075,
+          "cacheReadPer1m": 0.043268,
           "maxOutputTokens": 384000
         },
         "liquid/lfm-2.5-2.6b:free": {
@@ -2031,11 +2031,11 @@
         "thinkingmachines/inkling": {
           "name": "Thinking Machines: Inkling",
           "currency": "USD",
-          "inputPer1m": 0.95,
+          "inputPer1m": 1,
           "outputPer1m": 4.05,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.16,
-          "maxOutputTokens": 262144
+          "cacheReadPer1m": 0.17,
+          "maxOutputTokens": null
         },
         "undi95/remm-slerp-l2-13b": {
           "name": "ReMM SLERP 13B",
@@ -2302,7 +2302,7 @@
           "inputPer1m": 0.4,
           "outputPer1m": 0.4,
           "contextLength": 1024000,
-          "maxOutputTokens": 1024000
+          "maxOutputTokens": 32768
         },
         "~google/gemini-pro-latest": {
           "name": "Google Gemini Pro Latest",
@@ -2343,10 +2343,10 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash 0423",
           "currency": "USD",
-          "inputPer1m": 0.04886,
-          "outputPer1m": 0.09772,
+          "inputPer1m": 0.05866,
+          "outputPer1m": 0.11732,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.009772,
+          "cacheReadPer1m": 0.011732,
           "maxOutputTokens": 384000
         },
         "google/gemma-4-31b-it:free": {
@@ -3217,11 +3217,11 @@
         "deepseek/deepseek-v4-flash-0731": {
           "name": "DeepSeek: DeepSeek V4 Flash 0731",
           "currency": "USD",
-          "inputPer1m": 0.08,
-          "outputPer1m": 0.18,
+          "inputPer1m": 0.14,
+          "outputPer1m": 0.28,
           "contextLength": 1310720,
-          "cacheReadPer1m": 0.016,
-          "maxOutputTokens": 384000
+          "cacheReadPer1m": 0.028,
+          "maxOutputTokens": 131072
         },
         "ibm-granite/granite-4.0-h-micro": {
           "name": "IBM: Granite 4.0 Micro",
