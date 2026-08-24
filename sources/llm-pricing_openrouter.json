@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-24T01:44:21.928Z",
+    "fetchedAt": "2026-08-24T07:44:21.835Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -1850,10 +1850,10 @@
         "deepseek/deepseek-v4-pro": {
           "name": "DeepSeek: DeepSeek V4 Pro 0423",
           "currency": "USD",
-          "inputPer1m": 0.519216,
-          "outputPer1m": 1.038432,
+          "inputPer1m": 0.526176,
+          "outputPer1m": 1.052352,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.043268,
+          "cacheReadPer1m": 0.043848,
           "maxOutputTokens": 384000
         },
         "liquid/lfm-2.5-2.6b:free": {
@@ -2043,7 +2043,7 @@
           "inputPer1m": 0.45,
           "outputPer1m": 0.65,
           "contextLength": 6144,
-          "maxOutputTokens": 6144
+          "maxOutputTokens": 4096
         },
         "anthropic/claude-opus-4.1": {
           "name": "Anthropic: Claude Opus 4.1",
@@ -2343,10 +2343,10 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash 0423",
           "currency": "USD",
-          "inputPer1m": 0.05866,
-          "outputPer1m": 0.11732,
+          "inputPer1m": 0.0574,
+          "outputPer1m": 0.1148,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.011732,
+          "cacheReadPer1m": 0.01148,
           "maxOutputTokens": 384000
         },
         "google/gemma-4-31b-it:free": {
