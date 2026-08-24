@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "mcp-tools:deepwiki",
-    "fetchedAt": "2026-08-24T07:44:30.169Z",
+    "fetchedAt": "2026-08-24T13:44:52.026Z",
     "stale": false,
     "verified": true,
     "data": {

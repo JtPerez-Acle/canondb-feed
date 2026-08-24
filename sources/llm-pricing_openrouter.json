@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-24T07:44:21.835Z",
+    "fetchedAt": "2026-08-24T13:44:21.996Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -1680,24 +1680,6 @@
           "cacheWritePer1m": 0.020833,
           "maxOutputTokens": 65536
         },
-        "inclusionai/ling-2.6-1t": {
-          "name": "inclusionAI: Ling-2.6-1T",
-          "currency": "USD",
-          "inputPer1m": 0.075,
-          "outputPer1m": 0.625,
-          "contextLength": 262144,
-          "cacheReadPer1m": 0.015,
-          "maxOutputTokens": 32768
-        },
-        "inclusionai/ring-2.6-1t": {
-          "name": "inclusionAI: Ring-2.6-1T",
-          "currency": "USD",
-          "inputPer1m": 0.075,
-          "outputPer1m": 0.625,
-          "contextLength": 262144,
-          "cacheReadPer1m": 0.015,
-          "maxOutputTokens": 65536
-        },
         "mistralai/mistral-large": {
           "name": "Mistral Large",
           "currency": "USD",
@@ -1850,10 +1832,10 @@
         "deepseek/deepseek-v4-pro": {
           "name": "DeepSeek: DeepSeek V4 Pro 0423",
           "currency": "USD",
-          "inputPer1m": 0.526176,
-          "outputPer1m": 1.052352,
+          "inputPer1m": 0.522174,
+          "outputPer1m": 1.044348,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.043848,
+          "cacheReadPer1m": 0.043515,
           "maxOutputTokens": 384000
         },
         "liquid/lfm-2.5-2.6b:free": {
@@ -2148,7 +2130,7 @@
           "inputPer1m": 0.67,
           "outputPer1m": 3.4,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.17,
+          "cacheReadPer1m": 0.19,
           "maxOutputTokens": 262144
         },
         "nousresearch/hermes-4-70b": {
@@ -2343,10 +2325,10 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash 0423",
           "currency": "USD",
-          "inputPer1m": 0.0574,
-          "outputPer1m": 0.1148,
+          "inputPer1m": 0.056,
+          "outputPer1m": 0.112,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.01148,
+          "cacheReadPer1m": 0.0112,
           "maxOutputTokens": 384000
         },
         "google/gemma-4-31b-it:free": {
@@ -2373,15 +2355,6 @@
           "contextLength": 131072,
           "cacheReadPer1m": 0.05,
           "maxOutputTokens": 131072
-        },
-        "inclusionai/ling-2.6-flash": {
-          "name": "inclusionAI: Ling-2.6-flash",
-          "currency": "USD",
-          "inputPer1m": 0.01,
-          "outputPer1m": 0.03,
-          "contextLength": 262144,
-          "cacheReadPer1m": 0.002,
-          "maxOutputTokens": 32768
         },
         "inclusionai/ling-3.0-flash": {
           "name": "Ling-3.0-flash",
@@ -3217,10 +3190,10 @@
         "deepseek/deepseek-v4-flash-0731": {
           "name": "DeepSeek: DeepSeek V4 Flash 0731",
           "currency": "USD",
-          "inputPer1m": 0.14,
-          "outputPer1m": 0.28,
+          "inputPer1m": 0.0658,
+          "outputPer1m": 0.1316,
           "contextLength": 1310720,
-          "cacheReadPer1m": 0.028,
+          "cacheReadPer1m": 0.01316,
           "maxOutputTokens": 131072
         },
         "ibm-granite/granite-4.0-h-micro": {
@@ -3247,14 +3220,6 @@
           "outputPer1m": 4,
           "contextLength": 262144,
           "cacheReadPer1m": 0.19,
-          "maxOutputTokens": null
-        },
-        "nvidia/nemotron-nano-9b-v2:free": {
-          "name": "NVIDIA: Nemotron Nano 9B V2 (free)",
-          "currency": "USD",
-          "inputPer1m": 0,
-          "outputPer1m": 0,
-          "contextLength": 128000,
           "maxOutputTokens": null
         },
         "~anthropic/claude-sonnet-latest": {
@@ -3505,7 +3470,7 @@
           "currency": "USD",
           "inputPer1m": 0.23,
           "outputPer1m": 2.3,
-          "contextLength": 262144,
+          "contextLength": 131072,
           "maxOutputTokens": null
         },
         "~deepseek/deepseek-v4-flash-latest": {
@@ -3550,22 +3515,6 @@
           "outputPer1m": 0.7,
           "contextLength": 131072,
           "maxOutputTokens": 16384
-        },
-        "nvidia/nemotron-3-nano-30b-a3b:free": {
-          "name": "NVIDIA: Nemotron 3 Nano 30B A3B (free)",
-          "currency": "USD",
-          "inputPer1m": 0,
-          "outputPer1m": 0,
-          "contextLength": 256000,
-          "maxOutputTokens": null
-        },
-        "nvidia/nemotron-nano-12b-v2-vl:free": {
-          "name": "NVIDIA: Nemotron Nano 12B 2 VL (free)",
-          "currency": "USD",
-          "inputPer1m": 0,
-          "outputPer1m": 0,
-          "contextLength": 128000,
-          "maxOutputTokens": 128000
         },
         "thinkingmachines/inkling-small:free": {
           "name": "Thinking Machines: Inkling Small (free)",
