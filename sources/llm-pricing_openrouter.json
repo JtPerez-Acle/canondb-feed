@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-25T01:44:22.236Z",
+    "fetchedAt": "2026-08-25T07:44:22.364Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -430,10 +430,11 @@
         "qwen/qwen3.8-27b": {
           "name": "Qwen: Qwen3.8 27B",
           "currency": "USD",
-          "inputPer1m": 0.4,
-          "outputPer1m": 3,
+          "inputPer1m": 0.425,
+          "outputPer1m": 2.55,
           "contextLength": 1000000,
-          "cacheReadPer1m": 0.05,
+          "cacheReadPer1m": 0.085,
+          "cacheWritePer1m": 0.53125,
           "maxOutputTokens": 131072
         },
         "qwen/qwen3.8-max": {
@@ -1680,6 +1681,14 @@
           "cacheWritePer1m": 0.020833,
           "maxOutputTokens": 65536
         },
+        "minimax/minimax-m3:free": {
+          "name": "MiniMax: MiniMax M3 (free)",
+          "currency": "USD",
+          "inputPer1m": 0,
+          "outputPer1m": 0,
+          "contextLength": 1048576,
+          "maxOutputTokens": null
+        },
         "mistralai/devstral-2512": {
           "name": "Mistral: Devstral 2 2512",
           "currency": "USD",
@@ -1778,11 +1787,11 @@
         "~moonshotai/kimi-latest": {
           "name": "MoonshotAI Kimi Latest",
           "currency": "USD",
-          "inputPer1m": 2.6,
-          "outputPer1m": 13,
+          "inputPer1m": 2.8,
+          "outputPer1m": 14,
           "contextLength": 1048576,
           "cacheReadPer1m": 0.29,
-          "maxOutputTokens": 974842
+          "maxOutputTokens": 1048576
         },
         "~openai/gpt-mini-latest": {
           "name": "OpenAI GPT Mini Latest",
@@ -2132,6 +2141,14 @@
           "outputPer1m": 0.34,
           "contextLength": 262144,
           "maxOutputTokens": 16384
+        },
+        "minimax/minimax-m2.7:free": {
+          "name": "MiniMax: MiniMax M2.7 (free)",
+          "currency": "USD",
+          "inputPer1m": 0,
+          "outputPer1m": 0,
+          "contextLength": 196608,
+          "maxOutputTokens": null
         },
         "moonshotai/kimi-k2.7-code": {
           "name": "MoonshotAI: Kimi K2.7 Code",
@@ -3486,9 +3503,9 @@
           "name": "DeepSeek V4 Flash Latest",
           "currency": "USD",
           "inputPer1m": 0.035,
-          "outputPer1m": 0.12,
+          "outputPer1m": 0.1,
           "contextLength": 1310720,
-          "cacheReadPer1m": 0.01,
+          "cacheReadPer1m": 0.008,
           "maxOutputTokens": 1048576
         },
         "google/gemini-2.5-pro-preview-05-06": {
