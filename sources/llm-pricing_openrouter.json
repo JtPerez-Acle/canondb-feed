@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-25T07:44:22.364Z",
+    "fetchedAt": "2026-08-25T13:44:22.348Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -453,6 +453,7 @@
           "inputPer1m": 0.1,
           "outputPer1m": 0.1,
           "contextLength": 16384,
+          "cacheReadPer1m": 0.1,
           "maxOutputTokens": 16384
         },
         "stealth/ox-alpha": {
@@ -995,6 +996,7 @@
           "inputPer1m": 0.1,
           "outputPer1m": 0.2,
           "contextLength": 65536,
+          "cacheReadPer1m": 0.1,
           "maxOutputTokens": 65536
         },
         "tencent/hy-mt2-1.8b": {
@@ -1850,10 +1852,10 @@
         "deepseek/deepseek-v4-pro": {
           "name": "DeepSeek: DeepSeek V4 Pro 0423",
           "currency": "USD",
-          "inputPer1m": 0.790308,
-          "outputPer1m": 1.580616,
+          "inputPer1m": 0.572808,
+          "outputPer1m": 1.145616,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.065859,
+          "cacheReadPer1m": 0.047734,
           "maxOutputTokens": 384000
         },
         "liquid/lfm-2.5-2.6b:free": {
@@ -2351,10 +2353,10 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash 0423",
           "currency": "USD",
-          "inputPer1m": 0.088606,
-          "outputPer1m": 0.177212,
+          "inputPer1m": 0.0826,
+          "outputPer1m": 0.1652,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.017721,
+          "cacheReadPer1m": 0.01652,
           "maxOutputTokens": 384000
         },
         "google/gemma-4-31b-it:free": {
@@ -3216,10 +3218,10 @@
         "deepseek/deepseek-v4-flash-0731": {
           "name": "DeepSeek: DeepSeek V4 Flash 0731",
           "currency": "USD",
-          "inputPer1m": 0.14,
-          "outputPer1m": 0.28,
+          "inputPer1m": 0.0616,
+          "outputPer1m": 0.1232,
           "contextLength": 1310720,
-          "cacheReadPer1m": 0.028,
+          "cacheReadPer1m": 0.01232,
           "maxOutputTokens": 131072
         },
         "ibm-granite/granite-4.0-h-micro": {
@@ -3579,10 +3581,10 @@
         "deepseek/deepseek-v4-flash-vision-exp": {
           "name": "DeepSeek: DeepSeek V4 Flash Vision Exp",
           "currency": "USD",
-          "inputPer1m": 0.44,
-          "outputPer1m": 1.32,
+          "inputPer1m": 0.22,
+          "outputPer1m": 0.66,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.014,
+          "cacheReadPer1m": 0.007,
           "maxOutputTokens": 384000
         },
         "google/gemini-3.1-flash-image-preview": {
