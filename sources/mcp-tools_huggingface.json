@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "mcp-tools:huggingface",
-    "fetchedAt": "2026-08-26T13:44:30.675Z",
+    "fetchedAt": "2026-08-26T19:45:13.914Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -44,7 +44,7 @@
                       "items": {
                         "type": "string"
                       },
-                      "description": "Command arguments; each array item is one grammar token."
+                      "description": "Command arguments. First item must be an hf:// URI, not a local path or bare filename. One argument per array item."
                     }
                   },
                   "additionalProperties": false

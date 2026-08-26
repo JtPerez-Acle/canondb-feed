@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-26T13:44:23.383Z",
+    "fetchedAt": "2026-08-26T19:44:22.192Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -39,10 +39,10 @@
         "tencent/hy3": {
           "name": "Tencent: Hy3",
           "currency": "USD",
-          "inputPer1m": 0.132,
-          "outputPer1m": 0.528,
+          "inputPer1m": 0.0825,
+          "outputPer1m": 0.33,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.033,
+          "cacheReadPer1m": 0.020625,
           "maxOutputTokens": 128000
         },
         "openai/gpt-4": {
@@ -412,11 +412,10 @@
         "qwen/qwen3.6-27b": {
           "name": "Qwen: Qwen3.6 27B",
           "currency": "USD",
-          "inputPer1m": 0.6,
-          "outputPer1m": 3.6,
+          "inputPer1m": 0.32,
+          "outputPer1m": 3.2,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.12,
-          "maxOutputTokens": 235929
+          "maxOutputTokens": 81920
         },
         "qwen/qwen3.7-max": {
           "name": "Qwen: Qwen3.7 Max",
@@ -455,14 +454,6 @@
           "outputPer1m": 0.1,
           "contextLength": 16384,
           "maxOutputTokens": 14745
-        },
-        "stealth/ox-alpha": {
-          "name": "Ox Alpha",
-          "currency": "USD",
-          "inputPer1m": 0,
-          "outputPer1m": 0,
-          "contextLength": 1048576,
-          "maxOutputTokens": 131072
         },
         "xiaomi/mimo-v2.5": {
           "name": "Xiaomi: MiMo-V2.5",
@@ -804,14 +795,14 @@
           "cacheReadPer1m": 0.01,
           "maxOutputTokens": 16384
         },
-        "z-ai/glm-5.2:batch": {
-          "name": "Z.ai: GLM 5.2 (batch)",
+        "z-ai/glm-5.3-flash": {
+          "name": "Z.ai: GLM 5.3 Flash",
           "currency": "USD",
-          "inputPer1m": 1.4,
-          "outputPer1m": 4.4,
-          "contextLength": 1048575,
-          "cacheReadPer1m": 0.26,
-          "maxOutputTokens": 943717
+          "inputPer1m": 0.075,
+          "outputPer1m": 0.25,
+          "contextLength": 1310720,
+          "cacheReadPer1m": 0.015,
+          "maxOutputTokens": 131072
         },
         "~openai/gpt-latest": {
           "name": "OpenAI GPT Latest",
@@ -1087,10 +1078,10 @@
         "moonshotai/kimi-k2.5": {
           "name": "MoonshotAI: Kimi K2.5",
           "currency": "USD",
-          "inputPer1m": 0.6,
-          "outputPer1m": 3,
+          "inputPer1m": 0.45,
+          "outputPer1m": 2.25,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.1,
+          "cacheReadPer1m": 0.07,
           "maxOutputTokens": 235929
         },
         "moonshotai/kimi-k2.6": {
@@ -2344,10 +2335,10 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash 0423",
           "currency": "USD",
-          "inputPer1m": 0.08106,
-          "outputPer1m": 0.16212,
+          "inputPer1m": 0.07952,
+          "outputPer1m": 0.15904,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.016212,
+          "cacheReadPer1m": 0.015904,
           "maxOutputTokens": 384000
         },
         "google/gemma-4-31b-it:free": {

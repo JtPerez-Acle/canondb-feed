@@ -2,6 +2,278 @@
   "id": "api:stripe",
   "changes": [
     {
+      "id": "b59b44a1-2456-4257-8968-ba34650b791d",
+      "sourceId": "api:stripe",
+      "entityId": "version",
+      "fromSnapshotId": "0ba445d5-73a2-4bfc-8682-46a6a07139ce",
+      "toSnapshotId": "56ce7564-68d8-4d9c-8769-b4040d360766",
+      "detectedAt": "2026-08-26T19:46:39.885Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "version"
+            ],
+            "after": "2026-08-26.dahlia",
+            "before": "2026-07-29.dahlia"
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.7,
+      "classifiedBy": "llm",
+      "notes": "API version changed, which may alter behavior or semantics without breaking the call syntax."
+    },
+    {
+      "id": "b2a5c24b-2caa-41fb-a906-fa6d1e22445c",
+      "sourceId": "api:stripe",
+      "entityId": "operations/POST /v1/billing/feedback_options/{id}/deactivate",
+      "fromSnapshotId": "0ba445d5-73a2-4bfc-8682-46a6a07139ce",
+      "toSnapshotId": "56ce7564-68d8-4d9c-8769-b4040d360766",
+      "detectedAt": "2026-08-26T19:46:36.620Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "operations",
+              "POST /v1/billing/feedback_options/{id}/deactivate"
+            ],
+            "after": {
+              "summary": "Deactivate a feedback option",
+              "responses": [
+                "200",
+                "default"
+              ],
+              "parameters": [
+                {
+                  "in": "path",
+                  "name": "id",
+                  "type": "string",
+                  "required": true
+                }
+              ],
+              "operationId": "PostBillingFeedbackOptionsIdDeactivate",
+              "requestBody": {
+                "content": [
+                  "application/x-www-form-urlencoded"
+                ],
+                "required": false
+              }
+            }
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Added a new operation, which does not break existing consumers."
+    },
+    {
+      "id": "fd8e7565-2660-48de-96d0-4e4c7656f561",
+      "sourceId": "api:stripe",
+      "entityId": "operations/POST /v1/billing/feedback_options/{id}",
+      "fromSnapshotId": "0ba445d5-73a2-4bfc-8682-46a6a07139ce",
+      "toSnapshotId": "56ce7564-68d8-4d9c-8769-b4040d360766",
+      "detectedAt": "2026-08-26T19:46:35.545Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "operations",
+              "POST /v1/billing/feedback_options/{id}"
+            ],
+            "after": {
+              "summary": "Update a feedback option",
+              "responses": [
+                "200",
+                "default"
+              ],
+              "parameters": [
+                {
+                  "in": "path",
+                  "name": "id",
+                  "type": "string",
+                  "required": true
+                }
+              ],
+              "operationId": "PostBillingFeedbackOptionsId",
+              "requestBody": {
+                "content": [
+                  "application/x-www-form-urlencoded"
+                ],
+                "required": false
+              }
+            }
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Added new operation POST /v1/billing/feedback_options/{id}"
+    },
+    {
+      "id": "a7233d31-c35c-4a11-ad6c-aeb1894f8a1f",
+      "sourceId": "api:stripe",
+      "entityId": "operations/POST /v1/billing/feedback_options",
+      "fromSnapshotId": "0ba445d5-73a2-4bfc-8682-46a6a07139ce",
+      "toSnapshotId": "56ce7564-68d8-4d9c-8769-b4040d360766",
+      "detectedAt": "2026-08-26T19:46:33.870Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "operations",
+              "POST /v1/billing/feedback_options"
+            ],
+            "after": {
+              "summary": "Create a feedback option",
+              "responses": [
+                "200",
+                "default"
+              ],
+              "parameters": [],
+              "operationId": "PostBillingFeedbackOptions",
+              "requestBody": {
+                "content": [
+                  "application/x-www-form-urlencoded"
+                ],
+                "required": true
+              }
+            }
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "New operation added"
+    },
+    {
+      "id": "b5c03d8d-05d1-41bc-aad1-87fa342fea43",
+      "sourceId": "api:stripe",
+      "entityId": "operations/GET /v1/billing/feedback_options/{id}",
+      "fromSnapshotId": "0ba445d5-73a2-4bfc-8682-46a6a07139ce",
+      "toSnapshotId": "56ce7564-68d8-4d9c-8769-b4040d360766",
+      "detectedAt": "2026-08-26T19:46:30.947Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "operations",
+              "GET /v1/billing/feedback_options/{id}"
+            ],
+            "after": {
+              "summary": "Retrieve a feedback option",
+              "responses": [
+                "200",
+                "default"
+              ],
+              "parameters": [
+                {
+                  "in": "path",
+                  "name": "id",
+                  "type": "string",
+                  "required": true
+                },
+                {
+                  "in": "query",
+                  "name": "expand",
+                  "type": "array",
+                  "required": false
+                }
+              ],
+              "operationId": "GetBillingFeedbackOptionsId",
+              "requestBody": {
+                "content": [
+                  "application/x-www-form-urlencoded"
+                ],
+                "required": false
+              }
+            }
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "New operation added, no impact on existing consumers."
+    },
+    {
+      "id": "4ea91cf4-8a5e-4531-8943-ac03a5f7e5da",
+      "sourceId": "api:stripe",
+      "entityId": "operations/GET /v1/billing/feedback_options",
+      "fromSnapshotId": "0ba445d5-73a2-4bfc-8682-46a6a07139ce",
+      "toSnapshotId": "56ce7564-68d8-4d9c-8769-b4040d360766",
+      "detectedAt": "2026-08-26T19:46:28.557Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "operations",
+              "GET /v1/billing/feedback_options"
+            ],
+            "after": {
+              "summary": "Feedback Options List API Method",
+              "responses": [
+                "200",
+                "default"
+              ],
+              "parameters": [
+                {
+                  "in": "query",
+                  "name": "ending_before",
+                  "type": "string",
+                  "required": false
+                },
+                {
+                  "in": "query",
+                  "name": "expand",
+                  "type": "array",
+                  "required": false
+                },
+                {
+                  "in": "query",
+                  "name": "limit",
+                  "type": "integer",
+                  "required": false
+                },
+                {
+                  "in": "query",
+                  "name": "starting_after",
+                  "type": "string",
+                  "required": false
+                },
+                {
+                  "in": "query",
+                  "name": "status",
+                  "type": "string",
+                  "required": false
+                }
+              ],
+              "operationId": "GetBillingFeedbackOptions",
+              "requestBody": {
+                "content": [
+                  "application/x-www-form-urlencoded"
+                ],
+                "required": false
+              }
+            }
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Added new endpoint."
+    },
+    {
       "id": "46d0a614-fa21-4e37-a4e6-007df04bd7ed",
       "sourceId": "api:stripe",
       "entityId": "version",

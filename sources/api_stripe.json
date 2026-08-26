@@ -4,13 +4,13 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "api:stripe",
-    "fetchedAt": "2026-08-26T13:44:33.761Z",
+    "fetchedAt": "2026-08-26T19:46:25.578Z",
     "stale": false,
     "verified": true,
     "data": {
       "api": "api:stripe",
       "title": "Stripe API",
-      "version": "2026-07-29.dahlia",
+      "version": "2026-08-26.dahlia",
       "operations": {
         "GET /v1/files": {
           "summary": "List all files",
@@ -7329,6 +7329,52 @@
             "required": false
           }
         },
+        "GET /v1/billing/feedback_options": {
+          "summary": "Feedback Options List API Method",
+          "responses": [
+            "200",
+            "default"
+          ],
+          "parameters": [
+            {
+              "in": "query",
+              "name": "ending_before",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "expand",
+              "type": "array",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "limit",
+              "type": "integer",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "starting_after",
+              "type": "string",
+              "required": false
+            },
+            {
+              "in": "query",
+              "name": "status",
+              "type": "string",
+              "required": false
+            }
+          ],
+          "operationId": "GetBillingFeedbackOptions",
+          "requestBody": {
+            "content": [
+              "application/x-www-form-urlencoded"
+            ],
+            "required": false
+          }
+        },
         "GET /v1/charges/{charge}/dispute": {
           "summary": null,
           "responses": [
@@ -8316,6 +8362,21 @@
               "application/x-www-form-urlencoded"
             ],
             "required": false
+          }
+        },
+        "POST /v1/billing/feedback_options": {
+          "summary": "Create a feedback option",
+          "responses": [
+            "200",
+            "default"
+          ],
+          "parameters": [],
+          "operationId": "PostBillingFeedbackOptions",
+          "requestBody": {
+            "content": [
+              "application/x-www-form-urlencoded"
+            ],
+            "required": true
           }
         },
         "POST /v1/charges/{charge}/capture": {
@@ -10232,6 +10293,34 @@
             "required": false
           }
         },
+        "GET /v1/billing/feedback_options/{id}": {
+          "summary": "Retrieve a feedback option",
+          "responses": [
+            "200",
+            "default"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "in": "query",
+              "name": "expand",
+              "type": "array",
+              "required": false
+            }
+          ],
+          "operationId": "GetBillingFeedbackOptionsId",
+          "requestBody": {
+            "content": [
+              "application/x-www-form-urlencoded"
+            ],
+            "required": false
+          }
+        },
         "GET /v1/billing_portal/configurations": {
           "summary": "List portal configurations",
           "responses": [
@@ -10933,6 +11022,28 @@
             }
           ],
           "operationId": "PostApplicationFeesIdRefunds",
+          "requestBody": {
+            "content": [
+              "application/x-www-form-urlencoded"
+            ],
+            "required": false
+          }
+        },
+        "POST /v1/billing/feedback_options/{id}": {
+          "summary": "Update a feedback option",
+          "responses": [
+            "200",
+            "default"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "PostBillingFeedbackOptionsId",
           "requestBody": {
             "content": [
               "application/x-www-form-urlencoded"
@@ -14902,6 +15013,28 @@
             }
           ],
           "operationId": "GetTreasuryDebitReversalsDebitReversal",
+          "requestBody": {
+            "content": [
+              "application/x-www-form-urlencoded"
+            ],
+            "required": false
+          }
+        },
+        "POST /v1/billing/feedback_options/{id}/deactivate": {
+          "summary": "Deactivate a feedback option",
+          "responses": [
+            "200",
+            "default"
+          ],
+          "parameters": [
+            {
+              "in": "path",
+              "name": "id",
+              "type": "string",
+              "required": true
+            }
+          ],
+          "operationId": "PostBillingFeedbackOptionsIdDeactivate",
           "requestBody": {
             "content": [
               "application/x-www-form-urlencoded"

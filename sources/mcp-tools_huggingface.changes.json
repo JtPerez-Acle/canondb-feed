@@ -2,6 +2,38 @@
   "id": "mcp-tools:huggingface",
   "changes": [
     {
+      "id": "0c9fd303-4e1a-41c9-b8e6-3ebf9a925116",
+      "sourceId": "mcp-tools:huggingface",
+      "entityId": "tools/hf_fs",
+      "fromSnapshotId": "944ee700-a4d1-414f-b1e6-f382395bd8b7",
+      "toSnapshotId": "fd977261-d674-4f1e-bbd0-e66e25914bfd",
+      "detectedAt": "2026-08-26T19:45:24.084Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "hf_fs",
+              "inputSchema",
+              "properties",
+              "operations",
+              "items",
+              "properties",
+              "args",
+              "description"
+            ],
+            "after": "Command arguments. First item must be an hf:// URI, not a local path or bare filename. One argument per array item.",
+            "before": "Command arguments; each array item is one grammar token."
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.8,
+      "classifiedBy": "llm",
+      "notes": "Description now mandates first argument must be hf:// URI, changing semantics."
+    },
+    {
       "id": "8a800071-2867-4eee-841b-7ff117604973",
       "sourceId": "mcp-tools:huggingface",
       "entityId": "tools/hf_fs",
