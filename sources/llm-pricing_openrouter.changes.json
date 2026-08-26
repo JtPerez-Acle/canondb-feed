@@ -2,6 +2,98 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "e26f8500-2403-4ec7-b602-acaa712a7f5f",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/deepseek/deepseek-v4-flash-vision-exp",
+      "fromSnapshotId": "4e4880e8-2f4c-4116-81b6-7c879d7c9303",
+      "toSnapshotId": "918f0ffc-173d-44be-b2b5-bea8784b330a",
+      "detectedAt": "2026-08-26T13:44:29.940Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "deepseek/deepseek-v4-flash-vision-exp",
+              "cacheReadPer1m"
+            ],
+            "after": 0.007,
+            "before": 0.014
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "deepseek/deepseek-v4-flash-vision-exp",
+              "inputPer1m"
+            ],
+            "after": 0.22,
+            "before": 0.44
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "deepseek/deepseek-v4-flash-vision-exp",
+              "outputPer1m"
+            ],
+            "after": 0.66,
+            "before": 1.32
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "price decreased for cacheRead, input, and output"
+    },
+    {
+      "id": "e6ec64f0-d061-4c27-9c82-d4b2ef0eccd5",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/deepseek/deepseek-v4-flash",
+      "fromSnapshotId": "4e4880e8-2f4c-4116-81b6-7c879d7c9303",
+      "toSnapshotId": "918f0ffc-173d-44be-b2b5-bea8784b330a",
+      "detectedAt": "2026-08-26T13:44:25.147Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "deepseek/deepseek-v4-flash",
+              "cacheReadPer1m"
+            ],
+            "after": 0.016212,
+            "before": 0.017721
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "deepseek/deepseek-v4-flash",
+              "inputPer1m"
+            ],
+            "after": 0.08106,
+            "before": 0.088606
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "deepseek/deepseek-v4-flash",
+              "outputPer1m"
+            ],
+            "after": 0.16212,
+            "before": 0.177212
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Price decreases for cache read, input, and output are favorable to consumers, so this is safe."
+    },
+    {
       "id": "8be17bad-b437-4194-b4b2-8a63014d67eb",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/~deepseek/deepseek-v4-flash-latest",
@@ -1614,58 +1706,6 @@
       "confidence": 0.95,
       "classifiedBy": "llm",
       "notes": "maxOutputTokens reduced from 262144 to 235929, an output-cap reduction that can silently truncate agent responses."
-    },
-    {
-      "id": "b29c3d69-1e58-4566-92d4-d14544e2ec43",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/qwen/qwen3-coder-next",
-      "fromSnapshotId": "828c4ba0-39b2-4db2-b26b-641cb3e38650",
-      "toSnapshotId": "f5af7109-50bd-486f-a6af-826fd47c773f",
-      "detectedAt": "2026-08-25T19:50:41.358Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3-coder-next",
-              "maxOutputTokens"
-            ],
-            "after": 235929,
-            "before": 262144
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "maxOutputTokens reduced, agents may silently truncate output."
-    },
-    {
-      "id": "314b817e-d5b3-4e71-8d24-66d4308c60d7",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/qwen/qwen3-coder-30b-a3b-instruct",
-      "fromSnapshotId": "828c4ba0-39b2-4db2-b26b-641cb3e38650",
-      "toSnapshotId": "f5af7109-50bd-486f-a6af-826fd47c773f",
-      "detectedAt": "2026-08-25T19:50:37.918Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3-coder-30b-a3b-instruct",
-              "maxOutputTokens"
-            ],
-            "after": 235929,
-            "before": 262144
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "maxOutputTokens reduced from 262144 to 235929, which may silently truncate agent outputs."
     }
   ]
 }
