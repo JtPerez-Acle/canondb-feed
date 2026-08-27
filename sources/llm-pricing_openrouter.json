@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-27T13:44:23.041Z",
+    "fetchedAt": "2026-08-27T19:44:24.151Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -39,10 +39,10 @@
         "tencent/hy3": {
           "name": "Tencent: Hy3",
           "currency": "USD",
-          "inputPer1m": 0.132,
-          "outputPer1m": 0.528,
+          "inputPer1m": 0.0825,
+          "outputPer1m": 0.33,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.033,
+          "cacheReadPer1m": 0.020625,
           "maxOutputTokens": 128000
         },
         "openai/gpt-4": {
@@ -1443,14 +1443,6 @@
           "contextLength": 65536,
           "cacheReadPer1m": 0.03,
           "maxOutputTokens": 2048
-        },
-        "mistralai/ministral-8b": {
-          "name": "Mistral: Ministral 8B",
-          "currency": "USD",
-          "inputPer1m": 0.11,
-          "outputPer1m": 0.11,
-          "contextLength": 128000,
-          "maxOutputTokens": 102400
         },
         "mistralai/mistral-nemo": {
           "name": "Mistral: Mistral Nemo",
@@ -3211,10 +3203,10 @@
         "deepseek/deepseek-v4-flash-0731": {
           "name": "DeepSeek: DeepSeek V4 Flash 0731",
           "currency": "USD",
-          "inputPer1m": 0.06,
-          "outputPer1m": 0.12,
+          "inputPer1m": 0.05,
+          "outputPer1m": 0.1,
           "contextLength": 1310720,
-          "cacheReadPer1m": 0.012,
+          "cacheReadPer1m": 0.01,
           "maxOutputTokens": 943718
         },
         "ibm-granite/granite-4.0-h-micro": {
@@ -3521,6 +3513,14 @@
           "outputPer1m": 6,
           "contextLength": 1048576,
           "maxOutputTokens": 65536
+        },
+        "inclusionai/ling-3.0-flash-fin:free": {
+          "name": "Ling 3.0 Flash Fin (free)",
+          "currency": "USD",
+          "inputPer1m": 0,
+          "outputPer1m": 0,
+          "contextLength": 262144,
+          "maxOutputTokens": 32768
         },
         "nousresearch/hermes-3-llama-3.1-70b": {
           "name": "Nous: Hermes 3 70B Instruct",
