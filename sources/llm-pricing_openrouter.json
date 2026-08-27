@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-27T01:44:23.092Z",
+    "fetchedAt": "2026-08-27T07:44:23.042Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -412,10 +412,11 @@
         "qwen/qwen3.6-27b": {
           "name": "Qwen: Qwen3.6 27B",
           "currency": "USD",
-          "inputPer1m": 0.32,
-          "outputPer1m": 3.2,
+          "inputPer1m": 0.6,
+          "outputPer1m": 3.6,
           "contextLength": 262144,
-          "maxOutputTokens": 81920
+          "cacheReadPer1m": 0.12,
+          "maxOutputTokens": 235929
         },
         "qwen/qwen3.7-max": {
           "name": "Qwen: Qwen3.7 Max",
@@ -780,7 +781,7 @@
         "qwen/qwen3.8-flash": {
           "name": "Qwen: Qwen3.8 Flash",
           "currency": "USD",
-          "inputPer1m": 0.16,
+          "inputPer1m": 0.15,
           "outputPer1m": 0.47,
           "contextLength": 1000000,
           "cacheReadPer1m": 0.016,
@@ -2792,11 +2793,10 @@
         "qwen/qwen2.5-vl-72b-instruct": {
           "name": "Qwen: Qwen2.5 VL 72B Instruct",
           "currency": "USD",
-          "inputPer1m": 0.8,
-          "outputPer1m": 1,
+          "inputPer1m": 0.25,
+          "outputPer1m": 0.75,
           "contextLength": 128000,
-          "cacheReadPer1m": 0.4,
-          "maxOutputTokens": 115200
+          "maxOutputTokens": 28800
         },
         "anthropic/claude-opus-5:batch": {
           "name": "Claude Opus 5 (batch)",
@@ -3491,7 +3491,7 @@
           "name": "DeepSeek V4 Flash Latest",
           "currency": "USD",
           "inputPer1m": 0.03,
-          "outputPer1m": 0.075,
+          "outputPer1m": 0.1,
           "contextLength": 1310720,
           "cacheReadPer1m": 0.007,
           "maxOutputTokens": 131072

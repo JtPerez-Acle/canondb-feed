@@ -2,6 +2,168 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "070526be-e320-4956-ae69-bf7ea3fdf96e",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/~deepseek/deepseek-v4-flash-latest",
+      "fromSnapshotId": "b72f8cd2-d116-45a9-805a-76b33c4d3abb",
+      "toSnapshotId": "c633183d-a045-4532-a907-beb1150b4628",
+      "detectedAt": "2026-08-27T07:44:57.683Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "~deepseek/deepseek-v4-flash-latest",
+              "outputPer1m"
+            ],
+            "after": 0.1,
+            "before": 0.075
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Output price increased from 0.075 to 0.1 per 1M tokens, silently raising costs for agents."
+    },
+    {
+      "id": "24468886-7bc7-4991-9d86-00fcab82eced",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3.8-flash",
+      "fromSnapshotId": "b72f8cd2-d116-45a9-805a-76b33c4d3abb",
+      "toSnapshotId": "c633183d-a045-4532-a907-beb1150b4628",
+      "detectedAt": "2026-08-27T07:44:56.731Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.8-flash",
+              "inputPer1m"
+            ],
+            "after": 0.15,
+            "before": 0.16
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Price decrease for input tokens"
+    },
+    {
+      "id": "3980994c-bfa7-41a0-a5da-5605b6808f31",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3.6-27b",
+      "fromSnapshotId": "b72f8cd2-d116-45a9-805a-76b33c4d3abb",
+      "toSnapshotId": "c633183d-a045-4532-a907-beb1150b4628",
+      "detectedAt": "2026-08-27T07:44:54.825Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "models",
+              "qwen/qwen3.6-27b",
+              "cacheReadPer1m"
+            ],
+            "after": 0.12
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.6-27b",
+              "inputPer1m"
+            ],
+            "after": 0.6,
+            "before": 0.32
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.6-27b",
+              "maxOutputTokens"
+            ],
+            "after": 235929,
+            "before": 81920
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3.6-27b",
+              "outputPer1m"
+            ],
+            "after": 3.6,
+            "before": 3.2
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Input and output prices increased, which will silently increase costs for agents; maxOutputTokens increase is favorable but does not offset price increases."
+    },
+    {
+      "id": "29f7a4ec-46ca-4f25-b7fa-63454284231c",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen2.5-vl-72b-instruct",
+      "fromSnapshotId": "b72f8cd2-d116-45a9-805a-76b33c4d3abb",
+      "toSnapshotId": "c633183d-a045-4532-a907-beb1150b4628",
+      "detectedAt": "2026-08-27T07:44:39.199Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "removed",
+            "path": [
+              "models",
+              "qwen/qwen2.5-vl-72b-instruct",
+              "cacheReadPer1m"
+            ],
+            "before": 0.4
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen2.5-vl-72b-instruct",
+              "inputPer1m"
+            ],
+            "after": 0.25,
+            "before": 0.8
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen2.5-vl-72b-instruct",
+              "maxOutputTokens"
+            ],
+            "after": 28800,
+            "before": 115200
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen2.5-vl-72b-instruct",
+              "outputPer1m"
+            ],
+            "after": 0.75,
+            "before": 1
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Max output tokens drastically reduced and prices changed (some decreased), misleading agents expecting prior limit."
+    },
+    {
       "id": "7a278eb7-c38a-4443-aeb6-3f7ac9bfd0c6",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/z-ai/glm-4.6",
@@ -1846,110 +2008,6 @@
       "confidence": 0.7,
       "classifiedBy": "llm",
       "notes": "maxOutputTokens changed from null to 1,800,000, imposing a new output cap that may truncate longer generations."
-    },
-    {
-      "id": "22c370d3-d38b-415e-9e50-a11ddf699349",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/upstage/solar-pro-3",
-      "fromSnapshotId": "828c4ba0-39b2-4db2-b26b-641cb3e38650",
-      "toSnapshotId": "f5af7109-50bd-486f-a6af-826fd47c773f",
-      "detectedAt": "2026-08-25T19:52:01.034Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "upstage/solar-pro-3",
-              "maxOutputTokens"
-            ],
-            "after": 117964,
-            "before": 131072
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "maxOutputTokens reduced from 131072 to 117964, reducing output capacity and potentially truncating agent responses."
-    },
-    {
-      "id": "322fa771-0284-4318-b8b5-d98a2d99a42b",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/thinkingmachines/inkling:batch",
-      "fromSnapshotId": "828c4ba0-39b2-4db2-b26b-641cb3e38650",
-      "toSnapshotId": "f5af7109-50bd-486f-a6af-826fd47c773f",
-      "detectedAt": "2026-08-25T19:51:57.638Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "thinkingmachines/inkling:batch",
-              "maxOutputTokens"
-            ],
-            "after": 471859,
-            "before": null
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "maxOutputTokens changed from null to 471859, reducing output capacity for batch calls"
-    },
-    {
-      "id": "d7a400f0-cb20-49d8-9617-7c46b1a85b2a",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/thedrummer/unslopnemo-12b",
-      "fromSnapshotId": "828c4ba0-39b2-4db2-b26b-641cb3e38650",
-      "toSnapshotId": "f5af7109-50bd-486f-a6af-826fd47c773f",
-      "detectedAt": "2026-08-25T19:51:56.362Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "thedrummer/unslopnemo-12b",
-              "maxOutputTokens"
-            ],
-            "after": 26214,
-            "before": 32768
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "max output tokens reduced from 32768 to 26214"
-    },
-    {
-      "id": "33adff63-f834-4e1e-a827-19dac9606f1f",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/thedrummer/skyfall-36b-v2",
-      "fromSnapshotId": "828c4ba0-39b2-4db2-b26b-641cb3e38650",
-      "toSnapshotId": "f5af7109-50bd-486f-a6af-826fd47c773f",
-      "detectedAt": "2026-08-25T19:51:54.353Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "thedrummer/skyfall-36b-v2",
-              "maxOutputTokens"
-            ],
-            "after": 29491,
-            "before": 32768
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "maxOutputTokens reduced from 32768 to 29491, may cause silent truncation for agents"
     }
   ]
 }
