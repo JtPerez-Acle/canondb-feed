@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-26T19:44:22.192Z",
+    "fetchedAt": "2026-08-27T01:44:23.092Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -39,10 +39,10 @@
         "tencent/hy3": {
           "name": "Tencent: Hy3",
           "currency": "USD",
-          "inputPer1m": 0.0825,
-          "outputPer1m": 0.33,
+          "inputPer1m": 0.132,
+          "outputPer1m": 0.528,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.020625,
+          "cacheReadPer1m": 0.033,
           "maxOutputTokens": 128000
         },
         "openai/gpt-4": {
@@ -74,11 +74,11 @@
         "z-ai/glm-4.6": {
           "name": "Z.ai: GLM 4.6",
           "currency": "USD",
-          "inputPer1m": 0.5,
-          "outputPer1m": 2,
+          "inputPer1m": 0.43,
+          "outputPer1m": 1.75,
           "contextLength": 204800,
-          "cacheReadPer1m": 0.1,
-          "maxOutputTokens": 131072
+          "cacheReadPer1m": 0.08,
+          "maxOutputTokens": 16384
         },
         "z-ai/glm-4.7": {
           "name": "Z.ai: GLM 4.7",
@@ -777,6 +777,16 @@
           "cacheWritePer1m": 0.038,
           "maxOutputTokens": 65536
         },
+        "qwen/qwen3.8-flash": {
+          "name": "Qwen: Qwen3.8 Flash",
+          "currency": "USD",
+          "inputPer1m": 0.16,
+          "outputPer1m": 0.47,
+          "contextLength": 1000000,
+          "cacheReadPer1m": 0.016,
+          "cacheWritePer1m": 0.2,
+          "maxOutputTokens": 131072
+        },
         "upstage/solar-pro4": {
           "name": "Upstage: Solar Pro 4",
           "currency": "USD",
@@ -1236,11 +1246,11 @@
         "qwen/qwen3.5-35b-a3b": {
           "name": "Qwen: Qwen3.5-35B-A3B",
           "currency": "USD",
-          "inputPer1m": 0.25,
-          "outputPer1m": 1.25,
+          "inputPer1m": 0.225,
+          "outputPer1m": 1.8,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.25,
-          "maxOutputTokens": 235929
+          "cacheReadPer1m": 0.225,
+          "maxOutputTokens": 65536
         },
         "qwen/qwen3.6-35b-a3b": {
           "name": "Qwen: Qwen3.6 35B A3B",
@@ -2258,10 +2268,11 @@
         "qwen/qwen3-235b-a22b-2507": {
           "name": "Qwen: Qwen3 235B A22B Instruct 2507",
           "currency": "USD",
-          "inputPer1m": 0.09,
-          "outputPer1m": 0.55,
+          "inputPer1m": 0.0875,
+          "outputPer1m": 0.35,
           "contextLength": 262144,
-          "maxOutputTokens": 16384
+          "cacheReadPer1m": 0.0175,
+          "maxOutputTokens": 235929
         },
         "qwen/qwen3-vl-8b-instruct": {
           "name": "Qwen: Qwen3 VL 8B Instruct",
@@ -2781,10 +2792,11 @@
         "qwen/qwen2.5-vl-72b-instruct": {
           "name": "Qwen: Qwen2.5 VL 72B Instruct",
           "currency": "USD",
-          "inputPer1m": 0.25,
-          "outputPer1m": 0.75,
+          "inputPer1m": 0.8,
+          "outputPer1m": 1,
           "contextLength": 128000,
-          "maxOutputTokens": 28800
+          "cacheReadPer1m": 0.4,
+          "maxOutputTokens": 115200
         },
         "anthropic/claude-opus-5:batch": {
           "name": "Claude Opus 5 (batch)",
@@ -3036,8 +3048,8 @@
           "inputPer1m": 0.05,
           "outputPer1m": 0.2,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.03,
-          "maxOutputTokens": 235929
+          "cacheReadPer1m": 0.025,
+          "maxOutputTokens": 228000
         },
         "openai/gpt-5.6-terra-pro:batch": {
           "name": "OpenAI: GPT-5.6 Terra Pro (batch)",
@@ -3555,10 +3567,10 @@
         "deepseek/deepseek-v4-flash-vision-exp": {
           "name": "DeepSeek: DeepSeek V4 Flash Vision Exp",
           "currency": "USD",
-          "inputPer1m": 0.22,
-          "outputPer1m": 0.66,
+          "inputPer1m": 0.44,
+          "outputPer1m": 1.32,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.007,
+          "cacheReadPer1m": 0.014,
           "maxOutputTokens": 384000
         },
         "google/gemini-3.1-flash-image-preview": {

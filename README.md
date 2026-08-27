@@ -4,7 +4,7 @@ The canonical truth layer for the APIs & tools AI agents call: the **current
 schema** and **classified breaking-changes** (breaking for strict consumers,
 breaking for agents, or safe) for a curated set of sources.
 
-This repo is auto-generated. Last updated: **2026-08-26T19:46:40.348Z**.
+This repo is auto-generated. Last updated: **2026-08-27T01:45:08.897Z**.
 
 - Live API: `https://canondb.dev`
 - Each `current` carries `fetched_at` + a `stale` flag — we never serve stale as current.
@@ -23,7 +23,7 @@ This repo is auto-generated. Last updated: **2026-08-26T19:46:40.348Z**.
 | `mcp-tools:fetch` | [current](sources/mcp-tools_fetch.json) · [changes](sources/mcp-tools_fetch.changes.json) | 0 | ok |
 | `mcp-tools:filesystem` | [current](sources/mcp-tools_filesystem.json) · [changes](sources/mcp-tools_filesystem.changes.json) | 1 | ok |
 | `mcp-tools:git` | [current](sources/mcp-tools_git.json) · [changes](sources/mcp-tools_git.changes.json) | 0 | ok |
-| `mcp-tools:gitmcp` | [current](sources/mcp-tools_gitmcp.json) · [changes](sources/mcp-tools_gitmcp.changes.json) | 0 | ⚠️ stale |
+| `mcp-tools:gitmcp` | [current](sources/mcp-tools_gitmcp.json) · [changes](sources/mcp-tools_gitmcp.changes.json) | 0 | ok |
 | `mcp-tools:grep` | [current](sources/mcp-tools_grep.json) · [changes](sources/mcp-tools_grep.changes.json) | 0 | ok |
 | `mcp-tools:huggingface` | [current](sources/mcp-tools_huggingface.json) · [changes](sources/mcp-tools_huggingface.changes.json) | 34 | ok |
 | `mcp-tools:memory` | [current](sources/mcp-tools_memory.json) · [changes](sources/mcp-tools_memory.changes.json) | 0 | ok |
