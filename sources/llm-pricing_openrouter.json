@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-27T19:44:24.151Z",
+    "fetchedAt": "2026-08-28T01:44:23.283Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -39,10 +39,10 @@
         "tencent/hy3": {
           "name": "Tencent: Hy3",
           "currency": "USD",
-          "inputPer1m": 0.0825,
-          "outputPer1m": 0.33,
+          "inputPer1m": 0.132,
+          "outputPer1m": 0.528,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.020625,
+          "cacheReadPer1m": 0.033,
           "maxOutputTokens": 128000
         },
         "openai/gpt-4": {
@@ -412,11 +412,10 @@
         "qwen/qwen3.6-27b": {
           "name": "Qwen: Qwen3.6 27B",
           "currency": "USD",
-          "inputPer1m": 0.6,
-          "outputPer1m": 3.6,
+          "inputPer1m": 0.32,
+          "outputPer1m": 3.2,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.12,
-          "maxOutputTokens": 235929
+          "maxOutputTokens": 81920
         },
         "qwen/qwen3.7-max": {
           "name": "Qwen: Qwen3.7 Max",
@@ -431,11 +430,10 @@
         "qwen/qwen3.8-27b": {
           "name": "Qwen: Qwen3.8 27B",
           "currency": "USD",
-          "inputPer1m": 0.425,
+          "inputPer1m": 0.4,
           "outputPer1m": 2.55,
           "contextLength": 1000000,
-          "cacheReadPer1m": 0.085,
-          "cacheWritePer1m": 0.53125,
+          "cacheReadPer1m": 0.05,
           "maxOutputTokens": 131072
         },
         "qwen/qwen3.8-max": {
@@ -1555,7 +1553,7 @@
           "outputPer1m": 6,
           "contextLength": 1048576,
           "cacheReadPer1m": 0.25,
-          "maxOutputTokens": 131072
+          "maxOutputTokens": 262144
         },
         "stepfun/step-3.5-flash": {
           "name": "StepFun: Step 3.5 Flash",
@@ -2007,14 +2005,6 @@
           "cacheWritePer1m": 1.28375,
           "maxOutputTokens": 65536
         },
-        "thedrummer/rocinante-12b": {
-          "name": "TheDrummer: Rocinante 12B",
-          "currency": "USD",
-          "inputPer1m": 0.25,
-          "outputPer1m": 0.5,
-          "contextLength": 65536,
-          "maxOutputTokens": 58982
-        },
         "thinkingmachines/inkling": {
           "name": "Thinking Machines: Inkling",
           "currency": "USD",
@@ -2339,10 +2329,10 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash 0423",
           "currency": "USD",
-          "inputPer1m": 0.07798,
-          "outputPer1m": 0.15596,
+          "inputPer1m": 0.088606,
+          "outputPer1m": 0.177212,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.015596,
+          "cacheReadPer1m": 0.017721,
           "maxOutputTokens": 384000
         },
         "google/gemma-4-31b-it:free": {
@@ -2698,7 +2688,7 @@
           "currency": "USD",
           "inputPer1m": 0.74,
           "outputPer1m": 2.96,
-          "contextLength": 256000,
+          "contextLength": 262144,
           "cacheReadPer1m": 0.15,
           "maxOutputTokens": 80000
         },
@@ -2827,11 +2817,11 @@
         "deepseek/deepseek-v4-pro-0813": {
           "name": "DeepSeek: DeepSeek V4 Pro 0813",
           "currency": "USD",
-          "inputPer1m": 1.122,
-          "outputPer1m": 3.366,
+          "inputPer1m": 1.32,
+          "outputPer1m": 3.96,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.0374,
-          "maxOutputTokens": 943717
+          "cacheReadPer1m": 0.044,
+          "maxOutputTokens": 384000
         },
         "google/gemini-2.5-flash-image": {
           "name": "Google: Nano Banana (Gemini 2.5 Flash Image)",
@@ -2922,11 +2912,11 @@
         "nvidia/nemotron-3.5-lightning": {
           "name": "NVIDIA: Nemotron 3.5 Lightning",
           "currency": "USD",
-          "inputPer1m": 0.08,
-          "outputPer1m": 0.2,
+          "inputPer1m": 0.1,
+          "outputPer1m": 0.25,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.04,
-          "maxOutputTokens": 131072
+          "cacheReadPer1m": 0.05,
+          "maxOutputTokens": 235929
         },
         "openai/gpt-3.5-turbo-instruct": {
           "name": "OpenAI: GPT-3.5 Turbo Instruct",
@@ -3203,10 +3193,10 @@
         "deepseek/deepseek-v4-flash-0731": {
           "name": "DeepSeek: DeepSeek V4 Flash 0731",
           "currency": "USD",
-          "inputPer1m": 0.05,
-          "outputPer1m": 0.1,
+          "inputPer1m": 0.06,
+          "outputPer1m": 0.12,
           "contextLength": 1310720,
-          "cacheReadPer1m": 0.01,
+          "cacheReadPer1m": 0.012,
           "maxOutputTokens": 943718
         },
         "ibm-granite/granite-4.0-h-micro": {
@@ -3225,15 +3215,6 @@
           "contextLength": 1048576,
           "cacheReadPer1m": 0.002,
           "maxOutputTokens": 943718
-        },
-        "moonshotai/kimi-k2.7-code:batch": {
-          "name": "MoonshotAI: Kimi K2.7 Code (batch)",
-          "currency": "USD",
-          "inputPer1m": 0.95,
-          "outputPer1m": 4,
-          "contextLength": 262144,
-          "cacheReadPer1m": 0.19,
-          "maxOutputTokens": 235929
         },
         "~anthropic/claude-sonnet-latest": {
           "name": "Anthropic Claude Sonnet Latest",
@@ -3414,11 +3395,11 @@
         "nvidia/nemotron-3-ultra-550b-a55b": {
           "name": "NVIDIA: Nemotron 3 Ultra",
           "currency": "USD",
-          "inputPer1m": 0.6,
-          "outputPer1m": 3.6,
-          "contextLength": 512288,
-          "cacheReadPer1m": 0.2,
-          "maxOutputTokens": 461059
+          "inputPer1m": 0.5,
+          "outputPer1m": 2.2,
+          "contextLength": 262144,
+          "cacheReadPer1m": 0.1,
+          "maxOutputTokens": 16384
         },
         "qwen/qwen3-coder-30b-a3b-instruct": {
           "name": "Qwen: Qwen3 Coder 30B A3B Instruct",
@@ -3567,10 +3548,10 @@
         "deepseek/deepseek-v4-flash-vision-exp": {
           "name": "DeepSeek: DeepSeek V4 Flash Vision Exp",
           "currency": "USD",
-          "inputPer1m": 0.22,
-          "outputPer1m": 0.66,
+          "inputPer1m": 0.44,
+          "outputPer1m": 1.32,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.007,
+          "cacheReadPer1m": 0.014,
           "maxOutputTokens": 384000
         },
         "google/gemini-3.1-flash-image-preview": {
