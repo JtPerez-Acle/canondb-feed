@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "mcp-tools:sequential-thinking",
-    "fetchedAt": "2026-08-28T07:54:02.069Z",
+    "fetchedAt": "2026-08-28T21:35:11.646Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -16,6 +16,7 @@
             "$schema": "http://json-schema.org/draft-07/schema#",
             "required": [
               "thought",
+              "nextThoughtNeeded",
               "thoughtNumber",
               "totalThoughts"
             ],

@@ -2,6 +2,57 @@
   "id": "mcp-tools:sequential-thinking",
   "changes": [
     {
+      "id": "9732e0a7-e1a8-4950-90aa-46df6836802e",
+      "sourceId": "mcp-tools:sequential-thinking",
+      "entityId": "tools/sequentialthinking",
+      "fromSnapshotId": "75d860c7-89d0-431d-aab1-f96f1bf70878",
+      "toSnapshotId": "d3adbf60-fe92-4834-8d38-21d4c7a5cb3e",
+      "detectedAt": "2026-08-28T21:35:19.100Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "sequentialthinking",
+              "inputSchema",
+              "required",
+              "1"
+            ],
+            "after": "nextThoughtNeeded",
+            "before": "thoughtNumber"
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "sequentialthinking",
+              "inputSchema",
+              "required",
+              "2"
+            ],
+            "after": "thoughtNumber",
+            "before": "totalThoughts"
+          },
+          {
+            "kind": "added",
+            "path": [
+              "tools",
+              "sequentialthinking",
+              "inputSchema",
+              "required",
+              "3"
+            ],
+            "after": "totalThoughts"
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "Added new required parameter 'nextThoughtNeeded'; existing callers missing it will fail or behave incorrectly."
+    },
+    {
       "id": "6c76c967-ca67-442b-9a27-bc6cff6d14a7",
       "sourceId": "mcp-tools:sequential-thinking",
       "entityId": "tools/sequentialthinking",
