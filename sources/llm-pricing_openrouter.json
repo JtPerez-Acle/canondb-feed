@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-29T01:44:23.576Z",
+    "fetchedAt": "2026-08-29T07:44:23.717Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -1323,11 +1323,11 @@
         "deepseek/deepseek-v3.2": {
           "name": "DeepSeek: DeepSeek V3.2",
           "currency": "USD",
-          "inputPer1m": 0.26,
-          "outputPer1m": 0.38,
+          "inputPer1m": 0.269,
+          "outputPer1m": 0.4,
           "contextLength": 163840,
-          "cacheReadPer1m": 0.13,
-          "maxOutputTokens": 147456
+          "cacheReadPer1m": 0.1345,
+          "maxOutputTokens": 65536
         },
         "gryphe/mythomax-l2-13b": {
           "name": "MythoMax 13B",
@@ -1696,10 +1696,10 @@
         "deepseek/deepseek-v4-pro": {
           "name": "DeepSeek: DeepSeek V4 Pro 0423",
           "currency": "USD",
-          "inputPer1m": 0.711312,
-          "outputPer1m": 1.422624,
+          "inputPer1m": 0.670596,
+          "outputPer1m": 1.341192,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.059276,
+          "cacheReadPer1m": 0.055883,
           "maxOutputTokens": 384000
         },
         "liquid/lfm-2.5-2.6b:free": {
@@ -2102,10 +2102,10 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash 0423",
           "currency": "USD",
-          "inputPer1m": 0.08596,
-          "outputPer1m": 0.17192,
+          "inputPer1m": 0.08456,
+          "outputPer1m": 0.16912,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.017192,
+          "cacheReadPer1m": 0.016912,
           "maxOutputTokens": 384000
         },
         "google/gemma-4-31b-it:free": {
