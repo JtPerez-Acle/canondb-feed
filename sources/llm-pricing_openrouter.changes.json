@@ -2,6 +2,170 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "d23532cd-aa34-4930-9806-052a68f78ab2",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/~deepseek/deepseek-v4-flash-latest",
+      "fromSnapshotId": "87b766f6-0339-402a-987b-57504ee737b6",
+      "toSnapshotId": "b57b29e8-b309-4bc6-a337-b901e6fa31ef",
+      "detectedAt": "2026-08-29T19:44:38.360Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "~deepseek/deepseek-v4-flash-latest",
+              "maxOutputTokens"
+            ],
+            "after": 393216,
+            "before": 131072
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "maxOutputTokens increased from 131072 to 393216, expanding allowed output length; no consumer breakage or misleading semantics."
+    },
+    {
+      "id": "5785f8e8-0af0-4470-9359-9a44d9963840",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/tencent/hy3",
+      "fromSnapshotId": "87b766f6-0339-402a-987b-57504ee737b6",
+      "toSnapshotId": "b57b29e8-b309-4bc6-a337-b901e6fa31ef",
+      "detectedAt": "2026-08-29T19:44:35.868Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "tencent/hy3",
+              "cacheReadPer1m"
+            ],
+            "after": 0.020625,
+            "before": 0.033
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "tencent/hy3",
+              "inputPer1m"
+            ],
+            "after": 0.0825,
+            "before": 0.132
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "tencent/hy3",
+              "outputPer1m"
+            ],
+            "after": 0.33,
+            "before": 0.528
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Price decrease for tencent/hy3 model."
+    },
+    {
+      "id": "07c56b87-3334-4919-ad4a-4f4f6f548bf2",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/deepseek/deepseek-v4-pro",
+      "fromSnapshotId": "87b766f6-0339-402a-987b-57504ee737b6",
+      "toSnapshotId": "b57b29e8-b309-4bc6-a337-b901e6fa31ef",
+      "detectedAt": "2026-08-29T19:44:29.801Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "deepseek/deepseek-v4-pro",
+              "cacheReadPer1m"
+            ],
+            "after": 0.046589,
+            "before": 0.050823
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "deepseek/deepseek-v4-pro",
+              "inputPer1m"
+            ],
+            "after": 0.559062,
+            "before": 0.60987
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "deepseek/deepseek-v4-pro",
+              "outputPer1m"
+            ],
+            "after": 1.118124,
+            "before": 1.21974
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "All three changes are price decreases, which are safe per domain guidance."
+    },
+    {
+      "id": "76d1ff7c-6ff3-4ee7-a863-3bb72482a948",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/deepseek/deepseek-v4-flash",
+      "fromSnapshotId": "87b766f6-0339-402a-987b-57504ee737b6",
+      "toSnapshotId": "b57b29e8-b309-4bc6-a337-b901e6fa31ef",
+      "detectedAt": "2026-08-29T19:44:26.611Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "deepseek/deepseek-v4-flash",
+              "cacheReadPer1m"
+            ],
+            "after": 0.016464,
+            "before": 0.016632
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "deepseek/deepseek-v4-flash",
+              "inputPer1m"
+            ],
+            "after": 0.08232,
+            "before": 0.08316
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "deepseek/deepseek-v4-flash",
+              "outputPer1m"
+            ],
+            "after": 0.16464,
+            "before": 0.16632
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "All prices decreased (cacheRead, input, output), which is a favorable change for agents."
+    },
+    {
       "id": "1cec3578-dc24-47e6-8f42-158169aa95f2",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/~z-ai/glm-latest",
@@ -1900,133 +2064,6 @@
       "confidence": 1,
       "classifiedBy": "llm",
       "notes": "ADDED model with new endpoint"
-    },
-    {
-      "id": "d23d885e-81ba-41e9-b21c-d613e677c6d4",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/mistralai/mistral-medium-3-5:batch",
-      "fromSnapshotId": "e882e0c4-2a7c-4b64-bfc3-6c1e9a0789e7",
-      "toSnapshotId": "43a1df23-bcf0-4bdc-b7d8-5e3386c74103",
-      "detectedAt": "2026-08-28T13:44:50.308Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "mistralai/mistral-medium-3-5:batch"
-            ],
-            "after": {
-              "name": "Mistral: Mistral Medium 3.5 (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.75,
-              "outputPer1m": 3.75,
-              "contextLength": 262144,
-              "maxOutputTokens": 209715
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "ADDED: new model batch endpoint, no existing caller affected"
-    },
-    {
-      "id": "e1b3cc8f-3bf8-483f-92d4-fe3865fbaea6",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/mistralai/mistral-large-2512:batch",
-      "fromSnapshotId": "e882e0c4-2a7c-4b64-bfc3-6c1e9a0789e7",
-      "toSnapshotId": "43a1df23-bcf0-4bdc-b7d8-5e3386c74103",
-      "detectedAt": "2026-08-28T13:44:46.025Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "mistralai/mistral-large-2512:batch"
-            ],
-            "after": {
-              "name": "Mistral: Mistral Large 3 2512 (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.5,
-              "outputPer1m": 1.5,
-              "contextLength": 262144,
-              "cacheReadPer1m": 0.05,
-              "maxOutputTokens": 209715
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Added new model entry"
-    },
-    {
-      "id": "29d22664-7239-48fb-b0ce-0e00502697eb",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/mistralai/ministral-8b-2512:batch",
-      "fromSnapshotId": "e882e0c4-2a7c-4b64-bfc3-6c1e9a0789e7",
-      "toSnapshotId": "43a1df23-bcf0-4bdc-b7d8-5e3386c74103",
-      "detectedAt": "2026-08-28T13:44:43.294Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "mistralai/ministral-8b-2512:batch"
-            ],
-            "after": {
-              "name": "Mistral: Ministral 3 8B 2512 (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.15,
-              "outputPer1m": 0.15,
-              "contextLength": 262144,
-              "cacheReadPer1m": 0.015,
-              "maxOutputTokens": 209715
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 1,
-      "classifiedBy": "llm",
-      "notes": "Added a new model, no existing consumer broken."
-    },
-    {
-      "id": "006e9bab-328b-4d99-8095-4d0dc5b8388a",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/mistralai/codestral-2508:batch",
-      "fromSnapshotId": "e882e0c4-2a7c-4b64-bfc3-6c1e9a0789e7",
-      "toSnapshotId": "43a1df23-bcf0-4bdc-b7d8-5e3386c74103",
-      "detectedAt": "2026-08-28T13:44:41.734Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "added",
-            "path": [
-              "models",
-              "mistralai/codestral-2508:batch"
-            ],
-            "after": {
-              "name": "Mistral: Codestral 2508 (batch)",
-              "currency": "USD",
-              "inputPer1m": 0.3,
-              "outputPer1m": 0.9,
-              "contextLength": 256000,
-              "cacheReadPer1m": 0.03,
-              "maxOutputTokens": 204800
-            }
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "ADDED new model entry; no existing consumer breaks."
     }
   ]
 }

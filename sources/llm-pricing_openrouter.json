@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-29T13:44:24.070Z",
+    "fetchedAt": "2026-08-29T19:44:23.893Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -39,10 +39,10 @@
         "tencent/hy3": {
           "name": "Tencent: Hy3",
           "currency": "USD",
-          "inputPer1m": 0.132,
-          "outputPer1m": 0.528,
+          "inputPer1m": 0.0825,
+          "outputPer1m": 0.33,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.033,
+          "cacheReadPer1m": 0.020625,
           "maxOutputTokens": 128000
         },
         "openai/gpt-4": {
@@ -1696,10 +1696,10 @@
         "deepseek/deepseek-v4-pro": {
           "name": "DeepSeek: DeepSeek V4 Pro 0423",
           "currency": "USD",
-          "inputPer1m": 0.60987,
-          "outputPer1m": 1.21974,
+          "inputPer1m": 0.559062,
+          "outputPer1m": 1.118124,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.050823,
+          "cacheReadPer1m": 0.046589,
           "maxOutputTokens": 384000
         },
         "liquid/lfm-2.5-2.6b:free": {
@@ -2102,10 +2102,10 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash 0423",
           "currency": "USD",
-          "inputPer1m": 0.08316,
-          "outputPer1m": 0.16632,
+          "inputPer1m": 0.08232,
+          "outputPer1m": 0.16464,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.016632,
+          "cacheReadPer1m": 0.016464,
           "maxOutputTokens": 384000
         },
         "google/gemma-4-31b-it:free": {
@@ -3274,7 +3274,7 @@
           "outputPer1m": 0.1,
           "contextLength": 1310720,
           "cacheReadPer1m": 0.007,
-          "maxOutputTokens": 131072
+          "maxOutputTokens": 393216
         },
         "deepseek/deepseek-v4-pro-0813:batch": {
           "name": "DeepSeek: DeepSeek V4 Pro 0813 (batch)",
