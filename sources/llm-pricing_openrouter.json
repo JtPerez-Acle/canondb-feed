@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-29T07:44:23.717Z",
+    "fetchedAt": "2026-08-29T13:44:24.070Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -468,11 +468,11 @@
         "~z-ai/glm-latest": {
           "name": "Z.ai: GLM Latest",
           "currency": "USD",
-          "inputPer1m": 1.2,
-          "outputPer1m": 4,
+          "inputPer1m": 1.1875,
+          "outputPer1m": 4.18,
           "contextLength": 1310720,
-          "cacheReadPer1m": 0.24,
-          "maxOutputTokens": 943718
+          "cacheReadPer1m": 0.247,
+          "maxOutputTokens": 131072
         },
         "openai/gpt-5-mini": {
           "name": "OpenAI: GPT-5 Mini",
@@ -1696,10 +1696,10 @@
         "deepseek/deepseek-v4-pro": {
           "name": "DeepSeek: DeepSeek V4 Pro 0423",
           "currency": "USD",
-          "inputPer1m": 0.670596,
-          "outputPer1m": 1.341192,
+          "inputPer1m": 0.60987,
+          "outputPer1m": 1.21974,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.055883,
+          "cacheReadPer1m": 0.050823,
           "maxOutputTokens": 384000
         },
         "liquid/lfm-2.5-2.6b:free": {
@@ -2102,10 +2102,10 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash 0423",
           "currency": "USD",
-          "inputPer1m": 0.08456,
-          "outputPer1m": 0.16912,
+          "inputPer1m": 0.08316,
+          "outputPer1m": 0.16632,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.016912,
+          "cacheReadPer1m": 0.016632,
           "maxOutputTokens": 384000
         },
         "google/gemma-4-31b-it:free": {
