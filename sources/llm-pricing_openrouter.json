@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-30T01:44:24.008Z",
+    "fetchedAt": "2026-08-30T07:44:23.437Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -1323,11 +1323,11 @@
         "deepseek/deepseek-v3.2": {
           "name": "DeepSeek: DeepSeek V3.2",
           "currency": "USD",
-          "inputPer1m": 0.26,
-          "outputPer1m": 0.38,
+          "inputPer1m": 0.269,
+          "outputPer1m": 0.4,
           "contextLength": 163840,
-          "cacheReadPer1m": 0.13,
-          "maxOutputTokens": 147456
+          "cacheReadPer1m": 0.1345,
+          "maxOutputTokens": 65536
         },
         "gryphe/mythomax-l2-13b": {
           "name": "MythoMax 13B",
@@ -1696,10 +1696,10 @@
         "deepseek/deepseek-v4-pro": {
           "name": "DeepSeek: DeepSeek V4 Pro 0423",
           "currency": "USD",
-          "inputPer1m": 0.508428,
-          "outputPer1m": 1.016856,
+          "inputPer1m": 0.467886,
+          "outputPer1m": 0.935772,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.042369,
+          "cacheReadPer1m": 0.038991,
           "maxOutputTokens": 384000
         },
         "liquid/lfm-2.5-2.6b:free": {
@@ -2102,10 +2102,10 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash 0423",
           "currency": "USD",
-          "inputPer1m": 0.08092,
-          "outputPer1m": 0.16184,
+          "inputPer1m": 0.08064,
+          "outputPer1m": 0.16128,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.016184,
+          "cacheReadPer1m": 0.016128,
           "maxOutputTokens": 384000
         },
         "google/gemma-4-31b-it:free": {
@@ -2292,9 +2292,9 @@
           "name": "Meta: Llama 4 Maverick",
           "currency": "USD",
           "inputPer1m": 0.2,
-          "outputPer1m": 0.696,
+          "outputPer1m": 0.8,
           "contextLength": 1048576,
-          "maxOutputTokens": 115200
+          "maxOutputTokens": 16384
         },
         "meta/muse-glimmer-30b:batch": {
           "name": "Meta: Muse Glimmer 30B (batch)",
@@ -2938,11 +2938,11 @@
         "arcee-ai/trinity-large-thinking": {
           "name": "Arcee AI: Trinity Large Thinking",
           "currency": "USD",
-          "inputPer1m": 0.22,
-          "outputPer1m": 0.85,
+          "inputPer1m": 0.25,
+          "outputPer1m": 0.8,
           "contextLength": 262144,
           "cacheReadPer1m": 0.06,
-          "maxOutputTokens": 235929
+          "maxOutputTokens": 80000
         },
         "deepseek/deepseek-v3.1-terminus": {
           "name": "DeepSeek: DeepSeek V3.1 Terminus",
@@ -3270,7 +3270,7 @@
           "name": "DeepSeek V4 Flash Latest",
           "currency": "USD",
           "inputPer1m": 0.03,
-          "outputPer1m": 0.14,
+          "outputPer1m": 0.16,
           "contextLength": 1310720,
           "cacheReadPer1m": 0.01,
           "maxOutputTokens": 393216
