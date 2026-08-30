@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-08-30T07:44:23.437Z",
+    "fetchedAt": "2026-08-30T13:44:24.416Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -1564,10 +1564,10 @@
         "mistralai/devstral-2512": {
           "name": "Mistral: Devstral 2 2512",
           "currency": "USD",
-          "inputPer1m": 0.44,
-          "outputPer1m": 2.2,
+          "inputPer1m": 0.4,
+          "outputPer1m": 2,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.044,
+          "cacheReadPer1m": 0.04,
           "maxOutputTokens": 209715
         },
         "mistralai/mistral-large": {
@@ -1696,10 +1696,10 @@
         "deepseek/deepseek-v4-pro": {
           "name": "DeepSeek: DeepSeek V4 Pro 0423",
           "currency": "USD",
-          "inputPer1m": 0.467886,
-          "outputPer1m": 0.935772,
+          "inputPer1m": 0.417252,
+          "outputPer1m": 0.834504,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.038991,
+          "cacheReadPer1m": 0.034771,
           "maxOutputTokens": 384000
         },
         "liquid/lfm-2.5-2.6b:free": {
@@ -2102,10 +2102,10 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash 0423",
           "currency": "USD",
-          "inputPer1m": 0.08064,
-          "outputPer1m": 0.16128,
+          "inputPer1m": 0.07952,
+          "outputPer1m": 0.15904,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.016128,
+          "cacheReadPer1m": 0.015904,
           "maxOutputTokens": 384000
         },
         "google/gemma-4-31b-it:free": {
