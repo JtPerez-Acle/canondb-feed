@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-09-01T07:44:25.284Z",
+    "fetchedAt": "2026-09-01T13:44:24.962Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -1422,10 +1422,10 @@
         "gryphe/mythomax-l2-13b": {
           "name": "MythoMax 13B",
           "currency": "USD",
-          "inputPer1m": 0.35,
-          "outputPer1m": 0.6,
+          "inputPer1m": 0.06,
+          "outputPer1m": 0.06,
           "contextLength": 8192,
-          "maxOutputTokens": 7372
+          "maxOutputTokens": 3686
         },
         "minimax/minimax-m2-her": {
           "name": "MiniMax: MiniMax M2-her",
@@ -2313,10 +2313,10 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash 0423",
           "currency": "USD",
-          "inputPer1m": 0.08092,
-          "outputPer1m": 0.16184,
+          "inputPer1m": 0.07938,
+          "outputPer1m": 0.15876,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.016184,
+          "cacheReadPer1m": 0.015876,
           "maxOutputTokens": 384000
         },
         "google/gemma-4-31b-it:free": {
@@ -2612,16 +2612,6 @@
           "contextLength": 32768,
           "maxOutputTokens": 4096
         },
-        "anthropic/claude-opus-5-fast": {
-          "name": "Claude Opus 5 (Fast)",
-          "currency": "USD",
-          "inputPer1m": 10,
-          "outputPer1m": 50,
-          "contextLength": 1000000,
-          "cacheReadPer1m": 1,
-          "cacheWritePer1m": 12.5,
-          "maxOutputTokens": 128000
-        },
         "baidu/ernie-4.5-vl-424b-a47b": {
           "name": "Baidu: ERNIE 4.5 VL 424B A47B ",
           "currency": "USD",
@@ -2827,10 +2817,10 @@
         "deepseek/deepseek-v4-pro-0813": {
           "name": "DeepSeek: DeepSeek V4 Pro 0813",
           "currency": "USD",
-          "inputPer1m": 1.1154,
-          "outputPer1m": 3.3462,
+          "inputPer1m": 0.66,
+          "outputPer1m": 1.98,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.03718,
+          "cacheReadPer1m": 0.022,
           "maxOutputTokens": 384000
         },
         "google/gemini-2.5-flash-image": {
@@ -2996,26 +2986,6 @@
           "contextLength": 1000000,
           "cacheReadPer1m": 0.5,
           "cacheWritePer1m": 6.25,
-          "maxOutputTokens": 128000
-        },
-        "anthropic/claude-opus-4.7-fast": {
-          "name": "Anthropic: Claude Opus 4.7 (Fast)",
-          "currency": "USD",
-          "inputPer1m": 30,
-          "outputPer1m": 150,
-          "contextLength": 1000000,
-          "cacheReadPer1m": 3,
-          "cacheWritePer1m": 37.5,
-          "maxOutputTokens": 128000
-        },
-        "anthropic/claude-opus-4.8-fast": {
-          "name": "Anthropic: Claude Opus 4.8 (Fast)",
-          "currency": "USD",
-          "inputPer1m": 10,
-          "outputPer1m": 50,
-          "contextLength": 1000000,
-          "cacheReadPer1m": 1,
-          "cacheWritePer1m": 12.5,
           "maxOutputTokens": 128000
         },
         "deepseek/deepseek-chat-v3-0324": {
@@ -3593,10 +3563,10 @@
         "deepseek/deepseek-v4-flash-vision-exp": {
           "name": "DeepSeek: DeepSeek V4 Flash Vision Exp",
           "currency": "USD",
-          "inputPer1m": 0.44,
-          "outputPer1m": 1.32,
+          "inputPer1m": 0.22,
+          "outputPer1m": 0.66,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.014,
+          "cacheReadPer1m": 0.007,
           "maxOutputTokens": 384000
         },
         "google/gemini-3.1-flash-image-preview": {
