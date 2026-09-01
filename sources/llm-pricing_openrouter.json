@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-09-01T01:44:25.768Z",
+    "fetchedAt": "2026-09-01T07:44:25.284Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -119,7 +119,7 @@
         "mancer/weaver": {
           "name": "Mancer: Weaver (alpha)",
           "currency": "USD",
-          "inputPer1m": 0.5,
+          "inputPer1m": 0.4,
           "outputPer1m": 0.75,
           "contextLength": 8000,
           "maxOutputTokens": 6000
@@ -1422,7 +1422,7 @@
         "gryphe/mythomax-l2-13b": {
           "name": "MythoMax 13B",
           "currency": "USD",
-          "inputPer1m": 0.4,
+          "inputPer1m": 0.35,
           "outputPer1m": 0.6,
           "contextLength": 8192,
           "maxOutputTokens": 7372
@@ -1829,11 +1829,10 @@
         "meta-llama/llama-4-scout": {
           "name": "Meta: Llama 4 Scout",
           "currency": "USD",
-          "inputPer1m": 0.11,
-          "outputPer1m": 0.34,
+          "inputPer1m": 0.1,
+          "outputPer1m": 0.3,
           "contextLength": 1310720,
-          "cacheReadPer1m": 0.055,
-          "maxOutputTokens": 8192
+          "maxOutputTokens": 16384
         },
         "minimax/minimax-m3:batch": {
           "name": "MiniMax: MiniMax M3 (batch)",
@@ -2236,10 +2235,11 @@
         "qwen/qwen3-235b-a22b-2507": {
           "name": "Qwen: Qwen3 235B A22B Instruct 2507",
           "currency": "USD",
-          "inputPer1m": 0.09,
-          "outputPer1m": 0.55,
+          "inputPer1m": 0.0875,
+          "outputPer1m": 0.35,
           "contextLength": 262144,
-          "maxOutputTokens": 16384
+          "cacheReadPer1m": 0.0175,
+          "maxOutputTokens": 235929
         },
         "qwen/qwen3-vl-8b-instruct": {
           "name": "Qwen: Qwen3 VL 8B Instruct",
@@ -2607,7 +2607,7 @@
         "anthracite-org/magnum-v4-72b": {
           "name": "Magnum v4 72B",
           "currency": "USD",
-          "inputPer1m": 3,
+          "inputPer1m": 2.5,
           "outputPer1m": 5,
           "contextLength": 32768,
           "maxOutputTokens": 4096
@@ -3034,15 +3034,6 @@
           "contextLength": 262144,
           "maxOutputTokens": 32768
         },
-        "mistralai/codestral-2508:batch": {
-          "name": "Mistral: Codestral 2508 (batch)",
-          "currency": "USD",
-          "inputPer1m": 0.3,
-          "outputPer1m": 0.9,
-          "contextLength": 256000,
-          "cacheReadPer1m": 0.03,
-          "maxOutputTokens": 204800
-        },
         "nvidia/nemotron-3-nano-30b-a3b": {
           "name": "NVIDIA: Nemotron 3 Nano 30B A3B",
           "currency": "USD",
@@ -3403,15 +3394,6 @@
           "cacheReadPer1m": 0.71,
           "maxOutputTokens": 115200
         },
-        "mistralai/ministral-8b-2512:batch": {
-          "name": "Mistral: Ministral 3 8B 2512 (batch)",
-          "currency": "USD",
-          "inputPer1m": 0.15,
-          "outputPer1m": 0.15,
-          "contextLength": 262144,
-          "cacheReadPer1m": 0.015,
-          "maxOutputTokens": 209715
-        },
         "nvidia/nemotron-3-super-120b-a12b": {
           "name": "NVIDIA: Nemotron 3 Super",
           "currency": "USD",
@@ -3472,39 +3454,12 @@
           "cacheReadPer1m": 0.015,
           "maxOutputTokens": 65536
         },
-        "mistralai/mistral-large-2512:batch": {
-          "name": "Mistral: Mistral Large 3 2512 (batch)",
-          "currency": "USD",
-          "inputPer1m": 0.5,
-          "outputPer1m": 1.5,
-          "contextLength": 262144,
-          "cacheReadPer1m": 0.05,
-          "maxOutputTokens": 209715
-        },
         "mistralai/mistral-medium-3-5:batch": {
           "name": "Mistral: Mistral Medium 3.5 (batch)",
           "currency": "USD",
           "inputPer1m": 0.75,
           "outputPer1m": 3.75,
           "contextLength": 262144,
-          "maxOutputTokens": 209715
-        },
-        "mistralai/mistral-medium-3.1:batch": {
-          "name": "Mistral: Mistral Medium 3.1 (batch)",
-          "currency": "USD",
-          "inputPer1m": 0.4,
-          "outputPer1m": 2,
-          "contextLength": 131072,
-          "cacheReadPer1m": 0.04,
-          "maxOutputTokens": 104857
-        },
-        "mistralai/mistral-small-2603:batch": {
-          "name": "Mistral: Mistral Small 4 (batch)",
-          "currency": "USD",
-          "inputPer1m": 0.15,
-          "outputPer1m": 0.6,
-          "contextLength": 262144,
-          "cacheReadPer1m": 0.015,
           "maxOutputTokens": 209715
         },
         "nvidia/nemotron-3.5-lightning:free": {

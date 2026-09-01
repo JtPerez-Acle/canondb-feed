@@ -2,6 +2,70 @@
   "id": "mcp-tools:sequential-thinking",
   "changes": [
     {
+      "id": "5f1a74f6-549a-4a05-9011-07746c0bea15",
+      "sourceId": "mcp-tools:sequential-thinking",
+      "entityId": "tools/sequentialthinking",
+      "fromSnapshotId": "0e371def-e6c5-4001-9c05-8c34ed3caf16",
+      "toSnapshotId": "71a0ce12-f5ea-4aad-b597-ff761eadae8a",
+      "detectedAt": "2026-09-01T02:37:24.028Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "sequentialthinking",
+              "inputSchema",
+              "properties",
+              "isRevision",
+              "type"
+            ],
+            "after": [
+              "boolean",
+              "string"
+            ],
+            "before": "boolean"
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "sequentialthinking",
+              "inputSchema",
+              "properties",
+              "needsMoreThoughts",
+              "type"
+            ],
+            "after": [
+              "boolean",
+              "string"
+            ],
+            "before": "boolean"
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "tools",
+              "sequentialthinking",
+              "inputSchema",
+              "properties",
+              "nextThoughtNeeded",
+              "type"
+            ],
+            "after": [
+              "boolean",
+              "string"
+            ],
+            "before": "boolean"
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Type changed from boolean to union, widening but can mislead agents if they send strings."
+    },
+    {
       "id": "9732e0a7-e1a8-4950-90aa-46df6836802e",
       "sourceId": "mcp-tools:sequential-thinking",
       "entityId": "tools/sequentialthinking",

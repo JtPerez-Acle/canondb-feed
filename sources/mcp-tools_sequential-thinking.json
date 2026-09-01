@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "mcp-tools:sequential-thinking",
-    "fetchedAt": "2026-08-31T18:25:41.396Z",
+    "fetchedAt": "2026-09-01T02:37:15.341Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -30,7 +30,10 @@
                 "description": "Branch identifier"
               },
               "isRevision": {
-                "type": "boolean",
+                "type": [
+                  "boolean",
+                  "string"
+                ],
                 "description": "Whether this revises previous thinking"
               },
               "thoughtNumber": {
@@ -58,11 +61,17 @@
                 "description": "Branching point thought number"
               },
               "needsMoreThoughts": {
-                "type": "boolean",
+                "type": [
+                  "boolean",
+                  "string"
+                ],
                 "description": "If more thoughts are needed"
               },
               "nextThoughtNeeded": {
-                "type": "boolean",
+                "type": [
+                  "boolean",
+                  "string"
+                ],
                 "description": "Whether another thought step is needed"
               }
             }

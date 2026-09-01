@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "mcp-tools:filesystem",
-    "fetchedAt": "2026-08-31T18:25:41.507Z",
+    "fetchedAt": "2026-09-01T02:37:13.397Z",
     "stale": false,
     "verified": true,
     "data": {
