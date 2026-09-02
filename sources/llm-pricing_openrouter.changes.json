@@ -2,6 +2,39 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "c423ef1e-d791-49d3-b1ed-912e54928ea4",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/anthropic/claude-fable-5.1:batch",
+      "fromSnapshotId": "a454fdf7-1f6e-4447-bc67-c1f5151c71ec",
+      "toSnapshotId": "4726eca6-eaf3-4143-81f3-a2cb1e9e50c8",
+      "detectedAt": "2026-09-02T07:44:27.757Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "added",
+            "path": [
+              "models",
+              "anthropic/claude-fable-5.1:batch"
+            ],
+            "after": {
+              "name": "Anthropic: Claude Fable 5.1 (batch)",
+              "currency": "USD",
+              "inputPer1m": 5,
+              "outputPer1m": 25,
+              "contextLength": 1000000,
+              "cacheReadPer1m": 0.125,
+              "cacheWritePer1m": 6.25,
+              "maxOutputTokens": 128000
+            }
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "New model added, no existing consumer broken."
+    },
+    {
       "id": "45c2f1a1-2a77-4afb-9113-806f264d03f6",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/~z-ai/glm-flash-latest",
@@ -2076,52 +2109,6 @@
       "confidence": 0.95,
       "classifiedBy": "llm",
       "notes": "Price decreased, favorable to consumers."
-    },
-    {
-      "id": "39c750b0-58c0-444c-a363-66b498a71e94",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/qwen/qwen3.8-2.4t-a95b:batch",
-      "fromSnapshotId": "977c33aa-0e19-4f77-8a06-d70c0679b968",
-      "toSnapshotId": "5fb190aa-af7e-46e0-8a0d-e482ce6a6440",
-      "detectedAt": "2026-08-31T19:46:52.460Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3.8-2.4t-a95b:batch",
-              "cacheReadPer1m"
-            ],
-            "after": 0.25,
-            "before": 0.5
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3.8-2.4t-a95b:batch",
-              "inputPer1m"
-            ],
-            "after": 2,
-            "before": 2.5
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "qwen/qwen3.8-2.4t-a95b:batch",
-              "outputPer1m"
-            ],
-            "after": 6,
-            "before": 6.25
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "All three changes are price decreases (cacheRead, input, output) which are safe per domain guidance."
     }
   ]
 }
