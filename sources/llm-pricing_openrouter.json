@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-09-02T13:44:25.477Z",
+    "fetchedAt": "2026-09-02T19:44:25.403Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -39,10 +39,10 @@
         "tencent/hy3": {
           "name": "Tencent: Hy3",
           "currency": "USD",
-          "inputPer1m": 0.132,
-          "outputPer1m": 0.528,
+          "inputPer1m": 0.0825,
+          "outputPer1m": 0.33,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.033,
+          "cacheReadPer1m": 0.020625,
           "maxOutputTokens": 128000
         },
         "openai/gpt-4": {
@@ -1660,6 +1660,16 @@
           "cacheWritePer1m": 0.041667,
           "maxOutputTokens": 65536
         },
+        "google/gemini-3.8-flash": {
+          "name": "Google: Gemini 3.8 Flash",
+          "currency": "USD",
+          "inputPer1m": 0.75,
+          "outputPer1m": 3.75,
+          "contextLength": 1048576,
+          "cacheReadPer1m": 0.075,
+          "cacheWritePer1m": 0.041667,
+          "maxOutputTokens": 65536
+        },
         "minimax/minimax-m3:free": {
           "name": "MiniMax: MiniMax M3 (free)",
           "currency": "USD",
@@ -1821,10 +1831,10 @@
         "deepseek/deepseek-v4-pro": {
           "name": "DeepSeek: DeepSeek V4 Pro 0423",
           "currency": "USD",
-          "inputPer1m": 1.039302,
-          "outputPer1m": 2.078604,
+          "inputPer1m": 1.030776,
+          "outputPer1m": 2.061552,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.086609,
+          "cacheReadPer1m": 0.085898,
           "maxOutputTokens": 384000
         },
         "liquid/lfm-2.5-2.6b:free": {
@@ -2332,10 +2342,10 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash 0423",
           "currency": "USD",
-          "inputPer1m": 0.08708,
-          "outputPer1m": 0.17416,
+          "inputPer1m": 0.08246,
+          "outputPer1m": 0.16492,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.017416,
+          "cacheReadPer1m": 0.016492,
           "maxOutputTokens": 384000
         },
         "google/gemma-4-31b-it:free": {
@@ -2836,10 +2846,10 @@
         "deepseek/deepseek-v4-pro-0813": {
           "name": "DeepSeek: DeepSeek V4 Pro 0813",
           "currency": "USD",
-          "inputPer1m": 1.1154,
-          "outputPer1m": 3.3462,
+          "inputPer1m": 0.66,
+          "outputPer1m": 1.98,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.03718,
+          "cacheReadPer1m": 0.022,
           "maxOutputTokens": 384000
         },
         "google/gemini-2.5-flash-image": {
@@ -2921,11 +2931,21 @@
         "google/gemini-3.7-flash:batch": {
           "name": "Google: Gemini 3.7 Flash (batch)",
           "currency": "USD",
-          "inputPer1m": 0.1875,
-          "outputPer1m": 0.9375,
+          "inputPer1m": 0.375,
+          "outputPer1m": 1.875,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.01875,
-          "cacheWritePer1m": 0.020833,
+          "cacheReadPer1m": 0.0375,
+          "cacheWritePer1m": 0.041667,
+          "maxOutputTokens": 65536
+        },
+        "google/gemini-3.8-flash:batch": {
+          "name": "Google: Gemini 3.8 Flash (batch)",
+          "currency": "USD",
+          "inputPer1m": 0.375,
+          "outputPer1m": 1.875,
+          "contextLength": 1048576,
+          "cacheReadPer1m": 0.0375,
+          "cacheWritePer1m": 0.041667,
           "maxOutputTokens": 65536
         },
         "inception/mercury-2.5-preview": {
@@ -3217,6 +3237,15 @@
         },
         "meta/muse-spark-1.2-contributor": {
           "name": "Meta: Muse Spark 1.2 Contributor",
+          "currency": "USD",
+          "inputPer1m": 0.1,
+          "outputPer1m": 0.2,
+          "contextLength": 1048576,
+          "cacheReadPer1m": 0.002,
+          "maxOutputTokens": 943718
+        },
+        "meta/muse-spark-1.3-contributor": {
+          "name": "Meta: Muse Spark 1.3 Contributor",
           "currency": "USD",
           "inputPer1m": 0.1,
           "outputPer1m": 0.2,
