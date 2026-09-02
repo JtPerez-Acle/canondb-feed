@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-09-02T07:44:24.596Z",
+    "fetchedAt": "2026-09-02T13:44:25.477Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -477,11 +477,11 @@
         "~z-ai/glm-latest": {
           "name": "Z.ai: GLM Latest",
           "currency": "USD",
-          "inputPer1m": 1.17,
-          "outputPer1m": 3.96,
+          "inputPer1m": 1.15,
+          "outputPer1m": 3.5,
           "contextLength": 1310720,
-          "cacheReadPer1m": 0.234,
-          "maxOutputTokens": 943718
+          "cacheReadPer1m": 0.1,
+          "maxOutputTokens": 235929
         },
         "openai/gpt-5-mini": {
           "name": "OpenAI: GPT-5 Mini",
@@ -1821,10 +1821,10 @@
         "deepseek/deepseek-v4-pro": {
           "name": "DeepSeek: DeepSeek V4 Pro 0423",
           "currency": "USD",
-          "inputPer1m": 1.04226,
-          "outputPer1m": 2.08452,
+          "inputPer1m": 1.039302,
+          "outputPer1m": 2.078604,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.086855,
+          "cacheReadPer1m": 0.086609,
           "maxOutputTokens": 384000
         },
         "liquid/lfm-2.5-2.6b:free": {
@@ -2332,10 +2332,10 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash 0423",
           "currency": "USD",
-          "inputPer1m": 0.088606,
-          "outputPer1m": 0.177212,
+          "inputPer1m": 0.08708,
+          "outputPer1m": 0.17416,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.017721,
+          "cacheReadPer1m": 0.017416,
           "maxOutputTokens": 384000
         },
         "google/gemma-4-31b-it:free": {
@@ -3601,10 +3601,10 @@
         "deepseek/deepseek-v4-flash-vision-exp": {
           "name": "DeepSeek: DeepSeek V4 Flash Vision Exp",
           "currency": "USD",
-          "inputPer1m": 0.44,
-          "outputPer1m": 1.32,
+          "inputPer1m": 0.22,
+          "outputPer1m": 0.66,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.014,
+          "cacheReadPer1m": 0.007,
           "maxOutputTokens": 384000
         },
         "google/gemini-3.1-flash-image-preview": {
