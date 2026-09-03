@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "api:stripe",
-    "fetchedAt": "2026-09-03T01:46:33.366Z",
+    "fetchedAt": "2026-09-03T07:44:54.159Z",
     "stale": false,
     "verified": true,
     "data": {

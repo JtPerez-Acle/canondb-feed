@@ -2,6 +2,98 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "38b101c9-d696-4e99-b832-190f7f2342bf",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/~z-ai/glm-latest",
+      "fromSnapshotId": "f0d3a138-c9e9-4556-8e99-4b68e99e1edf",
+      "toSnapshotId": "6442ff38-280c-497a-81ed-93a30d834c1c",
+      "detectedAt": "2026-09-03T07:44:50.704Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "~z-ai/glm-latest",
+              "cacheReadPer1m"
+            ],
+            "after": 0.1817,
+            "before": 0.1794
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "~z-ai/glm-latest",
+              "inputPer1m"
+            ],
+            "after": 1.106,
+            "before": 1.092
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "~z-ai/glm-latest",
+              "outputPer1m"
+            ],
+            "after": 3.476,
+            "before": 3.432
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.9,
+      "classifiedBy": "llm",
+      "notes": "price increased for cacheRead, inputPer1m, and outputPer1m"
+    },
+    {
+      "id": "041488bc-10ef-4c40-8070-5b0913ea1f15",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3-14b",
+      "fromSnapshotId": "f0d3a138-c9e9-4556-8e99-4b68e99e1edf",
+      "toSnapshotId": "6442ff38-280c-497a-81ed-93a30d834c1c",
+      "detectedAt": "2026-09-03T07:44:34.611Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-14b",
+              "inputPer1m"
+            ],
+            "after": 0.12,
+            "before": 0.2275
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-14b",
+              "maxOutputTokens"
+            ],
+            "after": 16384,
+            "before": 8192
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-14b",
+              "outputPer1m"
+            ],
+            "after": 0.24,
+            "before": 0.91
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "All changes are favorable: input and output prices decreased, max output tokens increased."
+    },
+    {
       "id": "b194c187-22f6-449a-a19b-10c3af16f16b",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/~z-ai/glm-latest",
@@ -2134,98 +2226,6 @@
       "confidence": 0.95,
       "classifiedBy": "llm",
       "notes": "Added new model Claude Fable 5.1, no existing consumers broken."
-    },
-    {
-      "id": "1db59c33-2063-4084-bbf6-8c05e84dd937",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/gryphe/mythomax-l2-13b",
-      "fromSnapshotId": "d1164802-0c29-4bd7-af4f-27e177c5b09d",
-      "toSnapshotId": "e28f39b1-d5d8-4ba2-9039-3ecde312a785",
-      "detectedAt": "2026-09-01T13:44:47.674Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "gryphe/mythomax-l2-13b",
-              "inputPer1m"
-            ],
-            "after": 0.06,
-            "before": 0.35
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "gryphe/mythomax-l2-13b",
-              "maxOutputTokens"
-            ],
-            "after": 3686,
-            "before": 7372
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "gryphe/mythomax-l2-13b",
-              "outputPer1m"
-            ],
-            "after": 0.06,
-            "before": 0.6
-          }
-        ]
-      },
-      "severity": "breaking_agent",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "Price decrease is safe, but maxOutputTokens halved silently truncates longer outputs."
-    },
-    {
-      "id": "16091fff-ac3a-493d-8b74-ee9de05ec743",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/deepseek/deepseek-v4-pro-0813",
-      "fromSnapshotId": "d1164802-0c29-4bd7-af4f-27e177c5b09d",
-      "toSnapshotId": "e28f39b1-d5d8-4ba2-9039-3ecde312a785",
-      "detectedAt": "2026-09-01T13:44:46.742Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "deepseek/deepseek-v4-pro-0813",
-              "cacheReadPer1m"
-            ],
-            "after": 0.022,
-            "before": 0.03718
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "deepseek/deepseek-v4-pro-0813",
-              "inputPer1m"
-            ],
-            "after": 0.66,
-            "before": 1.1154
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "deepseek/deepseek-v4-pro-0813",
-              "outputPer1m"
-            ],
-            "after": 1.98,
-            "before": 3.3462
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 0.9,
-      "classifiedBy": "llm",
-      "notes": "All three prices decreased significantly, which is favorable to consumers."
     }
   ]
 }

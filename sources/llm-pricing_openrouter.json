@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-09-03T01:44:25.511Z",
+    "fetchedAt": "2026-09-03T07:44:25.721Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -278,10 +278,10 @@
         "qwen/qwen3-14b": {
           "name": "Qwen: Qwen3 14B",
           "currency": "USD",
-          "inputPer1m": 0.2275,
-          "outputPer1m": 0.91,
+          "inputPer1m": 0.12,
+          "outputPer1m": 0.24,
           "contextLength": 131072,
-          "maxOutputTokens": 8192
+          "maxOutputTokens": 16384
         },
         "qwen/qwen3-32b": {
           "name": "Qwen: Qwen3 32B",
@@ -477,10 +477,10 @@
         "~z-ai/glm-latest": {
           "name": "Z.ai: GLM Latest",
           "currency": "USD",
-          "inputPer1m": 1.092,
-          "outputPer1m": 3.432,
+          "inputPer1m": 1.106,
+          "outputPer1m": 3.476,
           "contextLength": 1310720,
-          "cacheReadPer1m": 0.1794,
+          "cacheReadPer1m": 0.1817,
           "maxOutputTokens": 943718
         },
         "openai/gpt-5-mini": {
