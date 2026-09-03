@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "api:digitalocean",
-    "fetchedAt": "2026-09-03T13:45:23.146Z",
+    "fetchedAt": "2026-09-03T19:45:22.255Z",
     "stale": false,
     "verified": true,
     "data": {
