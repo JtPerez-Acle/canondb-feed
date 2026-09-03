@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-09-02T19:44:25.403Z",
+    "fetchedAt": "2026-09-03T01:44:25.511Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -39,10 +39,10 @@
         "tencent/hy3": {
           "name": "Tencent: Hy3",
           "currency": "USD",
-          "inputPer1m": 0.0825,
-          "outputPer1m": 0.33,
+          "inputPer1m": 0.132,
+          "outputPer1m": 0.528,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.020625,
+          "cacheReadPer1m": 0.033,
           "maxOutputTokens": 128000
         },
         "openai/gpt-4": {
@@ -74,11 +74,11 @@
         "z-ai/glm-4.6": {
           "name": "Z.ai: GLM 4.6",
           "currency": "USD",
-          "inputPer1m": 0.43,
-          "outputPer1m": 1.75,
+          "inputPer1m": 0.55,
+          "outputPer1m": 2.2,
           "contextLength": 204800,
-          "cacheReadPer1m": 0.08,
-          "maxOutputTokens": 16384
+          "cacheReadPer1m": 0.11,
+          "maxOutputTokens": 131072
         },
         "z-ai/glm-4.7": {
           "name": "Z.ai: GLM 4.7",
@@ -278,10 +278,10 @@
         "qwen/qwen3-14b": {
           "name": "Qwen: Qwen3 14B",
           "currency": "USD",
-          "inputPer1m": 0.12,
-          "outputPer1m": 0.24,
+          "inputPer1m": 0.2275,
+          "outputPer1m": 0.91,
           "contextLength": 131072,
-          "maxOutputTokens": 16384
+          "maxOutputTokens": 8192
         },
         "qwen/qwen3-32b": {
           "name": "Qwen: Qwen3 32B",
@@ -477,11 +477,11 @@
         "~z-ai/glm-latest": {
           "name": "Z.ai: GLM Latest",
           "currency": "USD",
-          "inputPer1m": 1.15,
-          "outputPer1m": 3.5,
+          "inputPer1m": 1.092,
+          "outputPer1m": 3.432,
           "contextLength": 1310720,
-          "cacheReadPer1m": 0.1,
-          "maxOutputTokens": 235929
+          "cacheReadPer1m": 0.1794,
+          "maxOutputTokens": 943718
         },
         "openai/gpt-5-mini": {
           "name": "OpenAI: GPT-5 Mini",
@@ -853,6 +853,15 @@
         },
         "meta/muse-spark-1.2": {
           "name": "Meta: Muse Spark 1.2",
+          "currency": "USD",
+          "inputPer1m": 1.25,
+          "outputPer1m": 4.25,
+          "contextLength": 1048576,
+          "cacheReadPer1m": 0.15,
+          "maxOutputTokens": 943718
+        },
+        "meta/muse-spark-1.3": {
+          "name": "Meta: Muse Spark 1.3",
           "currency": "USD",
           "inputPer1m": 1.25,
           "outputPer1m": 4.25,
@@ -1336,10 +1345,10 @@
           "name": "Meta: Muse Glimmer 30B",
           "currency": "USD",
           "inputPer1m": 0.3,
-          "outputPer1m": 1.2,
+          "outputPer1m": 1.1,
           "contextLength": 131072,
           "cacheReadPer1m": 0.04,
-          "maxOutputTokens": 16384
+          "maxOutputTokens": 117964
         },
         "openai/gpt-audio-mini": {
           "name": "OpenAI: GPT Audio Mini",
@@ -1535,10 +1544,11 @@
         "qwen/qwen3.5-397b-a17b": {
           "name": "Qwen: Qwen3.5 397B A17B",
           "currency": "USD",
-          "inputPer1m": 0.39,
-          "outputPer1m": 2.34,
+          "inputPer1m": 0.55,
+          "outputPer1m": 3.5,
           "contextLength": 262144,
-          "maxOutputTokens": 65536
+          "cacheReadPer1m": 0.225,
+          "maxOutputTokens": 235929
         },
         "qwen/qwen3.8-2.4t-a95b": {
           "name": "Qwen: Qwen3.8 2.4T A95B",
@@ -1546,8 +1556,8 @@
           "inputPer1m": 2,
           "outputPer1m": 6,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.2,
-          "maxOutputTokens": 131072
+          "cacheReadPer1m": 0.25,
+          "maxOutputTokens": 262144
         },
         "stepfun/step-3.5-flash": {
           "name": "StepFun: Step 3.5 Flash",
@@ -1581,7 +1591,7 @@
           "outputPer1m": 0.25,
           "contextLength": 1310720,
           "cacheReadPer1m": 0.015,
-          "maxOutputTokens": 131072
+          "maxOutputTokens": 943718
         },
         "aion-labs/aion-3.0-mini": {
           "name": "AionLabs: Aion-3.0-Mini",
@@ -1831,10 +1841,10 @@
         "deepseek/deepseek-v4-pro": {
           "name": "DeepSeek: DeepSeek V4 Pro 0423",
           "currency": "USD",
-          "inputPer1m": 1.030776,
-          "outputPer1m": 2.061552,
+          "inputPer1m": 1.04226,
+          "outputPer1m": 2.08452,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.085898,
+          "cacheReadPer1m": 0.086855,
           "maxOutputTokens": 384000
         },
         "liquid/lfm-2.5-2.6b:free": {
@@ -2342,10 +2352,10 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash 0423",
           "currency": "USD",
-          "inputPer1m": 0.08246,
-          "outputPer1m": 0.16492,
+          "inputPer1m": 0.088606,
+          "outputPer1m": 0.177212,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.016492,
+          "cacheReadPer1m": 0.017721,
           "maxOutputTokens": 384000
         },
         "google/gemma-4-31b-it:free": {
@@ -2846,10 +2856,10 @@
         "deepseek/deepseek-v4-pro-0813": {
           "name": "DeepSeek: DeepSeek V4 Pro 0813",
           "currency": "USD",
-          "inputPer1m": 0.66,
-          "outputPer1m": 1.98,
+          "inputPer1m": 1.1154,
+          "outputPer1m": 3.3462,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.022,
+          "cacheReadPer1m": 0.03718,
           "maxOutputTokens": 384000
         },
         "google/gemini-2.5-flash-image": {
@@ -3058,8 +3068,8 @@
           "inputPer1m": 0.05,
           "outputPer1m": 0.2,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.025,
-          "maxOutputTokens": 228000
+          "cacheReadPer1m": 0.03,
+          "maxOutputTokens": 235929
         },
         "openai/gpt-5.6-terra-pro:batch": {
           "name": "OpenAI: GPT-5.6 Terra Pro (batch)",
@@ -3425,11 +3435,10 @@
         "meta-llama/llama-3.3-70b-instruct": {
           "name": "Meta: Llama 3.3 70B Instruct",
           "currency": "USD",
-          "inputPer1m": 0.71,
-          "outputPer1m": 0.71,
+          "inputPer1m": 0.1,
+          "outputPer1m": 0.32,
           "contextLength": 131072,
-          "cacheReadPer1m": 0.71,
-          "maxOutputTokens": 115200
+          "maxOutputTokens": 16384
         },
         "nvidia/nemotron-3-super-120b-a12b": {
           "name": "NVIDIA: Nemotron 3 Super",
@@ -3442,11 +3451,11 @@
         "nvidia/nemotron-3-ultra-550b-a55b": {
           "name": "NVIDIA: Nemotron 3 Ultra",
           "currency": "USD",
-          "inputPer1m": 0.625,
-          "outputPer1m": 3.125,
+          "inputPer1m": 0.6,
+          "outputPer1m": 2.4,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.1875,
-          "maxOutputTokens": 32768
+          "cacheReadPer1m": 0.12,
+          "maxOutputTokens": 182520
         },
         "qwen/qwen3-coder-30b-a3b-instruct": {
           "name": "Qwen: Qwen3 Coder 30B A3B Instruct",
@@ -3630,10 +3639,10 @@
         "deepseek/deepseek-v4-flash-vision-exp": {
           "name": "DeepSeek: DeepSeek V4 Flash Vision Exp",
           "currency": "USD",
-          "inputPer1m": 0.22,
-          "outputPer1m": 0.66,
+          "inputPer1m": 0.44,
+          "outputPer1m": 1.32,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.007,
+          "cacheReadPer1m": 0.014,
           "maxOutputTokens": 384000
         },
         "google/gemini-3.1-flash-image-preview": {
@@ -3667,15 +3676,6 @@
           "outputPer1m": 0,
           "contextLength": 1000000,
           "maxOutputTokens": 65536
-        },
-        "nvidia/nemotron-3-ultra-550b-a55b:batch": {
-          "name": "NVIDIA: Nemotron 3 Ultra (batch)",
-          "currency": "USD",
-          "inputPer1m": 0.6,
-          "outputPer1m": 3.6,
-          "contextLength": 512288,
-          "cacheReadPer1m": 0.2,
-          "maxOutputTokens": 461059
         },
         "nvidia/nemotron-3.5-content-safety:free": {
           "name": "NVIDIA: Nemotron 3.5 Content Safety (free)",
