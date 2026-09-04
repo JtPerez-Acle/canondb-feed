@@ -1,11 +1,11 @@
 {
   "service": "canondb",
-  "updatedAt": "2026-09-03T19:45:22.968Z",
+  "updatedAt": "2026-09-04T01:45:36.533Z",
   "sources": [
     {
       "id": "api:digitalocean",
       "sourceUrl": "https://raw.githubusercontent.com/digitalocean/openapi/main/specification/DigitalOcean-public.v2.yaml",
-      "fetchedAt": "2026-09-03T19:45:22.255Z",
+      "fetchedAt": "2026-09-04T01:45:36.151Z",
       "stale": false,
       "recentChanges": 26,
       "file": "sources/api_digitalocean.json",
@@ -14,7 +14,7 @@
     {
       "id": "api:notion",
       "sourceUrl": "https://api.apis.guru/v2/specs/notion.com/1.0.0/openapi.json",
-      "fetchedAt": "2026-09-03T19:45:22.364Z",
+      "fetchedAt": "2026-09-04T01:45:36.263Z",
       "stale": false,
       "recentChanges": 0,
       "file": "sources/api_notion.json",
@@ -32,7 +32,7 @@
     {
       "id": "api:stripe",
       "sourceUrl": "https://raw.githubusercontent.com/stripe/openapi/master/openapi/spec3.json",
-      "fetchedAt": "2026-09-03T19:45:21.487Z",
+      "fetchedAt": "2026-09-04T01:45:35.391Z",
       "stale": false,
       "recentChanges": 24,
       "file": "sources/api_stripe.json",
@@ -41,7 +41,7 @@
     {
       "id": "llm-pricing:openrouter",
       "sourceUrl": "https://openrouter.ai/api/v1/models",
-      "fetchedAt": "2026-09-03T19:44:25.810Z",
+      "fetchedAt": "2026-09-04T01:44:26.847Z",
       "stale": false,
       "recentChanges": 50,
       "file": "sources/llm-pricing_openrouter.json",
@@ -50,7 +50,7 @@
     {
       "id": "mcp-tools:cloudflare-docs",
       "sourceUrl": "https://docs.mcp.cloudflare.com/mcp",
-      "fetchedAt": "2026-09-03T19:45:19.718Z",
+      "fetchedAt": "2026-09-04T01:45:34.063Z",
       "stale": false,
       "recentChanges": 3,
       "file": "sources/mcp-tools_cloudflare-docs.json",
@@ -59,7 +59,7 @@
     {
       "id": "mcp-tools:context7",
       "sourceUrl": "https://mcp.context7.com/mcp",
-      "fetchedAt": "2026-09-03T19:45:18.821Z",
+      "fetchedAt": "2026-09-04T01:45:33.327Z",
       "stale": false,
       "recentChanges": 5,
       "file": "sources/mcp-tools_context7.json",
@@ -68,7 +68,7 @@
     {
       "id": "mcp-tools:deepwiki",
       "sourceUrl": "https://mcp.deepwiki.com/mcp",
-      "fetchedAt": "2026-09-03T19:45:18.206Z",
+      "fetchedAt": "2026-09-04T01:45:32.644Z",
       "stale": false,
       "recentChanges": 3,
       "file": "sources/mcp-tools_deepwiki.json",
@@ -113,7 +113,7 @@
     {
       "id": "mcp-tools:gitmcp",
       "sourceUrl": "https://gitmcp.io/docs",
-      "fetchedAt": "2026-09-03T19:45:19.059Z",
+      "fetchedAt": "2026-09-04T01:45:33.542Z",
       "stale": false,
       "recentChanges": 0,
       "file": "sources/mcp-tools_gitmcp.json",
@@ -122,7 +122,7 @@
     {
       "id": "mcp-tools:grep",
       "sourceUrl": "https://mcp.grep.app",
-      "fetchedAt": "2026-09-03T19:45:20.208Z",
+      "fetchedAt": "2026-09-04T01:45:34.396Z",
       "stale": false,
       "recentChanges": 0,
       "file": "sources/mcp-tools_grep.json",
@@ -131,7 +131,7 @@
     {
       "id": "mcp-tools:huggingface",
       "sourceUrl": "https://huggingface.co/mcp",
-      "fetchedAt": "2026-09-03T19:45:18.901Z",
+      "fetchedAt": "2026-09-04T01:45:33.396Z",
       "stale": false,
       "recentChanges": 34,
       "file": "sources/mcp-tools_huggingface.json",
@@ -149,7 +149,7 @@
     {
       "id": "mcp-tools:microsoft-learn",
       "sourceUrl": "https://learn.microsoft.com/api/mcp",
-      "fetchedAt": "2026-09-03T19:45:19.810Z",
+      "fetchedAt": "2026-09-04T01:45:34.151Z",
       "stale": false,
       "recentChanges": 0,
       "file": "sources/mcp-tools_microsoft-learn.json",
