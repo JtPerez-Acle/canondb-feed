@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-09-06T07:44:26.813Z",
+    "fetchedAt": "2026-09-06T13:44:26.891Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -541,14 +541,6 @@
           "outputPer1m": 6,
           "contextLength": 1040000,
           "maxOutputTokens": 8192
-        },
-        "z-ai/glm-5.2:free": {
-          "name": "Z.ai: GLM 5.2 (free)",
-          "currency": "USD",
-          "inputPer1m": 0,
-          "outputPer1m": 0,
-          "contextLength": 256000,
-          "maxOutputTokens": 230400
         },
         "z-ai/glm-5v-turbo": {
           "name": "Z.ai: GLM 5V Turbo",
@@ -1869,10 +1861,10 @@
         "deepseek/deepseek-v4-pro": {
           "name": "DeepSeek: DeepSeek V4 Pro 0423",
           "currency": "USD",
-          "inputPer1m": 0.72819,
-          "outputPer1m": 1.45638,
+          "inputPer1m": 0.677382,
+          "outputPer1m": 1.354764,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.060683,
+          "cacheReadPer1m": 0.056449,
           "maxOutputTokens": 384000
         },
         "liquid/lfm-2.5-2.6b:free": {
@@ -2389,10 +2381,10 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash 0423",
           "currency": "USD",
-          "inputPer1m": 0.08134,
-          "outputPer1m": 0.16268,
+          "inputPer1m": 0.08022,
+          "outputPer1m": 0.16044,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.016268,
+          "cacheReadPer1m": 0.016044,
           "maxOutputTokens": 384000
         },
         "google/gemma-4-31b-it:free": {
@@ -3279,11 +3271,11 @@
         "deepseek/deepseek-v4-flash-0731": {
           "name": "DeepSeek: DeepSeek V4 Flash 0731",
           "currency": "USD",
-          "inputPer1m": 0.065,
-          "outputPer1m": 0.18,
+          "inputPer1m": 0.04998,
+          "outputPer1m": 0.09996,
           "contextLength": 1310720,
-          "cacheReadPer1m": 0.016,
-          "maxOutputTokens": 943718
+          "cacheReadPer1m": 0.009996,
+          "maxOutputTokens": 131072
         },
         "ibm-granite/granite-4.0-h-micro": {
           "name": "IBM: Granite 4.0 Micro",
@@ -3583,11 +3575,11 @@
         "~deepseek/deepseek-v4-flash-latest": {
           "name": "DeepSeek V4 Flash Latest",
           "currency": "USD",
-          "inputPer1m": 0.04998,
-          "outputPer1m": 0.09996,
+          "inputPer1m": 0.045,
+          "outputPer1m": 0.09,
           "contextLength": 1310720,
-          "cacheReadPer1m": 0.009996,
-          "maxOutputTokens": 131072
+          "cacheReadPer1m": 0.009,
+          "maxOutputTokens": 943718
         },
         "deepseek/deepseek-v4-pro-0813:batch": {
           "name": "DeepSeek: DeepSeek V4 Pro 0813 (batch)",
