@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-09-07T07:44:27.225Z",
+    "fetchedAt": "2026-09-07T13:44:27.241Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -1860,10 +1860,10 @@
         "deepseek/deepseek-v4-pro": {
           "name": "DeepSeek: DeepSeek V4 Pro 0423",
           "currency": "USD",
-          "inputPer1m": 1.04226,
-          "outputPer1m": 2.08452,
+          "inputPer1m": 0.95526,
+          "outputPer1m": 1.91052,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.086855,
+          "cacheReadPer1m": 0.079605,
           "maxOutputTokens": 384000
         },
         "liquid/lfm-2.5-2.6b:free": {
@@ -2886,10 +2886,10 @@
         "deepseek/deepseek-v4-pro-0813": {
           "name": "DeepSeek: DeepSeek V4 Pro 0813",
           "currency": "USD",
-          "inputPer1m": 1.1154,
-          "outputPer1m": 3.3462,
+          "inputPer1m": 1.0494,
+          "outputPer1m": 3.1482,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.03718,
+          "cacheReadPer1m": 0.03498,
           "maxOutputTokens": 384000
         },
         "google/gemini-2.5-flash-image": {
@@ -3544,8 +3544,8 @@
           "currency": "USD",
           "inputPer1m": 0.75,
           "outputPer1m": 3.75,
-          "contextLength": 32768,
-          "maxOutputTokens": 26214
+          "contextLength": 262144,
+          "maxOutputTokens": 209715
         },
         "nvidia/nemotron-3.5-content-safety": {
           "name": "NVIDIA: Nemotron 3.5 Content Safety",
@@ -3686,10 +3686,10 @@
         "deepseek/deepseek-v4-flash-vision-exp": {
           "name": "DeepSeek: DeepSeek V4 Flash Vision Exp",
           "currency": "USD",
-          "inputPer1m": 0.44,
-          "outputPer1m": 1.32,
+          "inputPer1m": 0.22,
+          "outputPer1m": 0.66,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.014,
+          "cacheReadPer1m": 0.007,
           "maxOutputTokens": 384000
         },
         "google/gemini-3.1-flash-image-preview": {
