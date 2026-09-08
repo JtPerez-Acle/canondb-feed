@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-09-08T07:44:27.546Z",
+    "fetchedAt": "2026-09-08T13:44:27.608Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -466,11 +466,11 @@
         "~z-ai/glm-latest": {
           "name": "Z.ai: GLM Latest",
           "currency": "USD",
-          "inputPer1m": 1.12,
-          "outputPer1m": 3.52,
+          "inputPer1m": 1.113,
+          "outputPer1m": 3.498,
           "contextLength": 1310720,
-          "cacheReadPer1m": 0.208,
-          "maxOutputTokens": 943718
+          "cacheReadPer1m": 0.2067,
+          "maxOutputTokens": 128000
         },
         "openai/gpt-5-mini": {
           "name": "OpenAI: GPT-5 Mini",
@@ -635,15 +635,6 @@
           "contextLength": 1048576,
           "cacheReadPer1m": 0.3,
           "maxOutputTokens": 943718
-        },
-        "nex-agi/nex-n2-pro": {
-          "name": "Nex AGI: Nex-N2-Pro",
-          "currency": "USD",
-          "inputPer1m": 0.25,
-          "outputPer1m": 1,
-          "contextLength": 262144,
-          "cacheReadPer1m": 0.025,
-          "maxOutputTokens": 235929
         },
         "openai/gpt-4-turbo": {
           "name": "OpenAI: GPT-4 Turbo",
@@ -866,15 +857,6 @@
           "outputPer1m": 1.2,
           "contextLength": 81920,
           "maxOutputTokens": 38000
-        },
-        "nex-agi/nex-n2-mini": {
-          "name": "Nex AGI: Nex-N2-Mini",
-          "currency": "USD",
-          "inputPer1m": 0.025,
-          "outputPer1m": 0.1,
-          "contextLength": 262144,
-          "cacheReadPer1m": 0.0025,
-          "maxOutputTokens": 235929
         },
         "openai/gpt-4.1-mini": {
           "name": "OpenAI: GPT-4.1 Mini",
@@ -1563,10 +1545,11 @@
         "qwen/qwen3.5-397b-a17b": {
           "name": "Qwen: Qwen3.5 397B A17B",
           "currency": "USD",
-          "inputPer1m": 0.39,
-          "outputPer1m": 2.34,
+          "inputPer1m": 0.55,
+          "outputPer1m": 3.5,
           "contextLength": 262144,
-          "maxOutputTokens": 65536
+          "cacheReadPer1m": 0.225,
+          "maxOutputTokens": 235929
         },
         "qwen/qwen3.8-2.4t-a95b": {
           "name": "Qwen: Qwen3.8 2.4T A95B",
@@ -3669,10 +3652,10 @@
         "deepseek/deepseek-v4-flash-vision-exp": {
           "name": "DeepSeek: DeepSeek V4 Flash Vision Exp",
           "currency": "USD",
-          "inputPer1m": 0.44,
-          "outputPer1m": 1.32,
+          "inputPer1m": 0.22,
+          "outputPer1m": 0.66,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.014,
+          "cacheReadPer1m": 0.007,
           "maxOutputTokens": 384000
         },
         "google/gemini-3.1-flash-image-preview": {
