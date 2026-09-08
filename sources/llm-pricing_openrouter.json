@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-09-08T01:44:26.773Z",
+    "fetchedAt": "2026-09-08T07:44:27.546Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -3253,11 +3253,11 @@
         "deepseek/deepseek-v4-flash-0731": {
           "name": "DeepSeek: DeepSeek V4 Flash 0731",
           "currency": "USD",
-          "inputPer1m": 0.14,
-          "outputPer1m": 0.28,
+          "inputPer1m": 0.065,
+          "outputPer1m": 0.18,
           "contextLength": 1310720,
-          "cacheReadPer1m": 0.028,
-          "maxOutputTokens": 131072
+          "cacheReadPer1m": 0.016,
+          "maxOutputTokens": 943718
         },
         "ibm-granite/granite-4.0-h-micro": {
           "name": "IBM: Granite 4.0 Micro",

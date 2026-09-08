@@ -2,6 +2,62 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "f35891ed-4798-4a65-868d-eb07456b5a29",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/deepseek/deepseek-v4-flash-0731",
+      "fromSnapshotId": "4a1298df-23f8-44cc-9764-e22d78a4507e",
+      "toSnapshotId": "f3795aea-12f5-4d66-823d-c07783a758e9",
+      "detectedAt": "2026-09-08T07:44:31.102Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "deepseek/deepseek-v4-flash-0731",
+              "cacheReadPer1m"
+            ],
+            "after": 0.016,
+            "before": 0.028
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "deepseek/deepseek-v4-flash-0731",
+              "inputPer1m"
+            ],
+            "after": 0.065,
+            "before": 0.14
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "deepseek/deepseek-v4-flash-0731",
+              "maxOutputTokens"
+            ],
+            "after": 943718,
+            "before": 131072
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "deepseek/deepseek-v4-flash-0731",
+              "outputPer1m"
+            ],
+            "after": 0.18,
+            "before": 0.28
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "All changes are price decreases or capacity increases, which are safe per domain guidance."
+    },
+    {
       "id": "c4c5faca-6424-42f4-860e-ebaceb6c5bbe",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/~moonshotai/kimi-latest",
@@ -2205,62 +2261,6 @@
       "confidence": 0.95,
       "classifiedBy": "llm",
       "notes": "All changed fields are price decreases for deepseek-v4-flash, which is favorable and non-breaking."
-    },
-    {
-      "id": "d0cf58d6-29ac-44d5-8b76-fd98a5fc511a",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/~z-ai/glm-latest",
-      "fromSnapshotId": "e2159e4e-8993-468d-b893-50ccff776be4",
-      "toSnapshotId": "e7fe0e84-6394-446c-8cd9-c9e733630e0f",
-      "detectedAt": "2026-09-06T01:45:23.455Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "~z-ai/glm-latest",
-              "cacheReadPer1m"
-            ],
-            "after": 0.234,
-            "before": 0.1
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "~z-ai/glm-latest",
-              "inputPer1m"
-            ],
-            "after": 1.17,
-            "before": 1.15
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "~z-ai/glm-latest",
-              "maxOutputTokens"
-            ],
-            "after": 943718,
-            "before": 235929
-          },
-          {
-            "kind": "changed",
-            "path": [
-              "models",
-              "~z-ai/glm-latest",
-              "outputPer1m"
-            ],
-            "after": 3.96,
-            "before": 3.5
-          }
-        ]
-      },
-      "severity": "safe",
-      "confidence": 0.85,
-      "classifiedBy": "llm",
-      "notes": "maxOutputTokens increased (favorable) and price changes are mixed (cacheRead up, input/output up) but domain guidance says only price decrease is safe; however guidance also says CHANGED with favorable changes may be safe, and output cap increase is clearly favorable."
     }
   ]
 }
