@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-09-08T13:44:27.608Z",
+    "fetchedAt": "2026-09-08T19:44:27.690Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -39,10 +39,10 @@
         "tencent/hy3": {
           "name": "Tencent: Hy3",
           "currency": "USD",
-          "inputPer1m": 0.132,
-          "outputPer1m": 0.528,
+          "inputPer1m": 0.0825,
+          "outputPer1m": 0.33,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.033,
+          "cacheReadPer1m": 0.020625,
           "maxOutputTokens": 128000
         },
         "openai/gpt-4": {
@@ -778,6 +778,15 @@
           "contextLength": 202752,
           "maxOutputTokens": 117964
         },
+        "z-ai/glm-5.2:batch": {
+          "name": "Z.ai: GLM 5.2 (batch)",
+          "currency": "USD",
+          "inputPer1m": 0.7,
+          "outputPer1m": 2.2,
+          "contextLength": 1048576,
+          "cacheReadPer1m": 0.07,
+          "maxOutputTokens": 943718
+        },
         "z-ai/glm-5.3-flash": {
           "name": "Z.ai: GLM 5.3 Flash",
           "currency": "USD",
@@ -786,6 +795,15 @@
           "contextLength": 1310720,
           "cacheReadPer1m": 0.015,
           "maxOutputTokens": 131072
+        },
+        "z-ai/glm-5.3:batch": {
+          "name": "Z.ai: GLM 5.3 (batch)",
+          "currency": "USD",
+          "inputPer1m": 0.7,
+          "outputPer1m": 2.2,
+          "contextLength": 1048576,
+          "cacheReadPer1m": 0.13,
+          "maxOutputTokens": 943718
         },
         "~openai/gpt-latest": {
           "name": "OpenAI GPT Latest",
@@ -1322,6 +1340,15 @@
           "cacheReadPer1m": 0.05,
           "maxOutputTokens": 16384
         },
+        "inception/mercury-2.5": {
+          "name": "Inception: Mercury 2.5",
+          "currency": "USD",
+          "inputPer1m": 0.04,
+          "outputPer1m": 0.15,
+          "contextLength": 260000,
+          "cacheReadPer1m": 0.004,
+          "maxOutputTokens": 65536
+        },
         "meta/muse-glimmer-30b": {
           "name": "Meta: Muse Glimmer 30B",
           "currency": "USD",
@@ -1588,11 +1615,11 @@
         "~z-ai/glm-flash-latest": {
           "name": "Z.ai: GLM Flash Latest",
           "currency": "USD",
-          "inputPer1m": 0.07125,
-          "outputPer1m": 0.2375,
+          "inputPer1m": 0.075,
+          "outputPer1m": 0.25,
           "contextLength": 1310720,
-          "cacheReadPer1m": 0.01425,
-          "maxOutputTokens": 131072
+          "cacheReadPer1m": 0.015,
+          "maxOutputTokens": 943718
         },
         "aion-labs/aion-3.0-mini": {
           "name": "AionLabs: Aion-3.0-Mini",
@@ -1834,10 +1861,10 @@
         "deepseek/deepseek-v4-pro": {
           "name": "DeepSeek: DeepSeek V4 Pro 0423",
           "currency": "USD",
-          "inputPer1m": 0.95526,
-          "outputPer1m": 1.91052,
+          "inputPer1m": 0.948126,
+          "outputPer1m": 1.896252,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.079605,
+          "cacheReadPer1m": 0.079011,
           "maxOutputTokens": 384000
         },
         "liquid/lfm-2.5-2.6b:free": {
@@ -2042,11 +2069,11 @@
         "z-ai/glm-5.3-flash:batch": {
           "name": "Z.ai: GLM 5.3 Flash (batch)",
           "currency": "USD",
-          "inputPer1m": 0.15,
-          "outputPer1m": 0.5,
-          "contextLength": 1048575,
-          "cacheReadPer1m": 0.03,
-          "maxOutputTokens": 943717
+          "inputPer1m": 0.075,
+          "outputPer1m": 0.25,
+          "contextLength": 1048576,
+          "cacheReadPer1m": 0.015,
+          "maxOutputTokens": 943718
         },
         "anthropic/claude-opus-4.1": {
           "name": "Anthropic: Claude Opus 4.1",
@@ -2152,6 +2179,14 @@
           "outputPer1m": 3.5,
           "contextLength": 262144,
           "cacheReadPer1m": 0.15,
+          "maxOutputTokens": 235929
+        },
+        "nex-agi/nex-n2.5-pro:free": {
+          "name": "Nex AGI: Nex-N2.5-Pro (free)",
+          "currency": "USD",
+          "inputPer1m": 0,
+          "outputPer1m": 0,
+          "contextLength": 262144,
           "maxOutputTokens": 235929
         },
         "nousresearch/hermes-4-70b": {
@@ -2346,10 +2381,10 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash 0423",
           "currency": "USD",
-          "inputPer1m": 0.088606,
-          "outputPer1m": 0.177212,
+          "inputPer1m": 0.084,
+          "outputPer1m": 0.168,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.017721,
+          "cacheReadPer1m": 0.0168,
           "maxOutputTokens": 384000
         },
         "google/gemma-4-31b-it:free": {
@@ -2411,6 +2446,14 @@
           "contextLength": 131072,
           "cacheReadPer1m": 0.04,
           "maxOutputTokens": 104857
+        },
+        "nex-agi/nex-n2.5-mini:free": {
+          "name": "Nex AGI: Nex-N2.5-Mini (free)",
+          "currency": "USD",
+          "inputPer1m": 0,
+          "outputPer1m": 0,
+          "contextLength": 262144,
+          "maxOutputTokens": 235929
         },
         "nousresearch/hermes-4-405b": {
           "name": "Nous: Hermes 4 405B",
@@ -2560,10 +2603,10 @@
         "meta/muse-glimmer-30b:batch": {
           "name": "Meta: Muse Glimmer 30B (batch)",
           "currency": "USD",
-          "inputPer1m": 0.35,
-          "outputPer1m": 1.5,
+          "inputPer1m": 0.175,
+          "outputPer1m": 0.75,
           "contextLength": 131072,
-          "cacheReadPer1m": 0.04,
+          "cacheReadPer1m": 0.02,
           "maxOutputTokens": 117964
         },
         "mistralai/ministral-3b-2512": {
@@ -2590,7 +2633,8 @@
           "inputPer1m": 0.6,
           "outputPer1m": 2.5,
           "contextLength": 262144,
-          "maxOutputTokens": 235929
+          "cacheReadPer1m": 0.15,
+          "maxOutputTokens": 100352
         },
         "perplexity/sonar-pro-search": {
           "name": "Perplexity: Sonar Pro Search",
@@ -2851,11 +2895,11 @@
         "deepseek/deepseek-v4-pro-0813": {
           "name": "DeepSeek: DeepSeek V4 Pro 0813",
           "currency": "USD",
-          "inputPer1m": 1.0494,
-          "outputPer1m": 3.1482,
+          "inputPer1m": 0.57948,
+          "outputPer1m": 1.73844,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.03498,
-          "maxOutputTokens": 384000
+          "cacheReadPer1m": 0.057948,
+          "maxOutputTokens": 393216
         },
         "google/gemini-2.5-flash-image": {
           "name": "Google: Nano Banana (Gemini 2.5 Flash Image)",
@@ -2951,15 +2995,6 @@
           "contextLength": 1048576,
           "cacheReadPer1m": 0.0375,
           "cacheWritePer1m": 0.041667,
-          "maxOutputTokens": 65536
-        },
-        "inception/mercury-2.5-preview": {
-          "name": "Inception: Mercury 2.5 Preview",
-          "currency": "USD",
-          "inputPer1m": 0.04,
-          "outputPer1m": 0.15,
-          "contextLength": 260000,
-          "cacheReadPer1m": 0.004,
           "maxOutputTokens": 65536
         },
         "nvidia/nemotron-3.5-lightning": {
@@ -3549,10 +3584,10 @@
         "deepseek/deepseek-v4-pro-0813:batch": {
           "name": "DeepSeek: DeepSeek V4 Pro 0813 (batch)",
           "currency": "USD",
-          "inputPer1m": 1.32,
-          "outputPer1m": 3.96,
+          "inputPer1m": 0.66,
+          "outputPer1m": 1.98,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.13,
+          "cacheReadPer1m": 0.022,
           "maxOutputTokens": 943718
         },
         "google/gemini-2.5-pro-preview-05-06": {
@@ -3643,10 +3678,10 @@
         "deepseek/deepseek-v4-flash-0731:batch": {
           "name": "DeepSeek: DeepSeek V4 Flash 0731 (batch)",
           "currency": "USD",
-          "inputPer1m": 0.14,
-          "outputPer1m": 0.28,
+          "inputPer1m": 0.11,
+          "outputPer1m": 0.33,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.03,
+          "cacheReadPer1m": 0.0035,
           "maxOutputTokens": 943718
         },
         "deepseek/deepseek-v4-flash-vision-exp": {
@@ -3739,6 +3774,15 @@
           "outputPer1m": 0.08,
           "contextLength": 32768,
           "maxOutputTokens": 16384
+        },
+        "deepseek/deepseek-v4-flash-vision-exp:batch": {
+          "name": "DeepSeek: DeepSeek V4 Flash Vision Exp (batch)",
+          "currency": "USD",
+          "inputPer1m": 0.11,
+          "outputPer1m": 0.33,
+          "contextLength": 1048576,
+          "cacheReadPer1m": 0.0035,
+          "maxOutputTokens": 943718
         },
         "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": {
           "name": "NVIDIA: Nemotron 3 Nano Omni (free)",
