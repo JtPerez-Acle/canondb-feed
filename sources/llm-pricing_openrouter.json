@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-09-08T19:44:27.690Z",
+    "fetchedAt": "2026-09-09T01:44:27.787Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -39,10 +39,10 @@
         "tencent/hy3": {
           "name": "Tencent: Hy3",
           "currency": "USD",
-          "inputPer1m": 0.0825,
-          "outputPer1m": 0.33,
+          "inputPer1m": 0.132,
+          "outputPer1m": 0.528,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.020625,
+          "cacheReadPer1m": 0.033,
           "maxOutputTokens": 128000
         },
         "openai/gpt-4": {
@@ -74,11 +74,11 @@
         "z-ai/glm-4.6": {
           "name": "Z.ai: GLM 4.6",
           "currency": "USD",
-          "inputPer1m": 0.55,
-          "outputPer1m": 2.2,
+          "inputPer1m": 0.43,
+          "outputPer1m": 1.75,
           "contextLength": 204800,
-          "cacheReadPer1m": 0.11,
-          "maxOutputTokens": 131072
+          "cacheReadPer1m": 0.08,
+          "maxOutputTokens": 16384
         },
         "z-ai/glm-4.7": {
           "name": "Z.ai: GLM 4.7",
@@ -597,7 +597,7 @@
         "minimax/minimax-m1": {
           "name": "MiniMax: MiniMax M1",
           "currency": "USD",
-          "inputPer1m": 0.4,
+          "inputPer1m": 0.55,
           "outputPer1m": 2.2,
           "contextLength": 1000000,
           "maxOutputTokens": 40000
@@ -1585,7 +1585,7 @@
           "outputPer1m": 6,
           "contextLength": 1048576,
           "cacheReadPer1m": 0.25,
-          "maxOutputTokens": 262144
+          "maxOutputTokens": 131072
         },
         "stepfun/step-3.5-flash": {
           "name": "StepFun: Step 3.5 Flash",
@@ -1806,10 +1806,10 @@
         "~moonshotai/kimi-latest": {
           "name": "MoonshotAI Kimi Latest",
           "currency": "USD",
-          "inputPer1m": 2.5,
-          "outputPer1m": 14,
+          "inputPer1m": 2.4,
+          "outputPer1m": 12,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.29,
+          "cacheReadPer1m": 0.24,
           "maxOutputTokens": 943718
         },
         "~openai/gpt-mini-latest": {
@@ -1861,10 +1861,10 @@
         "deepseek/deepseek-v4-pro": {
           "name": "DeepSeek: DeepSeek V4 Pro 0423",
           "currency": "USD",
-          "inputPer1m": 0.948126,
-          "outputPer1m": 1.896252,
+          "inputPer1m": 0.95526,
+          "outputPer1m": 1.91052,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.079011,
+          "cacheReadPer1m": 0.079605,
           "maxOutputTokens": 384000
         },
         "liquid/lfm-2.5-2.6b:free": {
@@ -2381,10 +2381,10 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash 0423",
           "currency": "USD",
-          "inputPer1m": 0.084,
-          "outputPer1m": 0.168,
+          "inputPer1m": 0.088606,
+          "outputPer1m": 0.177212,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.0168,
+          "cacheReadPer1m": 0.017721,
           "maxOutputTokens": 384000
         },
         "google/gemma-4-31b-it:free": {
@@ -2406,10 +2406,10 @@
         "ibm-granite/granite-4.2-8b": {
           "name": "IBM: Granite 4.2 8B",
           "currency": "USD",
-          "inputPer1m": 0.1,
-          "outputPer1m": 0.15,
+          "inputPer1m": 0.06,
+          "outputPer1m": 0.25,
           "contextLength": 131072,
-          "cacheReadPer1m": 0.05,
+          "cacheReadPer1m": 0.015,
           "maxOutputTokens": 117964
         },
         "inclusionai/ling-3.0-flash": {
@@ -2633,8 +2633,7 @@
           "inputPer1m": 0.6,
           "outputPer1m": 2.5,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.15,
-          "maxOutputTokens": 100352
+          "maxOutputTokens": 235929
         },
         "perplexity/sonar-pro-search": {
           "name": "Perplexity: Sonar Pro Search",
@@ -3403,11 +3402,10 @@
         "qwen/qwen3-next-80b-a3b-instruct": {
           "name": "Qwen: Qwen3 Next 80B A3B Instruct",
           "currency": "USD",
-          "inputPer1m": 0.1,
+          "inputPer1m": 0.09,
           "outputPer1m": 1.1,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.07,
-          "maxOutputTokens": 235929
+          "maxOutputTokens": 16384
         },
         "qwen/qwen3-next-80b-a3b-thinking": {
           "name": "Qwen: Qwen3 Next 80B A3B Thinking",
@@ -3485,7 +3483,7 @@
           "currency": "USD",
           "inputPer1m": 0.085,
           "outputPer1m": 0.4,
-          "contextLength": 1000000,
+          "contextLength": 262144,
           "maxOutputTokens": 16384
         },
         "nvidia/nemotron-3-ultra-550b-a55b": {
@@ -3691,7 +3689,7 @@
           "outputPer1m": 0.66,
           "contextLength": 1048576,
           "cacheReadPer1m": 0.007,
-          "maxOutputTokens": 384000
+          "maxOutputTokens": 943718
         },
         "google/gemini-3.1-flash-image-preview": {
           "name": "Google: Nano Banana 2 (Gemini 3.1 Flash Image Preview)",
