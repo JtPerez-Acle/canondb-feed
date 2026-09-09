@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-09-09T13:44:27.355Z",
+    "fetchedAt": "2026-09-09T19:44:28.155Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -39,10 +39,10 @@
         "tencent/hy3": {
           "name": "Tencent: Hy3",
           "currency": "USD",
-          "inputPer1m": 0.132,
-          "outputPer1m": 0.528,
+          "inputPer1m": 0.0825,
+          "outputPer1m": 0.33,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.033,
+          "cacheReadPer1m": 0.020625,
           "maxOutputTokens": 128000
         },
         "openai/gpt-4": {
@@ -101,18 +101,18 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.966,
-          "outputPer1m": 3.036,
+          "inputPer1m": 0.28,
+          "outputPer1m": 0.88,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.1932,
-          "maxOutputTokens": 131072
+          "cacheReadPer1m": 0.052,
+          "maxOutputTokens": 128000
         },
         "z-ai/glm-5.3": {
           "name": "Z.ai: GLM 5.3",
           "currency": "USD",
           "inputPer1m": 1.4,
           "outputPer1m": 4.4,
-          "contextLength": 1310720,
+          "contextLength": 1048576,
           "cacheReadPer1m": 0.26,
           "maxOutputTokens": 943718
         },
@@ -468,7 +468,7 @@
           "currency": "USD",
           "inputPer1m": 1.113,
           "outputPer1m": 3.498,
-          "contextLength": 1310720,
+          "contextLength": 1048576,
           "cacheReadPer1m": 0.2067,
           "maxOutputTokens": 128000
         },
@@ -1619,7 +1619,7 @@
           "outputPer1m": 0.25,
           "contextLength": 1310720,
           "cacheReadPer1m": 0.015,
-          "maxOutputTokens": 943718
+          "maxOutputTokens": 131072
         },
         "aion-labs/aion-3.0-mini": {
           "name": "AionLabs: Aion-3.0-Mini",
@@ -1861,10 +1861,10 @@
         "deepseek/deepseek-v4-pro": {
           "name": "DeepSeek: DeepSeek V4 Pro 0423",
           "currency": "USD",
-          "inputPer1m": 0.953172,
-          "outputPer1m": 1.906344,
+          "inputPer1m": 0.87,
+          "outputPer1m": 1.74,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.079431,
+          "cacheReadPer1m": 0.0725,
           "maxOutputTokens": 384000
         },
         "liquid/lfm-2.5-2.6b:free": {
@@ -2189,14 +2189,6 @@
           "contextLength": 262144,
           "maxOutputTokens": 235929
         },
-        "nousresearch/hermes-4-70b": {
-          "name": "Nous: Hermes 4 70B",
-          "currency": "USD",
-          "inputPer1m": 0.13,
-          "outputPer1m": 0.4,
-          "contextLength": 131072,
-          "maxOutputTokens": 117964
-        },
         "openai/gpt-3.5-turbo-0613": {
           "name": "OpenAI: GPT-3.5 Turbo (older v0613)",
           "currency": "USD",
@@ -2381,10 +2373,10 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash 0423",
           "currency": "USD",
-          "inputPer1m": 0.08708,
-          "outputPer1m": 0.17416,
+          "inputPer1m": 0.07,
+          "outputPer1m": 0.14,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.017416,
+          "cacheReadPer1m": 0.014,
           "maxOutputTokens": 384000
         },
         "google/gemma-4-31b-it:free": {
@@ -2894,10 +2886,10 @@
         "deepseek/deepseek-v4-pro-0813": {
           "name": "DeepSeek: DeepSeek V4 Pro 0813",
           "currency": "USD",
-          "inputPer1m": 0.65868,
-          "outputPer1m": 1.97604,
+          "inputPer1m": 0.57948,
+          "outputPer1m": 1.73844,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.020958,
+          "cacheReadPer1m": 0.018438,
           "maxOutputTokens": 393216
         },
         "google/gemini-2.5-flash-image": {
