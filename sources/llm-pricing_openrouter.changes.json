@@ -2,6 +2,68 @@
   "id": "llm-pricing:openrouter",
   "changes": [
     {
+      "id": "f0b623db-e54f-403f-8663-a271aebf7f9c",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/qwen/qwen3-235b-a22b-2507",
+      "fromSnapshotId": "8d80dfe9-26a9-4ebd-9614-a6cdf9dd047c",
+      "toSnapshotId": "26fc8201-6920-4ae8-8676-3971fdfda32c",
+      "detectedAt": "2026-09-09T07:44:34.197Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-235b-a22b-2507",
+              "inputPer1m"
+            ],
+            "after": 0.22,
+            "before": 0.09
+          },
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "qwen/qwen3-235b-a22b-2507",
+              "outputPer1m"
+            ],
+            "after": 0.88,
+            "before": 0.55
+          }
+        ]
+      },
+      "severity": "breaking_agent",
+      "confidence": 0.95,
+      "classifiedBy": "llm",
+      "notes": "Prices for input and output increased, causing higher costs for agents."
+    },
+    {
+      "id": "88bfd49e-fb0a-489c-9a8e-10bdeffb4cee",
+      "sourceId": "llm-pricing:openrouter",
+      "entityId": "models/deepseek/deepseek-v4-pro-0813",
+      "fromSnapshotId": "8d80dfe9-26a9-4ebd-9614-a6cdf9dd047c",
+      "toSnapshotId": "26fc8201-6920-4ae8-8676-3971fdfda32c",
+      "detectedAt": "2026-09-09T07:44:31.611Z",
+      "diff": {
+        "changes": [
+          {
+            "kind": "changed",
+            "path": [
+              "models",
+              "deepseek/deepseek-v4-pro-0813",
+              "cacheReadPer1m"
+            ],
+            "after": 0.018438,
+            "before": 0.057948
+          }
+        ]
+      },
+      "severity": "safe",
+      "confidence": 1,
+      "classifiedBy": "llm",
+      "notes": "Price decreased, beneficial for consumers."
+    },
+    {
       "id": "c6cbfaf7-dfa0-49fd-8106-b569d7834648",
       "sourceId": "llm-pricing:openrouter",
       "entityId": "models/~moonshotai/kimi-latest",
@@ -2043,68 +2105,6 @@
       "confidence": 0.95,
       "classifiedBy": "llm",
       "notes": "All prices for tencent/hy3 decreased — favorable change."
-    },
-    {
-      "id": "8dd3712a-908f-4afa-99d0-ada3f79b1ff7",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/minimax/minimax-m3:free",
-      "fromSnapshotId": "33cd0c09-1b61-427d-ae10-a763a5a35290",
-      "toSnapshotId": "694cd361-27e3-498a-879a-9053285d35a6",
-      "detectedAt": "2026-09-07T19:44:37.681Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "removed",
-            "path": [
-              "models",
-              "minimax/minimax-m3:free"
-            ],
-            "before": {
-              "name": "MiniMax: MiniMax M3 (free)",
-              "currency": "USD",
-              "inputPer1m": 0,
-              "outputPer1m": 0,
-              "contextLength": 1048576,
-              "maxOutputTokens": 943718
-            }
-          }
-        ]
-      },
-      "severity": "breaking_strict",
-      "confidence": 0.95,
-      "classifiedBy": "llm",
-      "notes": "Model minimax/minimax-m3:free was removed; callers referencing it will break."
-    },
-    {
-      "id": "142fbb3b-7a47-4c73-90cc-6540ddf883fd",
-      "sourceId": "llm-pricing:openrouter",
-      "entityId": "models/minimax/minimax-m2.7:free",
-      "fromSnapshotId": "33cd0c09-1b61-427d-ae10-a763a5a35290",
-      "toSnapshotId": "694cd361-27e3-498a-879a-9053285d35a6",
-      "detectedAt": "2026-09-07T19:44:35.644Z",
-      "diff": {
-        "changes": [
-          {
-            "kind": "removed",
-            "path": [
-              "models",
-              "minimax/minimax-m2.7:free"
-            ],
-            "before": {
-              "name": "MiniMax: MiniMax M2.7 (free)",
-              "currency": "USD",
-              "inputPer1m": 0,
-              "outputPer1m": 0,
-              "contextLength": 196608,
-              "maxOutputTokens": 176947
-            }
-          }
-        ]
-      },
-      "severity": "breaking_strict",
-      "confidence": 0.98,
-      "classifiedBy": "llm",
-      "notes": "Model removed: callers of minimax/minimax-m2.7:free will break."
     }
   ]
 }
