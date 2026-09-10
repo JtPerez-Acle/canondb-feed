@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-09-10T01:44:28.243Z",
+    "fetchedAt": "2026-09-10T07:44:28.264Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -466,10 +466,10 @@
         "~z-ai/glm-latest": {
           "name": "Z.ai: GLM Latest",
           "currency": "USD",
-          "inputPer1m": 1.113,
-          "outputPer1m": 3.498,
+          "inputPer1m": 1.085,
+          "outputPer1m": 3.41,
           "contextLength": 1310720,
-          "cacheReadPer1m": 0.2067,
+          "cacheReadPer1m": 0.2015,
           "maxOutputTokens": 128000
         },
         "openai/gpt-5-mini": {
@@ -790,10 +790,10 @@
         "z-ai/glm-5.3-flash": {
           "name": "Z.ai: GLM 5.3 Flash",
           "currency": "USD",
-          "inputPer1m": 0.07,
-          "outputPer1m": 0.2333,
+          "inputPer1m": 0.075,
+          "outputPer1m": 0.25,
           "contextLength": 1310720,
-          "cacheReadPer1m": 0.014,
+          "cacheReadPer1m": 0.015,
           "maxOutputTokens": 131072
         },
         "z-ai/glm-5.3:batch": {
@@ -1615,10 +1615,10 @@
         "~z-ai/glm-flash-latest": {
           "name": "Z.ai: GLM Flash Latest",
           "currency": "USD",
-          "inputPer1m": 0.07,
-          "outputPer1m": 0.2333,
+          "inputPer1m": 0.075,
+          "outputPer1m": 0.25,
           "contextLength": 1310720,
-          "cacheReadPer1m": 0.014,
+          "cacheReadPer1m": 0.015,
           "maxOutputTokens": 131072
         },
         "aion-labs/aion-3.0-mini": {
@@ -2703,6 +2703,15 @@
           "contextLength": 262144,
           "maxOutputTokens": 131072
         },
+        "deepseek/deepseek-v4.1-flash": {
+          "name": "DeepSeek: DeepSeek V4.1 Flash",
+          "currency": "USD",
+          "inputPer1m": 0.3,
+          "outputPer1m": 1.2,
+          "contextLength": 1048576,
+          "cacheReadPer1m": 0.006,
+          "maxOutputTokens": 384000
+        },
         "google/gemini-2.5-flash-lite": {
           "name": "Google: Gemini 2.5 Flash Lite",
           "currency": "USD",
@@ -3094,6 +3103,15 @@
           "cacheReadPer1m": 0.012,
           "maxOutputTokens": 235929
         },
+        "mistralai/codestral-2508:batch": {
+          "name": "Mistral: Codestral 2508 (batch)",
+          "currency": "USD",
+          "inputPer1m": 0.15,
+          "outputPer1m": 0.45,
+          "contextLength": 256000,
+          "cacheReadPer1m": 0.015,
+          "maxOutputTokens": 204800
+        },
         "nvidia/nemotron-3-nano-30b-a3b": {
           "name": "NVIDIA: Nemotron 3 Nano 30B A3B",
           "currency": "USD",
@@ -3471,6 +3489,15 @@
           "contextLength": 131072,
           "maxOutputTokens": 16384
         },
+        "mistralai/ministral-8b-2512:batch": {
+          "name": "Mistral: Ministral 3 8B 2512 (batch)",
+          "currency": "USD",
+          "inputPer1m": 0.075,
+          "outputPer1m": 0.075,
+          "contextLength": 262144,
+          "cacheReadPer1m": 0.0075,
+          "maxOutputTokens": 209715
+        },
         "nvidia/nemotron-3-super-120b-a12b": {
           "name": "NVIDIA: Nemotron 3 Super",
           "currency": "USD",
@@ -3531,12 +3558,39 @@
           "cacheReadPer1m": 0.015,
           "maxOutputTokens": 65536
         },
+        "mistralai/mistral-large-2512:batch": {
+          "name": "Mistral: Mistral Large 3 2512 (batch)",
+          "currency": "USD",
+          "inputPer1m": 0.25,
+          "outputPer1m": 0.75,
+          "contextLength": 262144,
+          "cacheReadPer1m": 0.025,
+          "maxOutputTokens": 209715
+        },
         "mistralai/mistral-medium-3-5:batch": {
           "name": "Mistral: Mistral Medium 3.5 (batch)",
           "currency": "USD",
           "inputPer1m": 0.75,
           "outputPer1m": 3.75,
           "contextLength": 262144,
+          "maxOutputTokens": 209715
+        },
+        "mistralai/mistral-medium-3.1:batch": {
+          "name": "Mistral: Mistral Medium 3.1 (batch)",
+          "currency": "USD",
+          "inputPer1m": 0.2,
+          "outputPer1m": 1,
+          "contextLength": 131072,
+          "cacheReadPer1m": 0.02,
+          "maxOutputTokens": 104857
+        },
+        "mistralai/mistral-small-2603:batch": {
+          "name": "Mistral: Mistral Small 4 (batch)",
+          "currency": "USD",
+          "inputPer1m": 0.075,
+          "outputPer1m": 0.3,
+          "contextLength": 262144,
+          "cacheReadPer1m": 0.0075,
           "maxOutputTokens": 209715
         },
         "nvidia/nemotron-3.5-content-safety": {
