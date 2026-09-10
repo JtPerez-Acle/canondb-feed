@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "llm-pricing:openrouter",
-    "fetchedAt": "2026-09-10T13:44:28.478Z",
+    "fetchedAt": "2026-09-10T19:44:28.497Z",
     "stale": false,
     "verified": true,
     "data": {
@@ -39,10 +39,10 @@
         "tencent/hy3": {
           "name": "Tencent: Hy3",
           "currency": "USD",
-          "inputPer1m": 0.132,
-          "outputPer1m": 0.528,
+          "inputPer1m": 0.0825,
+          "outputPer1m": 0.33,
           "contextLength": 262144,
-          "cacheReadPer1m": 0.033,
+          "cacheReadPer1m": 0.020625,
           "maxOutputTokens": 128000
         },
         "openai/gpt-4": {
@@ -101,11 +101,11 @@
         "z-ai/glm-5.2": {
           "name": "Z.ai: GLM 5.2",
           "currency": "USD",
-          "inputPer1m": 0.4875,
-          "outputPer1m": 1.56,
+          "inputPer1m": 0.28,
+          "outputPer1m": 0.88,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.091,
-          "maxOutputTokens": 163840
+          "cacheReadPer1m": 0.052,
+          "maxOutputTokens": 128000
         },
         "z-ai/glm-5.3": {
           "name": "Z.ai: GLM 5.3",
@@ -466,11 +466,11 @@
         "~z-ai/glm-latest": {
           "name": "Z.ai: GLM Latest",
           "currency": "USD",
-          "inputPer1m": 1.0075,
-          "outputPer1m": 3.41,
+          "inputPer1m": 0.7,
+          "outputPer1m": 2.2,
           "contextLength": 1310720,
-          "cacheReadPer1m": 0.2015,
-          "maxOutputTokens": 235929
+          "cacheReadPer1m": 0.13,
+          "maxOutputTokens": 128000
         },
         "openai/gpt-5-mini": {
           "name": "OpenAI: GPT-5 Mini",
@@ -1063,11 +1063,11 @@
         "minimax/minimax-m2.5": {
           "name": "MiniMax: MiniMax M2.5",
           "currency": "USD",
-          "inputPer1m": 0.3,
-          "outputPer1m": 1.2,
+          "inputPer1m": 0.27,
+          "outputPer1m": 1.08,
           "contextLength": 204800,
-          "cacheReadPer1m": 0.03,
-          "maxOutputTokens": 131072
+          "cacheReadPer1m": 0.027,
+          "maxOutputTokens": 128000
         },
         "minimax/minimax-m2.7": {
           "name": "MiniMax: MiniMax M2.7",
@@ -1861,10 +1861,10 @@
         "deepseek/deepseek-v4-pro": {
           "name": "DeepSeek: DeepSeek V4 Pro 0423",
           "currency": "USD",
-          "inputPer1m": 0.95526,
-          "outputPer1m": 1.91052,
+          "inputPer1m": 0.87,
+          "outputPer1m": 1.74,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.079605,
+          "cacheReadPer1m": 0.0725,
           "maxOutputTokens": 384000
         },
         "liquid/lfm-2.5-2.6b:free": {
@@ -2167,10 +2167,10 @@
         "google/gemma-4-26b-a4b-it": {
           "name": "Google: Gemma 4 26B A4B ",
           "currency": "USD",
-          "inputPer1m": 0.07,
-          "outputPer1m": 0.34,
+          "inputPer1m": 0.042,
+          "outputPer1m": 0.22,
           "contextLength": 262144,
-          "maxOutputTokens": 16384
+          "maxOutputTokens": 32768
         },
         "moonshotai/kimi-k2.7-code": {
           "name": "MoonshotAI: Kimi K2.7 Code",
@@ -2373,10 +2373,10 @@
         "deepseek/deepseek-v4-flash": {
           "name": "DeepSeek: DeepSeek V4 Flash 0423",
           "currency": "USD",
-          "inputPer1m": 0.088606,
-          "outputPer1m": 0.177212,
+          "inputPer1m": 0.08554,
+          "outputPer1m": 0.17108,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.017721,
+          "cacheReadPer1m": 0.017108,
           "maxOutputTokens": 384000
         },
         "google/gemma-4-31b-it:free": {
@@ -2896,11 +2896,11 @@
         "deepseek/deepseek-v4-pro-0813": {
           "name": "DeepSeek: DeepSeek V4 Pro 0813",
           "currency": "USD",
-          "inputPer1m": 1.0494,
-          "outputPer1m": 3.1482,
+          "inputPer1m": 0.57948,
+          "outputPer1m": 1.73844,
           "contextLength": 1048576,
-          "cacheReadPer1m": 0.03498,
-          "maxOutputTokens": 384000
+          "cacheReadPer1m": 0.018438,
+          "maxOutputTokens": 393216
         },
         "google/gemini-2.5-flash-image": {
           "name": "Google: Nano Banana (Gemini 2.5 Flash Image)",
@@ -3557,6 +3557,14 @@
           "contextLength": 1048576,
           "cacheReadPer1m": 0.015,
           "maxOutputTokens": 65536
+        },
+        "inclusionai/ling-3.0-flash-vl:free": {
+          "name": "inclusionAI: Ling 3.0 Flash VL (free)",
+          "currency": "USD",
+          "inputPer1m": 0,
+          "outputPer1m": 0,
+          "contextLength": 262144,
+          "maxOutputTokens": 32768
         },
         "mistralai/mistral-large-2512:batch": {
           "name": "Mistral: Mistral Large 3 2512 (batch)",

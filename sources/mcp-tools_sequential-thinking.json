@@ -4,7 +4,7 @@
   "cadence": "0 */6 * * *",
   "current": {
     "source": "mcp-tools:sequential-thinking",
-    "fetchedAt": "2026-09-10T02:05:24.791Z",
+    "fetchedAt": "2026-09-10T15:29:00.492Z",
     "stale": false,
     "verified": true,
     "data": {
